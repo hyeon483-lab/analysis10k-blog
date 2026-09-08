@@ -293,6 +293,15 @@ a { color: inherit; }
 .static-page li { margin-bottom: 8px; }
 .static-page a { color: var(--accent-ink); text-decoration: underline; }
 
+/* ---------- 404 page ---------- */
+.not-found { text-align: center; padding-top: 70px; padding-bottom: 70px; }
+.not-found-code { font-family: var(--mono); font-size: 15px; font-weight: 700; letter-spacing: .08em; color: var(--accent-ink); background: var(--accent-soft); display: inline-block; border-radius: 20px; padding: 6px 16px; margin-bottom: 18px; }
+.not-found h1 { text-align: center; }
+.not-found .lead { text-align: center; margin-left: auto; margin-right: auto; }
+.not-found-links { list-style: none; margin: 26px 0 0; padding: 0; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.not-found-links a { font-weight: 600; font-size: 14.5px; color: var(--accent-ink); background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 9px 18px; text-decoration: none; }
+.not-found-links a:hover { border-color: var(--accent); }
+
 @media (max-width: 600px) {
   .stat-strip { grid-template-columns: repeat(2, 1fr); }
   .prose .barrow { grid-template-columns: 96px 1fr 56px; }
