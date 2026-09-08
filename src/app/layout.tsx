@@ -38,6 +38,9 @@ export const metadata: Metadata = {
       'naver-site-verification': '1ab5137fdce14d3531da921b984fc80907151700',
     },
   },
+  other: {
+    'google-adsense-account': 'ca-pub-9857790456879549',
+  },
 };
 
 const siteJsonLd = [
