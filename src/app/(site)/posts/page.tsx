@@ -5,6 +5,7 @@ import { getAllPosts } from '@/lib/posts';
 export const metadata: Metadata = {
   title: 'All Posts',
   description: 'Every Analysis10k article: company snapshots, stories, and reverse-DCF reads, built from SEC filings.',
+  alternates: { canonical: '/posts' },
 };
 
 export const revalidate = 60;

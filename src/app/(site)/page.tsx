@@ -1,6 +1,11 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import PostCard from '@/components/PostCard';
 import { getAllPosts } from '@/lib/posts';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 export const revalidate = 60;
 

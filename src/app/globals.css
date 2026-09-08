@@ -147,6 +147,11 @@ a { color: inherit; }
 .filter-pill[aria-pressed="true"] { color: var(--accent-ink); background: var(--accent-soft); border-color: var(--accent); }
 
 /* ---------- Individual post page ---------- */
+.breadcrumb { display: flex; align-items: center; gap: 8px; padding-top: 18px; font-size: 12.5px; color: var(--ink-faint); flex-wrap: wrap; }
+.breadcrumb a { color: var(--ink-faint); text-decoration: none; }
+.breadcrumb a:hover { color: var(--ink-muted); text-decoration: underline; }
+.breadcrumb span[aria-current] { color: var(--ink-muted); max-width: 40ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
 .post-banner { position: relative; padding: 64px 20px 50px; margin-bottom: 34px; background: linear-gradient(150deg, var(--ink) 0%, var(--accent-ink) 130%); overflow: hidden; }
 .post-banner.cat-story { background: linear-gradient(150deg, var(--ink) 0%, var(--cat-story-ink) 130%); }
 .post-banner.cat-dcf { background: linear-gradient(150deg, var(--ink) 0%, var(--cat-dcf-ink) 130%); }
@@ -262,6 +267,19 @@ a { color: inherit; }
 
 .site-footer { max-width: 980px; margin: 60px auto 0; padding: 24px 20px; text-align: center; font-family: var(--mono); font-size: 11px; color: var(--ink-faint); border-top: 1px solid var(--border); }
 .site-footer a { color: var(--ink-faint); }
+.site-footer .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 10px; }
+.site-footer .footer-links a { text-decoration: none; font-weight: 600; }
+.site-footer .footer-links a:hover { color: var(--ink-muted); }
+
+/* ---------- Static pages (About / Contact / Privacy) ---------- */
+.static-page { padding-top: 46px; max-width: 700px; }
+.static-page h1 { font-family: var(--serif); font-size: 32px; font-weight: 700; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance; }
+.static-page .lead { font-size: 17px; color: var(--ink-muted); line-height: 1.6; margin: 0 0 30px; }
+.static-page h2 { font-family: var(--serif); font-size: 20px; font-weight: 600; margin: 34px 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+.static-page p { font-size: 15.5px; line-height: 1.7; color: var(--ink); margin: 0 0 14px; }
+.static-page ul { margin: 0 0 14px; padding-left: 20px; font-size: 15.5px; line-height: 1.7; }
+.static-page li { margin-bottom: 8px; }
+.static-page a { color: var(--accent-ink); text-decoration: underline; }
 
 @media (max-width: 600px) {
   .stat-strip { grid-template-columns: repeat(2, 1fr); }

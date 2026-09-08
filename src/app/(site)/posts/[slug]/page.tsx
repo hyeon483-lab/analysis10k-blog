@@ -24,6 +24,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/posts/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -36,6 +37,36 @@ export async function generateMetadata({
       description: post.excerpt,
     },
   };
+}
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
+function postJsonLd(post: Awaited<ReturnType<typeof getPostBySlug>>) {
+  if (!post) return [];
+  const url = `${SITE_URL}/posts/${post.slug}`;
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.publishedAt,
+      dateModified: post.publishedAt,
+      image: `${url}/opengraph-image`,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      author: { '@type': 'Organization', name: 'Analysis10k Research' },
+      publisher: { '@type': 'Organization', name: 'Analysis10k Blog', url: SITE_URL },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'All Posts', item: `${SITE_URL}/posts` },
+        { '@type': 'ListItem', position: 3, name: post.title, item: url },
+      ],
+    },
+  ];
 }
 
 export default async function PostPage({
@@ -52,6 +83,18 @@ export default async function PostPage({
 
   return (
     <article className={`post-page cat-${post.category}`}>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(postJsonLd(post)) }}
+      />
+      <nav className="breadcrumb wrap" aria-label="Breadcrumb">
+        <Link href="/">Home</Link>
+        <span>/</span>
+        <Link href="/posts">All Posts</Link>
+        <span>/</span>
+        <span aria-current="page">{post.title}</span>
+      </nav>
       <div className={`post-banner cat-${post.category}`}>
         <svg viewBox="0 0 400 140" preserveAspectRatio="none">
           <polyline points={points} fill="none" stroke="#ffffff" strokeWidth={3} />
