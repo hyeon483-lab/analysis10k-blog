@@ -9,10 +9,33 @@ type Filter = 'all' | PostCategory;
 
 export default function PostListClient({ posts }: { posts: Post[] }) {
   const [filter, setFilter] = useState<Filter>('all');
-  const visible = filter === 'all' ? posts : posts.filter((p) => p.category === filter);
+  const [query, setQuery] = useState('');
+
+  const q = query.trim().toLowerCase();
+  const visible = posts
+    .filter((p) => filter === 'all' || p.category === filter)
+    .filter((p) => {
+      if (!q) return true;
+      return (
+        p.title.toLowerCase().includes(q) ||
+        p.ticker.toLowerCase().includes(q) ||
+        p.company.toLowerCase().includes(q) ||
+        p.tags.some((t) => t.toLowerCase().includes(q))
+      );
+    });
 
   return (
     <>
+      <div className="search-row">
+        <input
+          type="search"
+          className="search-input"
+          placeholder="Search by company, ticker, or topic…"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          aria-label="Search posts"
+        />
+      </div>
       <div className="filter-row">
         <button
           className="filter-pill"
@@ -32,11 +55,15 @@ export default function PostListClient({ posts }: { posts: Post[] }) {
           </button>
         ))}
       </div>
-      <div className="card-grid">
-        {visible.map((post) => (
-          <PostCard key={post.slug} post={post} />
-        ))}
-      </div>
+      {visible.length === 0 ? (
+        <p className="no-results">No posts match &quot;{query}&quot;.</p>
+      ) : (
+        <div className="card-grid">
+          {visible.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
+        </div>
+      )}
     </>
   );
 }

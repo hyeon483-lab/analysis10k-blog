@@ -11,6 +11,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy</Link>
+          <Link href="/tags">Tags</Link>
+          <a href="/rss.xml">RSS</a>
         </div>
         Analysis10k Blog — research summaries built from public SEC filings. Not investment advice.
       </footer>

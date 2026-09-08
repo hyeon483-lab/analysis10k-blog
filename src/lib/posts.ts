@@ -75,3 +75,30 @@ export async function getRelatedPosts(post: Post): Promise<Post[]> {
   if (error) return [];
   return (data ?? []).map(rowToPost);
 }
+
+/** Posts sharing at least one tag with `post`, from other companies — for cross-ticker discovery. */
+export async function getRelatedByTags(post: Post, limit = 4): Promise<Post[]> {
+  if (post.tags.length === 0) return [];
+  const all = await getAllPosts();
+  return all
+    .filter((p) => p.ticker !== post.ticker && p.tags.some((t) => post.tags.includes(t)))
+    .slice(0, limit);
+}
+
+export async function getAllTags(): Promise<{ tag: string; count: number }[]> {
+  const posts = await getAllPosts();
+  const counts = new Map<string, number>();
+  for (const post of posts) {
+    for (const tag of post.tags) {
+      counts.set(tag, (counts.get(tag) ?? 0) + 1);
+    }
+  }
+  return Array.from(counts.entries())
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+}
+
+export async function getPostsByTag(tag: string): Promise<Post[]> {
+  const posts = await getAllPosts();
+  return posts.filter((p) => p.tags.some((t) => t.toLowerCase() === tag.toLowerCase()));
+}

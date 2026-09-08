@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getAllPosts, getPostBySlug, getRelatedPosts } from '@/lib/posts';
+import { getAllPosts, getPostBySlug, getRelatedPosts, getRelatedByTags } from '@/lib/posts';
 import { CATEGORY_META } from '@/types/post';
 import PostCard from '@/components/PostCard';
 import { sparklinePoints, seedFromString } from '@/lib/sparkline';
@@ -79,6 +79,7 @@ export default async function PostPage({
   if (!post) notFound();
 
   const related = await getRelatedPosts(post);
+  const relatedByTags = await getRelatedByTags(post);
   const points = sparklinePoints(seedFromString(post.slug));
 
   return (
@@ -147,7 +148,7 @@ export default async function PostPage({
 
         <div className="taglist">
           {post.tags.map((tag) => (
-            <span key={tag}>#{tag}</span>
+            <Link key={tag} href={`/tags/${encodeURIComponent(tag)}`}>#{tag}</Link>
           ))}
         </div>
       </div>
@@ -158,6 +159,19 @@ export default async function PostPage({
             <div className="related-label">More on {post.ticker} in this series</div>
             <div className="related-grid">
               {related.map((r) => (
+                <PostCard key={r.slug} post={r} />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {relatedByTags.length > 0 && (
+        <div className="related">
+          <div className="wrap" style={{ padding: 0 }}>
+            <div className="related-label">You might also like</div>
+            <div className="related-grid">
+              {relatedByTags.map((r) => (
                 <PostCard key={r.slug} post={r} />
               ))}
             </div>

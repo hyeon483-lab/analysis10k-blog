@@ -28,7 +28,10 @@ export const metadata: Metadata = {
   },
   description:
     'Filings-first breakdowns of public companies: what each one does, how its story has changed, and what its stock price is betting on — built from 10-Ks, 10-Qs, and earnings calls.',
-  alternates: { canonical: '/' },
+  alternates: {
+    canonical: '/',
+    types: { 'application/rss+xml': [{ url: '/rss.xml', title: 'Analysis10k Blog' }] },
+  },
   verification: {
     google: 'ehen1zk7BylfZL4s3_GN6nkI-Uy8K8OUu5evYoOim7I',
     other: {
