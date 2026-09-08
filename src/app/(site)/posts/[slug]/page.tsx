@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug, getRelatedPosts, getRelatedByTags } from '@/lib/posts';
 import { CATEGORY_META } from '@/types/post';
 import PostCard from '@/components/PostCard';
+import ShareRow from '@/components/ShareRow';
 import { sparklinePoints, seedFromString } from '@/lib/sparkline';
 
 export const revalidate = 60;
@@ -54,8 +55,15 @@ function postJsonLd(post: Awaited<ReturnType<typeof getPostBySlug>>) {
       dateModified: post.publishedAt,
       image: `${url}/opengraph-image`,
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-      author: { '@type': 'Organization', name: 'Analysis10k Research' },
-      publisher: { '@type': 'Organization', name: 'Analysis10k Blog', url: SITE_URL },
+      inLanguage: 'en',
+      keywords: post.tags.join(', '),
+      author: { '@type': 'Organization', name: 'Analysis10k Research', url: `${SITE_URL}/about` },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Analysis10k Blog',
+        url: SITE_URL,
+        logo: { '@type': 'ImageObject', url: `${SITE_URL}/apple-icon` },
+      },
     },
     {
       '@context': 'https://schema.org',
@@ -176,6 +184,8 @@ export default async function PostPage({
             <Link key={tag} href={`/tags/${encodeURIComponent(tag)}`}>#{tag}</Link>
           ))}
         </div>
+
+        <ShareRow url={`${SITE_URL}/posts/${post.slug}`} title={post.title} />
       </div>
 
       {related.length > 0 && (
