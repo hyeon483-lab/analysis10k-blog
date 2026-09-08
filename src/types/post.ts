@@ -10,6 +10,11 @@ export interface TocEntry {
   label: string;
 }
 
+export interface FaqEntry {
+  q: string;
+  a: string;
+}
+
 export interface Post {
   slug: string;
   ticker: string;
@@ -20,6 +25,8 @@ export interface Post {
   /** The boxed "short answer" shown right under the byline. */
   takeaway: string;
   quickFacts?: QuickFact[];
+  /** Optional Q&A pairs rendered as a FAQ section and FAQPage structured data. */
+  faq?: FaqEntry[];
   toc: TocEntry[];
   /** Body HTML, rendered inside a `.prose` wrapper. Sourced from the original 10-K-based analysis cards. */
   contentHtml: string;

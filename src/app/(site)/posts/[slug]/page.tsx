@@ -66,6 +66,19 @@ function postJsonLd(post: Awaited<ReturnType<typeof getPostBySlug>>) {
         { '@type': 'ListItem', position: 3, name: post.title, item: url },
       ],
     },
+    ...(post.faq && post.faq.length > 0
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: post.faq.map((entry) => ({
+              '@type': 'Question',
+              name: entry.q,
+              acceptedAnswer: { '@type': 'Answer', text: entry.a },
+            })),
+          },
+        ]
+      : []),
   ];
 }
 
@@ -145,6 +158,18 @@ export default async function PostPage({
         </nav>
 
         <div className="prose" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+
+        {post.faq && post.faq.length > 0 && (
+          <div className="faq-section">
+            <h2>Frequently asked questions</h2>
+            {post.faq.map((entry) => (
+              <details key={entry.q} className="faq-item">
+                <summary>{entry.q}</summary>
+                <p>{entry.a}</p>
+              </details>
+            ))}
+          </div>
+        )}
 
         <div className="taglist">
           {post.tags.map((tag) => (

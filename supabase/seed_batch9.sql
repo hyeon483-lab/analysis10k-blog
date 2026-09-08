@@ -1,53 +1,17 @@
-import type { Post } from '@/types/post';
-
-/**
- * Source-of-truth content, authored in English from the original Korean 10-K-based
- * analysis cards (company_decoder / story_reader / price_decoder), keeping every figure
- * and quote as sourced, rewritten only for an English readership.
- *
- * The app itself no longer reads this module — src/lib/posts.ts queries Supabase's
- * `posts` table instead (see supabase/schema.sql). This file is now the input to
- * scripts/generate-seed-sql.ts, which turns new/edited entries here into an INSERT
- * script to run in the Supabase SQL editor. Once the admin CMS (Phase 3) exists,
- * new posts get authored there instead and this file stops growing.
- */
-export const POSTS: Post[] = [
-  {
-    slug: 'nvda-snapshot',
-    ticker: 'NVDA',
-    company: 'Nvidia',
-    category: 'snapshot',
-    title: 'Nvidia (NVDA): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Nvidia's business model, built directly from its SEC filings — no hype, just where the money comes from.",
-    takeaway:
-      'Nvidia designs advanced computer chips called GPUs, has them manufactured by contract foundries like TSMC, bundles them with its own CUDA software, and sells the package mostly to companies building AI data centers — plus, in a much smaller way, PC gamers. It owns no factories of its own.',
-    quickFacts: [
-      { k: 'Share price', v: '$225.16' },
-      { k: 'Market cap', v: '$5.45T' },
-      { k: 'P/E ratio', v: '34.5x' },
-      { k: 'FY2026 revenue', v: '$215.9B' },
-    ],
-    faq: [
-      { q: 'What does Nvidia do?', a: 'Nvidia designs advanced computer chips called GPUs, has them manufactured by contract foundries like TSMC, and bundles them with its own CUDA software before selling the package — mostly to companies building AI data centers, plus PC gamers in a smaller way.' },
-      { q: 'Does Nvidia manufacture its own chips?', a: "No. Nvidia is a \"fabless\" chipmaker — it designs the chips but pays contract foundries, primarily TSMC, to actually manufacture them. It owns no factories of its own." },
-      { q: "What is Nvidia's market cap?", a: "As of this article's data, Nvidia's market cap was about $5.45 trillion, with FY2026 revenue of $215.9B and a P/E ratio of roughly 34.5x." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Nvidia makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2025 · 10-Q Q1 FY2027 · DEF 14A 2026 · Q4 FY2026 earnings release',
-    tags: ['NVDA', 'Semiconductors', 'AI Infrastructure', '10-K'],
-    publishedAt: '2026-08-17',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s0$nvda-snapshot$s0$,
+  $t0$NVDA$t0$,
+  $c0$Nvidia$c0$,
+  $cat0$snapshot$cat0$,
+  $ti0$Nvidia (NVDA): What This Company Actually Does$ti0$,
+  $ex0$A plain-English read of Nvidia's business model, built directly from its SEC filings — no hype, just where the money comes from.$ex0$,
+  $tk0$Nvidia designs advanced computer chips called GPUs, has them manufactured by contract foundries like TSMC, bundles them with its own CUDA software, and sells the package mostly to companies building AI data centers — plus, in a much smaller way, PC gamers. It owns no factories of its own.$tk0$,
+  $qf0$[{"k":"Share price","v":"$225.16"},{"k":"Market cap","v":"$5.45T"},{"k":"P/E ratio","v":"34.5x"},{"k":"FY2026 revenue","v":"$215.9B"}]$qf0$::jsonb,
+  $faq0$[{"q":"What does Nvidia do?","a":"Nvidia designs advanced computer chips called GPUs, has them manufactured by contract foundries like TSMC, and bundles them with its own CUDA software before selling the package — mostly to companies building AI data centers, plus PC gamers in a smaller way."},{"q":"Does Nvidia manufacture its own chips?","a":"No. Nvidia is a \"fabless\" chipmaker — it designs the chips but pays contract foundries, primarily TSMC, to actually manufacture them. It owns no factories of its own."},{"q":"What is Nvidia's market cap?","a":"As of this article's data, Nvidia's market cap was about $5.45 trillion, with FY2026 revenue of $215.9B and a P/E ratio of roughly 34.5x."}]$faq0$::jsonb,
+  $toc0$[{"id":"how-it-makes-money","label":"How Nvidia makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc0$::jsonb,
+  $html0$
 <h2 id="how-it-makes-money">How Nvidia makes money</h2>
 <p>Nvidia is a "fabless" chipmaker — it designs chips but pays other companies to build them. TSMC manufactures the silicon; SK Hynix and Samsung supply the high-bandwidth memory that sits next to it. Nvidia's own job is chip design plus CUDA, the software layer that makes its GPUs usable for AI workloads, and it sells the combined package at a gross margin of roughly 71–75%.</p>
 <div class="flow">
@@ -168,35 +132,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Nvidia's 10-K (FY2025, filed Feb 26, 2025), 10-Q (Q1 FY2027, filed May 20, 2026), DEF 14A (filed May 12, 2026), and its Q4 FY2026 earnings release (Feb 25, 2026), plus a web search for the current share price. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html0$,
+  $src0$10-K FY2025 · 10-Q Q1 FY2027 · DEF 14A 2026 · Q4 FY2026 earnings release$src0$,
+  ARRAY['NVDA', 'Semiconductors', 'AI Infrastructure', '10-K'],
+  'published',
+  $d0$2026-08-17$d0$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'nvda-story',
-    ticker: 'NVDA',
-    company: 'Nvidia',
-    category: 'story',
-    title: "Nvidia's Last Three Years: From Graphics Cards to the Engine Room of AI",
-    excerpt:
-      "How a gaming-GPU maker rebuilt itself into AI infrastructure's most important supplier — and the one quarter, in the spring of 2025, when that story nearly cracked.",
-    takeaway:
-      'In three years, Nvidia rebuilt its own identity — from a gaming and crypto-mining graphics-card company into what it now calls the engine room of AI — interrupted by one real scare: an April 2025 U.S. export-control change that cost it $4.5 billion in a single quarter.',
-    faq: [
-      { q: "How has Nvidia's identity changed in the last three years?", a: 'Nvidia rebuilt itself from a gaming- and crypto-mining-focused graphics-card maker into what it now calls the "engine room of AI" — its business description, investor messaging, and reported segment mix all shifted to center on AI data-center infrastructure.' },
-      { q: "What was Nvidia's biggest setback in this period?", a: 'An April 2025 change in U.S. export controls on AI chips to China cost Nvidia $4.5 billion in a single quarter — the one real scare in an otherwise fast-growing three-year run.' },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Nvidia's 10-K filings for FY2022 through FY2025 and 12 quarters of earnings call transcripts spanning August 2023 to May 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual results' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2022–FY2025 · 12 quarters of earnings call transcripts, Aug 2023–May 2026',
-    tags: ['NVDA', 'Earnings Calls', 'Export Controls', 'AI Infrastructure'],
-    publishedAt: '2026-08-17',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s1$nvda-story$s1$,
+  $t1$NVDA$t1$,
+  $c1$Nvidia$c1$,
+  $cat1$story$cat1$,
+  $ti1$Nvidia's Last Three Years: From Graphics Cards to the Engine Room of AI$ti1$,
+  $ex1$How a gaming-GPU maker rebuilt itself into AI infrastructure's most important supplier — and the one quarter, in the spring of 2025, when that story nearly cracked.$ex1$,
+  $tk1$In three years, Nvidia rebuilt its own identity — from a gaming and crypto-mining graphics-card company into what it now calls the engine room of AI — interrupted by one real scare: an April 2025 U.S. export-control change that cost it $4.5 billion in a single quarter.$tk1$,
+  null,
+  $faq1$[{"q":"How has Nvidia's identity changed in the last three years?","a":"Nvidia rebuilt itself from a gaming- and crypto-mining-focused graphics-card maker into what it now calls the \"engine room of AI\" — its business description, investor messaging, and reported segment mix all shifted to center on AI data-center infrastructure."},{"q":"What was Nvidia's biggest setback in this period?","a":"An April 2025 change in U.S. export controls on AI chips to China cost Nvidia $4.5 billion in a single quarter — the one real scare in an otherwise fast-growing three-year run."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Nvidia's 10-K filings for FY2022 through FY2025 and 12 quarters of earnings call transcripts spanning August 2023 to May 2026."}]$faq1$::jsonb,
+  $toc1$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance vs. actual results"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc1$::jsonb,
+  $html1$
 <h2 id="the-story">The story</h2>
 <h3>2023: total confidence</h3>
 <p>In August 2023, on the Q2 FY2024 earnings call, CFO Colette Kress opened with: "We had an exceptional quarter." Revenue of $13.51 billion beat the company's own guidance of $11.0 billion by 22.8%. A year earlier, the FY2023 10-K had mentioned "generative AI" exactly once. By this call, Nvidia was speaking like a different company.</p>
@@ -276,35 +248,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2022 (filed Mar 18, 2022) through FY2025 (filed Feb 26, 2025), the 10-Q for Q1 FY2027 (filed May 20, 2026), the DEF 14A (filed May 12, 2026), and 12 quarters of earnings call transcripts from Q2 FY2024 (Aug 23, 2023) through Q1 FY2027 (May 20, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html1$,
+  $src1$10-K FY2022–FY2025 · 12 quarters of earnings call transcripts, Aug 2023–May 2026$src1$,
+  ARRAY['NVDA', 'Earnings Calls', 'Export Controls', 'AI Infrastructure'],
+  'published',
+  $d1$2026-08-17$d1$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'nvda-dcf',
-    ticker: 'NVDA',
-    company: 'Nvidia',
-    category: 'dcf',
-    title: "What NVDA's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Nvidia's current share price already assumes — and checking it against what the company has actually delivered.",
-    takeaway:
-      "At today's price, Nvidia's stock is pricing in roughly 28% annual free-cash-flow growth for the next ten years, at a 10% discount rate. Over the past five years, the company's actual FCF growth averaged 83% a year.",
-    faq: [
-      { q: "What growth rate does NVDA's stock price assume?", a: "At today's price, Nvidia's stock is pricing in roughly 28% annual free-cash-flow growth for the next ten years, discounted at a 10% rate." },
-      { q: "How does that compare to Nvidia's actual growth?", a: "Over the past five years, Nvidia's actual free-cash-flow growth averaged about 83% a year — well above the ~28% the current price requires, meaning the price bakes in a sharp slowdown from the historical pace." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $225.16, Nvidia’s closing price on Aug 14, 2026, as of Aug 17, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $225.16 (Aug 14, 2026 close)',
-    tags: ['NVDA', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-08-17',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s2$nvda-dcf$s2$,
+  $t2$NVDA$t2$,
+  $c2$Nvidia$c2$,
+  $cat2$dcf$cat2$,
+  $ti2$What NVDA's Stock Price Is Really Betting On$ti2$,
+  $ex2$Reverse-engineering the growth rate Nvidia's current share price already assumes — and checking it against what the company has actually delivered.$ex2$,
+  $tk2$At today's price, Nvidia's stock is pricing in roughly 28% annual free-cash-flow growth for the next ten years, at a 10% discount rate. Over the past five years, the company's actual FCF growth averaged 83% a year.$tk2$,
+  null,
+  $faq2$[{"q":"What growth rate does NVDA's stock price assume?","a":"At today's price, Nvidia's stock is pricing in roughly 28% annual free-cash-flow growth for the next ten years, discounted at a 10% rate."},{"q":"How does that compare to Nvidia's actual growth?","a":"Over the past five years, Nvidia's actual free-cash-flow growth averaged about 83% a year — well above the ~28% the current price requires, meaning the price bakes in a sharp slowdown from the historical pace."},{"q":"What share price was used for this analysis?","a":"This analysis used $225.16, Nvidia’s closing price on Aug 14, 2026, as of Aug 17, 2026."}]$faq2$::jsonb,
+  $toc2$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc2$::jsonb,
+  $html2$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, NVDA implies <span class="num">~28%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
@@ -386,45 +366,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Nvidia's 10-K (FY2025), 10-Q (Q1 FY2027), and Q4 FY2026 earnings release (Feb 25, 2026), plus a web search for the current share price. This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html2$,
+  $src2$As of Aug 17, 2026 · Price used: $225.16 (Aug 14, 2026 close)$src2$,
+  ARRAY['NVDA', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d2$2026-08-17$d2$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'aapl-snapshot',
-    ticker: 'AAPL',
-    company: 'Apple',
-    category: 'snapshot',
-    title: 'Apple (AAPL): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Apple's business model — the iPhone-to-subscription flywheel — built directly from its SEC filings.",
-    takeaway:
-      "Apple sells iPhones to lock people into its ecosystem, then earns high-margin, recurring subscription revenue every month from the App Store, iCloud, and Apple Music once they're in.",
-    quickFacts: [
-      { k: 'Share price', v: '$305.59' },
-      { k: 'Market cap', v: '$4.49T' },
-      { k: 'FY2025 revenue', v: '$416.2B' },
-      { k: 'Services gross margin', v: '75.4%' },
-    ],
-    faq: [
-      { q: 'How does Apple make money?', a: "Apple sells iPhones to lock people into its ecosystem, then earns high-margin, recurring subscription revenue every month from the App Store, iCloud, and Apple Music once they're in — Services carry a 75.4% gross margin, well above hardware." },
-      { q: "What is Apple's market cap?", a: "As of this article's data, Apple's market cap was about $4.49 trillion, on FY2025 revenue of $416.2B." },
-      { q: 'Is Apple more of a hardware company or a services company?', a: 'Both — iPhone sales are still the largest single revenue line and the entry point to the ecosystem, but Services (App Store, iCloud, Apple Music, Google search licensing) is the higher-margin, recurring layer built on top of the installed base.' },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Apple makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A 2026 · earnings call transcripts',
-    tags: ['AAPL', 'Consumer Tech', 'Services', '10-K'],
-    publishedAt: '2026-08-17',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s3$aapl-snapshot$s3$,
+  $t3$AAPL$t3$,
+  $c3$Apple$c3$,
+  $cat3$snapshot$cat3$,
+  $ti3$Apple (AAPL): What This Company Actually Does$ti3$,
+  $ex3$A plain-English read of Apple's business model — the iPhone-to-subscription flywheel — built directly from its SEC filings.$ex3$,
+  $tk3$Apple sells iPhones to lock people into its ecosystem, then earns high-margin, recurring subscription revenue every month from the App Store, iCloud, and Apple Music once they're in.$tk3$,
+  $qf3$[{"k":"Share price","v":"$305.59"},{"k":"Market cap","v":"$4.49T"},{"k":"FY2025 revenue","v":"$416.2B"},{"k":"Services gross margin","v":"75.4%"}]$qf3$::jsonb,
+  $faq3$[{"q":"How does Apple make money?","a":"Apple sells iPhones to lock people into its ecosystem, then earns high-margin, recurring subscription revenue every month from the App Store, iCloud, and Apple Music once they're in — Services carry a 75.4% gross margin, well above hardware."},{"q":"What is Apple's market cap?","a":"As of this article's data, Apple's market cap was about $4.49 trillion, on FY2025 revenue of $416.2B."},{"q":"Is Apple more of a hardware company or a services company?","a":"Both — iPhone sales are still the largest single revenue line and the entry point to the ecosystem, but Services (App Store, iCloud, Apple Music, Google search licensing) is the higher-margin, recurring layer built on top of the installed base."}]$faq3$::jsonb,
+  $toc3$[{"id":"how-it-makes-money","label":"How Apple makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc3$::jsonb,
+  $html3$
 <h2 id="how-it-makes-money">How Apple makes money</h2>
 <p>Apple designs its devices in-house but has them built by contract manufacturers across Taiwan, China, and South Korea. Roughly 40% of finished iPhones, Macs, and iPads are sold directly through Apple's own stores and website; the other 60% go out through carriers and resellers. The real engine, though, kicks in after the sale: once a device is active, its owner becomes a candidate for the App Store, iCloud, and Apple Music — services that carry a 75.4% gross margin, more than double hardware's 36.8%.</p>
 <div class="flow">
@@ -560,35 +538,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Apple's 10-K filings for FY2021 through FY2025, plus DEF 14A (filed Jan 8, 2026) and a web search for the current share price. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html3$,
+  $src3$10-K FY2021–FY2025 · 10-Q · DEF 14A 2026 · earnings call transcripts$src3$,
+  ARRAY['AAPL', 'Consumer Tech', 'Services', '10-K'],
+  'published',
+  $d3$2026-08-17$d3$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'aapl-story',
-    ticker: 'AAPL',
-    company: 'Apple',
-    category: 'story',
-    title: "Apple's Last Three Years: A Broken AI Promise, a Regulatory Reckoning, and a Comeback",
-    excerpt:
-      "How Apple got caught between a Siri promise it couldn't keep on time and a wave of regulatory losses in 2024–2025 — then clawed back both its numbers and its tone by mid-2026.",
-    takeaway:
-      "Between 2024 and 2025, Apple got tripped up by two problems of its own making — an AI (Siri) promise it couldn't deliver on schedule, and mounting regulatory losses in Europe and the U.S. — then spent 2026 recovering on both fronts almost simultaneously, in results and in tone.",
-    faq: [
-      { q: "Why was Apple's Siri AI promise delayed?", a: "Apple promised an upgraded, more conversational Siri on a timeline it ultimately couldn't deliver on schedule — one of two self-inflicted problems, alongside mounting regulatory losses in Europe and the U.S., that defined its 2024–2025 stretch." },
-      { q: "Has Apple recovered from its 2024–2025 setbacks?", a: "Largely yes — Apple spent 2026 recovering on both fronts almost simultaneously, with results and management tone both improving together." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Apple's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from November 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual results' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Nov 2023–Jul 2026',
-    tags: ['AAPL', 'Siri', 'Antitrust', 'Earnings Calls'],
-    publishedAt: '2026-08-17',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s4$aapl-story$s4$,
+  $t4$AAPL$t4$,
+  $c4$Apple$c4$,
+  $cat4$story$cat4$,
+  $ti4$Apple's Last Three Years: A Broken AI Promise, a Regulatory Reckoning, and a Comeback$ti4$,
+  $ex4$How Apple got caught between a Siri promise it couldn't keep on time and a wave of regulatory losses in 2024–2025 — then clawed back both its numbers and its tone by mid-2026.$ex4$,
+  $tk4$Between 2024 and 2025, Apple got tripped up by two problems of its own making — an AI (Siri) promise it couldn't deliver on schedule, and mounting regulatory losses in Europe and the U.S. — then spent 2026 recovering on both fronts almost simultaneously, in results and in tone.$tk4$,
+  null,
+  $faq4$[{"q":"Why was Apple's Siri AI promise delayed?","a":"Apple promised an upgraded, more conversational Siri on a timeline it ultimately couldn't deliver on schedule — one of two self-inflicted problems, alongside mounting regulatory losses in Europe and the U.S., that defined its 2024–2025 stretch."},{"q":"Has Apple recovered from its 2024–2025 setbacks?","a":"Largely yes — Apple spent 2026 recovering on both fronts almost simultaneously, with results and management tone both improving together."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Apple's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from November 2023 to July 2026."}]$faq4$::jsonb,
+  $toc4$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance vs. actual results"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc4$::jsonb,
+  $html4$
 <h2 id="the-story">The story</h2>
 <h3>2023: a quiet run-up</h3>
 <p>In late 2023, Apple was in a relatively calm stretch, riding anticipation for the iPhone 15 and the upcoming Vision Pro. The legal risks flagged in that year's 10-K were routine — an Epic Games appeal trending in Apple's favor, and a patent dispute with Masimo over the Apple Watch's blood-oxygen sensor. The first crack appeared quietly: on the January 2024 earnings call, management acknowledged that mainland China iPhone revenue had fallen by a mid-single-digit percentage on a currency-neutral basis.</p>
@@ -655,35 +641,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q4 FY2023 (Nov 2, 2023) through Q3 FY2026 (Jul 30, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html4$,
+  $src4$10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Nov 2023–Jul 2026$src4$,
+  ARRAY['AAPL', 'Siri', 'Antitrust', 'Earnings Calls'],
+  'published',
+  $d4$2026-08-17$d4$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'aapl-dcf',
-    ticker: 'AAPL',
-    company: 'Apple',
-    category: 'dcf',
-    title: "What AAPL's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Apple's share price already assumes — and comparing it with what the company has actually delivered.",
-    takeaway:
-      "At today's price, Apple's stock is pricing in about 16.4% annual free-cash-flow growth for the next ten years. Over the past four years, the company's actual FCF growth averaged just 1.5% a year.",
-    faq: [
-      { q: "What growth rate does AAPL's stock price assume?", a: "At today's price, Apple's stock is pricing in about 16.4% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Apple's actual growth?", a: "Over the past four years, Apple's actual free-cash-flow growth averaged just 1.5% a year — far below the ~16.4% the current price requires." },
-      { q: 'What share price was used for this analysis?', a: "This analysis used $305.59, Apple's closing price on Aug 17, 2026." },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $305.59 (Aug 17, 2026 close)',
-    tags: ['AAPL', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-08-17',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s5$aapl-dcf$s5$,
+  $t5$AAPL$t5$,
+  $c5$Apple$c5$,
+  $cat5$dcf$cat5$,
+  $ti5$What AAPL's Stock Price Is Really Betting On$ti5$,
+  $ex5$Reverse-engineering the growth rate Apple's share price already assumes — and comparing it with what the company has actually delivered.$ex5$,
+  $tk5$At today's price, Apple's stock is pricing in about 16.4% annual free-cash-flow growth for the next ten years. Over the past four years, the company's actual FCF growth averaged just 1.5% a year.$tk5$,
+  null,
+  $faq5$[{"q":"What growth rate does AAPL's stock price assume?","a":"At today's price, Apple's stock is pricing in about 16.4% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Apple's actual growth?","a":"Over the past four years, Apple's actual free-cash-flow growth averaged just 1.5% a year — far below the ~16.4% the current price requires."},{"q":"What share price was used for this analysis?","a":"This analysis used $305.59, Apple's closing price on Aug 17, 2026."}]$faq5$::jsonb,
+  $toc5$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc5$::jsonb,
+  $html5$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, AAPL implies <span class="num">~16.4%</span> annual FCF growth for the next 10 years, discounted at 9%.</p>
@@ -755,45 +749,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Apple's 10-K (FY2021–FY2025), 10-Q (Q2 FY2026), and a web search for the current share price. This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html5$,
+  $src5$As of Aug 17, 2026 · Price used: $305.59 (Aug 17, 2026 close)$src5$,
+  ARRAY['AAPL', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d5$2026-08-17$d5$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'msft-snapshot',
-    ticker: 'MSFT',
-    company: 'Microsoft',
-    category: 'snapshot',
-    title: 'Microsoft (MSFT): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Microsoft's business model — from Office subscriptions to Azure cloud services — built directly from its SEC filings.",
-    takeaway:
-      'Microsoft builds the office software and cloud servers that companies and individuals use every day, then charges monthly or annual fees for access.',
-    quickFacts: [
-      { k: 'Share price', v: '$495.40' },
-      { k: 'Market cap', v: '$3.68T' },
-      { k: 'Dividend yield', v: '0.73%' },
-      { k: 'P/E ratio', v: '27.6x' },
-    ],
-    faq: [
-      { q: 'What does Microsoft do?', a: 'Microsoft builds the office software and cloud servers that companies and individuals use every day — Office, Windows, and Azure cloud computing — then charges monthly or annual subscription fees for access.' },
-      { q: "What is Microsoft's market cap?", a: "As of this article's data, Microsoft's market cap was about $3.68 trillion, with a P/E ratio of roughly 27.6x and a dividend yield of 0.73%." },
-      { q: 'Does Microsoft pay a dividend?', a: "Yes — Microsoft pays a quarterly dividend, yielding about 0.73% at the price used in this article, on top of share buybacks." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Microsoft makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · DEF 14A · Q4 FY2026 earnings call',
-    tags: ['MSFT', 'Cloud', 'Enterprise Software', '10-K'],
-    publishedAt: '2026-08-17',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s6$msft-snapshot$s6$,
+  $t6$MSFT$t6$,
+  $c6$Microsoft$c6$,
+  $cat6$snapshot$cat6$,
+  $ti6$Microsoft (MSFT): What This Company Actually Does$ti6$,
+  $ex6$A plain-English read of Microsoft's business model — from Office subscriptions to Azure cloud services — built directly from its SEC filings.$ex6$,
+  $tk6$Microsoft builds the office software and cloud servers that companies and individuals use every day, then charges monthly or annual fees for access.$tk6$,
+  $qf6$[{"k":"Share price","v":"$495.40"},{"k":"Market cap","v":"$3.68T"},{"k":"Dividend yield","v":"0.73%"},{"k":"P/E ratio","v":"27.6x"}]$qf6$::jsonb,
+  $faq6$[{"q":"What does Microsoft do?","a":"Microsoft builds the office software and cloud servers that companies and individuals use every day — Office, Windows, and Azure cloud computing — then charges monthly or annual subscription fees for access."},{"q":"What is Microsoft's market cap?","a":"As of this article's data, Microsoft's market cap was about $3.68 trillion, with a P/E ratio of roughly 27.6x and a dividend yield of 0.73%."},{"q":"Does Microsoft pay a dividend?","a":"Yes — Microsoft pays a quarterly dividend, yielding about 0.73% at the price used in this article, on top of share buybacks."}]$faq6$::jsonb,
+  $toc6$[{"id":"how-it-makes-money","label":"How Microsoft makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc6$::jsonb,
+  $html6$
 <h2 id="how-it-makes-money">How Microsoft makes money</h2>
 <p>Enterprise and individual customers pay Microsoft subscription fees, licenses, and cloud-usage charges for its software and infrastructure. That money gets reinvested into data centers and AI research, which funds better products to sell back to the same customers — and whatever's left over goes to shareholders as dividends and buybacks.</p>
 <div class="flow">
@@ -918,35 +910,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Microsoft's 10-K filings for FY2021 through FY2025, DEF 14A (filed Oct 21, 2025), and the Q4 FY2026 earnings call (Jul 29, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html6$,
+  $src6$10-K FY2023–FY2025 · DEF 14A · Q4 FY2026 earnings call$src6$,
+  ARRAY['MSFT', 'Cloud', 'Enterprise Software', '10-K'],
+  'published',
+  $d6$2026-08-17$d6$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'msft-story',
-    ticker: 'MSFT',
-    company: 'Microsoft',
-    category: 'story',
-    title: "Microsoft's Last Three Years: Betting Bigger Even While Admitting It Can't Keep Up",
-    excerpt:
-      'Microsoft spent three straight years telling investors AI cloud demand was outrunning its capacity — and beat its own Azure growth targets in nine of eleven quarters anyway.',
-    takeaway:
-      "For three years running, Microsoft has kept admitting that AI cloud capacity can't keep up with demand — while beating its own cloud growth targets in nine of eleven quarters anyway.",
-    faq: [
-      { q: "Has Microsoft's Azure kept up with AI demand?", a: "Not by its own admission — Microsoft has said for three straight years that AI cloud capacity can't keep up with demand, even as it beat its own Azure growth targets in nine of eleven quarters over that stretch." },
-      { q: 'Is capacity-constrained growth a bad sign for Microsoft?', a: "It's a mixed signal: demand consistently outrunning supply means Microsoft is leaving revenue on the table short-term, but it also means the growth targets it does hit are being cleared against a harder-than-expected backdrop." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Microsoft's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Azure guidance vs. actual, 11 quarters' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
-    tags: ['MSFT', 'Azure', 'AI Infrastructure', 'Earnings Calls'],
-    publishedAt: '2026-08-17',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s7$msft-story$s7$,
+  $t7$MSFT$t7$,
+  $c7$Microsoft$c7$,
+  $cat7$story$cat7$,
+  $ti7$Microsoft's Last Three Years: Betting Bigger Even While Admitting It Can't Keep Up$ti7$,
+  $ex7$Microsoft spent three straight years telling investors AI cloud demand was outrunning its capacity — and beat its own Azure growth targets in nine of eleven quarters anyway.$ex7$,
+  $tk7$For three years running, Microsoft has kept admitting that AI cloud capacity can't keep up with demand — while beating its own cloud growth targets in nine of eleven quarters anyway.$tk7$,
+  null,
+  $faq7$[{"q":"Has Microsoft's Azure kept up with AI demand?","a":"Not by its own admission — Microsoft has said for three straight years that AI cloud capacity can't keep up with demand, even as it beat its own Azure growth targets in nine of eleven quarters over that stretch."},{"q":"Is capacity-constrained growth a bad sign for Microsoft?","a":"It's a mixed signal: demand consistently outrunning supply means Microsoft is leaving revenue on the table short-term, but it also means the growth targets it does hit are being cleared against a harder-than-expected backdrop."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Microsoft's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026."}]$faq7$::jsonb,
+  $toc7$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Azure guidance vs. actual, 11 quarters"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc7$::jsonb,
+  $html7$
 <h2 id="the-story">The story</h2>
 <h3>2023: a confident, unremarkable quarter</h3>
 <p>In October 2023, Microsoft reported Azure growth of 29% and guided the next quarter to a more conservative 26–27%. The tone was that of a company just getting AI Copilots off the ground — not yet the urgency that would come to define later quarters.</p>
@@ -1013,35 +1013,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q1 FY2024 (Oct 24, 2023) through Q3 FY2026 (Apr 29, 2026), plus the Q4 FY2026 call (Jul 29, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html7$,
+  $src7$10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026$src7$,
+  ARRAY['MSFT', 'Azure', 'AI Infrastructure', 'Earnings Calls'],
+  'published',
+  $d7$2026-08-17$d7$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'msft-dcf',
-    ticker: 'MSFT',
-    company: 'Microsoft',
-    category: 'dcf',
-    title: "What MSFT's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Microsoft's share price already assumes — and comparing it with the company's actual free cash flow record.",
-    takeaway:
-      "At today's price, Microsoft's stock is pricing in about 20% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged just 1.9% a year.",
-    faq: [
-      { q: "What growth rate does MSFT's stock price assume?", a: "At today's price, Microsoft's stock is pricing in about 20% annual free-cash-flow growth for the next ten years, discounted at the model's standard rate." },
-      { q: "How does that compare to Microsoft's actual growth?", a: "Over the past five years, Microsoft's actual free-cash-flow growth averaged just 1.9% a year — far below the ~20% the current price requires, a large gap between what's priced in and recent history." },
-      { q: 'What share price was used for this analysis?', a: "This analysis used $495.40, Microsoft's closing price on Aug 14, 2026, as of Aug 16, 2026." },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 16, 2026 · Price used: $495.40 (Aug 14, 2026 close)',
-    tags: ['MSFT', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-08-17',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s8$msft-dcf$s8$,
+  $t8$MSFT$t8$,
+  $c8$Microsoft$c8$,
+  $cat8$dcf$cat8$,
+  $ti8$What MSFT's Stock Price Is Really Betting On$ti8$,
+  $ex8$Reverse-engineering the growth rate Microsoft's share price already assumes — and comparing it with the company's actual free cash flow record.$ex8$,
+  $tk8$At today's price, Microsoft's stock is pricing in about 20% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged just 1.9% a year.$tk8$,
+  null,
+  $faq8$[{"q":"What growth rate does MSFT's stock price assume?","a":"At today's price, Microsoft's stock is pricing in about 20% annual free-cash-flow growth for the next ten years, discounted at the model's standard rate."},{"q":"How does that compare to Microsoft's actual growth?","a":"Over the past five years, Microsoft's actual free-cash-flow growth averaged just 1.9% a year — far below the ~20% the current price requires, a large gap between what's priced in and recent history."},{"q":"What share price was used for this analysis?","a":"This analysis used $495.40, Microsoft's closing price on Aug 14, 2026, as of Aug 16, 2026."}]$faq8$::jsonb,
+  $toc8$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc8$::jsonb,
+  $html8$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, MSFT implies <span class="num">~20%</span> annual FCF growth for the next 10 years, discounted at 9%.</p>
@@ -1113,45 +1121,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Microsoft's 10-K filings, 10-Q (Q3 FY2026), and a web search for the current share price. This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html8$,
+  $src8$As of Aug 16, 2026 · Price used: $495.40 (Aug 14, 2026 close)$src8$,
+  ARRAY['MSFT', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d8$2026-08-17$d8$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'googl-snapshot',
-    ticker: 'GOOGL',
-    company: 'Alphabet',
-    category: 'snapshot',
-    title: 'Alphabet (GOOGL): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of how Google's parent company actually makes money — built directly from its SEC filings.",
-    takeaway:
-      "Alphabet gets people to search and watch videos for free, then sells the ad space next to those results and videos to advertisers who want their attention.",
-    quickFacts: [
-      { k: 'Share price (Class A)', v: '$343.54' },
-      { k: 'Market cap', v: '$4.20T' },
-      { k: 'FY2025 revenue', v: '$402.8B' },
-      { k: 'Advertising share of revenue', v: '73%' },
-    ],
-    faq: [
-      { q: 'How does Alphabet (Google) make money?', a: 'Alphabet gets people to search and watch videos for free, then sells the ad space next to those results and videos to advertisers — advertising makes up about 73% of total revenue.' },
-      { q: "What is Alphabet's market cap?", a: "As of this article's data, Alphabet's market cap was about $4.20 trillion, on FY2025 revenue of $402.8B." },
-      { q: 'Is Alphabet still mainly an advertising company?', a: 'Yes, by revenue — advertising is about 73% of the total — though Google Cloud and other bets are a growing share of the business beyond search and video ads.' },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Alphabet makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025',
-    tags: ['GOOGL', 'Digital Advertising', 'Cloud', '10-K'],
-    publishedAt: '2026-08-18',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s9$googl-snapshot$s9$,
+  $t9$GOOGL$t9$,
+  $c9$Alphabet$c9$,
+  $cat9$snapshot$cat9$,
+  $ti9$Alphabet (GOOGL): What This Company Actually Does$ti9$,
+  $ex9$A plain-English read of how Google's parent company actually makes money — built directly from its SEC filings.$ex9$,
+  $tk9$Alphabet gets people to search and watch videos for free, then sells the ad space next to those results and videos to advertisers who want their attention.$tk9$,
+  $qf9$[{"k":"Share price (Class A)","v":"$343.54"},{"k":"Market cap","v":"$4.20T"},{"k":"FY2025 revenue","v":"$402.8B"},{"k":"Advertising share of revenue","v":"73%"}]$qf9$::jsonb,
+  $faq9$[{"q":"How does Alphabet (Google) make money?","a":"Alphabet gets people to search and watch videos for free, then sells the ad space next to those results and videos to advertisers — advertising makes up about 73% of total revenue."},{"q":"What is Alphabet's market cap?","a":"As of this article's data, Alphabet's market cap was about $4.20 trillion, on FY2025 revenue of $402.8B."},{"q":"Is Alphabet still mainly an advertising company?","a":"Yes, by revenue — advertising is about 73% of the total — though Google Cloud and other bets are a growing share of the business beyond search and video ads."}]$faq9$::jsonb,
+  $toc9$[{"id":"how-it-makes-money","label":"How Alphabet makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc9$::jsonb,
+  $html9$
 <h2 id="how-it-makes-money">How Alphabet makes money</h2>
 <p>Users search and watch videos for free; that traffic flows to Search, YouTube, and Alphabet's apps, where advertisers pay to be seen. Advertising accounts for about 73% of Alphabet's revenue. A portion of that ad revenue — the traffic acquisition cost, or TAC, running at 20.3% — flows back out to the browsers, carriers, and app publishers that sent the traffic in the first place. Separately, enterprise and government customers pay for Google Cloud, now 15% of revenue and growing fast.</p>
 <div class="flow">
@@ -1281,35 +1287,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Alphabet's 10-K filings for FY2021 through FY2025. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html9$,
+  $src9$10-K FY2021–FY2025$src9$,
+  ARRAY['GOOGL', 'Digital Advertising', 'Cloud', '10-K'],
+  'published',
+  $d9$2026-08-18$d9$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'googl-story',
-    ticker: 'GOOGL',
-    company: 'Alphabet',
-    category: 'story',
-    title: "Alphabet's Last Three Years: From Ad Company to AI Infrastructure Bet",
-    excerpt:
-      "How Alphabet's quarterly capital spending went from $8 billion to $44.9 billion in three years — and how management's tone never once wavered, even through a first-ever negative free-cash-flow quarter.",
-    takeaway:
-      "In three years, Alphabet grew its quarterly capital spending roughly sixfold — from about $8 billion to $44.9 billion — and posted its first-ever negative free-cash-flow quarter along the way, all without management's tone changing once.",
-    faq: [
-      { q: "How much has Alphabet's AI spending grown?", a: 'Quarterly capital spending grew roughly sixfold in three years, from about $8 billion to $44.9 billion, as Alphabet built out AI infrastructure.' },
-      { q: 'Did Alphabet ever post negative free cash flow?', a: "Yes — during this AI buildout, Alphabet posted its first-ever negative free-cash-flow quarter, even as management's public tone and guidance stayed confident throughout." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Alphabet's 10-K filings for FY2023 through FY2025 and 8 quarters of earnings call transcripts from November 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'CapEx guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 8 quarters of earnings call transcripts, Nov 2023–Jul 2026',
-    tags: ['GOOGL', 'AI Infrastructure', 'Capital Spending', 'Earnings Calls'],
-    publishedAt: '2026-08-18',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s10$googl-story$s10$,
+  $t10$GOOGL$t10$,
+  $c10$Alphabet$c10$,
+  $cat10$story$cat10$,
+  $ti10$Alphabet's Last Three Years: From Ad Company to AI Infrastructure Bet$ti10$,
+  $ex10$How Alphabet's quarterly capital spending went from $8 billion to $44.9 billion in three years — and how management's tone never once wavered, even through a first-ever negative free-cash-flow quarter.$ex10$,
+  $tk10$In three years, Alphabet grew its quarterly capital spending roughly sixfold — from about $8 billion to $44.9 billion — and posted its first-ever negative free-cash-flow quarter along the way, all without management's tone changing once.$tk10$,
+  null,
+  $faq10$[{"q":"How much has Alphabet's AI spending grown?","a":"Quarterly capital spending grew roughly sixfold in three years, from about $8 billion to $44.9 billion, as Alphabet built out AI infrastructure."},{"q":"Did Alphabet ever post negative free cash flow?","a":"Yes — during this AI buildout, Alphabet posted its first-ever negative free-cash-flow quarter, even as management's public tone and guidance stayed confident throughout."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Alphabet's 10-K filings for FY2023 through FY2025 and 8 quarters of earnings call transcripts from November 2023 to July 2026."}]$faq10$::jsonb,
+  $toc10$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"CapEx guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc10$::jsonb,
+  $html10$
 <h2 id="the-story">The story</h2>
 <h3>2023: still cautious</h3>
 <p>In Q3 2023, Alphabet's quarterly capital spending sat around $8 billion, and the only forward guidance offered was qualitative: full-year 2024 capex would be higher than all of 2023 combined. That year's 10-K listed "more than 75% of revenue from online advertising" as risk factor number one — with no language yet about AI disrupting search.</p>
@@ -1368,35 +1382,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 8 quarters of earnings call transcripts (Q3 FY2023, Q1 FY2024, Q3 FY2024, Q1 FY2025, Q3 FY2025, Q4 FY2025, Q1 FY2026, Q2 FY2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html10$,
+  $src10$10-K FY2023–FY2025 · 8 quarters of earnings call transcripts, Nov 2023–Jul 2026$src10$,
+  ARRAY['GOOGL', 'AI Infrastructure', 'Capital Spending', 'Earnings Calls'],
+  'published',
+  $d10$2026-08-18$d10$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'googl-dcf',
-    ticker: 'GOOGL',
-    company: 'Alphabet',
-    category: 'dcf',
-    title: "What GOOGL's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Alphabet's share price already assumes — and comparing it with the company's actual growth record.",
-    takeaway:
-      "At today's price, Alphabet's stock is pricing in about 26% annual free-cash-flow growth for the next ten years, using trailing-12-month FCF. Over the past five years, the company's actual FCF growth averaged just 2.3% a year, and revenue grew 11.8% a year.",
-    faq: [
-      { q: "What growth rate does GOOGL's stock price assume?", a: "At today's price, Alphabet's stock is pricing in about 26% annual free-cash-flow growth for the next ten years, based on trailing-12-month FCF." },
-      { q: "How does that compare to Alphabet's actual growth?", a: "Over the past five years, Alphabet's actual free-cash-flow growth averaged just 2.3% a year (revenue grew 11.8% a year) — well below the ~26% the current price requires." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $344.00, the Class A closing price on Aug 17, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $344.00 (Class A, Aug 17, 2026 close)',
-    tags: ['GOOGL', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-08-18',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s11$googl-dcf$s11$,
+  $t11$GOOGL$t11$,
+  $c11$Alphabet$c11$,
+  $cat11$dcf$cat11$,
+  $ti11$What GOOGL's Stock Price Is Really Betting On$ti11$,
+  $ex11$Reverse-engineering the growth rate Alphabet's share price already assumes — and comparing it with the company's actual growth record.$ex11$,
+  $tk11$At today's price, Alphabet's stock is pricing in about 26% annual free-cash-flow growth for the next ten years, using trailing-12-month FCF. Over the past five years, the company's actual FCF growth averaged just 2.3% a year, and revenue grew 11.8% a year.$tk11$,
+  null,
+  $faq11$[{"q":"What growth rate does GOOGL's stock price assume?","a":"At today's price, Alphabet's stock is pricing in about 26% annual free-cash-flow growth for the next ten years, based on trailing-12-month FCF."},{"q":"How does that compare to Alphabet's actual growth?","a":"Over the past five years, Alphabet's actual free-cash-flow growth averaged just 2.3% a year (revenue grew 11.8% a year) — well below the ~26% the current price requires."},{"q":"What share price was used for this analysis?","a":"This analysis used $344.00, the Class A closing price on Aug 17, 2026."}]$faq11$::jsonb,
+  $toc11$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc11$::jsonb,
+  $html11$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, GOOGL implies <span class="num">~26%</span> annual FCF growth for the next 10 years, using trailing-12-month FCF at a 10% discount rate.</p>
@@ -1471,45 +1493,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Alphabet's 10-K (FY2021–FY2025), the Q2 FY2026 earnings call, and a web search for the current share price. This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html11$,
+  $src11$As of Aug 17, 2026 · Price used: $344.00 (Class A, Aug 17, 2026 close)$src11$,
+  ARRAY['GOOGL', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d11$2026-08-18$d11$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'meta-snapshot',
-    ticker: 'META',
-    company: 'Meta',
-    category: 'snapshot',
-    title: 'Meta (META): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Meta's ad-engine business model — built directly from its SEC filings.",
-    takeaway:
-      'Meta gives away Facebook, Instagram, and WhatsApp for free, uses AI to learn what each person likes, then sells advertisers the ability to show that person a precisely targeted ad.',
-    quickFacts: [
-      { k: 'Share price', v: '$589.85' },
-      { k: 'Market cap', v: '~$1.50T' },
-      { k: 'Daily active people', v: '3.58B' },
-      { k: 'FY2025 revenue', v: '$201.0B' },
-    ],
-    faq: [
-      { q: 'How does Meta make money?', a: "Meta gives away Facebook, Instagram, and WhatsApp for free, uses AI to learn what each person likes, then sells advertisers the ability to show that person a precisely targeted ad — advertising is essentially all of Meta's revenue." },
-      { q: "How many people use Meta's apps?", a: 'About 3.58 billion people use a Meta app (Facebook, Instagram, WhatsApp, or Messenger) daily, on FY2025 revenue of $201.0B.' },
-      { q: "What is Meta's market cap?", a: "As of this article's data, Meta's market cap was roughly $1.50 trillion." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Meta makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A 2026',
-    tags: ['META', 'Digital Advertising', 'AI Infrastructure', '10-K'],
-    publishedAt: '2026-08-18',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s12$meta-snapshot$s12$,
+  $t12$META$t12$,
+  $c12$Meta$c12$,
+  $cat12$snapshot$cat12$,
+  $ti12$Meta (META): What This Company Actually Does$ti12$,
+  $ex12$A plain-English read of Meta's ad-engine business model — built directly from its SEC filings.$ex12$,
+  $tk12$Meta gives away Facebook, Instagram, and WhatsApp for free, uses AI to learn what each person likes, then sells advertisers the ability to show that person a precisely targeted ad.$tk12$,
+  $qf12$[{"k":"Share price","v":"$589.85"},{"k":"Market cap","v":"~$1.50T"},{"k":"Daily active people","v":"3.58B"},{"k":"FY2025 revenue","v":"$201.0B"}]$qf12$::jsonb,
+  $faq12$[{"q":"How does Meta make money?","a":"Meta gives away Facebook, Instagram, and WhatsApp for free, uses AI to learn what each person likes, then sells advertisers the ability to show that person a precisely targeted ad — advertising is essentially all of Meta's revenue."},{"q":"How many people use Meta's apps?","a":"About 3.58 billion people use a Meta app (Facebook, Instagram, WhatsApp, or Messenger) daily, on FY2025 revenue of $201.0B."},{"q":"What is Meta's market cap?","a":"As of this article's data, Meta's market cap was roughly $1.50 trillion."}]$faq12$::jsonb,
+  $toc12$[{"id":"how-it-makes-money","label":"How Meta makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc12$::jsonb,
+  $html12$
 <h2 id="how-it-makes-money">How Meta makes money</h2>
 <p>Users don't pay a cent — every dollar comes from advertisers. People spend time on Facebook, Instagram, WhatsApp, Messenger, and Threads for free; Meta's AI studies what they engage with, then sells advertisers precisely targeted placement in front of those same eyes.</p>
 <div class="flow">
@@ -1635,35 +1655,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Meta's 10-K filings for FY2021 through FY2025, 10-Q (Q1 FY2026), and DEF 14A 2026, plus a web search for the current share price (stockanalysis.com, Aug 14, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html12$,
+  $src12$10-K FY2021–FY2025 · 10-Q · DEF 14A 2026$src12$,
+  ARRAY['META', 'Digital Advertising', 'AI Infrastructure', '10-K'],
+  'published',
+  $d12$2026-08-18$d12$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'meta-story',
-    ticker: 'META',
-    company: 'Meta',
-    category: 'story',
-    title: "Meta's Last Three Years: From 'Year of Efficiency' to an Ever-Bigger AI Bet",
-    excerpt:
-      'How Meta moved from cost-cutting to raising its AI capex guidance every quarter — and to "superintelligence" language that briefly vanished, then came back.',
-    takeaway:
-      'In 2023, Meta cut costs to build a war chest. Starting in 2024, it began betting that war chest on AI — and three years later, it keeps raising the stakes, calling each new figure more than it thought it would need.',
-    faq: [
-      { q: "What was Meta's 'Year of Efficiency'?", a: 'In 2023, Meta cut costs and headcount to build up a cash war chest, branding it the "Year of Efficiency" — a deliberate pause before betting that same cash on AI infrastructure starting in 2024.' },
-      { q: "Has Meta's AI spending kept rising?", a: "Yes — starting in 2024, Meta has raised its AI capital-expenditure guidance nearly every quarter, each time framing the new figure as more than it originally thought it would need." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Meta's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'CapEx and revenue guidance scorecards' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
-    tags: ['META', 'AI Infrastructure', 'Reality Labs', 'Earnings Calls'],
-    publishedAt: '2026-08-18',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s13$meta-story$s13$,
+  $t13$META$t13$,
+  $c13$Meta$c13$,
+  $cat13$story$cat13$,
+  $ti13$Meta's Last Three Years: From 'Year of Efficiency' to an Ever-Bigger AI Bet$ti13$,
+  $ex13$How Meta moved from cost-cutting to raising its AI capex guidance every quarter — and to "superintelligence" language that briefly vanished, then came back.$ex13$,
+  $tk13$In 2023, Meta cut costs to build a war chest. Starting in 2024, it began betting that war chest on AI — and three years later, it keeps raising the stakes, calling each new figure more than it thought it would need.$tk13$,
+  null,
+  $faq13$[{"q":"What was Meta's 'Year of Efficiency'?","a":"In 2023, Meta cut costs and headcount to build up a cash war chest, branding it the \"Year of Efficiency\" — a deliberate pause before betting that same cash on AI infrastructure starting in 2024."},{"q":"Has Meta's AI spending kept rising?","a":"Yes — starting in 2024, Meta has raised its AI capital-expenditure guidance nearly every quarter, each time framing the new figure as more than it originally thought it would need."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Meta's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026."}]$faq13$::jsonb,
+  $toc13$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"CapEx and revenue guidance scorecards"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc13$::jsonb,
+  $html13$
 <h2 id="the-story">The story</h2>
 <h3>2023: building the war chest</h3>
 <p>In early 2023, after large layoffs, Meta called that year its "Year of Efficiency." On the February 2024 earnings call, Zuckerberg looked back and framed it as preparation "to become a stronger technology company and to execute efficiently towards our ambitions around AI and the metaverse" — the efficiency drive wasn't the goal, it was the fundraising step for the next bet.</p>
@@ -1741,35 +1769,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 2023 (Oct 25, 2023) through Q2 2026 (Jul 29, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html13$,
+  $src13$10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026$src13$,
+  ARRAY['META', 'AI Infrastructure', 'Reality Labs', 'Earnings Calls'],
+  'published',
+  $d13$2026-08-18$d13$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'meta-dcf',
-    ticker: 'META',
-    company: 'Meta',
-    category: 'dcf',
-    title: "What META's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Meta's share price already assumes — and comparing it with what the company has actually delivered.",
-    takeaway:
-      "At today's price, Meta's stock is pricing in about 10.8% annual free-cash-flow growth for the next ten years. Over the past four years, the company's actual FCF growth averaged just 4.3% a year — though revenue grew 14.3% and operating income even faster, since FCF alone is being squeezed by the AI capex surge.",
-    faq: [
-      { q: "What growth rate does META's stock price assume?", a: "At today's price, Meta's stock is pricing in about 10.8% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Meta's actual growth?", a: "Over the past four years, Meta's actual free-cash-flow growth averaged just 4.3% a year — below the ~10.8% required — though revenue grew 14.3% a year; FCF specifically is being squeezed by the AI capex surge." },
-      { q: 'What share price was used for this analysis?', a: "This analysis used $568.97, Meta's closing price on Aug 17, 2026." },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $568.97 (Aug 17, 2026 close)',
-    tags: ['META', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-08-18',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s14$meta-dcf$s14$,
+  $t14$META$t14$,
+  $c14$Meta$c14$,
+  $cat14$dcf$cat14$,
+  $ti14$What META's Stock Price Is Really Betting On$ti14$,
+  $ex14$Reverse-engineering the growth rate Meta's share price already assumes — and comparing it with what the company has actually delivered.$ex14$,
+  $tk14$At today's price, Meta's stock is pricing in about 10.8% annual free-cash-flow growth for the next ten years. Over the past four years, the company's actual FCF growth averaged just 4.3% a year — though revenue grew 14.3% and operating income even faster, since FCF alone is being squeezed by the AI capex surge.$tk14$,
+  null,
+  $faq14$[{"q":"What growth rate does META's stock price assume?","a":"At today's price, Meta's stock is pricing in about 10.8% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Meta's actual growth?","a":"Over the past four years, Meta's actual free-cash-flow growth averaged just 4.3% a year — below the ~10.8% required — though revenue grew 14.3% a year; FCF specifically is being squeezed by the AI capex surge."},{"q":"What share price was used for this analysis?","a":"This analysis used $568.97, Meta's closing price on Aug 17, 2026."}]$faq14$::jsonb,
+  $toc14$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc14$::jsonb,
+  $html14$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, META implies <span class="num">~10.8%</span> annual FCF growth for the next 10 years, discounted at 9%.</p>
@@ -1841,45 +1877,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Meta's 10-K (FY2021–FY2025), 10-Q (Q1 FY2026), and a web search for the current share price. This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html14$,
+  $src14$As of Aug 17, 2026 · Price used: $568.97 (Aug 17, 2026 close)$src14$,
+  ARRAY['META', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d14$2026-08-18$d14$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'amzn-snapshot',
-    ticker: 'AMZN',
-    company: 'Amazon',
-    category: 'snapshot',
-    title: 'Amazon (AMZN): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Amazon's business model — retail plus cloud computing — built directly from its SEC filings.",
-    takeaway:
-      'Amazon delivers what people need quickly and cheaply, then rents out its spare computing power to other companies for a living.',
-    quickFacts: [
-      { k: 'Share price', v: '$287.20' },
-      { k: 'Market cap', v: 'Over $3T' },
-      { k: 'FY2025 revenue', v: '$716.9B' },
-      { k: 'AWS operating margin', v: '35.4%' },
-    ],
-    faq: [
-      { q: 'How does Amazon make money?', a: 'Amazon delivers what people need quickly and cheaply through its retail marketplace, then rents out its spare computing power to other companies through AWS — AWS alone runs a 35.4% operating margin, far higher than retail.' },
-      { q: 'Is AWS more profitable than Amazon retail?', a: 'Yes — AWS operates at a 35.4% operating margin, well above the thin margins typical of Amazon\'s retail business, even though retail brings in more total revenue.' },
-      { q: "What is Amazon's market cap?", a: "As of this article's data, Amazon's market cap was over $3 trillion, on FY2025 revenue of $716.9B." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Amazon makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
-    tags: ['AMZN', 'E-commerce', 'Cloud', '10-K'],
-    publishedAt: '2026-08-19',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s15$amzn-snapshot$s15$,
+  $t15$AMZN$t15$,
+  $c15$Amazon$c15$,
+  $cat15$snapshot$cat15$,
+  $ti15$Amazon (AMZN): What This Company Actually Does$ti15$,
+  $ex15$A plain-English read of Amazon's business model — retail plus cloud computing — built directly from its SEC filings.$ex15$,
+  $tk15$Amazon delivers what people need quickly and cheaply, then rents out its spare computing power to other companies for a living.$tk15$,
+  $qf15$[{"k":"Share price","v":"$287.20"},{"k":"Market cap","v":"Over $3T"},{"k":"FY2025 revenue","v":"$716.9B"},{"k":"AWS operating margin","v":"35.4%"}]$qf15$::jsonb,
+  $faq15$[{"q":"How does Amazon make money?","a":"Amazon delivers what people need quickly and cheaply through its retail marketplace, then rents out its spare computing power to other companies through AWS — AWS alone runs a 35.4% operating margin, far higher than retail."},{"q":"Is AWS more profitable than Amazon retail?","a":"Yes — AWS operates at a 35.4% operating margin, well above the thin margins typical of Amazon's retail business, even though retail brings in more total revenue."},{"q":"What is Amazon's market cap?","a":"As of this article's data, Amazon's market cap was over $3 trillion, on FY2025 revenue of $716.9B."}]$faq15$::jsonb,
+  $toc15$[{"id":"how-it-makes-money","label":"How Amazon makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc15$::jsonb,
+  $html15$
 <h2 id="how-it-makes-money">How Amazon makes money</h2>
 <p>Third-party sellers and brands supply products; Amazon's retail and fulfillment operation (North America + International) sells and ships them to consumers, who also pay for Prime membership. Advertisers pay separately to be seen in Amazon's marketplace. And enterprises and developers rent computing power and AI infrastructure from AWS, which runs at a 35% operating margin — high-margin cash that funds both retail investment and AI infrastructure (2026 capex is guided around $200B).</p>
 <div class="flow">
@@ -1993,35 +2027,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Amazon's 10-K filings for FY2021 through FY2025 and DEF 14A 2026, plus web-search figures (CNBC, Yahoo Finance, Aug 3, 2026) for market price context. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html15$,
+  $src15$10-K FY2021–FY2025 · DEF 14A 2026$src15$,
+  ARRAY['AMZN', 'E-commerce', 'Cloud', '10-K'],
+  'published',
+  $d15$2026-08-19$d15$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'amzn-story',
-    ticker: 'AMZN',
-    company: 'Amazon',
-    category: 'story',
-    title: "Amazon's Last Three Years: From Cost-Cutting to History's Biggest Infrastructure Bet",
-    excerpt:
-      'How Amazon went from a company that had just finished squeezing out costs to one making its largest-ever infrastructure bet — wobbling twice along the way but beating its own guidance every quarter regardless.',
-    takeaway:
-      "In three years, Amazon went from a company that had just finished squeezing out costs to one making the largest infrastructure bet in its history — wobbling twice along the way (supply constraints, tariff uncertainty) but beating its own guidance every single quarter regardless.",
-    faq: [
-      { q: "What is Amazon's biggest infrastructure bet?", a: "Amazon is in the middle of the largest infrastructure buildout in its history, centered on AWS data-center and AI capacity — a sharp turn from the cost-cutting mode it was in just three years earlier." },
-      { q: "Has Amazon been hitting its own guidance?", a: "Yes — despite two wobbles along the way (supply constraints and tariff uncertainty), Amazon beat its own guidance every single quarter over the period this article reviews." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Amazon's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual, 7 quarters' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
-    tags: ['AMZN', 'AWS', 'AI Infrastructure', 'Earnings Calls'],
-    publishedAt: '2026-08-19',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s16$amzn-story$s16$,
+  $t16$AMZN$t16$,
+  $c16$Amazon$c16$,
+  $cat16$story$cat16$,
+  $ti16$Amazon's Last Three Years: From Cost-Cutting to History's Biggest Infrastructure Bet$ti16$,
+  $ex16$How Amazon went from a company that had just finished squeezing out costs to one making its largest-ever infrastructure bet — wobbling twice along the way but beating its own guidance every quarter regardless.$ex16$,
+  $tk16$In three years, Amazon went from a company that had just finished squeezing out costs to one making the largest infrastructure bet in its history — wobbling twice along the way (supply constraints, tariff uncertainty) but beating its own guidance every single quarter regardless.$tk16$,
+  null,
+  $faq16$[{"q":"What is Amazon's biggest infrastructure bet?","a":"Amazon is in the middle of the largest infrastructure buildout in its history, centered on AWS data-center and AI capacity — a sharp turn from the cost-cutting mode it was in just three years earlier."},{"q":"Has Amazon been hitting its own guidance?","a":"Yes — despite two wobbles along the way (supply constraints and tariff uncertainty), Amazon beat its own guidance every single quarter over the period this article reviews."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Amazon's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026."}]$faq16$::jsonb,
+  $toc16$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance vs. actual, 7 quarters"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc16$::jsonb,
+  $html16$
 <h2 id="the-story">The story</h2>
 <h3>Late 2023: riding the cost-cutting payoff</h3>
 <p>Q3 2023 operating income jumped 343% year over year. On the February 2024 earnings call, CEO Andy Jassy said: "2023 was a really good year for us, and we all believe it's just the beginning." AWS growth reaccelerated from 12% to 13%. Tone climbed steadily — 7, then 8, then 9 by Q1 2024 — and rising AI capex was openly framed as "a positive signal about future growth," not a burden.</p>
@@ -2083,35 +2125,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 2023 (Oct 26, 2023) through Q2 2026 (Jul 30, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html16$,
+  $src16$10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026$src16$,
+  ARRAY['AMZN', 'AWS', 'AI Infrastructure', 'Earnings Calls'],
+  'published',
+  $d16$2026-08-19$d16$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'amzn-dcf',
-    ticker: 'AMZN',
-    company: 'Amazon',
-    category: 'dcf',
-    title: "What AMZN's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Amazon's share price already assumes — and comparing it with the company's actual growth record.",
-    takeaway:
-      "At today's price, Amazon's stock is pricing in about 27% annual free-cash-flow growth for the next ten years. Over the past five years, revenue grew 11.1% a year and operating income 33.9% a year — while free cash flow itself actually shrank as AI investment surged.",
-    faq: [
-      { q: "What growth rate does AMZN's stock price assume?", a: "At today's price, Amazon's stock is pricing in about 27% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Amazon's actual growth?", a: "Over the past five years, Amazon's revenue grew 11.1% a year and operating income 33.9% a year, but free cash flow itself actually shrank as AI infrastructure investment surged — a very different picture from the ~27% FCF growth the price requires." },
-      { q: 'What share price was used for this analysis?', a: "This analysis used $262.65, Amazon's closing price on Aug 14, 2026, as of Aug 17, 2026." },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $262.65 (Aug 14, 2026 close)',
-    tags: ['AMZN', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-08-19',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s17$amzn-dcf$s17$,
+  $t17$AMZN$t17$,
+  $c17$Amazon$c17$,
+  $cat17$dcf$cat17$,
+  $ti17$What AMZN's Stock Price Is Really Betting On$ti17$,
+  $ex17$Reverse-engineering the growth rate Amazon's share price already assumes — and comparing it with the company's actual growth record.$ex17$,
+  $tk17$At today's price, Amazon's stock is pricing in about 27% annual free-cash-flow growth for the next ten years. Over the past five years, revenue grew 11.1% a year and operating income 33.9% a year — while free cash flow itself actually shrank as AI investment surged.$tk17$,
+  null,
+  $faq17$[{"q":"What growth rate does AMZN's stock price assume?","a":"At today's price, Amazon's stock is pricing in about 27% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Amazon's actual growth?","a":"Over the past five years, Amazon's revenue grew 11.1% a year and operating income 33.9% a year, but free cash flow itself actually shrank as AI infrastructure investment surged — a very different picture from the ~27% FCF growth the price requires."},{"q":"What share price was used for this analysis?","a":"This analysis used $262.65, Amazon's closing price on Aug 14, 2026, as of Aug 17, 2026."}]$faq17$::jsonb,
+  $toc17$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc17$::jsonb,
+  $html17$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, AMZN implies <span class="num">~27%</span> annual FCF growth for the next 10 years, discounted at 9%.</p>
@@ -2183,45 +2233,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Amazon's 10-K (FY2021–FY2025), 10-Q (Q1 FY2026), and a web search for the current share price. This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html17$,
+  $src17$As of Aug 17, 2026 · Price used: $262.65 (Aug 14, 2026 close)$src17$,
+  ARRAY['AMZN', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d17$2026-08-19$d17$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'tsm-snapshot',
-    ticker: 'TSM',
-    company: 'TSMC',
-    category: 'snapshot',
-    title: 'TSMC (TSM): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of TSMC's contract-manufacturing business model — built directly from its SEC filings.",
-    takeaway:
-      "TSMC doesn't sell its own chips — it manufactures the chips that Apple, Nvidia, and other companies design, on contract, at a scale and precision no one else can match.",
-    quickFacts: [
-      { k: 'Share price', v: '$411.21' },
-      { k: 'Market cap', v: '$1.93T' },
-      { k: 'P/E ratio', v: '27.8x' },
-      { k: 'Leading-edge (≤7nm) revenue share', v: '74%' },
-    ],
-    faq: [
-      { q: 'What does TSMC do?', a: "TSMC doesn't sell its own chips — it manufactures the chips that Apple, Nvidia, and other companies design, on contract, as the world's largest dedicated chip foundry." },
-      { q: "What is TSMC's market cap?", a: "As of this article's data, TSMC's market cap was about $1.93 trillion, with a P/E ratio of roughly 27.8x." },
-      { q: 'How much of TSMC revenue comes from leading-edge chips?', a: 'About 74% of revenue comes from leading-edge process nodes (7nm and smaller) — the most advanced, highest-value manufacturing TSMC does.' },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How TSMC makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '20-F FY2025 · 6-K quarterly filings · Q2 FY2026 earnings call',
-    tags: ['TSM', 'Semiconductors', 'Foundry', '20-F'],
-    publishedAt: '2026-08-24',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s18$tsm-snapshot$s18$,
+  $t18$TSM$t18$,
+  $c18$TSMC$c18$,
+  $cat18$snapshot$cat18$,
+  $ti18$TSMC (TSM): What This Company Actually Does$ti18$,
+  $ex18$A plain-English read of TSMC's contract-manufacturing business model — built directly from its SEC filings.$ex18$,
+  $tk18$TSMC doesn't sell its own chips — it manufactures the chips that Apple, Nvidia, and other companies design, on contract, at a scale and precision no one else can match.$tk18$,
+  $qf18$[{"k":"Share price","v":"$411.21"},{"k":"Market cap","v":"$1.93T"},{"k":"P/E ratio","v":"27.8x"},{"k":"Leading-edge (≤7nm) revenue share","v":"74%"}]$qf18$::jsonb,
+  $faq18$[{"q":"What does TSMC do?","a":"TSMC doesn't sell its own chips — it manufactures the chips that Apple, Nvidia, and other companies design, on contract, as the world's largest dedicated chip foundry."},{"q":"What is TSMC's market cap?","a":"As of this article's data, TSMC's market cap was about $1.93 trillion, with a P/E ratio of roughly 27.8x."},{"q":"How much of TSMC revenue comes from leading-edge chips?","a":"About 74% of revenue comes from leading-edge process nodes (7nm and smaller) — the most advanced, highest-value manufacturing TSMC does."}]$faq18$::jsonb,
+  $toc18$[{"id":"how-it-makes-money","label":"How TSMC makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc18$::jsonb,
+  $html18$
 <h2 id="how-it-makes-money">How TSMC makes money</h2>
 <p>TSMC sells no branded products of its own. Fabless companies like Apple, Nvidia, and AMD send it chip designs and pay a manufacturing fee; TSMC's fabs in Taiwan, the U.S., and Japan turn those designs into physical chips using 3nm and 5nm ultra-fine processes, producing more than 17 million wafers a year. Customers then sell the finished products — AI servers, smartphones, cars — and place more orders, often with upfront prepayment.</p>
 <div class="flow">
@@ -2333,35 +2381,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from TSMC's 20-F FY2025 (filed Apr 16, 2026), 20-F FY2023 (for 2021–2022 comparatives), 6-K quarterly filings, and the Q2 FY2026 earnings call, plus a web search for the current share price (Aug 24, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html18$,
+  $src18$20-F FY2025 · 6-K quarterly filings · Q2 FY2026 earnings call$src18$,
+  ARRAY['TSM', 'Semiconductors', 'Foundry', '20-F'],
+  'published',
+  $d18$2026-08-24$d18$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'tsm-story',
-    ticker: 'TSM',
-    company: 'TSMC',
-    category: 'story',
-    title: "TSMC's Last Three Years: Quietly Dropping 'World's Largest,' Loudly Raising CapEx",
-    excerpt:
-      "In 2022, TSMC's top revenue source quietly flipped from smartphones to AI and servers — and the company has since dropped its confident \"world's largest foundry\" self-description, even while betting more aggressively than ever on capital spending.",
-    takeaway:
-      "In 2022, TSMC's top revenue source quietly flipped from smartphones to AI and servers. Since then, the company has dropped its confident \"world's largest foundry\" self-description — even while betting more aggressively than ever on capital spending.",
-    faq: [
-      { q: "What replaced smartphones as TSMC's top revenue source?", a: "AI and server chips quietly overtook smartphones as TSMC's largest revenue source in 2022, and the gap has only widened since." },
-      { q: 'Why did TSMC drop the phrase "world\'s largest foundry"?', a: "TSMC's own filings dropped that confident self-description even as capital spending kept rising — the filings don't explain why explicitly, which the article flags as an open question." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from TSMC's 20-F filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual, 9 quarters' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '20-F FY2021–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
-    tags: ['TSM', 'Semiconductors', 'AI Infrastructure', 'Earnings Calls'],
-    publishedAt: '2026-08-24',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s19$tsm-story$s19$,
+  $t19$TSM$t19$,
+  $c19$TSMC$c19$,
+  $cat19$story$cat19$,
+  $ti19$TSMC's Last Three Years: Quietly Dropping 'World's Largest,' Loudly Raising CapEx$ti19$,
+  $ex19$In 2022, TSMC's top revenue source quietly flipped from smartphones to AI and servers — and the company has since dropped its confident "world's largest foundry" self-description, even while betting more aggressively than ever on capital spending.$ex19$,
+  $tk19$In 2022, TSMC's top revenue source quietly flipped from smartphones to AI and servers. Since then, the company has dropped its confident "world's largest foundry" self-description — even while betting more aggressively than ever on capital spending.$tk19$,
+  null,
+  $faq19$[{"q":"What replaced smartphones as TSMC's top revenue source?","a":"AI and server chips quietly overtook smartphones as TSMC's largest revenue source in 2022, and the gap has only widened since."},{"q":"Why did TSMC drop the phrase \"world's largest foundry\"?","a":"TSMC's own filings dropped that confident self-description even as capital spending kept rising — the filings don't explain why explicitly, which the article flags as an open question."},{"q":"What sources does this analysis draw from?","a":"This piece is built from TSMC's 20-F filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026."}]$faq19$::jsonb,
+  $toc19$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance vs. actual, 9 quarters"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc19$::jsonb,
+  $html19$
 <h2 id="the-story">The story</h2>
 <h3>2022–2023: the year the mix flipped</h3>
 <p>In October 2023, management cited "continued macroeconomic weakness and a slow China demand recovery" leading customers to be cautious about inventory — and 2023 revenue did fall 4.5% year over year. At that point, the 20-F's opening description still confidently stated: "we have possessed the largest capacity among the world's dedicated foundries." The real shift, though, traces back a year earlier: in 2022, HPC (high-performance computing) revenue share first overtook smartphone revenue (41% vs. 39%) — reversing a company that in 2019 was 49% smartphone versus 30% HPC. That gap only widened: 51%/35% in 2024, 58%/29% in 2025.</p>
@@ -2421,35 +2477,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 20-F filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 (Oct 19, 2023) through Q2 FY2026 (Jul 16, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html19$,
+  $src19$20-F FY2021–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026$src19$,
+  ARRAY['TSM', 'Semiconductors', 'AI Infrastructure', 'Earnings Calls'],
+  'published',
+  $d19$2026-08-24$d19$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'tsm-dcf',
-    ticker: 'TSM',
-    company: 'TSMC',
-    category: 'dcf',
-    title: "What TSM's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate TSMC's share price already assumes — and comparing it with the company's actual growth record.",
-    takeaway:
-      "At today's price, TSMC's stock is pricing in about 28.5% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged 34.2% a year — essentially asking it to keep doing exactly what it's already been doing.",
-    faq: [
-      { q: "What growth rate does TSM's stock price assume?", a: "At today's price, TSMC's stock is pricing in about 28.5% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to TSMC's actual growth?", a: "Over the past five years, TSMC's actual free-cash-flow growth averaged 34.2% a year — above the ~28.5% the current price requires, essentially asking the company to keep doing what it's already been doing." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $407.38 per ADS, as of Aug 24, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 24, 2026 · Price used: $407.38 (per ADS)',
-    tags: ['TSM', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-08-24',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s20$tsm-dcf$s20$,
+  $t20$TSM$t20$,
+  $c20$TSMC$c20$,
+  $cat20$dcf$cat20$,
+  $ti20$What TSM's Stock Price Is Really Betting On$ti20$,
+  $ex20$Reverse-engineering the growth rate TSMC's share price already assumes — and comparing it with the company's actual growth record.$ex20$,
+  $tk20$At today's price, TSMC's stock is pricing in about 28.5% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged 34.2% a year — essentially asking it to keep doing exactly what it's already been doing.$tk20$,
+  null,
+  $faq20$[{"q":"What growth rate does TSM's stock price assume?","a":"At today's price, TSMC's stock is pricing in about 28.5% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to TSMC's actual growth?","a":"Over the past five years, TSMC's actual free-cash-flow growth averaged 34.2% a year — above the ~28.5% the current price requires, essentially asking the company to keep doing what it's already been doing."},{"q":"What share price was used for this analysis?","a":"This analysis used $407.38 per ADS, as of Aug 24, 2026."}]$faq20$::jsonb,
+  $toc20$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc20$::jsonb,
+  $html20$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, TSM implies <span class="num">~28.5%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
@@ -2522,45 +2586,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from TSMC's 20-F (FY2025) and a web search for the current share price (stockanalysis.com, Aug 24, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html20$,
+  $src20$As of Aug 24, 2026 · Price used: $407.38 (per ADS)$src20$,
+  ARRAY['TSM', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d20$2026-08-24$d20$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'jpm-snapshot',
-    ticker: 'JPM',
-    company: 'JPMorgan Chase',
-    category: 'snapshot',
-    title: 'JPMorgan Chase (JPM): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of JPMorgan Chase's business model — deposits, lending, and Wall Street fees — built directly from its SEC filings.",
-    takeaway:
-      'JPMorgan Chase keeps people\'s and companies\' money safe, lends it back out at a markup, and separately collects fees for helping big corporations raise money and trade in size.',
-    quickFacts: [
-      { k: 'Share price', v: '$360.96' },
-      { k: 'Market cap', v: '~$959.5B' },
-      { k: 'P/E ratio', v: '15.5' },
-      { k: 'Dividend yield', v: '1.66%' },
-    ],
-    faq: [
-      { q: 'How does JPMorgan Chase make money?', a: "JPMorgan keeps people's and companies' money safe, lends it back out at a markup, and separately collects fees for helping big corporations raise money and trade in size." },
-      { q: 'Does JPMorgan Chase pay a dividend?', a: 'Yes — JPMorgan pays a quarterly dividend, yielding about 1.66% at the price used in this article.' },
-      { q: "What is JPMorgan's market cap?", a: "As of this article's data, JPMorgan's market cap was about $959.5B, with a P/E ratio of roughly 15.5x." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How JPMorgan makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A 2026',
-    tags: ['JPM', 'Banking', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s21$jpm-snapshot$s21$,
+  $t21$JPM$t21$,
+  $c21$JPMorgan Chase$c21$,
+  $cat21$snapshot$cat21$,
+  $ti21$JPMorgan Chase (JPM): What This Company Actually Does$ti21$,
+  $ex21$A plain-English read of JPMorgan Chase's business model — deposits, lending, and Wall Street fees — built directly from its SEC filings.$ex21$,
+  $tk21$JPMorgan Chase keeps people's and companies' money safe, lends it back out at a markup, and separately collects fees for helping big corporations raise money and trade in size.$tk21$,
+  $qf21$[{"k":"Share price","v":"$360.96"},{"k":"Market cap","v":"~$959.5B"},{"k":"P/E ratio","v":"15.5"},{"k":"Dividend yield","v":"1.66%"}]$qf21$::jsonb,
+  $faq21$[{"q":"How does JPMorgan Chase make money?","a":"JPMorgan keeps people's and companies' money safe, lends it back out at a markup, and separately collects fees for helping big corporations raise money and trade in size."},{"q":"Does JPMorgan Chase pay a dividend?","a":"Yes — JPMorgan pays a quarterly dividend, yielding about 1.66% at the price used in this article."},{"q":"What is JPMorgan's market cap?","a":"As of this article's data, JPMorgan's market cap was about $959.5B, with a P/E ratio of roughly 15.5x."}]$faq21$::jsonb,
+  $toc21$[{"id":"how-it-makes-money","label":"How JPMorgan makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc21$::jsonb,
+  $html21$
 <h2 id="how-it-makes-money">How JPMorgan makes money</h2>
 <p>Depositors and small businesses hand JPMorgan their cash; the bank lends much of it back out as mortgages, credit cards, and business loans, pocketing the spread between what it pays depositors and what it charges borrowers. Separately, large corporations, institutions, and wealthy individuals pay the bank fees to underwrite stock and bond deals, trade securities, and manage their money — a business built on advice and execution rather than interest spread.</p>
 <div class="flow">
@@ -2688,35 +2750,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from JPMorgan Chase's 10-K filings for FY2021 through FY2025, 10-Q, and DEF 14A 2026, plus a web search for the current share price (stockanalysis.com, Aug 17, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html21$,
+  $src21$10-K FY2021–FY2025 · 10-Q · DEF 14A 2026$src21$,
+  ARRAY['JPM', 'Banking', '10-K'],
+  'published',
+  $d21$2026-09-06$d21$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'jpm-story',
-    ticker: 'JPM',
-    company: 'JPMorgan Chase',
-    category: 'story',
-    title: "JPMorgan's Last Three Years: From Basel Fears to a Record Quarter",
-    excerpt:
-      'How a bank that once braced for punishing new capital rules watched that fear fade, weathered a brief tariff scare, and came out the other side with record profits and tripled buybacks.',
-    takeaway:
-      "In three years, JPMorgan went from openly fearing a 45% capital-requirement increase under proposed Basel III Endgame rules, through a sharp but short-lived confidence dip during the April 2025 tariff shock, to a record-tone Q2 FY2026 with buybacks that had tripled since 2023.",
-    faq: [
-      { q: 'What was Basel III Endgame and why did JPMorgan fear it?', a: 'Basel III Endgame was a proposed banking rule that JPMorgan openly worried could raise its capital requirements by as much as 45% — a fear that faded as the rule was softened over the following years.' },
-      { q: "Has JPMorgan's buyback pace changed?", a: "Yes — JPMorgan's share buybacks had roughly tripled by Q2 FY2026 compared with 2023, alongside a record-confidence tone on that call." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from JPMorgan's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual results' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
-    tags: ['JPM', 'Earnings Calls', 'Banking Regulation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s22$jpm-story$s22$,
+  $t22$JPM$t22$,
+  $c22$JPMorgan Chase$c22$,
+  $cat22$story$cat22$,
+  $ti22$JPMorgan's Last Three Years: From Basel Fears to a Record Quarter$ti22$,
+  $ex22$How a bank that once braced for punishing new capital rules watched that fear fade, weathered a brief tariff scare, and came out the other side with record profits and tripled buybacks.$ex22$,
+  $tk22$In three years, JPMorgan went from openly fearing a 45% capital-requirement increase under proposed Basel III Endgame rules, through a sharp but short-lived confidence dip during the April 2025 tariff shock, to a record-tone Q2 FY2026 with buybacks that had tripled since 2023.$tk22$,
+  null,
+  $faq22$[{"q":"What was Basel III Endgame and why did JPMorgan fear it?","a":"Basel III Endgame was a proposed banking rule that JPMorgan openly worried could raise its capital requirements by as much as 45% — a fear that faded as the rule was softened over the following years."},{"q":"Has JPMorgan's buyback pace changed?","a":"Yes — JPMorgan's share buybacks had roughly tripled by Q2 FY2026 compared with 2023, alongside a record-confidence tone on that call."},{"q":"What sources does this analysis draw from?","a":"This piece is built from JPMorgan's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to July 2026."}]$faq22$::jsonb,
+  $toc22$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance vs. actual results"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc22$::jsonb,
+  $html22$
 <h2 id="the-story">The story</h2>
 <h3>Fall 2023: a good acquisition, a scary new rule</h3>
 <p>In October 2023, JPMorgan was digesting two very different events. Earlier that May, it had picked up the failed First Republic Bank from the FDIC, absorbing quality assets cheaply enough to book a $2.8 billion bargain-purchase gain. But the same quarter's earnings call was dominated by something else: the newly proposed "Basel III Endgame" capital rules. The CFO warned that if finalized as proposed, the rule would raise capital requirements 45% above 2017 levels, and said buyback pace would "remain modest for now" while the uncertainty lasted. It did — buybacks that year totaled just $9.9 billion, low by the bank's later standards.</p>
@@ -2779,36 +2849,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from Q3 FY2023 (Oct 13, 2023) through Q2 FY2026 (Jul 14, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html22$,
+  $src22$10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026$src22$,
+  ARRAY['JPM', 'Earnings Calls', 'Banking Regulation'],
+  'published',
+  $d22$2026-09-06$d22$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'jpm-dcf',
-    ticker: 'JPM',
-    company: 'JPMorgan Chase',
-    category: 'dcf',
-    title: "What JPM's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate JPMorgan's share price already assumes — adapted for a bank's balance sheet — and comparing it with the company's actual growth record.",
-    takeaway:
-      "At today's price, JPMorgan's stock is pricing in only about 3.4% annual net-income growth for the next ten years. Over the past five years, the company's actual net income grew 14.4% a year — meaning the market is asking for far less than JPMorgan has already been delivering.",
-    faq: [
-      { q: "What growth rate does JPM's stock price assume?", a: "At today's price, JPMorgan's stock is pricing in only about 3.4% annual net-income growth for the next ten years — well below what it has historically delivered." },
-      { q: "How does that compare to JPMorgan's actual growth?", a: "Over the past five years, JPMorgan's actual net income grew 14.4% a year — far above the ~3.4% the current price requires, suggesting the market is pricing in a significant slowdown." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $360.84, as of Aug 18, 2026.' },
-    ],
-    toc: [
-      { id: 'bank-adaptation', label: 'Why this model looks different for a bank' },
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 18, 2026 · Price used: $360.84',
-    tags: ['JPM', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s23$jpm-dcf$s23$,
+  $t23$JPM$t23$,
+  $c23$JPMorgan Chase$c23$,
+  $cat23$dcf$cat23$,
+  $ti23$What JPM's Stock Price Is Really Betting On$ti23$,
+  $ex23$Reverse-engineering the growth rate JPMorgan's share price already assumes — adapted for a bank's balance sheet — and comparing it with the company's actual growth record.$ex23$,
+  $tk23$At today's price, JPMorgan's stock is pricing in only about 3.4% annual net-income growth for the next ten years. Over the past five years, the company's actual net income grew 14.4% a year — meaning the market is asking for far less than JPMorgan has already been delivering.$tk23$,
+  null,
+  $faq23$[{"q":"What growth rate does JPM's stock price assume?","a":"At today's price, JPMorgan's stock is pricing in only about 3.4% annual net-income growth for the next ten years — well below what it has historically delivered."},{"q":"How does that compare to JPMorgan's actual growth?","a":"Over the past five years, JPMorgan's actual net income grew 14.4% a year — far above the ~3.4% the current price requires, suggesting the market is pricing in a significant slowdown."},{"q":"What share price was used for this analysis?","a":"This analysis used $360.84, as of Aug 18, 2026."}]$faq23$::jsonb,
+  $toc23$[{"id":"bank-adaptation","label":"Why this model looks different for a bank"},{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc23$::jsonb,
+  $html23$
 <div class="callout warn">
   <b>Bank-model adjustment</b>
   A standard reverse DCF leans on "free cash flow" and "net debt" — concepts that don't translate cleanly to a bank, where deposits are the raw material for lending, not a debt to be subtracted. This card substitutes <b>net income</b> as the cash-flow proxy and skips the net-debt subtraction entirely — closer to a dividend-discount-style model. Every input and the full calculation are in the collapsible section below.
@@ -2890,45 +2967,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from JPMorgan Chase's 10-K filings (FY2021–FY2025), earnings call transcripts (Q3 FY2025–Q2 FY2026), and a web search for the current share price (stockanalysis.com, Aug 18, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html23$,
+  $src23$As of Aug 18, 2026 · Price used: $360.84$src23$,
+  ARRAY['JPM', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d23$2026-09-06$d23$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'unh-snapshot',
-    ticker: 'UNH',
-    company: 'UnitedHealth Group',
-    category: 'snapshot',
-    title: 'UnitedHealth Group (UNH): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of UnitedHealth's business model — insurance premiums plus the clinics and pharmacies its own members use — built directly from its SEC filings.",
-    takeaway:
-      "UnitedHealth collects insurance premiums to cover people's medical bills, then also owns the clinics, pharmacies, and data services many of those same members use — collecting on both the insurance side and the care-delivery side of the same person's healthcare spending.",
-    quickFacts: [
-      { k: 'Share price', v: '$395.62' },
-      { k: 'Market cap', v: '~$358.4B' },
-      { k: 'FY2025 revenue', v: '$447.6B' },
-      { k: 'Medical care ratio', v: '89.1%' },
-    ],
-    faq: [
-      { q: 'How does UnitedHealth make money?', a: "UnitedHealth collects insurance premiums to cover people's medical bills, then also owns the clinics, pharmacies, and data services many of those same members use — collecting on both the insurance and care-delivery sides of the same person's healthcare spending." },
-      { q: 'What is a medical care ratio?', a: "The medical care ratio (89.1% here) is the share of premium revenue UnitedHealth pays out in medical claims — the lower it is, the more the insurance side keeps as margin, though a very low ratio can also draw regulatory scrutiny." },
-      { q: "What is UnitedHealth's market cap?", a: "As of this article's data, UnitedHealth's market cap was about $358.4B, on FY2025 revenue of $447.6B." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How UnitedHealth makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021, FY2023–FY2025 · Web search',
-    tags: ['UNH', 'Healthcare', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s24$unh-snapshot$s24$,
+  $t24$UNH$t24$,
+  $c24$UnitedHealth Group$c24$,
+  $cat24$snapshot$cat24$,
+  $ti24$UnitedHealth Group (UNH): What This Company Actually Does$ti24$,
+  $ex24$A plain-English read of UnitedHealth's business model — insurance premiums plus the clinics and pharmacies its own members use — built directly from its SEC filings.$ex24$,
+  $tk24$UnitedHealth collects insurance premiums to cover people's medical bills, then also owns the clinics, pharmacies, and data services many of those same members use — collecting on both the insurance side and the care-delivery side of the same person's healthcare spending.$tk24$,
+  $qf24$[{"k":"Share price","v":"$395.62"},{"k":"Market cap","v":"~$358.4B"},{"k":"FY2025 revenue","v":"$447.6B"},{"k":"Medical care ratio","v":"89.1%"}]$qf24$::jsonb,
+  $faq24$[{"q":"How does UnitedHealth make money?","a":"UnitedHealth collects insurance premiums to cover people's medical bills, then also owns the clinics, pharmacies, and data services many of those same members use — collecting on both the insurance and care-delivery sides of the same person's healthcare spending."},{"q":"What is a medical care ratio?","a":"The medical care ratio (89.1% here) is the share of premium revenue UnitedHealth pays out in medical claims — the lower it is, the more the insurance side keeps as margin, though a very low ratio can also draw regulatory scrutiny."},{"q":"What is UnitedHealth's market cap?","a":"As of this article's data, UnitedHealth's market cap was about $358.4B, on FY2025 revenue of $447.6B."}]$faq24$::jsonb,
+  $toc24$[{"id":"how-it-makes-money","label":"How UnitedHealth makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc24$::jsonb,
+  $html24$
 <h2 id="how-it-makes-money">How UnitedHealth makes money</h2>
 <p>Governments, employers, and individuals pay UnitedHealthcare premiums to cover their medical costs. But a large share of what gets paid out doesn't leave the company: those same members' prescriptions get filled by Optum Rx, their care is often delivered by Optum Health's own clinics and physicians, and their claims are processed using Optum Insight's data and administrative services — so a meaningful portion of every premium dollar flows straight back into the same corporate family.</p>
 <div class="flow">
@@ -3036,35 +3111,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from UnitedHealth Group's 10-K filings for FY2021, FY2023, FY2024, and FY2025, plus web-search figures (stockanalysis.com, Healthcare Dive, CNBC) for market and news context. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html24$,
+  $src24$10-K FY2021, FY2023–FY2025 · Web search$src24$,
+  ARRAY['UNH', 'Healthcare', '10-K'],
+  'published',
+  $d24$2026-09-06$d24$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'unh-story',
-    ticker: 'UNH',
-    company: 'UnitedHealth Group',
-    category: 'story',
-    title: "UnitedHealth's Last Three Years: From 'Balanced Growth' to a Guidance Collapse — and Back",
-    excerpt:
-      'How a confidently growing insurer blew through its own 2025 guidance twice, replaced its CEO, and has spent the months since trying to rebuild trust on a much lower bar.',
-    takeaway:
-      "In 2023, UnitedHealth was confidently promising 13–16% long-term earnings growth. By mid-2025 it had cut guidance twice, withdrawn it entirely, and replaced its CEO. It has since re-set expectations nearly 46% below the original number — and is now just barely beating that much lower bar.",
-    faq: [
-      { q: "Why did UnitedHealth's CEO change in 2025?", a: 'UnitedHealth replaced its CEO in mid-2025 during a stretch when it cut its own earnings guidance twice and then withdrew it entirely — a collapse in confidence from its original 13–16% long-term growth promise.' },
-      { q: 'How much did UnitedHealth cut its guidance?', a: "UnitedHealth re-set expectations nearly 46% below its original earnings-growth guidance, and as of the most recent quarters reviewed was just barely beating that much lower bar." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from UnitedHealth's 10-K filings for FY2021 and FY2023 through FY2025, plus 8 quarters of earnings call transcripts from January 2024 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021, FY2023–FY2025 · 8 quarters of earnings call transcripts, Jan 2024–Jul 2026',
-    tags: ['UNH', 'Earnings Calls', 'Healthcare Policy'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s25$unh-story$s25$,
+  $t25$UNH$t25$,
+  $c25$UnitedHealth Group$c25$,
+  $cat25$story$cat25$,
+  $ti25$UnitedHealth's Last Three Years: From 'Balanced Growth' to a Guidance Collapse — and Back$ti25$,
+  $ex25$How a confidently growing insurer blew through its own 2025 guidance twice, replaced its CEO, and has spent the months since trying to rebuild trust on a much lower bar.$ex25$,
+  $tk25$In 2023, UnitedHealth was confidently promising 13–16% long-term earnings growth. By mid-2025 it had cut guidance twice, withdrawn it entirely, and replaced its CEO. It has since re-set expectations nearly 46% below the original number — and is now just barely beating that much lower bar.$tk25$,
+  null,
+  $faq25$[{"q":"Why did UnitedHealth's CEO change in 2025?","a":"UnitedHealth replaced its CEO in mid-2025 during a stretch when it cut its own earnings guidance twice and then withdrew it entirely — a collapse in confidence from its original 13–16% long-term growth promise."},{"q":"How much did UnitedHealth cut its guidance?","a":"UnitedHealth re-set expectations nearly 46% below its original earnings-growth guidance, and as of the most recent quarters reviewed was just barely beating that much lower bar."},{"q":"What sources does this analysis draw from?","a":"This piece is built from UnitedHealth's 10-K filings for FY2021 and FY2023 through FY2025, plus 8 quarters of earnings call transcripts from January 2024 to July 2026."}]$faq25$::jsonb,
+  $toc25$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc25$::jsonb,
+  $html25$
 <h2 id="the-story">The story</h2>
 <h3>January 2024: total confidence</h3>
 <p>On the Q4 FY2023 earnings call, CEO Andrew Witty called 2023 "the year of balanced, sustainable growth" and reaffirmed a long-term target of 13–16% annual adjusted EPS growth. Nine months later, on the October 2024 call, he stood by that framing even through a Medicare rate cut and the February 2024 Change Healthcare cyberattack, saying the company could "still finish within the guidance range we first gave in November 2023" and that management remained "highly optimistic for the future." The FY2023 10-K's own language matched the mood: "diluted earnings per share increased 13% to $23.86."</p>
@@ -3134,35 +3217,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2021, FY2023, FY2024, and FY2025, and 8 quarters of earnings call transcripts from Q4 FY2023 (Jan 12, 2024) through Q2 FY2026 (Jul 16, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html25$,
+  $src25$10-K FY2021, FY2023–FY2025 · 8 quarters of earnings call transcripts, Jan 2024–Jul 2026$src25$,
+  ARRAY['UNH', 'Earnings Calls', 'Healthcare Policy'],
+  'published',
+  $d25$2026-09-06$d25$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'unh-dcf',
-    ticker: 'UNH',
-    company: 'UnitedHealth Group',
-    category: 'dcf',
-    title: "What UNH's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate UnitedHealth's share price already assumes — and comparing it with the company's actual growth record, both before and after its 2025 crisis.",
-    takeaway:
-      "At today's price, UnitedHealth's stock is pricing in about 5.6% annual free-cash-flow growth for the next ten years. Before its 2025 crisis, the company's actual free-cash-flow growth ran 13.6% a year — but including the crisis, the trailing five-year rate was actually -5.2% a year.",
-    faq: [
-      { q: "What growth rate does UNH's stock price assume?", a: "At today's price, UnitedHealth's stock is pricing in about 5.6% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to UnitedHealth's actual growth?", a: "Before its 2025 crisis, UnitedHealth's actual free-cash-flow growth ran 13.6% a year — well above what the price now requires — but including the crisis, the trailing five-year rate was actually -5.2% a year." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $395.62, as of Aug 17, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $395.62',
-    tags: ['UNH', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s26$unh-dcf$s26$,
+  $t26$UNH$t26$,
+  $c26$UnitedHealth Group$c26$,
+  $cat26$dcf$cat26$,
+  $ti26$What UNH's Stock Price Is Really Betting On$ti26$,
+  $ex26$Reverse-engineering the growth rate UnitedHealth's share price already assumes — and comparing it with the company's actual growth record, both before and after its 2025 crisis.$ex26$,
+  $tk26$At today's price, UnitedHealth's stock is pricing in about 5.6% annual free-cash-flow growth for the next ten years. Before its 2025 crisis, the company's actual free-cash-flow growth ran 13.6% a year — but including the crisis, the trailing five-year rate was actually -5.2% a year.$tk26$,
+  null,
+  $faq26$[{"q":"What growth rate does UNH's stock price assume?","a":"At today's price, UnitedHealth's stock is pricing in about 5.6% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to UnitedHealth's actual growth?","a":"Before its 2025 crisis, UnitedHealth's actual free-cash-flow growth ran 13.6% a year — well above what the price now requires — but including the crisis, the trailing five-year rate was actually -5.2% a year."},{"q":"What share price was used for this analysis?","a":"This analysis used $395.62, as of Aug 17, 2026."}]$faq26$::jsonb,
+  $toc26$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc26$::jsonb,
+  $html26$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, UNH implies <span class="num">~5.6%</span> annual free-cash-flow growth for the next 10 years, discounted at 10%.</p>
@@ -3237,45 +3328,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from UnitedHealth Group's 10-K (FY2021, FY2025) and 10-Q (Q2 FY2026) filings, plus a web search for the current share price (stockanalysis.com, Aug 17, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html26$,
+  $src26$As of Aug 17, 2026 · Price used: $395.62$src26$,
+  ARRAY['UNH', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d26$2026-09-06$d26$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'avgo-snapshot',
-    ticker: 'AVGO',
-    company: 'Broadcom',
-    category: 'snapshot',
-    title: 'Broadcom (AVGO): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Broadcom's business model — custom AI chips plus enterprise software subscriptions — built directly from its SEC filings.",
-    takeaway:
-      'Broadcom designs the custom AI brain chips that big tech companies need to build AI computers, and separately sells the software that companies use to run and manage their servers.',
-    quickFacts: [
-      { k: 'Share price', v: '$392.43' },
-      { k: 'Market cap', v: '~$1.87T' },
-      { k: 'FY2025 revenue', v: '$63.9B' },
-      { k: 'AI semiconductor revenue (Q2 FY26)', v: '$10.8B, +143% YoY' },
-    ],
-    faq: [
-      { q: 'How does Broadcom make money?', a: 'Broadcom designs the custom AI brain chips that big tech companies need to build AI computers, and separately sells enterprise software (from its VMware acquisition) that companies use to run and manage their servers.' },
-      { q: "How fast is Broadcom's AI chip revenue growing?", a: 'AI semiconductor revenue hit $10.8B in Q2 FY2026, up 143% year-over-year, on FY2025 total revenue of $63.9B.' },
-      { q: "What is Broadcom's market cap?", a: "As of this article's data, Broadcom's market cap was about $1.87 trillion." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Broadcom makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021, FY2023, FY2025 · 10-Q · DEF 14A 2026',
-    tags: ['AVGO', 'Semiconductors', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s27$avgo-snapshot$s27$,
+  $t27$AVGO$t27$,
+  $c27$Broadcom$c27$,
+  $cat27$snapshot$cat27$,
+  $ti27$Broadcom (AVGO): What This Company Actually Does$ti27$,
+  $ex27$A plain-English read of Broadcom's business model — custom AI chips plus enterprise software subscriptions — built directly from its SEC filings.$ex27$,
+  $tk27$Broadcom designs the custom AI brain chips that big tech companies need to build AI computers, and separately sells the software that companies use to run and manage their servers.$tk27$,
+  $qf27$[{"k":"Share price","v":"$392.43"},{"k":"Market cap","v":"~$1.87T"},{"k":"FY2025 revenue","v":"$63.9B"},{"k":"AI semiconductor revenue (Q2 FY26)","v":"$10.8B, +143% YoY"}]$qf27$::jsonb,
+  $faq27$[{"q":"How does Broadcom make money?","a":"Broadcom designs the custom AI brain chips that big tech companies need to build AI computers, and separately sells enterprise software (from its VMware acquisition) that companies use to run and manage their servers."},{"q":"How fast is Broadcom's AI chip revenue growing?","a":"AI semiconductor revenue hit $10.8B in Q2 FY2026, up 143% year-over-year, on FY2025 total revenue of $63.9B."},{"q":"What is Broadcom's market cap?","a":"As of this article's data, Broadcom's market cap was about $1.87 trillion."}]$faq27$::jsonb,
+  $toc27$[{"id":"how-it-makes-money","label":"How Broadcom makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc27$::jsonb,
+  $html27$
 <h2 id="how-it-makes-money">How Broadcom makes money</h2>
 <p>Big tech companies building AI data centers pay Broadcom to design the custom chips (XPUs) their AI systems run on — chips manufactured by contract foundries like TSMC, then sold under Broadcom's own brand. On a separate track, enterprises and governments pay recurring subscription fees for infrastructure software (including VMware, acquired in 2023) that runs and manages their servers and virtual machines.</p>
 <div class="flow">
@@ -3401,35 +3490,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Broadcom's 10-K filings for FY2021, FY2023, and FY2025, 10-Q (Q2 FY2026), and DEF 14A 2026, plus web-search figures for competitor context and current share price (stockanalysis.com, Aug 17, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html27$,
+  $src27$10-K FY2021, FY2023, FY2025 · 10-Q · DEF 14A 2026$src27$,
+  ARRAY['AVGO', 'Semiconductors', '10-K'],
+  'published',
+  $d27$2026-09-06$d27$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'avgo-story',
-    ticker: 'AVGO',
-    company: 'Broadcom',
-    category: 'story',
-    title: "Broadcom's Last Two Years: From Digesting VMware to Becoming AI's Silent Partner",
-    excerpt:
-      "How Broadcom's public identity flipped in two years — from 'the company still absorbing its VMware acquisition' to an unnamed custom-chip partner behind a handful of the world's largest AI buildouts.",
-    takeaway:
-      "In two years, Broadcom's identity flipped completely: from a company still absorbing its VMware acquisition, with Apple named by name as its largest chip customer, to one that has erased that name from its filings entirely and instead reports designing custom AI chips for a growing, still-unnamed circle of hyperscale customers — 2 in early 2024, 6 by mid-2026.",
-    faq: [
-      { q: 'Did Broadcom used to name Apple as a customer?', a: "Yes — Broadcom's earlier filings named Apple by name as its largest chip customer. That name has since been erased from its filings, replaced by references to an unnamed, growing circle of hyperscale AI customers." },
-      { q: 'How many custom AI chip customers does Broadcom have?', a: 'Broadcom went from reporting 2 hyperscale AI customers in early 2024 to 6 by mid-2026, though it no longer names them individually.' },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Broadcom's 10-K filings for FY2021 and FY2023 through FY2025, plus 10 quarters of earnings call transcripts from March 2024 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual, 8 quarters' },
-      { id: 'timeline', label: 'Timeline — AI customer count & backlog' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021, FY2023–FY2025 · 10 quarters of earnings call transcripts, Mar 2024–Jul 2026',
-    tags: ['AVGO', 'Earnings Calls', 'AI Infrastructure'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s28$avgo-story$s28$,
+  $t28$AVGO$t28$,
+  $c28$Broadcom$c28$,
+  $cat28$story$cat28$,
+  $ti28$Broadcom's Last Two Years: From Digesting VMware to Becoming AI's Silent Partner$ti28$,
+  $ex28$How Broadcom's public identity flipped in two years — from 'the company still absorbing its VMware acquisition' to an unnamed custom-chip partner behind a handful of the world's largest AI buildouts.$ex28$,
+  $tk28$In two years, Broadcom's identity flipped completely: from a company still absorbing its VMware acquisition, with Apple named by name as its largest chip customer, to one that has erased that name from its filings entirely and instead reports designing custom AI chips for a growing, still-unnamed circle of hyperscale customers — 2 in early 2024, 6 by mid-2026.$tk28$,
+  null,
+  $faq28$[{"q":"Did Broadcom used to name Apple as a customer?","a":"Yes — Broadcom's earlier filings named Apple by name as its largest chip customer. That name has since been erased from its filings, replaced by references to an unnamed, growing circle of hyperscale AI customers."},{"q":"How many custom AI chip customers does Broadcom have?","a":"Broadcom went from reporting 2 hyperscale AI customers in early 2024 to 6 by mid-2026, though it no longer names them individually."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Broadcom's 10-K filings for FY2021 and FY2023 through FY2025, plus 10 quarters of earnings call transcripts from March 2024 to July 2026."}]$faq28$::jsonb,
+  $toc28$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance vs. actual, 8 quarters"},{"id":"timeline","label":"Timeline — AI customer count & backlog"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc28$::jsonb,
+  $html28$
 <h2 id="the-story">The story</h2>
 <h3>Early 2024: still digesting VMware</h3>
 <p>In March 2024, on the Q1 FY2024 earnings call, Broadcom was a company just a few months removed from closing its roughly $84.2 billion VMware acquisition (Nov 2023). The tone was careful: management "reiterated" a $50 billion full-year revenue guide and spoke of VMware in future tense — "strong bookings will accelerate revenue growth." AI semiconductor revenue had already quadrupled year over year, but total company growth that quarter was only 34% — VMware wasn't yet fully integrated, and AI was still too small to lift the whole company on its own.</p>
@@ -3495,35 +3592,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2021, FY2023, FY2024, and FY2025, and 10 quarters of earnings call transcripts from FY2024 Q1 (Mar 2024) through FY2026 Q2 (Jun 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html28$,
+  $src28$10-K FY2021, FY2023–FY2025 · 10 quarters of earnings call transcripts, Mar 2024–Jul 2026$src28$,
+  ARRAY['AVGO', 'Earnings Calls', 'AI Infrastructure'],
+  'published',
+  $d28$2026-09-06$d28$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'avgo-dcf',
-    ticker: 'AVGO',
-    company: 'Broadcom',
-    category: 'dcf',
-    title: "What AVGO's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Broadcom's share price already assumes — and comparing it with the company's actual growth record.",
-    takeaway:
-      "At today's price, Broadcom's stock is pricing in about 25% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged about 18% a year — the market is asking for meaningfully more than Broadcom has already been delivering, though not an extreme stretch.",
-    faq: [
-      { q: "What growth rate does AVGO's stock price assume?", a: "At today's price, Broadcom's stock is pricing in about 25% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Broadcom's actual growth?", a: "Over the past five years, Broadcom's actual free-cash-flow growth averaged about 18% a year — below the ~25% required, meaning the market is asking for meaningfully more than Broadcom has already delivered, though not an extreme stretch." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $392.43, as of Aug 17, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $392.43',
-    tags: ['AVGO', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s29$avgo-dcf$s29$,
+  $t29$AVGO$t29$,
+  $c29$Broadcom$c29$,
+  $cat29$dcf$cat29$,
+  $ti29$What AVGO's Stock Price Is Really Betting On$ti29$,
+  $ex29$Reverse-engineering the growth rate Broadcom's share price already assumes — and comparing it with the company's actual growth record.$ex29$,
+  $tk29$At today's price, Broadcom's stock is pricing in about 25% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged about 18% a year — the market is asking for meaningfully more than Broadcom has already been delivering, though not an extreme stretch.$tk29$,
+  null,
+  $faq29$[{"q":"What growth rate does AVGO's stock price assume?","a":"At today's price, Broadcom's stock is pricing in about 25% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Broadcom's actual growth?","a":"Over the past five years, Broadcom's actual free-cash-flow growth averaged about 18% a year — below the ~25% required, meaning the market is asking for meaningfully more than Broadcom has already delivered, though not an extreme stretch."},{"q":"What share price was used for this analysis?","a":"This analysis used $392.43, as of Aug 17, 2026."}]$faq29$::jsonb,
+  $toc29$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc29$::jsonb,
+  $html29$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, AVGO implies <span class="num">~25.4%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
@@ -3596,45 +3701,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Broadcom's 10-K filings (FY2021, FY2025) and 10-Q (Q2 FY2026), plus a web search for the current share price (stockanalysis.com, Aug 17, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html29$,
+  $src29$As of Aug 17, 2026 · Price used: $392.43$src29$,
+  ARRAY['AVGO', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d29$2026-09-06$d29$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'tsla-snapshot',
-    ticker: 'TSLA',
-    company: 'Tesla',
-    category: 'snapshot',
-    title: 'Tesla (TSLA): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Tesla's business model — vertically integrated EV manufacturing plus recurring software revenue — built directly from its SEC filings.",
-    takeaway:
-      'Tesla builds electric cars in its own factories (including its own battery cells) and sells them directly to consumers with no dealers, then keeps earning recurring money from the same car through FSD software subscriptions, charging, insurance, and service.',
-    quickFacts: [
-      { k: 'Share price', v: '$342.27' },
-      { k: 'Market cap', v: '~$1.35T' },
-      { k: 'FY2025 revenue', v: '$94.8B' },
-      { k: 'Automotive gross margin', v: '17.8%' },
-    ],
-    faq: [
-      { q: 'How does Tesla make money?', a: 'Tesla builds electric cars in its own factories (including its own battery cells) and sells them directly to consumers with no dealers, then keeps earning recurring money from the same car through FSD software subscriptions, charging, insurance, and service.' },
-      { q: "What is Tesla's automotive gross margin?", a: "Tesla's automotive gross margin was 17.8%, on FY2025 revenue of $94.8B." },
-      { q: "What is Tesla's market cap?", a: "As of this article's data, Tesla's market cap was about $1.35 trillion." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Tesla makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 10-Q Q2 FY2026',
-    tags: ['TSLA', 'EV', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s30$tsla-snapshot$s30$,
+  $t30$TSLA$t30$,
+  $c30$Tesla$c30$,
+  $cat30$snapshot$cat30$,
+  $ti30$Tesla (TSLA): What This Company Actually Does$ti30$,
+  $ex30$A plain-English read of Tesla's business model — vertically integrated EV manufacturing plus recurring software revenue — built directly from its SEC filings.$ex30$,
+  $tk30$Tesla builds electric cars in its own factories (including its own battery cells) and sells them directly to consumers with no dealers, then keeps earning recurring money from the same car through FSD software subscriptions, charging, insurance, and service.$tk30$,
+  $qf30$[{"k":"Share price","v":"$342.27"},{"k":"Market cap","v":"~$1.35T"},{"k":"FY2025 revenue","v":"$94.8B"},{"k":"Automotive gross margin","v":"17.8%"}]$qf30$::jsonb,
+  $faq30$[{"q":"How does Tesla make money?","a":"Tesla builds electric cars in its own factories (including its own battery cells) and sells them directly to consumers with no dealers, then keeps earning recurring money from the same car through FSD software subscriptions, charging, insurance, and service."},{"q":"What is Tesla's automotive gross margin?","a":"Tesla's automotive gross margin was 17.8%, on FY2025 revenue of $94.8B."},{"q":"What is Tesla's market cap?","a":"As of this article's data, Tesla's market cap was about $1.35 trillion."}]$faq30$::jsonb,
+  $toc30$[{"id":"how-it-makes-money","label":"How Tesla makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc30$::jsonb,
+  $html30$
 <h2 id="how-it-makes-money">How Tesla makes money</h2>
 <p>Tesla buys raw materials and builds cars — including its own battery cells — in vertically integrated factories, then sells directly to consumers with no dealer network. That's only the first sale: every car keeps generating money afterward through FSD (self-driving) software subscriptions, Supercharger charging, insurance, and service. Separately, Tesla sells regulatory credits to other automakers at close to zero cost, and reuses its automotive battery technology to sell energy storage (Powerwall, Megapack) to homes, businesses, and utilities.</p>
 <div class="flow">
@@ -3746,35 +3849,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Tesla's 10-K filings for FY2021 through FY2025 and 10-Q (Q2 FY2026). This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html30$,
+  $src30$10-K FY2021–FY2025 · 10-Q Q2 FY2026$src30$,
+  ARRAY['TSLA', 'EV', '10-K'],
+  'published',
+  $d30$2026-09-06$d30$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'tsla-story',
-    ticker: 'TSLA',
-    company: 'Tesla',
-    category: 'story',
-    title: "Tesla's Last Three Years: From Selling More Cars to Promising Robots and Robotaxis",
-    excerpt:
-      "How Tesla rewrote its own identity from 'sell more EVs' to 'change the world with robotaxis and robots' — hitting date-specific event promises reliably while missing bigger growth targets along the way.",
-    takeaway:
-      "Tesla went from a company confidently promising more EV sales in late 2023 to one promising robotaxis and robots by 2024, missed most of its big-picture growth targets along the way (6 of 10 tracked promises), but hit nearly every promise with a specific calendar date attached — a pattern of nailing symbolic moments while overestimating how fast they'd scale into real revenue.",
-    faq: [
-      { q: "Has Tesla been hitting its growth targets?", a: "Not consistently — Tesla missed 6 of the 10 big-picture growth promises tracked in this article, even as it nearly always hit promises tied to a specific calendar date, like a launch event." },
-      { q: "How did Tesla's story change from 2023 to 2024?", a: "Tesla shifted from confidently promising more EV sales in late 2023 to promising robotaxis and robots (Optimus) by 2024 — a pivot in what it asks investors to believe in." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Tesla's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Promises vs. actual results' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
-    tags: ['TSLA', 'Earnings Calls', 'Robotaxi'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s31$tsla-story$s31$,
+  $t31$TSLA$t31$,
+  $c31$Tesla$c31$,
+  $cat31$story$cat31$,
+  $ti31$Tesla's Last Three Years: From Selling More Cars to Promising Robots and Robotaxis$ti31$,
+  $ex31$How Tesla rewrote its own identity from 'sell more EVs' to 'change the world with robotaxis and robots' — hitting date-specific event promises reliably while missing bigger growth targets along the way.$ex31$,
+  $tk31$Tesla went from a company confidently promising more EV sales in late 2023 to one promising robotaxis and robots by 2024, missed most of its big-picture growth targets along the way (6 of 10 tracked promises), but hit nearly every promise with a specific calendar date attached — a pattern of nailing symbolic moments while overestimating how fast they'd scale into real revenue.$tk31$,
+  null,
+  $faq31$[{"q":"Has Tesla been hitting its growth targets?","a":"Not consistently — Tesla missed 6 of the 10 big-picture growth promises tracked in this article, even as it nearly always hit promises tied to a specific calendar date, like a launch event."},{"q":"How did Tesla's story change from 2023 to 2024?","a":"Tesla shifted from confidently promising more EV sales in late 2023 to promising robotaxis and robots (Optimus) by 2024 — a pivot in what it asks investors to believe in."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Tesla's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026."}]$faq31$::jsonb,
+  $toc31$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Promises vs. actual results"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc31$::jsonb,
+  $html31$
 <h2 id="the-story">The story</h2>
 <h3>Late 2023: still "sell cheaper, sell more"</h3>
 <p>On the Q4 FY2023 earnings call, Tesla hit its promised record of 1.8 million deliveries almost exactly, and Elon Musk said "I see a path... for Tesla to be the most valuable company in the world." But in the same breath, the CFO gave the first cautious signal in years: 2024's sales growth rate would be "notably lower." What actually happened was more than lower growth — 2024 deliveries (about 1.789 million) came in slightly below 2023's (1.809 million), a decline rather than a slowdown.</p>
@@ -3844,35 +3955,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 (Oct 18, 2023) through Q2 FY2026 (Jul 22, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html31$,
+  $src31$10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026$src31$,
+  ARRAY['TSLA', 'Earnings Calls', 'Robotaxi'],
+  'published',
+  $d31$2026-09-06$d31$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'tsla-dcf',
-    ticker: 'TSLA',
-    company: 'Tesla',
-    category: 'dcf',
-    title: "What TSLA's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Tesla's share price already assumes — and comparing it with the company's actual growth record.",
-    takeaway:
-      "At today's price, Tesla's stock is pricing in about 42% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged just 5.5% a year — a gap the market is betting robotaxi, full self-driving, and Optimus will close.",
-    faq: [
-      { q: "What growth rate does TSLA's stock price assume?", a: "At today's price, Tesla's stock is pricing in about 42% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Tesla's actual growth?", a: "Over the past five years, Tesla's actual free-cash-flow growth averaged just 5.5% a year — a huge gap versus the ~42% required, one the market is betting robotaxi, full self-driving, and Optimus will eventually close." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $342.27, as of Aug 14, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 14, 2026 · Price used: $342.27',
-    tags: ['TSLA', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s32$tsla-dcf$s32$,
+  $t32$TSLA$t32$,
+  $c32$Tesla$c32$,
+  $cat32$dcf$cat32$,
+  $ti32$What TSLA's Stock Price Is Really Betting On$ti32$,
+  $ex32$Reverse-engineering the growth rate Tesla's share price already assumes — and comparing it with the company's actual growth record.$ex32$,
+  $tk32$At today's price, Tesla's stock is pricing in about 42% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged just 5.5% a year — a gap the market is betting robotaxi, full self-driving, and Optimus will close.$tk32$,
+  null,
+  $faq32$[{"q":"What growth rate does TSLA's stock price assume?","a":"At today's price, Tesla's stock is pricing in about 42% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Tesla's actual growth?","a":"Over the past five years, Tesla's actual free-cash-flow growth averaged just 5.5% a year — a huge gap versus the ~42% required, one the market is betting robotaxi, full self-driving, and Optimus will eventually close."},{"q":"What share price was used for this analysis?","a":"This analysis used $342.27, as of Aug 14, 2026."}]$faq32$::jsonb,
+  $toc32$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc32$::jsonb,
+  $html32$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, TSLA implies <span class="num">~42.0%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
@@ -3950,45 +4069,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Tesla's 10-K filings (FY2021–FY2025) and 10-Q (Q2 FY2025, Q2 FY2026), plus Yahoo Finance for the current share price (Aug 14, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html32$,
+  $src32$As of Aug 14, 2026 · Price used: $342.27$src32$,
+  ARRAY['TSLA', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d32$2026-09-06$d32$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'vst-snapshot',
-    ticker: 'VST',
-    company: 'Vistra',
-    category: 'snapshot',
-    title: 'Vistra (VST): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Vistra's business model — power generation plus direct retail electricity sales — built directly from its SEC filings.",
-    takeaway:
-      'Vistra generates electricity from nuclear, gas, and coal power plants, then sells that same power directly to millions of homes and businesses under its own retail brands, capturing a margin at both the generation step and the retail step.',
-    quickFacts: [
-      { k: 'Share price', v: '$148.13' },
-      { k: 'Market cap', v: '~$49.7B' },
-      { k: 'FY2025 revenue', v: '$17.7B' },
-      { k: 'Dividend yield', v: '0.63%' },
-    ],
-    faq: [
-      { q: 'How does Vistra make money?', a: 'Vistra generates electricity from nuclear, gas, and coal power plants, then sells that same power directly to millions of homes and businesses under its own retail brands, capturing a margin at both the generation step and the retail step.' },
-      { q: "What is Vistra's market cap?", a: "As of this article's data, Vistra's market cap was about $49.7B, on FY2025 revenue of $17.7B." },
-      { q: 'Does Vistra sell power to AI data centers?', a: 'Yes — Vistra has signed 20-year nuclear power agreements with Amazon and Meta to supply electricity for their data centers, a deal that took analysts more than 20 months of asking about before it materialized.' },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Vistra makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2023, FY2025 · DEF 14A 2026',
-    tags: ['VST', 'Utilities', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s33$vst-snapshot$s33$,
+  $t33$VST$t33$,
+  $c33$Vistra$c33$,
+  $cat33$snapshot$cat33$,
+  $ti33$Vistra (VST): What This Company Actually Does$ti33$,
+  $ex33$A plain-English read of Vistra's business model — power generation plus direct retail electricity sales — built directly from its SEC filings.$ex33$,
+  $tk33$Vistra generates electricity from nuclear, gas, and coal power plants, then sells that same power directly to millions of homes and businesses under its own retail brands, capturing a margin at both the generation step and the retail step.$tk33$,
+  $qf33$[{"k":"Share price","v":"$148.13"},{"k":"Market cap","v":"~$49.7B"},{"k":"FY2025 revenue","v":"$17.7B"},{"k":"Dividend yield","v":"0.63%"}]$qf33$::jsonb,
+  $faq33$[{"q":"How does Vistra make money?","a":"Vistra generates electricity from nuclear, gas, and coal power plants, then sells that same power directly to millions of homes and businesses under its own retail brands, capturing a margin at both the generation step and the retail step."},{"q":"What is Vistra's market cap?","a":"As of this article's data, Vistra's market cap was about $49.7B, on FY2025 revenue of $17.7B."},{"q":"Does Vistra sell power to AI data centers?","a":"Yes — Vistra has signed 20-year nuclear power agreements with Amazon and Meta to supply electricity for their data centers, a deal that took analysts more than 20 months of asking about before it materialized."}]$faq33$::jsonb,
+  $toc33$[{"id":"how-it-makes-money","label":"How Vistra makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc33$::jsonb,
+  $html33$
 <h2 id="how-it-makes-money">How Vistra makes money</h2>
 <p>Vistra buys fuel (natural gas, coal, uranium) to run a 43,641 MW fleet of power plants across Texas (ERCOT), the East (PJM and others), and the West (CAISO). That electricity is sold three ways: on the wholesale power market, transferred internally to Vistra's own retail brands (like TXU Energy) for resale to about 5 million homes and businesses, and — newly — supplied directly to AI data centers under long-term nuclear power agreements with Amazon and Meta, plus the Helix joint venture with KKR, Nvidia, and others.</p>
 <div class="flow">
@@ -4105,35 +4222,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Vistra's 10-K filings for FY2021, FY2022, FY2023, and FY2025, plus DEF 14A 2026 and supplementary web search for current stock price context. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html33$,
+  $src33$10-K FY2021–FY2023, FY2025 · DEF 14A 2026$src33$,
+  ARRAY['VST', 'Utilities', '10-K'],
+  'published',
+  $d33$2026-09-06$d33$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'vst-story',
-    ticker: 'VST',
-    company: 'Vistra',
-    category: 'story',
-    title: "Vistra's Last Three Years: A Two-Year Wait for the AI Power Deal It Finally Landed",
-    excerpt:
-      'How Vistra beat its own earnings guidance three years running while analysts spent 20-plus months asking the same question about a data-center power deal — and turned more defensive, not less, right after finally landing it.',
-    takeaway:
-      "Vistra met or beat its own guidance three years straight, but the AI data-center power deal that actually drove the stock — 20-year nuclear agreements with Amazon and Meta — took analysts repeating essentially the same question for more than 20 months to materialize. Once it finally landed, management's tone turned more defensive, not more celebratory.",
-    faq: [
-      { q: 'What AI power deal did Vistra sign?', a: 'Vistra signed 20-year nuclear power agreements with Amazon and Meta to supply electricity for their AI data centers — the deal analysts had been asking about for more than 20 months before it landed.' },
-      { q: "Has Vistra been meeting its own guidance?", a: 'Yes — Vistra met or beat its own earnings guidance three years running, even while the market waited on the bigger AI power-deal story to play out.' },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Vistra's 10-K filings for FY2021 through FY2023 and FY2025, plus 12 quarters of earnings call transcripts from November 2023 to August 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2023, FY2025 · 12 quarters of earnings call transcripts, Nov 2023–Aug 2026',
-    tags: ['VST', 'Earnings Calls', 'AI Infrastructure'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s34$vst-story$s34$,
+  $t34$VST$t34$,
+  $c34$Vistra$c34$,
+  $cat34$story$cat34$,
+  $ti34$Vistra's Last Three Years: A Two-Year Wait for the AI Power Deal It Finally Landed$ti34$,
+  $ex34$How Vistra beat its own earnings guidance three years running while analysts spent 20-plus months asking the same question about a data-center power deal — and turned more defensive, not less, right after finally landing it.$ex34$,
+  $tk34$Vistra met or beat its own guidance three years straight, but the AI data-center power deal that actually drove the stock — 20-year nuclear agreements with Amazon and Meta — took analysts repeating essentially the same question for more than 20 months to materialize. Once it finally landed, management's tone turned more defensive, not more celebratory.$tk34$,
+  null,
+  $faq34$[{"q":"What AI power deal did Vistra sign?","a":"Vistra signed 20-year nuclear power agreements with Amazon and Meta to supply electricity for their AI data centers — the deal analysts had been asking about for more than 20 months before it landed."},{"q":"Has Vistra been meeting its own guidance?","a":"Yes — Vistra met or beat its own earnings guidance three years running, even while the market waited on the bigger AI power-deal story to play out."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Vistra's 10-K filings for FY2021 through FY2023 and FY2025, plus 12 quarters of earnings call transcripts from November 2023 to August 2026."}]$faq34$::jsonb,
+  $toc34$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc34$::jsonb,
+  $html34$
 <h2 id="the-story">The story</h2>
 <h3>Late 2023: a hedging story, not an AI story</h3>
 <p>At the end of 2023, Vistra's pitch to investors was simple: "our hedging strategy earns steadily no matter the weather." CEO Jim Burke called Q3 2023 "a very successful quarter" and confidently raised Adjusted EBITDA guidance to $3.95–4.1 billion, leaning on the hedging discipline built after 2021's Winter Storm Uri. AI and data centers were barely part of the company's vocabulary — the word "AI" appears exactly once in the FY2023 10-K, and only in the context of legal liability from adopting AI tools internally, not demand.</p>
@@ -4199,35 +4324,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2021, FY2022, FY2023, and FY2025, and 12 quarters of earnings call transcripts from Q3 FY2023 (Nov 7, 2023) through Q2 FY2026 (Aug 7, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html34$,
+  $src34$10-K FY2021–FY2023, FY2025 · 12 quarters of earnings call transcripts, Nov 2023–Aug 2026$src34$,
+  ARRAY['VST', 'Earnings Calls', 'AI Infrastructure'],
+  'published',
+  $d34$2026-09-06$d34$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'vst-dcf',
-    ticker: 'VST',
-    company: 'Vistra',
-    category: 'dcf',
-    title: "What VST's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Vistra's share price already assumes — and comparing it with the company's actual growth record.",
-    takeaway:
-      "At today's price, Vistra's stock is pricing in about 11.3% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual revenue grew 10.1% a year — meaning the market is essentially betting on a continuation of the recent pace, not an acceleration.",
-    faq: [
-      { q: "What growth rate does VST's stock price assume?", a: "At today's price, Vistra's stock is pricing in about 11.3% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Vistra's actual growth?", a: "Over the past five years, Vistra's actual revenue grew 10.1% a year — close to the ~11.3% the price requires, meaning the market is betting on roughly a continuation of the recent pace, not an acceleration." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $148.13, as of Aug 14, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 14, 2026 · Price used: $148.13',
-    tags: ['VST', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s35$vst-dcf$s35$,
+  $t35$VST$t35$,
+  $c35$Vistra$c35$,
+  $cat35$dcf$cat35$,
+  $ti35$What VST's Stock Price Is Really Betting On$ti35$,
+  $ex35$Reverse-engineering the growth rate Vistra's share price already assumes — and comparing it with the company's actual growth record.$ex35$,
+  $tk35$At today's price, Vistra's stock is pricing in about 11.3% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual revenue grew 10.1% a year — meaning the market is essentially betting on a continuation of the recent pace, not an acceleration.$tk35$,
+  null,
+  $faq35$[{"q":"What growth rate does VST's stock price assume?","a":"At today's price, Vistra's stock is pricing in about 11.3% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Vistra's actual growth?","a":"Over the past five years, Vistra's actual revenue grew 10.1% a year — close to the ~11.3% the price requires, meaning the market is betting on roughly a continuation of the recent pace, not an acceleration."},{"q":"What share price was used for this analysis?","a":"This analysis used $148.13, as of Aug 14, 2026."}]$faq35$::jsonb,
+  $toc35$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc35$::jsonb,
+  $html35$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, VST implies <span class="num">~11.3%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
@@ -4302,45 +4435,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Vistra's 10-K filings (FY2021–FY2023, FY2025) and supplementary web search for current share price and analyst consensus (Aug 14, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html35$,
+  $src35$As of Aug 14, 2026 · Price used: $148.13$src35$,
+  ARRAY['VST', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d35$2026-09-06$d35$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'pltr-snapshot',
-    ticker: 'PLTR',
-    company: 'Palantir',
-    category: 'snapshot',
-    title: 'Palantir (PLTR): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Palantir's business model — data-integration software for governments and enterprises — built directly from its SEC filings.",
-    takeaway:
-      "Palantir builds software that stitches together governments' and large companies' vast, scattered data into one usable system, then charges recurring usage fees for those organizations to keep relying on it.",
-    quickFacts: [
-      { k: 'Share price', v: '$172.55' },
-      { k: 'Market cap', v: '~$414.7B' },
-      { k: 'FY2025 revenue', v: '$4.475B, +56% YoY' },
-      { k: 'Customer count', v: '954, +34% YoY' },
-    ],
-    faq: [
-      { q: 'What does Palantir do?', a: "Palantir builds software that stitches together governments' and large companies' vast, scattered data into one usable system, then charges recurring usage fees for those organizations to keep relying on it." },
-      { q: 'How fast is Palantir growing?', a: 'FY2025 revenue was $4.475B, up 56% year-over-year, with customer count up 34% to 954.' },
-      { q: "What is Palantir's market cap?", a: "As of this article's data, Palantir's market cap was about $414.7B." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Palantir makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023, FY2025 · DEF 14A 2026 · 10-Q Q2 FY2026',
-    tags: ['PLTR', 'Software', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s36$pltr-snapshot$s36$,
+  $t36$PLTR$t36$,
+  $c36$Palantir$c36$,
+  $cat36$snapshot$cat36$,
+  $ti36$Palantir (PLTR): What This Company Actually Does$ti36$,
+  $ex36$A plain-English read of Palantir's business model — data-integration software for governments and enterprises — built directly from its SEC filings.$ex36$,
+  $tk36$Palantir builds software that stitches together governments' and large companies' vast, scattered data into one usable system, then charges recurring usage fees for those organizations to keep relying on it.$tk36$,
+  $qf36$[{"k":"Share price","v":"$172.55"},{"k":"Market cap","v":"~$414.7B"},{"k":"FY2025 revenue","v":"$4.475B, +56% YoY"},{"k":"Customer count","v":"954, +34% YoY"}]$qf36$::jsonb,
+  $faq36$[{"q":"What does Palantir do?","a":"Palantir builds software that stitches together governments' and large companies' vast, scattered data into one usable system, then charges recurring usage fees for those organizations to keep relying on it."},{"q":"How fast is Palantir growing?","a":"FY2025 revenue was $4.475B, up 56% year-over-year, with customer count up 34% to 954."},{"q":"What is Palantir's market cap?","a":"As of this article's data, Palantir's market cap was about $414.7B."}]$faq36$::jsonb,
+  $toc36$[{"id":"how-it-makes-money","label":"How Palantir makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc36$::jsonb,
+  $html36$
 <h2 id="how-it-makes-money">How Palantir makes money</h2>
 <p>Founded in 2003 to help U.S. intelligence agencies analyze counterterrorism data, Palantir now sells four core products — Gotham (defense/intelligence), Foundry (enterprise data operations), Apollo (deployment infrastructure), and AIP (generative AI) — to governments and large companies drowning in disconnected data. Customers pay ongoing usage fees under multi-year contracts, and existing customers tend to expand their usage sharply over time (a "land and expand" pattern), rather than most growth coming from brand-new logos.</p>
 <div class="flow">
@@ -4451,35 +4582,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Palantir's 10-K filings for FY2023 and FY2025, DEF 14A 2026, and 10-Q (Q2 FY2026), plus a web search for current market cap context (stockanalysis.com, Aug 2026). This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html36$,
+  $src36$10-K FY2023, FY2025 · DEF 14A 2026 · 10-Q Q2 FY2026$src36$,
+  ARRAY['PLTR', 'Software', '10-K'],
+  'published',
+  $d36$2026-09-06$d36$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'pltr-story',
-    ticker: 'PLTR',
-    company: 'Palantir',
-    category: 'story',
-    title: "Palantir's Last Three Years: From 'We Have a History of Losses' to Mocking Short Sellers",
-    excerpt:
-      "How Palantir's top-ranked corporate risk went from 'we might never turn a profit' to 'we might not collect all the money customers already promised us' — as the company's own tone shifted from defensive to openly combative.",
-    takeaway:
-      "In late 2023, Palantir's 10-K opened its risk summary with \"we have a history of losses.\" By 2025, that line had vanished entirely, replaced near the top by a new worry: that the company might not collect the full value of contracts it has already signed — as Total Remaining Deal Value nearly tripled.",
-    faq: [
-      { q: "Did Palantir's own filings used to warn about losses?", a: 'Yes — Palantir\'s late-2023 10-K opened its risk-factor summary with "we have a history of losses." By 2025 that line was gone entirely, replaced by a new top concern about collecting the full value of already-signed contracts.' },
-      { q: "How much has Palantir's contracted deal value grown?", a: "Total Remaining Deal Value nearly tripled over the period this article reviews, which is part of why the company's top disclosed risk shifted from profitability doubt to collection risk on that larger backlog." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Palantir's 10-K filings for FY2023 through FY2025 and 6 quarters of earnings call transcripts from November 2023 to August 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 6 quarters of earnings call transcripts, Nov 2023–Aug 2026',
-    tags: ['PLTR', 'Earnings Calls', 'AI Infrastructure'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s37$pltr-story$s37$,
+  $t37$PLTR$t37$,
+  $c37$Palantir$c37$,
+  $cat37$story$cat37$,
+  $ti37$Palantir's Last Three Years: From 'We Have a History of Losses' to Mocking Short Sellers$ti37$,
+  $ex37$How Palantir's top-ranked corporate risk went from 'we might never turn a profit' to 'we might not collect all the money customers already promised us' — as the company's own tone shifted from defensive to openly combative.$ex37$,
+  $tk37$In late 2023, Palantir's 10-K opened its risk summary with "we have a history of losses." By 2025, that line had vanished entirely, replaced near the top by a new worry: that the company might not collect the full value of contracts it has already signed — as Total Remaining Deal Value nearly tripled.$tk37$,
+  null,
+  $faq37$[{"q":"Did Palantir's own filings used to warn about losses?","a":"Yes — Palantir's late-2023 10-K opened its risk-factor summary with \"we have a history of losses.\" By 2025 that line was gone entirely, replaced by a new top concern about collecting the full value of already-signed contracts."},{"q":"How much has Palantir's contracted deal value grown?","a":"Total Remaining Deal Value nearly tripled over the period this article reviews, which is part of why the company's top disclosed risk shifted from profitability doubt to collection risk on that larger backlog."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Palantir's 10-K filings for FY2023 through FY2025 and 6 quarters of earnings call transcripts from November 2023 to August 2026."}]$faq37$::jsonb,
+  $toc37$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc37$::jsonb,
+  $html37$
 <h2 id="the-story">The story</h2>
 <h3>Late 2023: still explaining itself</h3>
 <p>In Q3 2023, Palantir was a freshly profitable company — revenue growth of 17%, and a Rule of 40 score (revenue growth plus adjusted operating margin) of just 46. The FY2023 10-K's risk summary still opened with the same line it always had: "we have a history of losses, and we may not be able to achieve or maintain profitability." CEO Alexander Karp's tone on the call was still somewhat defensive — "we believe in a mission-driven culture" — the language of a company that still needed to explain and persuade skeptics.</p>
@@ -4546,35 +4685,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023, FY2024, and FY2025, and 6 quarters of earnings call transcripts: Q3 FY2023 (Nov 2, 2023), Q1 FY2024 (May 6, 2024), Q3 FY2024 (Nov 4, 2024), Q1 FY2025 (May 5, 2025), Q3 FY2025 (Nov 4, 2025), and Q2 FY2026 (Aug 3, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html37$,
+  $src37$10-K FY2023–FY2025 · 6 quarters of earnings call transcripts, Nov 2023–Aug 2026$src37$,
+  ARRAY['PLTR', 'Earnings Calls', 'AI Infrastructure'],
+  'published',
+  $d37$2026-09-06$d37$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'pltr-dcf',
-    ticker: 'PLTR',
-    company: 'Palantir',
-    category: 'dcf',
-    title: "What PLTR's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Palantir's share price already assumes — and comparing it with the company's actual growth record, which has been accelerating so fast that the answer depends heavily on which recent period you use.",
-    takeaway:
-      "At today's price, Palantir's stock is pricing in somewhere between 34% and 48% annual free-cash-flow growth for the next ten years, depending on which recent period is used as the starting base. Over the past five years, the company's actual FCF growth averaged 59.9% a year.",
-    faq: [
-      { q: "What growth rate does PLTR's stock price assume?", a: "At today's price, Palantir's stock is pricing in somewhere between 34% and 48% annual free-cash-flow growth for the next ten years, depending on which recent period is used as the starting base." },
-      { q: "How does that compare to Palantir's actual growth?", a: "Over the past five years, Palantir's actual free-cash-flow growth averaged 59.9% a year — above even the high end of the 34–48% range the price requires, though Palantir's growth has also been decelerating from very high levels." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $172.55, as of Aug 17, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate and FCF base' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $172.55',
-    tags: ['PLTR', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s38$pltr-dcf$s38$,
+  $t38$PLTR$t38$,
+  $c38$Palantir$c38$,
+  $cat38$dcf$cat38$,
+  $ti38$What PLTR's Stock Price Is Really Betting On$ti38$,
+  $ex38$Reverse-engineering the growth rate Palantir's share price already assumes — and comparing it with the company's actual growth record, which has been accelerating so fast that the answer depends heavily on which recent period you use.$ex38$,
+  $tk38$At today's price, Palantir's stock is pricing in somewhere between 34% and 48% annual free-cash-flow growth for the next ten years, depending on which recent period is used as the starting base. Over the past five years, the company's actual FCF growth averaged 59.9% a year.$tk38$,
+  null,
+  $faq38$[{"q":"What growth rate does PLTR's stock price assume?","a":"At today's price, Palantir's stock is pricing in somewhere between 34% and 48% annual free-cash-flow growth for the next ten years, depending on which recent period is used as the starting base."},{"q":"How does that compare to Palantir's actual growth?","a":"Over the past five years, Palantir's actual free-cash-flow growth averaged 59.9% a year — above even the high end of the 34–48% range the price requires, though Palantir's growth has also been decelerating from very high levels."},{"q":"What share price was used for this analysis?","a":"This analysis used $172.55, as of Aug 17, 2026."}]$faq38$::jsonb,
+  $toc38$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate and FCF base"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc38$::jsonb,
+  $html38$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, PLTR implies <span class="num">34%–48%</span> annual FCF growth for the next 10 years, depending on the FCF base used (discounted at 10%).</p>
@@ -4649,45 +4796,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Palantir's 10-K filings (FY2023, FY2025) and 10-Q (Q2 FY2026), plus a web search for the current share price (stockanalysis.com, Aug 17, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html38$,
+  $src38$As of Aug 17, 2026 · Price used: $172.55$src38$,
+  ARRAY['PLTR', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d38$2026-09-06$d38$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'snps-snapshot',
-    ticker: 'SNPS',
-    company: 'Synopsys',
-    category: 'snapshot',
-    title: 'Synopsys (SNPS): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Synopsys's business model — chip-design software plus engineering simulation — built directly from its SEC filings.",
-    takeaway:
-      'Synopsys makes the software that semiconductor companies must use to design chips, plus (since its 2025 Ansys acquisition) simulation software that lets manufacturers test complex products like cars and planes virtually — then charges manufacturing and tech companies worldwide an annual license fee to use it.',
-    quickFacts: [
-      { k: 'Share price', v: '$413.22' },
-      { k: 'Market cap', v: '~$79.1B' },
-      { k: 'FY2025 revenue', v: '$7.05B' },
-      { k: 'R&D / revenue', v: '35.1%' },
-    ],
-    faq: [
-      { q: 'What does Synopsys do?', a: "Synopsys makes the software that semiconductor companies must use to design chips, plus (since its 2025 Ansys acquisition) simulation software that lets manufacturers test complex products like cars and planes virtually — then charges an annual license fee to use it." },
-      { q: 'How much does Synopsys spend on R&D?', a: 'R&D spending runs about 35.1% of revenue, on FY2025 revenue of $7.05B — a high ratio typical of specialized engineering software.' },
-      { q: "What is Synopsys's market cap?", a: "As of this article's data, Synopsys's market cap was about $79.1B." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Synopsys makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Three-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025',
-    tags: ['SNPS', 'Semiconductors', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s39$snps-snapshot$s39$,
+  $t39$SNPS$t39$,
+  $c39$Synopsys$c39$,
+  $cat39$snapshot$cat39$,
+  $ti39$Synopsys (SNPS): What This Company Actually Does$ti39$,
+  $ex39$A plain-English read of Synopsys's business model — chip-design software plus engineering simulation — built directly from its SEC filings.$ex39$,
+  $tk39$Synopsys makes the software that semiconductor companies must use to design chips, plus (since its 2025 Ansys acquisition) simulation software that lets manufacturers test complex products like cars and planes virtually — then charges manufacturing and tech companies worldwide an annual license fee to use it.$tk39$,
+  $qf39$[{"k":"Share price","v":"$413.22"},{"k":"Market cap","v":"~$79.1B"},{"k":"FY2025 revenue","v":"$7.05B"},{"k":"R&D / revenue","v":"35.1%"}]$qf39$::jsonb,
+  $faq39$[{"q":"What does Synopsys do?","a":"Synopsys makes the software that semiconductor companies must use to design chips, plus (since its 2025 Ansys acquisition) simulation software that lets manufacturers test complex products like cars and planes virtually — then charges an annual license fee to use it."},{"q":"How much does Synopsys spend on R&D?","a":"R&D spending runs about 35.1% of revenue, on FY2025 revenue of $7.05B — a high ratio typical of specialized engineering software."},{"q":"What is Synopsys's market cap?","a":"As of this article's data, Synopsys's market cap was about $79.1B."}]$faq39$::jsonb,
+  $toc39$[{"id":"how-it-makes-money","label":"How Synopsys makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Three-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc39$::jsonb,
+  $html39$
 <h2 id="how-it-makes-money">How Synopsys makes money</h2>
 <p>Synopsys pours about 35% of its revenue back into R&D to build software that semiconductor companies can't design chips without (EDA), pre-built chip building blocks (Design IP), and — since acquiring Ansys in 2025 — simulation software that lets manufacturers virtually test complex products before building them. Chip designers and foundries pay for EDA and IP; automotive, aerospace, and industrial companies pay for simulation software. Either way, customers pay annual license and maintenance fees, and IP customers additionally pay a royalty every time a chip using that IP actually sells.</p>
 <div class="flow">
@@ -4798,35 +4943,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Synopsys's 10-K filings for FY2023 through FY2025. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html39$,
+  $src39$10-K FY2023–FY2025$src39$,
+  ARRAY['SNPS', 'Semiconductors', '10-K'],
+  'published',
+  $d39$2026-09-06$d39$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'snps-story',
-    ticker: 'SNPS',
-    company: 'Synopsys',
-    category: 'story',
-    title: "Synopsys's Last Two Years: A Record Acquisition and a Self-Inflicted Wound, in the Same Quarter",
-    excerpt:
-      "How the largest deal in engineering-software history closed in the exact same quarter that China export controls, a major customer slowdown, and the company's own admitted mistakes forced a guidance cut and layoffs.",
-    takeaway:
-      "Synopsys closed its roughly $35 billion Ansys acquisition — the largest deal in its history — in the same quarter that China export controls, a major foundry customer's slowdown, and the company's own admitted execution mistakes forced a guidance cut and a 10% workforce reduction. Two years later, results are recovering, but confidence hasn't yet returned to where it stood before the crisis.",
-    faq: [
-      { q: 'What was the Ansys acquisition?', a: "Synopsys closed its roughly $35 billion acquisition of Ansys, the largest deal in its history, in the same quarter that China export controls and a major customer slowdown forced a guidance cut and 10% workforce reduction." },
-      { q: "Has Synopsys recovered from that crisis?", a: "Partially — results have been recovering over the two years since, but management's confidence and tone hadn't yet returned to where they stood before the crisis, as of the most recent quarters reviewed." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Synopsys's 10-K filings for FY2023 through FY2025 and 8 quarters of earnings call transcripts from August 2024 to May 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 8 quarters of earnings call transcripts, Aug 2024–May 2026',
-    tags: ['SNPS', 'Earnings Calls', 'Semiconductors'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s40$snps-story$s40$,
+  $t40$SNPS$t40$,
+  $c40$Synopsys$c40$,
+  $cat40$story$cat40$,
+  $ti40$Synopsys's Last Two Years: A Record Acquisition and a Self-Inflicted Wound, in the Same Quarter$ti40$,
+  $ex40$How the largest deal in engineering-software history closed in the exact same quarter that China export controls, a major customer slowdown, and the company's own admitted mistakes forced a guidance cut and layoffs.$ex40$,
+  $tk40$Synopsys closed its roughly $35 billion Ansys acquisition — the largest deal in its history — in the same quarter that China export controls, a major foundry customer's slowdown, and the company's own admitted execution mistakes forced a guidance cut and a 10% workforce reduction. Two years later, results are recovering, but confidence hasn't yet returned to where it stood before the crisis.$tk40$,
+  null,
+  $faq40$[{"q":"What was the Ansys acquisition?","a":"Synopsys closed its roughly $35 billion acquisition of Ansys, the largest deal in its history, in the same quarter that China export controls and a major customer slowdown forced a guidance cut and 10% workforce reduction."},{"q":"Has Synopsys recovered from that crisis?","a":"Partially — results have been recovering over the two years since, but management's confidence and tone hadn't yet returned to where they stood before the crisis, as of the most recent quarters reviewed."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Synopsys's 10-K filings for FY2023 through FY2025 and 8 quarters of earnings call transcripts from August 2024 to May 2026."}]$faq40$::jsonb,
+  $toc40$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc40$::jsonb,
+  $html40$
 <h2 id="the-story">The story</h2>
 <h3>2023: a stable three-segment leader</h3>
 <p>Through 2023, Synopsys was a steady EDA leader with three segments — Design Automation, Design IP, and Software Integrity (security/quality software) — each posting double-digit growth, with "another record revenue" repeated on nearly every earnings call. In January 2024, Sassine Ghazi became CEO, and that same year the company announced it would acquire engineering-simulation software maker Ansys for roughly $35 billion — the largest deal in company history, and in the engineering-software industry's history.</p>
@@ -4890,35 +5043,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 8 quarters of earnings call transcripts from Q3 FY2024 (Aug 2024) through Q2 FY2026 (May 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html40$,
+  $src40$10-K FY2023–FY2025 · 8 quarters of earnings call transcripts, Aug 2024–May 2026$src40$,
+  ARRAY['SNPS', 'Earnings Calls', 'Semiconductors'],
+  'published',
+  $d40$2026-09-06$d40$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'snps-dcf',
-    ticker: 'SNPS',
-    company: 'Synopsys',
-    category: 'dcf',
-    title: "What SNPS's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Synopsys's share price already assumes — and comparing it with the company's actual growth record, which has been essentially flat for four years.",
-    takeaway:
-      "At today's price, Synopsys's stock is pricing in about 21.6% annual free-cash-flow growth for the next ten years. Over the past four years, the company's actual FCF growth averaged -0.9% a year — essentially flat, not growing at all.",
-    faq: [
-      { q: "What growth rate does SNPS's stock price assume?", a: "At today's price, Synopsys's stock is pricing in about 21.6% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Synopsys's actual growth?", a: "Over the past four years, Synopsys's actual free-cash-flow growth averaged -0.9% a year — essentially flat — a large gap from the ~21.6% the current price requires." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $413.22, as of Aug 17, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $413.22',
-    tags: ['SNPS', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s41$snps-dcf$s41$,
+  $t41$SNPS$t41$,
+  $c41$Synopsys$c41$,
+  $cat41$dcf$cat41$,
+  $ti41$What SNPS's Stock Price Is Really Betting On$ti41$,
+  $ex41$Reverse-engineering the growth rate Synopsys's share price already assumes — and comparing it with the company's actual growth record, which has been essentially flat for four years.$ex41$,
+  $tk41$At today's price, Synopsys's stock is pricing in about 21.6% annual free-cash-flow growth for the next ten years. Over the past four years, the company's actual FCF growth averaged -0.9% a year — essentially flat, not growing at all.$tk41$,
+  null,
+  $faq41$[{"q":"What growth rate does SNPS's stock price assume?","a":"At today's price, Synopsys's stock is pricing in about 21.6% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Synopsys's actual growth?","a":"Over the past four years, Synopsys's actual free-cash-flow growth averaged -0.9% a year — essentially flat — a large gap from the ~21.6% the current price requires."},{"q":"What share price was used for this analysis?","a":"This analysis used $413.22, as of Aug 17, 2026."}]$faq41$::jsonb,
+  $toc41$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc41$::jsonb,
+  $html41$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, SNPS implies <span class="num">~21.6%</span> annual FCF growth for the next 10 years, discounted at 9%.</p>
@@ -4995,45 +5156,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Synopsys's 10-K filings (FY2021, FY2023–FY2025) and a web search for the current share price (stockanalysis.com, Aug 17, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html41$,
+  $src41$As of Aug 17, 2026 · Price used: $413.22$src41$,
+  ARRAY['SNPS', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d41$2026-09-06$d41$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'rsg-snapshot',
-    ticker: 'RSG',
-    company: 'Republic Services',
-    category: 'snapshot',
-    title: 'Republic Services (RSG): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Republic Services's business model — trash collection backed by owned landfills — built directly from its SEC filings.",
-    takeaway:
-      'Republic Services picks up trash from homes and businesses by truck, buries it in landfills it owns (or processes it at its own recycling centers), and charges a monthly fee for the service — with landfill ownership as the moat that lets it keep raising prices.',
-    quickFacts: [
-      { k: 'Share price', v: '$215.26' },
-      { k: 'Market cap', v: '~$66.2B' },
-      { k: 'FY2025 revenue', v: '$16.59B' },
-      { k: 'Consecutive dividend increases', v: '22 years' },
-    ],
-    faq: [
-      { q: 'How does Republic Services make money?', a: 'Republic Services picks up trash from homes and businesses by truck, buries it in landfills it owns (or processes it at its own recycling centers), and charges a monthly fee — landfill ownership is the moat that lets it keep raising prices.' },
-      { q: 'Does Republic Services pay a growing dividend?', a: "Yes — Republic Services has raised its dividend for 22 consecutive years." },
-      { q: "What is Republic Services's market cap?", a: "As of this article's data, Republic Services's market cap was about $66.2B, on FY2025 revenue of $16.59B." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Republic Services makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 10-Q Q2 FY2026',
-    tags: ['RSG', 'Waste Management', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s42$rsg-snapshot$s42$,
+  $t42$RSG$t42$,
+  $c42$Republic Services$c42$,
+  $cat42$snapshot$cat42$,
+  $ti42$Republic Services (RSG): What This Company Actually Does$ti42$,
+  $ex42$A plain-English read of Republic Services's business model — trash collection backed by owned landfills — built directly from its SEC filings.$ex42$,
+  $tk42$Republic Services picks up trash from homes and businesses by truck, buries it in landfills it owns (or processes it at its own recycling centers), and charges a monthly fee for the service — with landfill ownership as the moat that lets it keep raising prices.$tk42$,
+  $qf42$[{"k":"Share price","v":"$215.26"},{"k":"Market cap","v":"~$66.2B"},{"k":"FY2025 revenue","v":"$16.59B"},{"k":"Consecutive dividend increases","v":"22 years"}]$qf42$::jsonb,
+  $faq42$[{"q":"How does Republic Services make money?","a":"Republic Services picks up trash from homes and businesses by truck, buries it in landfills it owns (or processes it at its own recycling centers), and charges a monthly fee — landfill ownership is the moat that lets it keep raising prices."},{"q":"Does Republic Services pay a growing dividend?","a":"Yes — Republic Services has raised its dividend for 22 consecutive years."},{"q":"What is Republic Services's market cap?","a":"As of this article's data, Republic Services's market cap was about $66.2B, on FY2025 revenue of $16.59B."}]$faq42$::jsonb,
+  $toc42$[{"id":"how-it-makes-money","label":"How Republic Services makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc42$::jsonb,
+  $html42$
 <h2 id="how-it-makes-money">How Republic Services makes money</h2>
 <p>Households and businesses pay a subscription or contract fee; Republic's trucks (running out of 377 collection sites) haul that waste to landfills and recycling centers the company itself owns (67% "internalized"), where it earns tipping fees and recycled-material sale revenue. A separate industrial-waste business (Environmental Solutions, 11% of revenue) adds another stream, and cash from both flows to dividends and buybacks.</p>
 <div class="flow">
@@ -5143,35 +5302,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Republic Services's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 10-Q (Q2 FY2026), plus stockanalysis.com for real-time price context. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html42$,
+  $src42$10-K FY2021–FY2025 · DEF 14A 2026 · 10-Q Q2 FY2026$src42$,
+  ARRAY['RSG', 'Waste Management', '10-K'],
+  'published',
+  $d42$2026-09-06$d42$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'rsg-story',
-    ticker: 'RSG',
-    company: 'Republic Services',
-    category: 'story',
-    title: "Republic Services's Last Three Years: A Labor Strike Interrupted the Streak, Not the Story",
-    excerpt:
-      'How Republic Services never missed its own EPS guidance across three years — not even through a 2025 labor strike and economic slowdown severe enough to force a rare revenue-guidance cut.',
-    takeaway:
-      "In three years, Republic Services never once missed its own EPS guidance — not even during a 2025 labor strike and cyclical slowdown severe enough to force a rare revenue-guidance cut. Pricing power absorbed the hit, and management protected profit above all else.",
-    faq: [
-      { q: "Did the 2025 labor strike hurt Republic Services's earnings?", a: "It forced a rare revenue-guidance cut, but Republic Services still never missed its own EPS guidance — pricing power absorbed the hit, and management protected profit above all else." },
-      { q: "Has Republic Services ever missed its own guidance?", a: "Not on EPS — across the three years this article reviews, Republic Services never once missed its own earnings-per-share guidance, even through a labor strike and cyclical slowdown." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Republic Services's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026',
-    tags: ['RSG', 'Earnings Calls', 'Guidance Discipline'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s43$rsg-story$s43$,
+  $t43$RSG$t43$,
+  $c43$Republic Services$c43$,
+  $cat43$story$cat43$,
+  $ti43$Republic Services's Last Three Years: A Labor Strike Interrupted the Streak, Not the Story$ti43$,
+  $ex43$How Republic Services never missed its own EPS guidance across three years — not even through a 2025 labor strike and economic slowdown severe enough to force a rare revenue-guidance cut.$ex43$,
+  $tk43$In three years, Republic Services never once missed its own EPS guidance — not even during a 2025 labor strike and cyclical slowdown severe enough to force a rare revenue-guidance cut. Pricing power absorbed the hit, and management protected profit above all else.$tk43$,
+  null,
+  $faq43$[{"q":"Did the 2025 labor strike hurt Republic Services's earnings?","a":"It forced a rare revenue-guidance cut, but Republic Services still never missed its own EPS guidance — pricing power absorbed the hit, and management protected profit above all else."},{"q":"Has Republic Services ever missed its own guidance?","a":"Not on EPS — across the three years this article reviews, Republic Services never once missed its own earnings-per-share guidance, even through a labor strike and cyclical slowdown."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Republic Services's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026."}]$faq43$::jsonb,
+  $toc43$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc43$::jsonb,
+  $html43$
 <h2 id="the-story">The story</h2>
 <h3>2023: confident</h3>
 <p>On the Q3 2023 call, CEO Jon Vander Ark opened with "our strong third quarter results." M&A lifted revenue 6%, and a tax benefit let the company actually raise its annual EPS guidance to $5.46-$5.49. The Q4 call closed the year with "we outpaced expectations throughout the year" — and 2023's actual EPS ($5.61) beat even that raised guidance.</p>
@@ -5236,35 +5403,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 2023 (Oct 26, 2023) through Q2 2026 (Aug 6, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html43$,
+  $src43$10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026$src43$,
+  ARRAY['RSG', 'Earnings Calls', 'Guidance Discipline'],
+  'published',
+  $d43$2026-09-06$d43$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'rsg-dcf',
-    ticker: 'RSG',
-    company: 'Republic Services',
-    category: 'dcf',
-    title: "What RSG's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Republic Services's share price already assumes — and comparing it with the company's actual growth record, which leaned heavily on acquisitions.",
-    takeaway:
-      "At today's price, Republic Services's stock is pricing in about 12.4% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged 13.1% a year — but that pace leaned heavily on large acquisitions, so the price also implicitly requires similar M&A activity to continue.",
-    faq: [
-      { q: "What growth rate does RSG's stock price assume?", a: "At today's price, Republic Services's stock is pricing in about 12.4% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Republic Services's actual growth?", a: "Over the past five years, Republic Services's actual free-cash-flow growth averaged 13.1% a year — slightly above the ~12.4% required — but that pace leaned heavily on large acquisitions, so the price implicitly requires similar M&A activity to continue." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $215.26, as of Aug 17, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $215.26',
-    tags: ['RSG', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s44$rsg-dcf$s44$,
+  $t44$RSG$t44$,
+  $c44$Republic Services$c44$,
+  $cat44$dcf$cat44$,
+  $ti44$What RSG's Stock Price Is Really Betting On$ti44$,
+  $ex44$Reverse-engineering the growth rate Republic Services's share price already assumes — and comparing it with the company's actual growth record, which leaned heavily on acquisitions.$ex44$,
+  $tk44$At today's price, Republic Services's stock is pricing in about 12.4% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF growth averaged 13.1% a year — but that pace leaned heavily on large acquisitions, so the price also implicitly requires similar M&A activity to continue.$tk44$,
+  null,
+  $faq44$[{"q":"What growth rate does RSG's stock price assume?","a":"At today's price, Republic Services's stock is pricing in about 12.4% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Republic Services's actual growth?","a":"Over the past five years, Republic Services's actual free-cash-flow growth averaged 13.1% a year — slightly above the ~12.4% required — but that pace leaned heavily on large acquisitions, so the price implicitly requires similar M&A activity to continue."},{"q":"What share price was used for this analysis?","a":"This analysis used $215.26, as of Aug 17, 2026."}]$faq44$::jsonb,
+  $toc44$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc44$::jsonb,
+  $html44$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, RSG implies <span class="num">~12.4%</span> annual FCF growth for the next 10 years, discounted at 9%.</p>
@@ -5338,45 +5513,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Republic Services's 10-K filings (FY2021–FY2025) and 10-Q (Q2 FY2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html44$,
+  $src44$As of Aug 17, 2026 · Price used: $215.26$src44$,
+  ARRAY['RSG', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d44$2026-09-06$d44$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'ko-snapshot',
-    ticker: 'KO',
-    company: 'The Coca-Cola Company',
-    category: 'snapshot',
-    title: 'Coca-Cola (KO): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Coca-Cola's business model — selling concentrate and brand, not bottles — built directly from its SEC filings.",
-    takeaway:
-      "Coca-Cola sells concentrate and syrup to independent bottlers around the world, who add water and sugar and turn it into finished drinks — people drink the product, but the company itself makes its money selling the recipe and the brand, not manufacturing or distributing anything directly.",
-    quickFacts: [
-      { k: 'Share price', v: '$86.98' },
-      { k: 'Market cap', v: '~$374.2B' },
-      { k: 'FY2025 revenue', v: '$47.9B' },
-      { k: 'Dividend yield', v: '2.44%' },
-    ],
-    faq: [
-      { q: 'How does Coca-Cola make money if it makes so few of its own drinks?', a: "Coca-Cola sells concentrate and syrup to independent bottlers around the world, who add water and sugar and turn it into finished drinks. The company makes its money selling the recipe and the brand, not manufacturing or distributing anything directly." },
-      { q: 'Does Coca-Cola pay a dividend?', a: 'Yes — Coca-Cola pays a dividend yielding about 2.44% at the price used in this article.' },
-      { q: "What is Coca-Cola's market cap?", a: "As of this article's data, Coca-Cola's market cap was about $374.2B, on FY2025 revenue of $47.9B." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Coca-Cola makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 10-Q Q1 FY2026',
-    tags: ['KO', 'Consumer Staples', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s45$ko-snapshot$s45$,
+  $t45$KO$t45$,
+  $c45$The Coca-Cola Company$c45$,
+  $cat45$snapshot$cat45$,
+  $ti45$Coca-Cola (KO): What This Company Actually Does$ti45$,
+  $ex45$A plain-English read of Coca-Cola's business model — selling concentrate and brand, not bottles — built directly from its SEC filings.$ex45$,
+  $tk45$Coca-Cola sells concentrate and syrup to independent bottlers around the world, who add water and sugar and turn it into finished drinks — people drink the product, but the company itself makes its money selling the recipe and the brand, not manufacturing or distributing anything directly.$tk45$,
+  $qf45$[{"k":"Share price","v":"$86.98"},{"k":"Market cap","v":"~$374.2B"},{"k":"FY2025 revenue","v":"$47.9B"},{"k":"Dividend yield","v":"2.44%"}]$qf45$::jsonb,
+  $faq45$[{"q":"How does Coca-Cola make money if it makes so few of its own drinks?","a":"Coca-Cola sells concentrate and syrup to independent bottlers around the world, who add water and sugar and turn it into finished drinks. The company makes its money selling the recipe and the brand, not manufacturing or distributing anything directly."},{"q":"Does Coca-Cola pay a dividend?","a":"Yes — Coca-Cola pays a dividend yielding about 2.44% at the price used in this article."},{"q":"What is Coca-Cola's market cap?","a":"As of this article's data, Coca-Cola's market cap was about $374.2B, on FY2025 revenue of $47.9B."}]$faq45$::jsonb,
+  $toc45$[{"id":"how-it-makes-money","label":"How Coca-Cola makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc45$::jsonb,
+  $html45$
 <h2 id="how-it-makes-money">How Coca-Cola makes money</h2>
 <p>Coca-Cola owns almost no bottling plants or delivery trucks. It produces concentrate and syrup and drives brand marketing from headquarters, then sells that concentrate to independent bottlers — some partially owned, most fully independent — who add water and sugar, bottle the finished product, and distribute it through stores, restaurants, vending machines, and e-commerce to consumers. Because the capital-intensive manufacturing risk sits with the bottlers, Coca-Cola's own gross margin runs at an unusually high 61.6% (2025).</p>
 <div class="flow">
@@ -5496,35 +5669,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Coca-Cola's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 10-Q (Q1 FY2026), plus web-search figures for market context. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html45$,
+  $src45$10-K FY2021–FY2025 · DEF 14A 2026 · 10-Q Q1 FY2026$src45$,
+  ARRAY['KO', 'Consumer Staples', '10-K'],
+  'published',
+  $d45$2026-09-06$d45$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'ko-story',
-    ticker: 'KO',
-    company: 'The Coca-Cola Company',
-    category: 'story',
-    title: "Coca-Cola's Last Three Years: A CEO's Farewell Call, Wrapped Around a Reset in Ambition",
-    excerpt:
-      "How Coca-Cola went from raising guidance every quarter in 2024 to deliberately guiding much lower in 2025 and hitting that lower bar exactly — ending with a 17-year CEO's final earnings call, while diversity-related language quietly faded from its filings throughout.",
-    takeaway:
-      "In 2024, Coca-Cola raised its own growth guidance four straight quarters. In 2025, it set guidance at roughly half that pace and hit it precisely every single quarter — a year that ended with CEO James Quincey's emotional final earnings call after nearly nine years, just as diversity-related language was quietly disappearing from the company's own filings.",
-    faq: [
-      { q: 'Did Coca-Cola change CEOs recently?', a: "Yes — James Quincey delivered an emotional final earnings call in 2025 after leading Coca-Cola for nearly nine years, capping a year in which the company deliberately guided lower and then hit that lower bar precisely." },
-      { q: 'Why did Coca-Cola lower its guidance in 2025?', a: "After raising growth guidance four straight quarters in 2024, Coca-Cola set 2025 guidance at roughly half that pace and then hit it exactly every quarter — a deliberate reset in ambition rather than a missed target." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Coca-Cola's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
-    tags: ['KO', 'Earnings Calls', 'CEO Transition'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s46$ko-story$s46$,
+  $t46$KO$t46$,
+  $c46$The Coca-Cola Company$c46$,
+  $cat46$story$cat46$,
+  $ti46$Coca-Cola's Last Three Years: A CEO's Farewell Call, Wrapped Around a Reset in Ambition$ti46$,
+  $ex46$How Coca-Cola went from raising guidance every quarter in 2024 to deliberately guiding much lower in 2025 and hitting that lower bar exactly — ending with a 17-year CEO's final earnings call, while diversity-related language quietly faded from its filings throughout.$ex46$,
+  $tk46$In 2024, Coca-Cola raised its own growth guidance four straight quarters. In 2025, it set guidance at roughly half that pace and hit it precisely every single quarter — a year that ended with CEO James Quincey's emotional final earnings call after nearly nine years, just as diversity-related language was quietly disappearing from the company's own filings.$tk46$,
+  null,
+  $faq46$[{"q":"Did Coca-Cola change CEOs recently?","a":"Yes — James Quincey delivered an emotional final earnings call in 2025 after leading Coca-Cola for nearly nine years, capping a year in which the company deliberately guided lower and then hit that lower bar precisely."},{"q":"Why did Coca-Cola lower its guidance in 2025?","a":"After raising growth guidance four straight quarters in 2024, Coca-Cola set 2025 guidance at roughly half that pace and then hit it exactly every quarter — a deliberate reset in ambition rather than a missed target."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Coca-Cola's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026."}]$faq46$::jsonb,
+  $toc46$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc46$::jsonb,
+  $html46$
 <h2 id="the-story">The story</h2>
 <h3>Early 2024: a comfortable start, then four straight raises</h3>
 <p>2024 organic revenue growth guidance was set at a modest 6-7%. Actual results kept beating that bar, and the company raised guidance four consecutive quarters — 6-7% → 8-9% → 9-10% → about 10% — finishing the year with an actual Q4 growth rate of 14%. Confidence-tracking across the twelve quarters we reviewed hit its highest point right here, in Q1 2024.</p>
@@ -5591,35 +5772,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 2023 through Q2 2026 (Jul 28, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html46$,
+  $src46$10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026$src46$,
+  ARRAY['KO', 'Earnings Calls', 'CEO Transition'],
+  'published',
+  $d46$2026-09-06$d46$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'ko-dcf',
-    ticker: 'KO',
-    company: 'The Coca-Cola Company',
-    category: 'dcf',
-    title: "What KO's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Coca-Cola's share price already assumes — and comparing it with the company's actual growth record and its own forward guidance.",
-    takeaway:
-      "At today's price, Coca-Cola's stock is pricing in about 13.3% annual free-cash-flow growth for the next ten years. Over the past five years, revenue grew 5.5% a year and operating income 7.5% a year — and even the company's own 2026 profit guidance tops out at just 5-6%.",
-    faq: [
-      { q: "What growth rate does KO's stock price assume?", a: "At today's price, Coca-Cola's stock is pricing in about 13.3% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Coca-Cola's actual growth and guidance?", a: "Over the past five years, revenue grew 5.5% a year and operating income 7.5% a year — and even Coca-Cola's own 2026 profit guidance tops out at just 5–6%, well below the ~13.3% the current price requires." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $86.98, as of Aug 17, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 17, 2026 · Price used: $86.98',
-    tags: ['KO', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s47$ko-dcf$s47$,
+  $t47$KO$t47$,
+  $c47$The Coca-Cola Company$c47$,
+  $cat47$dcf$cat47$,
+  $ti47$What KO's Stock Price Is Really Betting On$ti47$,
+  $ex47$Reverse-engineering the growth rate Coca-Cola's share price already assumes — and comparing it with the company's actual growth record and its own forward guidance.$ex47$,
+  $tk47$At today's price, Coca-Cola's stock is pricing in about 13.3% annual free-cash-flow growth for the next ten years. Over the past five years, revenue grew 5.5% a year and operating income 7.5% a year — and even the company's own 2026 profit guidance tops out at just 5-6%.$tk47$,
+  null,
+  $faq47$[{"q":"What growth rate does KO's stock price assume?","a":"At today's price, Coca-Cola's stock is pricing in about 13.3% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Coca-Cola's actual growth and guidance?","a":"Over the past five years, revenue grew 5.5% a year and operating income 7.5% a year — and even Coca-Cola's own 2026 profit guidance tops out at just 5–6%, well below the ~13.3% the current price requires."},{"q":"What share price was used for this analysis?","a":"This analysis used $86.98, as of Aug 17, 2026."}]$faq47$::jsonb,
+  $toc47$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc47$::jsonb,
+  $html47$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, KO implies <span class="num">~13.3%</span> annual FCF growth for the next 10 years, discounted at 9% (using the company's own adjusted FCF figure).</p>
@@ -5699,45 +5888,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Coca-Cola's 10-K filings (FY2021, FY2025) and a web search for the current share price (stockanalysis.com, Aug 17, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html47$,
+  $src47$As of Aug 17, 2026 · Price used: $86.98$src47$,
+  ARRAY['KO', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d47$2026-09-06$d47$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'cvx-snapshot',
-    ticker: 'CVX',
-    company: 'Chevron',
-    category: 'snapshot',
-    title: 'Chevron (CVX): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Chevron's business model — extracting oil and gas, refining it, and selling it worldwide — built directly from its SEC filings.",
-    takeaway:
-      'Chevron pulls oil and natural gas out of the ground, refines it into gasoline and diesel, and sells it to drivers and industry worldwide — and makes most of its money from the extracting side, not the refining side.',
-    quickFacts: [
-      { k: 'Share price', v: '$207.02' },
-      { k: 'Market cap', v: '~$406.1B' },
-      { k: 'FY2025 revenue', v: '$184.4B' },
-      { k: 'Upstream share of after-tax profit', v: '83%' },
-    ],
-    faq: [
-      { q: 'How does Chevron make money?', a: 'Chevron pulls oil and natural gas out of the ground, refines it into gasoline and diesel, and sells it to drivers and industry worldwide — most of its profit (83%) comes from the extracting (upstream) side, not refining.' },
-      { q: "What is Chevron's market cap?", a: "As of this article's data, Chevron's market cap was about $406.1B, on FY2025 revenue of $184.4B." },
-      { q: 'Does Chevron make more money from drilling or refining?', a: 'Drilling and extraction (upstream) — it accounts for about 83% of after-tax profit, with refining and marketing (downstream) contributing far less.' },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Chevron makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 10-Q Q2 FY2026 · 2026 Proxy Statement',
-    tags: ['CVX', 'Energy', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s48$cvx-snapshot$s48$,
+  $t48$CVX$t48$,
+  $c48$Chevron$c48$,
+  $cat48$snapshot$cat48$,
+  $ti48$Chevron (CVX): What This Company Actually Does$ti48$,
+  $ex48$A plain-English read of Chevron's business model — extracting oil and gas, refining it, and selling it worldwide — built directly from its SEC filings.$ex48$,
+  $tk48$Chevron pulls oil and natural gas out of the ground, refines it into gasoline and diesel, and sells it to drivers and industry worldwide — and makes most of its money from the extracting side, not the refining side.$tk48$,
+  $qf48$[{"k":"Share price","v":"$207.02"},{"k":"Market cap","v":"~$406.1B"},{"k":"FY2025 revenue","v":"$184.4B"},{"k":"Upstream share of after-tax profit","v":"83%"}]$qf48$::jsonb,
+  $faq48$[{"q":"How does Chevron make money?","a":"Chevron pulls oil and natural gas out of the ground, refines it into gasoline and diesel, and sells it to drivers and industry worldwide — most of its profit (83%) comes from the extracting (upstream) side, not refining."},{"q":"What is Chevron's market cap?","a":"As of this article's data, Chevron's market cap was about $406.1B, on FY2025 revenue of $184.4B."},{"q":"Does Chevron make more money from drilling or refining?","a":"Drilling and extraction (upstream) — it accounts for about 83% of after-tax profit, with refining and marketing (downstream) contributing far less."}]$faq48$::jsonb,
+  $toc48$[{"id":"how-it-makes-money","label":"How Chevron makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc48$::jsonb,
+  $html48$
 <h2 id="how-it-makes-money">How Chevron makes money</h2>
 <p>Chevron's upstream business extracts crude oil and natural gas from the ground — only 29% of revenue, but 83% of after-tax profit. That crude flows internally to the downstream business, which refines it into gasoline, diesel, and chemical products — 71% of revenue, but only 17% of profit, since crude feedstock costs eat up most of refining revenue. Upstream also sells crude, natural gas, and LNG directly to traders and power generators.</p>
 <div class="flow">
@@ -5857,35 +6044,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Chevron's 10-K filings for FY2021 through FY2025, 10-Q (Q2 FY2026), and the 2026 Proxy Statement. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html48$,
+  $src48$10-K FY2021–FY2025 · 10-Q Q2 FY2026 · 2026 Proxy Statement$src48$,
+  ARRAY['CVX', 'Energy', '10-K'],
+  'published',
+  $d48$2026-09-06$d48$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'cvx-story',
-    ticker: 'CVX',
-    company: 'Chevron',
-    category: 'story',
-    title: "Chevron's Last 21 Months: How a $53 Billion Deal Got Stuck in Arbitration — and Came Out Better",
-    excerpt:
-      "How Chevron announced the Hess acquisition confidently, then paid a 13-month stock-price price for a legal fight it didn't control, before winning arbitration and closing a deal management says is now even better than announced.",
-    takeaway:
-      "Chevron announced its roughly $53 billion Hess acquisition with total confidence in October 2023, then spent 13 months stuck in a legal fight with ExxonMobil and CNOOC over a right-of-first-refusal clause it had no control over — before winning arbitration in July 2025 and closing a deal management says \"has only gotten better\" since it was announced.",
-    faq: [
-      { q: 'Why was the Chevron-Hess deal stuck in arbitration?', a: "ExxonMobil and CNOOC argued a right-of-first-refusal clause in an existing joint venture with Hess gave them a say over the roughly $53 billion Chevron-Hess deal — a dispute Chevron had no control over and that took 13 months to resolve." },
-      { q: 'Did Chevron win the Hess arbitration?', a: 'Yes — Chevron won arbitration in July 2025 and closed the deal, with management saying it "has only gotten better" since it was originally announced in October 2023.' },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Chevron's 10-K filings for FY2021 through FY2025, its 2026 Proxy Statement, and 12 quarters of earnings call transcripts from October 2023 to June 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 2026 Proxy Statement · 12 quarters of earnings call transcripts, Oct 2023–Jun 2026',
-    tags: ['CVX', 'Earnings Calls', 'M&A'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s49$cvx-story$s49$,
+  $t49$CVX$t49$,
+  $c49$Chevron$c49$,
+  $cat49$story$cat49$,
+  $ti49$Chevron's Last 21 Months: How a $53 Billion Deal Got Stuck in Arbitration — and Came Out Better$ti49$,
+  $ex49$How Chevron announced the Hess acquisition confidently, then paid a 13-month stock-price price for a legal fight it didn't control, before winning arbitration and closing a deal management says is now even better than announced.$ex49$,
+  $tk49$Chevron announced its roughly $53 billion Hess acquisition with total confidence in October 2023, then spent 13 months stuck in a legal fight with ExxonMobil and CNOOC over a right-of-first-refusal clause it had no control over — before winning arbitration in July 2025 and closing a deal management says "has only gotten better" since it was announced.$tk49$,
+  null,
+  $faq49$[{"q":"Why was the Chevron-Hess deal stuck in arbitration?","a":"ExxonMobil and CNOOC argued a right-of-first-refusal clause in an existing joint venture with Hess gave them a say over the roughly $53 billion Chevron-Hess deal — a dispute Chevron had no control over and that took 13 months to resolve."},{"q":"Did Chevron win the Hess arbitration?","a":"Yes — Chevron won arbitration in July 2025 and closed the deal, with management saying it \"has only gotten better\" since it was originally announced in October 2023."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Chevron's 10-K filings for FY2021 through FY2025, its 2026 Proxy Statement, and 12 quarters of earnings call transcripts from October 2023 to June 2026."}]$faq49$::jsonb,
+  $toc49$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc49$::jsonb,
+  $html49$
 <h2 id="the-story">The story</h2>
 <h3>October 2023: total confidence</h3>
 <p>Chevron announced it would acquire Hess Corporation in an all-stock deal worth about $53 billion — including Hess's stake in the giant Stabroek block offshore Guyana. On the Q3 2023 call, management said it expected to close "in the first half of 2024." The Q4 2023 call went further: the company was "excited about the pending Hess acquisition."</p>
@@ -5953,35 +6148,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2021 through FY2025, the 2026 Proxy Statement, and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026. Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html49$,
+  $src49$10-K FY2021–FY2025 · 2026 Proxy Statement · 12 quarters of earnings call transcripts, Oct 2023–Jun 2026$src49$,
+  ARRAY['CVX', 'Earnings Calls', 'M&A'],
+  'published',
+  $d49$2026-09-06$d49$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'cvx-dcf',
-    ticker: 'CVX',
-    company: 'Chevron',
-    category: 'dcf',
-    title: "What CVX's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Chevron's share price already assumes — and comparing it with the company's own explicit 2030 target as well as its historical growth record.",
-    takeaway:
-      "At today's price, Chevron's stock is pricing in about 9.2% annual free-cash-flow growth for the next ten years — which lines up closely with management's own stated 2030 target of FCF growth averaging more than 10% a year at flat commodity prices. The market isn't demanding something extreme; it's pricing in management's own promise.",
-    faq: [
-      { q: "What growth rate does CVX's stock price assume?", a: "At today's price, Chevron's stock is pricing in about 9.2% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Chevron's own targets?", a: "The ~9.2% required growth lines up closely with management's own stated 2030 target of FCF growth averaging more than 10% a year at flat commodity prices — the market isn't demanding something extreme, just pricing in management's own promise." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $207.02, as of Aug 19, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 19, 2026 · Price used: $207.02',
-    tags: ['CVX', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s50$cvx-dcf$s50$,
+  $t50$CVX$t50$,
+  $c50$Chevron$c50$,
+  $cat50$dcf$cat50$,
+  $ti50$What CVX's Stock Price Is Really Betting On$ti50$,
+  $ex50$Reverse-engineering the growth rate Chevron's share price already assumes — and comparing it with the company's own explicit 2030 target as well as its historical growth record.$ex50$,
+  $tk50$At today's price, Chevron's stock is pricing in about 9.2% annual free-cash-flow growth for the next ten years — which lines up closely with management's own stated 2030 target of FCF growth averaging more than 10% a year at flat commodity prices. The market isn't demanding something extreme; it's pricing in management's own promise.$tk50$,
+  null,
+  $faq50$[{"q":"What growth rate does CVX's stock price assume?","a":"At today's price, Chevron's stock is pricing in about 9.2% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Chevron's own targets?","a":"The ~9.2% required growth lines up closely with management's own stated 2030 target of FCF growth averaging more than 10% a year at flat commodity prices — the market isn't demanding something extreme, just pricing in management's own promise."},{"q":"What share price was used for this analysis?","a":"This analysis used $207.02, as of Aug 19, 2026."}]$faq50$::jsonb,
+  $toc50$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc50$::jsonb,
+  $html50$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, CVX implies <span class="num">~9.2%</span> annual FCF growth for the next 10 years, discounted at 9%.</p>
@@ -6055,45 +6258,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Chevron's 10-K filings (FY2021-FY2025), 10-Q (Q2 FY2026), and a web search for the current share price (stockanalysis.com, Aug 19, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html50$,
+  $src50$As of Aug 19, 2026 · Price used: $207.02$src50$,
+  ARRAY['CVX', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d50$2026-09-06$d50$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'pep-snapshot',
-    ticker: 'PEP',
-    company: 'PepsiCo',
-    category: 'snapshot',
-    title: 'PepsiCo (PEP): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of PepsiCo's business model — snacks and beverages sold through retail worldwide — built directly from its SEC filings.",
-    takeaway:
-      'PepsiCo makes snacks like Lay\'s and Doritos and drinks like Gatorade and Pepsi, sells them through supermarkets, convenience stores, and restaurants worldwide, and makes money every time someone buys one.',
-    quickFacts: [
-      { k: 'Share price', v: '$140.13' },
-      { k: 'Market cap', v: '~$191.3B' },
-      { k: 'FY2025 revenue', v: '$93.9B' },
-      { k: 'Dividend yield', v: '4.23%' },
-    ],
-    faq: [
-      { q: 'How does PepsiCo make money?', a: "PepsiCo makes snacks like Lay's and Doritos and drinks like Gatorade and Pepsi, sells them through supermarkets, convenience stores, and restaurants worldwide, and makes money every time someone buys one." },
-      { q: 'Does PepsiCo pay a dividend?', a: 'Yes — PepsiCo pays a dividend yielding about 4.23% at the price used in this article, one of the higher yields among large consumer-staples names.' },
-      { q: "What is PepsiCo's market cap?", a: "As of this article's data, PepsiCo's market cap was about $191.3B, on FY2025 revenue of $93.9B." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How PepsiCo makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
-    tags: ['PEP', 'Consumer Staples', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s51$pep-snapshot$s51$,
+  $t51$PEP$t51$,
+  $c51$PepsiCo$c51$,
+  $cat51$snapshot$cat51$,
+  $ti51$PepsiCo (PEP): What This Company Actually Does$ti51$,
+  $ex51$A plain-English read of PepsiCo's business model — snacks and beverages sold through retail worldwide — built directly from its SEC filings.$ex51$,
+  $tk51$PepsiCo makes snacks like Lay's and Doritos and drinks like Gatorade and Pepsi, sells them through supermarkets, convenience stores, and restaurants worldwide, and makes money every time someone buys one.$tk51$,
+  $qf51$[{"k":"Share price","v":"$140.13"},{"k":"Market cap","v":"~$191.3B"},{"k":"FY2025 revenue","v":"$93.9B"},{"k":"Dividend yield","v":"4.23%"}]$qf51$::jsonb,
+  $faq51$[{"q":"How does PepsiCo make money?","a":"PepsiCo makes snacks like Lay's and Doritos and drinks like Gatorade and Pepsi, sells them through supermarkets, convenience stores, and restaurants worldwide, and makes money every time someone buys one."},{"q":"Does PepsiCo pay a dividend?","a":"Yes — PepsiCo pays a dividend yielding about 4.23% at the price used in this article, one of the higher yields among large consumer-staples names."},{"q":"What is PepsiCo's market cap?","a":"As of this article's data, PepsiCo's market cap was about $191.3B, on FY2025 revenue of $93.9B."}]$faq51$::jsonb,
+  $toc51$[{"id":"how-it-makes-money","label":"How PepsiCo makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc51$::jsonb,
+  $html51$
 <h2 id="how-it-makes-money">How PepsiCo makes money</h2>
 <p>PepsiCo buys agricultural inputs — potatoes, corn, sugar, oils — and turns them into snacks and beverage concentrate at its own factories. Products reach stores through PepsiCo's own delivery network and independent bottlers, who pay a royalty on concentrate rather than owning the whole supply chain — letting PepsiCo expand internationally without the capital burden of owning every bottling plant. Brand marketing investment drives repeat purchases and shelf power, which helps new products get placed, reinforcing the brand — a self-feeding loop.</p>
 <div class="flow">
@@ -6197,35 +6398,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from PepsiCo's 10-K filings for FY2021 through FY2025 and DEF 14A 2026, plus a web search for current share price and dividend yield (stockanalysis.com, Aug 18, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html51$,
+  $src51$10-K FY2021–FY2025 · DEF 14A 2026$src51$,
+  ARRAY['PEP', 'Consumer Staples', '10-K'],
+  'published',
+  $d51$2026-09-06$d51$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'pep-story',
-    ticker: 'PEP',
-    company: 'PepsiCo',
-    category: 'story',
-    title: "PepsiCo's Last Three Years: Three Straight 'Second-Half Recovery' Promises",
-    excerpt:
-      "How PepsiCo went from boasting 55 straight quarters of beating consensus to cutting guidance two years running — once mid-year — while repeating 'it gets better in the second half' for a third straight year.",
-    takeaway:
-      "In October 2023, PepsiCo boasted 55 straight quarters of beating consensus. Since then, it has cut guidance two years running (once mid-year), churned through two CFOs, drawn an activist investor, and repeated the same 'stronger in the second half' promise three years in a row while actual growth kept falling short.",
-    faq: [
-      { q: "Has PepsiCo been meeting its own guidance?", a: "Not recently — after boasting 55 straight quarters of beating consensus as of October 2023, PepsiCo has since cut guidance two years running (once mid-year) while repeating the same 'stronger in the second half' promise three years in a row." },
-      { q: 'Has PepsiCo faced activist investor pressure?', a: 'Yes — an activist investor took a stake during this period, alongside two CFO changes, as growth repeatedly fell short of the guidance PepsiCo itself set.' },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from PepsiCo's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
-    tags: ['PEP', 'Earnings Calls', 'Guidance Cuts'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s52$pep-story$s52$,
+  $t52$PEP$t52$,
+  $c52$PepsiCo$c52$,
+  $cat52$story$cat52$,
+  $ti52$PepsiCo's Last Three Years: Three Straight 'Second-Half Recovery' Promises$ti52$,
+  $ex52$How PepsiCo went from boasting 55 straight quarters of beating consensus to cutting guidance two years running — once mid-year — while repeating 'it gets better in the second half' for a third straight year.$ex52$,
+  $tk52$In October 2023, PepsiCo boasted 55 straight quarters of beating consensus. Since then, it has cut guidance two years running (once mid-year), churned through two CFOs, drawn an activist investor, and repeated the same 'stronger in the second half' promise three years in a row while actual growth kept falling short.$tk52$,
+  null,
+  $faq52$[{"q":"Has PepsiCo been meeting its own guidance?","a":"Not recently — after boasting 55 straight quarters of beating consensus as of October 2023, PepsiCo has since cut guidance two years running (once mid-year) while repeating the same 'stronger in the second half' promise three years in a row."},{"q":"Has PepsiCo faced activist investor pressure?","a":"Yes — an activist investor took a stake during this period, alongside two CFO changes, as growth repeatedly fell short of the guidance PepsiCo itself set."},{"q":"What sources does this analysis draw from?","a":"This piece is built from PepsiCo's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to July 2026."}]$faq52$::jsonb,
+  $toc52$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc52$::jsonb,
+  $html52$
 <h2 id="the-story">The story</h2>
 <h3>October 2023: peak confidence</h3>
 <p>Then-CFO Hugh Johnston opened the Q3 2023 call: "we've now met or beat consensus for 55 straight quarters" — and on the strength of that record, PepsiCo gave 2024 guidance unusually early. Even analysts acknowledged how rare it was for the company's organic growth to miss its own initial forecast.</p>
@@ -6288,35 +6497,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call Q&A transcripts from Q3 FY2023 (Oct 10, 2023) through Q2 FY2026 (Jul 9, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html52$,
+  $src52$10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026$src52$,
+  ARRAY['PEP', 'Earnings Calls', 'Guidance Cuts'],
+  'published',
+  $d52$2026-09-06$d52$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'pep-dcf',
-    ticker: 'PEP',
-    company: 'PepsiCo',
-    category: 'dcf',
-    title: "What PEP's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate PepsiCo's share price already assumes — and comparing it with the company's actual growth record.",
-    takeaway:
-      "At today's price, PepsiCo's stock is pricing in about 10.2% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF grew just 3.5% a year — roughly a third of what the market is now asking for.",
-    faq: [
-      { q: "What growth rate does PEP's stock price assume?", a: "At today's price, PepsiCo's stock is pricing in about 10.2% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to PepsiCo's actual growth?", a: "Over the past five years, PepsiCo's actual free-cash-flow growth was just 3.5% a year — roughly a third of the ~10.2% the current price requires." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $140.13, as of Aug 18, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 18, 2026 · Price used: $140.13',
-    tags: ['PEP', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s53$pep-dcf$s53$,
+  $t53$PEP$t53$,
+  $c53$PepsiCo$c53$,
+  $cat53$dcf$cat53$,
+  $ti53$What PEP's Stock Price Is Really Betting On$ti53$,
+  $ex53$Reverse-engineering the growth rate PepsiCo's share price already assumes — and comparing it with the company's actual growth record.$ex53$,
+  $tk53$At today's price, PepsiCo's stock is pricing in about 10.2% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF grew just 3.5% a year — roughly a third of what the market is now asking for.$tk53$,
+  null,
+  $faq53$[{"q":"What growth rate does PEP's stock price assume?","a":"At today's price, PepsiCo's stock is pricing in about 10.2% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to PepsiCo's actual growth?","a":"Over the past five years, PepsiCo's actual free-cash-flow growth was just 3.5% a year — roughly a third of the ~10.2% the current price requires."},{"q":"What share price was used for this analysis?","a":"This analysis used $140.13, as of Aug 18, 2026."}]$faq53$::jsonb,
+  $toc53$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc53$::jsonb,
+  $html53$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, PEP implies <span class="num">~10.2%</span> annual FCF growth for the next 10 years, discounted at 9%.</p>
@@ -6393,45 +6610,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from PepsiCo's 10-K filings (FY2021–FY2025) and 10-Q (Q2 FY2026), plus a web search for the current share price and analyst forecast (stockanalysis.com, Aug 18-19, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html53$,
+  $src53$As of Aug 18, 2026 · Price used: $140.13$src53$,
+  ARRAY['PEP', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d53$2026-09-06$d53$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'mcd-snapshot',
-    ticker: 'MCD',
-    company: "McDonald's",
-    category: 'snapshot',
-    title: "McDonald's (MCD): What This Company Actually Does",
-    excerpt:
-      "A plain-English read of McDonald's business model — leasing real estate and brand to franchisees — built directly from its SEC filings.",
-    takeaway:
-      "McDonald's leases its store locations and brand to franchisees worldwide, then collects rent and royalties from every burger those stores sell — 95% of its stores are franchised, not company-owned.",
-    quickFacts: [
-      { k: 'Share price', v: '$274.48' },
-      { k: 'Market cap', v: '~$195.0B' },
-      { k: 'FY2025 revenue', v: '$26.9B' },
-      { k: 'FY2025 operating margin', v: '46.1%' },
-    ],
-    faq: [
-      { q: "How does McDonald's make money?", a: "McDonald's leases its store locations and brand to franchisees worldwide, then collects rent and royalties from every burger those stores sell — 95% of its stores are franchised, not company-owned." },
-      { q: "Why is McDonald's operating margin so high for a restaurant company?", a: "Because McDonald's is really a real-estate and licensing company, not a restaurant operator — it collects rent and royalties from franchisees rather than bearing food and labor costs directly, producing a 46.1% operating margin far above typical restaurant chains." },
-      { q: "What is McDonald's market cap?", a: "As of this article's data, McDonald's market cap was about $195.0B, on FY2025 revenue of $26.9B." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: "How McDonald's makes money" },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
-    tags: ['MCD', 'Restaurants', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s54$mcd-snapshot$s54$,
+  $t54$MCD$t54$,
+  $c54$McDonald's$c54$,
+  $cat54$snapshot$cat54$,
+  $ti54$McDonald's (MCD): What This Company Actually Does$ti54$,
+  $ex54$A plain-English read of McDonald's business model — leasing real estate and brand to franchisees — built directly from its SEC filings.$ex54$,
+  $tk54$McDonald's leases its store locations and brand to franchisees worldwide, then collects rent and royalties from every burger those stores sell — 95% of its stores are franchised, not company-owned.$tk54$,
+  $qf54$[{"k":"Share price","v":"$274.48"},{"k":"Market cap","v":"~$195.0B"},{"k":"FY2025 revenue","v":"$26.9B"},{"k":"FY2025 operating margin","v":"46.1%"}]$qf54$::jsonb,
+  $faq54$[{"q":"How does McDonald's make money?","a":"McDonald's leases its store locations and brand to franchisees worldwide, then collects rent and royalties from every burger those stores sell — 95% of its stores are franchised, not company-owned."},{"q":"Why is McDonald's operating margin so high for a restaurant company?","a":"Because McDonald's is really a real-estate and licensing company, not a restaurant operator — it collects rent and royalties from franchisees rather than bearing food and labor costs directly, producing a 46.1% operating margin far above typical restaurant chains."},{"q":"What is McDonald's market cap?","a":"As of this article's data, McDonald's market cap was about $195.0B, on FY2025 revenue of $26.9B."}]$faq54$::jsonb,
+  $toc54$[{"id":"how-it-makes-money","label":"How McDonald's makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc54$::jsonb,
+  $html54$
 <h2 id="how-it-makes-money">How McDonald's makes money</h2>
 <p>95% of McDonald's roughly 45,356 stores worldwide are franchisee-owned. Franchisees lease the land and building and run the store, paying a percentage of revenue (rent plus royalty) to headquarters. The remaining 5% are company-operated, where all revenue goes to McDonald's directly. That cash gets reinvested into real estate, brand, and menu development, making stores more attractive and pulling customers back — a self-reinforcing loop.</p>
 <div class="flow">
@@ -6527,35 +6742,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from McDonald's 10-K filings for FY2021 through FY2025 and DEF 14A 2026. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html54$,
+  $src54$10-K FY2021–FY2025 · DEF 14A 2026$src54$,
+  ARRAY['MCD', 'Restaurants', '10-K'],
+  'published',
+  $d54$2026-09-06$d54$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'mcd-story',
-    ticker: 'MCD',
-    company: "McDonald's",
-    category: 'story',
-    title: "McDonald's Last Two and a Half Years: Two Times Admitting 'It Wasn't Strategy, It Was Execution'",
-    excerpt:
-      "How McDonald's went from three years of near-double-digit growth to its first simultaneous slump across every segment in 2024 — recovering through 2025, then stumbling again in the U.S. in mid-2026.",
-    takeaway:
-      "After three years of near-double-digit comparable sales growth, McDonald's suffered its first-ever simultaneous slump across every segment in 2024 — a self-admitted \"value execution\" failure plus an E. coli outbreak. It recovered through 2025, then stumbled again in the U.S. in Q2 2026, triggering a leadership change and a new strategy reveal.",
-    faq: [
-      { q: "Why did McDonald's sales slump in 2024?", a: 'McDonald\'s suffered its first-ever simultaneous slump across every segment in 2024, which management attributed to a self-admitted "value execution" failure, compounded by an E. coli outbreak.' },
-      { q: "Did McDonald's recover from the 2024 slump?", a: "It recovered through 2025, but then stumbled again in the U.S. in Q2 2026, which triggered a leadership change and a new strategy reveal." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from McDonald's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026',
-    tags: ['MCD', 'Earnings Calls', 'Execution Risk'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s55$mcd-story$s55$,
+  $t55$MCD$t55$,
+  $c55$McDonald's$c55$,
+  $cat55$story$cat55$,
+  $ti55$McDonald's Last Two and a Half Years: Two Times Admitting 'It Wasn't Strategy, It Was Execution'$ti55$,
+  $ex55$How McDonald's went from three years of near-double-digit growth to its first simultaneous slump across every segment in 2024 — recovering through 2025, then stumbling again in the U.S. in mid-2026.$ex55$,
+  $tk55$After three years of near-double-digit comparable sales growth, McDonald's suffered its first-ever simultaneous slump across every segment in 2024 — a self-admitted "value execution" failure plus an E. coli outbreak. It recovered through 2025, then stumbled again in the U.S. in Q2 2026, triggering a leadership change and a new strategy reveal.$tk55$,
+  null,
+  $faq55$[{"q":"Why did McDonald's sales slump in 2024?","a":"McDonald's suffered its first-ever simultaneous slump across every segment in 2024, which management attributed to a self-admitted \"value execution\" failure, compounded by an E. coli outbreak."},{"q":"Did McDonald's recover from the 2024 slump?","a":"It recovered through 2025, but then stumbled again in the U.S. in Q2 2026, which triggered a leadership change and a new strategy reveal."},{"q":"What sources does this analysis draw from?","a":"This piece is built from McDonald's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to August 2026."}]$faq55$::jsonb,
+  $toc55$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc55$::jsonb,
+  $html55$
 <h2 id="the-story">The story</h2>
 <h3>Through late 2023: "stronger than ever"</h3>
 <p>Comparable sales grew +13.8% (2021), +9.6% (2022), and +8.7% (2023) — near-double-digit growth three years running, driven by post-pandemic revenge spending plus inflation-driven pricing. On the Q4 2023 call, the CEO said "our system's resilience and strength shone through even amid macroeconomic pressure." Tone scored 7-8 throughout this period.</p>
@@ -6621,35 +6844,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from Q3 FY2023 (Oct 30, 2023) through Q2 FY2026 (Aug 4, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html55$,
+  $src55$10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026$src55$,
+  ARRAY['MCD', 'Earnings Calls', 'Execution Risk'],
+  'published',
+  $d55$2026-09-06$d55$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'mcd-dcf',
-    ticker: 'MCD',
-    company: "McDonald's",
-    category: 'dcf',
-    title: "What MCD's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate McDonald's share price already assumes — and comparing it with the company's recent actual growth record.",
-    takeaway:
-      "At today's price, McDonald's stock is pricing in about 10.8% annual free-cash-flow growth for the next ten years. Over the past three years (once a 2022 one-time distortion clears), actual FCF growth averaged 9.4% a year — a modest, not extreme, gap.",
-    faq: [
-      { q: "What growth rate does MCD's stock price assume?", a: "At today's price, McDonald's stock is pricing in about 10.8% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to McDonald's actual growth?", a: "Over the past three years (once a 2022 one-time distortion clears), McDonald's actual free-cash-flow growth averaged 9.4% a year — close to the ~10.8% required, a modest rather than extreme gap." },
-      { q: 'What share price was used for this analysis?', a: "This analysis used $266.99, McDonald's closing price, as of Aug 18, 2026." },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 18, 2026 · Price used: $266.99',
-    tags: ['MCD', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s56$mcd-dcf$s56$,
+  $t56$MCD$t56$,
+  $c56$McDonald's$c56$,
+  $cat56$dcf$cat56$,
+  $ti56$What MCD's Stock Price Is Really Betting On$ti56$,
+  $ex56$Reverse-engineering the growth rate McDonald's share price already assumes — and comparing it with the company's recent actual growth record.$ex56$,
+  $tk56$At today's price, McDonald's stock is pricing in about 10.8% annual free-cash-flow growth for the next ten years. Over the past three years (once a 2022 one-time distortion clears), actual FCF growth averaged 9.4% a year — a modest, not extreme, gap.$tk56$,
+  null,
+  $faq56$[{"q":"What growth rate does MCD's stock price assume?","a":"At today's price, McDonald's stock is pricing in about 10.8% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to McDonald's actual growth?","a":"Over the past three years (once a 2022 one-time distortion clears), McDonald's actual free-cash-flow growth averaged 9.4% a year — close to the ~10.8% required, a modest rather than extreme gap."},{"q":"What share price was used for this analysis?","a":"This analysis used $266.99, McDonald's closing price, as of Aug 18, 2026."}]$faq56$::jsonb,
+  $toc56$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc56$::jsonb,
+  $html56$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, MCD implies <span class="num">~10.8%</span> annual FCF growth for the next 10 years, discounted at 9% (using trailing-twelve-month FCF).</p>
@@ -6723,45 +6954,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from McDonald's 10-K filings (FY2021-FY2025) and 10-Q (Q2 FY2025, Q2 FY2026), plus a web search for the current share price (stockanalysis.com, Aug 18, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html56$,
+  $src56$As of Aug 18, 2026 · Price used: $266.99$src56$,
+  ARRAY['MCD', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d56$2026-09-06$d56$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'de-snapshot',
-    ticker: 'DE',
-    company: 'Deere & Company',
-    category: 'snapshot',
-    title: 'Deere & Company (DE): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Deere's business model — big farm equipment plus financing plus lifetime parts revenue — built directly from its SEC filings.",
-    takeaway:
-      'Deere builds big farm and construction machines like tractors and combines, finances the purchase through its own lending arm, and keeps earning money from the same customer for the equipment\'s whole life through parts and repairs.',
-    quickFacts: [
-      { k: 'Share price', v: '$580.63' },
-      { k: 'Market cap', v: '~$157.2B' },
-      { k: 'FY2025 revenue', v: '$45.7B' },
-      { k: 'PPA backlog decline (3yr)', v: '-59%' },
-    ],
-    faq: [
-      { q: 'How does Deere make money?', a: "Deere builds big farm and construction machines like tractors and combines, finances the purchase through its own lending arm, and keeps earning money from the same customer for the equipment's whole life through parts and repairs." },
-      { q: "What is Deere's market cap?", a: "As of this article's data, Deere's market cap was about $157.2B, on FY2025 revenue of $45.7B." },
-      { q: 'Is Deere in an agricultural downturn?', a: "Yes — Deere's precision-ag equipment backlog has fallen 59% over three years, reflecting a broader agricultural downcycle that has weighed on new-equipment demand." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Deere makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
-    tags: ['DE', 'Industrials', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s57$de-snapshot$s57$,
+  $t57$DE$t57$,
+  $c57$Deere & Company$c57$,
+  $cat57$snapshot$cat57$,
+  $ti57$Deere & Company (DE): What This Company Actually Does$ti57$,
+  $ex57$A plain-English read of Deere's business model — big farm equipment plus financing plus lifetime parts revenue — built directly from its SEC filings.$ex57$,
+  $tk57$Deere builds big farm and construction machines like tractors and combines, finances the purchase through its own lending arm, and keeps earning money from the same customer for the equipment's whole life through parts and repairs.$tk57$,
+  $qf57$[{"k":"Share price","v":"$580.63"},{"k":"Market cap","v":"~$157.2B"},{"k":"FY2025 revenue","v":"$45.7B"},{"k":"PPA backlog decline (3yr)","v":"-59%"}]$qf57$::jsonb,
+  $faq57$[{"q":"How does Deere make money?","a":"Deere builds big farm and construction machines like tractors and combines, finances the purchase through its own lending arm, and keeps earning money from the same customer for the equipment's whole life through parts and repairs."},{"q":"What is Deere's market cap?","a":"As of this article's data, Deere's market cap was about $157.2B, on FY2025 revenue of $45.7B."},{"q":"Is Deere in an agricultural downturn?","a":"Yes — Deere's precision-ag equipment backlog has fallen 59% over three years, reflecting a broader agricultural downcycle that has weighed on new-equipment demand."}]$faq57$::jsonb,
+  $toc57$[{"id":"how-it-makes-money","label":"How Deere makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc57$::jsonb,
+  $html57$
 <h2 id="how-it-makes-money">How Deere makes money</h2>
 <p>Deere buys parts from suppliers and builds tractors, combines, and excavators at its own factories (about $2.3B/year in R&D), selling through an independent dealer network — roughly 2,050 dealers in the US and Canada, plus 100-plus countries worldwide. John Deere Financial then finances the purchase for the farmer or contractor, earning interest income. Even after the sale, the company keeps earning money from the same customer through parts, repairs, and — increasingly — precision-agriculture software subscriptions.</p>
 <div class="flow">
@@ -6872,35 +7101,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Deere & Company's 10-K filings for FY2021 through FY2025 and DEF 14A 2026. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html57$,
+  $src57$10-K FY2021–FY2025 · DEF 14A 2026$src57$,
+  ARRAY['DE', 'Industrials', '10-K'],
+  'published',
+  $d57$2026-09-06$d57$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'de-story',
-    ticker: 'DE',
-    company: 'Deere & Company',
-    category: 'story',
-    title: "Deere's Last Three Years: Calling the Downturn Before It Arrived",
-    excerpt:
-      "How Deere hit record results while warning demand would fall in the same breath, cut guidance three straight times as the ag downcycle deepened, then called the cycle bottom for the first time in early 2026.",
-    takeaway:
-      "In November 2023, Deere posted record results and, in the same call, warned that agricultural demand would decline the following year — a self-predicted peak. Net income guidance was then cut three times in a single year, and it wasn't until Q1 FY2026 that management explicitly called the cycle's bottom for the first time.",
-    faq: [
-      { q: 'Did Deere predict its own downturn?', a: "Yes — in November 2023, Deere posted record results and, in the same call, warned that agricultural demand would decline the following year, effectively calling its own peak before the downturn arrived." },
-      { q: "When did Deere call the bottom of the ag downcycle?", a: "Not until Q1 FY2026 — after cutting net income guidance three times in a single year, management explicitly called the cycle's bottom for the first time that quarter." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Deere's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from August 2023 to May 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Aug 2023–May 2026',
-    tags: ['DE', 'Earnings Calls', 'Agricultural Cycle'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s58$de-story$s58$,
+  $t58$DE$t58$,
+  $c58$Deere & Company$c58$,
+  $cat58$story$cat58$,
+  $ti58$Deere's Last Three Years: Calling the Downturn Before It Arrived$ti58$,
+  $ex58$How Deere hit record results while warning demand would fall in the same breath, cut guidance three straight times as the ag downcycle deepened, then called the cycle bottom for the first time in early 2026.$ex58$,
+  $tk58$In November 2023, Deere posted record results and, in the same call, warned that agricultural demand would decline the following year — a self-predicted peak. Net income guidance was then cut three times in a single year, and it wasn't until Q1 FY2026 that management explicitly called the cycle's bottom for the first time.$tk58$,
+  null,
+  $faq58$[{"q":"Did Deere predict its own downturn?","a":"Yes — in November 2023, Deere posted record results and, in the same call, warned that agricultural demand would decline the following year, effectively calling its own peak before the downturn arrived."},{"q":"When did Deere call the bottom of the ag downcycle?","a":"Not until Q1 FY2026 — after cutting net income guidance three times in a single year, management explicitly called the cycle's bottom for the first time that quarter."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Deere's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from August 2023 to May 2026."}]$faq58$::jsonb,
+  $toc58$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc58$::jsonb,
+  $html58$
 <h2 id="the-story">The story</h2>
 <h3>November 2023: a record year, with a warning inside it</h3>
 <p>Deere closed FY2023 with what management called "an excellent fourth quarter" — revenue up 16% to $61.3B, operating margin near 22%. But the very same call contained the first crack: "looking to 2024, we expect agricultural market conditions to shift and demand to decline." The company called its own peak, in real time, at the moment of its best results.</p>
@@ -6963,35 +7200,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 (Aug 2023) through Q2 FY2026 (May 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html58$,
+  $src58$10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Aug 2023–May 2026$src58$,
+  ARRAY['DE', 'Earnings Calls', 'Agricultural Cycle'],
+  'published',
+  $d58$2026-09-06$d58$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'de-dcf',
-    ticker: 'DE',
-    company: 'Deere & Company',
-    category: 'dcf',
-    title: "What DE's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Deere's share price already assumes — and comparing it with the company's actual growth record through a deep agricultural downcycle.",
-    takeaway:
-      "At today's price, Deere's stock is pricing in about 11.8% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF shrank 3.0% a year — though the past five years span a sharp post-COVID agricultural downcycle, and trailing-twelve-month FCF is already up 9.5% year over year, a recovery signal worth weighing.",
-    faq: [
-      { q: "What growth rate does DE's stock price assume?", a: "At today's price, Deere's stock is pricing in about 11.8% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Deere's actual growth?", a: "Over the past five years, Deere's actual free-cash-flow shrank 3.0% a year, spanning a sharp post-COVID agricultural downcycle — but trailing-twelve-month FCF is already up 9.5% year over year, a recovery signal worth weighing against the ~11.8% the price requires." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $580.63, as of Aug 19, 2026 (pre-earnings close).' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 19, 2026 (pre-earnings close) · Price used: $580.63',
-    tags: ['DE', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s59$de-dcf$s59$,
+  $t59$DE$t59$,
+  $c59$Deere & Company$c59$,
+  $cat59$dcf$cat59$,
+  $ti59$What DE's Stock Price Is Really Betting On$ti59$,
+  $ex59$Reverse-engineering the growth rate Deere's share price already assumes — and comparing it with the company's actual growth record through a deep agricultural downcycle.$ex59$,
+  $tk59$At today's price, Deere's stock is pricing in about 11.8% annual free-cash-flow growth for the next ten years. Over the past five years, the company's actual FCF shrank 3.0% a year — though the past five years span a sharp post-COVID agricultural downcycle, and trailing-twelve-month FCF is already up 9.5% year over year, a recovery signal worth weighing.$tk59$,
+  null,
+  $faq59$[{"q":"What growth rate does DE's stock price assume?","a":"At today's price, Deere's stock is pricing in about 11.8% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Deere's actual growth?","a":"Over the past five years, Deere's actual free-cash-flow shrank 3.0% a year, spanning a sharp post-COVID agricultural downcycle — but trailing-twelve-month FCF is already up 9.5% year over year, a recovery signal worth weighing against the ~11.8% the price requires."},{"q":"What share price was used for this analysis?","a":"This analysis used $580.63, as of Aug 19, 2026 (pre-earnings close)."}]$faq59$::jsonb,
+  $toc59$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc59$::jsonb,
+  $html59$
 <div class="callout warn">
   <b>Timing note</b>
   This analysis uses the Aug 19, 2026 closing price, the day before Deere's Q3 FY2026 earnings release (Aug 20). The stock had already moved to $593.35 (+2.2%) in premarket trading the following morning — recalculate this analysis after earnings for an up-to-date read.
@@ -7072,45 +7317,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Deere & Company's 10-K (FY2025) and 10-Q (Q2 FY2025, Q2 FY2026) filings, plus a web search for the current share price (stockanalysis.com, Aug 19, 2026, pre-earnings close). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html59$,
+  $src59$As of Aug 19, 2026 (pre-earnings close) · Price used: $580.63$src59$,
+  ARRAY['DE', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d59$2026-09-06$d59$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'o-snapshot',
-    ticker: 'O',
-    company: 'Realty Income',
-    category: 'snapshot',
-    title: 'Realty Income (O): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Realty Income's business model — owning retail real estate under long-term net leases — built directly from its SEC filings.",
-    takeaway:
-      'Realty Income buys the buildings that convenience stores, supermarkets, and pharmacies operate out of, leases them out long-term (10-plus years), and passes the monthly rent straight through to shareholders as a monthly dividend.',
-    quickFacts: [
-      { k: 'Share price', v: '$62.95' },
-      { k: 'Dividend yield', v: '5.17%' },
-      { k: 'Annual dividend', v: '$3.25' },
-      { k: 'Properties', v: '15,500+' },
-    ],
-    faq: [
-      { q: 'How does Realty Income make money?', a: 'Realty Income buys the buildings that convenience stores, supermarkets, and pharmacies operate out of, leases them out long-term (10-plus years), and passes the monthly rent straight through to shareholders as a monthly dividend.' },
-      { q: 'Why does Realty Income pay a monthly dividend?', a: "Its own rental income arrives monthly from over 15,500 net-lease properties, so it passes that cash through to shareholders on the same monthly schedule — a structural feature of its business, not just a marketing choice." },
-      { q: "What is Realty Income's dividend yield?", a: 'About 5.17% at the price used in this article, with an annual dividend of $3.25 per share.' },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Realty Income makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
-    tags: ['O', 'REIT', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s60$o-snapshot$s60$,
+  $t60$O$t60$,
+  $c60$Realty Income$c60$,
+  $cat60$snapshot$cat60$,
+  $ti60$Realty Income (O): What This Company Actually Does$ti60$,
+  $ex60$A plain-English read of Realty Income's business model — owning retail real estate under long-term net leases — built directly from its SEC filings.$ex60$,
+  $tk60$Realty Income buys the buildings that convenience stores, supermarkets, and pharmacies operate out of, leases them out long-term (10-plus years), and passes the monthly rent straight through to shareholders as a monthly dividend.$tk60$,
+  $qf60$[{"k":"Share price","v":"$62.95"},{"k":"Dividend yield","v":"5.17%"},{"k":"Annual dividend","v":"$3.25"},{"k":"Properties","v":"15,500+"}]$qf60$::jsonb,
+  $faq60$[{"q":"How does Realty Income make money?","a":"Realty Income buys the buildings that convenience stores, supermarkets, and pharmacies operate out of, leases them out long-term (10-plus years), and passes the monthly rent straight through to shareholders as a monthly dividend."},{"q":"Why does Realty Income pay a monthly dividend?","a":"Its own rental income arrives monthly from over 15,500 net-lease properties, so it passes that cash through to shareholders on the same monthly schedule — a structural feature of its business, not just a marketing choice."},{"q":"What is Realty Income's dividend yield?","a":"About 5.17% at the price used in this article, with an annual dividend of $3.25 per share."}]$faq60$::jsonb,
+  $toc60$[{"id":"how-it-makes-money","label":"How Realty Income makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc60$::jsonb,
+  $html60$
 <h2 id="how-it-makes-money">How Realty Income makes money</h2>
 <p>Realty Income raises capital from stock and bond investors, buys buildings, and leases them to more than 15,500 tenants under "net leases" — where the tenant, not Realty Income, pays property taxes, insurance, and maintenance. That structure lets Realty Income collect stable rent while continuously raising fresh capital to buy more buildings and grow the rent pie.</p>
 <div class="flow">
@@ -7244,35 +7487,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Realty Income's 10-K filings for FY2021 through FY2025 and DEF 14A 2026, plus a web search for current price and dividend yield (stockanalysis.com, Aug 19, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html60$,
+  $src60$10-K FY2021–FY2025 · DEF 14A 2026$src60$,
+  ARRAY['O', 'REIT', '10-K'],
+  'published',
+  $d60$2026-09-06$d60$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'o-story',
-    ticker: 'O',
-    company: 'Realty Income',
-    category: 'story',
-    title: "Realty Income's Last Three Years: Quietly Swapping Out How It Pays for Growth",
-    excerpt:
-      'How a 2024 slowdown driven by over-reliance on stock issuance pushed Realty Income to quietly rebuild its funding model over two years — and by 2026, the results were showing up in the numbers.',
-    takeaway:
-      "After a 2024 growth slowdown and a wave of tenant bankruptcy scares exposed the risk of relying almost entirely on stock issuance for growth capital, Realty Income spent two years quietly building an entirely different funding mix — private funds, joint ventures, convertible notes. By mid-2026, equity issuance had fallen to just 18% of investment funding, down from a three-year average of 47%, and growth guidance was reaccelerating.",
-    faq: [
-      { q: 'Why did Realty Income change how it funds growth?', a: 'A 2024 growth slowdown and a wave of tenant bankruptcy scares exposed the risk of relying almost entirely on issuing new stock for growth capital, pushing Realty Income to build a more diversified funding mix over the following two years.' },
-      { q: "Has Realty Income's new funding mix worked?", a: 'By mid-2026, equity issuance had fallen to just 18% of investment funding, down from a three-year average of 47%, using more private funds, joint ventures, and convertible notes instead — and growth guidance was reaccelerating.' },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Realty Income's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026',
-    tags: ['O', 'Earnings Calls', 'Capital Strategy'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s61$o-story$s61$,
+  $t61$O$t61$,
+  $c61$Realty Income$c61$,
+  $cat61$story$cat61$,
+  $ti61$Realty Income's Last Three Years: Quietly Swapping Out How It Pays for Growth$ti61$,
+  $ex61$How a 2024 slowdown driven by over-reliance on stock issuance pushed Realty Income to quietly rebuild its funding model over two years — and by 2026, the results were showing up in the numbers.$ex61$,
+  $tk61$After a 2024 growth slowdown and a wave of tenant bankruptcy scares exposed the risk of relying almost entirely on stock issuance for growth capital, Realty Income spent two years quietly building an entirely different funding mix — private funds, joint ventures, convertible notes. By mid-2026, equity issuance had fallen to just 18% of investment funding, down from a three-year average of 47%, and growth guidance was reaccelerating.$tk61$,
+  null,
+  $faq61$[{"q":"Why did Realty Income change how it funds growth?","a":"A 2024 growth slowdown and a wave of tenant bankruptcy scares exposed the risk of relying almost entirely on issuing new stock for growth capital, pushing Realty Income to build a more diversified funding mix over the following two years."},{"q":"Has Realty Income's new funding mix worked?","a":"By mid-2026, equity issuance had fallen to just 18% of investment funding, down from a three-year average of 47%, using more private funds, joint ventures, and convertible notes instead — and growth guidance was reaccelerating."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Realty Income's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026."}]$faq61$::jsonb,
+  $toc61$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc61$::jsonb,
+  $html61$
 <h2 id="the-story">The story</h2>
 <h3>Late 2023: confident, and betting on stock alone</h3>
 <p>On the Q3 2023 call, CEO Sumit Roy touted a "resilient and durable one team" while announcing the $9.3 billion Spirit Realty merger. The Q4 call set 2024 AFFO-per-share guidance at $4.13-$4.21, repeating multiple times that this could be achieved "without having to tap the markets."</p>
@@ -7331,35 +7582,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 2023 through Q2 2026. Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html61$,
+  $src61$10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026$src61$,
+  ARRAY['O', 'Earnings Calls', 'Capital Strategy'],
+  'published',
+  $d61$2026-09-06$d61$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'o-dcf',
-    ticker: 'O',
-    company: 'Realty Income',
-    category: 'dcf',
-    title: "What O's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Realty Income's share price already assumes — using per-share AFFO growth, since the company grows partly by issuing new shares.",
-    takeaway:
-      "At today's price, Realty Income's stock is pricing in about 7.7% annual per-share cash-flow growth for the next ten years. Over the past five years, actual per-share AFFO growth averaged just 4.5% a year — and only 3.4% over the most recent two years.",
-    faq: [
-      { q: "What growth rate does O's stock price assume?", a: "At today's price, Realty Income's stock is pricing in about 7.7% annual per-share cash-flow growth for the next ten years." },
-      { q: "How does that compare to Realty Income's actual growth?", a: "Over the past five years, actual per-share AFFO growth averaged just 4.5% a year — and only 3.4% over the most recent two years — both below the ~7.7% the current price requires." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $62.95, as of Aug 19, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 19, 2026 · Price used: $62.95',
-    tags: ['O', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s62$o-dcf$s62$,
+  $t62$O$t62$,
+  $c62$Realty Income$c62$,
+  $cat62$dcf$cat62$,
+  $ti62$What O's Stock Price Is Really Betting On$ti62$,
+  $ex62$Reverse-engineering the growth rate Realty Income's share price already assumes — using per-share AFFO growth, since the company grows partly by issuing new shares.$ex62$,
+  $tk62$At today's price, Realty Income's stock is pricing in about 7.7% annual per-share cash-flow growth for the next ten years. Over the past five years, actual per-share AFFO growth averaged just 4.5% a year — and only 3.4% over the most recent two years.$tk62$,
+  null,
+  $faq62$[{"q":"What growth rate does O's stock price assume?","a":"At today's price, Realty Income's stock is pricing in about 7.7% annual per-share cash-flow growth for the next ten years."},{"q":"How does that compare to Realty Income's actual growth?","a":"Over the past five years, actual per-share AFFO growth averaged just 4.5% a year — and only 3.4% over the most recent two years — both below the ~7.7% the current price requires."},{"q":"What share price was used for this analysis?","a":"This analysis used $62.95, as of Aug 19, 2026."}]$faq62$::jsonb,
+  $toc62$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc62$::jsonb,
+  $html62$
 <div class="callout warn">
   <b>Why this card uses per-share growth</b>
   A standard reverse DCF asks how fast total company cash flow needs to grow. But Realty Income continuously issues new shares to fund growth — total AFFO grew about 31% a year over the past five years, but that's mostly a bigger pie from more shares outstanding, not more value per existing share. This card compares the market's implied growth rate against <b>per-share</b> AFFO growth, the number that actually matters to a current shareholder.
@@ -7440,45 +7699,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Realty Income's 10-K filings (FY2021-FY2025) and 10-Q (Q2 FY2026), plus a web search for the current share price (stockanalysis.com, Aug 19, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html62$,
+  $src62$As of Aug 19, 2026 · Price used: $62.95$src62$,
+  ARRAY['O', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d62$2026-09-06$d62$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'crwd-snapshot',
-    ticker: 'CRWD',
-    company: 'CrowdStrike',
-    category: 'snapshot',
-    title: 'CrowdStrike (CRWD): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of CrowdStrike's business model — real-time cyberattack detection sold as a subscription — built directly from its SEC filings.",
-    takeaway:
-      "CrowdStrike installs a lightweight monitoring program on company computers and servers, catches hackers breaking in and blocks them in real time using cloud AI, and charges companies a monthly subscription fee for that protection.",
-    quickFacts: [
-      { k: 'Share price', v: '$190.34' },
-      { k: 'Market cap', v: '~$193.8B' },
-      { k: 'FY2026 revenue', v: '$4.81B' },
-      { k: 'Net revenue retention', v: '115%' },
-    ],
-    faq: [
-      { q: 'How does CrowdStrike make money?', a: "CrowdStrike installs a lightweight monitoring program (the Falcon sensor) on company computers and servers, catches hackers breaking in and blocks them in real time using cloud AI, and charges companies a monthly subscription fee for that protection." },
-      { q: "What is CrowdStrike's market cap?", a: "As of this article's data, CrowdStrike's market cap was about $193.8B, on FY2026 revenue of $4.81B." },
-      { q: 'What is net revenue retention and why does it matter for CrowdStrike?', a: "Net revenue retention (115% here) measures how much more existing customers spend year over year, even after accounting for churn — it's the clearest signal of whether CrowdStrike's business grows on its own, without needing new customers." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How CrowdStrike makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2022–FY2026 · DEF 14A 2026',
-    tags: ['CRWD', 'Cybersecurity', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s63$crwd-snapshot$s63$,
+  $t63$CRWD$t63$,
+  $c63$CrowdStrike$c63$,
+  $cat63$snapshot$cat63$,
+  $ti63$CrowdStrike (CRWD): What This Company Actually Does$ti63$,
+  $ex63$A plain-English read of CrowdStrike's business model — real-time cyberattack detection sold as a subscription — built directly from its SEC filings.$ex63$,
+  $tk63$CrowdStrike installs a lightweight monitoring program on company computers and servers, catches hackers breaking in and blocks them in real time using cloud AI, and charges companies a monthly subscription fee for that protection.$tk63$,
+  $qf63$[{"k":"Share price","v":"$190.34"},{"k":"Market cap","v":"~$193.8B"},{"k":"FY2026 revenue","v":"$4.81B"},{"k":"Net revenue retention","v":"115%"}]$qf63$::jsonb,
+  $faq63$[{"q":"How does CrowdStrike make money?","a":"CrowdStrike installs a lightweight monitoring program (the Falcon sensor) on company computers and servers, catches hackers breaking in and blocks them in real time using cloud AI, and charges companies a monthly subscription fee for that protection."},{"q":"What is CrowdStrike's market cap?","a":"As of this article's data, CrowdStrike's market cap was about $193.8B, on FY2026 revenue of $4.81B."},{"q":"What is net revenue retention and why does it matter for CrowdStrike?","a":"Net revenue retention (115% here) measures how much more existing customers spend year over year, even after accounting for churn — it's the clearest signal of whether CrowdStrike's business grows on its own, without needing new customers."}]$faq63$::jsonb,
+  $toc63$[{"id":"how-it-makes-money","label":"How CrowdStrike makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc63$::jsonb,
+  $html63$
 <h2 id="how-it-makes-money">How CrowdStrike makes money</h2>
 <p>Customer companies install CrowdStrike's Falcon sensor — a lightweight monitoring program — on their computers and servers. That sensor feeds data to CrowdStrike's cloud AI, which detects and blocks intrusions in real time. A successful block builds trust, which drives customers to add more Falcon modules over time — a "land and expand" loop reflected in a 115% net revenue retention rate.</p>
 <div class="flow">
@@ -7578,35 +7835,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from CrowdStrike's 10-K filings for FY2022 through FY2026 and DEF 14A 2026. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html63$,
+  $src63$10-K FY2022–FY2026 · DEF 14A 2026$src63$,
+  ARRAY['CRWD', 'Cybersecurity', '10-K'],
+  'published',
+  $d63$2026-09-06$d63$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'crwd-story',
-    ticker: 'CRWD',
-    company: 'CrowdStrike',
-    category: 'story',
-    title: "CrowdStrike's Last Two Years: From 'This Will Never Leave My Mind' to 'The Agentic AI Era' — Except in the Fine Print",
-    excerpt:
-      "It took exactly one year for CrowdStrike to go from apologizing for an outage that grounded computers worldwide to talking with total confidence about the future — but its legal filings still haven't let go of that day.",
-    takeaway:
-      "In July 2024, a CrowdStrike software update took down Windows systems worldwide, and the CEO opened the next earnings call with an apology: \"the weight of this incident will never leave my mind.\" One year later, the company was declaring a full growth recovery and discussing the agentic AI era — but its FY2026 10-K still lists the incident as the #1 risk factor, unchanged for the third year running.",
-    faq: [
-      { q: 'What was the July 2024 CrowdStrike outage?', a: 'A flawed CrowdStrike software update took down Windows systems worldwide in July 2024 — the CEO opened the next earnings call with an apology, saying "the weight of this incident will never leave my mind."' },
-      { q: 'Has CrowdStrike fully recovered from the 2024 outage?', a: 'By results and management tone, largely yes — one year later the company was declaring a full growth recovery. But its FY2026 10-K still lists the incident as the #1 risk factor, unchanged for the third year running, showing the legal and reputational tail is longer than the business recovery.' },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from CrowdStrike's 10-K filings for FY2024 through FY2026 and 9 quarters of earnings call transcripts from June 2024 to June 2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2024–FY2026 · 9 quarters of earnings call transcripts, Jun 2024–Jun 2026',
-    tags: ['CRWD', 'Earnings Calls', 'Crisis Recovery'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s64$crwd-story$s64$,
+  $t64$CRWD$t64$,
+  $c64$CrowdStrike$c64$,
+  $cat64$story$cat64$,
+  $ti64$CrowdStrike's Last Two Years: From 'This Will Never Leave My Mind' to 'The Agentic AI Era' — Except in the Fine Print$ti64$,
+  $ex64$It took exactly one year for CrowdStrike to go from apologizing for an outage that grounded computers worldwide to talking with total confidence about the future — but its legal filings still haven't let go of that day.$ex64$,
+  $tk64$In July 2024, a CrowdStrike software update took down Windows systems worldwide, and the CEO opened the next earnings call with an apology: "the weight of this incident will never leave my mind." One year later, the company was declaring a full growth recovery and discussing the agentic AI era — but its FY2026 10-K still lists the incident as the #1 risk factor, unchanged for the third year running.$tk64$,
+  null,
+  $faq64$[{"q":"What was the July 2024 CrowdStrike outage?","a":"A flawed CrowdStrike software update took down Windows systems worldwide in July 2024 — the CEO opened the next earnings call with an apology, saying \"the weight of this incident will never leave my mind.\""},{"q":"Has CrowdStrike fully recovered from the 2024 outage?","a":"By results and management tone, largely yes — one year later the company was declaring a full growth recovery. But its FY2026 10-K still lists the incident as the #1 risk factor, unchanged for the third year running, showing the legal and reputational tail is longer than the business recovery."},{"q":"What sources does this analysis draw from?","a":"This piece is built from CrowdStrike's 10-K filings for FY2024 through FY2026 and 9 quarters of earnings call transcripts from June 2024 to June 2026."}]$faq64$::jsonb,
+  $toc64$[{"id":"the-story","label":"The story"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"our-read","label":"Our read"},{"id":"unknowns","label":"What we still don't know"}]$toc64$::jsonb,
+  $html64$
 <h2 id="the-story">The story</h2>
 <h3>June 2024: peak momentum</h3>
 <p>On the Q1 FY2025 call, CEO George Kurtz opened: "we started the year from a position of momentum and overwhelming strength." Net new ARR grew 22% to $212M, and free cash flow hit $322M — 35% of revenue — both records. The company was already talking about the next milestone beyond "the $1B club": $10B in ARR.</p>
@@ -7677,35 +7942,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from 10-K filings for FY2024 through FY2026 and 9 quarters of earnings call transcripts from Q1 FY2025 (Jun 4, 2024) through Q1 FY2027 (Jun 3, 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html64$,
+  $src64$10-K FY2024–FY2026 · 9 quarters of earnings call transcripts, Jun 2024–Jun 2026$src64$,
+  ARRAY['CRWD', 'Earnings Calls', 'Crisis Recovery'],
+  'published',
+  $d64$2026-09-06$d64$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'crwd-dcf',
-    ticker: 'CRWD',
-    company: 'CrowdStrike',
-    category: 'dcf',
-    title: "What CRWD's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate CrowdStrike's share price already assumes — and comparing it with both the company's longer-term growth record and its most recent, slower year.",
-    takeaway:
-      "At today's price, CrowdStrike's stock is pricing in about 36% annual free-cash-flow growth for the next ten years. Over the past four years, actual FCF growth averaged about 29.5% a year — but over just the most recent year, it slowed to 16.3%, a gap this price doesn't yet account for.",
-    faq: [
-      { q: "What growth rate does CRWD's stock price assume?", a: "At today's price, CrowdStrike's stock is pricing in about 36% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to CrowdStrike's actual growth?", a: "Over the past four years, CrowdStrike's actual free-cash-flow growth averaged about 29.5% a year, but over just the most recent year it slowed to 16.3% — a gap versus the ~36% required that the current price doesn't yet account for." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $190.34 (post 4-for-1 split), as of Aug 20, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 20, 2026 · Price used: $190.34 (post 4-for-1 split)',
-    tags: ['CRWD', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s65$crwd-dcf$s65$,
+  $t65$CRWD$t65$,
+  $c65$CrowdStrike$c65$,
+  $cat65$dcf$cat65$,
+  $ti65$What CRWD's Stock Price Is Really Betting On$ti65$,
+  $ex65$Reverse-engineering the growth rate CrowdStrike's share price already assumes — and comparing it with both the company's longer-term growth record and its most recent, slower year.$ex65$,
+  $tk65$At today's price, CrowdStrike's stock is pricing in about 36% annual free-cash-flow growth for the next ten years. Over the past four years, actual FCF growth averaged about 29.5% a year — but over just the most recent year, it slowed to 16.3%, a gap this price doesn't yet account for.$tk65$,
+  null,
+  $faq65$[{"q":"What growth rate does CRWD's stock price assume?","a":"At today's price, CrowdStrike's stock is pricing in about 36% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to CrowdStrike's actual growth?","a":"Over the past four years, CrowdStrike's actual free-cash-flow growth averaged about 29.5% a year, but over just the most recent year it slowed to 16.3% — a gap versus the ~36% required that the current price doesn't yet account for."},{"q":"What share price was used for this analysis?","a":"This analysis used $190.34 (post 4-for-1 split), as of Aug 20, 2026."}]$faq65$::jsonb,
+  $toc65$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc65$::jsonb,
+  $html65$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, CRWD implies <span class="num">~36%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
@@ -7779,45 +8052,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from CrowdStrike's 10-K filings (FY2022-FY2026), plus a web search for the current share price (stockanalysis.com, Aug 20, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html65$,
+  $src65$As of Aug 20, 2026 · Price used: $190.34 (post 4-for-1 split)$src65$,
+  ARRAY['CRWD', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d65$2026-09-06$d65$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'axp-snapshot',
-    ticker: 'AXP',
-    company: 'American Express',
-    category: 'snapshot',
-    title: 'American Express (AXP): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of American Express's three-party card network — built directly from its SEC filings.",
-    takeaway:
-      "American Express issues cards directly to affluent consumers and businesses and signs merchant contracts directly too — a three-party model, unlike the four-party network Visa and Mastercard run through partner banks. Every swipe earns Amex a merchant discount fee from the merchant and loan interest plus annual fees from the cardmember, at the same time.",
-    quickFacts: [
-      { k: 'Share price', v: '$331.15' },
-      { k: 'Market cap', v: '~$223.6B' },
-      { k: 'FY2025 revenue', v: '$72.23B' },
-      { k: 'FY2025 net income', v: '$10.83B' },
-    ],
-    faq: [
-      { q: 'How does American Express make money?', a: 'American Express issues cards directly to affluent consumers and businesses and signs merchant contracts directly too — a three-party model. Every swipe earns Amex a merchant discount fee from the merchant and loan interest plus annual fees from the cardmember, at the same time.' },
-      { q: 'How is American Express different from Visa and Mastercard?', a: "Amex runs a three-party network — it issues cards AND signs merchants directly — while Visa and Mastercard run a four-party network where banks issue the cards on their behalf." },
-      { q: "What is American Express's market cap?", a: "As of this article's data, American Express's market cap was about $223.6B, on FY2025 revenue of $72.23B and net income of $10.83B." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How American Express makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
-    tags: ['AXP', 'Payments', 'Credit Cards', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s66$axp-snapshot$s66$,
+  $t66$AXP$t66$,
+  $c66$American Express$c66$,
+  $cat66$snapshot$cat66$,
+  $ti66$American Express (AXP): What This Company Actually Does$ti66$,
+  $ex66$A plain-English read of American Express's three-party card network — built directly from its SEC filings.$ex66$,
+  $tk66$American Express issues cards directly to affluent consumers and businesses and signs merchant contracts directly too — a three-party model, unlike the four-party network Visa and Mastercard run through partner banks. Every swipe earns Amex a merchant discount fee from the merchant and loan interest plus annual fees from the cardmember, at the same time.$tk66$,
+  $qf66$[{"k":"Share price","v":"$331.15"},{"k":"Market cap","v":"~$223.6B"},{"k":"FY2025 revenue","v":"$72.23B"},{"k":"FY2025 net income","v":"$10.83B"}]$qf66$::jsonb,
+  $faq66$[{"q":"How does American Express make money?","a":"American Express issues cards directly to affluent consumers and businesses and signs merchant contracts directly too — a three-party model. Every swipe earns Amex a merchant discount fee from the merchant and loan interest plus annual fees from the cardmember, at the same time."},{"q":"How is American Express different from Visa and Mastercard?","a":"Amex runs a three-party network — it issues cards AND signs merchants directly — while Visa and Mastercard run a four-party network where banks issue the cards on their behalf."},{"q":"What is American Express's market cap?","a":"As of this article's data, American Express's market cap was about $223.6B, on FY2025 revenue of $72.23B and net income of $10.83B."}]$faq66$::jsonb,
+  $toc66$[{"id":"how-it-makes-money","label":"How American Express makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc66$::jsonb,
+  $html66$
 <h2 id="how-it-makes-money">How American Express makes money</h2>
 <p>American Express issues cards directly to affluent consumers and businesses, and signs merchant contracts directly too — a three-party model that differs from the four-party network Visa and Mastercard run through partner banks. Every time a cardmember swipes, Amex collects a merchant discount fee from the merchant and, from the cardmember, loan interest and annual fees — both sides of the same transaction, at once.</p>
 <div class="flow">
@@ -7977,35 +8248,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from American Express's 10-K filings for FY2021 through FY2025 and DEF 14A 2026. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html66$,
+  $src66$10-K FY2021–FY2025 · DEF 14A 2026$src66$,
+  ARRAY['AXP', 'Payments', 'Credit Cards', '10-K'],
+  'published',
+  $d66$2026-09-06$d66$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'axp-story',
-    ticker: 'AXP',
-    company: 'American Express',
-    category: 'story',
-    title: "American Express's Three-Year Rebrand: From 'Enriching Lives' to 'AI-Powered Premium Lifestyle Brand'",
-    excerpt:
-      "How American Express quietly rewrote its own identity — and lost, then won back, the market's confidence along the way.",
-    takeaway:
-      "Over three years, American Express quietly swapped its self-description from an ESG-minded payments company into an 'AI-powered premium lifestyle brand' — losing market confidence midway through the pivot (late 2024 into early 2025), then winning it back once revenue growth reaccelerated to 11% in the second half of 2025.",
-    faq: [
-      { q: "How has American Express's self-description changed?", a: "American Express quietly swapped its self-description from an ESG-minded payments company into an 'AI-powered premium lifestyle brand' over three years, dropping ESG language from its filings entirely along the way." },
-      { q: 'Did American Express lose investor confidence during this shift?', a: 'Yes — confidence dipped midway through the pivot (late 2024 into early 2025) before recovering once revenue growth reaccelerated to 11% in the second half of 2025.' },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from American Express's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 to Q2 FY2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'filing-language', label: 'Evidence: what disappeared, and what showed up' },
-      { id: 'earnings-tone', label: 'Earnings-call tone, 12 quarters' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
-    tags: ['AXP', 'Earnings Calls', 'Rebranding'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s67$axp-story$s67$,
+  $t67$AXP$t67$,
+  $c67$American Express$c67$,
+  $cat67$story$cat67$,
+  $ti67$American Express's Three-Year Rebrand: From 'Enriching Lives' to 'AI-Powered Premium Lifestyle Brand'$ti67$,
+  $ex67$How American Express quietly rewrote its own identity — and lost, then won back, the market's confidence along the way.$ex67$,
+  $tk67$Over three years, American Express quietly swapped its self-description from an ESG-minded payments company into an 'AI-powered premium lifestyle brand' — losing market confidence midway through the pivot (late 2024 into early 2025), then winning it back once revenue growth reaccelerated to 11% in the second half of 2025.$tk67$,
+  null,
+  $faq67$[{"q":"How has American Express's self-description changed?","a":"American Express quietly swapped its self-description from an ESG-minded payments company into an 'AI-powered premium lifestyle brand' over three years, dropping ESG language from its filings entirely along the way."},{"q":"Did American Express lose investor confidence during this shift?","a":"Yes — confidence dipped midway through the pivot (late 2024 into early 2025) before recovering once revenue growth reaccelerated to 11% in the second half of 2025."},{"q":"What sources does this analysis draw from?","a":"This piece is built from American Express's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 to Q2 FY2026."}]$faq67$::jsonb,
+  $toc67$[{"id":"the-story","label":"The story"},{"id":"filing-language","label":"Evidence: what disappeared, and what showed up"},{"id":"earnings-tone","label":"Earnings-call tone, 12 quarters"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"unknowns","label":"What we still don't know"}]$toc67$::jsonb,
+  $html67$
 <h2 id="the-story">The story</h2>
 <h3>Late 2023: confidence at a peak</h3>
 <p>At the end of 2023, American Express was riding high. Management kept repeating "seven consecutive quarters of record results," and the business description's opening line was an emotional one: the company existed to "enrich lives." The ESG section of the same 10-K laid out a detailed three-pillar strategy — financial confidence, climate solutions, and diversity. In January 2024, the company issued its first formal guidance for the year: 9-11% revenue growth and EPS of $12.65-13.15.</p>
@@ -8096,35 +8375,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from American Express's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts, Q3 FY2023 (Oct 2023) through Q2 FY2026 (Jul 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html67$,
+  $src67$10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026$src67$,
+  ARRAY['AXP', 'Earnings Calls', 'Rebranding'],
+  'published',
+  $d67$2026-09-06$d67$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'axp-dcf',
-    ticker: 'AXP',
-    company: 'American Express',
-    category: 'dcf',
-    title: "What AXP's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the free-cash-flow growth rate American Express's share price already assumes — and comparing it with its actual 5-year growth record.",
-    takeaway:
-      "At today's price, American Express's stock is pricing in about 3.6% annual free-cash-flow growth for the next ten years. Over the past five years, actual FCF growth averaged about 5.1% a year — making the stock look neither expensive nor cheap: priced to merely hold its own pace, or slightly less.",
-    faq: [
-      { q: "What growth rate does AXP's stock price assume?", a: "At today's price, American Express's stock is pricing in about 3.6% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to American Express's actual growth?", a: "Over the past five years, American Express's actual free-cash-flow growth averaged about 5.1% a year — above the ~3.6% required, making the stock look neither expensive nor cheap: priced to merely hold its own pace, or slightly less." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $331.15, as of Aug 20, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 20, 2026 · Price used: $331.15',
-    tags: ['AXP', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s68$axp-dcf$s68$,
+  $t68$AXP$t68$,
+  $c68$American Express$c68$,
+  $cat68$dcf$cat68$,
+  $ti68$What AXP's Stock Price Is Really Betting On$ti68$,
+  $ex68$Reverse-engineering the free-cash-flow growth rate American Express's share price already assumes — and comparing it with its actual 5-year growth record.$ex68$,
+  $tk68$At today's price, American Express's stock is pricing in about 3.6% annual free-cash-flow growth for the next ten years. Over the past five years, actual FCF growth averaged about 5.1% a year — making the stock look neither expensive nor cheap: priced to merely hold its own pace, or slightly less.$tk68$,
+  null,
+  $faq68$[{"q":"What growth rate does AXP's stock price assume?","a":"At today's price, American Express's stock is pricing in about 3.6% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to American Express's actual growth?","a":"Over the past five years, American Express's actual free-cash-flow growth averaged about 5.1% a year — above the ~3.6% required, making the stock look neither expensive nor cheap: priced to merely hold its own pace, or slightly less."},{"q":"What share price was used for this analysis?","a":"This analysis used $331.15, as of Aug 20, 2026."}]$faq68$::jsonb,
+  $toc68$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc68$::jsonb,
+  $html68$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, AXP implies <span class="num">~3.6%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
@@ -8202,45 +8489,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from American Express's 10-K filings (FY2021-FY2025) and 10-Q (Q2 FY2026), plus a web search for the current share price (stockanalysis.com, Aug 20, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html68$,
+  $src68$As of Aug 20, 2026 · Price used: $331.15$src68$,
+  ARRAY['AXP', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d68$2026-09-06$d68$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'panw-snapshot',
-    ticker: 'PANW',
-    company: 'Palo Alto Networks',
-    category: 'snapshot',
-    title: 'Palo Alto Networks (PANW): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Palo Alto Networks's subscription-security business — and how it's using that cash to buy its way into new categories — built directly from its SEC filings.",
-    takeaway:
-      "Palo Alto Networks builds firewalls and other security software that protects company and government networks from hackers, sells most of it as a subscription, and plows that recurring cash back into new products and acquisitions — most recently the largest deal in its history, CyberArk — to broaden what it sells to existing customers.",
-    quickFacts: [
-      { k: 'Share price', v: '$359.90' },
-      { k: 'Market cap', v: '$293.3B' },
-      { k: 'FY2025 revenue', v: '$9.22B' },
-      { k: 'NGS ARR (Q3 FY2026)', v: '$8.1B' },
-    ],
-    faq: [
-      { q: 'How does Palo Alto Networks make money?', a: 'Palo Alto Networks builds firewalls and other security software that protects company and government networks from hackers, sells most of it as a subscription, and plows that recurring cash back into new products and acquisitions like its CyberArk purchase.' },
-      { q: "What is Palo Alto Networks's market cap?", a: "As of this article's data, Palo Alto Networks's market cap was about $293.3B, on FY2025 revenue of $9.22B." },
-      { q: 'What is NGS ARR?', a: 'Next-Generation Security Annual Recurring Revenue (NGS ARR) strips out one-time hardware sales to isolate purely recurring subscription revenue — it reached $8.1B by Q3 FY2026.' },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Palo Alto Networks makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A · earnings calls',
-    tags: ['PANW', 'Cybersecurity', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s69$panw-snapshot$s69$,
+  $t69$PANW$t69$,
+  $c69$Palo Alto Networks$c69$,
+  $cat69$snapshot$cat69$,
+  $ti69$Palo Alto Networks (PANW): What This Company Actually Does$ti69$,
+  $ex69$A plain-English read of Palo Alto Networks's subscription-security business — and how it's using that cash to buy its way into new categories — built directly from its SEC filings.$ex69$,
+  $tk69$Palo Alto Networks builds firewalls and other security software that protects company and government networks from hackers, sells most of it as a subscription, and plows that recurring cash back into new products and acquisitions — most recently the largest deal in its history, CyberArk — to broaden what it sells to existing customers.$tk69$,
+  $qf69$[{"k":"Share price","v":"$359.90"},{"k":"Market cap","v":"$293.3B"},{"k":"FY2025 revenue","v":"$9.22B"},{"k":"NGS ARR (Q3 FY2026)","v":"$8.1B"}]$qf69$::jsonb,
+  $faq69$[{"q":"How does Palo Alto Networks make money?","a":"Palo Alto Networks builds firewalls and other security software that protects company and government networks from hackers, sells most of it as a subscription, and plows that recurring cash back into new products and acquisitions like its CyberArk purchase."},{"q":"What is Palo Alto Networks's market cap?","a":"As of this article's data, Palo Alto Networks's market cap was about $293.3B, on FY2025 revenue of $9.22B."},{"q":"What is NGS ARR?","a":"Next-Generation Security Annual Recurring Revenue (NGS ARR) strips out one-time hardware sales to isolate purely recurring subscription revenue — it reached $8.1B by Q3 FY2026."}]$faq69$::jsonb,
+  $toc69$[{"id":"how-it-makes-money","label":"How Palo Alto Networks makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc69$::jsonb,
+  $html69$
 <h2 id="how-it-makes-money">How Palo Alto Networks makes money</h2>
 <p>Palo Alto Networks builds firewalls and security software that protects company and government networks from hackers, sells most of it through a two-tier network of distributors and resellers rather than directly, and plows the resulting subscription cash back into new product development and acquisitions — like its 2025 purchase of CyberArk — to keep expanding what it can sell into the same customer base.</p>
 <div class="flow">
@@ -8350,36 +8635,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Palo Alto Networks's 10-K filings for FY2021 through FY2025, 10-Q filings, DEF 14A, and earnings call transcripts. This is a research summary, not investment advice — verify against the original filings before acting.
 </footer>
-`,
-  },
+$html69$,
+  $src69$10-K FY2021–FY2025 · 10-Q · DEF 14A · earnings calls$src69$,
+  ARRAY['PANW', 'Cybersecurity', '10-K'],
+  'published',
+  $d69$2026-09-06$d69$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'panw-story',
-    ticker: 'PANW',
-    company: 'Palo Alto Networks',
-    category: 'story',
-    title: "'This Is a Strategic Choice, Not a Demand Problem' — How Palo Alto Networks Deliberately Slowed Its Own Growth, Then Sped It Back Up",
-    excerpt:
-      "In February 2024, Palo Alto Networks chose to slow its own near-term growth on purpose, and the market erased nearly 28% of its share price in a day in disbelief. Eighteen months later the bet had paid off — and the company is now running the same playbook at a much larger scale.",
-    takeaway:
-      "In early 2024, Palo Alto Networks deliberately slowed its own near-term revenue growth by giving away products to push customers toward a single consolidated platform, and the market wiped out nearly 28% of its share price in a day in disbelief. Eighteen months later, the bet had paid off in expanding margins and reaccelerating subscription revenue — and the company is now pushing the same logic further with its roughly $25B acquisition of CyberArk.",
-    faq: [
-      { q: "Why did Palo Alto Networks's stock crash in early 2024?", a: 'The company deliberately slowed its own near-term revenue growth by giving away products to push customers toward a single consolidated platform, and the market wiped out nearly 28% of its share price in a day in disbelief.' },
-      { q: 'Did the platformization strategy pay off for Palo Alto Networks?', a: "Yes — eighteen months later, the bet had paid off in expanding margins and reaccelerating subscription revenue, and the company is now applying the same logic at a larger scale with its roughly $25B CyberArk acquisition." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Palo Alto Networks's 10-K filings for FY2021 through FY2025, 10-Q filings, DEF 14A, and 11 quarters of earnings call transcripts from FY2024 Q1 to FY2026 Q3." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'filing-language', label: 'Evidence: what the filings say' },
-      { id: 'earnings-tone', label: 'Earnings-call tone' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A · 11 quarters of earnings call transcripts, FY2024 Q1–FY2026 Q3',
-    tags: ['PANW', 'Earnings Calls', 'Strategy Shift'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s70$panw-story$s70$,
+  $t70$PANW$t70$,
+  $c70$Palo Alto Networks$c70$,
+  $cat70$story$cat70$,
+  $ti70$'This Is a Strategic Choice, Not a Demand Problem' — How Palo Alto Networks Deliberately Slowed Its Own Growth, Then Sped It Back Up$ti70$,
+  $ex70$In February 2024, Palo Alto Networks chose to slow its own near-term growth on purpose, and the market erased nearly 28% of its share price in a day in disbelief. Eighteen months later the bet had paid off — and the company is now running the same playbook at a much larger scale.$ex70$,
+  $tk70$In early 2024, Palo Alto Networks deliberately slowed its own near-term revenue growth by giving away products to push customers toward a single consolidated platform, and the market wiped out nearly 28% of its share price in a day in disbelief. Eighteen months later, the bet had paid off in expanding margins and reaccelerating subscription revenue — and the company is now pushing the same logic further with its roughly $25B acquisition of CyberArk.$tk70$,
+  null,
+  $faq70$[{"q":"Why did Palo Alto Networks's stock crash in early 2024?","a":"The company deliberately slowed its own near-term revenue growth by giving away products to push customers toward a single consolidated platform, and the market wiped out nearly 28% of its share price in a day in disbelief."},{"q":"Did the platformization strategy pay off for Palo Alto Networks?","a":"Yes — eighteen months later, the bet had paid off in expanding margins and reaccelerating subscription revenue, and the company is now applying the same logic at a larger scale with its roughly $25B CyberArk acquisition."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Palo Alto Networks's 10-K filings for FY2021 through FY2025, 10-Q filings, DEF 14A, and 11 quarters of earnings call transcripts from FY2024 Q1 to FY2026 Q3."}]$faq70$::jsonb,
+  $toc70$[{"id":"the-story","label":"The story"},{"id":"timeline","label":"Timeline"},{"id":"filing-language","label":"Evidence: what the filings say"},{"id":"earnings-tone","label":"Earnings-call tone"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"unknowns","label":"What we still don't know"}]$toc70$::jsonb,
+  $html70$
 <h2 id="the-story">The story</h2>
 <h3>November 2023: confidence at its peak</h3>
 <p>On the Q1 FY2024 call, Palo Alto Networks was confident. Billings grew 16%, and management doubled down on a "high-teens" annual billings growth target. Even with the Israel-Hamas war having just broken out, CEO Nikesh Arora stressed pipeline conviction — "customers have not walked away from deals."</p>
@@ -8470,35 +8762,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Palo Alto Networks's 10-K filings for FY2021 through FY2025, 10-Q filings, DEF 14A, and 11 quarters of earnings call transcripts from Q1 FY2024 through Q3 FY2026. Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html70$,
+  $src70$10-K FY2021–FY2025 · 10-Q · DEF 14A · 11 quarters of earnings call transcripts, FY2024 Q1–FY2026 Q3$src70$,
+  ARRAY['PANW', 'Earnings Calls', 'Strategy Shift'],
+  'published',
+  $d70$2026-09-06$d70$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'panw-dcf',
-    ticker: 'PANW',
-    company: 'Palo Alto Networks',
-    category: 'dcf',
-    title: "What PANW's Stock Price Is Really Betting On",
-    excerpt:
-      "Reverse-engineering the growth rate Palo Alto Networks's share price already assumes — and comparing it against a red flag: the most recent year's actual growth is a third of that pace.",
-    takeaway:
-      "At today's price, Palo Alto Networks's stock is pricing in about 26% annual free-cash-flow growth for the next ten years — almost exactly matching its actual 4-year average (25.8%). But the most recent 12 months slowed sharply to just 9.3% growth, a gap this price doesn't yet account for.",
-    faq: [
-      { q: "What growth rate does PANW's stock price assume?", a: "At today's price, Palo Alto Networks's stock is pricing in about 26% annual free-cash-flow growth for the next ten years." },
-      { q: "How does that compare to Palo Alto Networks's actual growth?", a: "The ~26% required growth almost exactly matches the actual 4-year average (25.8%) — but the most recent 12 months slowed sharply to just 9.3% growth, a gap this price doesn't yet account for." },
-      { q: 'What share price was used for this analysis?', a: 'This analysis used $359.90, as of Aug 19, 2026.' },
-    ],
-    toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 19, 2026 · Price used: $359.90',
-    tags: ['PANW', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s71$panw-dcf$s71$,
+  $t71$PANW$t71$,
+  $c71$Palo Alto Networks$c71$,
+  $cat71$dcf$cat71$,
+  $ti71$What PANW's Stock Price Is Really Betting On$ti71$,
+  $ex71$Reverse-engineering the growth rate Palo Alto Networks's share price already assumes — and comparing it against a red flag: the most recent year's actual growth is a third of that pace.$ex71$,
+  $tk71$At today's price, Palo Alto Networks's stock is pricing in about 26% annual free-cash-flow growth for the next ten years — almost exactly matching its actual 4-year average (25.8%). But the most recent 12 months slowed sharply to just 9.3% growth, a gap this price doesn't yet account for.$tk71$,
+  null,
+  $faq71$[{"q":"What growth rate does PANW's stock price assume?","a":"At today's price, Palo Alto Networks's stock is pricing in about 26% annual free-cash-flow growth for the next ten years."},{"q":"How does that compare to Palo Alto Networks's actual growth?","a":"The ~26% required growth almost exactly matches the actual 4-year average (25.8%) — but the most recent 12 months slowed sharply to just 9.3% growth, a gap this price doesn't yet account for."},{"q":"What share price was used for this analysis?","a":"This analysis used $359.90, as of Aug 19, 2026."}]$faq71$::jsonb,
+  $toc71$[{"id":"required-vs-historical","label":"Required growth vs. historical growth"},{"id":"sensitivity","label":"Sensitivity to the discount rate"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc71$::jsonb,
+  $html71$
 <div class="verdict-box">
   <div class="label">The conclusion</div>
   <p>At its current price, PANW implies <span class="num">~26%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
@@ -8576,45 +8876,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Palo Alto Networks's 10-K filings (FY2021-FY2025) and 10-Q (Q3 FY2026), plus a web search for the current share price (tradingeconomics.com, Aug 19, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
 </footer>
-`,
-  },
+$html71$,
+  $src71$As of Aug 19, 2026 · Price used: $359.90$src71$,
+  ARRAY['PANW', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d71$2026-09-06$d71$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'gs-snapshot',
-    ticker: 'GS',
-    company: 'Goldman Sachs',
-    category: 'snapshot',
-    title: 'Goldman Sachs (GS): What This Company Actually Does',
-    excerpt:
-      "A plain-English read of Goldman Sachs's investment-banking, trading and asset-management business, built directly from its SEC filings.",
-    takeaway:
-      "Goldman Sachs helps large companies, governments, and wealthy individuals raise capital, trade securities, and grow their money — and gets paid through fees, trading margins, and management fees along the way, rather than through the deposit-and-loan spread a traditional bank runs on.",
-    quickFacts: [
-      { k: 'Share price', v: '$1,001.95' },
-      { k: 'Market cap', v: '$332.6B' },
-      { k: 'FY2025 net income', v: '$17.18B' },
-      { k: 'FY2025 ROE', v: '15.0%' },
-    ],
-    faq: [
-      { q: 'How does Goldman Sachs make money?', a: 'Goldman Sachs helps large companies, governments, and wealthy individuals raise capital, trade securities, and grow their money — and gets paid through fees, trading margins, and management fees, rather than the deposit-and-loan spread a traditional bank runs on.' },
-      { q: "What is Goldman Sachs's market cap?", a: "As of this article's data, Goldman Sachs's market cap was about $332.6B, on FY2025 net income of $17.18B and a 15.0% return on equity." },
-      { q: 'Is Goldman Sachs a traditional bank?', a: "Not really — it's a securities firm and investment bank rather than a deposit-and-loan bank; it earns fees, trading margins, and management fees rather than an interest-rate spread." },
-    ],
-    toc: [
-      { id: 'how-it-makes-money', label: 'How Goldman Sachs makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A 2026 · 12 quarters of earnings calls',
-    tags: ['GS', 'Investment Banking', '10-K'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s72$gs-snapshot$s72$,
+  $t72$GS$t72$,
+  $c72$Goldman Sachs$c72$,
+  $cat72$snapshot$cat72$,
+  $ti72$Goldman Sachs (GS): What This Company Actually Does$ti72$,
+  $ex72$A plain-English read of Goldman Sachs's investment-banking, trading and asset-management business, built directly from its SEC filings.$ex72$,
+  $tk72$Goldman Sachs helps large companies, governments, and wealthy individuals raise capital, trade securities, and grow their money — and gets paid through fees, trading margins, and management fees along the way, rather than through the deposit-and-loan spread a traditional bank runs on.$tk72$,
+  $qf72$[{"k":"Share price","v":"$1,001.95"},{"k":"Market cap","v":"$332.6B"},{"k":"FY2025 net income","v":"$17.18B"},{"k":"FY2025 ROE","v":"15.0%"}]$qf72$::jsonb,
+  $faq72$[{"q":"How does Goldman Sachs make money?","a":"Goldman Sachs helps large companies, governments, and wealthy individuals raise capital, trade securities, and grow their money — and gets paid through fees, trading margins, and management fees, rather than the deposit-and-loan spread a traditional bank runs on."},{"q":"What is Goldman Sachs's market cap?","a":"As of this article's data, Goldman Sachs's market cap was about $332.6B, on FY2025 net income of $17.18B and a 15.0% return on equity."},{"q":"Is Goldman Sachs a traditional bank?","a":"Not really — it's a securities firm and investment bank rather than a deposit-and-loan bank; it earns fees, trading margins, and management fees rather than an interest-rate spread."}]$faq72$::jsonb,
+  $toc72$[{"id":"how-it-makes-money","label":"How Goldman Sachs makes money"},{"id":"revenue-mix","label":"Where the revenue comes from"},{"id":"customers-competitors","label":"Customers and competitors"},{"id":"core-metric","label":"The metric that matters most"},{"id":"leadership","label":"Leadership and ownership"},{"id":"capital-returns","label":"Capital returns"},{"id":"failure-scenario","label":"How this company could fail"},{"id":"financials","label":"Five-year financials"},{"id":"unknowns","label":"What we still don't know"}]$toc72$::jsonb,
+  $html72$
 <h2 id="how-it-makes-money">How Goldman Sachs makes money</h2>
 <p>Goldman Sachs helps large companies, governments, and wealthy individuals raise capital, trade securities, and manage their money — and gets paid through advisory and underwriting fees, trading margins, and management fees, rather than the deposit-taking, loan-making spread a traditional bank runs on.</p>
 <div class="flow">
@@ -8753,36 +9051,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Goldman Sachs's 10-K filings for FY2021 through FY2025, 10-Q filings, DEF 14A 2026, and 12 quarters of earnings call transcripts, plus a web search for the current share price (TradingEconomics, Aug 20, 2026). This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html72$,
+  $src72$10-K FY2021–FY2025 · 10-Q · DEF 14A 2026 · 12 quarters of earnings calls$src72$,
+  ARRAY['GS', 'Investment Banking', '10-K'],
+  'published',
+  $d72$2026-09-06$d72$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'gs-story',
-    ticker: 'GS',
-    company: 'Goldman Sachs',
-    category: 'story',
-    title: 'Goldman Sachs: The Retreat From Consumer Banking, and the U-Turn',
-    excerpt:
-      "Goldman Sachs spent three years quietly erasing its 2021 promise to 'be a bank for everyone' — and record profits filled the space it left behind.",
-    takeaway:
-      "In 2021, Goldman Sachs was building an independent consumer-banking segment around its Marcus brand. Over the next three years it wound that effort down almost entirely, footnote by footnote, while doubling down on its traditional strengths — and by 2026, record profits, helped by an AI infrastructure investment boom, had filled the gap.",
-    faq: [
-      { q: 'What happened to Marcus, Goldman Sachs\'s consumer bank?', a: "Goldman Sachs built Marcus as an independent consumer-banking effort starting in 2021, then wound it down almost entirely over the next three years, footnote by footnote in its own filings, while doubling down on its traditional investment-banking strengths." },
-      { q: "Has Goldman Sachs's retreat from consumer banking paid off?", a: "By 2026, record profits — helped by an AI infrastructure investment boom — had filled the gap left by the Marcus retreat, though the article notes it's hard to fully separate the strategic refocus from the broader market tailwind." },
-      { q: 'What sources does this analysis draw from?', a: "This piece is built from Goldman Sachs's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 to Q2 FY2026." },
-    ],
-    toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'filing-language', label: 'Evidence: what the filings say' },
-      { id: 'earnings-tone', label: 'Earnings-call tone, 12 quarters' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'unknowns', label: "What we still don't know" },
-    ],
-    sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
-    tags: ['GS', 'Earnings Calls', 'Strategy Reversal'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s73$gs-story$s73$,
+  $t73$GS$t73$,
+  $c73$Goldman Sachs$c73$,
+  $cat73$story$cat73$,
+  $ti73$Goldman Sachs: The Retreat From Consumer Banking, and the U-Turn$ti73$,
+  $ex73$Goldman Sachs spent three years quietly erasing its 2021 promise to 'be a bank for everyone' — and record profits filled the space it left behind.$ex73$,
+  $tk73$In 2021, Goldman Sachs was building an independent consumer-banking segment around its Marcus brand. Over the next three years it wound that effort down almost entirely, footnote by footnote, while doubling down on its traditional strengths — and by 2026, record profits, helped by an AI infrastructure investment boom, had filled the gap.$tk73$,
+  null,
+  $faq73$[{"q":"What happened to Marcus, Goldman Sachs's consumer bank?","a":"Goldman Sachs built Marcus as an independent consumer-banking effort starting in 2021, then wound it down almost entirely over the next three years, footnote by footnote in its own filings, while doubling down on its traditional investment-banking strengths."},{"q":"Has Goldman Sachs's retreat from consumer banking paid off?","a":"By 2026, record profits — helped by an AI infrastructure investment boom — had filled the gap left by the Marcus retreat, though the article notes it's hard to fully separate the strategic refocus from the broader market tailwind."},{"q":"What sources does this analysis draw from?","a":"This piece is built from Goldman Sachs's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 to Q2 FY2026."}]$faq73$::jsonb,
+  $toc73$[{"id":"the-story","label":"The story"},{"id":"filing-language","label":"Evidence: what the filings say"},{"id":"earnings-tone","label":"Earnings-call tone, 12 quarters"},{"id":"guidance-record","label":"Guidance scorecard"},{"id":"timeline","label":"Timeline"},{"id":"unknowns","label":"What we still don't know"}]$toc73$::jsonb,
+  $html73$
 <h2 id="the-story">The story</h2>
 <h3>2021: a different company</h3>
 <p>Open the 2021 10-K and you see a different Goldman Sachs. The company had just created an independent "Consumer &amp; Wealth Management" segment, pushing personal loans, credit cards and deposits under the Marcus brand, and the filing confidently stated it had "expanded and intend[ed] to continue to expand the product and geographic scope of our offerings of credit products to consumers." Goldman's investment-banking DNA was, at the time, mid-experiment with grafting on an entirely different business: consumer finance.</p>
@@ -8874,36 +9179,43 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Goldman Sachs's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts, Q3 FY2023 (Oct 2023) through Q2 FY2026 (Jul 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
 </footer>
-`,
-  },
+$html73$,
+  $src73$10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026$src73$,
+  ARRAY['GS', 'Earnings Calls', 'Strategy Reversal'],
+  'published',
+  $d73$2026-09-06$d73$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();
 
-  {
-    slug: 'gs-dcf',
-    ticker: 'GS',
-    company: 'Goldman Sachs',
-    category: 'dcf',
-    title: "What GS's Stock Price Is Really Betting On",
-    excerpt:
-      "Goldman Sachs's balance sheet makes a standard reverse DCF meaningless — so this uses the bank-valuation model investors actually rely on instead: reverse-engineering the return on equity its stock price already assumes.",
-    takeaway:
-      "At today's price, Goldman Sachs's stock is priced as if it can sustain a return on equity of about 22.9% forever — 1.7 times its 5-year average of 13.7%. The catch: the most recent quarter's ROE was 23.5%, essentially matching what the price already requires, so the real question is whether that's a new normal or a temporary peak.",
-    faq: [
-      { q: 'Why does this use return on equity instead of free cash flow?', a: "Goldman Sachs's balance sheet makes a standard free-cash-flow reverse DCF meaningless, since it's a securities firm, not an operating company — so this analysis uses the bank-valuation model investors actually rely on: reverse-engineering the return on equity the stock price already assumes." },
-      { q: "What ROE does GS's stock price assume?", a: "At today's price, Goldman Sachs's stock is priced as if it can sustain a return on equity of about 22.9% forever — 1.7 times its 5-year average of 13.7%." },
-      { q: "Is Goldman Sachs's current ROE close to what the price requires?", a: "Yes, unusually so — the most recent quarter's ROE was 23.5%, essentially matching the ~22.9% the price requires, so the real question is whether that's a new normal or a temporary peak." },
-    ],
-    toc: [
-      { id: 'why-not-fcf', label: "Why this isn't a standard free-cash-flow model" },
-      { id: 'required-vs-historical', label: 'Required ROE vs. historical ROE' },
-      { id: 'sensitivity', label: 'Sensitivity to the cost of equity' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
-    ],
-    sources: 'As of Aug 20, 2026 · Price used: $1,001.95',
-    tags: ['GS', 'ReverseDCF', 'Valuation'],
-    publishedAt: '2026-09-06',
-    contentHtml: `
+insert into public.posts
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
+values (
+  $s74$gs-dcf$s74$,
+  $t74$GS$t74$,
+  $c74$Goldman Sachs$c74$,
+  $cat74$dcf$cat74$,
+  $ti74$What GS's Stock Price Is Really Betting On$ti74$,
+  $ex74$Goldman Sachs's balance sheet makes a standard reverse DCF meaningless — so this uses the bank-valuation model investors actually rely on instead: reverse-engineering the return on equity its stock price already assumes.$ex74$,
+  $tk74$At today's price, Goldman Sachs's stock is priced as if it can sustain a return on equity of about 22.9% forever — 1.7 times its 5-year average of 13.7%. The catch: the most recent quarter's ROE was 23.5%, essentially matching what the price already requires, so the real question is whether that's a new normal or a temporary peak.$tk74$,
+  null,
+  $faq74$[{"q":"Why does this use return on equity instead of free cash flow?","a":"Goldman Sachs's balance sheet makes a standard free-cash-flow reverse DCF meaningless, since it's a securities firm, not an operating company — so this analysis uses the bank-valuation model investors actually rely on: reverse-engineering the return on equity the stock price already assumes."},{"q":"What ROE does GS's stock price assume?","a":"At today's price, Goldman Sachs's stock is priced as if it can sustain a return on equity of about 22.9% forever — 1.7 times its 5-year average of 13.7%."},{"q":"Is Goldman Sachs's current ROE close to what the price requires?","a":"Yes, unusually so — the most recent quarter's ROE was 23.5%, essentially matching the ~22.9% the price requires, so the real question is whether that's a new normal or a temporary peak."}]$faq74$::jsonb,
+  $toc74$[{"id":"why-not-fcf","label":"Why this isn't a standard free-cash-flow model"},{"id":"required-vs-historical","label":"Required ROE vs. historical ROE"},{"id":"sensitivity","label":"Sensitivity to the cost of equity"},{"id":"what-would-move-it","label":"What would move this number"},{"id":"show-your-work","label":"Show your work"},{"id":"fine-print","label":"The fine print"}]$toc74$::jsonb,
+  $html74$
 <h2 id="why-not-fcf">Why this isn't a standard free-cash-flow model</h2>
 <div class="callout warn">
   <b>A bank model, not a standard reverse DCF</b>
@@ -8989,6 +9301,25 @@ export const POSTS: Post[] = [
 <footer class="disclosure">
   Built from Goldman Sachs's 10-K FY2025 filing and 10-Q Q2 FY2026, plus a web search for the current share price (TradingEconomics, Aug 20, 2026). This is a research summary, not investment advice.
 </footer>
-`,
-  },
-];
+$html74$,
+  $src74$As of Aug 20, 2026 · Price used: $1,001.95$src74$,
+  ARRAY['GS', 'ReverseDCF', 'Valuation'],
+  'published',
+  $d74$2026-09-06$d74$::date
+)
+on conflict (slug) do update set
+  ticker = excluded.ticker,
+  company = excluded.company,
+  category = excluded.category,
+  title = excluded.title,
+  excerpt = excluded.excerpt,
+  takeaway = excluded.takeaway,
+  quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
+  toc = excluded.toc,
+  content_html = excluded.content_html,
+  sources = excluded.sources,
+  tags = excluded.tags,
+  status = excluded.status,
+  published_at = excluded.published_at,
+  updated_at = now();

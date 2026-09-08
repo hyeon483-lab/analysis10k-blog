@@ -1,5 +1,5 @@
 import { supabase } from './supabaseClient';
-import type { Post, PostCategory, QuickFact, TocEntry } from '@/types/post';
+import type { Post, PostCategory, QuickFact, FaqEntry, TocEntry } from '@/types/post';
 
 interface PostRow {
   slug: string;
@@ -10,6 +10,7 @@ interface PostRow {
   excerpt: string;
   takeaway: string;
   quick_facts: QuickFact[] | null;
+  faq: FaqEntry[] | null;
   toc: TocEntry[];
   content_html: string;
   sources: string;
@@ -18,7 +19,7 @@ interface PostRow {
 }
 
 const SELECT_COLUMNS =
-  'slug, ticker, company, category, title, excerpt, takeaway, quick_facts, toc, content_html, sources, tags, published_at';
+  'slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, published_at';
 
 function rowToPost(row: PostRow): Post {
   return {
@@ -30,6 +31,7 @@ function rowToPost(row: PostRow): Post {
     excerpt: row.excerpt,
     takeaway: row.takeaway,
     quickFacts: row.quick_facts ?? undefined,
+    faq: row.faq ?? undefined,
     toc: row.toc,
     contentHtml: row.content_html,
     sources: row.sources,

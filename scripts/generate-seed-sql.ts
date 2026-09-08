@@ -16,8 +16,9 @@ function tagsLiteral(tags: string[]): string {
 
 function postToInsert(post: Post, idx: number): string {
   const quickFacts = post.quickFacts ? jsonLiteral(`qf${idx}`, post.quickFacts) : 'null';
+  const faq = post.faq ? jsonLiteral(`faq${idx}`, post.faq) : 'null';
   return `insert into public.posts
-  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, toc, content_html, sources, tags, status, published_at)
+  (slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, status, published_at)
 values (
   ${sqlText(`s${idx}`, post.slug)},
   ${sqlText(`t${idx}`, post.ticker)},
@@ -27,6 +28,7 @@ values (
   ${sqlText(`ex${idx}`, post.excerpt)},
   ${sqlText(`tk${idx}`, post.takeaway)},
   ${quickFacts},
+  ${faq},
   ${jsonLiteral(`toc${idx}`, post.toc)},
   ${sqlText(`html${idx}`, post.contentHtml)},
   ${sqlText(`src${idx}`, post.sources)},
@@ -42,6 +44,7 @@ on conflict (slug) do update set
   excerpt = excluded.excerpt,
   takeaway = excluded.takeaway,
   quick_facts = excluded.quick_facts,
+  faq = excluded.faq,
   toc = excluded.toc,
   content_html = excluded.content_html,
   sources = excluded.sources,

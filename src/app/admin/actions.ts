@@ -3,7 +3,7 @@
 import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
 import { createClient } from '@/lib/supabase/server';
-import type { PostCategory, QuickFact, TocEntry } from '@/types/post';
+import type { PostCategory, QuickFact, FaqEntry, TocEntry } from '@/types/post';
 
 async function requireUser() {
   const supabase = await createClient();
@@ -41,6 +41,21 @@ function parseQuickFacts(raw: string): QuickFact[] | null {
   return facts.length > 0 ? facts : null;
 }
 
+function parseFaq(raw: string): FaqEntry[] | null {
+  const lines = raw
+    .split('\n')
+    .map((l) => l.trim())
+    .filter(Boolean);
+  if (lines.length === 0) return null;
+  const entries: FaqEntry[] = [];
+  for (const line of lines) {
+    const [q, ...rest] = line.split('|');
+    if (!q || rest.length === 0) continue;
+    entries.push({ q: q.trim(), a: rest.join('|').trim() });
+  }
+  return entries.length > 0 ? entries : null;
+}
+
 function parseTags(raw: string): string[] {
   return raw
     .split(',')
@@ -59,6 +74,7 @@ interface PostFormValues {
   contentHtml: string;
   sources: string;
   quickFactsRaw: string;
+  faqRaw: string;
   tagsRaw: string;
   status: 'draft' | 'published';
   publishedAt: string;
@@ -76,6 +92,7 @@ function readForm(formData: FormData): PostFormValues {
     contentHtml: String(formData.get('contentHtml') || ''),
     sources: String(formData.get('sources') || '').trim(),
     quickFactsRaw: String(formData.get('quickFacts') || ''),
+    faqRaw: String(formData.get('faq') || ''),
     tagsRaw: String(formData.get('tags') || ''),
     status: (formData.get('status') === 'published' ? 'published' : 'draft'),
     publishedAt: String(formData.get('publishedAt') || new Date().toISOString().slice(0, 10)),
@@ -95,6 +112,7 @@ export async function createPost(formData: FormData) {
     excerpt: values.excerpt,
     takeaway: values.takeaway,
     quick_facts: parseQuickFacts(values.quickFactsRaw),
+    faq: parseFaq(values.faqRaw),
     toc: extractToc(values.contentHtml),
     content_html: values.contentHtml,
     sources: values.sources,
@@ -125,6 +143,7 @@ export async function updatePost(id: string, formData: FormData) {
       excerpt: values.excerpt,
       takeaway: values.takeaway,
       quick_facts: parseQuickFacts(values.quickFactsRaw),
+      faq: parseFaq(values.faqRaw),
       toc: extractToc(values.contentHtml),
       content_html: values.contentHtml,
       sources: values.sources,

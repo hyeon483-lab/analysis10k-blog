@@ -11,6 +11,7 @@ export interface PostFormInitialValues {
   contentHtml: string;
   sources: string;
   quickFactsRaw: string;
+  faqRaw: string;
   tagsRaw: string;
   status: 'draft' | 'published';
   publishedAt: string;
@@ -27,6 +28,7 @@ export const EMPTY_POST_FORM: PostFormInitialValues = {
   contentHtml: '',
   sources: '',
   quickFactsRaw: '',
+  faqRaw: '',
   tagsRaw: '',
   status: 'draft',
   publishedAt: new Date().toISOString().slice(0, 10),
@@ -44,6 +46,7 @@ export function postToInitialValues(post: Post): PostFormInitialValues {
     contentHtml: post.contentHtml.trim(),
     sources: post.sources,
     quickFactsRaw: (post.quickFacts ?? []).map((f) => `${f.k} | ${f.v}`).join('\n'),
+    faqRaw: (post.faq ?? []).map((f) => `${f.q} | ${f.a}`).join('\n'),
     tagsRaw: post.tags.join(', '),
     status: 'published',
     publishedAt: post.publishedAt,

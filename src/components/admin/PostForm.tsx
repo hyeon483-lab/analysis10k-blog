@@ -94,6 +94,11 @@ export default function PostForm({
       </label>
 
       <label>
+        FAQ <span className="hint">— optional, one per line as &quot;Question? | Answer&quot;. Rendered as a FAQ section and FAQPage structured data.</span>
+        <textarea name="faq" defaultValue={initial.faqRaw} className="short" />
+      </label>
+
+      <label>
         Body HTML{' '}
         <span className="hint">
           — give each &lt;h2&gt; an id (e.g. &lt;h2 id=&quot;risks&quot;&gt;) so the table of contents builds itself. Available classes: callout (warn/good/bad), datacard, barlist/barrow, table-wrap, kicker-list, quote, verdict-box, timeline, details.methodology
