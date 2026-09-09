@@ -16,6 +16,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <a href="/rss.xml">RSS</a>
         </div>
         Analysis10k Blog — research summaries built from public SEC filings. Not investment advice.
+        <div className="footer-copyright">© {new Date().getFullYear()} analysis10k-blog.com. All rights reserved.</div>
       </footer>
     </>
   );

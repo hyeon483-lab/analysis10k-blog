@@ -322,6 +322,7 @@ a { color: inherit; }
 .site-footer .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 10px; }
 .site-footer .footer-links a { text-decoration: none; font-weight: 600; }
 .site-footer .footer-links a:hover { color: var(--ink-muted); }
+.site-footer .footer-copyright { margin-top: 8px; }
 
 /* ---------- Static pages (About / Contact / Privacy) ---------- */
 .static-page { padding-top: 46px; max-width: 700px; }
