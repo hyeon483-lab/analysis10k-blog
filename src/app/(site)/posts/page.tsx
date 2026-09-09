@@ -10,15 +10,20 @@ export const metadata: Metadata = {
 
 export const revalidate = 60;
 
-export default async function PostsPage() {
+export default async function PostsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}) {
   const posts = await getAllPosts();
+  const { q } = await searchParams;
   return (
     <>
       <div className="hero-block" style={{ paddingBottom: 24 }}>
         <h1 style={{ fontSize: 28, maxWidth: 'none' }}>All Posts</h1>
         <p>{posts.length} {posts.length === 1 ? 'post' : 'posts'}</p>
       </div>
-      <PostListClient posts={posts} />
+      <PostListClient posts={posts} initialQuery={q ?? ''} />
     </>
   );
 }

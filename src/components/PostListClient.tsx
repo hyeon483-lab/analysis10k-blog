@@ -7,9 +7,9 @@ import { CATEGORY_META } from '@/types/post';
 
 type Filter = 'all' | PostCategory;
 
-export default function PostListClient({ posts }: { posts: Post[] }) {
+export default function PostListClient({ posts, initialQuery = '' }: { posts: Post[]; initialQuery?: string }) {
   const [filter, setFilter] = useState<Filter>('all');
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(initialQuery);
 
   const q = query.trim().toLowerCase();
   const visible = posts

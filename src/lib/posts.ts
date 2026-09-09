@@ -133,3 +133,14 @@ export async function getPostsByIndustry(industry: Industry): Promise<Post[]> {
   const posts = await getAllPosts();
   return posts.filter((p) => getIndustry(p.ticker) === industry);
 }
+
+/** Neighbors of `slug` in the full post listing order, for prev/next navigation. */
+export async function getAdjacentPosts(slug: string): Promise<{ prev: Post | null; next: Post | null }> {
+  const posts = await getAllPosts();
+  const index = posts.findIndex((p) => p.slug === slug);
+  if (index === -1) return { prev: null, next: null };
+  return {
+    prev: index < posts.length - 1 ? posts[index + 1] : null,
+    next: index > 0 ? posts[index - 1] : null,
+  };
+}

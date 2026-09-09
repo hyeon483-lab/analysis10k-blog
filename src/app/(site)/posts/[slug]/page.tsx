@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getAllPosts, getPostBySlug, getRelatedPosts, getRelatedByTags } from '@/lib/posts';
+import { getAllPosts, getPostBySlug, getRelatedPosts, getRelatedByTags, getAdjacentPosts } from '@/lib/posts';
 import { CATEGORY_META } from '@/types/post';
 import PostCard from '@/components/PostCard';
 import ShareRow from '@/components/ShareRow';
@@ -102,6 +102,7 @@ export default async function PostPage({
 
   const related = await getRelatedPosts(post);
   const relatedByTags = await getRelatedByTags(post);
+  const { prev, next } = await getAdjacentPosts(post.slug);
 
   return (
     <article className={`post-page cat-${post.category}`}>
@@ -225,6 +226,27 @@ export default async function PostPage({
           </div>
         </div>
       )}
+      {(prev || next) && (
+        <div className="post-pager wrap">
+          {prev ? (
+            <Link className="pager-link prev" href={`/posts/${prev.slug}`}>
+              <span className="pager-dir">← Previous</span>
+              <span className="pager-title">{prev.title}</span>
+            </Link>
+          ) : (
+            <span />
+          )}
+          {next ? (
+            <Link className="pager-link next" href={`/posts/${next.slug}`}>
+              <span className="pager-dir">Next →</span>
+              <span className="pager-title">{next.title}</span>
+            </Link>
+          ) : (
+            <span />
+          )}
+        </div>
+      )}
+
       <div className="back-wrap">
         <Link className="back-link" href="/posts">← Back to all posts</Link>
       </div>

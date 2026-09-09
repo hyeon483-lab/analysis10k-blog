@@ -23,6 +23,14 @@ export default function SiteHeader() {
         <Link href="/posts" className={isPosts ? 'current' : ''}>All Posts</Link>
         <Link href="/industries" className={isIndustries ? 'current' : ''}>Industries</Link>
         <Link href="/tags" className={isTags ? 'current' : ''}>Tags</Link>
+        <form className="header-search" action="/posts" method="get">
+          <input
+            type="search"
+            name="q"
+            placeholder="Search company, ticker, topic…"
+            aria-label="Search posts"
+          />
+        </form>
       </nav>
     </>
   );
