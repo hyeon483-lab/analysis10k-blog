@@ -1,5 +1,6 @@
 import { supabase } from './supabaseClient';
 import type { Post, PostCategory, QuickFact, FaqEntry, TocEntry } from '@/types/post';
+import { getIndustry, INDUSTRY_META, type Industry } from './industries';
 
 interface PostRow {
   slug: string;
@@ -21,6 +22,17 @@ interface PostRow {
 const SELECT_COLUMNS =
   'slug, ticker, company, category, title, excerpt, takeaway, quick_facts, faq, toc, content_html, sources, tags, published_at';
 
+/**
+ * Normalizes Windows line endings to `\n`. `content_html` can pick up literal `\r\n`
+ * bytes from CRLF-saved source files (this repo's `posts.ts` is edited on Windows).
+ * Left in place, those `\r\n` sequences cause a React hydration mismatch: the raw
+ * SSR HTML stream and the RSC flight payload used to verify it on the client don't
+ * treat `\r\n` identically, so the same string appears to differ between them.
+ */
+function normalizeLineEndings(html: string): string {
+  return html.replace(/\r\n/g, '\n');
+}
+
 function rowToPost(row: PostRow): Post {
   return {
     slug: row.slug,
@@ -33,7 +45,7 @@ function rowToPost(row: PostRow): Post {
     quickFacts: row.quick_facts ?? undefined,
     faq: row.faq ?? undefined,
     toc: row.toc,
-    contentHtml: row.content_html,
+    contentHtml: normalizeLineEndings(row.content_html),
     sources: row.sources,
     tags: row.tags,
     publishedAt: row.published_at,
@@ -103,4 +115,21 @@ export async function getAllTags(): Promise<{ tag: string; count: number }[]> {
 export async function getPostsByTag(tag: string): Promise<Post[]> {
   const posts = await getAllPosts();
   return posts.filter((p) => p.tags.some((t) => t.toLowerCase() === tag.toLowerCase()));
+}
+
+export async function getAllIndustries(): Promise<{ industry: Industry; label: string; count: number }[]> {
+  const posts = await getAllPosts();
+  const counts = new Map<Industry, number>();
+  for (const post of posts) {
+    const industry = getIndustry(post.ticker);
+    counts.set(industry, (counts.get(industry) ?? 0) + 1);
+  }
+  return Array.from(counts.entries())
+    .map(([industry, count]) => ({ industry, label: INDUSTRY_META[industry].label, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export async function getPostsByIndustry(industry: Industry): Promise<Post[]> {
+  const posts = await getAllPosts();
+  return posts.filter((p) => getIndustry(p.ticker) === industry);
 }

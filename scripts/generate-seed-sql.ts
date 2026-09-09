@@ -14,6 +14,11 @@ function tagsLiteral(tags: string[]): string {
   return `ARRAY[${escaped}]`;
 }
 
+/** Strips CRLF picked up from this repo's Windows-saved posts.ts — see src/lib/posts.ts. */
+function normalizeLineEndings(html: string): string {
+  return html.replace(/\r\n/g, '\n');
+}
+
 function postToInsert(post: Post, idx: number): string {
   const quickFacts = post.quickFacts ? jsonLiteral(`qf${idx}`, post.quickFacts) : 'null';
   const faq = post.faq ? jsonLiteral(`faq${idx}`, post.faq) : 'null';
@@ -30,7 +35,7 @@ values (
   ${quickFacts},
   ${faq},
   ${jsonLiteral(`toc${idx}`, post.toc)},
-  ${sqlText(`html${idx}`, post.contentHtml)},
+  ${sqlText(`html${idx}`, normalizeLineEndings(post.contentHtml))},
   ${sqlText(`src${idx}`, post.sources)},
   ${tagsLiteral(post.tags)},
   'published',

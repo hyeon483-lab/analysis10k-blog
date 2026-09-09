@@ -16,6 +16,7 @@ export default function NotFound() {
           <ul className="not-found-links">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/posts">All Posts</Link></li>
+            <li><Link href="/industries">Browse by Industry</Link></li>
             <li><Link href="/tags">Browse by Tag</Link></li>
             <li><Link href="/about">About</Link></li>
           </ul>
@@ -26,6 +27,7 @@ export default function NotFound() {
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy</Link>
+          <Link href="/industries">Industries</Link>
           <Link href="/tags">Tags</Link>
           <a href="/rss.xml">RSS</a>
         </div>

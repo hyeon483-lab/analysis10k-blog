@@ -8,6 +8,7 @@ export default function SiteHeader() {
   const isHome = pathname === '/';
   const isPosts = pathname.startsWith('/posts');
   const isTags = pathname.startsWith('/tags');
+  const isIndustries = pathname.startsWith('/industries');
 
   return (
     <>
@@ -20,6 +21,7 @@ export default function SiteHeader() {
       <nav className="sitenav">
         <Link href="/" className={isHome ? 'current' : ''}>Home</Link>
         <Link href="/posts" className={isPosts ? 'current' : ''}>All Posts</Link>
+        <Link href="/industries" className={isIndustries ? 'current' : ''}>Industries</Link>
         <Link href="/tags" className={isTags ? 'current' : ''}>Tags</Link>
       </nav>
     </>

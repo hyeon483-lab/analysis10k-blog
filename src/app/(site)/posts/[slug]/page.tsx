@@ -5,7 +5,8 @@ import { getAllPosts, getPostBySlug, getRelatedPosts, getRelatedByTags } from '@
 import { CATEGORY_META } from '@/types/post';
 import PostCard from '@/components/PostCard';
 import ShareRow from '@/components/ShareRow';
-import { sparklinePoints, seedFromString } from '@/lib/sparkline';
+import IndustryIcon from '@/components/IndustryIcon';
+import { getIndustry } from '@/lib/industries';
 
 export const revalidate = 60;
 
@@ -101,7 +102,6 @@ export default async function PostPage({
 
   const related = await getRelatedPosts(post);
   const relatedByTags = await getRelatedByTags(post);
-  const points = sparklinePoints(seedFromString(post.slug));
 
   return (
     <article className={`post-page cat-${post.category}`}>
@@ -118,9 +118,9 @@ export default async function PostPage({
         <span aria-current="page">{post.title}</span>
       </nav>
       <div className={`post-banner cat-${post.category}`}>
-        <svg viewBox="0 0 400 140" preserveAspectRatio="none">
-          <polyline points={points} fill="none" stroke="#ffffff" strokeWidth={3} />
-        </svg>
+        <div className="banner-icon">
+          <IndustryIcon industry={getIndustry(post.ticker)} />
+        </div>
         <div className="inner">
           <span className="cat-tag">
             {CATEGORY_META[post.category].label} · {post.ticker}
@@ -165,7 +165,19 @@ export default async function PostPage({
           </ol>
         </nav>
 
-        <div className="prose" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+        {/*
+          suppressHydrationWarning: the server-rendered HTML here is verified correct and
+          complete (this content never changes client-side), but React's hydration
+          verification for large dangerouslySetInnerHTML blocks containing certain Unicode
+          sequences (em dashes, curly quotes) intermittently flags a false-positive mismatch
+          on this Next.js 16 canary build. Suppressing it also skips a wasted full re-render
+          of this block on every load.
+        */}
+        <div
+          className="prose"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        />
 
         {post.faq && post.faq.length > 0 && (
           <div className="faq-section">
