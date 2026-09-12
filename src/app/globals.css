@@ -23,6 +23,12 @@
   --cat-dcf-ink: #0b5148;
   --cat-dcf-soft: #e4f3f0;
   --shadow: 0 1px 2px rgba(24, 26, 22, .06), 0 8px 24px -16px rgba(24, 26, 22, .18);
+  /* Fixed (non-theme-swapped) dark tones for banner gradients — these hold white banner
+     text/icons, so they must stay dark in both light and dark site themes. */
+  --banner-ink: #181a16;
+  --banner-accent-ink: #0f2f8a;
+  --banner-story-ink: #7a3714;
+  --banner-dcf-ink: #0b5148;
   --serif: var(--font-serif), Georgia, 'Times New Roman', serif;
   --sans: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --mono: var(--font-mono), ui-monospace, 'SFMono-Regular', Menlo, monospace;
@@ -131,9 +137,9 @@ a { color: inherit; }
 @media (max-width: 560px) { .card-grid { grid-template-columns: 1fr; } }
 
 .post-card { display: block; text-decoration: none; color: inherit; }
-.card-banner { position: relative; height: 104px; border-radius: 10px; overflow: hidden; margin-bottom: 12px; background: linear-gradient(150deg, var(--ink), var(--accent-ink)); }
-.card-banner.cat-story { background: linear-gradient(150deg, var(--ink), var(--cat-story-ink)); }
-.card-banner.cat-dcf { background: linear-gradient(150deg, var(--ink), var(--cat-dcf-ink)); }
+.card-banner { position: relative; height: 104px; border-radius: 10px; overflow: hidden; margin-bottom: 12px; background: linear-gradient(150deg, var(--banner-ink), var(--banner-accent-ink)); }
+.card-banner.cat-story { background: linear-gradient(150deg, var(--banner-ink), var(--banner-story-ink)); }
+.card-banner.cat-dcf { background: linear-gradient(150deg, var(--banner-ink), var(--banner-dcf-ink)); }
 .card-banner .banner-icon { position: absolute; top: 8px; right: 8px; width: 60px; height: 60px; color: #fff; opacity: .85; }
 .card-banner .ticker { position: absolute; left: 12px; bottom: 10px; font-family: var(--mono); font-size: 11px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, .16); border-radius: 5px; padding: 2px 7px; }
 .post-card .cat { font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 6px; display: block; }
@@ -157,6 +163,12 @@ a { color: inherit; }
 .filter-pill { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--ink-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 7px 14px; cursor: pointer; }
 .filter-pill[aria-pressed="true"] { color: var(--accent-ink); background: var(--accent-soft); border-color: var(--accent); }
 
+.pagination { max-width: 980px; margin: 30px auto 0; padding: 0 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+.page-btn { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--ink-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; min-width: 34px; height: 34px; padding: 0 8px; cursor: pointer; }
+.page-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--ink); }
+.page-btn[aria-current="page"] { color: #fff; background: var(--accent); border-color: var(--accent); }
+.page-btn:disabled { opacity: .4; cursor: default; }
+
 /* ---------- Industry pages ---------- */
 .industry-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 6px 0 20px; }
 @media (max-width: 820px) { .industry-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -179,9 +191,9 @@ a { color: inherit; }
 .breadcrumb a:hover { color: var(--ink-muted); text-decoration: underline; }
 .breadcrumb span[aria-current] { color: var(--ink-muted); max-width: 40ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-.post-banner { position: relative; padding: 64px 20px 50px; margin-bottom: 34px; background: linear-gradient(150deg, var(--ink) 0%, var(--accent-ink) 130%); overflow: hidden; }
-.post-banner.cat-story { background: linear-gradient(150deg, var(--ink) 0%, var(--cat-story-ink) 130%); }
-.post-banner.cat-dcf { background: linear-gradient(150deg, var(--ink) 0%, var(--cat-dcf-ink) 130%); }
+.post-banner { position: relative; padding: 64px 20px 50px; margin-bottom: 34px; background: linear-gradient(150deg, var(--banner-ink) 0%, var(--banner-accent-ink) 130%); overflow: hidden; }
+.post-banner.cat-story { background: linear-gradient(150deg, var(--banner-ink) 0%, var(--banner-story-ink) 130%); }
+.post-banner.cat-dcf { background: linear-gradient(150deg, var(--banner-ink) 0%, var(--banner-dcf-ink) 130%); }
 .post-banner .banner-icon { position: absolute; top: 50%; right: 6%; width: 150px; height: 150px; transform: translateY(-50%); color: #fff; opacity: .22; }
 @media (max-width: 700px) { .post-banner .banner-icon { width: 100px; height: 100px; right: -10px; } }
 .post-banner .inner { position: relative; max-width: 760px; margin: 0 auto; }
@@ -256,8 +268,8 @@ a { color: inherit; }
 .prose .quote { border-left: 3px solid var(--accent); padding: 2px 0 2px 18px; margin: 20px 0; font-family: var(--serif); font-style: italic; font-size: 16.5px; color: var(--ink); }
 .prose .quote .attr { display: block; font-family: var(--mono); font-style: normal; font-size: 11.5px; color: var(--ink-faint); margin-top: 8px; }
 
-.prose .verdict-box { background: linear-gradient(155deg, var(--ink) 0%, var(--cat-dcf-ink) 130%); color: #fdfdfb; border-radius: 14px; padding: 26px 26px; margin: 22px 0; }
-.prose .verdict-box .label { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--cat-dcf-ink); background: rgba(255, 255, 255, .9); display: inline-block; border-radius: 4px; padding: 2px 8px; margin-bottom: 12px; }
+.prose .verdict-box { background: linear-gradient(155deg, var(--banner-ink) 0%, var(--banner-dcf-ink) 130%); color: #fdfdfb; border-radius: 14px; padding: 26px 26px; margin: 22px 0; }
+.prose .verdict-box .label { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--banner-dcf-ink); background: rgba(255, 255, 255, .9); display: inline-block; border-radius: 4px; padding: 2px 8px; margin-bottom: 12px; }
 .prose .verdict-box p { color: #fdfdfb; font-size: 19px; font-weight: 600; line-height: 1.5; margin: 0 0 10px; max-width: none; }
 .prose .verdict-box .num { font-family: var(--serif); font-size: 26px; font-weight: 700; }
 .prose .verdict-box p:last-child { margin-bottom: 0; }
