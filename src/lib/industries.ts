@@ -83,3 +83,6 @@ export function getIndustry(ticker: string): Industry {
 export function getIndustryLabel(ticker: string): string {
   return INDUSTRY_META[getIndustry(ticker)].label;
 }
+
+/** Every ticker Analysis10k tracks — used by the daily quote-update cron. */
+export const ALL_TICKERS = Object.keys(TICKER_INDUSTRY);
