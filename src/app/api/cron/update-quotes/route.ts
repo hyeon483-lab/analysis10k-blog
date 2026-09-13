@@ -32,6 +32,18 @@ export async function GET(request: Request) {
     }
   }
 
+  try {
+    return await runUpdate();
+  } catch (err) {
+    // Surfaced deliberately (rather than letting it bubble to Vercel's opaque
+    // production 500 page) so a manual GET to this route is enough to diagnose
+    // failures — this endpoint returns no sensitive data either way.
+    const message = err instanceof Error ? err.message : String(err);
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
+}
+
+async function runUpdate() {
   const supabase = createAdminClient();
   const quotes = await fetchQuotes(ALL_TICKERS);
 
