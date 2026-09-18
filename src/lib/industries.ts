@@ -48,17 +48,22 @@ const TICKER_INDUSTRY: Record<string, Industry> = {
   AXP: 'financials',
   GS: 'financials',
   'BRK-B': 'financials',
+  MA: 'financials',
+  BAC: 'financials',
   // Healthcare
   UNH: 'healthcare',
   CVS: 'healthcare',
   JNJ: 'healthcare',
   MRK: 'healthcare',
   CI: 'healthcare',
+  PFE: 'healthcare',
   // Energy
   CVX: 'energy',
   XOM: 'energy',
   OXY: 'energy',
   VST: 'energy',
+  EQT: 'energy',
+  EXE: 'energy',
   // Consumer Goods & Restaurants
   KO: 'consumer',
   PEP: 'consumer',
@@ -70,6 +75,7 @@ const TICKER_INDUSTRY: Record<string, Industry> = {
   CTVA: 'industrials',
   TSLA: 'industrials',
   WM: 'industrials',
+  RACE: 'industrials',
   // Real Estate
   O: 'real-estate',
   PLD: 'real-estate',
