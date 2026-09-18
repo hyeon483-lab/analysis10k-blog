@@ -77,6 +77,16 @@ export default function IndustryIcon({ industry }: { industry: Industry }) {
           <path d="M8 52H56" />
         </svg>
       );
+    case 'automotive':
+      return (
+        <svg {...props}>
+          <path d="M10 40V30L16 18H44L52 30V40" strokeLinejoin="round" />
+          <path d="M8 40H56V46H8V40Z" strokeLinejoin="round" />
+          <circle cx="20" cy="46" r="6" />
+          <circle cx="44" cy="46" r="6" />
+          <path d="M10 30H54" />
+        </svg>
+      );
     default:
       return null;
   }

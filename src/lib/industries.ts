@@ -6,7 +6,8 @@ export type Industry =
   | 'energy'
   | 'consumer'
   | 'industrials'
-  | 'real-estate';
+  | 'real-estate'
+  | 'automotive';
 
 export const INDUSTRY_META: Record<Industry, { label: string }> = {
   semiconductors: { label: 'Semiconductors' },
@@ -17,6 +18,7 @@ export const INDUSTRY_META: Record<Industry, { label: string }> = {
   consumer: { label: 'Consumer Goods & Restaurants' },
   industrials: { label: 'Industrials & Materials' },
   'real-estate': { label: 'Real Estate' },
+  automotive: { label: 'Automotive' },
 };
 
 /** Every ticker Analysis10k tracks (published or planned), mapped to one industry bucket. */
@@ -73,9 +75,10 @@ const TICKER_INDUSTRY: Record<string, Industry> = {
   DE: 'industrials',
   RSG: 'industrials',
   CTVA: 'industrials',
-  TSLA: 'industrials',
   WM: 'industrials',
-  RACE: 'industrials',
+  // Automotive
+  TSLA: 'automotive',
+  RACE: 'automotive',
   // Real Estate
   O: 'real-estate',
   PLD: 'real-estate',
