@@ -15789,4 +15789,2017 @@ export const POSTS: Post[] = [
 </footer>
 `,
   },
+
+  {
+    slug: 'ma-snapshot',
+    ticker: 'MA',
+    company: 'Mastercard',
+    category: 'snapshot',
+    title: 'Mastercard (MA): What This Company Actually Does',
+    excerpt:
+      "A plain-English read of Mastercard's business — the network that connects banks on both sides of every card swipe, not a card issuer or a lender — built directly from its SEC filings.",
+    takeaway:
+      "Mastercard doesn't issue cards or lend money to anyone — it operates the network that lets a card-issuing bank and a merchant's bank settle transactions with each other, collecting a small toll on every swipe based on transaction volume and count.",
+    quickFacts: [
+      { k: 'Share price', v: '$588.14' },
+      { k: 'Market cap', v: '~$515.2B' },
+      { k: 'FY2025 revenue', v: '$32.79B' },
+      { k: 'Dividend yield', v: '~0.5%' },
+    ],
+    faq: [
+      { q: 'How does Mastercard make money?', a: "Mastercard operates the network that clears and settles card transactions between a merchant's bank and a card-issuing bank, charging network fees priced on transaction volume (gross dollar volume) and the number of transactions switched — it never issues cards, extends credit, or takes on consumer credit risk itself." },
+      { q: 'Who actually pays Mastercard?', a: "Banks, not consumers or merchants directly. Mastercard's real customers are the card-issuing banks and merchant-acquiring banks on either side of a transaction — the top 5 customers combined made up 21% of FY2025 net revenue, with no single customer above 10%." },
+      { q: "What is Mastercard's market cap?", a: "As of this article's data, Mastercard's market cap was about $515.2B, on FY2025 net revenue of $32.79B." },
+    ],
+    toc: [
+      { id: 'how-it-makes-money', label: 'How Mastercard makes money' },
+      { id: 'revenue-mix', label: 'Where the revenue comes from' },
+      { id: 'customers-competitors', label: 'Customers and competitors' },
+      { id: 'core-metric', label: 'The metric that matters most' },
+      { id: 'leadership', label: 'Leadership and ownership' },
+      { id: 'capital-returns', label: 'Capital returns' },
+      { id: 'failure-scenario', label: 'How this company could fail' },
+      { id: 'financials', label: 'Five-year financials' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
+    tags: ['MA', 'Payments', '10-K'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="how-it-makes-money">How Mastercard makes money</h2>
+<p>Mastercard runs a "four-party" payment network: when a consumer pays with a card, the merchant's bank (the acquirer) asks Mastercard to clear and settle the transaction with the cardholder's bank (the issuer). Mastercard never touches the money as credit or holds consumer risk — it just processes the handoff and charges both banks a network fee for doing so.</p>
+<div class="flow">
+  <div class="flow-box"><div class="t">Consumer pays with a card</div><div class="d">At a merchant</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box center"><div class="t">Mastercard — clears & settles</div><div class="d">Between the merchant's bank and the card-issuing bank</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box"><div class="t">Banks pay network fees</div><div class="d">Priced on transaction volume (GDV) and switched-transaction count</div></div>
+</div>
+<p class="src-note">Mastercard never issues cards, extends credit, or takes on consumer credit risk — its real customers are banks, not cardholders or merchants. Source: 10-K FY2025, Item 1 Business.</p>
+
+<h2 id="revenue-mix">Where the revenue comes from</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Net revenue by segment — FY2025</caption>
+    <thead><tr><th>Segment</th><th>Revenue</th><th>Share</th></tr></thead>
+    <tbody>
+      <tr><td>Payment Network</td><td>$19,476M</td><td>59%</td></tr>
+      <tr><td>Value-added services & solutions</td><td>$13,315M</td><td>41%</td></tr>
+      <tr class="highlight"><td>Total net revenue</td><td>$32,791M</td><td>100%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Value-added services grew 23% year over year in FY2025, nearly double the Payment Network segment's 12% growth — the revenue mix is steadily shifting toward this higher-growth "services" side. Source: 10-K FY2025, Note 3 (Revenue).</p>
+<p>Geographically (FY2025): the Americas are 43% ($14,044M), and Asia-Pacific/Europe/Middle East/Africa combined are 57% ($18,747M). The U.S. alone is about 29% of net revenue.</p>
+<div class="callout warn"><b>More than half of revenue comes from outside the U.S.</b>With 57% of revenue from abroad, Mastercard is directly exposed to currency swings and to country-specific regulation — especially interchange-fee caps, which several major markets already impose or are actively considering.</div>
+<p class="src-note">Source: 10-K FY2025, Note 3; U.S.-specific figure, p.110.</p>
+
+<h2 id="customers-competitors">Customers and competitors</h2>
+<p>Mastercard sells B2B — banks, not consumers or merchants, are the actual paying customers. In FY2025, the top 5 customers combined made up 21% of net revenue ($6.9B), with no single customer above 10%.</p>
+<ul class="kicker-list">
+  <li><b>Visa</b> — the largest direct competitor running the same four-party network model, and the #1 player globally by gross dollar volume.</li>
+  <li><b>American Express</b> — runs a closed-loop, three-party network, issuing its own cards and signing merchants directly — a structurally different (and riskier, higher-margin) model than Mastercard's.</li>
+  <li><b>PayPal and other fintech/digital wallets</b> — increasingly route payments through bank accounts directly, bypassing card networks (and Mastercard's fees) entirely.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, p.56 (customer concentration); competitive discussion throughout Item 1.</p>
+
+<h2 id="core-metric">The metric that matters most in this sector</h2>
+<p>Because Mastercard never handles cards or credit directly, its two real growth engines are Gross Dollar Volume (GDV, the total value of transactions flowing across its network) and the number of transactions it switches. When these slow, revenue growth slows right alongside them.</p>
+<div class="table-wrap">
+  <table>
+    <caption>GDV and switched transactions, 2023–2025</caption>
+    <thead><tr><th></th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>GDV ($ trillions)</td><td>9.0</td><td>9.8</td><td>10.6</td></tr>
+      <tr><td>Switched transactions (billions)</td><td>143.2</td><td>159.4</td><td>175.5</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Cross-border transaction volume grew 18% (local currency) in 2025, roughly double overall GDV growth (9%) — and since cross-border transactions carry higher fee rates than domestic ones, this mix shift has been a genuine tailwind for margins, not just volume.</p>
+<p class="src-note">Source: 10-K FY2023, FY2024, and FY2025, "Our Performance" sections.</p>
+
+<h2 id="leadership">Leadership and ownership</h2>
+<p>CEO Michael Miebach (58) has led Mastercard since January 2021, following nearly two decades inside the company — Chief Product Officer from 2016 and head of the Middle East/Africa region from 2010. He is not a founder; Mastercard began as a bank consortium and went public in 2006. Combined insider ownership across directors and executives is under 1%; the largest shareholders are index funds Vanguard (8.6%) and BlackRock (7.7%).</p>
+<p class="src-note">Source: DEF 14A 2026, p.33, p.111.</p>
+
+<h2 id="capital-returns">Capital returns</h2>
+<p>Mastercard paid a dividend of $3.04/share in 2025 (up from $2.64, a 15% raise), for $2.8B in total dividend payments. It repurchased $14.5B of stock in 2025 alone — combined, dividends and buybacks returned $17.6B to shareholders that year.</p>
+<div class="callout good"><b>Buybacks that actually shrank the share count</b>Diluted weighted-average shares outstanding fell from 946 million (2023) to 906 million (2025) — a real 4.2% reduction over three years, meaning repurchases have outpaced new shares issued through employee compensation, not just offset them.</div>
+<p class="src-note">Source: 10-K FY2025, p.6, p.49, p.60.</p>
+
+<h2 id="failure-scenario">How this company could fail</h2>
+<div class="callout bad">
+  <b>Failure scenario</b>
+  If governments worldwide impose hard caps on interchange fees, or banks and merchants shift en masse to account-to-account real-time payments that bypass card networks entirely, the per-transaction toll that is Mastercard's core business could be cut off at the root.
+</div>
+<ul class="kicker-list">
+  <li><b>Regulatory risk — interchange fee caps</b> — U.S. debit-fee caps, EU consumer credit/debit fee ceilings, and various forced-routing laws are already in effect or actively advancing. These directly target the per-transaction fee rate that is Mastercard's core revenue driver.</li>
+  <li><b>Litigation risk</b> — Mastercard faces extensive antitrust and interchange-related class actions and regulatory investigations. U.S. antitrust cases carry treble damages, meaning a single adverse ruling could materially hit results in one stroke.</li>
+  <li><b>Competitive bypass risk</b> — account-based real-time payments (fintech apps, government-led payment infrastructure), closed-loop networks like American Express, and digital wallets increasingly let merchants and banks settle without touching Mastercard's rails at all.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors, p.29-31.</p>
+
+<h2 id="financials">Five-year financials</h2>
+<div class="table-wrap">
+  <table>
+    <caption>$ millions</caption>
+    <thead><tr><th></th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>Net revenue</td><td>18,884</td><td>22,237</td><td>25,098</td><td>28,167</td><td>32,791</td></tr>
+      <tr><td>YoY growth</td><td>—</td><td class="pos">+17.8%</td><td class="pos">+12.9%</td><td class="pos">+12.2%</td><td class="pos">+16.4%</td></tr>
+      <tr><td>Operating income (margin)</td><td>10,082 (53.4%)</td><td>12,264 (55.2%)</td><td>14,008 (55.8%)</td><td>15,582 (55.3%)</td><td>18,897 (57.6%)</td></tr>
+      <tr class="highlight"><td>Free cash flow</td><td>8,649</td><td>10,098</td><td>10,892</td><td>13,586</td><td>16,433</td></tr>
+      <tr><td>Total debt</td><td>13,901</td><td>14,023</td><td>15,681</td><td>18,226</td><td>19,000</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="callout good"><b>Clean earnings quality</b>Operating income and free cash flow have risen together every year — no "profit up, cash down" warning signs. Net debt against EBITDA runs at roughly 0.4x in 2025, a low leverage level for a company this size.</div>
+<p class="src-note">FCF = operating cash flow minus (capex plus capitalized software). Source: 10-K FY2023, p.49 (2021-2023); 10-K FY2025, p.49, p.69, p.71 (2024-2025).</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>How FY2026 results have tracked since the most recent quarter reviewed here</b> isn't known from this data alone — later earnings calls would need to be checked.</li>
+  <li><b>Exactly when, and by how much, U.S. and EU interchange regulation will cut fee rates</b> isn't quantifiable from the risk-factor language alone — this requires ongoing regulatory tracking.</li>
+  <li><b>Whether the current share price is expensive or cheap relative to this growth</b> can't be judged from the business-model analysis alone — that's what the reverse-DCF piece is for.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from Mastercard's 10-K filings for FY2021 through FY2025 and DEF 14A 2026, plus a web search for the current share price (stockanalysis.com, Sept 2, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
+</footer>
+`,
+  },
+
+  {
+    slug: 'ma-story',
+    ticker: 'MA',
+    company: 'Mastercard',
+    category: 'story',
+    title: "Mastercard's Story: A Tariff Scare That Faded Fast, Then a Slow Cool-Down and a CFO Exit",
+    excerpt:
+      "A confident two-year growth run barely wobbled through an early-2025 tariff scare — but by 2026, growth had cooled to its slowest pace in years, right as the CFO changed seats.",
+    takeaway:
+      "Mastercard's growth accelerated through 2024, weathered a brief early-2025 tariff-driven sentiment scare that faded within a single quarter, then began quietly decelerating through 2026 — landing just under its own guidance for the first time in this three-year stretch, in the same quarter its CFO of nearly eight years moved to a new role.",
+    faq: [
+      { q: "Did tariffs actually hurt Mastercard's results?", a: "Barely, and only briefly. On the Q1 FY2025 call, CEO Michael Miebach directly acknowledged that tariff and geopolitical concerns had weakened consumer and business sentiment — but that same quarter's net revenue still grew 17%, and by the very next quarter, management narrowed full-year guidance toward the top of its range rather than cutting it. Mentions of 'tariff' in earnings-call transcripts dropped from 3 to zero over the following two quarters." },
+      { q: "What new language appeared in Mastercard's FY2025 10-K?", a: "For the first time in five years of filings, the FY2025 10-K named a specific product ('Mastercard Agent Pay'), a specific trend ('Agentic Commerce'), and a specific law (the GENIUS Act, the first major U.S. stablecoin legislation, mentioned 12 times) — a level of detail companies typically reserve for initiatives they've already committed real resources to." },
+      { q: 'What sources does this analysis draw from?', a: "This piece is built from Mastercard's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026." },
+    ],
+    toc: [
+      { id: 'the-story', label: 'The story' },
+      { id: 'guidance-record', label: 'Guidance scorecard' },
+      { id: 'timeline', label: 'Timeline' },
+      { id: 'our-read', label: 'Our read' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
+    tags: ['MA', 'Earnings Calls', 'Payments'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="the-story">The story</h2>
+<h3>Late 2023 into 2024: confident, then accelerating</h3>
+<p>On the Q3 FY2023 call, despite the Israel-Hamas war breaking out that quarter, management stressed "strong fundamentals, a diversified model, and resilient consumer spending," with net revenue up 11% on a constant-currency basis. That pace only accelerated through 2024 — from +11% in Q1 to +16% by Q4 — and by the Q3 call, management was confident enough to joke that there was "nothing spooky here" about Halloween-quarter conditions. That same period, the company announced acquisitions of Recorded Future (cyber threat intelligence) and Minna Technologies (subscription management), pushing further into value-added services beyond the core network business.</p>
+
+<h3>Early 2025: the first crack, and a fast recovery</h3>
+<p>On the Q4 FY2024 call (January 2025), an analyst asked for the first time what a full tariff rollout would mean for the business. Just one quarter later, on the Q1 FY2025 call, CEO Michael Miebach opened by acknowledging directly that "consumer and business sentiment has weakened... due to concerns surrounding the impact from tariffs and geopolitical tensions" — language that appeared only in the earnings-call script, not in that quarter's 10-K. Results held up regardless (net revenue +17% that quarter), and management met the anxiety with "resilience is already built into the business model." One quarter later, on the Q2 FY2025 call, management actually narrowed full-year guidance toward the top of its range rather than cutting it, and "tariff" mentions dropped from 3 that quarter to zero across the next two.</p>
+
+<h3>The company's response: new language for a new bet</h3>
+<p>The FY2025 10-K quietly introduced terms absent from the prior five years of filings: "Agentic" payments, "Mastercard Agent Pay," stablecoin settlement support, and explicit references to the GENIUS Act (the first major U.S. stablecoin legislation, passed in 2025) — mentioned a dozen times. Companies don't typically name a specific product and a specific law in a risk-factors section unless real resources are already committed behind them.</p>
+
+<h3>Now: growth cooling, and a CFO handoff</h3>
+<p>On the Q4 FY2025 call (January 2026), management guided 2026 net revenue growth to "the high end of low double digits" (roughly 13%, constant currency). Actual Q1 and Q2 FY2026 growth came in at 12% each — a touch below that guided range, the first time in this three-year stretch that results landed slightly under rather than comfortably over guidance. That same Q2 FY2026 call also announced that Sachin Mehra, CFO for nearly eight years, would move to Chief Business Officer, with Ling Hai stepping in as the new CFO — framed by the company as "evolution from a position of strength."</p>
+
+<div class="callout warn">
+  <b>Our take, in one line</b>
+  The throughline across these three years is that shocks hit Mastercard and fade fast — pandemic normalization, inflation, the early-2025 tariff scare, none knocked results off track for more than a quarter or two. What's different now is that the pattern of comfortably beating guidance has, for the first time, shifted to landing just under it, at exactly the moment the CFO is changing seats. That overlap could be coincidence, but it's worth confirming against the next two or three quarters before assuming it's nothing.
+</div>
+
+<h2 id="guidance-record">Guidance scorecard</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Annual net-revenue guidance vs. actual results, FY2025–FY2026</caption>
+    <thead><tr><th>Cycle</th><th>Promise</th><th>Actual result</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>FY2025 annual (Q1'25 call)</td><td>High end of low double digits to high teens (CC, ex-acquisitions, ~13-14%)</td><td>+15% (constant currency)</td><td class="pos">Beat</td></tr>
+      <tr><td>FY2025 H1 → H2 (Q2'25 call)</td><td>Maintain the Q1-set range</td><td>Range narrowed toward the top, on strong H1 results</td><td class="pos">Raised confidence</td></tr>
+      <tr class="highlight"><td>FY2026 annual (Q4'25 call)</td><td>High end of low double digits (CC, ex-organic, ~13%)</td><td>+12% Q1; +12% Q2 (both constant currency)</td><td class="neg">Running just under guidance — worth watching</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Source: Q1, Q2, and Q4 FY2025 and Q1-Q2 FY2026 earnings calls (CFO Sachin Mehra's guidance language); 10-K FY2025, p.49.</p>
+
+<h2 id="timeline">Timeline</h2>
+<ul class="timeline">
+  <li><span class="date">Q3 2023</span>Israel-Hamas war acknowledged; "strong fundamentals" emphasized; revenue +11% (CC).</li>
+  <li><span class="date">Q3 2024</span>Recorded Future and Minna Technologies acquisitions announced; "nothing spooky here" on the Halloween-quarter call.</li>
+  <li class="crisis"><span class="date">Q1 2025</span>CEO directly acknowledges tariff- and geopolitics-driven sentiment weakness for the first time.</li>
+  <li><span class="date">Q2 2025</span>Tariff concern fades from the transcripts; full-year guidance narrowed toward the top instead of cut.</li>
+  <li><span class="date">FY2025 10-K</span>"Agentic Commerce," "Mastercard Agent Pay," and GENIUS Act language appear for the first time in five years of filings.</li>
+  <li class="crisis"><span class="date">Q1–Q2 2026</span>Constant-currency revenue growth slows to 12%, a multi-year low; cross-border travel headwinds cited from geopolitical tension.</li>
+  <li class="crisis"><span class="date">Q2 2026</span>CFO Sachin Mehra moves to Chief Business Officer; Ling Hai named new CFO.</li>
+</ul>
+
+<h2 id="our-read">Our read</h2>
+<p>Mastercard's last three years show a company that has absorbed every shock thrown at it — a war, inflation, a tariff scare — without losing more than a quarter of momentum each time. The genuinely new development is the shape of the last two quarters: growth landing just below, rather than comfortably above, its own guidance, coinciding with the first CFO change in nearly eight years. Neither fact alone is alarming, but together they're the clearest signal yet that this three-year run of easy beats may be entering a different phase — one that the next two or three quarters, not this filing history, will settle.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>Whether the FY2026 growth slowdown is temporary or the start of a trend</b> can't be determined from just two quarters — whether guidance actually gets cut in the H2 2026 calls will be the real test.</li>
+  <li><b>Whether the CFO transition changes financial policy</b> (buyback pace, debt use) isn't clear from the transcripts reviewed — Ling Hai was introduced for her regional (APAC/EMEA) results, not a specific finance mandate.</li>
+  <li><b>When Agent Pay and stablecoin initiatives actually show up as measurable revenue</b> isn't disclosed — the 10-K describes only a 2025 U.S. rollout and an early-2026 global rollout, with no revenue contribution broken out yet.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026. Tone assessments are qualitative. This is a research summary, not investment advice.
+</footer>
+`,
+  },
+
+  {
+    slug: 'ma-dcf',
+    ticker: 'MA',
+    company: 'Mastercard',
+    category: 'dcf',
+    title: "What MA's Stock Price Is Really Betting On",
+    excerpt:
+      "Reverse-engineering the free-cash-flow growth rate Mastercard's share price already assumes — and finding a number that sits below its 5-year track record but matches its newest, slower pace almost exactly.",
+    takeaway:
+      "At today's price, Mastercard's stock is pricing in about 12.3% annual free-cash-flow growth for the next ten years — below its actual 5-year FCF growth (17.4% a year), but almost exactly matching the roughly 12% revenue growth the company has posted in its two most recent quarters.",
+    faq: [
+      { q: "What growth rate does MA's stock price assume?", a: "At today's price, Mastercard's stock is pricing in about 12.3% annual free-cash-flow growth for the next ten years, at a 9% discount rate." },
+      { q: "How does that compare to Mastercard's actual growth?", a: "Mastercard's actual 5-year FCF CAGR was 17.4% a year and its 5-year revenue CAGR was 14.8% — both above the 12.3% the current price requires. But its two most recent quarters' constant-currency revenue growth (~12%) landed almost exactly at that required rate." },
+      { q: 'What share price was used for this analysis?', a: 'This analysis used $588.14, as of the Sept 2, 2026 close.' },
+    ],
+    toc: [
+      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
+      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
+      { id: 'what-would-move-it', label: 'What would move this number' },
+      { id: 'show-your-work', label: 'Show your work' },
+      { id: 'fine-print', label: 'The fine print' },
+    ],
+    sources: 'As of Sept 2, 2026 · Price used: $588.14',
+    tags: ['MA', 'ReverseDCF', 'Valuation'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<div class="verdict-box">
+  <div class="label">The conclusion</div>
+  <p>At its current price, MA implies <span class="num">~12.3%</span> annual FCF growth for the next 10 years, discounted at 9%.</p>
+  <p>Mastercard's actual FCF growth has averaged <span class="num">17.4%</span> a year over the past 5 years — well above what the price requires; its most recent two quarters' revenue growth (~12%) matches the market's ask almost exactly.</p>
+</div>
+
+<div class="callout warn">
+  <b>Verdict: not clearly cheap or expensive — the market's ask matches Mastercard's newest, slower pace, not its longer track record</b>
+  The required growth rate (12.3%) sits comfortably below Mastercard's 5-year FCF CAGR (17.4%) and 5-year revenue CAGR (14.8%) — on that basis alone, this would look like a mild ask. But the two most recent quarters' constant-currency revenue growth (~12%) landed almost exactly at the market's required rate, right as growth has visibly decelerated from the mid-teens. Whether today's price is a bargain or simply a fair reflection of a genuinely slower Mastercard depends entirely on which version of the company — the five-year Mastercard or the two-quarter Mastercard — turns out to be the real one.
+</div>
+
+<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<div class="datacard">
+  <div class="barlist">
+    <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:70%;background:var(--accent)"></div></div><span class="val">12.3%</span></div>
+    <div class="barrow"><span class="lbl">5-yr FCF CAGR</span><div class="track"><div class="fill" style="width:99%"></div></div><span class="val">17.4%</span></div>
+    <div class="barrow"><span class="lbl">3-yr FCF CAGR</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">17.6%</span></div>
+    <div class="barrow"><span class="lbl">5-yr revenue CAGR</span><div class="track"><div class="fill" style="width:84%"></div></div><span class="val">14.8%</span></div>
+    <div class="barrow"><span class="lbl">Most recent 2 quarters' revenue growth</span><div class="track"><div class="fill" style="width:68%"></div></div><span class="val">12.0%</span></div>
+  </div>
+  <p class="src-note">Required growth from the reverse DCF below. Historical figures from 10-K FY2021-FY2025 and Q1-Q2 FY2026 earnings calls.</p>
+</div>
+
+<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
+    <thead><tr><th>WACC</th><th>Required growth</th></tr></thead>
+    <tbody>
+      <tr><td>7%</td><td>7.1%</td></tr>
+      <tr><td>8%</td><td>9.9%</td></tr>
+      <tr class="highlight"><td>9% (base case)</td><td>12.3%</td></tr>
+      <tr><td>10%</td><td>14.6%</td></tr>
+      <tr><td>11%</td><td>16.6%</td></tr>
+      <tr><td>12%</td><td>18.6%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>At the lower end tested (7-8%), the required growth rate sits well below even the recent slower pace, making today's price look reasonably conservative. Push the discount rate up to 11-12%, and the required rate meets or exceeds the full 5-year FCF CAGR (17.4%) — a single assumption swings the read from "cheap" to "expensive."</p>
+
+<h2 id="what-would-move-it">What would move this number</h2>
+<ul class="kicker-list">
+  <li><b>Using FY2025's full-year FCF ($16.4B) instead of the trailing-twelve-month figure used here ($15,975M)</b> lowers the required growth rate slightly, from 12.3% to 11.9%.</li>
+  <li><b>Lowering the terminal growth rate from 2.5% to 2.0%</b> raises the required rate to 13.0%; raising it to 3.0% lowers it to 11.6%.</li>
+  <li><b>The single biggest lever is the discount rate itself</b> — see the sensitivity table above, where a WACC anywhere from 7% to 12% moves the required growth rate by more than 11 percentage points.</li>
+</ul>
+
+<h2 id="show-your-work">Show your work</h2>
+<details class="methodology">
+  <summary>Inputs, sources, model assumptions, and the calculation</summary>
+  <ul class="input-list">
+    <li><b>Share price</b><span>$588.14 — stockanalysis.com, Sept 2, 2026 close</span></li>
+    <li><b>Diluted shares outstanding</b><span>876.0M — stockanalysis.com, Sept 2, 2026</span></li>
+    <li><b>Market cap</b><span>$515.2B — price × diluted shares</span></li>
+    <li><b>Net debt</b><span>$13.0B — 10-Q (Jun 30, 2026): $24,643M total debt minus $11,291M cash minus $318M short-term investments</span></li>
+    <li><b>Base FCF (trailing twelve months)</b><span>$15,975M — 10-K FY2025 plus 1H FY2026 10-Q minus 1H FY2025 10-Q, operating cash flow minus (capex plus capitalized software)</span></li>
+    <li><b>Discount rate (WACC)</b><span>9% base case (7%/8%/10%/11%/12% tested)</span></li>
+    <li><b>Terminal growth rate</b><span>2.5% — long-run GDP-level assumption</span></li>
+  </ul>
+  <p style="font-size:13px;margin-top:16px;"><strong>Normalization check:</strong> TTM FCF ($15,975M) is +17.1% above the 3-year average ($13,637M) — within the ±40% threshold, so used as-is without adjustment.</p>
+  <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's target enterprise value (market cap plus net debt).</p>
+  <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR (2021→2025) = 17.4%. 3-yr FCF CAGR (2022→2025) = 17.6%. 5-yr revenue CAGR (2021→2025) = 14.8%.</p>
+</details>
+
+<h2 id="fine-print">The fine print</h2>
+<div class="callout bad">
+  <b>This number is a starting point, not an answer</b>
+  <ul style="margin:10px 0 0;padding-left:18px;">
+    <li>This isn't a fair-value price target — it only shows what the current price already assumes.</li>
+    <li>Change the discount rate or the FCF base, and the answer moves substantially — see the sensitivity table above.</li>
+    <li>Whether 12.3% growth is realistic depends on whether Mastercard's recent deceleration to ~12% growth is temporary or structural — not on this math alone.</li>
+    <li>A reverse DCF shows what the market currently expects — it does not say what the stock is "worth."</li>
+    <li>Any investment decision, and its outcome, is your own responsibility.</li>
+  </ul>
+</div>
+
+<footer class="disclosure">
+  Built from Mastercard's 10-K filings (FY2021–FY2025) and 10-Q (Jun 30, 2026), plus a web search for the current share price (stockanalysis.com, Sept 2, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
+</footer>
+`,
+  },
+
+  {
+    slug: 'bac-snapshot',
+    ticker: 'BAC',
+    company: 'Bank of America',
+    category: 'snapshot',
+    title: 'Bank of America (BAC): What This Company Actually Does',
+    excerpt:
+      "A plain-English read of Bank of America's business — taking deposits, lending that money back out, and collecting the spread — built directly from its SEC filings.",
+    takeaway:
+      "Bank of America takes in deposits, lends that money back out to individuals and businesses, and pockets the difference between the interest it pays depositors and the interest it collects from borrowers — plus fees from wealth management and investment banking — as the second-largest bank in the U.S.",
+    quickFacts: [
+      { k: 'Share price', v: '$62.60' },
+      { k: 'Market cap', v: '~$437.8B' },
+      { k: 'FY2025 revenue', v: '$113.1B' },
+      { k: 'Dividend yield', v: '~2.05%' },
+    ],
+    faq: [
+      { q: 'How does Bank of America make money?', a: "Bank of America takes deposits from customers and lends that money back out to individuals and businesses, earning the spread between what it pays depositors and what it collects from borrowers (net interest income) — plus fees from wealth management (Merrill/Private Bank), investment banking, and trading (Global Markets)." },
+      { q: "Is Bank of America's revenue concentrated in the U.S.?", a: "Yes, heavily — 86.4% of FY2025 revenue came from the U.S., with the rest spread across Europe/Middle East/Africa (6.7%), Asia (5.3%), and Latin America/Caribbean (1.6%). That limits currency risk but ties results tightly to the U.S. economy and interest-rate cycle." },
+      { q: "What is Bank of America's market cap?", a: "As of this article's data, Bank of America's market cap was about $437.8B, on FY2025 revenue of $113.1B." },
+    ],
+    toc: [
+      { id: 'how-it-makes-money', label: 'How Bank of America makes money' },
+      { id: 'revenue-mix', label: 'Where the revenue comes from' },
+      { id: 'customers-competitors', label: 'Customers and competitors' },
+      { id: 'core-metric', label: 'The metric that matters most' },
+      { id: 'leadership', label: 'Leadership and ownership' },
+      { id: 'capital-returns', label: 'Capital returns' },
+      { id: 'failure-scenario', label: 'How this company could fail' },
+      { id: 'financials', label: 'Five-year financials' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
+    tags: ['BAC', 'Banking', '10-K'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="how-it-makes-money">How Bank of America makes money</h2>
+<p>Bank of America takes in deposits from roughly 69 million consumer and small-business accounts, then lends much of that money back out — to households, businesses, and governments — while also managing money for wealthy clients and executing trades and deals for large institutions.</p>
+<div class="flow">
+  <div class="flow-box"><div class="t">Depositors & investors</div><div class="d">69M consumer/small-business accounts</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box center"><div class="t">Bank of America</div><div class="d">Takes deposits, makes loans and investments — $3.4T in assets</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box"><div class="t">Borrowers pay interest + wealth/institutional clients pay fees</div><div class="d">Companies, households, government, and $4.8T in managed wealth</div></div>
+</div>
+<p class="src-note">Net interest margin plus fee income together fund dividends and buybacks. Source: 10-K FY2025, p.2 (business segment overview), p.36 (segment overview).</p>
+
+<h2 id="revenue-mix">Where the revenue comes from</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Revenue and net income by segment — FY2025</caption>
+    <thead><tr><th>Segment</th><th>Revenue</th><th>Share</th><th>Net income</th><th>Net margin</th></tr></thead>
+    <tbody>
+      <tr><td>Consumer Banking</td><td>$43,673M</td><td>38.6%</td><td>$12,245M</td><td>28.0%</td></tr>
+      <tr><td>GWIM (wealth management)</td><td>$24,883M</td><td>22.0%</td><td>$4,670M</td><td>18.8%</td></tr>
+      <tr><td>Global Banking</td><td>$24,108M</td><td>21.3%</td><td>$7,793M</td><td>32.3%</td></tr>
+      <tr><td>Global Markets (trading)</td><td>$24,096M</td><td>21.3%</td><td>$6,111M</td><td>25.4%</td></tr>
+      <tr><td>All Other (corporate/adjustments)</td><td class="neg">-$3,663M</td><td>-3.2%</td><td class="neg">-$310M</td><td>—</td></tr>
+      <tr class="highlight"><td>Total</td><td>$113,097M</td><td>100%</td><td>$30,509M</td><td>27.0%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Source: 10-K FY2025, p.37 (Consumer Banking), p.39 (GWIM), p.41 (Global Banking), p.43 (Global Markets).</p>
+<p>Geographically (FY2025): the U.S. is 86.4% ($97,687M), with Europe/Middle East/Africa at 6.7%, Asia at 5.3%, and Latin America/Caribbean at 1.6%.</p>
+<div class="callout warn"><b>Low international exposure cuts both ways</b>With 86% of revenue from the U.S., Bank of America has limited currency risk — but that also means its results are tightly tied to the health of the U.S. economy and Federal Reserve policy, with no geographic diversification to soften a domestic downturn.</div>
+<p class="src-note">Source: 10-K FY2025, p.101 (geographic revenue).</p>
+
+<h2 id="customers-competitors">Customers and competitors</h2>
+<p>Bank of America serves roughly 69 million consumer and small-business customers (through about 3,600 financial centers and 15,000 ATMs), manages $4.8 trillion in assets for wealthy individuals through GWIM, and serves large corporations, institutions, and governments through Global Banking and Global Markets. No single-customer concentration risk is disclosed.</p>
+<ul class="kicker-list">
+  <li><b>JPMorgan Chase</b> — the largest U.S. bank by assets and the traditional top rival, with a larger and more diversified business than Bank of America's.</li>
+  <li><b>Wells Fargo</b> — its retail-banking-centered structure overlaps most directly with Bank of America's Consumer Banking segment.</li>
+  <li><b>Citigroup</b> — stronger international network, but has been shrinking its consumer banking business, giving it a different strategic center of gravity.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, p.2.</p>
+
+<h2 id="core-metric">The metric that matters most in this sector</h2>
+<p>Net interest margin (NIM) — the spread between what the bank pays depositors and what it earns from borrowers — is the most fundamental gauge of whether the core lending business is working. It reflects both the interest-rate environment and how well the bank manages its assets and liabilities.</p>
+<div class="table-wrap">
+  <table>
+    <caption>Net interest margin, 2021–2025</caption>
+    <thead><tr><th></th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>NIM</td><td>1.66%</td><td>1.96%</td><td>2.08%</td><td>1.95%</td><td>2.01%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The efficiency ratio (costs as a share of revenue) also improved steadily, from 67.0% in 2021 to 61.7% in 2025 — a sign of consistent cost discipline running alongside the margin recovery.</p>
+<p class="src-note">Source: 10-K FY2021, FY2023, and FY2025, MD&A Net Interest Income sections; 10-K FY2025, Table 1, p.27.</p>
+
+<h2 id="leadership">Leadership and ownership</h2>
+<p>CEO Brian T. Moynihan has led Bank of America since January 2010 (16 years), adding the Chairman role in October 2014. He is not a founder — Bank of America is a 100-plus-year-old institution formed through numerous mergers. Combined ownership across all 25 directors and executives is about 0.27%, very low. The largest shareholders are Vanguard (9.1%), Berkshire Hathaway (7.9%), and BlackRock (6.9%).</p>
+<p class="src-note">Source: DEF 14A 2026, p.1, p.35-37.</p>
+
+<h2 id="capital-returns">Capital returns</h2>
+<p>Bank of America yields about 2.05% at the current price. It paid $1.08/share in dividends in 2025, the fifth consecutive year of increases (up from $0.78/share in 2021), a payout ratio around 28% of net income; the board raised the quarterly dividend to $0.28 in February 2026.</p>
+<div class="callout good"><b>A large, actively used buyback program</b>Bank of America repurchased $21.4B of stock in 2025 alone, and its board approved a new $40B buyback authorization in July 2025. Shares outstanding have declined steadily over five years, offsetting dilution from employee stock compensation.</div>
+<p class="src-note">Source: 10-K FY2025, p.24, p.49.</p>
+
+<h2 id="failure-scenario">How this company could fail</h2>
+<div class="callout bad">
+  <b>Failure scenario</b>
+  If the U.S. economy suddenly freezes and both consumers and businesses stop repaying debt en masse, while interest rates simultaneously plunge and compress the lending spread, both of Bank of America's main profit engines — net interest income and credit quality — could stall at the same time.
+</div>
+<ul class="kicker-list">
+  <li><b>Interest rate and macro volatility</b> — Federal Reserve policy, tariff-driven market swings, and inflation directly affect net interest income and the value of the bond portfolio.</li>
+  <li><b>Credit and real-estate default risk</b> — a recession could sharply increase delinquencies and defaults, especially in commercial real estate (particularly office properties), forcing much higher loan-loss provisions.</li>
+  <li><b>Cybersecurity and systems risk</b> — AI is making cyberattacks more sophisticated, and a major system outage or data breach would hit customer trust and results immediately.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors, p.8-9, p.11-12, p.14-15.</p>
+
+<h2 id="financials">Five-year financials</h2>
+<div class="table-wrap">
+  <table>
+    <caption>$ millions</caption>
+    <thead><tr><th></th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>Revenue</td><td>89,113</td><td>94,950</td><td>98,581</td><td>105,856</td><td>113,097</td></tr>
+      <tr><td>YoY growth</td><td>—</td><td class="pos">+6.6%</td><td class="pos">+3.8%</td><td class="pos">+7.4%</td><td class="pos">+6.8%</td></tr>
+      <tr><td>Pretax income</td><td>33,976</td><td class="neg">30,969 (-8.9%)</td><td class="neg">28,342 (-8.5%)</td><td>33,223 (+17.2%)</td><td>37,695 (+13.5%)</td></tr>
+      <tr><td>Net income</td><td>31,978</td><td>27,528</td><td>26,515</td><td>26,973</td><td>30,509</td></tr>
+      <tr class="highlight"><td>Operating cash flow</td><td>10,871</td><td class="neg">(6,590)</td><td>28,529</td><td class="neg">26,131 (-8.4%)</td><td>46,937 (+79.6%)</td></tr>
+      <tr><td>Long-term debt</td><td>280,117</td><td>275,982</td><td>302,204</td><td>283,279</td><td>317,816</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="callout warn"><b>Bank cash flow doesn't read like a normal company's</b>Operating cash flow swings wildly year to year — it actually went negative in 2022 — because trading-asset and trading-liability positions dominate the reported number, not underlying earnings power. The CET1 regulatory capital ratio (11.4% in 2025, above the regulatory minimum) is a more meaningful solvency check for a bank than cash flow trends.</p>
+<p class="src-note">Source: 10-K FY2025 Table 1, p.27; 10-K FY2023 Table 1, p.26; 10-K FY2021 Table 1, p.28; each year's cash flow statement.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>How volatile the Global Markets (trading) segment has been in recent quarters</b> isn't visible from annual data alone — recent earnings calls would need to be checked.</li>
+  <li><b>Exactly how much commercial real estate (especially office) loan stress remains</b> requires digging into the Note 4 credit-quality detail beyond what's summarized here.</li>
+  <li><b>How a 2026 Federal Reserve rate-cut path would affect net interest margin going forward</b> requires watching upcoming quarterly results.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from Bank of America's 10-K filings for FY2021 through FY2025 and DEF 14A 2026, plus a web search for the current share price (stockanalysis.com, Sept 2, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
+</footer>
+`,
+  },
+
+  {
+    slug: 'bac-story',
+    ticker: 'BAC',
+    company: 'Bank of America',
+    category: 'story',
+    title: "Bank of America's Story: A Cautious Promise, a Tariff Wobble, and Two Self-Made Upgrades",
+    excerpt:
+      "Bank of America promised a modest return to 'operating leverage' in 2025. It delivered that promise months early, wobbled briefly during the 2025 tariff scare, then blew past its own target so completely it raised the target twice.",
+    takeaway:
+      "Bank of America's modest 2024 promise to 'return to operating leverage' during 2025 was delivered months ahead of schedule, briefly wobbled during an April 2025 tariff scare that barely touched actual results, then was so thoroughly exceeded (560 basis points against an original ~200bp target) that management raised its own 2026 guidance mid-year after resetting it conservatively just two quarters earlier.",
+    faq: [
+      { q: "Did tariffs actually hurt Bank of America's results?", a: "Barely. On the Q1 FY2025 call (April 2025), CEO Brian Moynihan added unusually defensive material comparing the bank's credit, capital, and liquidity quality to past economic crises, citing tariff-driven market volatility. But by Q2 FY2025, tone had fully recovered, net interest income hit a record, and mentions of the scare disappeared from subsequent calls." },
+      { q: "What is 'operating leverage' and how has Bank of America performed against its targets?", a: "Operating leverage measures how much faster revenue grows than expenses — a core profitability gauge for banks. Bank of America set a modest ~200 basis-point target for 2025 in October 2024, delivered 330bp by the very next quarter, hit 560bp by Q3 2025 (nearly triple the original goal), then repeated the pattern in 2026: guiding conservatively to '200bp or better,' then raising that guidance to 300-400bp after beating it again in the first half." },
+      { q: 'What sources does this analysis draw from?', a: "This piece is built from Bank of America's 10-K filings for FY2021, FY2023, FY2024, and FY2025, and 8 quarters of earnings call transcripts from Q3 FY2024 through Q2 FY2026." },
+    ],
+    toc: [
+      { id: 'the-story', label: 'The story' },
+      { id: 'guidance-record', label: 'Guidance scorecard' },
+      { id: 'timeline', label: 'Timeline' },
+      { id: 'our-read', label: 'Our read' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2021, FY2023–FY2025 · 8 quarters of earnings call transcripts, Q3 FY2024–Q2 FY2026',
+    tags: ['BAC', 'Earnings Calls', 'Banking'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="the-story">The story</h2>
+<h3>Two years ago: a cautious promise</h3>
+<p>On the Q3 FY2024 call (October 2024), CEO Brian Moynihan noted that net interest income had bottomed in Q2 2024 exactly as predicted, and said the bank expected to "return to operating leverage as we move through the quarters of 2025" — a modest target built on roughly 4-5% revenue growth against 2-3% expense growth, working out to about 200 basis points of operating leverage. Confident, but not yet proven.</p>
+
+<h3>Then tariffs hit — April 2025</h3>
+<p>On the Q1 FY2025 call, Moynihan's tone shifted abruptly. He added unusually defensive material comparing the bank's credit portfolio, capital, and liquidity quality to past economic crises, citing "market volatility and concerns about the economic outlook." CFO Alastair Borthwick acknowledged that tariff uncertainty was making forward net-interest-income guidance harder to give. The FY2025 10-K separately described this period as "asset-price shocks similar to those experienced in early 2025," and mentions of "tariff" in the 10-K tripled, from 3 (FY2023) to 9 (FY2025).</p>
+
+<h3>The company's response: quiet, and fast</h3>
+<p>Even through the wobble, the actual numbers were already ahead of the promise: Q4 FY2024 (reported January 2025) had already delivered 330 basis points of operating leverage — months ahead of the "sometime in 2025" pledge. Once the tariff scare passed, by the Q2 FY2025 call (July), tone had fully recovered — "clients are starting to get clarity" on trade and tax changes, management said, with net interest income hitting a record. By the Q3 FY2025 call (October), operating leverage reached 560 basis points — nearly triple the original target.</p>
+
+<h3>Now: the target itself got raised, twice</h3>
+<p>On the Q4 FY2025 call (January 2026), management reset 2026 guidance conservatively to "200 basis points or better" — a textbook "guide low, beat big" move. By the Q2 FY2026 call (July 2026), first-half operating leverage had already reached 660 basis points, and management raised full-year guidance itself, from "200bp or better" to "300-400bp."</p>
+
+<div class="callout good">
+  <b>Our take, in one line</b>
+  This is a textbook case of "underpromise, overdeliver," repeated at least four times running across two years. The 2025 tariff scare barely dented actual results — a sign the consumer and commercial loan books have so far proven genuinely resilient to macro shocks. Whether this same pattern holds if a real downturn eventually hits, or whether the second half of 2026 finally brings a miss, is the open question the next few quarters will answer.
+</div>
+
+<h2 id="guidance-record">Guidance scorecard</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Operating-leverage guidance vs. actual results, FY2025–FY2026</caption>
+    <thead><tr><th>Cycle</th><th>Promise</th><th>Actual result</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Q3 FY2024 call</td><td>"Return to operating leverage during 2025" (~200bp target)</td><td>Q4 FY2024 already delivered 330bp (full year 250bp)</td><td class="pos">Delivered early, exceeded</td></tr>
+      <tr><td>Q1 FY2025 call</td><td>Maintain credit/capital/liquidity quality despite tariff uncertainty</td><td>Q2 FY2025 net charge-offs stable; NII hit a record</td><td class="pos">Promise kept</td></tr>
+      <tr class="highlight"><td>Q4 FY2025 call</td><td>2026 operating leverage "200bp or better" (conservative reset)</td><td>Q1 FY2026 290bp; Q2 FY2026 660bp</td><td class="pos">Exceeded by a wide margin</td></tr>
+      <tr><td>Q1 FY2026 call</td><td>Reaffirmed 200bp+ guidance</td><td>Q2 FY2026 call raised full-year guidance to 300-400bp</td><td class="pos">Guidance raised</td></tr>
+    </tbody>
+  </table>
+</div>
+<p><strong>4 for 4 — every cycle tracked here was met or exceeded</strong>, and the pattern of guiding conservatively then beating held across all 8 quarters reviewed.</p>
+<p class="src-note">Source: Q3 FY2024, Q1 FY2025, Q4 FY2025, and Q1-Q2 FY2026 earnings call transcripts (CEO/CFO guidance language).</p>
+
+<h2 id="timeline">Timeline</h2>
+<ul class="timeline">
+  <li><span class="date">Oct 2024</span>Q3 FY2024 call: first promises "operating leverage returns during 2025," ~200bp target.</li>
+  <li><span class="date">Jan 2025</span>Q4 FY2024 call: already delivers 330bp, ahead of schedule.</li>
+  <li class="crisis"><span class="date">Apr 2025</span>Q1 FY2025 call: tariff shock; defensive credit/capital materials added; tone dips.</li>
+  <li><span class="date">Jul 2025</span>Q2 FY2025 call: confidence fully recovers; "clients see clarity"; record NII.</li>
+  <li><span class="date">Oct 2025</span>Q3 FY2025 call: operating leverage hits 560bp, nearly 3x the original target.</li>
+  <li><span class="date">Jan 2026</span>Q4 FY2025 call: 2026 guidance conservatively reset to "200bp or better."</li>
+  <li><span class="date">Jul 2026</span>Q2 FY2026 call: H1 hits 660bp; full-year guidance raised to 300-400bp.</li>
+</ul>
+
+<h2 id="our-read">Our read</h2>
+<p>Bank of America's last two years trace a consistent "guide low, beat big" pattern that survived a genuine, if brief, tariff-driven scare without denting actual results. The bank reset its own target conservatively at the start of 2026, then raised that same target mid-year once results came in well ahead — the fourth time in eight tracked quarters this exact shape has repeated. That consistency is reassuring, but it also means the initial guidance itself carries limited information value; the real signal is in how quickly and by how much the beats keep arriving.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>Whether this "guide low, beat big" pattern continues into the second half of 2026, or a genuine miss finally shows up</b>, isn't knowable from this data alone — the next two quarters would need to be checked.</li>
+  <li><b>The exact remaining scale of commercial real estate (office) loan losses</b> isn't disclosed here — Note 4 credit-quality detail would need deeper review.</li>
+  <li><b>Whether a renewed tariff escalation would trigger the same April 2025-style tone dip, or the bank is now better prepared</b> is unconfirmed until the next policy shock actually occurs.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from 10-K filings for FY2021, FY2023, FY2024, and FY2025, and 8 quarters of earnings call transcripts from Q3 FY2024 (Oct 2024) through Q2 FY2026 (Jul 2026). Tone assessments are qualitative. This is a research summary, not investment advice.
+</footer>
+`,
+  },
+
+  {
+    slug: 'bac-dcf',
+    ticker: 'BAC',
+    company: 'Bank of America',
+    category: 'dcf',
+    title: "What BAC's Stock Price Is Really Betting On",
+    excerpt:
+      "Reverse-engineering the growth rate Bank of America's share price already assumes — adapted for a bank's balance sheet — and comparing it with a 5-year track record that looks flat only because of a dip the bank has since grown past.",
+    takeaway:
+      "At today's price, Bank of America's stock is pricing in only about 1.2% annual net-income growth for the next ten years — a modest ask that the bank's own most recent year already cleared many times over: net income grew 13.1% in 2025 alone, even though the flat-looking 5-year CAGR (-1.2%) is dragged down by a 2022-2023 dip.",
+    faq: [
+      { q: "Why does this use net income instead of free cash flow?", a: "A standard reverse DCF leans on free cash flow and net debt — concepts that don't translate cleanly to a bank, where deposits fund lending rather than acting as debt to subtract, and where reported operating cash flow swings wildly with trading-asset positions (it went negative for Bank of America in 2022). This analysis substitutes net income as the cash-flow proxy and skips the net-debt subtraction, closer to a dividend-discount-style model." },
+      { q: "What growth rate does BAC's stock price assume?", a: "At today's price, Bank of America's stock is pricing in only about 1.2% annual net-income growth for the next ten years, at a 9% discount rate." },
+      { q: 'What share price was used for this analysis?', a: 'This analysis used $62.60, as of the Sept 2, 2026 close.' },
+    ],
+    toc: [
+      { id: 'bank-adaptation', label: 'Why this model looks different for a bank' },
+      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
+      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
+      { id: 'what-would-move-it', label: 'What would move this number' },
+      { id: 'show-your-work', label: 'Show your work' },
+      { id: 'fine-print', label: 'The fine print' },
+    ],
+    sources: 'As of Sept 2, 2026 · Price used: $62.60',
+    tags: ['BAC', 'ReverseDCF', 'Valuation'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="bank-adaptation">Why this model looks different for a bank</h2>
+<div class="callout warn">
+  <b>Bank-model adjustment</b>
+  A standard reverse DCF leans on "free cash flow" and "net debt" — concepts that don't translate cleanly to a bank, where deposits are the raw material for lending, not a debt to be subtracted, and where reported operating cash flow swings wildly with trading-asset positions (Bank of America's actually went negative in 2022). This card substitutes <b>net income</b> as the cash-flow proxy and skips the net-debt subtraction entirely — closer to a dividend-discount-style model. Every input and the full calculation are in the collapsible section below.
+</div>
+
+<div class="verdict-box">
+  <div class="label">The conclusion</div>
+  <p>At its current price, BAC implies <span class="num">~1.2%</span> annual net-income growth for the next 10 years, discounted at 9%.</p>
+  <p>Bank of America's actual 5-year (2021–2025) net-income growth averaged <span class="num">-1.2%</span> a year — though that's dragged down by a 2022-2023 dip; net income alone grew <span class="num">+13.1%</span> in 2025.</p>
+</div>
+
+<div class="callout good">
+  <b>Verdict: a modest ask that Bank of America's most recent results already clear several times over</b>
+  The required growth rate (1.2%) is barely positive, and even the bank's flat 5-year net-income CAGR (-1.2%, still weighed down by the 2022-2023 credit-cycle dip) technically falls short of it on paper. But that comparison undersells the more relevant recent trend: net income grew 13.1% in 2025 alone, and the operating-leverage story covered in the piece above shows profitability accelerating, not stalling. On the metric that actually matters here, Bank of America's current trajectory clears the market's modest ask many times over — the real question is how much of 2025's acceleration is durable versus cyclical.
+</div>
+
+<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<div class="datacard">
+  <div class="barlist">
+    <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:9%;background:var(--accent)"></div></div><span class="val">1.2%</span></div>
+    <div class="barrow"><span class="lbl">5-yr net-income CAGR</span><div class="track"><div class="fill" style="width:0%"></div></div><span class="val">-1.2%</span></div>
+    <div class="barrow"><span class="lbl">5-yr revenue CAGR</span><div class="track"><div class="fill" style="width:47%"></div></div><span class="val">6.1%</span></div>
+    <div class="barrow"><span class="lbl">Most recent year's net-income growth</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">13.1%</span></div>
+  </div>
+  <p class="src-note">Required growth from the reverse DCF below. Historical figures from 10-K FY2021 (net income $31,978M) and 10-K FY2025 (net income $30,509M; revenue $89,113M → $113,097M).</p>
+</div>
+
+<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Required 10-year net-income growth by discount rate (WACC)</caption>
+    <thead><tr><th>WACC</th><th>Required growth</th></tr></thead>
+    <tbody>
+      <tr><td>7%</td><td class="neg">-3.2%</td></tr>
+      <tr><td>8%</td><td class="neg">-0.9%</td></tr>
+      <tr class="highlight"><td>9% (base case)</td><td>1.2%</td></tr>
+      <tr><td>10%</td><td>3.2%</td></tr>
+      <tr><td>11%</td><td>5.0%</td></tr>
+      <tr><td>12%</td><td>6.7%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Even at the high end tested (12%), the required rate (6.7%) is close to the 5-year revenue CAGR (6.1%) and nowhere near the growth Bank of America actually posted in its most recent year alone (13.1%). Across the whole range tested, this conclusion doesn't flip.</p>
+
+<h2 id="what-would-move-it">What would move this number</h2>
+<ul class="kicker-list">
+  <li><b>Using the 3-year average net income ($28.0B) instead of FY2025's figure ($30.5B) as the base</b> raises the required growth rate to 2.4% at a 9% discount rate — still modest.</li>
+  <li><b>The -1.2% five-year net-income CAGR is a misleading historical anchor on its own</b> — it's pulled down entirely by the 2022-2023 dip (Fed-driven margin compression and higher credit costs). Net income has grown every year since 2023, including +13.1% in 2025 alone.</li>
+  <li><b>A higher discount rate (11-12%, arguably reasonable given commercial real-estate credit-cycle risk)</b> pushes the required rate to 5.0-6.7% — still below what Bank of America delivered last year alone.</li>
+</ul>
+
+<h2 id="show-your-work">Show your work</h2>
+<details class="methodology">
+  <summary>Inputs, sources, model assumptions, and the calculation</summary>
+  <ul class="input-list">
+    <li><b>Share price</b><span>$62.60 — stockanalysis.com, Sept 2, 2026 close</span></li>
+    <li><b>Shares outstanding</b><span>6.99B — stockanalysis.com, Sept 2, 2026</span></li>
+    <li><b>Market cap</b><span>$437.6B — price × shares (calculated)</span></li>
+    <li><b>FY2025 net income (base case)</b><span>$30,509M — 10-K FY2025</span></li>
+    <li><b>3-year average net income</b><span>$27,999M — average of FY2023, FY2024, FY2025</span></li>
+    <li><b>Discount rate (WACC)</b><span>9% base case (7%/8%/10%/11%/12% tested)</span></li>
+    <li><b>Terminal growth rate</b><span>2.5% — long-run GDP-level assumption</span></li>
+  </ul>
+  <p style="font-size:13px;margin-top:16px;"><strong>Model:</strong> net income (as the FCF-to-equity proxy) is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter — a two-stage dividend-discount-style model, solved by bisection for the value of <em>g</em> that equates present value to today's market capitalization ($437.6B). Net debt is not separately subtracted, given the bank-specific adjustment described above.</p>
+  <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr net-income CAGR (2021→2025) = ($30,509M ÷ $31,978M)^(1/4) − 1 = -1.2%. 5-yr revenue CAGR = ($113,097M ÷ $89,113M)^(1/4) − 1 = 6.1%. Most recent year's net-income growth (2024→2025) = +13.1%.</p>
+</details>
+
+<h2 id="fine-print">The fine print</h2>
+<div class="callout bad">
+  <b>This number is a starting point, not an answer</b>
+  <ul style="margin:10px 0 0;padding-left:18px;">
+    <li>This isn't a fair-value price target — it only shows what the current price already assumes.</li>
+    <li>The bank-specific adjustment (net income in place of FCF, no net-debt subtraction) is an approximation, not the standard reverse-DCF formula.</li>
+    <li>Change the discount rate or the net-income base, and the answer moves — see the sensitivity table above.</li>
+    <li>Whether even this modest required growth is realistic depends on the interest-rate cycle and credit costs ahead, not on this math alone.</li>
+    <li>A reverse DCF shows what the market currently expects — it does not say what the stock is "worth."</li>
+    <li>Any investment decision, and its outcome, is your own responsibility.</li>
+  </ul>
+</div>
+
+<footer class="disclosure">
+  Built from Bank of America's 10-K filings (FY2021–FY2025), plus a web search for the current share price (stockanalysis.com, Sept 2, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
+</footer>
+`,
+  },
+
+  {
+    slug: 'eqt-snapshot',
+    ticker: 'EQT',
+    company: 'EQT Corporation',
+    category: 'snapshot',
+    title: 'EQT (EQT): What This Company Actually Does',
+    excerpt:
+      "A plain-English read of EQT's business — a natural gas driller that, since 2024, also owns the pipelines that carry its own gas to market — built directly from its SEC filings.",
+    takeaway:
+      "EQT drills natural gas out of the Appalachian Basin and, since absorbing pipeline operator Equitrans Midstream in mid-2024, also owns the gathering and transmission lines that move that gas to utilities, industrial buyers, and LNG exporters — and the pipeline side of the business runs at more than double the profit margin of the drilling side.",
+    quickFacts: [
+      { k: 'Share price', v: '$53.01' },
+      { k: 'Market cap', v: '~$33.1B' },
+      { k: 'FY2025 revenue', v: '$8.64B' },
+      { k: 'Total debt', v: '$7.80B' },
+    ],
+    faq: [
+      { q: 'How does EQT make money?', a: "EQT drills natural gas from the Appalachian Basin (Upstream, 81% of FY2025 revenue) and sells it to gas marketers, utilities, and industrial buyers. Since its July 2024 merger with Equitrans Midstream, it also owns the pipelines that gather (13% of revenue) and transport (6% of revenue) that gas — and both pipeline segments run at roughly double the operating margin of the drilling business." },
+      { q: 'Why did EQT buy its own pipeline company?', a: "In January 2024, EQT announced the acquisition of Equitrans Midstream, the pipeline operator that carried its gas, completing the deal in July 2024. Management calls this 'vertical integration' — capturing the pipeline margin (64-66% operating margin) in addition to the drilling margin (29%), rather than paying a third party to move its gas." },
+      { q: "What is EQT's market cap?", a: "As of this article's data, EQT's market cap was about $33.1B, on FY2025 revenue of $8.64B." },
+    ],
+    toc: [
+      { id: 'how-it-makes-money', label: 'How EQT makes money' },
+      { id: 'revenue-mix', label: 'Where the revenue comes from' },
+      { id: 'customers-competitors', label: 'Customers and competitors' },
+      { id: 'core-metric', label: 'The metric that matters most' },
+      { id: 'leadership', label: 'Leadership and ownership' },
+      { id: 'capital-returns', label: 'Capital returns' },
+      { id: 'failure-scenario', label: 'How this company could fail' },
+      { id: 'financials', label: 'Five-year financials' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
+    tags: ['EQT', 'Energy', '10-K'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="how-it-makes-money">How EQT makes money</h2>
+<p>EQT drills natural gas wells in the Appalachian Basin (mainly the Marcellus Shale), and since July 2024 it also owns the pipeline network that carries that gas onward. The result is a business with three linked pieces: drill it, gather and transport it, then sell it to whoever burns it.</p>
+<div class="flow">
+  <div class="flow-box"><div class="t">Appalachian wells</div><div class="d">Upstream — drilling & production, 100%-owned</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box center"><div class="t">EQT's own pipelines</div><div class="d">Gathering + Transmission, owned since the 2024 Equitrans merger</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box"><div class="t">Utilities, industry, LNG exporters</div><div class="d">Sold to gas marketers under contract — no consumer touches EQT directly</div></div>
+</div>
+<p class="src-note">EQT completed the merger with pipeline operator Equitrans Midstream in July 2024, converting itself from a single-segment driller into a three-segment company: Upstream, Gathering, and Transmission. Source: 10-K FY2025, p.8.</p>
+
+<h2 id="revenue-mix">Where the revenue comes from</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Revenue by segment — FY2025</caption>
+    <thead><tr><th>Segment</th><th>Revenue</th><th>Share</th><th>Operating margin</th></tr></thead>
+    <tbody>
+      <tr><td>Upstream (drilling)</td><td>$8,024M</td><td>81.1%</td><td>28.9%</td></tr>
+      <tr><td>Gathering (pipelines)</td><td>$1,301M</td><td>13.1%</td><td>64.3%</td></tr>
+      <tr><td>Transmission (pipelines)</td><td>$572M</td><td>5.8%</td><td>65.6%</td></tr>
+      <tr class="highlight"><td>Consolidated revenue</td><td>$8,644M</td><td>—</td><td>37.6%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Segment totals ($9,898M) exceed consolidated revenue ($8,644M) because Gathering and Transmission partly bill Upstream internally for moving its own gas — those intercompany charges cancel out on consolidation. Source: 10-K FY2025, p.10 (revenue), p.103 (segment operating income).</p>
+<div class="callout warn"><b>The pipeline business is far more profitable than the drilling business</b>Gathering and Transmission both run at roughly double Upstream's operating margin. That gap is the entire financial logic behind the 2024 Equitrans acquisition — EQT didn't just add revenue, it captured a structurally higher-margin business it used to pay a third party for.</div>
+<p>Geographically, essentially all of EQT's assets and revenue are U.S.-based, concentrated in the Appalachian Basin — the company discloses no meaningful revenue from outside the U.S. About 49% of sales volume is piped out of Appalachia to the Gulf Coast, Midwest, and Northeast.</p>
+<p class="src-note">Source: 10-K FY2025, p.103 ("substantially all" revenue and assets are U.S.-based), p.11 (out-of-basin sales share).</p>
+
+<h2 id="customers-competitors">Customers and competitors</h2>
+<p>EQT sells B2B to gas marketers, utilities, and industrial buyers reachable by its pipeline network. No single customer accounted for more than 10% of revenue in FY2025 — the company states directly that losing any one customer would not materially disrupt sales.</p>
+<ul class="kicker-list">
+  <li><b>Range Resources (RRC)</b> — an early Marcellus/Utica driller, smaller than EQT, with a higher mix of natural gas liquids (NGLs).</li>
+  <li><b>Antero Resources (AR)</b> — a larger NGL/liquids share than EQT, making it more sensitive to oil prices alongside gas prices.</li>
+  <li><b>CNX Resources (CNX)</b> — also owns its own gathering pipelines like EQT, but at roughly a third of EQT's production scale.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, p.11 (customer concentration); competitive discussion throughout Item 1.</p>
+
+<h2 id="core-metric">The metric that matters most in this sector</h2>
+<p>As a commodity producer, EQT's revenue swings on two separate levers: how much gas it sells (sales volume, in Bcfe) and what it gets paid per unit (realized price, in $/Mcfe). Volume shows whether the business itself is growing; price shows how much of any given year's results came down to luck in the gas market.</p>
+<div class="table-wrap">
+  <table>
+    <caption>Sales volume and realized price, 2021–2025</caption>
+    <thead><tr><th></th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>Sales volume (Bcfe)</td><td>1,858</td><td>1,940</td><td>2,016</td><td>2,228</td><td>2,382</td></tr>
+      <tr><td>Realized price ($/Mcfe)</td><td>$2.50</td><td>$3.17</td><td>$2.79</td><td>$2.74</td><td>$3.19</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Volume rose steadily across all five years (helped by acquisitions), but realized price swung by more than 25% year to year with no clear trend — most of the volatility in EQT's results traces back to the gas market itself, not to how the business is run.</p>
+<p class="src-note">Source: 10-K FY2022, p.47 (2021-2022); 10-K FY2023, p.51-52 (2023); 10-K FY2025, p.67-69 (2024-2025).</p>
+
+<h2 id="leadership">Leadership and ownership</h2>
+<p>CEO Toby Z. Rice took over in July 2019 after "Team Rice," an activist campaign he led, won a shareholder vote with over 80% support to replace the prior management team. Since then, he has taken a $1 base salary every year, with nearly all compensation delivered as performance-linked stock. His brother, Daniel J. Rice IV, sits on the board — the Rice family founded Rice Energy, which merged into EQT in 2017 — though each brother's individual stake is under 1%.</p>
+<p class="src-note">Source: DEF 14A 2026, p.34, p.56, p.58, p.106-108.</p>
+
+<h2 id="capital-returns">Capital returns</h2>
+<p>EQT raised its quarterly base dividend 5% in 2025, to an annualized $0.66/share, with total dividends paid growing from $228M (2023) to $327M (2024) to $390M (2025). A $2B buyback authorization remains open, but EQT repurchased $0 of stock in both 2024 and 2025 (versus $201M in 2023) — spare cash has instead gone almost entirely toward paying down debt, including $1.40B repaid in 2025 alone.</p>
+<div class="callout warn"><b>Buybacks are on hold while debt comes down</b>An authorized $2B repurchase program has sat unused for two straight years. Until debt falls closer to management's long-term target, dividend growth — not buybacks — is the shareholder-return story here.</div>
+<p class="src-note">Source: 10-K FY2025, p.9, p.91 (cash flow statement, financing activities).</p>
+
+<h2 id="failure-scenario">How this company could fail</h2>
+<div class="callout bad">
+  <b>Failure scenario</b>
+  If natural gas prices stay depressed for an extended stretch and the LNG-export and data-center demand growth EQT is counting on arrives later than expected, the company could find itself squeezed between paying down $7.8B of debt and protecting a dividend it just raised.
+</div>
+<ul class="kicker-list">
+  <li><b>Commodity price volatility, concentrated in one region and one product</b> — nearly all revenue comes from Appalachian natural gas. Operating margin swung from 36% in 2022 (a price spike year) to 13% in 2024 (a price-crash year).</li>
+  <li><b>Debt taken on for the 2024 pipeline merger</b> — total debt jumped from $5.8B (2023) to $9.3B (2024) after the Equitrans acquisition. It's down to $7.8B in 2025, but still above management's long-term $5B target, and buybacks remain suspended in the meantime.</li>
+  <li><b>Pipeline permitting and litigation risk</b> — the Mountain Valley Pipeline, a core growth asset, has a history of construction delays from environmental litigation, and expansion projects continue to face opposition.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, p.34 (Item 1A overview), p.75 (debt-related risk), Item 1A generally.</p>
+
+<h2 id="financials">Five-year financials</h2>
+<div class="table-wrap">
+  <table>
+    <caption>$ millions</caption>
+    <thead><tr><th></th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>Revenue</td><td>3,065</td><td>7,498</td><td>6,909</td><td>5,273</td><td>8,644</td></tr>
+      <tr><td>YoY growth</td><td>—</td><td class="pos">+144.7%</td><td class="neg">-7.9%</td><td class="neg">-23.7%</td><td class="pos">+63.9%</td></tr>
+      <tr><td>Operating income (margin)</td><td>(1,361) (n/m)</td><td>2,718 (36.3%)</td><td>2,314 (33.5%)</td><td>685 (13.0%)</td><td>3,250 (37.6%)</td></tr>
+      <tr class="highlight"><td>Free cash flow</td><td>607</td><td>2,065</td><td>1,160</td><td>573</td><td>2,838</td></tr>
+      <tr><td>Total debt</td><td>5,485</td><td>5,679</td><td>5,795</td><td>9,324</td><td>7,800</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="callout warn"><b>Earnings and cash flow swing hard with gas prices</b>Both operating income and FCF more than quadrupled in 2025 after bottoming in 2024 — but that's the nature of a commodity producer, not a steady growth story. 2024's FCF ($573M) came in below operating income ($685M) because capex jumped to $2.25B that year on post-merger pipeline integration spending.</div>
+<p class="src-note">FCF = operating cash flow minus capex. 2021 operating income was negative (impairments); "n/m" = not meaningful as a margin. Source: 10-K FY2025, p.88 (income statement), p.90 (balance sheet), p.91 (cash flow statement); 10-K FY2023, p.68-71; 10-K FY2022, p.45.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>Whether LNG-export and data-center demand is showing up as real contracted volume</b> isn't visible in these filings — later earnings calls (2026 Q3 onward) would need to be checked for specifics.</li>
+  <li><b>The exact timeline for reaching the long-term $5B debt target, and when buybacks might resume</b> isn't disclosed here.</li>
+  <li><b>Whether the current share price is expensive or cheap relative to this growth</b> can't be judged from the business-model analysis alone — that's what the reverse-DCF piece is for.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from EQT's 10-K filings for FY2021 through FY2025 and DEF 14A 2026, plus a web search for the current share price (stockanalysis.com/Yahoo Finance, Sept 11, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
+</footer>
+`,
+  },
+
+  {
+    slug: 'eqt-story',
+    ticker: 'EQT',
+    company: 'EQT Corporation',
+    category: 'story',
+    title: "EQT's Story: A Price Crash Hidden Behind a Big Acquisition",
+    excerpt:
+      'A gas-price collapse and an 87% net income drop landed in the same quarter EQT announced the deal that would remake it into a vertically integrated energy company — and the bigger story is the one that stuck.',
+    takeaway:
+      "EQT's worst financial quarter in years and its most transformative acquisition announcement landed almost simultaneously in early 2024 — management's earnings-call language leaned almost entirely on the acquisition story, and by 2025-2026 the strategy had largely delivered, though the company's own debt-reduction target was narrowly missed while the tone stayed uniformly upbeat.",
+    faq: [
+      { q: 'Why did EQT buy Equitrans Midstream?', a: "EQT announced the Equitrans Midstream acquisition in January 2024, the same period gas prices were crashing and EQT was cutting production. Management framed it as creating 'America's first vertically integrated major natural gas company,' capturing pipeline margins (64-66%) that run more than double the drilling margin (29%) instead of paying a third party to move its gas." },
+      { q: "Did EQT hit the debt target it set alongside the Equitrans deal?", a: "Almost. In January 2024, EQT set a goal of cutting total debt to $7.5B by the end of 2025. Actual year-end 2025 debt came in at $7.8B — a narrow miss that management didn't specifically call out on earnings calls, even while describing the deleveraging progress as 'ahead of expectations' in other quarters." },
+      { q: 'What sources does this analysis draw from?', a: 'This piece is built from EQT\'s 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026.' },
+    ],
+    toc: [
+      { id: 'the-story', label: 'The story' },
+      { id: 'guidance-record', label: 'Guidance scorecard' },
+      { id: 'timeline', label: 'Timeline' },
+      { id: 'our-read', label: 'Our read' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
+    tags: ['EQT', 'Earnings Calls', 'Energy'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="the-story">The story</h2>
+<h3>Late 2023: confident, but gas prices were already sliding</h3>
+<p>On the Q3 FY2023 earnings call, CEO Toby Rice touted "a number of positive highlights and record results," but the backdrop wasn't as strong as that framing suggested — 2022's gas price spike had faded through 2023, and EQT cut 13 Bcfe of production in the second half of the year. The 10-K's opening line, unchanged for three straight years, still read: "We are a natural gas production company with operations focused in the Appalachian Basin." The company's self-description hadn't caught up to where it was headed.</p>
+
+<h3>Early 2024: bad news and a big bet, in the same breath</h3>
+<p>Two things happened almost at once in early 2024. First, the bad news: a warm winter and oversupply sent gas prices tumbling, forcing EQT into a "strategic curtailment" of roughly 1 Bcf/d in production starting late February 2024 — a decision that helped drag FY2024 net income down 87%, from $1,735M to just $231M. Second, the bold move: in January 2024, in the middle of that same downturn, EQT announced it would acquire Equitrans Midstream, the pipeline company that carried its own gas. On the earnings call covering that period, the CEO barely touched the curtailment — that number was left to the CFO — while he kept returning to the acquisition as "a transaction that will transform EQT into America's first vertically integrated major natural gas company."</p>
+
+<h3>The company changed its own language to match</h3>
+<p>Starting with the FY2024 10-K, the opening description of the business changed from "We are a natural gas production company" to "We are a vertically integrated natural gas company with upstream, gathering and transmission operations." The FY2025 10-K went further, adding "domestic data center development" to the list of demand drivers for the first time. On earnings calls, "deleveraging" came up every single quarter through 2024, culminating in the Q4 call's claim of being "ahead of expectations" — and the company did pay down $4.3B of debt that year, working toward the $7.5B-by-end-2025 target it had announced alongside the acquisition in January 2024.</p>
+
+<h3>Now: confidence restored, with one small miss left unmentioned</h3>
+<p>As gas prices recovered through 2025, the tone on earnings calls shifted decisively — "strongest financial results in recent company history" (Q1 FY2025), "a banner year" (Q4 FY2025), "historic first quarter" (Q1 FY2026) — and by Q2 FY2026, management raised its full-year 2026 production guidance outright. The one loose thread: actual year-end 2025 debt landed at $7.8B, narrowly above the $7.5B goal set back in January 2024 — a small miss that never got its own mention, even as the "ahead of expectations" framing continued to be used elsewhere.</p>
+
+<div class="callout warn">
+  <b>Our take, in one line</b>
+  This is a textbook case of a crisis getting covered by a bigger acquisition story — the gas-price crash and the vertical-integration announcement landed in the same window, investor attention shifted to the larger narrative, and because the pipeline-margin math actually panned out in the numbers, the story held up. The one place where the messaging outran the results (the narrowly missed debt target) is worth watching, along with how much of the newer "data center demand" story turns into real, disclosed volume.
+</div>
+
+<h2 id="guidance-record">Guidance scorecard</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Guidance vs. actual results, FY2024–FY2026</caption>
+    <thead><tr><th>Set when</th><th>Promise</th><th>Actual result</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>10-K FY2023 (2024 outlook)</td><td>2024 sales volume 2,200-2,300 Bcfe</td><td>2,228 Bcfe</td><td class="pos">Met</td></tr>
+      <tr><td>10-K FY2023 (2024 outlook)</td><td>2024 capex $2.15B-$2.35B</td><td>$2.25B</td><td class="pos">Met</td></tr>
+      <tr class="highlight"><td>Jan 2024 (with Equitrans deal)</td><td>Total debt to $7.5B by end of 2025</td><td>$7.8B at end of 2025</td><td class="neg">Narrowly missed</td></tr>
+      <tr><td>10-K FY2024 (2025 outlook)</td><td>2025 sales volume 2,175-2,275 Bcfe</td><td>2,382 Bcfe</td><td class="pos">Exceeded</td></tr>
+      <tr><td>10-K FY2024 (2025 outlook)</td><td>2025 capex $2.30B-$2.50B</td><td>$2.29B</td><td class="pos">Met (at low end)</td></tr>
+      <tr><td>Q2 FY2026 call</td><td>2026 production guidance raised</td><td>In progress</td><td class="pos">Raised</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Of five fully verifiable commitments, four were met or exceeded and one (the self-set debt target) was narrowly missed without a direct callout on the calls where "ahead of expectations" language was otherwise used. Source: 10-K FY2023 p.9, 10-K FY2024 p.9, 10-K FY2025 p.9, p.90; Q1-Q4 FY2024 earnings calls (debt target); Q2 FY2026 call (2026 guidance).</p>
+
+<h2 id="timeline">Timeline</h2>
+<ul class="timeline">
+  <li><span class="date">Aug 2023</span>Tug Hill and XcL Midstream acquisitions close — first bolt-on deal, 74% integrated within 90 days.</li>
+  <li class="crisis"><span class="date">H2 2023</span>Gas-price weakness drives a 13 Bcfe production cut; Mountain Valley Pipeline construction resumes after federal legislation.</li>
+  <li><span class="date">Jan 2024</span>Equitrans Midstream acquisition announced — framed as becoming "America's first vertically integrated major natural gas company."</li>
+  <li class="crisis"><span class="date">Feb-Mar 2024</span>Warm winter and oversupply trigger a ~1 Bcf/d "strategic curtailment"; full-year 2024 volume impact roughly 130-140 Bcfe.</li>
+  <li><span class="date">Jul 2024</span>Equitrans merger completes — segments expand from one (production) to three (Upstream, Gathering, Transmission).</li>
+  <li><span class="date">Dec 2024</span>Merger integration 90% complete, $200M+ in synergies captured (85% of plan) — called "a transformational year."</li>
+  <li><span class="date">Throughout 2025</span>Gas-price recovery plus synergy realization drive quarterly free-cash-flow records; debt falls from $9.3B to $7.8B.</li>
+  <li><span class="date">Feb 2026</span>Olympus Energy acquisition closes — second major bolt-on, reserves up 7%.</li>
+  <li><span class="date">Jul 2026</span>Q2 call cites the longest horizontal lateral in shale history (29,000+ ft); 2026 production guidance raised.</li>
+</ul>
+
+<h2 id="our-read">Our read</h2>
+<p>EQT's last two-plus years show a company that turned a commodity-price crisis into a platform-transformation story, and largely made it stick — the pipeline-margin math behind the Equitrans deal has shown up in real results, not just rhetoric. What keeps this from being an unqualified success story is the pattern of message discipline around the one soft spot: the narrowly missed debt target got no direct acknowledgment even as "ahead of expectations" language continued elsewhere. That's a small gap between tone and substance, and it's worth tracking alongside how concretely the newer "data center demand" narrative turns into actual contracted volume.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>How much of the "data center demand" narrative has become real, contracted volume</b> isn't disclosed in the filings reviewed here — later earnings calls would need to be checked for specifics.</li>
+  <li><b>Why the debt target was narrowly missed without direct comment</b> isn't explained in the transcripts — whether it reflects a deliberate reprioritization (e.g., toward the Olympus Energy bolt-on) or just slower-than-planned paydown isn't clear.</li>
+  <li><b>Whether the recent string of bolt-on acquisitions (Olympus Energy, additional MVP stakes) is disciplined, undervalued-asset buying or a re-leveraging risk</b> is outside the scope of what's disclosed here.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026. Tone assessments are qualitative. This is a research summary, not investment advice.
+</footer>
+`,
+  },
+
+  {
+    slug: 'eqt-dcf',
+    ticker: 'EQT',
+    company: 'EQT Corporation',
+    category: 'dcf',
+    title: "What EQT's Stock Price Is Really Betting On",
+    excerpt:
+      "Reverse-engineering the free-cash-flow growth rate EQT's share price already assumes — and finding that the answer flips from cheap to expensive depending on whether you count acquisition-fueled growth or organic growth alone.",
+    takeaway:
+      "At today's price, EQT's stock is pricing in about 11.7% annual free-cash-flow growth for the next ten years — comfortably below its 5-year FCF growth (47% a year), but that headline FCF growth was mostly bought through two large acquisitions; EQT's organic production volume grew only 6.4% a year over the same period, well below what the price now requires.",
+    faq: [
+      { q: "What growth rate does EQT's stock price assume?", a: 'At today\'s price, EQT\'s stock is pricing in about 11.7% annual free-cash-flow growth for the next ten years, at a 10% discount rate, using a normalized (3-year average) FCF base.' },
+      { q: "Is EQT's historical growth really as strong as it looks?", a: "Not organically. EQT's 5-year FCF CAGR (47%) and revenue CAGR (30%) look dramatic, but both were driven largely by the Tug Hill and Equitrans Midstream acquisitions completed in 2023-2024. Stripping out acquisition effects, EQT's actual production volume grew only 6.4% a year — well below the 11.7% the current price now requires." },
+      { q: 'What share price was used for this analysis?', a: 'This analysis used $53.01, as of the Sept 11, 2026 close.' },
+    ],
+    toc: [
+      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
+      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
+      { id: 'what-would-move-it', label: 'What would move this number' },
+      { id: 'show-your-work', label: 'Show your work' },
+      { id: 'fine-print', label: 'The fine print' },
+    ],
+    sources: 'As of Sept 11, 2026 · Price used: $53.01',
+    tags: ['EQT', 'ReverseDCF', 'Valuation'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<div class="verdict-box">
+  <div class="label">The conclusion</div>
+  <p>At its current price, EQT implies <span class="num">~11.7%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
+  <p>EQT's headline FCF growth has averaged <span class="num">47%</span> a year over the past 5 years — but with two large acquisitions stripped out, its actual production volume grew only <span class="num">6.4%</span> a year.</p>
+</div>
+
+<div class="callout warn">
+  <b>Verdict: looks cheap on the headline number, looks demanding on the organic number</b>
+  The required growth rate (11.7%) sits far below EQT's 5-year FCF CAGR (47%) and revenue CAGR (30%) — taken at face value, that looks like an easy bar to clear. But both of those historical growth rates were inflated by the 2023 Tug Hill and 2024 Equitrans Midstream acquisitions, which added scale rather than organic growth. Stripped of acquisition effects, EQT's actual sales-volume growth ran at just 6.4% a year — meaning the market's 11.7% ask is nearly double the pace EQT has managed to grow organically. Whether today's price is reasonable depends almost entirely on whether EQT keeps growing through further bolt-on acquisitions (as it did again in February 2026 with Olympus Energy) or is expected to grow this fast on drilling alone.
+</div>
+
+<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<div class="datacard">
+  <div class="barlist">
+    <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:25%;background:var(--accent)"></div></div><span class="val">11.7%</span></div>
+    <div class="barrow"><span class="lbl">5-yr FCF CAGR (incl. M&A)</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">47.0%</span></div>
+    <div class="barrow"><span class="lbl">5-yr revenue CAGR (incl. M&A)</span><div class="track"><div class="fill" style="width:63%"></div></div><span class="val">29.6%</span></div>
+    <div class="barrow"><span class="lbl">5-yr production volume CAGR (organic)</span><div class="track"><div class="fill" style="width:14%"></div></div><span class="val">6.4%</span></div>
+  </div>
+  <p class="src-note">Required growth from the reverse DCF below. Historical figures from 10-K FY2022-FY2025 (FCF, revenue) and 10-K FY2022, p.47 and FY2025, p.67-69 (organic sales-volume CAGR, which excludes the revenue and cash-flow lift from acquisitions).</p>
+</div>
+
+<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Required 10-year FCF growth by discount rate (WACC), normalized FCF base</caption>
+    <thead><tr><th>WACC</th><th>Required growth</th></tr></thead>
+    <tbody>
+      <tr><td>8%</td><td>7.1%</td></tr>
+      <tr class="highlight"><td>10% (base case)</td><td>11.7%</td></tr>
+      <tr><td>12%</td><td>15.6%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Because EQT is a large-cap company in a commodity-price-sensitive sector, a standard 10% discount rate was used as the base case, with 8% and 12% tested as bounds. Across that range, the required growth rate moves from 7.1% up to 15.6% — even at the low end, it exceeds the 6.4% organic volume growth EQT has actually delivered.</p>
+
+<h2 id="what-would-move-it">What would move this number</h2>
+<ul class="kicker-list">
+  <li><b>Using 2025's actual FCF ($2.84B) instead of the normalized 3-year-average base ($1.52B) used here</b> drops the required growth rate sharply, from 11.7% to just 3.2% (at WACC 10%) — because 2025's FCF was unusually strong on a gas-price rebound plus lower post-merger integration spending.</li>
+  <li><b>The normalization itself is the single biggest judgment call in this analysis</b> — 2025's actual FCF came in 86% above the 3-year average, past the ±40% threshold this site uses to decide when a single year is too unusual to use directly, which is why the 3-year average was used as the base case instead.</li>
+  <li><b>Whether EQT counts on further bolt-on acquisitions (like the February 2026 Olympus Energy deal) to keep growing, versus organic drilling alone,</b> is arguably the most important open question — the 47% headline FCF CAGR and the 6.4% organic volume CAGR imply very different answers about how "cheap" 11.7% really is.</li>
+</ul>
+
+<h2 id="show-your-work">Show your work</h2>
+<details class="methodology">
+  <summary>Inputs, sources, model assumptions, and the calculation</summary>
+  <ul class="input-list">
+    <li><b>Share price</b><span>$53.01 — Yahoo Finance / Google Finance cross-check, Sept 11, 2026 close</span></li>
+    <li><b>Shares outstanding</b><span>624,274,009 — DEF 14A 2026, p.106 (as of Feb 5, 2026)</span></li>
+    <li><b>Market cap</b><span>≈$33.09B — price × shares (calculated)</span></li>
+    <li><b>Total debt</b><span>$7.80B — 10-K FY2025, p.90 (balance sheet, Dec 31, 2025)</span></li>
+    <li><b>Cash and equivalents</b><span>$0.111B — 10-K FY2025, p.90</span></li>
+    <li><b>Net debt</b><span>$7.69B — total debt minus cash (calculated)</span></li>
+    <li><b>Enterprise value (EV)</b><span>≈$40.78B — market cap plus net debt (calculated)</span></li>
+    <li><b>FCF, most recent 3 years</b><span>2023: $1.16B / 2024: $0.57B / 2025: $2.84B — 10-K FY2025, p.91 (cash flow statement), FCF = operating cash flow minus capex</span></li>
+    <li><b>Normalized FCF (base used)</b><span>$1.52B — 3-year average; 2025's actual FCF deviated +86% from that average, past this site's ±40% normalization threshold</span></li>
+    <li><b>Discount rate (WACC)</b><span>10% base case (8%/12% tested)</span></li>
+    <li><b>Terminal growth rate</b><span>2.5% — long-run GDP-level assumption</span></li>
+  </ul>
+  <p style="font-size:13px;margin-top:16px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap plus net debt, ≈$40.78B).</p>
+  <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR (2021→2025, includes acquisitions) = 47.0%. 5-yr revenue CAGR (2021→2025, includes acquisitions) = 29.6%. 5-yr organic production-volume CAGR (2021→2025, excludes acquisition effects) = 6.4%.</p>
+</details>
+
+<h2 id="fine-print">The fine print</h2>
+<div class="callout bad">
+  <b>This number is a starting point, not an answer</b>
+  <ul style="margin:10px 0 0;padding-left:18px;">
+    <li>This isn't a fair-value price target — it only shows what the current price already assumes.</li>
+    <li>Change the discount rate or the FCF normalization method, and the answer moves substantially — see the sensitivity table and the note on FCF normalization above.</li>
+    <li>Whether 11.7% growth is realistic depends heavily on whether you expect EQT to keep growing mainly through acquisitions (as its 5-year headline numbers reflect) or organically through drilling alone (6.4% a year) — not on this math alone.</li>
+    <li>A reverse DCF shows what the market currently expects — it does not say what the stock is "worth."</li>
+    <li>Any investment decision, and its outcome, is your own responsibility.</li>
+  </ul>
+</div>
+
+<footer class="disclosure">
+  Built from EQT's 10-K filings (FY2021–FY2025) and DEF 14A 2026, plus a web search for the current share price (Yahoo Finance / Google Finance cross-check, Sept 11, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
+</footer>
+`,
+  },
+
+  {
+    slug: 'exe-snapshot',
+    ticker: 'EXE',
+    company: 'Expand Energy',
+    category: 'snapshot',
+    title: 'Expand Energy (EXE): What This Company Actually Does',
+    excerpt:
+      "A plain-English read of Expand Energy's business — the natural gas driller formed by merging Chesapeake Energy and Southwestern Energy — built directly from its SEC filings.",
+    takeaway:
+      "Expand Energy (formerly Chesapeake Energy, post-bankruptcy) drills natural gas across the Haynesville and Appalachian basins and sells it to utilities, industrial buyers, and gas marketers — a business whose production roughly doubled overnight in October 2024 when it absorbed rival Southwestern Energy, and whose most acute risk right now isn't the gas market but an unfilled CEO seat.",
+    quickFacts: [
+      { k: 'Share price', v: '$94.83' },
+      { k: 'Market cap', v: '~$22.2B' },
+      { k: 'FY2025 revenue', v: '$12.12B' },
+      { k: 'Total debt', v: '$5.01B' },
+    ],
+    faq: [
+      { q: 'How does Expand Energy make money?', a: "Expand Energy drills natural gas wells across three operating areas — Haynesville (Louisiana/Texas, 41% of FY2025 revenue), Northeast Appalachia (Pennsylvania, 34%), and Southwest Appalachia (West Virginia/Ohio, 25%) — and sells the gas to pipeline operators, utilities, power plants, and industrial buyers." },
+      { q: 'What happened to Chesapeake Energy?', a: "Expand Energy is the renamed Chesapeake Energy, which emerged from Chapter 11 bankruptcy in February 2021. On October 1, 2024, Chesapeake completed a merger with rival driller Southwestern Energy, roughly doubling daily production, and renamed the combined company Expand Energy." },
+      { q: 'Why is Expand Energy currently without a permanent CEO?', a: "On February 6, 2026, the board fired CEO Domenic Dell'Osso 'without cause' with no public explanation and no successor named. Board chair Michael Wichterich has served as interim President & CEO since, with an external search underway (six months in, as of the Q2 2026 earnings call)." },
+    ],
+    toc: [
+      { id: 'how-it-makes-money', label: 'How Expand Energy makes money' },
+      { id: 'revenue-mix', label: 'Where the revenue comes from' },
+      { id: 'customers-competitors', label: 'Customers and competitors' },
+      { id: 'core-metric', label: 'The metric that matters most' },
+      { id: 'leadership', label: 'Leadership and ownership' },
+      { id: 'capital-returns', label: 'Capital returns' },
+      { id: 'failure-scenario', label: 'How this company could fail' },
+      { id: 'financials', label: 'Five-year financials' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2021, FY2023–FY2025 · DEF 14A 2026 · Q2 FY2026 earnings call',
+    tags: ['EXE', 'Energy', '10-K'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="how-it-makes-money">How Expand Energy makes money</h2>
+<p>Expand Energy drills natural gas wells across the Haynesville and Appalachian basins, moves the gas through contracted pipeline capacity, and sells it to whoever is downstream — utilities, power plants, industrial buyers, and gas marketers. A 2026 acquisition of marketing firm Twin Eagle added a layer that captures extra margin by timing storage and transport around price swings, rather than just selling gas at the wellhead.</p>
+<div class="flow">
+  <div class="flow-box"><div class="t">~6,600 wells</div><div class="d">Haynesville & Appalachian basins — drilling & production</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box center"><div class="t">Gathering, processing, transport</div><div class="d">~$9.6B/year in pipeline capacity commitments</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box"><div class="t">Utilities, industry, LNG exporters</div><div class="d">Sold via Twin Eagle marketing arm (acquired 2026) and direct contracts</div></div>
+</div>
+<p class="src-note">Revenue of $12.1B (FY2025) funds roughly $2.7B in annual reinvestment capex plus $865M in dividends and buybacks. Source: 10-K FY2025, p.12, p.19, p.57; Q2 FY2026 earnings call (Twin Eagle acquisition).</p>
+
+<h2 id="revenue-mix">Where the revenue comes from</h2>
+<p>Expand Energy reports as a single "exploration and production" segment, but its results break out across three operating areas:</p>
+<div class="table-wrap">
+  <table>
+    <caption>Revenue by operating area — FY2025</caption>
+    <thead><tr><th>Area</th><th>Revenue</th><th>Share</th><th>Production</th></tr></thead>
+    <tbody>
+      <tr><td>Haynesville (LA/TX)</td><td>$3,477M</td><td>41%</td><td>3.0 Bcf/d</td></tr>
+      <tr><td>Northeast Appalachia (PA)</td><td>$2,860M</td><td>34%</td><td>2.6 Bcf/d</td></tr>
+      <tr><td>Southwest Appalachia (WV/OH)</td><td>$2,139M</td><td>25%</td><td>1.6 Bcfe/d</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Source: 10-K FY2025, p.62 (production and revenue table), p.78 (single-segment confirmation).</p>
+<p>Geographically, 100% of revenue is U.S.-based — there's no foreign-currency exposure, but the flip side is full exposure to a single benchmark: the U.S. Henry Hub natural gas price. Realized price (including derivatives) was $3.30/Mcfe in 2025, up from $2.84/Mcfe in 2024.</p>
+<p class="src-note">Source: 10-K FY2025, p.28, p.62.</p>
+
+<h2 id="customers-competitors">Customers and competitors</h2>
+<p>Expand Energy sells B2B to pipeline operators, utilities, power generators, and industrial buyers. In FY2025, one customer accounted for 11% of revenue — the only buyer over the 10% concentration threshold that year (none exceeded 10% in 2024; two did in 2023, at 17% and 10%).</p>
+<ul class="kicker-list">
+  <li><b>EQT Corporation</b> — the largest Appalachian rival, also vertically integrating into marketing and pipelines.</li>
+  <li><b>Antero Resources</b> — also produces Appalachian gas plus NGLs, with a higher NGL mix than Expand Energy.</li>
+  <li><b>Coterra Energy</b> — split between the Marcellus and the Permian, giving it more geographic diversification than Expand Energy.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, p.19 (customer concentration); competitor identification is general industry knowledge, not company-disclosed.</p>
+
+<h2 id="core-metric">The metric that matters most in this sector</h2>
+<p>As a commodity producer, Expand Energy's results hinge on two separate numbers: how much gas it produces per day (Bcfe/d) and what it's paid per unit ($/Mcfe). Production growth shows the business expanding; price shows how much of any given year came down to the gas market rather than company execution.</p>
+<div class="table-wrap">
+  <table>
+    <caption>Daily production and realized price, 2023–2025</caption>
+    <thead><tr><th></th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>Daily production (Bcfe/d)</td><td>3.66</td><td>3.76</td><td>7.18</td></tr>
+      <tr><td>Realized price ($/Mcfe)</td><td>$2.99</td><td>$2.84</td><td>$3.30</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The jump in 2025 production wasn't organic growth — it reflects the Southwestern Energy merger, which closed October 1, 2024, roughly doubling the company's scale. On a same-store basis, production has been closer to flat than growing.</p>
+<p class="src-note">Source: 10-K FY2023, p.64; 10-K FY2025, p.62.</p>
+
+<h2 id="leadership">Leadership and ownership</h2>
+<p>Expand Energy currently has no permanent CEO. On February 6, 2026, the board fired Domenic Dell'Osso — who had led the company (as Chesapeake, then Expand Energy) since October 2021 — "without cause," with no explanation given in any public filing. Board chair Michael Wichterich has served as interim President & CEO since, with an external search underway (six months in, as of the July 2026 earnings call, targeting 6-9 months total). The CFO seat also turned over recently: Mohit Singh departed in August 2025, Brittany Raiford served as interim CFO, and Marcel Teunissen was named permanent CFO in April 2026. No individual insider holds more than 1% of shares; the largest holders are institutional — Capital Research Global Investors (8.86%), BlackRock (7.33%), and State Street (5.12%).</p>
+<div class="callout bad"><b>Two C-suite seats changed hands within eight months</b>A CEO fired without public explanation, plus a CFO transition through an interim, both inside the same year — this is an unusually unsettled leadership picture for a company simultaneously pursuing a large acquisition and an aggressive buyback program.</div>
+<p class="src-note">Source: DEF 14A 2026, p.36, p.46, p.66-67; Q2 FY2026 earnings call.</p>
+
+<h2 id="capital-returns">Capital returns</h2>
+<p>Expand Energy paid $765M in dividends in 2025 (quarterly base dividend raised to $0.575/share as of a February 2026 announcement) plus $100M (0.9M shares) in buybacks that year — $865M returned to shareholders in total. The pattern shifted sharply in 2026: after gas prices spiked in Q1 2026 and cash piled up, the company used $1.3B of it to pay down debt early, then in Q2 2026 bought back $850M of stock (about 4% of shares outstanding) in a single stretch, judging the shares undervalued, and had the board approve an additional $1B buyback authorization on top of that.</p>
+<div class="callout warn"><b>Capital returns are opportunistic, not steady</b>Rather than a fixed payout policy, management is swinging hard between debt paydown and large, concentrated buybacks depending on where gas prices leave the cash balance that quarter — a style that can look smart in hindsight or reckless, depending on how gas prices move next.</div>
+<p class="src-note">Source: 10-K FY2025, p.57; Q2 FY2026 earnings call (Wichterich's remarks).</p>
+
+<h2 id="failure-scenario">How this company could fail</h2>
+<div class="callout bad">
+  <b>Failure scenario</b>
+  If U.S. natural gas prices stay depressed for an extended stretch at the same time the CEO vacancy drags on long enough to disrupt execution of the marketing and commercialization strategy, both revenue and market confidence could unravel together.
+</div>
+<ul class="kicker-list">
+  <li><b>Gas price volatility</b> — the large majority of revenue depends on a single benchmark, the U.S. Henry Hub price. A 2024 price decline alone cut revenue roughly in half (-51%) and pushed the company to an operating loss.</li>
+  <li><b>Debt taken on for the Southwestern merger</b> — total debt jumped from $2.0B (2023) to $5.7B (2024). It's down to $5.0B in 2025 through paydown efforts, but still about 2.5x the pre-merger level.</li>
+  <li><b>Leadership vacuum</b> — CEO and CFO seats both turned over in the same transition window. Interim leadership is currently pushing a major acquisition (Twin Eagle) forward; if the eventual permanent CEO disagrees with that direction, strategy could shift again.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, p.28-30 (Risk Factors).</p>
+
+<h2 id="financials">Five-year financials</h2>
+<div class="callout warn"><b>Two years of net income include one-time items</b>2021 net income includes a $5.57B one-time gain from Chapter 11 bankruptcy emergence accounting; 2022 net income includes a $1.29B one-time tax benefit. Neither year's net income reflects ongoing earnings power.</div>
+<div class="table-wrap">
+  <table>
+    <caption>$ millions</caption>
+    <thead><tr><th></th><th>2021<sup>†</sup></th><th>2022</th><th>2023</th><th>2024<sup>‡</sup></th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>Revenue</td><td>5,809</td><td>11,743</td><td>8,721</td><td>4,235</td><td>12,124</td></tr>
+      <tr><td>YoY growth</td><td>—</td><td class="pos">+102.2%</td><td class="neg">-25.7%</td><td class="neg">-51.4%</td><td class="pos">+186.3%</td></tr>
+      <tr><td>Operating income</td><td>704</td><td>3,780</td><td>3,142</td><td>(803)</td><td>2,471</td></tr>
+      <tr class="highlight"><td>Free cash flow</td><td>1,053</td><td>2,302</td><td>551</td><td>8</td><td>1,839</td></tr>
+      <tr><td>Total debt</td><td>2,278</td><td>3,093</td><td>2,028</td><td>5,680</td><td>5,009</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">† 2021 combines pre- and post-bankruptcy-emergence (Feb 9, 2021) results. ‡ 2024 includes Southwestern Energy results only from the Oct 1, 2024 merger date forward. FCF = operating cash flow minus capex. Source: 10-K FY2025, p.74-75, p.88; 10-K FY2023, p.61, p.85-86; 10-K FY2021, p.80.</p>
+<div class="callout good"><b>2024 was the trough, and cash barely held on</b>Despite an operating loss and negative net income in 2024, FCF stayed just barely positive ($8M) — a company running through the worst of a gas-price crash plus merger integration costs at the same time. 2025's FCF rebound to $1.84B reflects both a gas-price recovery and merger synergies materializing.</div>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>Who becomes the permanent CEO, and when</b> isn't known from these filings — the search was six months in as of the July 2026 call, and a new CEO could revisit the interim leadership's Twin Eagle strategy or dividend policy.</li>
+  <li><b>Whether the Twin Eagle acquisition hits its stated EBITDA targets ($200M in year one, $350M within two years)</b> can only be confirmed by results from the second half of 2026 onward.</li>
+  <li><b>Whether the current share price is expensive or cheap relative to this growth</b> can't be judged from the business-model analysis alone — that's what the reverse-DCF piece is for.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from Expand Energy's (and predecessor Chesapeake Energy's) 10-K filings for FY2021, FY2023 through FY2025, DEF 14A 2026, and the Q2 FY2026 earnings call, plus a web search for the current share price. This is a research summary, not investment advice — verify against the original filings before acting.
+</footer>
+`,
+  },
+
+  {
+    slug: 'exe-story',
+    ticker: 'EXE',
+    company: 'Expand Energy',
+    category: 'story',
+    title: "Expand Energy's Story: A Bankruptcy Survivor's Unexplained CEO Firing",
+    excerpt:
+      "A quiet post-bankruptcy recovery gave way to a confident merger story that hit its targets every quarter — until the board fired its CEO without explanation, and then doubled down on aggressive bets anyway.",
+    takeaway:
+      "Chesapeake Energy spent 2021-2023 quietly repairing its balance sheet after bankruptcy, then transformed into Expand Energy via an October 2024 merger with Southwestern Energy that management framed with escalating confidence for a full year — until the board fired CEO Domenic Dell'Osso without public explanation in February 2026, after which tone dipped for one quarter before the company resumed aggressive capital deployment under interim leadership, still without a permanent CEO as of mid-2026.",
+    faq: [
+      { q: "Why was Expand Energy's CEO fired?", a: "The board fired Domenic Dell'Osso 'without cause' on February 6, 2026, with no public explanation given in any filing or earnings call — the company has used only the phrase 'for any reason' to describe the termination basis." },
+      { q: 'Did the leadership change disrupt the business?', a: "Only briefly, based on tone. The Q4 FY2025 earnings call (12 days after the firing) showed a visibly more defensive tone, with interim CEO Michael Wichterich repeating 'we are not changing our leadership' multiple times. By the following two quarters, tone had recovered, and by July 2026 the company announced both a major acquisition (Twin Eagle) and a large buyback." },
+      { q: 'What sources does this analysis draw from?', a: "This piece is built from 10-K filings for FY2021, FY2023 through FY2025, and 8 quarters of Expand Energy's own earnings call transcripts, Q3 FY2024 (the company's first call under that name) through Q2 FY2026." },
+    ],
+    toc: [
+      { id: 'the-story', label: 'The story' },
+      { id: 'guidance-record', label: 'Guidance scorecard' },
+      { id: 'timeline', label: 'Timeline' },
+      { id: 'our-read', label: 'Our read' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2021, FY2023–FY2025 · 8 quarters of earnings call transcripts, Q3 FY2024–Q2 FY2026',
+    tags: ['EXE', 'Earnings Calls', 'Energy'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="the-story">The story</h2>
+<h3>2021-2023: quiet recovery, no fanfare</h3>
+<p>Having just emerged from Chapter 11 bankruptcy in February 2021, Chesapeake Energy's priority for the next two-plus years wasn't growth — it was survival and balance-sheet repair. In 2023, the company sold its entire Eagle Ford asset base for $2.5B in cash, using the proceeds to cut debt from $3.1B (2022) to $2.0B (2023), a 34% reduction. The company didn't even hold dedicated earnings calls through much of this period, communicating mainly through its 10-K filings — a cautious, low-visibility stretch.</p>
+
+<h3>October 2024: the merger, and a year of escalating confidence</h3>
+<p>On October 1, 2024, Chesapeake completed a merger with rival driller Southwestern Energy, renamed the combined company Expand Energy, and began trading under the ticker EXE. Ten days later, at the company's first earnings call under the new name (October 30, 2024), CEO Domenic Dell'Osso opened with "welcome to Expand Energy's first call" and immediately raised the merger synergy target by 25%. Over the next four consecutive quarters, through Q3 FY2025, the company repeated the same pattern every time: beat its own targets, then raised them again. The annual synergy target climbed in three steps — from $400M to $500M to $600M. By the Q3 FY2025 call, Dell'Osso was celebrating "Expand's first year," and management's confidence was at its peak.</p>
+
+<h3>February 2026: an unexplained reversal</h3>
+<p>Four months later, with no advance warning, the board fired Dell'Osso "without cause" on February 6, 2026. No successor was named; board chair Michael Wichterich stepped in as interim President & CEO. Twelve days later, at the Q4 FY2025 earnings call (February 18, 2026), Wichterich addressed the firing in a single line — "these changes, as all changes, you have some things that are unfortunate" — then repeated "we are not changing our leadership" throughout the rest of the call, even as the company had just done exactly that. The FY2025 10-K, filed the same day, added a newly standalone risk-factor section on the departure of key management — language that had previously existed only as a single sentence buried inside a different risk category.</p>
+
+<h3>Since then: tone recovering, bets getting bigger</h3>
+<p>By the April 2026 call, Wichterich described himself as "more optimistic than ever," even recasting Middle East geopolitical instability as a tailwind for U.S. gas demand. By the July 2026 call, the company had shifted fully into offense: it announced the acquisition of marketing firm Twin Eagle and, within two days, repurchased about 4% of its own shares (roughly $850M), securing additional buyback authorization from the board in the process. As of that same July 2026 call, the CEO seat remained vacant, six months into the search.</p>
+
+<div class="callout warn">
+  <b>Our take, in one line</b>
+  The real risk here isn't the gas market — it's accountability. Interim leadership is currently pushing through two large, consequential decisions (the Twin Eagle acquisition and an aggressive buyback) at once, and if the eventual permanent CEO disagrees with that direction, the strategy could reverse. The fact that Dell'Osso's firing reason was never disclosed — described in filings only as "for any reason" — adds to the uncertainty rather than resolving it.
+</div>
+
+<h2 id="guidance-record">Guidance scorecard</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Guidance vs. actual results, FY2024–FY2026</caption>
+    <thead><tr><th>Set when</th><th>Promise</th><th>Actual result</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Q3 FY2024 (Oct 2024)</td><td>2025 merger synergies $500M (+25%), by 2027</td><td>Timeline moved up to 2026 the very next quarter</td><td class="pos">Exceeded</td></tr>
+      <tr><td>Q4 FY2024 (Feb 2025)</td><td>Year-end 2025 net debt under $4.5B</td><td>FY2025 10-K actual: ~$4.39B net debt</td><td class="pos">Met</td></tr>
+      <tr><td>Q1 FY2025 (Apr 2025)</td><td>Year-end 2025 production ~7.2 Bcfe/d</td><td>Q3 FY2025 call: capex $150M below guidance, production 50 MMcf/d above target</td><td class="pos">Exceeded</td></tr>
+      <tr><td>Q2 FY2025 (Jul 2025)</td><td>Synergy target raised a third time, to $500M ('25) / $600M ('26)</td><td>Q3 FY2025 call reaffirmed "50% more synergies than the original target"</td><td class="pos">Maintained/exceeded</td></tr>
+      <tr class="highlight"><td>Q4 FY2025 (Feb 2026)</td><td>Permanent CEO named within 6-9 months</td><td>Q2 FY2026 call: "six months in, on track"</td><td class="neg">Still pending</td></tr>
+      <tr><td>Q2 FY2026 (Jul 2026)</td><td>Twin Eagle EBITDA: $200M+ year one, $350M within two years</td><td>Requires H2 2026 and later results to confirm</td><td class="neg">To be confirmed</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Pattern: every quantitative target (synergies, production, debt) was met or exceeded, and each time, management raised the bar again — a "guide conservative, beat decisively" pattern. The one promise involving a person, not a number — naming a permanent CEO — remains unresolved. Source: Q3-Q4 FY2024, Q1-Q4 FY2025, and Q1-Q2 FY2026 earnings calls; FY2025 10-K.</p>
+
+<h2 id="timeline">Timeline</h2>
+<ul class="timeline">
+  <li><span class="date">2023</span>Eagle Ford asset sale ($2.5B) cuts debt 34%; quiet financial recovery period.</li>
+  <li><span class="date">Oct 1, 2024</span>Southwestern Energy merger completes; company renamed Expand Energy, begins trading as EXE.</li>
+  <li><span class="date">Oct 30, 2024</span>Expand Energy's first earnings call; synergy target raised 25%, confidence begins climbing.</li>
+  <li><span class="date">Mar 2025</span>S&P 500 inclusion; investment-grade ratings secured from all three major agencies.</li>
+  <li><span class="date">Jul 2025</span>Synergy target raised a third time ($500M→$600M); confidence peaks.</li>
+  <li class="crisis"><span class="date">Feb 6, 2026</span>CEO Dell'Osso fired without cause, no explanation given; board chair becomes interim CEO.</li>
+  <li class="crisis"><span class="date">Feb 18, 2026</span>Q4 earnings call: defensive tone; new "management departure" risk-factor section added to the 10-K.</li>
+  <li><span class="date">Apr 6, 2026</span>New permanent CFO, Marcel Teunissen, appointed.</li>
+  <li><span class="date">Jul 28, 2026</span>Twin Eagle marketing-company acquisition announced alongside a 4% share buyback — full shift to offense.</li>
+</ul>
+
+<h2 id="our-read">Our read</h2>
+<p>Expand Energy's last three years trace a clean arc: a cautious bankruptcy-recovery period, a confident merger-driven growth story that consistently beat its own targets, an abrupt and unexplained leadership shake-up, and then a fast return to aggressive capital deployment — all without a permanent CEO in place. The operational and financial execution has been strong by almost every measurable count. What hasn't been resolved is governance: nobody outside the boardroom knows why Dell'Osso was removed, and the interim leadership is making consequential, hard-to-reverse decisions (a large acquisition, a large buyback) that a future permanent CEO may or may not have chosen to make the same way.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>Why Dell'Osso was fired</b> — neither the filings nor the earnings calls give a reason beyond "without cause" / "for any reason."</li>
+  <li><b>Whether the eventual permanent CEO will endorse the interim leadership's aggressive expansion (the Twin Eagle acquisition and large buybacks)</b> can't be known until that person is named.</li>
+  <li><b>How old Chesapeake Energy's own management spoke on earnings calls before the merger</b> couldn't be tracked from the transcripts gathered for this piece — the 2023-era calls initially collected turned out to be Southwestern Energy's own calls (the company Chesapeake acquired, under then-CEO Bill Way), not Chesapeake's, so Chesapeake's own pre-merger tone is outside the scope of this analysis.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from 10-K filings for FY2021, FY2023 through FY2025, and 8 quarters of Expand Energy's own earnings call transcripts from Q3 FY2024 through Q2 FY2026. Tone assessments are qualitative. This is a research summary, not investment advice.
+</footer>
+`,
+  },
+
+  {
+    slug: 'exe-dcf',
+    ticker: 'EXE',
+    company: 'Expand Energy',
+    category: 'dcf',
+    title: "What EXE's Stock Price Is Really Betting On",
+    excerpt:
+      "Reverse-engineering the free-cash-flow growth rate Expand Energy's share price already assumes — and finding a number that depends almost entirely on repeating a one-time merger, not on organic drilling.",
+    takeaway:
+      "At today's price, Expand Energy's stock is pricing in about 13.9% annual free-cash-flow growth for the next ten years — a rate close to its 5-year revenue growth (20.2% a year), but that historical growth came almost entirely from one large 2024 merger rather than repeatable organic drilling, and the required-growth number is unusually sensitive to which year's cash flow is used as the starting base.",
+    faq: [
+      { q: "What growth rate does EXE's stock price assume?", a: 'At today\'s price, Expand Energy\'s stock is pricing in about 13.9% annual free-cash-flow growth for the next ten years, at a 10% discount rate, using a normalized (3-year average) FCF base.' },
+      { q: 'Is EXE\'s historical growth repeatable?', a: "Largely no. EXE's 5-year revenue CAGR (20.2%) came almost entirely from the October 2024 Southwestern Energy merger, a one-time event, not annual organic growth. The company's own production targets have historically aimed at maintaining output rather than growing it organically." },
+      { q: 'What share price was used for this analysis?', a: 'This analysis used $94.83, as of the Sept 11, 2026 close.' },
+    ],
+    toc: [
+      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
+      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
+      { id: 'what-would-move-it', label: 'What would move this number' },
+      { id: 'show-your-work', label: 'Show your work' },
+      { id: 'fine-print', label: 'The fine print' },
+    ],
+    sources: 'As of Sept 11, 2026 · Price used: $94.83',
+    tags: ['EXE', 'ReverseDCF', 'Valuation'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<div class="verdict-box">
+  <div class="label">The conclusion</div>
+  <p>At its current price, EXE implies <span class="num">~13.9%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
+  <p>EXE's 5-year revenue growth has averaged <span class="num">20.2%</span> a year — but almost all of that came from a single 2024 merger, not repeatable organic drilling growth.</p>
+</div>
+
+<div class="callout bad">
+  <b>Verdict: the price requires either more large M&A or sustained strong gas prices — not a sure thing</b>
+  The required growth rate (13.9%) sits below EXE's 5-year revenue CAGR (20.2%), which on its face looks achievable. But that historical growth is almost entirely the product of one large, one-time acquisition (the October 2024 Southwestern Energy merger) — not annual organic expansion. Stripped of merger effects, EXE's own targets have historically aimed at holding production roughly flat, not growing it. Unless a comparably sized acquisition or a decade of unusually strong gas prices repeats, meeting the market's current ask could be a stretch.
+</div>
+
+<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<div class="datacard">
+  <div class="barlist">
+    <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:69%;background:var(--accent)"></div></div><span class="val">13.9%</span></div>
+    <div class="barrow"><span class="lbl">5-yr revenue CAGR (incl. M&A)</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">20.2%</span></div>
+    <div class="barrow"><span class="lbl">5-yr FCF CAGR (gas-price distorted)</span><div class="track"><div class="fill" style="width:74%"></div></div><span class="val">15.0%</span></div>
+  </div>
+  <p class="src-note">Required growth from the reverse DCF below. Historical figures from 10-K FY2021, FY2023-FY2025. The FCF CAGR is flagged as unusually noisy: FCF swung from $2.30B (2022) to $8M (2024) to $1.84B (2025) purely on gas-price swings, so this figure moves sharply depending on the start and end years chosen.</p>
+</div>
+
+<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
+    <thead><tr><th>WACC</th><th>Required growth</th></tr></thead>
+    <tbody>
+      <tr><td>8%</td><td>9.3%</td></tr>
+      <tr class="highlight"><td>10% (base case)</td><td>13.9%</td></tr>
+      <tr><td>12%</td><td>18.0%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>EXE earned S&P 500 inclusion and investment-grade ratings from all three major agencies in early 2025, but its revenue and cash flow remain tied to spot natural gas prices — a large-cap company with commodity-level volatility. A 9-10% discount rate was used as the base range for that reason.</p>
+
+<h2 id="what-would-move-it">What would move this number</h2>
+<ul class="kicker-list">
+  <li><b>Using 2025's actual FCF ($1.84B) instead of the normalized 3-year-average base ($799M) used here</b> drops the required growth rate sharply, to just 2.6% (at WACC 10%) — effectively "hold current levels" rather than grow.</li>
+  <li><b>Using the most recent twelve months' FCF ($2.68B), inflated by a 2026 gas-price spike,</b> pushes the required growth rate negative — meaning even shrinking cash flow would technically justify today's price on that basis.</li>
+  <li><b>This ticker is unusually sensitive to which year's cash flow is used as the base</b> — more so than most companies on this site. The 3-year average ($799M, from FCF of $551M in 2023, $8M in 2024, and $1,839M in 2025) was used here because 2025 alone came in 130% above that average, well past the ±40% threshold used to flag a single year as too unusual to use directly.</li>
+</ul>
+
+<h2 id="show-your-work">Show your work</h2>
+<details class="methodology">
+  <summary>Inputs, sources, model assumptions, and the calculation</summary>
+  <ul class="input-list">
+    <li><b>Share price</b><span>$94.83 — Google Finance, Sept 11, 2026 close</span></li>
+    <li><b>Shares outstanding</b><span>234,349,727 — 10-Q cover page, as of June 30, 2026</span></li>
+    <li><b>Market cap</b><span>$22.22B — price × shares (calculated)</span></li>
+    <li><b>Total debt</b><span>$3,685M — balance sheet, June 30, 2026</span></li>
+    <li><b>Cash and equivalents</b><span>$663M — balance sheet, June 30, 2026</span></li>
+    <li><b>Net debt</b><span>$3,022M — total debt minus cash (calculated)</span></li>
+    <li><b>Enterprise value (EV)</b><span>$25.25B — market cap plus net debt (calculated)</span></li>
+    <li><b>FCF, most recent 3 years</b><span>2023: $551M / 2024: $8M / 2025: $1,839M — 10-K FY2025, p.74-75, FCF = operating cash flow minus capex</span></li>
+    <li><b>Normalized FCF (base used)</b><span>$799M — 3-year average; 2025's actual FCF deviated +130% from that average, past this site's ±40% normalization threshold</span></li>
+    <li><b>Discount rate (WACC)</b><span>10% base case (8%/12% tested)</span></li>
+    <li><b>Terminal growth rate</b><span>2.5% — long-run GDP-level assumption</span></li>
+  </ul>
+  <p style="font-size:13px;margin-top:16px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap plus net debt, $25.25B).</p>
+  <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr revenue CAGR (2021→2025, includes the 2024 merger) = 20.2%. 5-yr FCF CAGR (2021→2025) = 15.0%, though this figure is highly sensitive to gas-price swings across the period.</p>
+</details>
+
+<h2 id="fine-print">The fine print</h2>
+<div class="callout bad">
+  <b>This number is a starting point, not an answer</b>
+  <ul style="margin:10px 0 0;padding-left:18px;">
+    <li>This isn't a fair-value price target — it only shows what the current price already assumes.</li>
+    <li>Change the discount rate or, especially, the FCF normalization year, and the answer moves dramatically — see the sensitivity notes above.</li>
+    <li>Whether 13.9% growth is realistic depends on whether Expand Energy can repeat merger-scale growth or sustain strong gas prices for a full decade — not on this math alone.</li>
+    <li>A reverse DCF shows what the market currently expects — it does not say what the stock is "worth."</li>
+    <li>Any investment decision, and its outcome, is your own responsibility.</li>
+  </ul>
+</div>
+
+<footer class="disclosure">
+  Built from Expand Energy's 10-K filings (FY2021, FY2023–FY2025) and Q2 FY2026 10-Q, plus a web search for the current share price (Google Finance, Sept 11, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
+</footer>
+`,
+  },
+
+  {
+    slug: 'pfe-snapshot',
+    ticker: 'PFE',
+    company: 'Pfizer',
+    category: 'snapshot',
+    title: 'Pfizer (PFE): What This Company Actually Does',
+    excerpt:
+      "A plain-English read of Pfizer's business — patented drugs and vaccines sold through a handful of wholesalers, paid for mostly by governments and insurers, not patients — built directly from its SEC filings.",
+    takeaway:
+      "Pfizer develops patent-protected drugs and vaccines for cardiovascular disease, cancer, and infectious disease, and makes its money charging premium prices while those patents hold — but about 40% of FY2025 revenue comes from products (Eliquis, Prevnar, Vyndaqel, Ibrance) whose patents expire between 2026 and 2029, the single biggest fact about this business.",
+    quickFacts: [
+      { k: 'Share price', v: '$28.55' },
+      { k: 'Market cap', v: '~$162.3B' },
+      { k: 'FY2025 revenue', v: '$62.58B' },
+      { k: 'Revenue facing 2026-29 patent expiry', v: '~40%' },
+    ],
+    faq: [
+      { q: 'How does Pfizer make money?', a: "Pfizer develops patented drugs and vaccines for cardiovascular disease, cancer, and infectious disease, then sells them at premium prices for as long as patent protection lasts. Roughly 54% of revenue flows through just three wholesalers (McKesson, Cencora, Cardinal Health), and the ultimate payers are mostly governments (Medicare) and private insurers, not patients directly." },
+      { q: "What is Pfizer's biggest risk right now?", a: "A patent cliff. About 40% of FY2025 revenue comes from four products — Eliquis, Prevnar, Vyndaqel, and Ibrance — whose patents expire between 2026 and 2029. Once a patent expires and generics enter, a drug's revenue typically falls by more than half within one to two years." },
+      { q: "What is Pfizer's market cap?", a: "As of this article's data, Pfizer's market cap was about $162.3B, on FY2025 revenue of $62.58B." },
+    ],
+    toc: [
+      { id: 'how-it-makes-money', label: 'How Pfizer makes money' },
+      { id: 'revenue-mix', label: 'Where the revenue comes from' },
+      { id: 'customers-competitors', label: 'Customers and competitors' },
+      { id: 'core-metric', label: 'The metric that matters most' },
+      { id: 'leadership', label: 'Leadership and ownership' },
+      { id: 'capital-returns', label: 'Capital returns' },
+      { id: 'failure-scenario', label: 'How this company could fail' },
+      { id: 'financials', label: 'Five-year financials' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2021–FY2025 · DEF 14A 2026',
+    tags: ['PFE', 'Pharmaceuticals', '10-K'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="how-it-makes-money">How Pfizer makes money</h2>
+<p>Pfizer researches and develops patented drugs and vaccines, then sells them at premium prices for as long as patent exclusivity lasts. Most of the money doesn't come from patients directly — it moves through wholesalers to hospitals and pharmacies, and is ultimately paid by government programs like Medicare and private insurers.</p>
+<div class="flow">
+  <div class="flow-box"><div class="t">R&D labs</div><div class="d">~$10.4B/year, FY2025</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box center"><div class="t">Patented drugs & vaccines</div><div class="d">Exclusive pricing while patent protection holds</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box"><div class="t">3 wholesalers → hospitals/pharmacies</div><div class="d">Paid mostly by Medicare and private insurers, not patients</div></div>
+</div>
+<p class="src-note">The three largest wholesalers (McKesson, Cencora, Cardinal Health) collect more than half of revenue before it ever reaches a patient. Profit flows back into R&D ($10.4B in FY2025) and acquisitions (Metsera, Seagen). Source: 10-K FY2025, p.5, p.101.</p>
+
+<h2 id="revenue-mix">Where the revenue comes from</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Revenue by therapeutic area — FY2025</caption>
+    <thead><tr><th>Area</th><th>Revenue</th><th>Share</th></tr></thead>
+    <tbody>
+      <tr><td>Primary Care</td><td>$26.8B</td><td>42.9%</td></tr>
+      <tr><td>Specialty Care</td><td>$17.5B</td><td>28.0%</td></tr>
+      <tr><td>Oncology</td><td>$16.8B</td><td>26.9%</td></tr>
+      <tr><td>Other</td><td>$1.4B</td><td>2.2%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Pfizer reports Biopharma as its single segment, so segment-level operating margins aren't separately disclosed. Source: 10-K FY2025, p.101-102.</p>
+<p>Geographically (FY2025): the U.S. is 59.3% ($37.1B), international markets are 40.7% ($25.5B) — with China the largest single international market at 5%, up slightly from 4% in 2024. International's share is actually down from a 2023 peak of 53%, when COVID vaccine sales were still concentrated overseas; it's been normalizing since.</p>
+<p class="src-note">Source: 10-K FY2025, p.6-7, p.36.</p>
+
+<h2 id="customers-competitors">Customers and competitors</h2>
+<p>Pfizer sells almost entirely through three pharmaceutical wholesalers, who together account for 54% of revenue: McKesson (25%), Cencora (16%), and Cardinal Health (13%).</p>
+<div class="callout warn"><b>More than half of revenue runs through three companies</b>That concentration structurally limits Pfizer's negotiating leverage with its own distribution channel — losing or renegotiating terms with even one of the three would be a meaningful event.</div>
+<ul class="kicker-list">
+  <li><b>Merck & Co.</b> — its cancer drug Keytruda competes directly across much of Pfizer's oncology portfolio.</li>
+  <li><b>AbbVie</b> — overlaps with Pfizer's Specialty Care business in immunology and oncology.</li>
+  <li><b>Bristol-Myers Squibb</b> — a co-marketing partner on Eliquis, but a competitor in other cardiovascular and oncology products.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, p.101 (wholesaler concentration).</p>
+
+<h2 id="core-metric">The metric that matters most in this sector</h2>
+<p>For a patent-driven pharma company, the number that matters most isn't quarterly revenue — it's how much of that revenue depends on patents that are about to expire. Once a patent lapses and generics enter, a drug's sales typically drop by more than half within a year or two.</p>
+<div class="table-wrap">
+  <table>
+    <caption>Revenue facing patent expiration, 2026-2029 (FY2025)</caption>
+    <thead><tr><th>Product</th><th>Share of FY2025 revenue</th></tr></thead>
+    <tbody>
+      <tr><td>Eliquis</td><td>12.7%</td></tr>
+      <tr><td>Prevnar</td><td>10.4%</td></tr>
+      <tr><td>Vyndaqel</td><td>10.2%</td></tr>
+      <tr><td>Ibrance</td><td>6.6%</td></tr>
+      <tr class="highlight"><td>Combined</td><td>~40%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>R&D spending as a share of revenue was 16.7% in FY2025, up from 12.7% five years ago — the pace of reinvestment into the pipeline that has to eventually replace this ~40% of at-risk revenue.</p>
+<p class="src-note">Source: 10-K FY2025, p.7 (patent expiration table), p.101-102 (product revenue), p.51 (R&D spend); 10-K FY2022, p.51 (historical R&D/revenue).</p>
+
+<h2 id="leadership">Leadership and ownership</h2>
+<p>CEO Albert Bourla has led Pfizer since January 2019 and has also chaired the board since January 2020. A veterinarian and pharmacologist by training, he spent over 30 years at Pfizer before becoming CEO, including as COO starting in 2018 — a classic internal-promotion case. There's no founder involvement; Pfizer was founded in 1849 by Charles Pfizer, and that family has been out of management for generations. All directors and executives combined hold under 1% of shares; the largest holders are index funds — Vanguard (8.97%), BlackRock (7.70%), and State Street (5.10%) — none of which are activist investors.</p>
+<p class="src-note">Source: DEF 14A 2026, beneficial ownership and executive officer tables.</p>
+
+<h2 id="capital-returns">Capital returns</h2>
+<p>Pfizer raised its dividend modestly for three straight years — $1.65/share (2023) to $1.69 (2024) to $1.72 (2025). Buybacks, on the other hand, have been zero for three consecutive years (2023-2025). A $10B repurchase authorization from 2018 still has $3.3B unused, but management has paused buybacks entirely to preserve financial flexibility after funding the $43B Seagen acquisition with debt.</p>
+<div class="callout warn"><b>Debt from Seagen is still shaping capital allocation</b>Three straight years without a single dollar of buybacks is unusual for a company this size — a direct, ongoing consequence of financing the 2023 Seagen acquisition with debt rather than cash or stock.</div>
+<p class="src-note">Source: 10-K FY2025, p.75.</p>
+
+<h2 id="failure-scenario">How this company could fail</h2>
+<div class="callout bad">
+  <b>Failure scenario</b>
+  If patents on major products like Eliquis, Prevnar, and Vyndaqel expire as scheduled between 2026 and 2029 and the pipeline doesn't produce a large enough replacement in time, Pfizer becomes a company that loses roughly 40% of its revenue within just a few years.
+</div>
+<ul class="kicker-list">
+  <li><b>Patent cliff</b> — Eliquis could face generic competition as early as November 2026 (on the compound patent) or as late as 2028 (under settlement terms). Prevnar, Vyndaqel, Ibrance, and Xtandi all have patents expiring in the same 2026-2029 window, threatening roughly 40% of revenue at once.</li>
+  <li><b>Wholesaler concentration</b> — McKesson, Cencora, and Cardinal Health together account for 54% of revenue, structurally limiting Pfizer's price-negotiation leverage with its own distribution channel.</li>
+  <li><b>Government price controls (the IRA)</b> — under the U.S. Inflation Reduction Act, the government now has authority to directly negotiate Medicare drug prices, and larger-revenue products are more likely to be selected for negotiation.</li>
+</ul>
+<p class="src-note">Source: 10-K FY2025, p.7 (patent expiration table), p.16-26 (Item 1A Risk Factors), p.101 (wholesaler concentration).</p>
+
+<h2 id="financials">Five-year financials</h2>
+<div class="table-wrap">
+  <table>
+    <caption>$ millions</caption>
+    <thead><tr><th></th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>Revenue</td><td>81,288</td><td>100,330</td><td>59,553</td><td>63,627</td><td>62,579</td></tr>
+      <tr><td>YoY growth</td><td>—</td><td class="pos">+23.4%</td><td class="neg">-40.6%</td><td class="pos">+6.8%</td><td class="neg">-1.6%</td></tr>
+      <tr><td>Operating income (margin)</td><td>19,433 (23.9%)</td><td>34,944 (34.8%)</td><td>1,279 (2.1%)</td><td>12,411 (19.5%)</td><td>14,244 (22.8%)</td></tr>
+      <tr class="highlight"><td>Free cash flow</td><td>29,869</td><td>26,031</td><td>4,793</td><td>9,835</td><td>9,075</td></tr>
+      <tr><td>Total debt</td><td>38,436</td><td>35,829</td><td>71,888</td><td>64,351</td><td>64,795</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="callout warn"><b>2023 was reshaped by two things at once</b>Total debt roughly doubled ($36B→$72B) to fund the debt-financed $43B Seagen acquisition, while operating margin collapsed from 34.8% to 2.1% as COVID vaccine and treatment sales crashed and one-time acquisition costs hit the same year.</div>
+<p class="src-note">Operating income = revenue minus cost of sales, SG&A, R&D, acquired-IPR&D, amortization of intangibles, and restructuring (derived by exclusion of other income/expense). FCF = operating cash flow minus capex. Total debt = short-term borrowings (including current portion of long-term debt) plus long-term debt. Source: 10-K FY2025, p.51, p.55, p.59-60; 10-K FY2022, p.46; 10-K FY2024, p.56.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>When Metsera, the obesity-drug company acquired in November 2025, will start contributing meaningful revenue</b> isn't disclosed here — the Q1 FY2026 earnings call would need to be checked.</li>
+  <li><b>Where Comirnaty and Paxlovid (COVID vaccine and treatment) revenue, in decline since 2023, will eventually bottom out</b> isn't yet clear from these filings.</li>
+  <li><b>The final outcome of Eliquis patent litigation</b> — including whether generics could enter as early as November 2026 — remains an open legal question not resolved in this data.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from Pfizer's 10-K filings for FY2021 through FY2025 and DEF 14A 2026, plus a web search for the current share price (Investing.com, Sept 2, 2026). This is a research summary, not investment advice — verify against the original filings before acting.
+</footer>
+`,
+  },
+
+  {
+    slug: 'pfe-story',
+    ticker: 'PFE',
+    company: 'Pfizer',
+    category: 'story',
+    title: "Pfizer's Story: A Guidance Cut, a Comeback, Then Two Shocks at Once",
+    excerpt:
+      'Pfizer slashed its own 2023 guidance in half and lost credibility, clawed it back with a conservative 2024 target it beat by a wide margin, then got hit by a failed obesity drug and a tariff shock in the same spring.',
+    takeaway:
+      "Pfizer's FY2023 guidance was cut nearly in half mid-year as COVID-era demand collapsed, badly denting credibility, but FY2024's deliberately conservative targets were beaten by 38%, restoring confidence to a three-year high — only for an obesity-drug failure and a Trump tariff shock to hit within the same month in spring 2025, pushing the company toward both aggressive M&A and a direct pricing deal with the U.S. government.",
+    faq: [
+      { q: "How badly did Pfizer miss its 2023 guidance?", a: "Pfizer started FY2023 guiding adjusted EPS of $3.25-3.45, then cut that range to $1.45-1.65 by the Q3 FY2023 call — a roughly 55% reduction — as COVID-era vaccine and treatment demand collapsed faster than expected. Actual FY2023 adjusted EPS came in at $1.84, barely above even the cut range." },
+      { q: 'What happened to Pfizer in spring 2025?', a: "Two setbacks hit within about a month. In April 2025, Pfizer's oral obesity drug candidate danuglipron was discontinued entirely after a safety signal in trials. Days later, on April 2, 2025, the Trump administration issued a tariff executive order, and the following earnings call was dominated by tariff-related questions — CEO Albert Bourla used the phrase 'the current volatile external environment' for the first time." },
+      { q: 'What sources does this analysis draw from?', a: 'This piece is built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026.' },
+    ],
+    toc: [
+      { id: 'the-story', label: 'The story' },
+      { id: 'guidance-record', label: 'Guidance scorecard' },
+      { id: 'timeline', label: 'Timeline' },
+      { id: 'our-read', label: 'Our read' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
+    tags: ['PFE', 'Earnings Calls', 'Pharmaceuticals'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="the-story">The story</h2>
+<h3>Late 2023: guidance cut in half, credibility damaged</h3>
+<p>As COVID-era vaccine and treatment demand wound down, FY2023 revenue fell 41% year over year. The adjusted EPS guidance Pfizer had confidently set at the start of the year — $3.25-3.45 — was cut to $1.45-1.65 by the Q3 FY2023 call, a roughly 55% reduction; actual results landed at $1.84, barely clearing even that lowered bar. That same December, Pfizer closed its $43B acquisition of oncology company Seagen as a rebound bet, and opened FY2024 with what it called a "foundational year," guiding to a deliberately conservative $58.5-61.5B in revenue and $2.05-2.25 in adjusted EPS.</p>
+
+<h3>2024: a conservative target, beaten decisively</h3>
+<p>FY2024 came in well ahead of that cautious guidance — revenue reached $63.6B, above the top of the range, and adjusted EPS hit $3.11, 38% above the original top-end target. At the Q4 FY2024 call (February 2025), CEO Albert Bourla said 2024 "was a year of strong execution and results" and that the company had "met or exceeded our goals for each" strategic priority. Between the Seagen integration progressing, margins expanding, and $7.8B of debt paid down, management's tone on the earnings call reached its highest point in three years.</p>
+
+<h3>Spring 2025: two shocks, one month apart</h3>
+<p>Then, just three months later, two setbacks landed almost simultaneously. First, danuglipron — an oral obesity-drug candidate Pfizer had been counting on — was discontinued entirely after a safety signal emerged in trials. Then, on April 2, 2025, the Trump administration issued a tariff executive order, and the Q1 FY2025 earnings call that followed was dominated by tariff-related questions. Bourla used a phrase he hadn't used before — "the current volatile external environment" — and management's tone score on that call fell to a three-year low.</p>
+
+<h3>The response: buy the pipeline, and cut a deal with Washington</h3>
+<p>Pfizer's response split into two tracks. One was filling the pipeline gap through dealmaking — licensing a drug from China's 3SBio, and pursuing obesity-drug company Metsera, which triggered a bidding war after Novo Nordisk entered with a higher offer (Pfizer publicly called Novo's bid "illusory" and antitrust-violating, and ultimately won the deal). The other was direct negotiation with the government: in September 2025, Pfizer reached a "voluntary agreement" with the Trump administration to bring U.S. drug prices closer to other developed countries' levels, in exchange for a three-year exemption from Section 232 tariffs.</p>
+
+<div class="callout warn">
+  <b>Our take, in one line</b>
+  Uncertainty has cleared, but it wasn't free — the Metsera deal alone is expected to dilute 2026 adjusted EPS by roughly $0.16, and the government agreement is also expected to weigh on 2026 results. One detail worth flagging: the explicit "return to pre-pandemic operating margins" goal stated on the Q4 FY2024 call never appeared again in later calls — whether that's because it was quietly achieved or quietly shelved under new M&A costs isn't something this data can settle.
+</div>
+
+<h2 id="guidance-record">Guidance scorecard</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Adjusted EPS guidance vs. actual results, FY2023–FY2025</caption>
+    <thead><tr><th>Fiscal year</th><th>Initial guidance</th><th>Mid-year revision</th><th>Actual result</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>FY2023</td><td>$3.25-3.45</td><td>$1.45-1.65 (cut, Q3)</td><td>$1.84</td><td class="neg">Badly missed original promise</td></tr>
+      <tr><td>FY2024</td><td>$2.05-2.25</td><td>No revision</td><td>$3.11</td><td class="pos">Beat top end by +38%</td></tr>
+      <tr class="highlight"><td>FY2025</td><td>$2.80-3.00</td><td>$3.00-3.15 (raised, Q3)</td><td>$3.22</td><td class="pos">Beat even the raised target</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">FY2023's guidance was cut 55% within three quarters of the year starting, and results barely cleared even the reduced range. Whether the FY2024-FY2025 pattern of repeated beats reflects a genuine turnaround or a "guide low after losing credibility" habit isn't fully resolvable from this data alone. Source: Q3 FY2023, Q4 FY2023, Q4 FY2024, and Q3 FY2025 earnings calls; 10-K FY2025, p.44-45.</p>
+
+<h2 id="timeline">Timeline</h2>
+<ul class="timeline">
+  <li class="crisis"><span class="date">Oct 2023</span>FY2023 adjusted EPS guidance cut roughly in half, from $3.25-3.45 to $1.45-1.65.</li>
+  <li><span class="date">Dec 2023</span>Seagen acquisition completes ($43B) — Pfizer's largest-ever deal, debt-financed.</li>
+  <li><span class="date">Feb 2025</span>Q4 FY2024 call: "met or exceeded our goals for each" priority — confidence at a three-year high.</li>
+  <li class="crisis"><span class="date">Apr 2025</span>Oral obesity drug danuglipron discontinued after a safety signal.</li>
+  <li class="crisis"><span class="date">Apr 2, 2025</span>Trump administration tariff executive order; the following earnings call is dominated by tariff questions.</li>
+  <li><span class="date">Sep-Nov 2025</span>Metsera acquisition battle with Novo Nordisk, won by Pfizer; simultaneously, a voluntary drug-pricing and tariff agreement is reached with the Trump administration.</li>
+  <li><span class="date">Feb 2026</span>Q4 FY2025 call: 2026 outlook is a recovery, but starts already carrying M&A dilution; the "pre-pandemic margin" phrase is no longer mentioned.</li>
+</ul>
+
+<h2 id="our-read">Our read</h2>
+<p>Pfizer's last three years trace a full cycle: a credibility-damaging guidance cut, a deliberately conservative comeback that overdelivered, and then two unrelated shocks landing in the same month that forced a shift toward both acquisitions and direct government negotiation. The operational recovery in FY2024-FY2025 looks real by the numbers, but the guidance pattern itself — cut hard once, then beat conservative targets twice in a row — leaves open whether management has simply gotten more cautious in how it sets expectations. That's worth watching in FY2026, the first year that has to absorb both the Metsera dilution and the new government pricing agreement at the same time.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>How much Pfizer ultimately paid to win the Metsera bidding war, and whether the Novo Nordisk dispute is fully resolved</b> requires data from the Q1 FY2026 call and later to confirm.</li>
+  <li><b>The real reason the "return to pre-pandemic operating margins" goal stopped being mentioned</b> (achieved quietly vs. quietly abandoned) can only be judged by whether the phrase resurfaces or a replacement goal is introduced in future calls.</li>
+  <li><b>The final terms of the September 2025 government agreement</b> aren't settled — the deal wasn't yet a "binding final agreement" as of the data reviewed here, so actual terms could still shift.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026. Tone assessments are qualitative. This is a research summary, not investment advice.
+</footer>
+`,
+  },
+
+  {
+    slug: 'pfe-dcf',
+    ticker: 'PFE',
+    company: 'Pfizer',
+    category: 'dcf',
+    title: "What PFE's Stock Price Is Really Betting On",
+    excerpt:
+      "Reverse-engineering the free-cash-flow growth rate Pfizer's share price already assumes — and finding that the honest answer is Pfizer's own 5-year history is too distorted by COVID to judge it against.",
+    takeaway:
+      "At today's price, Pfizer's stock is pricing in roughly 7.8% to 9.6% annual free-cash-flow growth for the next ten years, depending on the FCF base used — a number that can't be meaningfully judged against Pfizer's own 5-year track record, since both the 2021-2022 COVID boom and the 2023 crash that followed are too distorted to serve as a fair comparison.",
+    faq: [
+      { q: "What growth rate does PFE's stock price assume?", a: "At today's price, Pfizer's stock is pricing in about 7.8% annual free-cash-flow growth for the next ten years using FY2025's FCF as the base (at a 9% discount rate), or 9.6% if a 3-year-average FCF base is used instead." },
+      { q: "Can Pfizer's historical growth tell us whether that's realistic?", a: "Not reliably. Pfizer's 5-year FCF CAGR (2021→2025) is -25.8%, but 2021-2022 were inflated by COVID vaccine and treatment sales, and 2023 was an artificially depressed trough as that demand collapsed. Neither end of that comparison is a fair baseline, which is why this analysis leans on the patent-cliff picture instead." },
+      { q: 'What share price was used for this analysis?', a: 'This analysis used $28.55, as of the Sept 2, 2026 close.' },
+    ],
+    toc: [
+      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
+      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
+      { id: 'what-would-move-it', label: 'What would move this number' },
+      { id: 'show-your-work', label: 'Show your work' },
+      { id: 'fine-print', label: 'The fine print' },
+    ],
+    sources: 'As of Sept 2, 2026 · Price used: $28.55',
+    tags: ['PFE', 'ReverseDCF', 'Valuation'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<div class="verdict-box">
+  <div class="label">The conclusion</div>
+  <p>At its current price, PFE implies <span class="num">~7.8%</span> annual FCF growth for the next 10 years (FY2025 FCF base, WACC 9%) — or <span class="num">~9.6%</span> using a 3-year-average FCF base instead.</p>
+  <p>Pfizer's 5-year FCF growth (2021→2025) was <span class="num">-25.8%</span> a year — but that figure is too distorted by the COVID vaccine boom and its collapse to be a meaningful comparison point.</p>
+</div>
+
+<div class="callout warn">
+  <b>Verdict: Pfizer's own history can't settle this one — the patent cliff is the real test</b>
+  The market's required growth rate (7.8-9.6%) can't be fairly judged against Pfizer's 5-year FCF CAGR, because both ends of that period are distorted: 2021-2022 were inflated by one-time COVID vaccine and treatment revenue, and 2023 was an artificially depressed trough as that demand evaporated almost overnight. The more useful question is whether high-single-digit FCF growth is realistic for a company that's about to see roughly 40% of its revenue face patent expiration between 2026 and 2029. That's a business-model question, not a historical-comparison one — and it's the one this reverse DCF can't answer on its own.
+</div>
+
+<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<div class="datacard">
+  <div class="barlist">
+    <div class="barrow"><span class="lbl">Market's ask (FY2025 FCF base, WACC 9%)</span><div class="track"><div class="fill" style="width:81%;background:var(--accent)"></div></div><span class="val">7.8%</span></div>
+    <div class="barrow"><span class="lbl">Market's ask (3-yr avg FCF base, WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">9.6%</span></div>
+    <div class="barrow"><span class="lbl">5-yr FCF CAGR, 2021→2025 (COVID-distorted)</span><div class="track"><div class="fill" style="width:0%"></div></div><span class="val">-25.8%</span></div>
+    <div class="barrow"><span class="lbl">2-yr recovery FCF CAGR, 2023→2025 (also distorted)</span><div class="track"><div class="fill" style="width:100%;background:var(--good)"></div></div><span class="val">+37.6%</span></div>
+  </div>
+  <p class="src-note">Required growth from the reverse DCF below. The 5-yr and 2-yr historical CAGRs bracket wildly different figures precisely because neither 2021-2022 (COVID peak) nor 2023 (COVID trough) is a normal baseline year — both are shown for completeness, not as a reliable growth signal.</p>
+</div>
+
+<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
+    <thead><tr><th>WACC</th><th>Required growth (FY2025 FCF base)</th><th>Required growth (3-yr avg FCF base)</th></tr></thead>
+    <tbody>
+      <tr><td>7%</td><td>2.9%</td><td>4.6%</td></tr>
+      <tr class="highlight"><td>9% (base case)</td><td>7.8%</td><td>9.6%</td></tr>
+      <tr><td>11%</td><td>11.9%</td><td>13.8%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Pfizer is a large, S&P 500 pharmaceutical company, so a 9% discount rate was used as the base case. Moving the discount rate by just 2 percentage points in either direction roughly doubles the gap in required growth — this result is unusually sensitive to that single assumption.</p>
+
+<h2 id="what-would-move-it">What would move this number</h2>
+<ul class="kicker-list">
+  <li><b>Switching the FCF base from FY2025's single-year figure ($9,075M) to the 3-year average ($7,901M)</b> raises the required growth rate from 7.8% to 9.6% at WACC 9% — a smaller base requires faster growth to reach the same target value. FY2025's FCF was used as the primary base here since it fell within this site's ±40% normalization threshold relative to the 3-year average (+14.9%).</li>
+  <li><b>Lowering the discount rate to 7%</b> drops the required growth to as low as 2.9%; raising it to 11% pushes it up to 11.9%.</li>
+  <li><b>How net debt is measured also matters</b> — this analysis used total borrowings ($64.8B) minus cash and short-term investments ($13.6B), for net debt of about $51.2B. Pension obligations and litigation reserves were not included.</li>
+</ul>
+
+<h2 id="show-your-work">Show your work</h2>
+<details class="methodology">
+  <summary>Inputs, sources, model assumptions, and the calculation</summary>
+  <ul class="input-list">
+    <li><b>Share price</b><span>$28.55 — Investing.com, Sept 2, 2026 close</span></li>
+    <li><b>Shares outstanding</b><span>5,686,267,431 — 10-K FY2025 cover page, as of Feb 19, 2026</span></li>
+    <li><b>Market cap</b><span>≈$162.3B — price × shares (calculated)</span></li>
+    <li><b>Total debt</b><span>$64,795M — short-term borrowings $3,154M + long-term debt $61,641M, 10-K FY2025 p.53</span></li>
+    <li><b>Cash and short-term investments</b><span>$13,596M — cash $1,142M + short-term investments $12,454M, 10-K FY2025 p.53</span></li>
+    <li><b>Net debt</b><span>$51,199M — total debt minus cash and short-term investments (calculated)</span></li>
+    <li><b>FCF (FY2025)</b><span>$9,075M — operating cash flow $11,704M minus capex $2,629M, 10-K FY2025 p.59</span></li>
+    <li><b>FCF, 3-year average (2023-2025)</b><span>$7,901M — FY2025 is +14.9% above this average, within this site's ±40% normalization threshold, so used as-is without adjustment (3-year average shown as an alternate scenario)</span></li>
+    <li><b>Discount rate (WACC)</b><span>9% base case (7%/11% tested)</span></li>
+    <li><b>Terminal growth rate</b><span>2.5% — long-run GDP-level assumption</span></li>
+  </ul>
+  <p style="font-size:13px;margin-top:16px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap plus net debt, ≈$213.5B).</p>
+  <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR (2021→2025) = -25.8%, distorted by the COVID vaccine/treatment boom (2021-2022) and its collapse (2023). 2-yr recovery FCF CAGR (2023→2025, off the 2023 trough) = +37.6%, also distorted by the unusually low 2023 base.</p>
+</details>
+
+<h2 id="fine-print">The fine print</h2>
+<div class="callout bad">
+  <b>This number is a starting point, not an answer</b>
+  <ul style="margin:10px 0 0;padding-left:18px;">
+    <li>This isn't a fair-value price target — it only shows what the current price already assumes.</li>
+    <li>Change the discount rate or the FCF base, and the answer moves substantially — see the sensitivity table above.</li>
+    <li>Whether 7.8-9.6% growth is realistic depends almost entirely on whether new products can offset the ~40% of revenue facing 2026-2029 patent expirations — not on this math alone.</li>
+    <li>A reverse DCF shows what the market currently expects — it does not say what the stock is "worth."</li>
+    <li>Any investment decision, and its outcome, is your own responsibility.</li>
+  </ul>
+</div>
+
+<footer class="disclosure">
+  Built from Pfizer's 10-K filings (FY2021–FY2025), plus a web search for the current share price (Investing.com, Sept 2, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
+</footer>
+`,
+  },
+
+  {
+    slug: 'race-snapshot',
+    ticker: 'RACE',
+    company: 'Ferrari',
+    category: 'snapshot',
+    title: 'Ferrari (RACE): What This Company Actually Does',
+    excerpt:
+      "A plain-English read of Ferrari's business — a company that deliberately builds fewer cars than people want to buy, and makes its money on scarcity rather than volume — built directly from its SEC filings.",
+    takeaway:
+      "Ferrari built only 13,640 cars in 2025, well below what it could sell, to preserve the feeling that owning one isn't something money alone can guarantee — and over the past five years, nearly all of its revenue growth has come from charging more per car (+36.9%), not from building more of them (+22.3%).",
+    quickFacts: [
+      { k: 'Share price', v: '$413.23' },
+      { k: 'Market cap', v: '~$73.1B' },
+      { k: 'FY2025 revenue', v: '€7.15B' },
+      { k: 'FY2025 units shipped', v: '13,640' },
+    ],
+    faq: [
+      { q: 'How does Ferrari make money?', a: "Ferrari deliberately produces fewer cars each year than it could sell — 13,640 in 2025 — to preserve exclusivity and pricing power, then sells them to wealthy customers at an average of about €524,000 per car (2025). Cars and parts made up 84.0% of FY2025 revenue, with sponsorship and brand licensing (boosted by Formula 1 results) at 11.5% and other business (mainly financial services) at 4.5%." },
+      { q: "Why doesn't Ferrari just build more cars to grow faster?", a: "Because scarcity is the business model. If Ferrari became easy to buy, the willingness of wealthy customers to pay a premium — and the brand's core appeal — would erode. Over the past five years, revenue per car shipped rose 36.9% while units shipped rose only 22.3%, showing growth has come mainly from charging more, not building more." },
+      { q: "What is Ferrari's market cap?", a: "As of this article's data, Ferrari's market cap was about $73.1B, on FY2025 revenue of €7.15B." },
+    ],
+    toc: [
+      { id: 'how-it-makes-money', label: 'How Ferrari makes money' },
+      { id: 'revenue-mix', label: 'Where the revenue comes from' },
+      { id: 'customers-competitors', label: 'Customers and competitors' },
+      { id: 'core-metric', label: 'The metric that matters most' },
+      { id: 'leadership', label: 'Leadership and ownership' },
+      { id: 'capital-returns', label: 'Capital returns' },
+      { id: 'failure-scenario', label: 'How this company could fail' },
+      { id: 'financials', label: 'Five-year financials' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '20-F FY2021–FY2025 (SEC EDGAR)',
+    tags: ['RACE', 'Luxury/Automotive', '20-F'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="how-it-makes-money">How Ferrari makes money</h2>
+<p>Ferrari is a Netherlands-incorporated company that files a 20-F (not a 10-K) with the SEC as a foreign private issuer. Its business logic is unusual for a manufacturer: it deliberately caps production well below what it could sell, using that scarcity — reinforced by its Formula 1 racing program — to sustain premium pricing.</p>
+<div class="flow">
+  <div class="flow-box"><div class="t">Scuderia Ferrari (F1)</div><div class="d">Brand halo & technical credibility → €820M in sponsorship revenue</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box center"><div class="t">Maranello factory</div><div class="d">Just 13,640 cars built in 2025 — deliberately below demand</div></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-box"><div class="t">Wealthy customers</div><div class="d">Average ~€524,000 per car (2025); waitlists reinforce scarcity and pricing power</div></div>
+</div>
+<p class="src-note">The cycle: F1 racing builds brand halo → deliberately scarce production → customers pay a premium to get in → revenue flows back into racing and the lifestyle business (apparel, collections, experiences, €321M). Source: 20-F FY2025, p.37, p.91.</p>
+
+<h2 id="revenue-mix">Where the revenue comes from</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Revenue by business — FY2025</caption>
+    <thead><tr><th>Business</th><th>Revenue</th><th>Share</th></tr></thead>
+    <tbody>
+      <tr><td>Cars & parts</td><td>€6,005M</td><td>84.0%</td></tr>
+      <tr><td>Sponsorship, commercial & brand</td><td>€820M</td><td>11.5%</td></tr>
+      <tr><td>Other (mainly financial services)</td><td>€321M</td><td>4.5%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Sponsorship and brand revenue grew 22.4% year over year in FY2025, largely on improved Formula 1 results. Source: 20-F FY2025, p.91.</p>
+<p>By shipment volume (revenue by region isn't separately disclosed): EMEA is 46.5%, the Americas 28.9%, Greater China 6.9%, and other Asia-Pacific 17.7%. Greater China's share has been shrinking — down from 10.9% in 2023 to 6.9% in 2025, tied to China's economic conditions and trade friction.</p>
+<p class="src-note">Source: 20-F FY2025, p.85.</p>
+
+<h2 id="customers-competitors">Customers and competitors</h2>
+<p>Ferrari sells entirely direct to consumers (B2C) through 181 official dealers (195 outlets) across more than 60 countries — there's no customer concentration risk in the usual sense. Instead, the company is exposed to a single macro risk: the willingness and ability of wealthy buyers, globally, to keep spending on discretionary luxury goods.</p>
+<ul class="kicker-list">
+  <li><b>Lamborghini</b> — a similarly ultra-high-performance competitor, but backed by Volkswagen/Audi's much larger capital base.</li>
+  <li><b>Aston Martin</b> — a British luxury GT tradition, but with materially weaker financial stability than Ferrari.</li>
+  <li><b>Porsche</b> — competes on scale and volume rather than scarcity, producing far more cars than Ferrari.</li>
+</ul>
+<p class="src-note">Other named competitors include McLaren, Rolls-Royce, and Bentley, with partial overlap from Porsche, Mercedes, and Land Rover in some segments. Source: 20-F FY2025, p.37, p.42.</p>
+
+<h2 id="core-metric">The metric that matters most in this sector</h2>
+<p>For Ferrari, "how many cars did we sell" matters less than "how much did we get for each one." Because production is deliberately capped, revenue growth without volume growth is the clearest sign the scarcity strategy is working.</p>
+<div class="table-wrap">
+  <table>
+    <caption>Revenue per car shipped, 2021–2025</caption>
+    <thead><tr><th></th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>Revenue per unit shipped</td><td>€382,878</td><td>€385,372</td><td>€436,946</td><td>€485,529</td><td>€523,900</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Revenue per car rose 36.9% over five years, while unit shipments grew only 22.3% (11,155 to 13,640 cars) over the same period — most of Ferrari's revenue growth has come from charging more for each car, not from building more of them.</p>
+<p class="src-note">Revenue per unit = total revenue (including parts and sponsorship) ÷ units shipped, an approximation. Source: 20-F FY2025, p.37, p.91; 20-F FY2022, p.84.</p>
+
+<h2 id="leadership">Leadership and ownership</h2>
+<p>CEO Benedetto Vigna has led Ferrari since September 2021 (his fourth year). Notably, he isn't from the auto industry — he previously ran the Analog, MEMS, and Sensors division at semiconductor company STMicroelectronics. Founder Enzo Ferrari's family still has a presence: Piero Ferrari (the co-founder's son) holds a 10.67% stake (16.17% of voting rights) and a board seat. The largest shareholder is Exor, the Agnelli family's holding company, at 21.33% (32.32% of voting rights, under a dual-class share structure). Exor's chairman, John Elkann, also chairs Ferrari's board — and simultaneously chairs Stellantis, a disclosed potential conflict of interest.</p>
+<p class="src-note">Source: 20-F FY2025, p.114-115, p.119.</p>
+
+<h2 id="capital-returns">Capital returns</h2>
+<p>Ferrari paid €530M in dividends to parent-company shareholders in 2025, plus €785M in buybacks that year (including a special €300M tied to Exor's block trade). The dividend payout policy targets roughly 35% of adjusted net income, raised from 30% at a 2022 Capital Markets Day, alongside a roughly €2B multi-year buyback program running through 2026.</p>
+<div class="callout warn"><b>2025's buyback total includes a one-time item</b>€300M of the 2025 buyback came from Ferrari's participation in an Exor block trade — not necessarily a recurring feature of the annual program. Whether that scale of buyback repeats depends partly on Exor's own gradual reduction of its Ferrari stake.</div>
+<p class="src-note">Source: 20-F FY2025, p.102-103; 20-F FY2022, p.90.</p>
+
+<h2 id="failure-scenario">How this company could fail</h2>
+<div class="callout bad">
+  <b>Failure scenario</b>
+  The moment people stop feeling that "you can't just buy a Ferrari" — the moment it becomes common — the buyers willing to pay a premium disappear, and the company's entire margin structure erodes with them.
+</div>
+<ul class="kicker-list">
+  <li><b>Collapse of the scarcity strategy</b> — increasing production volume, or damaging the brand (quality issues, weak F1 performance), would remove the basis for premium pricing.</li>
+  <li><b>Electrification cost and demand uncertainty</b> — Ferrari's first pure electric car, the "Ferrari Luce," is planned for 2026, but it's unclear whether Ferrari's customer base will embrace an EV's different driving character (engine sound, feel), while the development cost is already committed.</li>
+  <li><b>Tariff and trade-policy risk</b> — a meaningful share of shipments (28.9%) goes to the U.S., leaving pricing and demand exposed to changes in tariff and trade policy.</li>
+</ul>
+<p class="src-note">Source: 20-F FY2025, p.12, p.14, p.19.</p>
+
+<h2 id="financials">Five-year financials</h2>
+<div class="table-wrap">
+  <table>
+    <caption>€ millions</caption>
+    <thead><tr><th></th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+    <tbody>
+      <tr><td>Revenue</td><td>4,271</td><td>5,095</td><td>5,970</td><td>6,677</td><td>7,146</td></tr>
+      <tr><td>YoY growth</td><td>—</td><td class="pos">+19.3%</td><td class="pos">+17.2%</td><td class="pos">+11.8%</td><td class="pos">+7.0%</td></tr>
+      <tr><td>EBIT (margin)</td><td>1,075 (25.2%)</td><td>1,227 (24.1%)</td><td>1,617 (27.1%)</td><td>1,888 (28.3%)</td><td>2,110 (29.5%)</td></tr>
+      <tr class="highlight"><td>Industrial free cash flow</td><td>642</td><td>758</td><td>932</td><td>1,027</td><td>1,535</td></tr>
+      <tr><td>Net industrial debt</td><td>297</td><td>207</td><td>99</td><td>180</td><td>32</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="callout good"><b>Profit growth is outrunning revenue growth, and cash is following</b>Over five years, revenue grew 67% while EBIT grew 96% — margins have expanded, not just held steady. Industrial FCF grew right alongside profit (+139% over the same period), and net industrial debt has nearly been eliminated, from €297M to just €32M.</div>
+<p class="src-note">Source: 20-F FY2025, p.51 (income statement), p.59-60 (cash flow), p.55 (balance sheet); 20-F FY2022, p.46.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>How strong actual pre-orders and pricing reception are for the Ferrari Luce (the first pure EV)</b> isn't disclosed here — later earnings calls (Q2 FY2026 onward) would need to be checked.</li>
+  <li><b>Whether the €300M Exor block-trade contribution to 2025's buyback repeats, or whether Exor continues gradually reducing its stake</b> isn't clear from these filings.</li>
+  <li><b>Country-level profitability</b> can't be judged from this data — Ferrari discloses regional mix by shipment volume, not by revenue.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from Ferrari's 20-F filings for FY2021 through FY2025, plus a web search for the current share price and EUR/USD exchange rate. This is a research summary, not investment advice — verify against the original filings before acting.
+</footer>
+`,
+  },
+
+  {
+    slug: 'race-story',
+    ticker: 'RACE',
+    company: 'Ferrari',
+    category: 'story',
+    title: "Ferrari's Story: The One Promise It Didn't Keep — and Wouldn't Call a Delay",
+    excerpt:
+      'A company famous for promising conservatively and beating its own numbers every time missed its first electric car\'s launch date — and instead of calling it a delay, gave it a new name.',
+    takeaway:
+      "Ferrari's financial guidance has been beaten every single verifiable cycle over the past three years, but the one promise it made on a fixed date — launching its first electric car in Q4 2025 — slipped to a partial reveal, and the company never described this as a delay, reframing it instead as a deliberate 'three-phase launch' strategy.",
+    faq: [
+      { q: "Did Ferrari's first electric car launch on time?", a: "No. The 2024 20-F stated a plan to launch the first full-electric Ferrari in Q4 2025. What actually happened, per the FY2025 20-F: only 'phase one' of a newly announced 'three-phase launch process' began in October 2025 (a technical-elements reveal), the interior and name ('Ferrari Luce') were revealed in February 2026, and the full unveiling was pushed to May 2026. The company never explicitly called this a delay." },
+      { q: "Has Ferrari's financial performance also fallen short?", a: "No — the opposite. Across all three verifiable guidance cycles reviewed here (set in Feb 2024, Feb 2025, and Feb 2026), actual EBIT margin and industrial free cash flow both came in ahead of what management guided. The only miss identified was the electric car's launch timeline, not a financial figure." },
+      { q: 'What sources does this analysis draw from?', a: "This piece is built from Ferrari's 20-F filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026." },
+    ],
+    toc: [
+      { id: 'the-story', label: 'The story' },
+      { id: 'guidance-record', label: 'Guidance scorecard' },
+      { id: 'timeline', label: 'Timeline' },
+      { id: 'our-read', label: 'Our read' },
+      { id: 'unknowns', label: "What we still don't know" },
+    ],
+    sources: '20-F FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
+    tags: ['RACE', 'Earnings Calls', 'Luxury/Automotive'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<h2 id="the-story">The story</h2>
+<h3>2023-2024: confident, and consistently underpromising</h3>
+<p>At the February 2024 earnings call, management guided the following year's margin as "flattish" — but actual EBIT margin rose from 27.1% to 28.3% anyway. On that same call, an analyst pressed management about seemingly lowered free-cash-flow guidance, but actual results grew instead of shrinking. This stretch of calls (Q1-Q2 FY2024) had the highest ratio of positive-to-negative language of any of the 12 quarters reviewed — roughly 9 to 13 times as much confident language as cautious language. On China's slowdown, CEO Benedetto Vigna defended the business at length, offering a detailed multi-part rationale (a young market, margin-dilution concerns, deliberately paced brand-attachment growth).</p>
+
+<h3>The one promise that didn't hold: the first electric Ferrari</h3>
+<p>Ferrari's 2022 20-F stated: "we currently plan to introduce the first full electric Ferrari in 2025." The same language was repeated, essentially unchanged, in the 2023 20-F a year later. The 2024 20-F got more specific — "launch in the fourth quarter of 2025" — appearing to confirm the plan was on track. But the FY2025 20-F, filed in February 2026, described what actually happened: in October 2025, only "phase one" of a newly introduced "three-phase launch process" began (a reveal of technical elements); the interior design and the car's name ("Ferrari Luce") weren't revealed until February 2026; and the full unveiling was pushed further, to May 2026. The "Q4 2025 launch" promise was, in substance, not kept — but at no point does the company describe this as a delay. Instead, it introduced a new framing: a "three-phase launch strategy."</p>
+
+<h3>The company's response: quieter on China, more cautious on 2026</h3>
+<p>Around the same time, Ferrari's public discussion of China went the opposite direction — shrinking. The lengthy China defense from 2023 calls condensed to a single sentence by 2024, and by 2025 China barely came up at all in the call transcripts — not because the issue had resolved, but because overall revenue growth had made the shrinking China share less newsworthy (Greater China's shipment share fell from 10.9% in 2023 to 6.9% in 2025). Then, at the February 2026 call (guiding FY2026), management used a notably more cautious phrase for the first time — operating margin "flat to up" — and explicitly flagged a €200M currency headwind. That call's positive-to-negative language ratio was the lowest of the 12 quarters reviewed (about 2.1x), and one analyst directly asked whether 2026 was "the toughest year in the plan." CEO Vigna pushed back immediately: "Don't buy into this hypothesis... 2026 is a year of growth. Remember that."</p>
+
+<h3>Since then: growth resuming, at least through the first half</h3>
+<p>At the Q1 FY2026 call (May 2026), Ferrari reaffirmed its guidance despite Middle East instability, and actual EBIT margin came in at 29.7% — higher than the prior year. By the Q2 FY2026 call (July 2026), the company went further and raised guidance (revenue floor up €100M, EBIT floor up €40M), with EBIT margin climbing to 31.2%. Management's tone score recovered sharply as well. The "toughest year" concern hadn't materialized, at least through the first half of 2026.</p>
+
+<div class="callout warn">
+  <b>Our take, in one line</b>
+  Ferrari's management shows a consistent "promise conservatively, deliver more" pattern that has held almost without exception in the financial numbers across five years. The one place that pattern broke was a fixed-date product promise — the first electric car's launch — and rather than acknowledging the miss directly, the company reframed it with new language instead of admitting a delay. First-half 2026 results support the CEO's "year of growth" framing, but the CFO's more guarded language about the second half on the Q2 FY2026 call suggests the real test of that confidence is still ahead.
+</div>
+
+<h2 id="guidance-record">Guidance scorecard</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Guidance vs. actual results, FY2024–FY2026</caption>
+    <thead><tr><th>Set when</th><th>Promise</th><th>Actual result</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Feb 2024 (Q4 FY2023 call)</td><td>FY2024 EBIT/EBITDA margin "flattish"; FCF concerns raised by an analyst</td><td>EBIT margin 27.1%→28.3%; industrial FCF rose from €932M to €1,027M</td><td class="pos">Exceeded</td></tr>
+      <tr><td>Feb 2025 (Q4 FY2024 call)</td><td>Continued margin improvement; 6 new models including an EV launching Q4 2025</td><td>EBIT margin 28.3%→29.5%, industrial FCF +50% to €1,535M; the EV reached only a "phase one reveal," not a launch</td><td class="neg">Financials exceeded; EV timeline slipped</td></tr>
+      <tr class="highlight"><td>Feb 2026 (Q4 FY2025 call)</td><td>FY2026 operating margin "flat to up" (more cautious than usual); €200M FX headwind flagged</td><td>Q1 FY2026 margin 29.7% (guidance reaffirmed); Q2 FY2026 margin 31.2% (guidance raised)</td><td class="pos">Exceeded through H1 (H2 unconfirmed)</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="src-note">Of the three verifiable financial-guidance cycles, all three were exceeded. The only miss identified was a product timeline (the EV launch), which the company never explicitly labeled as missed guidance. Source: Q4 FY2023, Q4 FY2024, Q1 FY2026, and Q2 FY2026 earnings calls; 20-F FY2025, p.14.</p>
+
+<h2 id="timeline">Timeline</h2>
+<ul class="timeline">
+  <li><span class="date">2022 20-F</span>States a plan to launch the first full-electric Ferrari "in 2025."</li>
+  <li><span class="date">2023 20-F</span>Same "2025" language repeated a year later, essentially unchanged.</li>
+  <li><span class="date">2024 20-F</span>Target sharpens to "the fourth quarter of 2025" — appears on track.</li>
+  <li><span class="date">Q1-Q2 2024 calls</span>Management tone at its most confident of the 12 quarters reviewed (9-13x positive-to-negative language).</li>
+  <li><span class="date">Oct 2025</span>"Phase one" of a newly announced "three-phase launch" begins — only a technical-elements reveal, not a launch.</li>
+  <li class="crisis"><span class="date">Feb 2026 (Q4 FY2025 call)</span>First "flat to up" margin guidance; €200M FX headwind flagged; lowest tone score of the 12 quarters; analyst asks if 2026 is "the toughest year."</li>
+  <li><span class="date">Feb 2026 20-F</span>Discloses the EV's interior and name ("Ferrari Luce") revealed; full unveiling pushed to May 2026.</li>
+  <li><span class="date">May 2026 (Q1 FY2026 call)</span>Guidance reaffirmed despite Middle East tension; EBIT margin 29.7%, up year over year.</li>
+  <li><span class="date">Jul 2026 (Q2 FY2026 call)</span>Guidance raised; EBIT margin climbs to 31.2%; tone recovers sharply.</li>
+</ul>
+
+<h2 id="our-read">Our read</h2>
+<p>Ferrari's last three years show a company whose financial guidance discipline is close to unbroken — every verifiable cycle reviewed here was met or beaten. The one crack is instructive precisely because it's isolated: a specific, dated product promise (the EV launch) slipped, and rather than naming that slip, the company built a new narrative framework around it. That's a small but real signal about how this management team handles setbacks, worth remembering the next time a promise doesn't land exactly as stated. For now, strong first-half 2026 results back up the "year of growth" framing, but the CFO's more guarded language about the second half leaves that call not yet fully settled.</p>
+
+<h2 id="unknowns">What we still don't know</h2>
+<ul class="kicker-list">
+  <li><b>How the second half of 2026 actually performs</b> isn't in this data — the CFO's guarded tone about H2 margins on the Q2 FY2026 call is a signal worth tracking, but can't be confirmed without Q3 FY2026 results.</li>
+  <li><b>Actual pre-order and pricing reception for the Ferrari Luce</b> requires data from after its full unveiling in May 2026, which is beyond the Q2 FY2026 call collected here.</li>
+  <li><b>Whether the "three-phase launch" was the original intended strategy or a narrative built after the fact to soften a delay</b> can't be settled from filing language alone — it would require management interviews or trade-press reporting outside the scope of this analysis.</li>
+</ul>
+
+<footer class="disclosure">
+  Built from 20-F filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026. Tone assessments are qualitative. This is a research summary, not investment advice.
+</footer>
+`,
+  },
+
+  {
+    slug: 'race-dcf',
+    ticker: 'RACE',
+    company: 'Ferrari',
+    category: 'dcf',
+    title: "What RACE's Stock Price Is Really Betting On",
+    excerpt:
+      "Reverse-engineering the free-cash-flow growth rate Ferrari's share price already assumes — and finding a required rate that looks conservative against cash flow, but demanding against revenue.",
+    takeaway:
+      "At today's price, Ferrari's stock is pricing in about 19.0% annual free-cash-flow growth for the next ten years — below its actual 4-year FCF growth (26.7% a year), but above its 4-year revenue growth (13.7% a year), and the comparison itself is complicated by a possibly-too-low 2021 base year.",
+    faq: [
+      { q: "What growth rate does RACE's stock price assume?", a: "At today's price, Ferrari's stock is pricing in about 19.0% annual free-cash-flow growth for the next ten years, at a 10% discount rate, using 2025's FCF as the base." },
+      { q: "Is Ferrari's historical growth a fair comparison?", a: "It's complicated. Ferrari's 4-year FCF CAGR (26.7%) sits above the market's 19.0% ask, which looks reassuring — but 2021 was still a pandemic-depressed base year, which may inflate that figure. Its 4-year revenue CAGR (13.7%), a purer measure of business growth without margin effects, is actually below the market's ask." },
+      { q: 'What share price was used for this analysis?', a: 'This analysis used $413.23, as of the Sept 2, 2026 close, with a EUR/USD rate of 1.1607.' },
+    ],
+    toc: [
+      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
+      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
+      { id: 'what-would-move-it', label: 'What would move this number' },
+      { id: 'show-your-work', label: 'Show your work' },
+      { id: 'fine-print', label: 'The fine print' },
+    ],
+    sources: 'As of Sept 2, 2026 · Price used: $413.23',
+    tags: ['RACE', 'ReverseDCF', 'Valuation'],
+    publishedAt: '2026-09-19',
+    contentHtml: `
+<div class="verdict-box">
+  <div class="label">The conclusion</div>
+  <p>At its current price, RACE implies <span class="num">~19.0%</span> annual FCF growth for the next 10 years, discounted at 10%.</p>
+  <p>Ferrari's actual FCF growth averaged <span class="num">26.7%</span> a year over the past 4 years — above what the price requires; its revenue growth (13.7% a year) was below it.</p>
+</div>
+
+<div class="callout warn">
+  <b>Verdict: depends which yardstick you trust — cash flow says conservative, revenue says demanding</b>
+  The required growth rate (19.0%) sits below Ferrari's 4-year FCF CAGR (26.7%), which on its face looks like a comfortably conservative ask. But two things complicate that read. First, 2021 — the base year for this comparison — was still depressed by pandemic recovery, which may be inflating the 26.7% figure; shifting the base year later would likely lower it. Second, comparing against revenue growth instead of FCF growth (13.7% a year, a purer measure of the underlying business without margin-expansion effects) flips the picture: the market's 19.0% ask is actually higher than Ferrari's historical revenue growth. Whether today's price is reasonable depends on whether you believe Ferrari can keep expanding margins as fast as it has, not just keep growing the business.
+</div>
+
+<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<div class="datacard">
+  <div class="barlist">
+    <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:71%;background:var(--accent)"></div></div><span class="val">19.0%</span></div>
+    <div class="barrow"><span class="lbl">4-yr FCF CAGR (2021→2025)</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">26.7%</span></div>
+    <div class="barrow"><span class="lbl">4-yr revenue CAGR (2021→2025)</span><div class="track"><div class="fill" style="width:51%"></div></div><span class="val">13.7%</span></div>
+  </div>
+  <p class="src-note">Required growth from the reverse DCF below. Historical figures from 20-F FY2025 (2023-2025 data) and 20-F FY2022 (2021-2022 data). 2021 was still a pandemic-recovery-depressed year for Ferrari's FCF (€546M, the lowest of the five years shown in the snapshot piece), which likely inflates the 4-year FCF CAGR shown here.</p>
+</div>
+
+<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<div class="table-wrap">
+  <table>
+    <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
+    <thead><tr><th>WACC</th><th>Required growth</th></tr></thead>
+    <tbody>
+      <tr><td>8%</td><td>14.1%</td></tr>
+      <tr><td>9%</td><td>16.6%</td></tr>
+      <tr class="highlight"><td>10% (base case)</td><td>19.0%</td></tr>
+      <tr><td>12%</td><td>23.3%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Ferrari is a luxury brand that's historically been somewhat less cyclical than typical automakers, so a discount rate between a stable large-cap company's (8-9%) and a higher-growth stock's (12%) is arguably reasonable — this analysis used 10% as the base case.</p>
+
+<h2 id="what-would-move-it">What would move this number</h2>
+<ul class="kicker-list">
+  <li><b>Using the 3-year-average FCF (€1,064M) instead of 2025's single-year figure (€1,406M) as the base</b> raises the required growth rate from 19.0% to about 22.9% (at WACC 10%) — 2025's FCF was 32% above the 3-year average, close to but under this site's ±40% normalization threshold, so the single-year figure was used as the primary base.</li>
+  <li><b>Comparing against revenue growth instead of FCF growth flips the read</b> — FCF growth (26.7%) also captures margin expansion and improved cash conversion, not just business growth, while revenue growth (13.7%) is a purer measure of the underlying business — and by that measure, the market's ask looks more demanding than conservative.</li>
+  <li><b>Shifting the historical comparison's base year from 2021 to 2022</b> would likely lower the 4-year FCF CAGR meaningfully, since 2021's €546M FCF was still a pandemic-depressed low point — the 26.7% figure may overstate Ferrari's "normal" growth pace.</li>
+</ul>
+
+<h2 id="show-your-work">Show your work</h2>
+<details class="methodology">
+  <summary>Inputs, sources, model assumptions, and the calculation</summary>
+  <ul class="input-list">
+    <li><b>Share price</b><span>$413.23 — stockanalysis.com, Sept 2, 2026 close</span></li>
+    <li><b>Shares outstanding</b><span>176,982,000 — Sept 2026, cross-checked against Piero Ferrari's disclosed 10.67% stake (18,894,295 shares) in 20-F FY2025, p.127</span></li>
+    <li><b>EUR/USD exchange rate</b><span>1.1607 — xe.com</span></li>
+    <li><b>Market cap</b><span>$73.13B (€63.01B) — price × shares (calculated)</span></li>
+    <li><b>Net debt (Group)</b><span>€1,417M — 20-F FY2025, p.110, as of Dec 31, 2025</span></li>
+    <li><b>FCF (Group, 2025)</b><span>€1,406M — operating cash flow €2,349M minus capex €943M, 20-F FY2025 p.112</span></li>
+    <li><b>FCF, 3-year average (2023-2025)</b><span>€1,064M — from €848M (2023), €938M (2024), and €1,406M (2025)</span></li>
+    <li><b>Discount rate (WACC)</b><span>10% base case (8%/9%/12% tested)</span></li>
+    <li><b>Terminal growth rate</b><span>2.5% — long-run GDP-level assumption</span></li>
+  </ul>
+  <p style="font-size:13px;margin-top:16px;"><strong>Normalization check:</strong> 2025's FCF (€1,406M) is +32% above the 3-year average (€1,064M) — within this site's ±40% threshold, so used as-is without adjustment, though close to the boundary.</p>
+  <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap plus net debt, ≈$74.8B).</p>
+  <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 4-yr FCF CAGR (2021→2025) = 26.7%. 4-yr revenue CAGR (2021→2025) = 13.7%.</p>
+</details>
+
+<h2 id="fine-print">The fine print</h2>
+<div class="callout bad">
+  <b>This number is a starting point, not an answer</b>
+  <ul style="margin:10px 0 0;padding-left:18px;">
+    <li>This isn't a fair-value price target — it only shows what the current price already assumes.</li>
+    <li>Change the discount rate or the FCF base, and the answer moves substantially — see the sensitivity table above.</li>
+    <li>Whether 19.0% growth is realistic depends on whether Ferrari can keep expanding margins at its recent pace, not just keep growing revenue — the FCF-vs-revenue comparison above points in different directions.</li>
+    <li>A reverse DCF shows what the market currently expects — it does not say what the stock is "worth."</li>
+    <li>Any investment decision, and its outcome, is your own responsibility.</li>
+  </ul>
+</div>
+
+<footer class="disclosure">
+  Built from Ferrari's 20-F filings (FY2021–FY2025), plus a web search for the current share price and EUR/USD exchange rate (stockanalysis.com / xe.com, Sept 2, 2026). This tells you where to dig deeper — it is not a buy or sell signal.
+</footer>
+`,
+  },
 ];
