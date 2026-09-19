@@ -13,6 +13,7 @@ export default function SiteFooter() {
       <footer className="site-footer" lang="ko">
         <div className="footer-links">
           <Link href="/ko/about">소개</Link>
+          <Link href="/ko/guides">가이드</Link>
           <Link href="/ko/methodology">계산 방법</Link>
           <Link href="/ko/contact">문의</Link>
           <Link href="/ko/privacy">개인정보처리방침</Link>
@@ -29,6 +30,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-links">
         <Link href="/about">About</Link>
+        <Link href="/guides">Guides</Link>
         <Link href="/methodology">Methodology</Link>
         <Link href="/contact">Contact</Link>
         <Link href="/privacy">Privacy</Link>

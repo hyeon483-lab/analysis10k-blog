@@ -39,9 +39,13 @@ export default function SiteHeader() {
         <Link href={prefix || '/'} className={isHome ? 'current' : ''}>{isKo ? '홈' : 'Home'}</Link>
         <Link href={`${prefix}/posts`} className={isPosts ? 'current' : ''}>{isKo ? '전체 글' : 'All Posts'}</Link>
         {isKo ? (
-          <Link href="/ko/about" className={isAbout ? 'current' : ''}>소개</Link>
+          <>
+            <Link href="/ko/guides" className={path.startsWith('/guides') ? 'current' : ''}>가이드</Link>
+            <Link href="/ko/about" className={isAbout ? 'current' : ''}>소개</Link>
+          </>
         ) : (
           <>
+            <Link href="/guides" className={path.startsWith('/guides') ? 'current' : ''}>Guides</Link>
             <Link href="/industries" className={isIndustries ? 'current' : ''}>Industries</Link>
             <Link href="/tags" className={isTags ? 'current' : ''}>Tags</Link>
           </>

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllPosts, getAllTags, getAllIndustries } from '@/lib/posts';
 import { MIN_INDEXED_TAG_POSTS } from '@/lib/seo';
+import { GUIDES } from '@/data/guides';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
@@ -31,6 +32,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.4,
   }));
 
+  const guideEntries: MetadataRoute.Sitemap = GUIDES.flatMap((g) => {
+    const en = `${SITE_URL}/guides/${g.slug}`;
+    const ko = `${SITE_URL}/ko/guides/${g.slug}`;
+    const alternates = { languages: { en, ko } };
+    return [
+      { url: en, lastModified: g.date, changeFrequency: 'monthly' as const, priority: 0.7, alternates },
+      { url: ko, lastModified: g.date, changeFrequency: 'monthly' as const, priority: 0.7, alternates },
+    ];
+  });
+
   return [
     { url: SITE_URL, changeFrequency: 'daily', priority: 1, alternates: { languages: { en: SITE_URL, ko: `${SITE_URL}/ko` } } },
     { url: `${SITE_URL}/ko`, changeFrequency: 'daily', priority: 0.9, alternates: { languages: { en: SITE_URL, ko: `${SITE_URL}/ko` } } },
@@ -46,6 +57,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/ko/methodology`, changeFrequency: 'monthly', priority: 0.5, alternates: { languages: { en: `${SITE_URL}/methodology`, ko: `${SITE_URL}/ko/methodology` } } },
     { url: `${SITE_URL}/privacy`, changeFrequency: 'monthly', priority: 0.2, alternates: { languages: { en: `${SITE_URL}/privacy`, ko: `${SITE_URL}/ko/privacy` } } },
     { url: `${SITE_URL}/ko/privacy`, changeFrequency: 'monthly', priority: 0.2, alternates: { languages: { en: `${SITE_URL}/privacy`, ko: `${SITE_URL}/ko/privacy` } } },
+    { url: `${SITE_URL}/guides`, changeFrequency: 'weekly', priority: 0.7, alternates: { languages: { en: `${SITE_URL}/guides`, ko: `${SITE_URL}/ko/guides` } } },
+    { url: `${SITE_URL}/ko/guides`, changeFrequency: 'weekly', priority: 0.7, alternates: { languages: { en: `${SITE_URL}/guides`, ko: `${SITE_URL}/ko/guides` } } },
+    ...guideEntries,
     ...postEntries,
     ...tagEntries,
     ...industryEntries,

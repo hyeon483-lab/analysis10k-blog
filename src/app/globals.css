@@ -374,3 +374,9 @@ a { color: inherit; }
 .kr-card { border-radius: 14px; overflow: hidden; line-height: 1.6; }
 .ko-note { font-size: 12.5px; color: var(--ink-faint); margin: 28px 0 0; line-height: 1.7; }
 .sitenav a, .lang-toggle a, .wordmark { white-space: nowrap; }
+
+/* Operator note at the end of each post */
+.operator-note { margin: 34px 0 0; padding: 16px 20px; border-left: 4px solid var(--accent); background: var(--surface-2); border-radius: 0 10px 10px 0; }
+.operator-note-label { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; }
+.operator-note p { margin: 0; font-size: 15.5px; line-height: 1.7; }
+.operator-note-by { margin-top: 8px; font-size: 13px; color: var(--ink-muted); }

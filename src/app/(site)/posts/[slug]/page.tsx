@@ -8,9 +8,11 @@ import PostCard from '@/components/PostCard';
 import ShareRow from '@/components/ShareRow';
 import IndustryIcon from '@/components/IndustryIcon';
 import WatchNext, { hasWatch, WATCH_HEADING } from '@/components/WatchNext';
+import OperatorNote from '@/components/OperatorNote';
 import { getIndustry } from '@/lib/industries';
 import { metaDescription } from '@/lib/seo';
 import { withFinancialChart } from '@/lib/financialChart';
+import { withPostCharts } from '@/lib/postCharts';
 
 export const revalidate = 60;
 
@@ -184,7 +186,7 @@ export default async function PostPage({
         <div
           className="prose"
           suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: post.category === 'snapshot' ? withFinancialChart(post.contentHtml) : post.contentHtml }}
+          dangerouslySetInnerHTML={{ __html: withPostCharts(post.category === 'snapshot' ? withFinancialChart(post.contentHtml) : post.contentHtml, post.category) }}
         />
 
         <WatchNext slug={post.slug} lang="en" />
@@ -206,6 +208,8 @@ export default async function PostPage({
             ))}
           </div>
         )}
+
+        <OperatorNote slug={post.slug} lang="en" />
 
         <div className="taglist">
           {post.tags.map((tag) => (
