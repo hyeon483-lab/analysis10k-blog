@@ -6,11 +6,13 @@ import { siteMetadata } from '@/lib/siteMeta';
 
 export const metadata: Metadata = siteMetadata;
 
-export default function SiteLayout({ children }: { children: React.ReactNode }) {
+export default function KoLayout({ children }: { children: React.ReactNode }) {
   return (
-    <RootShell lang="en">
+    <RootShell lang="ko">
       <SiteHeader />
-      <main>{children}</main>
+      <main>
+        <div className="ko-site">{children}</div>
+      </main>
       <SiteFooter />
     </RootShell>
   );

@@ -1,6 +1,5 @@
-import type { Metadata } from 'next';
 import { Source_Serif_4, Source_Sans_3, IBM_Plex_Mono } from 'next/font/google';
-import './globals.css';
+import '../app/globals.css';
 
 const sourceSerif = Source_Serif_4({
   variable: '--font-serif',
@@ -19,29 +18,6 @@ const plexMono = IBM_Plex_Mono({
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    default: 'Analysis10k Blog — Public Companies, Decoded From Their Own Filings',
-    template: '%s · Analysis10k Blog',
-  },
-  description:
-    'Filings-first breakdowns of public companies: what each one does, how its story has changed, and what its stock price is betting on — built from 10-Ks, 10-Qs, and earnings calls.',
-  alternates: {
-    canonical: '/',
-    types: { 'application/rss+xml': [{ url: '/rss.xml', title: 'Analysis10k Blog' }] },
-  },
-  verification: {
-    google: 'ehen1zk7BylfZL4s3_GN6nkI-Uy8K8OUu5evYoOim7I',
-    other: {
-      'naver-site-verification': 'a9054817a47df28a39ad3d251659c88842504404',
-    },
-  },
-  other: {
-    'google-adsense-account': 'ca-pub-9857790456879549',
-  },
-};
 
 const siteJsonLd = [
   {
@@ -66,9 +42,10 @@ const siteJsonLd = [
   },
 ];
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+/** The <html>/<body> shell shared by every root layout; `lang` is the page language. */
+export default function RootShell({ lang, children }: { lang: 'en' | 'ko'; children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sourceSerif.variable} ${sourceSans.variable} ${plexMono.variable}`}>
+    <html lang={lang} className={`${sourceSerif.variable} ${sourceSans.variable} ${plexMono.variable}`}>
       <body>
         <script
           type="application/ld+json"
