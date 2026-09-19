@@ -8,6 +8,7 @@ import IndustryIcon from '@/components/IndustryIcon';
 import KoPostCard from '@/components/KoPostCard';
 import KoCardScripts from '@/components/KoCardScripts';
 import ShareRow from '@/components/ShareRow';
+import WatchNext from '@/components/WatchNext';
 
 export const revalidate = 60;
 
@@ -122,6 +123,7 @@ export default async function KoPostPage({ params }: { params: Promise<{ slug: s
       <KoCardScripts scripts={card.scripts} ext={card.ext} />
 
       <div className="wrap">
+        <WatchNext slug={slug} lang="ko" />
         <p className="ko-note">
           이 글은 기업이 SEC에 제출한 공시와 어닝콜 자료를 바탕으로 한 리서치 요약이며 투자 조언이 아닙니다. 숫자와
           출처는 원문 공시로 다시 확인하시기 바랍니다.

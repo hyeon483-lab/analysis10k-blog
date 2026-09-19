@@ -7,6 +7,7 @@ import { CATEGORY_META } from '@/types/post';
 import PostCard from '@/components/PostCard';
 import ShareRow from '@/components/ShareRow';
 import IndustryIcon from '@/components/IndustryIcon';
+import WatchNext, { hasWatch, WATCH_HEADING } from '@/components/WatchNext';
 import { getIndustry } from '@/lib/industries';
 
 export const revalidate = 60;
@@ -162,7 +163,7 @@ export default async function PostPage({
         <nav className="toc" aria-label="Table of contents">
           <div className="toc-label">📑 In this article</div>
           <ol>
-            {post.toc.map((entry) => (
+            {[...post.toc, ...(hasWatch(post.slug) ? [{ id: 'watch-next', label: WATCH_HEADING.en }] : [])].map((entry) => (
               <li key={entry.id}>
                 <a href={`#${entry.id}`}>{entry.label}</a>
               </li>
@@ -183,6 +184,8 @@ export default async function PostPage({
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
+
+        <WatchNext slug={post.slug} lang="en" />
 
         {post.faq && post.faq.length > 0 && (
           <div className="faq-section">
