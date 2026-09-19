@@ -1,7 +1,7 @@
 /** Path of the same page in Korean (pages without a translation go to the Korean home). */
 export function toKoPath(path: string): string {
   if (path === '/' || path === '') return '/ko';
-  if (/^\/(posts|about|contact|privacy)(\/|$)/.test(path)) return '/ko' + path;
+  if (/^\/(posts|about|contact|privacy|methodology)(\/|$)/.test(path)) return '/ko' + path;
   return '/ko';
 }
 

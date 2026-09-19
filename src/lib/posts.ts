@@ -52,6 +52,16 @@ function rowToPost(row: PostRow): Post {
   };
 }
 
+/**
+ * If the database call fails, fall back to the copy of the content that ships with the site, so a
+ * momentary database problem never turns into empty pages or a blank sitemap. Only used on errors:
+ * a successful response is always trusted.
+ */
+async function staticPosts(): Promise<Post[]> {
+  const { POSTS } = await import('@/data/posts');
+  return [...POSTS].sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : 0));
+}
+
 export async function getAllPosts(): Promise<Post[]> {
   const { data, error } = await supabase
     .from('posts')
@@ -60,8 +70,8 @@ export async function getAllPosts(): Promise<Post[]> {
     .order('published_at', { ascending: false });
 
   if (error) {
-    console.error('getAllPosts failed:', error.message);
-    return [];
+    console.error('getAllPosts failed, using bundled content:', error.message);
+    return staticPosts();
   }
   return (data ?? []).map(rowToPost);
 }
@@ -74,7 +84,11 @@ export async function getPostBySlug(slug: string): Promise<Post | undefined> {
     .eq('status', 'published')
     .maybeSingle();
 
-  if (error || !data) return undefined;
+  if (error) {
+    console.error('getPostBySlug failed, using bundled content:', error.message);
+    return (await staticPosts()).find((p) => p.slug === slug);
+  }
+  if (!data) return undefined;
   return rowToPost(data);
 }
 
@@ -86,7 +100,7 @@ export async function getRelatedPosts(post: Post): Promise<Post[]> {
     .eq('status', 'published')
     .neq('slug', post.slug);
 
-  if (error) return [];
+  if (error) return (await staticPosts()).filter((p) => p.ticker === post.ticker && p.slug !== post.slug);
   return (data ?? []).map(rowToPost);
 }
 

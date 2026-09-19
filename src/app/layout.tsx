@@ -58,6 +58,11 @@ const siteJsonLd = [
     url: SITE_URL,
     description:
       'Filings-first breakdowns of public companies: what each one does, how its story has changed, and what its stock price is betting on.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/posts?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
   },
 ];
 

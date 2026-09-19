@@ -9,6 +9,8 @@ import ShareRow from '@/components/ShareRow';
 import IndustryIcon from '@/components/IndustryIcon';
 import WatchNext, { hasWatch, WATCH_HEADING } from '@/components/WatchNext';
 import { getIndustry } from '@/lib/industries';
+import { metaDescription } from '@/lib/seo';
+import { withFinancialChart } from '@/lib/financialChart';
 
 export const revalidate = 60;
 
@@ -26,8 +28,8 @@ export async function generateMetadata({
   const post = await getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: { absolute: post.title },
+    description: metaDescription(post.excerpt),
     alternates: {
       canonical: `/posts/${post.slug}`,
       languages: { en: `/posts/${post.slug}`, ko: `/ko/posts/${post.slug}`, 'x-default': `/posts/${post.slug}` },
@@ -182,10 +184,16 @@ export default async function PostPage({
         <div
           className="prose"
           suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+          dangerouslySetInnerHTML={{ __html: post.category === 'snapshot' ? withFinancialChart(post.contentHtml) : post.contentHtml }}
         />
 
         <WatchNext slug={post.slug} lang="en" />
+        {post.category === 'dcf' && (
+          <p className="ko-note">
+            How this number is built, and how banks, REITs, and negative cash flow are handled: see our{' '}
+            <Link href="/methodology">methodology</Link>.
+          </p>
+        )}
 
         {post.faq && post.faq.length > 0 && (
           <div className="faq-section">

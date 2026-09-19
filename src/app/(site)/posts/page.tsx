@@ -15,7 +15,8 @@ export default async function PostsPage({
 }: {
   searchParams: Promise<{ q?: string }>;
 }) {
-  const posts = await getAllPosts();
+  const full = await getAllPosts();
+  const posts = full.map((p) => ({ ...p, takeaway: '', toc: [], contentHtml: '', sources: '', quickFacts: undefined, faq: undefined }));
   const { q } = await searchParams;
   return (
     <>

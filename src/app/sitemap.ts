@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllPosts, getAllTags, getAllIndustries } from '@/lib/posts';
+import { MIN_INDEXED_TAG_POSTS } from '@/lib/seo';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
@@ -18,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ];
   });
 
-  const tagEntries: MetadataRoute.Sitemap = tags.map(({ tag }) => ({
+  const tagEntries: MetadataRoute.Sitemap = tags.filter(({ count }) => count >= MIN_INDEXED_TAG_POSTS).map(({ tag }) => ({
     url: `${SITE_URL}/tags/${encodeURIComponent(tag)}`,
     changeFrequency: 'weekly',
     priority: 0.4,
@@ -41,6 +42,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/ko/about`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/about`, ko: `${SITE_URL}/ko/about` } } },
     { url: `${SITE_URL}/contact`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/contact`, ko: `${SITE_URL}/ko/contact` } } },
     { url: `${SITE_URL}/ko/contact`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/contact`, ko: `${SITE_URL}/ko/contact` } } },
+    { url: `${SITE_URL}/methodology`, changeFrequency: 'monthly', priority: 0.5, alternates: { languages: { en: `${SITE_URL}/methodology`, ko: `${SITE_URL}/ko/methodology` } } },
+    { url: `${SITE_URL}/ko/methodology`, changeFrequency: 'monthly', priority: 0.5, alternates: { languages: { en: `${SITE_URL}/methodology`, ko: `${SITE_URL}/ko/methodology` } } },
     { url: `${SITE_URL}/privacy`, changeFrequency: 'monthly', priority: 0.2, alternates: { languages: { en: `${SITE_URL}/privacy`, ko: `${SITE_URL}/ko/privacy` } } },
     { url: `${SITE_URL}/ko/privacy`, changeFrequency: 'monthly', priority: 0.2, alternates: { languages: { en: `${SITE_URL}/privacy`, ko: `${SITE_URL}/ko/privacy` } } },
     ...postEntries,

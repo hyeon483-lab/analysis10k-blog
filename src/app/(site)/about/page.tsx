@@ -56,6 +56,18 @@ export default async function AboutPage() {
         section rather than guessing.
       </p>
 
+      <p>
+        The full method, including how we handle banks, REITs, and negative cash flow, is on the{' '}
+        <a href="/methodology">Methodology</a> page.
+      </p>
+
+      <h2>Two languages</h2>
+      <p>
+        Every article is available in English and Korean; use the EN / 한국어 switch in the header. The Korean
+        versions are built from the original Korean analysis cards the English articles were adapted from, so
+        they are not machine translations of the English text, and they can differ slightly in wording and layout.
+      </p>
+
       <h2>What this isn&apos;t</h2>
       <p>
         Nothing on this site is investment advice, and nothing here is a recommendation to buy or

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import PostCard from '@/components/PostCard';
 import { getAllTags, getPostsByTag } from '@/lib/posts';
+import { MIN_INDEXED_TAG_POSTS } from '@/lib/seo';
 
 export async function generateStaticParams() {
   const tags = await getAllTags();
@@ -15,7 +16,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { tag } = await params;
   const decoded = decodeURIComponent(tag);
+  const count = (await getPostsByTag(decoded)).length;
   return {
+    robots: count < MIN_INDEXED_TAG_POSTS ? { index: false, follow: true } : undefined,
     title: `#${decoded}`,
     description: `Every Analysis10k article tagged "${decoded}".`,
     alternates: { canonical: `/tags/${encodeURIComponent(decoded)}` },

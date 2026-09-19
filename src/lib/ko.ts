@@ -1,6 +1,6 @@
-import type { Post, PostCategory } from '@/types/post';
-import { getAllPosts } from './posts';
+import type { PostCategory } from '@/types/post';
 import { KO_META } from '@/data/ko/meta';
+import { POST_INDEX } from '@/data/ko/postIndex';
 
 export const KO_CATEGORY: Record<PostCategory, { label: string }> = {
   snapshot: { label: '기업 스냅샷' },
@@ -31,28 +31,33 @@ export interface KoPost {
   tags: string[];
 }
 
-function toKoPost(p: Post): KoPost {
-  const meta = KO_META[p.slug];
-  const company = COMPANY_KO[p.ticker] ?? p.company;
+function build(slug: string): KoPost | undefined {
+  const idx = POST_INDEX[slug];
+  const meta = KO_META[slug];
+  if (!idx || !meta) return undefined;
+  const company = COMPANY_KO[idx.ticker] ?? idx.ticker;
   return {
-    slug: p.slug,
-    ticker: p.ticker,
+    slug,
+    ticker: idx.ticker,
     company,
-    category: p.category,
-    title: meta?.title ?? `${company}(${p.ticker}) ${KO_CATEGORY[p.category].label}`,
-    summary: meta?.summary ?? '',
-    publishedAt: p.publishedAt,
-    tags: p.tags,
+    category: idx.category,
+    title: meta.title,
+    summary: meta.summary,
+    publishedAt: idx.publishedAt,
+    tags: idx.tags,
   };
 }
 
+/** Newest first. Built from bundled data, so the Korean pages never depend on a database call. */
 export async function getKoPosts(): Promise<KoPost[]> {
-  const all = await getAllPosts();
-  return all.map(toKoPost);
+  return Object.keys(KO_META)
+    .map(build)
+    .filter((p): p is KoPost => Boolean(p))
+    .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : 0));
 }
 
 export async function getKoPost(slug: string): Promise<KoPost | undefined> {
-  return (await getKoPosts()).find((p) => p.slug === slug);
+  return build(slug);
 }
 
 export interface KoCard {

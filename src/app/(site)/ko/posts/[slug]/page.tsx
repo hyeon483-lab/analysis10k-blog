@@ -9,6 +9,7 @@ import KoPostCard from '@/components/KoPostCard';
 import KoCardScripts from '@/components/KoCardScripts';
 import ShareRow from '@/components/ShareRow';
 import WatchNext from '@/components/WatchNext';
+import { metaDescription } from '@/lib/seo';
 
 export const revalidate = 60;
 
@@ -24,8 +25,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = await getKoPost(slug);
   if (!post) return {};
   return {
-    title: post.title,
-    description: post.summary,
+    title: { absolute: post.title },
+    description: metaDescription(post.summary, 120),
     alternates: {
       canonical: `/ko/posts/${slug}`,
       languages: { en: `/posts/${slug}`, ko: `/ko/posts/${slug}`, 'x-default': `/posts/${slug}` },
@@ -124,6 +125,12 @@ export default async function KoPostPage({ params }: { params: Promise<{ slug: s
 
       <div className="wrap">
         <WatchNext slug={slug} lang="ko" />
+        {post.category === 'dcf' && (
+          <p className="ko-note">
+            이 숫자를 어떻게 계산했는지, 은행·리츠·현금흐름이 마이너스인 회사는 어떻게 다루는지는{' '}
+            <Link href="/ko/methodology">계산 방법</Link>에 있습니다.
+          </p>
+        )}
         <p className="ko-note">
           이 글은 기업이 SEC에 제출한 공시와 어닝콜 자료를 바탕으로 한 리서치 요약이며 투자 조언이 아닙니다. 숫자와
           출처는 원문 공시로 다시 확인하시기 바랍니다.
