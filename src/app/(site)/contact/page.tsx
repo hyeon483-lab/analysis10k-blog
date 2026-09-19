@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { AUTHOR_NAME } from '@/lib/author';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -17,6 +18,7 @@ export default function ContactPage() {
 
       <h2>Email</h2>
       <p>
+        Write to {AUTHOR_NAME}:{' '}
         <a href="mailto:chriskevin0707@gmail.com">chriskevin0707@gmail.com</a>
       </p>
 

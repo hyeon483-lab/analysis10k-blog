@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getAllPosts } from '@/lib/posts';
+import { AUTHOR_NAME } from '@/lib/author';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -61,6 +62,13 @@ export default async function AboutPage() {
         sell any security. These are research summaries meant to help you read a filing faster and
         ask better questions — not a substitute for your own research, a financial advisor, or the
         filings themselves.
+      </p>
+
+      <h2 id="author">About the author</h2>
+      <p>
+        Analysis10k Blog is written and edited by <b>{AUTHOR_NAME}</b>, the independent writer
+        behind the site. Every article is published under this name, and corrections or questions
+        go straight to the same person — see the <a href="/contact">Contact</a> page.
       </p>
 
       <h2>Contact</h2>

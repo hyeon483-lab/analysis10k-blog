@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { AUTHOR_NAME } from '@/lib/author';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug, getRelatedPosts, getRelatedByTags, getAdjacentPosts } from '@/lib/posts';
@@ -58,7 +59,7 @@ function postJsonLd(post: Awaited<ReturnType<typeof getPostBySlug>>) {
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       inLanguage: 'en',
       keywords: post.tags.join(', '),
-      author: { '@type': 'Organization', name: 'Analysis10k Research', url: `${SITE_URL}/about` },
+      author: { '@type': 'Person', name: AUTHOR_NAME, url: `${SITE_URL}/about#author` },
       publisher: {
         '@type': 'Organization',
         name: 'Analysis10k Blog',
@@ -132,7 +133,7 @@ export default async function PostPage({
 
       <div className="wrap">
         <div className="byline">
-          <b>Analysis10k Research</b>
+          <b>By <Link href="/about#author">{AUTHOR_NAME}</Link></b>
           <span>·</span>
           <span>{post.publishedAt}</span>
           <span>·</span>
