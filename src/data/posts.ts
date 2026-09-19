@@ -16487,21 +16487,23 @@ export const POSTS: Post[] = [
       { q: "What is EQT's market cap?", a: "As of this article's data, EQT's market cap was about $33.1B, on FY2025 revenue of $8.64B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How EQT makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "EQT drills the gas and now owns the pipes too" },
+      { id: 'revenue-mix', label: "Pipelines earn double the margin of drilling" },
+      { id: 'customers-competitors', label: "Who buys EQT's gas, and who drills next door" },
+      { id: 'core-metric', label: "Volume grew every year; price is what swung" },
+      { id: 'leadership', label: "A $1-salary CEO who won his job in a proxy fight" },
+      { id: 'capital-returns', label: "Dividends up, buybacks frozen" },
+      { id: 'failure-scenario', label: "What breaks EQT: cheap gas plus late demand" },
+      { id: 'financials', label: "Five years of boom, bust and rebound" },
+      { id: 'unknowns', label: "Open questions: data centers, the debt target, MVP" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['EQT', 'Energy', '10-K'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="how-it-makes-money">How EQT makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>EQT's pipeline purchase is what makes this a better business than a plain gas driller, but the whole company still rides on one commodity in one region. The open question is whether data-center demand shows up before the $7.8B of debt becomes a constraint.</div>
+
+<h2 id="how-it-makes-money">EQT drills the gas and now owns the pipes too</h2>
 <p>EQT drills natural gas wells in the Appalachian Basin (mainly the Marcellus Shale), and since July 2024 it also owns the pipeline network that carries that gas onward. The result is a business with three linked pieces: drill it, gather and transport it, then sell it to whoever burns it.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Appalachian wells</div><div class="d">Upstream — drilling & production, 100%-owned</div></div>
@@ -16512,7 +16514,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">EQT completed the merger with pipeline operator Equitrans Midstream in July 2024, converting itself from a single-segment driller into a three-segment company: Upstream, Gathering, and Transmission. Source: 10-K FY2025, p.8.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Pipelines earn double the margin of drilling</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -16530,7 +16532,7 @@ export const POSTS: Post[] = [
 <p>Geographically, essentially all of EQT's assets and revenue are U.S.-based, concentrated in the Appalachian Basin — the company discloses no meaningful revenue from outside the U.S. About 49% of sales volume is piped out of Appalachia to the Gulf Coast, Midwest, and Northeast.</p>
 <p class="src-note">Source: 10-K FY2025, p.103 ("substantially all" revenue and assets are U.S.-based), p.11 (out-of-basin sales share).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Who buys EQT's gas, and who drills next door</h2>
 <p>EQT sells B2B to gas marketers, utilities, and industrial buyers reachable by its pipeline network. No single customer accounted for more than 10% of revenue in FY2025 — the company states directly that losing any one customer would not materially disrupt sales.</p>
 <ul class="kicker-list">
   <li><b>Range Resources (RRC)</b> — an early Marcellus/Utica driller, smaller than EQT, with a higher mix of natural gas liquids (NGLs).</li>
@@ -16539,7 +16541,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.11 (customer concentration); competitive discussion throughout Item 1.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Volume grew every year; price is what swung</h2>
 <p>As a commodity producer, EQT's revenue swings on two separate levers: how much gas it sells (sales volume, in Bcfe) and what it gets paid per unit (realized price, in $/Mcfe). Volume shows whether the business itself is growing; price shows how much of any given year's results came down to luck in the gas market.</p>
 <div class="table-wrap">
   <table>
@@ -16554,16 +16556,16 @@ export const POSTS: Post[] = [
 <p>Volume rose steadily across all five years (helped by acquisitions), but realized price swung by more than 25% year to year with no clear trend — most of the volatility in EQT's results traces back to the gas market itself, not to how the business is run.</p>
 <p class="src-note">Source: 10-K FY2022, p.47 (2021-2022); 10-K FY2023, p.51-52 (2023); 10-K FY2025, p.67-69 (2024-2025).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">A $1-salary CEO who won his job in a proxy fight</h2>
 <p>CEO Toby Z. Rice took over in July 2019 after "Team Rice," an activist campaign he led, won a shareholder vote with over 80% support to replace the prior management team. Since then, he has taken a $1 base salary every year, with nearly all compensation delivered as performance-linked stock. His brother, Daniel J. Rice IV, sits on the board — the Rice family founded Rice Energy, which merged into EQT in 2017 — though each brother's individual stake is under 1%.</p>
 <p class="src-note">Source: DEF 14A 2026, p.34, p.56, p.58, p.106-108.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Dividends up, buybacks frozen</h2>
 <p>EQT raised its quarterly base dividend 5% in 2025, to an annualized $0.66/share, with total dividends paid growing from $228M (2023) to $327M (2024) to $390M (2025). A $2B buyback authorization remains open, but EQT repurchased $0 of stock in both 2024 and 2025 (versus $201M in 2023) — spare cash has instead gone almost entirely toward paying down debt, including $1.40B repaid in 2025 alone.</p>
 <div class="callout warn"><b>Buybacks are on hold while debt comes down</b>An authorized $2B repurchase program has sat unused for two straight years. Until debt falls closer to management's long-term target, dividend growth — not buybacks — is the shareholder-return story here.</div>
 <p class="src-note">Source: 10-K FY2025, p.9, p.91 (cash flow statement, financing activities).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks EQT: cheap gas plus late demand</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If natural gas prices stay depressed for an extended stretch and the LNG-export and data-center demand growth EQT is counting on arrives later than expected, the company could find itself squeezed between paying down $7.8B of debt and protecting a dividend it just raised.
@@ -16575,7 +16577,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.34 (Item 1A overview), p.75 (debt-related risk), Item 1A generally.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Five years of boom, bust and rebound</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions</caption>
@@ -16592,7 +16594,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Earnings and cash flow swing hard with gas prices</b>Both operating income and FCF more than quadrupled in 2025 after bottoming in 2024 — but that's the nature of a commodity producer, not a steady growth story. 2024's FCF ($573M) came in below operating income ($685M) because capex jumped to $2.25B that year on post-merger pipeline integration spending.</div>
 <p class="src-note">FCF = operating cash flow minus capex. 2021 operating income was negative (impairments); "n/m" = not meaningful as a margin. Source: 10-K FY2025, p.88 (income statement), p.90 (balance sheet), p.91 (cash flow statement); 10-K FY2023, p.68-71; 10-K FY2022, p.45.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: data centers, the debt target, MVP</h2>
 <ul class="kicker-list">
   <li><b>Whether LNG-export and data-center demand is showing up as real contracted volume</b> isn't visible in these filings — later earnings calls (2026 Q3 onward) would need to be checked for specifics.</li>
   <li><b>The exact timeline for reaching the long-term $5B debt target, and when buybacks might resume</b> isn't disclosed here.</li>
@@ -16621,17 +16623,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: 'This piece is built from EQT\'s 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026.' },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "How a gas-price crash got buried under a pipeline deal" },
+      { id: 'guidance-record', label: "Four promises kept, one debt target narrowly missed" },
+      { id: 'timeline', label: "From Tug Hill to Olympus: the deal timeline" },
+      { id: 'our-read', label: "Why the acquisition story held up" },
+      { id: 'unknowns', label: "What the calls don't answer: data centers and the missed target" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
     tags: ['EQT', 'Earnings Calls', 'Energy'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">How a gas-price crash got buried under a pipeline deal</h2>
 <h3>Late 2023: confident, but gas prices were already sliding</h3>
 <p>On the Q3 FY2023 earnings call, CEO Toby Rice touted "a number of positive highlights and record results," but the backdrop wasn't as strong as that framing suggested — 2022's gas price spike had faded through 2023, and EQT cut 13 Bcfe of production in the second half of the year. The 10-K's opening line, unchanged for three straight years, still read: "We are a natural gas production company with operations focused in the Appalachian Basin." The company's self-description hadn't caught up to where it was headed.</p>
 
@@ -16649,7 +16651,7 @@ export const POSTS: Post[] = [
   This is a textbook case of a crisis getting covered by a bigger acquisition story — the gas-price crash and the vertical-integration announcement landed in the same window, investor attention shifted to the larger narrative, and because the pipeline-margin math actually panned out in the numbers, the story held up. The one place where the messaging outran the results (the narrowly missed debt target) is worth watching, along with how much of the newer "data center demand" story turns into real, disclosed volume.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Four promises kept, one debt target narrowly missed</h2>
 <div class="table-wrap">
   <table>
     <caption>Guidance vs. actual results, FY2024–FY2026</caption>
@@ -16666,7 +16668,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Of five fully verifiable commitments, four were met or exceeded and one (the self-set debt target) was narrowly missed without a direct callout on the calls where "ahead of expectations" language was otherwise used. Source: 10-K FY2023 p.9, 10-K FY2024 p.9, 10-K FY2025 p.9, p.90; Q1-Q4 FY2024 earnings calls (debt target); Q2 FY2026 call (2026 guidance).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">From Tug Hill to Olympus: the deal timeline</h2>
 <ul class="timeline">
   <li><span class="date">Aug 2023</span>Tug Hill and XcL Midstream acquisitions close — first bolt-on deal, 74% integrated within 90 days.</li>
   <li class="crisis"><span class="date">H2 2023</span>Gas-price weakness drives a 13 Bcfe production cut; Mountain Valley Pipeline construction resumes after federal legislation.</li>
@@ -16679,10 +16681,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026</span>Q2 call cites the longest horizontal lateral in shale history (29,000+ ft); 2026 production guidance raised.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Why the acquisition story held up</h2>
 <p>EQT's last two-plus years show a company that turned a commodity-price crisis into a platform-transformation story, and largely made it stick — the pipeline-margin math behind the Equitrans deal has shown up in real results, not just rhetoric. What keeps this from being an unqualified success story is the pattern of message discipline around the one soft spot: the narrowly missed debt target got no direct acknowledgment even as "ahead of expectations" language continued elsewhere. That's a small gap between tone and substance, and it's worth tracking alongside how concretely the newer "data center demand" narrative turns into actual contracted volume.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What the calls don't answer: data centers and the missed target</h2>
 <ul class="kicker-list">
   <li><b>How much of the "data center demand" narrative has become real, contracted volume</b> isn't disclosed in the filings reviewed here — later earnings calls would need to be checked for specifics.</li>
   <li><b>Why the debt target was narrowly missed without direct comment</b> isn't explained in the transcripts — whether it reflects a deliberate reprioritization (e.g., toward the Olympus Energy bolt-on) or just slower-than-planned paydown isn't clear.</li>
@@ -16711,11 +16713,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $53.01, as of the Sept 11, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "11.7% needed vs. 47% headline and 6.4% organic growth" },
+      { id: 'sensitivity', label: "From 7% to 16%: how the discount rate moves the answer" },
+      { id: 'what-would-move-it', label: "Why the cash-flow baseline is the biggest judgment call" },
+      { id: 'show-your-work', label: "The math behind 11.7%" },
+      { id: 'fine-print', label: "Limits of this number" },
     ],
     sources: 'As of Sept 11, 2026 · Price used: $53.01',
     tags: ['EQT', 'ReverseDCF', 'Valuation'],
@@ -16732,7 +16734,7 @@ export const POSTS: Post[] = [
   The required growth rate (11.7%) sits far below EQT's 5-year FCF CAGR (47%) and revenue CAGR (30%) — taken at face value, that looks like an easy bar to clear. But both of those historical growth rates were inflated by the 2023 Tug Hill and 2024 Equitrans Midstream acquisitions, which added scale rather than organic growth. Stripped of acquisition effects, EQT's actual sales-volume growth ran at just 6.4% a year — meaning the market's 11.7% ask is nearly double the pace EQT has managed to grow organically. Whether today's price is reasonable depends almost entirely on whether EQT keeps growing through further bolt-on acquisitions (as it did again in February 2026 with Olympus Energy) or is expected to grow this fast on drilling alone.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">11.7% needed vs. 47% headline and 6.4% organic growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:25%;background:var(--accent)"></div></div><span class="val">11.7%</span></div>
@@ -16743,7 +16745,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical figures from 10-K FY2022-FY2025 (FCF, revenue) and 10-K FY2022, p.47 and FY2025, p.67-69 (organic sales-volume CAGR, which excludes the revenue and cash-flow lift from acquisitions).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 7% to 16%: how the discount rate moves the answer</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC), normalized FCF base</caption>
@@ -16757,14 +16759,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Because EQT is a large-cap company in a commodity-price-sensitive sector, a standard 10% discount rate was used as the base case, with 8% and 12% tested as bounds. Across that range, the required growth rate moves from 7.1% up to 15.6% — even at the low end, it exceeds the 6.4% organic volume growth EQT has actually delivered.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">Why the cash-flow baseline is the biggest judgment call</h2>
 <ul class="kicker-list">
   <li><b>Using 2025's actual FCF ($2.84B) instead of the normalized 3-year-average base ($1.52B) used here</b> drops the required growth rate sharply, from 11.7% to just 3.2% (at WACC 10%) — because 2025's FCF was unusually strong on a gas-price rebound plus lower post-merger integration spending.</li>
   <li><b>The normalization itself is the single biggest judgment call in this analysis</b> — 2025's actual FCF came in 86% above the 3-year average, past the ±40% threshold this site uses to decide when a single year is too unusual to use directly, which is why the 3-year average was used as the base case instead.</li>
   <li><b>Whether EQT counts on further bolt-on acquisitions (like the February 2026 Olympus Energy deal) to keep growing, versus organic drilling alone,</b> is arguably the most important open question — the 47% headline FCF CAGR and the 6.4% organic volume CAGR imply very different answers about how "cheap" 11.7% really is.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 11.7%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -16784,7 +16786,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR (2021→2025, includes acquisitions) = 47.0%. 5-yr revenue CAGR (2021→2025, includes acquisitions) = 29.6%. 5-yr organic production-volume CAGR (2021→2025, excludes acquisition effects) = 6.4%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of this number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -17161,21 +17163,23 @@ export const POSTS: Post[] = [
       { q: "What is Pfizer's market cap?", a: "As of this article's data, Pfizer's market cap was about $162.3B, on FY2025 revenue of $62.58B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Pfizer makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Pfizer sells patent-protected drugs through three wholesalers" },
+      { id: 'revenue-mix', label: "Primary care leads, and the U.S. is 59% of sales" },
+      { id: 'customers-competitors', label: "Three wholesalers control 54% of Pfizer's sales" },
+      { id: 'core-metric', label: "40% of revenue faces a patent cliff by 2029" },
+      { id: 'leadership', label: "A 30-year insider running the company since 2019" },
+      { id: 'capital-returns', label: "Three years without a single buyback" },
+      { id: 'failure-scenario', label: "What breaks Pfizer: the cliff arrives before the pipeline" },
+      { id: 'financials', label: "COVID boom, COVID bust, and the Seagen debt" },
+      { id: 'unknowns', label: "Open questions: Metsera, the COVID floor, Eliquis litigation" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['PFE', 'Pharmaceuticals', '10-K'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="how-it-makes-money">How Pfizer makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Pfizer only looks reasonable if its pipeline can replace roughly 40% of revenue that loses patent protection by 2029. That single question is the investment case, and nothing in the filings settles it.</div>
+
+<h2 id="how-it-makes-money">Pfizer sells patent-protected drugs through three wholesalers</h2>
 <p>Pfizer researches and develops patented drugs and vaccines, then sells them at premium prices for as long as patent exclusivity lasts. Most of the money doesn't come from patients directly — it moves through wholesalers to hospitals and pharmacies, and is ultimately paid by government programs like Medicare and private insurers.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">R&D labs</div><div class="d">~$10.4B/year, FY2025</div></div>
@@ -17186,7 +17190,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">The three largest wholesalers (McKesson, Cencora, Cardinal Health) collect more than half of revenue before it ever reaches a patient. Profit flows back into R&D ($10.4B in FY2025) and acquisitions (Metsera, Seagen). Source: 10-K FY2025, p.5, p.101.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Primary care leads, and the U.S. is 59% of sales</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by therapeutic area — FY2025</caption>
@@ -17203,7 +17207,7 @@ export const POSTS: Post[] = [
 <p>Geographically (FY2025): the U.S. is 59.3% ($37.1B), international markets are 40.7% ($25.5B) — with China the largest single international market at 5%, up slightly from 4% in 2024. International's share is actually down from a 2023 peak of 53%, when COVID vaccine sales were still concentrated overseas; it's been normalizing since.</p>
 <p class="src-note">Source: 10-K FY2025, p.6-7, p.36.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Three wholesalers control 54% of Pfizer's sales</h2>
 <p>Pfizer sells almost entirely through three pharmaceutical wholesalers, who together account for 54% of revenue: McKesson (25%), Cencora (16%), and Cardinal Health (13%).</p>
 <div class="callout warn"><b>More than half of revenue runs through three companies</b>That concentration structurally limits Pfizer's negotiating leverage with its own distribution channel — losing or renegotiating terms with even one of the three would be a meaningful event.</div>
 <ul class="kicker-list">
@@ -17213,7 +17217,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.101 (wholesaler concentration).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">40% of revenue faces a patent cliff by 2029</h2>
 <p>For a patent-driven pharma company, the number that matters most isn't quarterly revenue — it's how much of that revenue depends on patents that are about to expire. Once a patent lapses and generics enter, a drug's sales typically drop by more than half within a year or two.</p>
 <div class="table-wrap">
   <table>
@@ -17231,16 +17235,16 @@ export const POSTS: Post[] = [
 <p>R&D spending as a share of revenue was 16.7% in FY2025, up from 12.7% five years ago — the pace of reinvestment into the pipeline that has to eventually replace this ~40% of at-risk revenue.</p>
 <p class="src-note">Source: 10-K FY2025, p.7 (patent expiration table), p.101-102 (product revenue), p.51 (R&D spend); 10-K FY2022, p.51 (historical R&D/revenue).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">A 30-year insider running the company since 2019</h2>
 <p>CEO Albert Bourla has led Pfizer since January 2019 and has also chaired the board since January 2020. A veterinarian and pharmacologist by training, he spent over 30 years at Pfizer before becoming CEO, including as COO starting in 2018 — a classic internal-promotion case. There's no founder involvement; Pfizer was founded in 1849 by Charles Pfizer, and that family has been out of management for generations. All directors and executives combined hold under 1% of shares; the largest holders are index funds — Vanguard (8.97%), BlackRock (7.70%), and State Street (5.10%) — none of which are activist investors.</p>
 <p class="src-note">Source: DEF 14A 2026, beneficial ownership and executive officer tables.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Three years without a single buyback</h2>
 <p>Pfizer raised its dividend modestly for three straight years — $1.65/share (2023) to $1.69 (2024) to $1.72 (2025). Buybacks, on the other hand, have been zero for three consecutive years (2023-2025). A $10B repurchase authorization from 2018 still has $3.3B unused, but management has paused buybacks entirely to preserve financial flexibility after funding the $43B Seagen acquisition with debt.</p>
 <div class="callout warn"><b>Debt from Seagen is still shaping capital allocation</b>Three straight years without a single dollar of buybacks is unusual for a company this size — a direct, ongoing consequence of financing the 2023 Seagen acquisition with debt rather than cash or stock.</div>
 <p class="src-note">Source: 10-K FY2025, p.75.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Pfizer: the cliff arrives before the pipeline</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If patents on major products like Eliquis, Prevnar, and Vyndaqel expire as scheduled between 2026 and 2029 and the pipeline doesn't produce a large enough replacement in time, Pfizer becomes a company that loses roughly 40% of its revenue within just a few years.
@@ -17252,7 +17256,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.7 (patent expiration table), p.16-26 (Item 1A Risk Factors), p.101 (wholesaler concentration).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">COVID boom, COVID bust, and the Seagen debt</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions</caption>
@@ -17269,7 +17273,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>2023 was reshaped by two things at once</b>Total debt roughly doubled ($36B→$72B) to fund the debt-financed $43B Seagen acquisition, while operating margin collapsed from 34.8% to 2.1% as COVID vaccine and treatment sales crashed and one-time acquisition costs hit the same year.</div>
 <p class="src-note">Operating income = revenue minus cost of sales, SG&A, R&D, acquired-IPR&D, amortization of intangibles, and restructuring (derived by exclusion of other income/expense). FCF = operating cash flow minus capex. Total debt = short-term borrowings (including current portion of long-term debt) plus long-term debt. Source: 10-K FY2025, p.51, p.55, p.59-60; 10-K FY2022, p.46; 10-K FY2024, p.56.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: Metsera, the COVID floor, Eliquis litigation</h2>
 <ul class="kicker-list">
   <li><b>When Metsera, the obesity-drug company acquired in November 2025, will start contributing meaningful revenue</b> isn't disclosed here — the Q1 FY2026 earnings call would need to be checked.</li>
   <li><b>Where Comirnaty and Paxlovid (COVID vaccine and treatment) revenue, in decline since 2023, will eventually bottom out</b> isn't yet clear from these filings.</li>
@@ -17298,17 +17302,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: 'This piece is built from 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026.' },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Halved guidance, a comeback, then a bad spring in 2025" },
+      { id: 'guidance-record', label: "Three years of EPS guidance: one collapse, two beats" },
+      { id: 'timeline', label: "Timeline: Seagen, Metsera, and a deal with Washington" },
+      { id: 'our-read', label: "Reading the beats: turnaround or sandbagging?" },
+      { id: 'unknowns', label: "What we can't tell yet: Metsera's price, the margin goal, final terms" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
     tags: ['PFE', 'Earnings Calls', 'Pharmaceuticals'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Halved guidance, a comeback, then a bad spring in 2025</h2>
 <h3>Late 2023: guidance cut in half, credibility damaged</h3>
 <p>As COVID-era vaccine and treatment demand wound down, FY2023 revenue fell 41% year over year. The adjusted EPS guidance Pfizer had confidently set at the start of the year — $3.25-3.45 — was cut to $1.45-1.65 by the Q3 FY2023 call, a roughly 55% reduction; actual results landed at $1.84, barely clearing even that lowered bar. That same December, Pfizer closed its $43B acquisition of oncology company Seagen as a rebound bet, and opened FY2024 with what it called a "foundational year," guiding to a deliberately conservative $58.5-61.5B in revenue and $2.05-2.25 in adjusted EPS.</p>
 
@@ -17326,7 +17330,7 @@ export const POSTS: Post[] = [
   Uncertainty has cleared, but it wasn't free — the Metsera deal alone is expected to dilute 2026 adjusted EPS by roughly $0.16, and the government agreement is also expected to weigh on 2026 results. One detail worth flagging: the explicit "return to pre-pandemic operating margins" goal stated on the Q4 FY2024 call never appeared again in later calls — whether that's because it was quietly achieved or quietly shelved under new M&A costs isn't something this data can settle.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Three years of EPS guidance: one collapse, two beats</h2>
 <div class="table-wrap">
   <table>
     <caption>Adjusted EPS guidance vs. actual results, FY2023–FY2025</caption>
@@ -17340,7 +17344,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">FY2023's guidance was cut 55% within three quarters of the year starting, and results barely cleared even the reduced range. Whether the FY2024-FY2025 pattern of repeated beats reflects a genuine turnaround or a "guide low after losing credibility" habit isn't fully resolvable from this data alone. Source: Q3 FY2023, Q4 FY2023, Q4 FY2024, and Q3 FY2025 earnings calls; 10-K FY2025, p.44-45.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: Seagen, Metsera, and a deal with Washington</h2>
 <ul class="timeline">
   <li class="crisis"><span class="date">Oct 2023</span>FY2023 adjusted EPS guidance cut roughly in half, from $3.25-3.45 to $1.45-1.65.</li>
   <li><span class="date">Dec 2023</span>Seagen acquisition completes ($43B) — Pfizer's largest-ever deal, debt-financed.</li>
@@ -17351,10 +17355,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Feb 2026</span>Q4 FY2025 call: 2026 outlook is a recovery, but starts already carrying M&A dilution; the "pre-pandemic margin" phrase is no longer mentioned.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Reading the beats: turnaround or sandbagging?</h2>
 <p>Pfizer's last three years trace a full cycle: a credibility-damaging guidance cut, a deliberately conservative comeback that overdelivered, and then two unrelated shocks landing in the same month that forced a shift toward both acquisitions and direct government negotiation. The operational recovery in FY2024-FY2025 looks real by the numbers, but the guidance pattern itself — cut hard once, then beat conservative targets twice in a row — leaves open whether management has simply gotten more cautious in how it sets expectations. That's worth watching in FY2026, the first year that has to absorb both the Metsera dilution and the new government pricing agreement at the same time.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What we can't tell yet: Metsera's price, the margin goal, final terms</h2>
 <ul class="kicker-list">
   <li><b>How much Pfizer ultimately paid to win the Metsera bidding war, and whether the Novo Nordisk dispute is fully resolved</b> requires data from the Q1 FY2026 call and later to confirm.</li>
   <li><b>The real reason the "return to pre-pandemic operating margins" goal stopped being mentioned</b> (achieved quietly vs. quietly abandoned) can only be judged by whether the phrase resurfaces or a replacement goal is introduced in future calls.</li>
@@ -17383,11 +17387,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $28.55, as of the Sept 2, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "7.8% needed, but Pfizer's own history is too distorted to judge" },
+      { id: 'sensitivity', label: "A two-point change in discount rate nearly doubles the ask" },
+      { id: 'what-would-move-it', label: "FY2025 cash flow vs. the three-year average" },
+      { id: 'show-your-work', label: "The math behind 7.8%" },
+      { id: 'fine-print', label: "Limits of this number" },
     ],
     sources: 'As of Sept 2, 2026 · Price used: $28.55',
     tags: ['PFE', 'ReverseDCF', 'Valuation'],
@@ -17404,7 +17408,7 @@ export const POSTS: Post[] = [
   The market's required growth rate (7.8-9.6%) can't be fairly judged against Pfizer's 5-year FCF CAGR, because both ends of that period are distorted: 2021-2022 were inflated by one-time COVID vaccine and treatment revenue, and 2023 was an artificially depressed trough as that demand evaporated almost overnight. The more useful question is whether high-single-digit FCF growth is realistic for a company that's about to see roughly 40% of its revenue face patent expiration between 2026 and 2029. That's a business-model question, not a historical-comparison one — and it's the one this reverse DCF can't answer on its own.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">7.8% needed, but Pfizer's own history is too distorted to judge</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (FY2025 FCF base, WACC 9%)</span><div class="track"><div class="fill" style="width:81%;background:var(--accent)"></div></div><span class="val">7.8%</span></div>
@@ -17415,7 +17419,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. The 5-yr and 2-yr historical CAGRs bracket wildly different figures precisely because neither 2021-2022 (COVID peak) nor 2023 (COVID trough) is a normal baseline year — both are shown for completeness, not as a reliable growth signal.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">A two-point change in discount rate nearly doubles the ask</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -17429,14 +17433,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Pfizer is a large, S&P 500 pharmaceutical company, so a 9% discount rate was used as the base case. Moving the discount rate by just 2 percentage points in either direction roughly doubles the gap in required growth — this result is unusually sensitive to that single assumption.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">FY2025 cash flow vs. the three-year average</h2>
 <ul class="kicker-list">
   <li><b>Switching the FCF base from FY2025's single-year figure ($9,075M) to the 3-year average ($7,901M)</b> raises the required growth rate from 7.8% to 9.6% at WACC 9% — a smaller base requires faster growth to reach the same target value. FY2025's FCF was used as the primary base here since it fell within this site's ±40% normalization threshold relative to the 3-year average (+14.9%).</li>
   <li><b>Lowering the discount rate to 7%</b> drops the required growth to as low as 2.9%; raising it to 11% pushes it up to 11.9%.</li>
   <li><b>How net debt is measured also matters</b> — this analysis used total borrowings ($64.8B) minus cash and short-term investments ($13.6B), for net debt of about $51.2B. Pension obligations and litigation reserves were not included.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 7.8%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -17455,7 +17459,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR (2021→2025) = -25.8%, distorted by the COVID vaccine/treatment boom (2021-2022) and its collapse (2023). 2-yr recovery FCF CAGR (2023→2025, off the 2023 trough) = +37.6%, also distorted by the unusually low 2023 base.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of this number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -17495,21 +17499,23 @@ export const POSTS: Post[] = [
       { q: "What is Ferrari's market cap?", a: "As of this article's data, Ferrari's market cap was about $73.1B, on FY2025 revenue of €7.15B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Ferrari makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Ferrari builds fewer cars than it could sell, on purpose" },
+      { id: 'revenue-mix', label: "84% cars, 11.5% sponsorship and brand" },
+      { id: 'customers-competitors', label: "Direct-to-consumer buyers and the rivals chasing them" },
+      { id: 'core-metric', label: "Revenue per car up 37% while volume grew 22%" },
+      { id: 'leadership', label: "A chip-industry CEO, an Agnelli chairman, and a founder's son" },
+      { id: 'capital-returns', label: "€785M of buybacks, with a one-time €300M inside" },
+      { id: 'failure-scenario', label: "What breaks Ferrari: the day it feels common" },
+      { id: 'financials', label: "Margins widening every year for five years" },
+      { id: 'unknowns', label: "Open questions: the Luce EV, Exor's stake, regional profit" },
     ],
     sources: '20-F FY2021–FY2025 (SEC EDGAR)',
     tags: ['RACE', 'Luxury/Automotive', '20-F'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="how-it-makes-money">How Ferrari makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Ferrari's pricing power is real and visible in the numbers: revenue per car is up 37% in five years. The first electric Ferrari is the first product that will test whether scarcity still works without the engine.</div>
+
+<h2 id="how-it-makes-money">Ferrari builds fewer cars than it could sell, on purpose</h2>
 <p>Ferrari is a Netherlands-incorporated company that files a 20-F (not a 10-K) with the SEC as a foreign private issuer. Its business logic is unusual for a manufacturer: it deliberately caps production well below what it could sell, using that scarcity — reinforced by its Formula 1 racing program — to sustain premium pricing.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Scuderia Ferrari (F1)</div><div class="d">Brand halo & technical credibility → €820M in sponsorship revenue</div></div>
@@ -17520,7 +17526,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">The cycle: F1 racing builds brand halo → deliberately scarce production → customers pay a premium to get in → revenue flows back into racing and the lifestyle business (apparel, collections, experiences, €321M). Source: 20-F FY2025, p.37, p.91.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">84% cars, 11.5% sponsorship and brand</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by business — FY2025</caption>
@@ -17536,7 +17542,7 @@ export const POSTS: Post[] = [
 <p>By shipment volume (revenue by region isn't separately disclosed): EMEA is 46.5%, the Americas 28.9%, Greater China 6.9%, and other Asia-Pacific 17.7%. Greater China's share has been shrinking — down from 10.9% in 2023 to 6.9% in 2025, tied to China's economic conditions and trade friction.</p>
 <p class="src-note">Source: 20-F FY2025, p.85.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Direct-to-consumer buyers and the rivals chasing them</h2>
 <p>Ferrari sells entirely direct to consumers (B2C) through 181 official dealers (195 outlets) across more than 60 countries — there's no customer concentration risk in the usual sense. Instead, the company is exposed to a single macro risk: the willingness and ability of wealthy buyers, globally, to keep spending on discretionary luxury goods.</p>
 <ul class="kicker-list">
   <li><b>Lamborghini</b> — a similarly ultra-high-performance competitor, but backed by Volkswagen/Audi's much larger capital base.</li>
@@ -17545,7 +17551,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Other named competitors include McLaren, Rolls-Royce, and Bentley, with partial overlap from Porsche, Mercedes, and Land Rover in some segments. Source: 20-F FY2025, p.37, p.42.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Revenue per car up 37% while volume grew 22%</h2>
 <p>For Ferrari, "how many cars did we sell" matters less than "how much did we get for each one." Because production is deliberately capped, revenue growth without volume growth is the clearest sign the scarcity strategy is working.</p>
 <div class="table-wrap">
   <table>
@@ -17559,16 +17565,16 @@ export const POSTS: Post[] = [
 <p>Revenue per car rose 36.9% over five years, while unit shipments grew only 22.3% (11,155 to 13,640 cars) over the same period — most of Ferrari's revenue growth has come from charging more for each car, not from building more of them.</p>
 <p class="src-note">Revenue per unit = total revenue (including parts and sponsorship) ÷ units shipped, an approximation. Source: 20-F FY2025, p.37, p.91; 20-F FY2022, p.84.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">A chip-industry CEO, an Agnelli chairman, and a founder's son</h2>
 <p>CEO Benedetto Vigna has led Ferrari since September 2021 (his fourth year). Notably, he isn't from the auto industry — he previously ran the Analog, MEMS, and Sensors division at semiconductor company STMicroelectronics. Founder Enzo Ferrari's family still has a presence: Piero Ferrari (the co-founder's son) holds a 10.67% stake (16.17% of voting rights) and a board seat. The largest shareholder is Exor, the Agnelli family's holding company, at 21.33% (32.32% of voting rights, under a dual-class share structure). Exor's chairman, John Elkann, also chairs Ferrari's board — and simultaneously chairs Stellantis, a disclosed potential conflict of interest.</p>
 <p class="src-note">Source: 20-F FY2025, p.114-115, p.119.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">€785M of buybacks, with a one-time €300M inside</h2>
 <p>Ferrari paid €530M in dividends to parent-company shareholders in 2025, plus €785M in buybacks that year (including a special €300M tied to Exor's block trade). The dividend payout policy targets roughly 35% of adjusted net income, raised from 30% at a 2022 Capital Markets Day, alongside a roughly €2B multi-year buyback program running through 2026.</p>
 <div class="callout warn"><b>2025's buyback total includes a one-time item</b>€300M of the 2025 buyback came from Ferrari's participation in an Exor block trade — not necessarily a recurring feature of the annual program. Whether that scale of buyback repeats depends partly on Exor's own gradual reduction of its Ferrari stake.</div>
 <p class="src-note">Source: 20-F FY2025, p.102-103; 20-F FY2022, p.90.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Ferrari: the day it feels common</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   The moment people stop feeling that "you can't just buy a Ferrari" — the moment it becomes common — the buyers willing to pay a premium disappear, and the company's entire margin structure erodes with them.
@@ -17580,7 +17586,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 20-F FY2025, p.12, p.14, p.19.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Margins widening every year for five years</h2>
 <div class="table-wrap">
   <table>
     <caption>€ millions</caption>
@@ -17597,7 +17603,7 @@ export const POSTS: Post[] = [
 <div class="callout good"><b>Profit growth is outrunning revenue growth, and cash is following</b>Over five years, revenue grew 67% while EBIT grew 96% — margins have expanded, not just held steady. Industrial FCF grew right alongside profit (+139% over the same period), and net industrial debt has nearly been eliminated, from €297M to just €32M.</div>
 <p class="src-note">Source: 20-F FY2025, p.51 (income statement), p.59-60 (cash flow), p.55 (balance sheet); 20-F FY2022, p.46.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the Luce EV, Exor's stake, regional profit</h2>
 <ul class="kicker-list">
   <li><b>How strong actual pre-orders and pricing reception are for the Ferrari Luce (the first pure EV)</b> isn't disclosed here — later earnings calls (Q2 FY2026 onward) would need to be checked.</li>
   <li><b>Whether the €300M Exor block-trade contribution to 2025's buyback repeats, or whether Exor continues gradually reducing its stake</b> isn't clear from these filings.</li>
@@ -17626,17 +17632,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Ferrari's 20-F filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "The one promise Ferrari missed and never called a delay" },
+      { id: 'guidance-record', label: "Three guidance cycles beaten, one EV date slipped" },
+      { id: 'timeline', label: "From \"launch in 2025\" to a three-phase reveal" },
+      { id: 'our-read', label: "How Ferrari handles a miss" },
+      { id: 'unknowns', label: "What we can't tell yet: H2 2026, Luce orders, intent" },
     ],
     sources: '20-F FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
     tags: ['RACE', 'Earnings Calls', 'Luxury/Automotive'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">The one promise Ferrari missed and never called a delay</h2>
 <h3>2023-2024: confident, and consistently underpromising</h3>
 <p>At the February 2024 earnings call, management guided the following year's margin as "flattish" — but actual EBIT margin rose from 27.1% to 28.3% anyway. On that same call, an analyst pressed management about seemingly lowered free-cash-flow guidance, but actual results grew instead of shrinking. This stretch of calls (Q1-Q2 FY2024) had the highest ratio of positive-to-negative language of any of the 12 quarters reviewed — roughly 9 to 13 times as much confident language as cautious language. On China's slowdown, CEO Benedetto Vigna defended the business at length, offering a detailed multi-part rationale (a young market, margin-dilution concerns, deliberately paced brand-attachment growth).</p>
 
@@ -17654,7 +17660,7 @@ export const POSTS: Post[] = [
   Ferrari's management shows a consistent "promise conservatively, deliver more" pattern that has held almost without exception in the financial numbers across five years. The one place that pattern broke was a fixed-date product promise — the first electric car's launch — and rather than acknowledging the miss directly, the company reframed it with new language instead of admitting a delay. First-half 2026 results support the CEO's "year of growth" framing, but the CFO's more guarded language about the second half on the Q2 FY2026 call suggests the real test of that confidence is still ahead.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Three guidance cycles beaten, one EV date slipped</h2>
 <div class="table-wrap">
   <table>
     <caption>Guidance vs. actual results, FY2024–FY2026</caption>
@@ -17668,7 +17674,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Of the three verifiable financial-guidance cycles, all three were exceeded. The only miss identified was a product timeline (the EV launch), which the company never explicitly labeled as missed guidance. Source: Q4 FY2023, Q4 FY2024, Q1 FY2026, and Q2 FY2026 earnings calls; 20-F FY2025, p.14.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">From "launch in 2025" to a three-phase reveal</h2>
 <ul class="timeline">
   <li><span class="date">2022 20-F</span>States a plan to launch the first full-electric Ferrari "in 2025."</li>
   <li><span class="date">2023 20-F</span>Same "2025" language repeated a year later, essentially unchanged.</li>
@@ -17681,10 +17687,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026 (Q2 FY2026 call)</span>Guidance raised; EBIT margin climbs to 31.2%; tone recovers sharply.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">How Ferrari handles a miss</h2>
 <p>Ferrari's last three years show a company whose financial guidance discipline is close to unbroken — every verifiable cycle reviewed here was met or beaten. The one crack is instructive precisely because it's isolated: a specific, dated product promise (the EV launch) slipped, and rather than naming that slip, the company built a new narrative framework around it. That's a small but real signal about how this management team handles setbacks, worth remembering the next time a promise doesn't land exactly as stated. For now, strong first-half 2026 results back up the "year of growth" framing, but the CFO's more guarded language about the second half leaves that call not yet fully settled.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What we can't tell yet: H2 2026, Luce orders, intent</h2>
 <ul class="kicker-list">
   <li><b>How the second half of 2026 actually performs</b> isn't in this data — the CFO's guarded tone about H2 margins on the Q2 FY2026 call is a signal worth tracking, but can't be confirmed without Q3 FY2026 results.</li>
   <li><b>Actual pre-order and pricing reception for the Ferrari Luce</b> requires data from after its full unveiling in May 2026, which is beyond the Q2 FY2026 call collected here.</li>
@@ -17713,11 +17719,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $413.23, as of the Sept 2, 2026 close, with a EUR/USD rate of 1.1607.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "19.0% needed vs. 26.7% cash-flow growth and 13.7% revenue growth" },
+      { id: 'sensitivity', label: "From 14% to 23%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "Three ways the comparison could flip" },
+      { id: 'show-your-work', label: "The math behind 19.0%" },
+      { id: 'fine-print', label: "Limits of this number" },
     ],
     sources: 'As of Sept 2, 2026 · Price used: $413.23',
     tags: ['RACE', 'ReverseDCF', 'Valuation'],
@@ -17734,7 +17740,7 @@ export const POSTS: Post[] = [
   The required growth rate (19.0%) sits below Ferrari's 4-year FCF CAGR (26.7%), which on its face looks like a comfortably conservative ask. But two things complicate that read. First, 2021 — the base year for this comparison — was still depressed by pandemic recovery, which may be inflating the 26.7% figure; shifting the base year later would likely lower it. Second, comparing against revenue growth instead of FCF growth (13.7% a year, a purer measure of the underlying business without margin-expansion effects) flips the picture: the market's 19.0% ask is actually higher than Ferrari's historical revenue growth. Whether today's price is reasonable depends on whether you believe Ferrari can keep expanding margins as fast as it has, not just keep growing the business.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">19.0% needed vs. 26.7% cash-flow growth and 13.7% revenue growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:71%;background:var(--accent)"></div></div><span class="val">19.0%</span></div>
@@ -17744,7 +17750,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical figures from 20-F FY2025 (2023-2025 data) and 20-F FY2022 (2021-2022 data). 2021 was still a pandemic-recovery-depressed year for Ferrari's FCF (€546M, the lowest of the five years shown in the snapshot piece), which likely inflates the 4-year FCF CAGR shown here.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 14% to 23%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -17759,14 +17765,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Ferrari is a luxury brand that's historically been somewhat less cyclical than typical automakers, so a discount rate between a stable large-cap company's (8-9%) and a higher-growth stock's (12%) is arguably reasonable — this analysis used 10% as the base case.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">Three ways the comparison could flip</h2>
 <ul class="kicker-list">
   <li><b>Using the 3-year-average FCF (€1,064M) instead of 2025's single-year figure (€1,406M) as the base</b> raises the required growth rate from 19.0% to about 22.9% (at WACC 10%) — 2025's FCF was 32% above the 3-year average, close to but under this site's ±40% normalization threshold, so the single-year figure was used as the primary base.</li>
   <li><b>Comparing against revenue growth instead of FCF growth flips the read</b> — FCF growth (26.7%) also captures margin expansion and improved cash conversion, not just business growth, while revenue growth (13.7%) is a purer measure of the underlying business — and by that measure, the market's ask looks more demanding than conservative.</li>
   <li><b>Shifting the historical comparison's base year from 2021 to 2022</b> would likely lower the 4-year FCF CAGR meaningfully, since 2021's €546M FCF was still a pandemic-depressed low point — the 26.7% figure may overstate Ferrari's "normal" growth pace.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 19.0%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -17785,7 +17791,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 4-yr FCF CAGR (2021→2025) = 26.7%. 4-yr revenue CAGR (2021→2025) = 13.7%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of this number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
