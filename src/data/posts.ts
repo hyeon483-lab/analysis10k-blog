@@ -34,21 +34,23 @@ export const POSTS: Post[] = [
       { q: "What is Nvidia's market cap?", a: "As of this article's data, Nvidia's market cap was about $5.45 trillion, with FY2026 revenue of $215.9B and a P/E ratio of roughly 34.5x." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Nvidia makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Nvidia designs the chips and TSMC builds them" },
+      { id: 'revenue-mix', label: "Data Center is $193.7B of $215.9B in sales" },
+      { id: 'customers-competitors', label: "A narrow base of cloud buyers" },
+      { id: 'core-metric', label: "Gross margin and one segment carry the story" },
+      { id: 'leadership', label: "A founder still running the company after 33 years" },
+      { id: 'capital-returns', label: "A symbolic dividend, with buybacks doing the work" },
+      { id: 'failure-scenario', label: "What breaks Nvidia: hyperscalers build their own chips" },
+      { id: 'financials', label: "Revenue went from $27B to $216B in three years" },
+      { id: 'unknowns', label: "Open questions: FY2026 figures still awaiting the 10-K" },
     ],
     sources: '10-K FY2025 · 10-Q Q1 FY2027 · DEF 14A 2026 · Q4 FY2026 earnings release',
     tags: ['NVDA', 'Semiconductors', 'AI Infrastructure', '10-K'],
     publishedAt: '2026-08-17',
     contentHtml: `
-<h2 id="how-it-makes-money">How Nvidia makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Nvidia's numbers are extraordinary, but roughly 90% of sales come from one segment sold to a small group of cloud giants that are also building their own chips. The business is only as durable as that spending.</div>
+
+<h2 id="how-it-makes-money">Nvidia designs the chips and TSMC builds them</h2>
 <p>Nvidia is a "fabless" chipmaker — it designs chips but pays other companies to build them. TSMC manufactures the silicon; SK Hynix and Samsung supply the high-bandwidth memory that sits next to it. Nvidia's own job is chip design plus CUDA, the software layer that makes its GPUs usable for AI workloads, and it sells the combined package at a gross margin of roughly 71–75%.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Foundries &amp; memory</div><div class="d">TSMC (wafers)<br>SK Hynix, Samsung (HBM)</div></div>
@@ -59,7 +61,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Simplified. Segment mix is FY2026. Source: NVIDIA Q4 FY2026 earnings release, Feb 25, 2026.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Data Center is $193.7B of $215.9B in sales</h2>
 <div class="datacard">
   <h3>Revenue by product line — FY2026</h3>
   <div class="barlist">
@@ -76,7 +78,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, Item 7 (MD&amp;A).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">A narrow base of cloud buyers</h2>
 <p>Nvidia sells almost entirely to other businesses — cloud operators directly, or system integrators and distributors as a middle step. That customer base is narrow: in FY2025, three direct customers accounted for 12%, 11%, and 11% of revenue — <strong>34% combined</strong>, all from the Data Center segment.</p>
 <ul class="kicker-list">
   <li><b>AMD</b> — the one company making GPUs that compete head-on with Nvidia's. Cheaper, but still well behind on the CUDA software ecosystem that locks developers in.</li>
@@ -85,7 +87,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A (Risk Factors — Competition), p.13.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Gross margin and one segment carry the story</h2>
 <p>For any chipmaker, gross margin is the clearest read on pricing power. And because Nvidia is now, in practice, a data-center company, the growth rate of that one segment is the whole investment story.</p>
 <div class="table-wrap">
   <table>
@@ -118,15 +120,15 @@ export const POSTS: Post[] = [
 <p>The FY2026 dip has a specific cause: when Washington required export licenses for China-bound H20 chips in April 2025, Nvidia took a <strong>$4.5 billion inventory writedown</strong> in a single quarter — a real, dollar-denominated instance of export-control risk hitting the income statement.</p>
 <p class="src-note">Source: 10-K FY2025, p.41 &amp; p.51 (FY23–25); 10-Q Q1 FY2027, "H20 excess inventory" disclosure (FY26).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">A founder still running the company after 33 years</h2>
 <p>Jensen Huang founded Nvidia in 1993 and has been President and CEO for all 33 years since — one of the longest tenures of any founder still running a company this size. He previously worked as an engineer at LSI Logic and AMD. Huang and family trusts hold 3.58% of shares outstanding; all officers and directors combined hold 3.94%. The largest institutional holders are BlackRock (7.43%) and Vanguard (7.31%), as of March 2026.</p>
 <p class="src-note">Source: DEF 14A, filed May 12, 2026 — Security Ownership and executive biography sections.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A symbolic dividend, with buybacks doing the work</h2>
 <p>The dividend is symbolic rather than material: $0.01 per share quarterly, about $974 million total in FY2026 — just 2.4% of the $41.1 billion Nvidia returned to shareholders that year. The other 97.6% came through buybacks: roughly $40.1 billion in FY2026, up from about $33.7 billion in FY2025, against 24.31 billion diluted shares outstanding as of March 2026.</p>
 <p class="src-note">Source: NVIDIA Q4 FY2026 earnings release (Feb 25, 2026); DEF 14A (May 12, 2026).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Nvidia: hyperscalers build their own chips</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the hyperscalers buying the most GPUs decide their own in-house silicon — TPU, Trainium, and successors — is good enough, the data-center business that is 90% of Nvidia's revenue could unwind quickly.
@@ -138,7 +140,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A (Risk Factors), p.13–24; 10-Q Q1 FY2027 (H20 disclosure).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue went from $27B to $216B in three years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, fiscal years ending late January</caption>
@@ -158,7 +160,7 @@ export const POSTS: Post[] = [
 <p>Against $8.5 billion of debt, Nvidia held $62.6 billion in cash and securities at the end of FY2026 — a net cash position of $54.1 billion. Balance-sheet risk is close to non-existent.</p>
 <p class="src-note">Sources: 10-K FY2022 (FY21–22), 10-K FY2025 (FY23–25), Q4 FY2026 earnings release (FY26, press-release rounding). FCF = operating cash flow − capex, calculated directly.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: FY2026 figures still awaiting the 10-K</h2>
 <ul class="kicker-list">
   <li><b>The full FY2026 10-K wasn't yet available at analysis time</b> — some FY2026 figures above (OCF, capex, debt) are press-release estimates pending confirmation against the filed annual report.</li>
   <li><b>Exact China revenue isn't disclosed</b> — filings break out revenue by billing location only, not true end-use geography.</li>
@@ -187,17 +189,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Nvidia's 10-K filings for FY2022 through FY2025 and 12 quarters of earnings call transcripts spanning August 2023 to May 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual results' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "From gaming graphics to the engine room of AI, with one $4.5B scare" },
+      { id: 'guidance-record', label: "Nvidia's own guidance vs. what it reported" },
+      { id: 'timeline', label: "Timeline: the 2023 AI ramp to the May 2026 call" },
+      { id: 'our-read', label: "Reading the export-control shock" },
+      { id: 'unknowns', label: "What Nvidia's calls still don't answer" },
     ],
     sources: '10-K FY2022–FY2025 · 12 quarters of earnings call transcripts, Aug 2023–May 2026',
     tags: ['NVDA', 'Earnings Calls', 'Export Controls', 'AI Infrastructure'],
     publishedAt: '2026-08-17',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">From gaming graphics to the engine room of AI, with one $4.5B scare</h2>
 <h3>2023: total confidence</h3>
 <p>In August 2023, on the Q2 FY2024 earnings call, CFO Colette Kress opened with: "We had an exceptional quarter." Revenue of $13.51 billion beat the company's own guidance of $11.0 billion by 22.8%. A year earlier, the FY2023 10-K had mentioned "generative AI" exactly once. By this call, Nvidia was speaking like a different company.</p>
 <div class="quote">"We had an exceptional quarter."<span class="attr">— Colette Kress, CFO, Q2 FY2024 earnings call, Aug 23, 2023</span></div>
@@ -228,7 +230,7 @@ export const POSTS: Post[] = [
 <p>The recovery from the H20 shock was fast. On the November 2025 call (Q3 FY2026), CEO Jensen Huang volunteered, unprompted: "There's been a lot of talk about an AI bubble. From our vantage point, we see something very different." Answering an objection before anyone raised it is itself a signal — the market's question had shifted from "can Nvidia meet demand" to "is this demand real." By Q4 FY2026 (Feb 2026), revenue, operating income, and free cash flow all hit records. The most recent quarter on record, Q1 FY2027 (May 2026), beat guidance by nearly 5%.</p>
 <div class="quote">"There's been a lot of talk about an AI bubble. From our vantage point, we see something very different."<span class="attr">— Jensen Huang, CEO, Q3 FY2026 earnings call, Nov 19, 2025</span></div>
 
-<h2 id="guidance-record">Guidance vs. actual results, 12 straight quarters</h2>
+<h2 id="guidance-record">Nvidia's own guidance vs. what it reported</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue guidance vs. actual, Q2 FY2024–Q1 FY2027</caption>
@@ -251,7 +253,7 @@ export const POSTS: Post[] = [
 </div>
 <p>Twelve quarters, twelve beats — a perfect record. But the size of the beats tells a more interesting story than the streak itself: double-digit surprises in 2023 (+13% to +23%) narrowed to single digits from 2025 onward (+2.5% to +5.6%). Nvidia hasn't missed once, but it has moved from "clearing the bar easily" to "clearing it by design."</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: the 2023 AI ramp to the May 2026 call</h2>
 <ul class="timeline">
   <li><span class="date">Feb 2023</span>FY2023 10-K filed — "generative AI" appears in the filing for the first time (once). Crypto-mining demand is still listed as a distinct risk factor.</li>
   <li><span class="date">Aug 23, 2023</span>Q2 FY2024 earnings: revenue $13.51B, beats guidance by 22.8% — the first unmistakable evidence of the AI supercycle.</li>
@@ -263,10 +265,10 @@ export const POSTS: Post[] = [
   <li><span class="date">May 20, 2026</span>Q1 FY2027 (most recent): revenue $81.6B, up 85% year over year, beating guidance by 4.6%.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Reading the export-control shock</h2>
 <p>The real story of these three years isn't "explosive growth" — it's the steady narrowing of the gap between what Nvidia promises and what it delivers. Guidance beats went from +13–23% in 2023 to +4–6% in 2025–2026. Some of that is simple math: bigger revenue bases make the same percentage beat harder to repeat. But it also suggests more precise — and tighter — forecasting discipline than before. The H20 shock rattled that trend once, hard, but didn't break the company; if anything, it gave the market real evidence of exactly how much an external policy risk can cost, in dollars, when it lands.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Nvidia's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether Nvidia clears its $91B guidance for Q2 FY2027</b> (results due late August 2026) is the next chapter of this story, not yet written.</li>
   <li><b>The full FY2026 10-K wasn't available for this analysis</b>, so we couldn't compare its risk-factor language directly against FY2025 — in particular, whether "AI bubble" concerns have made it into the formal filing.</li>
@@ -295,11 +297,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $225.16, Nvidia’s closing price on Aug 14, 2026, as of Aug 17, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "28.2% needed vs. 83% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 22.7% to 32.9%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Nvidia's 28.2%" },
+      { id: 'show-your-work', label: "The math behind 28.2%" },
+      { id: 'fine-print', label: "Limits of the NVDA number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $225.16 (Aug 14, 2026 close)',
     tags: ['NVDA', 'ReverseDCF', 'Valuation'],
@@ -315,7 +317,7 @@ export const POSTS: Post[] = [
   The market's ask (28% a year) sits well under what Nvidia has actually delivered (83% a year). That is not the same as saying the stock is "cheap" — it means the market has already priced in the assumption that the recent explosive growth rate can't keep repeating. The real question is why the market is discounting so much of it, and that's a question for the business, not the math.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">28.2% needed vs. 83% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:34%;background:var(--accent)"></div></div><span class="val">28.2%</span></div>
@@ -326,7 +328,7 @@ export const POSTS: Post[] = [
 </div>
 <div class="callout warn"><b>For context, not part of this math</b>The average Wall Street price target is $302.83 — 34.5% above the current price, with a consensus "Strong Buy" rating (stockanalysis.com, as of Aug 17, 2026). That's a separate, analyst-driven view; it isn't an input to the reverse-DCF figure above.</div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 22.7% to 32.9%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -340,14 +342,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Nvidia sits in an unusual spot: it's the largest company in the world by market cap (which argues for a lower, large-cap discount rate around 9%), yet it's also heavily exposed to semiconductor-cycle and regulatory risk (which argues for a higher, high-growth-stock rate around 12%). We ran the full 8–12% range because either characterization is defensible.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Nvidia's 28.2%</h2>
 <ul class="kicker-list">
   <li><b>Using only the most recent year's FCF</b> (FY2026, $96.68B) instead of a 3-year average lowers the required growth rate to <strong>21.8%</strong> at a 10% discount rate, since the starting base is simply larger.</li>
   <li><b>A more conservative 12% discount rate</b> pushes the required rate up to 32.9% — still well under the 83% historical pace either way.</li>
   <li><b>Changing the terminal growth rate (2.5%) or the projection window (10 years)</b> shifts the result slightly but doesn't overturn the core finding that the market's ask sits below Nvidia's recent track record.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 28.2%</h2>
 <details class="methodology">
   <summary>Five inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -372,7 +374,7 @@ export const POSTS: Post[] = [
   <p class="src-note">EV = Σ(t=1..10) FCF₀×(1+g)ᵗ/(1+WACC)ᵗ + [FCF₀×(1+g)¹⁰×1.025/(WACC−0.025)]/(1+WACC)¹⁰, solved for g by bisection.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the NVDA number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -411,21 +413,23 @@ export const POSTS: Post[] = [
       { q: 'Is Apple more of a hardware company or a services company?', a: 'Both — iPhone sales are still the largest single revenue line and the entry point to the ecosystem, but Services (App Store, iCloud, Apple Music, Google search licensing) is the higher-margin, recurring layer built on top of the installed base.' },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Apple makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Apple sells the iPhone, then earns on the services around it" },
+      { id: 'revenue-mix', label: "iPhone is 50.4% of sales; Services is 26.2%" },
+      { id: 'customers-competitors', label: "Consumers first, with carriers holding 34% of receivables" },
+      { id: 'core-metric', label: "Why services margins matter more than hardware" },
+      { id: 'leadership', label: "A 15-year CEO succeeding a founder who died in 2011" },
+      { id: 'capital-returns', label: "A 0.35% yield and a 13.8% payout ratio" },
+      { id: 'failure-scenario', label: "What breaks Apple: the iPhone stops being the default upgrade" },
+      { id: 'financials', label: "Five years of flat-to-modest growth" },
+      { id: 'unknowns', label: "Open questions: Apple Intelligence costs and Vision Pro's contribution" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A 2026 · earnings call transcripts',
     tags: ['AAPL', 'Consumer Tech', 'Services', '10-K'],
     publishedAt: '2026-08-17',
     contentHtml: `
-<h2 id="how-it-makes-money">How Apple makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Apple's hardware is a mature business; the durable part is the services layer riding on a huge installed base of iPhones. The question is whether that ecosystem stays sticky as regulators and AI change how people use their phones.</div>
+
+<h2 id="how-it-makes-money">Apple sells the iPhone, then earns on the services around it</h2>
 <p>Apple designs its devices in-house but has them built by contract manufacturers across Taiwan, China, and South Korea. Roughly 40% of finished iPhones, Macs, and iPads are sold directly through Apple's own stores and website; the other 60% go out through carriers and resellers. The real engine, though, kicks in after the sale: once a device is active, its owner becomes a candidate for the App Store, iCloud, and Apple Music — services that carry a 75.4% gross margin, more than double hardware's 36.8%.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Component suppliers</div><div class="d">Taiwan, China, South Korea<br>contract manufacturing</div></div>
@@ -438,7 +442,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Simplified. Services revenue funds further R&D and new products. Source: 10-K FY2025, p.21–23; Q3 FY2026 earnings call (Jul 30, 2026), for the 2.5B+ active-device figure.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">iPhone is 50.4% of sales; Services is 26.2%</h2>
 <div class="datacard">
   <h3>Revenue by product/service — FY2025 ($416.2B total)</h3>
   <div class="barlist">
@@ -470,7 +474,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, p.21, p.46–47 (Note 13).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Consumers first, with carriers holding 34% of receivables</h2>
 <p>Apple is overwhelmingly a consumer (B2C) business, with some education, enterprise, and government customers on top. No single customer dominates outright revenue, but on an accounts-receivable basis, carriers together hold 34% of what Apple is owed, with one carrier alone accounting for 12% — a real concentration of credit risk in the distribution channel, even without a concentrated customer base.</p>
 <ul class="kicker-list">
   <li><b>Samsung</b> — the largest Android manufacturer, spanning a far wider price range than Apple, taking share in price tiers Apple doesn't compete in.</li>
@@ -479,7 +483,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.15 (direct/indirect sales mix), p.44 (receivables concentration).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Why services margins matter more than hardware</h2>
 <p>Hardware is a mature market where margins are hard to expand further. Services, by contrast, carry almost no marginal cost, so margins keep improving as revenue grows. Whether Apple's real profit engine has shifted from hardware to services is the single clearest thing to track.</p>
 <div class="table-wrap">
   <table>
@@ -497,11 +501,11 @@ export const POSTS: Post[] = [
 <p>The leading indicator behind that trend is the installed base — services revenue can't grow without more active devices in the world. Apple doesn't disclose this every quarter, but it reported 2 billion-plus active devices in its Q4 FY2023 call and 2.5 billion-plus by its Q3 FY2026 call — growth of more than 25% in under three years, on the two data points the company has actually given.</p>
 <p class="src-note">Source: 10-K FY2021–FY2025, p.22 each year (services gross margin); Q4 FY2023 earnings call (Nov 2, 2023) and Q3 FY2026 earnings call (Jul 30, 2026) for installed-base figures.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">A 15-year CEO succeeding a founder who died in 2011</h2>
 <p>Tim Cook, 65, has been CEO for 15 years, since 2011, having previously served as COO from 2005–2011. Founder Steve Jobs died in 2011, and no founding team members remain at the company today. All officers and directors combined, including Cook, hold roughly 9.07 million shares — about 0.06% of the 14.698 billion shares outstanding. This is a professionally managed company by any measure: the largest shareholders are index managers Vanguard (9.63%) and BlackRock (7.10%), not insiders.</p>
 <p class="src-note">Source: DEF 14A, filed Jan 8, 2026 — p.27 (Cook's biography), p.81 (ownership table).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A 0.35% yield and a 13.8% payout ratio</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th>Metric</th><th>Value</th></tr></thead>
@@ -517,7 +521,7 @@ export const POSTS: Post[] = [
 <p><strong>Buybacks:</strong> Apple has repurchased between $77.6 billion and $95.0 billion of stock every year for the past five years (FY2021 $86.0B → FY2022 $89.4B → FY2023 $77.6B → FY2024 $94.9B → FY2025 $90.7B). As a result, basic shares outstanding actually fell from 16.70 billion (FY2021) to 14.95 billion (FY2025) — a real 10.5% reduction, not just an offset against new employee stock grants.</p>
 <p class="src-note">Source: 10-K FY2023, p.31 (FY2021–2023 buybacks); 10-K FY2025, p.32 (FY2024–2025 buybacks and share counts); stockanalysis.com (price, yield, streak).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Apple: the iPhone stops being the default upgrade</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   The moment people stop automatically reaching for an iPhone when they upgrade, the App Store, iCloud, and subscription revenue riding along with it collapses too.
@@ -529,7 +533,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.4–6 (China/regulatory risk), p.7–8 (litigation status), p.28, p.32 (operating income/FCF calculation).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Five years of flat-to-modest growth</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, fiscal years ending late September</caption>
@@ -550,7 +554,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Sources: 10-K FY2023, p.27, p.31 (FY2021–2023 income/cash flow); 10-K FY2025, p.28, p.32 (FY2023–2025 income/cash flow). FCF = operating cash flow − capex, calculated directly.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: Apple Intelligence costs and Vision Pro's contribution</h2>
 <ul class="kicker-list">
   <li><b>Exactly how much Apple Intelligence costs in R&D</b>, and when it's expected to translate into meaningful revenue, isn't broken out in these filings.</li>
   <li><b>Vision Pro's actual revenue contribution</b> isn't separately disclosed.</li>
@@ -579,17 +583,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Apple's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from November 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual results' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A promised Siri upgrade slipped, and regulators started winning" },
+      { id: 'guidance-record', label: "Apple's CFO guidance vs. the next quarter's reported sales" },
+      { id: 'timeline', label: "Timeline: from a quiet 2023 to the mid-2026 recovery" },
+      { id: 'our-read', label: "Reading Apple: hedging in the filings, not in the numbers" },
+      { id: 'unknowns', label: "What Apple's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Nov 2023–Jul 2026',
     tags: ['AAPL', 'Siri', 'Antitrust', 'Earnings Calls'],
     publishedAt: '2026-08-17',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A promised Siri upgrade slipped, and regulators started winning</h2>
 <h3>2023: a quiet run-up</h3>
 <p>In late 2023, Apple was in a relatively calm stretch, riding anticipation for the iPhone 15 and the upcoming Vision Pro. The legal risks flagged in that year's 10-K were routine — an Epic Games appeal trending in Apple's favor, and a patent dispute with Masimo over the Apple Watch's blood-oxygen sensor. The first crack appeared quietly: on the January 2024 earnings call, management acknowledged that mainland China iPhone revenue had fallen by a mid-single-digit percentage on a currency-neutral basis.</p>
 
@@ -606,7 +610,7 @@ export const POSTS: Post[] = [
 <h3>Where it stands now</h3>
 <p>By January 2026, revenue grew 16% against a 10–12% guide, and Greater China — after two years of decline — grew 38%, delivering what Apple called its best iPhone quarter ever. Then, at WWDC in June 2026, Apple relaunched the delayed feature as "Siri AI." The tone was completely different this time: one earnings call alone mentioned "Siri" 14 times, with management repeating words like "completely rebuilt," "an incredible response," and "we are beyond excited."</p>
 
-<h2 id="guidance-record">Guidance vs. actual results, 11 straight quarters</h2>
+<h2 id="guidance-record">Apple's CFO guidance vs. the next quarter's reported sales</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue guidance vs. actual, Q4 FY2023–Q2 FY2026</caption>
@@ -629,7 +633,7 @@ export const POSTS: Post[] = [
 <p>Eleven guided quarters, eleven met-or-beaten — a perfect record, with zero misses. The pattern is textbook conservative guidance, but the gap widened noticeably starting Q2 FY2025 — right when tariff uncertainty first got baked into the outlook — suggesting management began guiding more conservatively specifically to buffer against tariff and regulatory risk.</p>
 <p class="src-note">Source: CFO guidance commentary (Luca Maestri through FY2024, Kevan Parekh from FY2025) on each earnings call, checked against the following quarter's reported net sales; 10-Q Q2 FY2024 for one cross-check.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: from a quiet 2023 to the mid-2026 recovery</h2>
 <ul class="timeline">
   <li><span class="date">Nov 2023</span>Q4 FY2023 earnings: calm period ahead of iPhone 15 and Vision Pro. China slowdown not yet a major theme.</li>
   <li><span class="date">Jun 2024</span>WWDC: "Apple Intelligence" unveiled. A "more personal Siri" promised for "the coming months."</li>
@@ -641,10 +645,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jun–Jul 2026</span>WWDC and Q3 FY2026 earnings: "Siri AI" unveiled, "completely rebuilt." Tone score hits its high point of the period.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Reading Apple: hedging in the filings, not in the numbers</h2>
 <p>The real story of these three years is two self-inflicted wounds — a missed AI deadline and a wave of regulatory losses — landing at nearly the same time, followed by a recovery that arrived on both fronts almost together. Whether that recovery reflects a durable structural improvement, or simply an iPhone 17 supercycle overlapping with pent-up demand, isn't something these filings alone can settle. The tariff cost line is still growing quarter over quarter, and the EU's second DMA investigation (Article 6(4)) hadn't reached a final conclusion as of the FY2025 10-K — both are worth re-checking in the next filing or two.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Apple's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Why the Masimo patent dispute disappeared from Apple's filings after FY2023</b> — settlement, resolution, or simply no longer material — isn't confirmed anywhere in the record we reviewed.</li>
   <li><b>The EU's second DMA investigation (Article 6(4))</b> had only reached a preliminary finding as of the FY2025 10-K; the final outcome and any additional fines need the next 10-K or 10-Q to confirm.</li>
@@ -674,11 +678,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: "This analysis used $305.59, Apple's closing price on Aug 17, 2026." },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "16.4% needed vs. 1.5% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 11.0% to 21.0%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Apple's 16.4%" },
+      { id: 'show-your-work', label: "The math behind 16.4% (AAPL)" },
+      { id: 'fine-print', label: "Limits of the AAPL number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $305.59 (Aug 17, 2026 close)',
     tags: ['AAPL', 'ReverseDCF', 'Valuation'],
@@ -695,7 +699,7 @@ export const POSTS: Post[] = [
   The market is pricing in growth roughly ten times faster than Apple's recent free-cash-flow record. That doesn't automatically mean the stock is overpriced — it means a lot is riding on a services-margin expansion and product-cycle story that hasn't shown up in the FCF numbers yet. Whether that story holds up needs a look at the business itself, not just the math.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">16.4% needed vs. 1.5% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">16.4%</span></div>
@@ -705,7 +709,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs calculated directly from 10-K FY2021–FY2025.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 11.0% to 21.0%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -719,14 +723,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at a generous 7% discount rate, the required growth rate is still 11% — more than seven times Apple's actual four-year FCF growth rate of 1.5%.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Apple's 16.4%</h2>
 <ul class="kicker-list">
   <li><b>Using a 3-year average FCF (FY2023–25) instead of FY2025 alone</b> lowers the required growth rate slightly, from 16.4% to about 15.9% — FY2025's FCF was only 3.5% below that 3-year average, so the effect is modest.</li>
   <li><b>Using a more standard 10% discount rate</b> instead raises the required growth rate to about 18.8%.</li>
   <li><b>Changing the terminal growth rate (2.5%) or the projection window (10 years)</b> — both fixed assumptions in this model — would shift the result further.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 16.4% (AAPL)</h2>
 <details class="methodology">
   <summary>Five inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -741,7 +745,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Target EV = market cap ($4.49T) + net debt (−$33.76B) ≈ $4.45T, solved for g by bisection over 200 iterations.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the AAPL number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -780,21 +784,23 @@ export const POSTS: Post[] = [
       { q: 'Does Microsoft pay a dividend?', a: "Yes — Microsoft pays a quarterly dividend, yielding about 0.73% at the price used in this article, on top of share buybacks." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Microsoft makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Microsoft charges subscriptions for office software and cloud" },
+      { id: 'revenue-mix', label: "Office and Azure: where the $281.7B comes from" },
+      { id: 'customers-competitors', label: "Enterprise and consumer customers, none above 10%" },
+      { id: 'core-metric', label: "Microsoft Cloud is the number to watch" },
+      { id: 'leadership', label: "Nadella's decade as CEO, without a founder in the room" },
+      { id: 'capital-returns', label: "Twenty years of dividend increases" },
+      { id: 'failure-scenario', label: "What breaks Microsoft: AI spending stops paying for itself" },
+      { id: 'financials', label: "Revenue from $168B to $282B in four years" },
+      { id: 'unknowns', label: "Open questions: FY2021 debt and Azure's exact revenue" },
     ],
     sources: '10-K FY2023–FY2025 · DEF 14A · Q4 FY2026 earnings call',
     tags: ['MSFT', 'Cloud', 'Enterprise Software', '10-K'],
     publishedAt: '2026-08-17',
     contentHtml: `
-<h2 id="how-it-makes-money">How Microsoft makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Microsoft's subscription base gives it unusually predictable revenue, and the cloud business keeps growing fast. What is uncertain is whether hundreds of billions of dollars of data-center spending earns its return.</div>
+
+<h2 id="how-it-makes-money">Microsoft charges subscriptions for office software and cloud</h2>
 <p>Enterprise and individual customers pay Microsoft subscription fees, licenses, and cloud-usage charges for its software and infrastructure. That money gets reinvested into data centers and AI research, which funds better products to sell back to the same customers — and whatever's left over goes to shareholders as dividends and buybacks.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Enterprise & individual customers</div><div class="d">Subscriptions, licenses,<br>cloud usage fees</div></div>
@@ -807,7 +813,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Simplified. Source: 10-K FY2025, MD&A.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Office and Azure: where the $281.7B comes from</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -833,7 +839,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Reading the geography</b>Nearly half of revenue comes from outside the U.S., which exposes results to currency swings and regulation abroad (EU competition law, data-sovereignty rules, and similar).</div>
 <p class="src-note">Source: 10-K FY2025, p.90 (Note 18 — Segment and Geographic Data).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Enterprise and consumer customers, none above 10%</h2>
 <p>Microsoft sells to enterprise (B2B) and consumer (B2C) customers simultaneously. Its 10-K states plainly that no individual customer or country outside the U.S. accounts for more than 10% of revenue — customer concentration risk here is low.</p>
 <ul class="kicker-list">
   <li><b>Amazon (AWS)</b> — the leading cloud infrastructure provider. Azure is the challenger, using its Windows/Office bundle as leverage to catch up.</li>
@@ -842,7 +848,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.90.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Microsoft Cloud is the number to watch</h2>
 <p>"Microsoft Cloud" revenue — Azure plus commercial Microsoft 365 cloud, commercial LinkedIn, and Dynamics 365 combined — is the single clearest read on how fast Microsoft's cloud transition is working. Nearly all of the company's growth is coming from here.</p>
 <div class="table-wrap">
   <table>
@@ -858,11 +864,11 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2023 p.36, FY2024 p.37, FY2025 p.34 (MD&A). FY2026 figure is a preliminary estimate from the Q4 FY2026 earnings call (Jul 29, 2026), pending audited confirmation.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Nadella's decade as CEO, without a founder in the room</h2>
 <p>Satya Nadella has been CEO since 2014 and added the chairman role in 2021, having previously run the cloud and enterprise division. Co-founder Bill Gates left the board in 2020 and is no longer involved in management. All 18 officers and directors combined hold roughly 2.28 million shares — under 1% of the roughly 7.4 billion shares outstanding — a token amount compared to institutional holders Vanguard (8.95%) and BlackRock (7.30%).</p>
 <p class="src-note">Source: DEF 14A, filed Oct 21, 2025 — ownership table, p.59–60; Nadella's tenure, p.42.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Twenty years of dividend increases</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th>Metric</th><th>Value</th></tr></thead>
@@ -877,7 +883,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>Microsoft bought back $18.4B of stock in FY2025, but shares outstanding stayed essentially flat at 7.434 billion year over year. FY2025 stock-based compensation ($12.0B) roughly offset the buyback — meaning repurchases here function mainly as dilution defense rather than a real reduction in share count.</div>
 <p class="src-note">Source: 10-K FY2025, p.51 (Stockholders' Equity Statements), p.49 (Cash Flow).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Microsoft: AI spending stops paying for itself</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If enterprises decide their AI and cloud spending hasn't paid off and start cutting back, the data centers Microsoft has poured hundreds of billions of dollars into would sit there generating mostly depreciation, and margins would come under pressure fast.
@@ -889,7 +895,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.15–20 (Item 1A Risk Factors), p.49 (capex); Q4 FY2026 earnings call (Jul 29, 2026) for capex guidance.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue from $168B to $282B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ billions, fiscal years ending June 30</caption>
@@ -908,7 +914,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>FY2025 operating income rose 17.4% while free cash flow fell 3.3% — AI data-center capex rising 45% year over year is the direct cause.</div>
 <p class="src-note">Sources: 10-K FY2025, p.50 (income), p.53 (cash flow), p.52 (balance sheet); 10-K FY2023, p.53, p.55, p.52. FY2021 total debt wasn't available in the filings reviewed (neither 10-K carries that year's balance sheet).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: FY2021 debt and Azure's exact revenue</h2>
 <ul class="kicker-list">
   <li><b>FY2021's exact total debt</b> — the 10-Ks reviewed (FY2023, FY2025) don't carry that year's balance sheet. The FY2021 or FY2022 10-K would fill this gap.</li>
   <li><b>Azure's exact dollar revenue</b> isn't disclosed — Microsoft reports only its growth rate, never a dollar figure.</li>
@@ -937,17 +943,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Microsoft's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Azure guidance vs. actual, 11 quarters' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Capacity constraints, admitted for three years and still beating targets" },
+      { id: 'guidance-record', label: "Azure growth outlook vs. the next quarter's result" },
+      { id: 'timeline', label: "Timeline: October 2023 to the July 2026 call" },
+      { id: 'our-read', label: "Why the CFO's candor matters" },
+      { id: 'unknowns', label: "What Microsoft's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['MSFT', 'Azure', 'AI Infrastructure', 'Earnings Calls'],
     publishedAt: '2026-08-17',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Capacity constraints, admitted for three years and still beating targets</h2>
 <h3>2023: a confident, unremarkable quarter</h3>
 <p>In October 2023, Microsoft reported Azure growth of 29% and guided the next quarter to a more conservative 26–27%. The tone was that of a company just getting AI Copilots off the ground — not yet the urgency that would come to define later quarters.</p>
 
@@ -964,7 +970,7 @@ export const POSTS: Post[] = [
 <h3>Where it stands now</h3>
 <p>Growth never slowed after that admission. By Q4 FY2026 (July 2026), Azure growth had climbed to 43%, and annual revenue topped $331.8B for the first time. That same quarter's results included a $3.2 billion mark-to-market gain tied to Microsoft's Anthropic investment — a name that had appeared on an earnings call for the first time just nine months earlier, in October 2025, signaling a broadening of AI bets beyond OpenAI alone. Free cash flow, though, fell from $71.6B (FY2025) to roughly $61.7B (FY2026), a direct effect of the capex surge.</p>
 
-<h2 id="guidance-record">Azure guidance vs. actual, 11 quarters</h2>
+<h2 id="guidance-record">Azure growth outlook vs. the next quarter's result</h2>
 <div class="table-wrap">
   <table>
     <caption>Azure YoY growth: guided vs. actual, Q1 FY2024–Q3 FY2026</caption>
@@ -987,7 +993,7 @@ export const POSTS: Post[] = [
 <p><strong>9 beats, 2 meets, 0 misses (82% beat rate).</strong> Not one quarter fell short of guidance — a pattern that lines up with a company that keeps saying it's building too slowly for the demand in front of it.</p>
 <p class="src-note">Source: outlook commentary on each earnings call, checked against the following quarter's reported Azure growth.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: October 2023 to the July 2026 call</h2>
 <ul class="timeline">
   <li><span class="date">Oct 24, 2023</span>Q1 FY2024 earnings: Azure +29%, conservative guide, "getting ready for AI" tone.</li>
   <li><span class="date">Apr 25, 2024</span>Q3 FY2024 earnings: "AI capacity constraint" used for the first time.</li>
@@ -1000,10 +1006,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 29, 2026</span>Q4 FY2026 earnings: annual revenue tops $331.8B; $3.2B Anthropic mark-to-market gain booked; free cash flow falls year over year.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Why the CFO's candor matters</h2>
 <p>This isn't the story of a company worried it can't keep up — it reads more like a company selling faster than it can build. That said, the last two to three quarters have brought a noticeable uptick in analysts asking about ROI and monetization, a sign the market is starting to weigh how long it will tolerate an investment-heavy, payback-later structure. The growth itself isn't the thing to watch closely from here — it's whether the enormous capital spending converts into profit on a timeline the market accepts.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Microsoft's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether FY2027 capex actually reaches the roughly $175B level mentioned</b>, and exactly when that investment starts converting to profit, isn't something these filings and calls settle.</li>
   <li><b>The company's own capacity-normalization timeline has been wrong more than once</b> (H2 FY25 "easing" → Q3 FY25 "extended through June" → Q1 FY26 "we are not catching up"), so any new optimistic outlook is worth re-checking each quarter rather than taking at face value.</li>
@@ -1032,11 +1038,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: "This analysis used $495.40, Microsoft's closing price on Aug 14, 2026, as of Aug 16, 2026." },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "20.1% needed vs. 1.9% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 17.4% to 27.0%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Microsoft's 20.1%" },
+      { id: 'show-your-work', label: "The math behind 20.1%" },
+      { id: 'fine-print', label: "Limits of the MSFT number" },
     ],
     sources: 'As of Aug 16, 2026 · Price used: $495.40 (Aug 14, 2026 close)',
     tags: ['MSFT', 'ReverseDCF', 'Valuation'],
@@ -1053,7 +1059,7 @@ export const POSTS: Post[] = [
   Judged purely on free cash flow, the market's ask looks wildly optimistic. But swap in operating income (17.3% 5-year CAGR) or revenue (14.6%) and the gap to the market's 20.1% ask shrinks dramatically. FCF looks weak mainly because AI data-center capex nearly tripled between FY2024 and FY2026 — not because the core business got less profitable.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">20.1% needed vs. 1.9% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:74%;background:var(--accent)"></div></div><span class="val">20.1%</span></div>
@@ -1064,7 +1070,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs calculated directly from 10-K filings. Analyst consensus: stockanalysis.com/stocks/msft/forecast, Aug 13, 2026 (48-analyst consensus).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 17.4% to 27.0%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -1078,14 +1084,14 @@ export const POSTS: Post[] = [
   </table>
 </div>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Microsoft's 20.1%</h2>
 <ul class="kicker-list">
   <li><b>Switching to a 3-year average FCF</b> ($69.1B) instead of FY2026's figure raises the required growth rate slightly, to about 21.0% — FY2026's FCF actually came in below that 3-year average.</li>
   <li><b>Swapping the comparison metric from FCF to operating income or revenue</b> (17.3% and 14.6% five-year CAGRs, respectively) narrows the gap to the market's 20.1% ask substantially. FCF looks unusually weak specifically because AI data-center capex nearly tripled from FY2024 to FY2026, not because underlying profitability deteriorated.</li>
   <li><b>A 12% discount rate</b> would push the required growth rate up to 27.0%.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 20.1%</h2>
 <details class="methodology">
   <summary>Five inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -1099,7 +1105,7 @@ export const POSTS: Post[] = [
   <p class="src-note">EV = Σ(t=1..10) FCF₀×(1+g)ᵗ/(1+WACC)ᵗ + terminal value, solved for g by bisection.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the MSFT number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -1138,21 +1144,23 @@ export const POSTS: Post[] = [
       { q: 'Is Alphabet still mainly an advertising company?', a: 'Yes, by revenue — advertising is about 73% of the total — though Google Cloud and other bets are a growing share of the business beyond search and video ads.' },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Alphabet makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Alphabet gives search away and sells the ads beside it" },
+      { id: 'revenue-mix', label: "Google Services is 85% of revenue at a 40.7% margin" },
+      { id: 'customers-competitors', label: "Millions of advertisers, plus enterprise cloud buyers" },
+      { id: 'core-metric', label: "Traffic costs and Cloud profitability" },
+      { id: 'leadership', label: "Two founders stepped back; Pichai runs both Google and Alphabet" },
+      { id: 'capital-returns', label: "$55.4B returned in 2025, mostly buybacks" },
+      { id: 'failure-scenario', label: "What breaks Alphabet: people ask a chatbot instead of Google" },
+      { id: 'financials', label: "Revenue from $258B to $403B in four years" },
+      { id: 'unknowns', label: "Open questions: the DOJ appeal and distribution deals" },
     ],
     sources: '10-K FY2021–FY2025',
     tags: ['GOOGL', 'Digital Advertising', 'Cloud', '10-K'],
     publishedAt: '2026-08-18',
     contentHtml: `
-<h2 id="how-it-makes-money">How Alphabet makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Alphabet's ad business is extraordinarily profitable, but about 73% of revenue depends on people still typing questions into a search box. Cloud is the second engine that has to keep proving itself.</div>
+
+<h2 id="how-it-makes-money">Alphabet gives search away and sells the ads beside it</h2>
 <p>Users search and watch videos for free; that traffic flows to Search, YouTube, and Alphabet's apps, where advertisers pay to be seen. Advertising accounts for about 73% of Alphabet's revenue. A portion of that ad revenue — the traffic acquisition cost, or TAC, running at 20.3% — flows back out to the browsers, carriers, and app publishers that sent the traffic in the first place. Separately, enterprise and government customers pay for Google Cloud, now 15% of revenue and growing fast.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Users</div><div class="d">Search & watch for free</div></div>
@@ -1165,7 +1173,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Simplified. Advertisers also pay for the ~20.3% traffic acquisition cost Alphabet shares back with partners. Source: 10-K FY2025, p.33–35.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Google Services is 85% of revenue at a 40.7% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025 ($ billions)</caption>
@@ -1193,7 +1201,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, p.34. Over half of revenue comes from outside the U.S., leaving results exposed to currency swings and, given the large EMEA share, EU antitrust enforcement in particular.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Millions of advertisers, plus enterprise cloud buyers</h2>
 <p>Alphabet's customer base splits between millions of advertisers, broadly distributed with no disclosed concentration risk, and enterprise/government customers paying for Google Cloud.</p>
 <ul class="kicker-list">
   <li><b>Microsoft</b> — competes directly in cloud (Azure vs. Google Cloud) and increasingly in AI (Copilot vs. Gemini).</li>
@@ -1201,7 +1209,7 @@ export const POSTS: Post[] = [
   <li><b>Meta</b> — competes head-on for the same brand and performance-advertising budgets via Facebook and Instagram.</li>
 </ul>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Traffic costs and Cloud profitability</h2>
 <p>Two numbers tell the real story here: how much of each advertising dollar Alphabet keeps, and whether its second growth engine (Cloud) is actually turning into a durable profit source.</p>
 <div class="table-wrap">
   <table>
@@ -1232,15 +1240,15 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: TAC — 10-K FY2025 p.35, FY2023 p.38, FY2021 p.36 (calculated as TAC ÷ Google advertising revenue). Cloud margin — 10-K FY2025 p.36, FY2023 p.39, FY2021 p.38.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Two founders stepped back; Pichai runs both Google and Alphabet</h2>
 <p>Sundar Pichai has been Google's CEO since 2015 and added the Alphabet CEO role in December 2019. Founders Larry Page and Sergey Brin have stepped back from day-to-day management, but they retain roughly 52.7% of total voting power through Class B shares (10 votes each) as of the end of 2025 — real control of the board and major decisions, independent of their economic ownership stake.</p>
 <p class="src-note">Source: 10-K FY2025, p.9 (key-person risk), p.21–22 (share ownership and voting power).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">$55.4B returned in 2025, mostly buybacks</h2>
 <p>In 2025, Alphabet returned about $55.4B to shareholders — $45.4B in buybacks (Class A $6.5B + Class C $38.9B) plus roughly $10.0B in dividends. The dividend, introduced in 2024, was raised 5% to $0.21 per quarter in April 2025, and a new $70.0B buyback authorization was approved in April 2024. The diluted weighted-average share count fell from about 12.64 billion (2023) to 12.11 billion (2025) — buybacks are outpacing new share issuance from employee compensation.</p>
 <p class="src-note">Source: 10-K FY2025, p.39 (dividend and buyback programs); share-count trend calculated from the income statement, p.49.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Alphabet: people ask a chatbot instead of Google</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If people start asking an AI chatbot instead of typing into Google's search box, search traffic and ad clicks could shrink — and 73% of Alphabet's revenue rides on advertising.
@@ -1252,7 +1260,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.9 (Item 1A), p.18 (DOJ litigation), p.35 (EC fine), p.39 (MD&A, provisions).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue from $258B to $403B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ billions, calendar years</caption>
@@ -1271,7 +1279,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2025 operating income rose 14.8% while free cash flow grew just 0.7%, as AI data-center capex jumped from $52.5B to $91.4B. The balance sheet is still comfortably net-cash, though: $126.8B in cash and short-term investments dwarfs the $46.5B in long-term debt, for roughly $78B of net cash.</div>
 <p class="src-note">Sources: income statement — 10-K FY2025 p.49 (2024–2025), FY2023 p.52 (2021–2023). Cash flow — 10-K FY2025 p.52, FY2023 p.55. Long-term debt — 10-K FY2025 p.48, FY2023 p.51, FY2021 p.49. FCF = operating cash flow − capex, calculated directly.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the DOJ appeal and distribution deals</h2>
 <ul class="kicker-list">
   <li><b>How the DOJ search antitrust appeal will actually change distribution agreements</b> (like the default-search deals with Apple and browser makers) isn't something these filings can answer yet.</li>
   <li><b>Whether Cloud's margin gains hold once the AI investment cycle cools</b> needs the next 10-Q to confirm.</li>
@@ -1300,17 +1308,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Alphabet's 10-K filings for FY2023 through FY2025 and 8 quarters of earnings call transcripts from November 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'CapEx guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A sixfold rise in capex and one negative free-cash-flow quarter" },
+      { id: 'guidance-record', label: "Capex guidance that kept being wrong, upward" },
+      { id: 'timeline', label: "Timeline for Alphabet: Q3 2023 to Q2 2026" },
+      { id: 'our-read', label: "A tone that never cracked" },
+      { id: 'unknowns', label: "What Alphabet's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 8 quarters of earnings call transcripts, Nov 2023–Jul 2026',
     tags: ['GOOGL', 'AI Infrastructure', 'Capital Spending', 'Earnings Calls'],
     publishedAt: '2026-08-18',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A sixfold rise in capex and one negative free-cash-flow quarter</h2>
 <h3>2023: still cautious</h3>
 <p>In Q3 2023, Alphabet's quarterly capital spending sat around $8 billion, and the only forward guidance offered was qualitative: full-year 2024 capex would be higher than all of 2023 combined. That year's 10-K listed "more than 75% of revenue from online advertising" as risk factor number one — with no language yet about AI disrupting search.</p>
 
@@ -1324,7 +1332,7 @@ export const POSTS: Post[] = [
 <p>Through all of this, management's language stayed remarkably even. Right after losing the DOJ antitrust case in Q3 2024, Sundar Pichai said only that Alphabet "plan[s] to vigorously defend these cases" — no sign of alarm. Even when disclosing the first-ever negative free-cash-flow quarter in Q2 2026, the CFO called the business "very confident." Analysts pressed the same question — is this capex really paying off — in Q3 2025, Q1 2026, and Q2 2026, and got essentially the same answer each time: Cloud is already showing returns.</p>
 <div class="quote">"...we see something very different."<span class="attr">— on the Q2 FY2026 earnings call, discussing the first-ever negative quarterly free cash flow</span></div>
 
-<h2 id="guidance-record">CapEx guidance scorecard</h2>
+<h2 id="guidance-record">Capex guidance that kept being wrong, upward</h2>
 <div class="table-wrap">
   <table>
     <caption>Full-year capex: guided vs. actual</caption>
@@ -1342,7 +1350,7 @@ export const POSTS: Post[] = [
 <p><strong>Pattern:</strong> the direction was right in all 6 instances, but the specific number was revised upward in 3 of 6 — always underestimated, never overestimated. That reads less like standard conservative guidance and more like the AI investment cycle outrunning even the company's own forecasts.</p>
 <p class="src-note">Source: CFO capex commentary (Anat Ashkenazi/Ruth Porat) on each earnings call; actuals from 10-K FY2025, p.33 and p.52.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Alphabet: Q3 2023 to Q2 2026</h2>
 <ul class="timeline">
   <li><span class="date">Q3 2023</span>Quarterly capex around $8B; cautious, qualitative guidance only.</li>
   <li><span class="date">FY2023 10-K</span>Advertising named as "more than 75%" of revenue; no AI-disruption risk language yet.</li>
@@ -1355,10 +1363,10 @@ export const POSTS: Post[] = [
   <li class="crisis"><span class="date">Q2 2026</span>First-ever negative quarterly free cash flow (-$5.9B) disclosed; "very confident" language retained.</li>
     </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">A tone that never cracked</h2>
 <p>These three years are the story of an advertising company turning into an AI-infrastructure company. The numbers already show the transition — capex, free cash flow, the shrinking advertising-share language, the vanishing cookie language — but management's tone never once showed real strain through any of it. That gap between the numbers and the language is itself worth watching: if the payoff doesn't show up on the timeline the market expects, the next piece of bad news could land harder precisely because so little strain has been signaled so far.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Alphabet's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Exactly why the early-2025 $75B capex estimate roughly tripled toward $200B within about a year</b> isn't explained in the transcripts reviewed — the Q2 FY2025 call, which might hold the answer, wasn't in this set.</li>
   <li><b>Whether the Q2 FY2026 negative free cash flow is a one-quarter timing blip or the start of a longer stretch</b> needs the Q3 FY2026 call to judge.</li>
@@ -1387,11 +1395,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $344.00, the Class A closing price on Aug 17, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "26.3% needed vs. 2.3% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 21.0% to 30.9%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Alphabet's 26.3%" },
+      { id: 'show-your-work', label: "The math behind 26.3%" },
+      { id: 'fine-print', label: "Limits of the GOOGL number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $344.00 (Class A, Aug 17, 2026 close)',
     tags: ['GOOGL', 'ReverseDCF', 'Valuation'],
@@ -1408,7 +1416,7 @@ export const POSTS: Post[] = [
   Using the more generous FY2025 annual FCF figure instead of trailing-12-month brings the required growth rate down from 26.3% to 21.9% — but that's still roughly double Alphabet's five-year revenue growth rate, and about ten times its five-year FCF growth rate.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">26.3% needed vs. 2.3% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Required (TTM FCF basis)</span><div class="track"><div class="fill" style="width:100%;background:var(--bad)"></div></div><span class="val">26.3%</span></div>
@@ -1419,7 +1427,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs calculated directly from 10-K FY2021–FY2025.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 21.0% to 30.9%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -1434,14 +1442,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Either large-cap (8–9%) or high-growth/high-volatility (12%) discount rate assumptions are defensible for Alphabet; across the whole range, the required growth stays well above the company's historical revenue growth rate.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Alphabet's 26.3%</h2>
 <ul class="kicker-list">
   <li><b>Which FCF figure you use matters most.</b> Trailing-12-month FCF (as of Q2 2026) was $53.3B — 27% below FY2025's annual FCF of $73.3B — because 2026 capex guidance nearly doubled again. Using the annual figure instead of TTM lowers the required growth rate from 26.3% to 21.9%.</li>
   <li><b>An 8% discount rate</b> lowers the TTM-basis requirement to 21.0%.</li>
   <li><b>Extending the projection window or changing the terminal growth assumption</b> would shift the number further, but the core finding — that the market's ask clears Alphabet's historical growth by a wide margin either way — doesn't flip.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 26.3%</h2>
 <details class="methodology">
   <summary>Five inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -1457,7 +1465,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the GOOGL number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -1496,21 +1504,23 @@ export const POSTS: Post[] = [
       { q: "What is Meta's market cap?", a: "As of this article's data, Meta's market cap was roughly $1.50 trillion." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Meta makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Meta gives the apps away and sells targeted ads" },
+      { id: 'revenue-mix', label: "Reality Labs lost $19.2B on $2.2B of revenue" },
+      { id: 'customers-competitors', label: "Advertisers pay; 3.58 billion people are the audience" },
+      { id: 'core-metric', label: "Users times revenue per user" },
+      { id: 'leadership', label: "Zuckerberg controls 60.8% of the votes" },
+      { id: 'capital-returns', label: "A new dividend and $26.3B of buybacks" },
+      { id: 'failure-scenario', label: "What breaks Meta: attention moves to TikTok, YouTube or AI" },
+      { id: 'financials', label: "Revenue from $118B to $201B in four years" },
+      { id: 'unknowns', label: "Open questions: what $125-145B of AI capex will earn" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A 2026',
     tags: ['META', 'Digital Advertising', 'AI Infrastructure', '10-K'],
     publishedAt: '2026-08-18',
     contentHtml: `
-<h2 id="how-it-makes-money">How Meta makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Meta's ad machine pays for everything, including a Reality Labs unit that lost $19.2B in 2025 and a $125-145B AI spending plan for 2026. Whether that spending earns a return is the whole question.</div>
+
+<h2 id="how-it-makes-money">Meta gives the apps away and sells targeted ads</h2>
 <p>Users don't pay a cent — every dollar comes from advertisers. People spend time on Facebook, Instagram, WhatsApp, Messenger, and Threads for free; Meta's AI studies what they engage with, then sells advertisers precisely targeted placement in front of those same eyes.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">3.58B daily active people</div><div class="d">Use the apps for free</div></div>
@@ -1523,7 +1533,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">A large share of 2025's $201.0B ad revenue is reinvested into AI and data centers (2026 capex guided at $125–145B), sharpening the AI engine and lifting ad prices and engagement — a loop that feeds itself. Source: 10-K FY2025, p.72, p.76; 10-Q Q1 FY2026, p.45.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Reality Labs lost $19.2B on $2.2B of revenue</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -1550,7 +1560,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>About 61% of revenue is international, exposing results to currency swings and to the EU's Digital Markets Act and Digital Services Act.</div>
 <p class="src-note">Source: 10-K FY2025, p.101.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Advertisers pay; 3.58 billion people are the audience</h2>
 <p>The paying customer is the advertiser (B2B, millions of businesses) — the 3.58 billion people using the apps are the audience being sold, not the customer. Meta's filings don't disclose that any single advertiser tops 10% of revenue, suggesting a broadly distributed advertiser base (exact concentration figures aren't disclosed).</p>
 <ul class="kicker-list">
   <li><b>TikTok (ByteDance)</b> — directly erodes user time with short-form video; Reels is Meta's answer.</li>
@@ -1559,7 +1569,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Note: Meta's 10-K doesn't name specific competitors — this list reflects broadly known industry context.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Users times revenue per user</h2>
 <p>An advertising business breaks down into two numbers: how many users you have, and how much you make per user. More users without rising monetization isn't growth; higher monetization with shrinking users isn't sustainable. That's why DAP (daily active people) and ARPP (average revenue per person) have to be read together.</p>
 <div class="table-wrap">
   <table>
@@ -1578,11 +1588,11 @@ export const POSTS: Post[] = [
 <p>2022's 6% ARPP decline was an "efficiency year" — Apple's privacy changes (ATT) hit ad targeting right as the broader ad market softened. AI-driven targeting tools (like Advantage+) drove the rebound since.</p>
 <p class="src-note">Source: 10-K FY2022 p.57, FY2023 p.63, FY2024 p.63, FY2025 p.60, p.65 (ARPP methodology changed starting 2024; prior years restated).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Zuckerberg controls 60.8% of the votes</h2>
 <p>Mark Zuckerberg founded the company in 2004 and remains Chairman and CEO. Through Class B shares (holding 99.8% of that class, roughly 341.8 million shares), he controls 60.8% of total voting power alone — effective sole control regardless of his economic ownership stake. The board includes outside directors who are CEOs of Stripe, Dropbox, DoorDash, and UFC.</p>
 <p class="src-note">Source: DEF 14A 2026, p.63.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A new dividend and $26.3B of buybacks</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th>Metric</th><th>2025</th><th>Note</th></tr></thead>
@@ -1596,7 +1606,7 @@ export const POSTS: Post[] = [
 <p>New shares keep being issued for stock-based compensation, but buybacks have outpaced that issuance for five straight years — a real reduction in share count, not just an offset.</p>
 <p class="src-note">Source: 10-K FY2025, p.57, p.60, p.78, p.88; 10-K FY2023, p.89.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Meta: attention moves to TikTok, YouTube or AI</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If people start spending their attention elsewhere — TikTok, YouTube, a new AI service — advertisers follow them out the door, and the advertising business that is 98.9% of Meta's revenue gets hit all at once.
@@ -1608,7 +1618,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.25 (AI/RL investment reduced 2025 operating income by $19.19B), p.19–20 (Reality Labs risk factors).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue from $118B to $201B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ billions, calendar years</caption>
@@ -1625,7 +1635,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2025 net income ($60.5B) fell 3% year over year despite operating income rising 20% — but this is not a sign of a weaker business. It's a one-time <strong>$15.93B tax charge</strong> booked in Q3 2025 (a deferred-tax-asset valuation allowance tied to the U.S. tax law change known as OBBBA). Operating performance alone actually improved substantially. Separately, 2025 FCF fell 15% as capex jumped 87%, from $37.3B to $69.7B — AI infrastructure spending is consuming cash faster than profit is growing.</div>
 <p class="src-note">Source: 10-K FY2025, p.75 (tax charge), p.87–88, p.91; 10-K FY2023, p.88–92.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: what $125-145B of AI capex will earn</h2>
 <ul class="kicker-list">
   <li><b>How much additional revenue the $125–145B 2026 AI capex will actually generate</b> isn't disclosed — future earnings calls are the place to check AI's revenue contribution.</li>
   <li><b>When Reality Labs is expected to break even</b> — the company hasn't given a specific timeline.</li>
@@ -1654,17 +1664,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Meta's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'CapEx and revenue guidance scorecards' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "From a 2023 war chest to building ahead of need" },
+      { id: 'guidance-record', label: "CapEx never cut in three years; revenue guidance almost always beaten" },
+      { id: 'timeline', label: "Timeline for Meta: February 2024 to July 2026" },
+      { id: 'our-read', label: "Reading Meta: the \"superintelligence\" word that vanished and returned" },
+      { id: 'unknowns', label: "What Meta's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['META', 'AI Infrastructure', 'Reality Labs', 'Earnings Calls'],
     publishedAt: '2026-08-18',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">From a 2023 war chest to building ahead of need</h2>
 <h3>2023: building the war chest</h3>
 <p>In early 2023, after large layoffs, Meta called that year its "Year of Efficiency." On the February 2024 earnings call, Zuckerberg looked back and framed it as preparation "to become a stronger technology company and to execute efficiently towards our ambitions around AI and the metaverse" — the efficiency drive wasn't the goal, it was the fundraising step for the next bet.</p>
 
@@ -1678,7 +1688,7 @@ export const POSTS: Post[] = [
 <h3>"Superintelligence": a word that vanished, then came back</h3>
 <p>In July 2025, "Meta Superintelligence Labs" was announced as a new organization, and the word "superintelligence" appeared 6 to 20 times on every call that followed. Then, on the April 2026 call, the word was used zero times — and in the same call, 2026 capex guidance was raised again, from $115–135B to $125–145B. Even though revenue beat analyst estimates, the stock fell as much as 10% intraday. Three months later, on the July 2026 call, guidance narrowed to $130–145B (the floor moved up) — and "superintelligence" language returned.</p>
 
-<h2 id="guidance-record">CapEx and revenue guidance scorecards</h2>
+<h2 id="guidance-record">CapEx never cut in three years; revenue guidance almost always beaten</h2>
 <h3>CapEx guidance: three years, never cut</h3>
 <div class="table-wrap">
   <table>
@@ -1715,7 +1725,7 @@ export const POSTS: Post[] = [
 <p>All 10 quarters landed at the top of the guided range or above it — never once in the middle or low end.</p>
 <p class="src-note">Source: earnings call transcripts, Q3 FY2023 through Q2 FY2026 (roic.ai), prepared remarks from Mark Zuckerberg and Susan Li; stock price reaction from Yahoo Finance (Apr 30, 2026).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Meta: February 2024 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Feb 2024</span>"Year of Efficiency" declared complete, framed as preparation for AI and metaverse investment.</li>
   <li><span class="date">Jul 2024</span>"Build ahead of need" philosophy declared; capex guidance begins climbing every quarter.</li>
@@ -1727,10 +1737,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026</span>Capex guidance narrows to $130–145B (floor raised); "superintelligence" language returns.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Reading Meta: the "superintelligence" word that vanished and returned</h2>
 <p>Revenue beat guidance in nearly every one of these quarters — but spending grew even faster, every time. Neither Meta nor the market has ever said "this is enough." Reality Labs' losses stopped getting worse for the first time in this period, and an unproven new worry — AI capex payoff — has taken its place. Whether "superintelligence" briefly disappearing in April 2026 was a deliberate tone adjustment for a quarter that landed badly with the market, or just a coincidence of prepared remarks, isn't something we can say for certain — but the timing, a cooler market reaction paired with more measured language, and a warmer one paired with the word's return, is at least suggestive.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Meta's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether this scale of AI capex actually converts to proportional revenue in 2026–2027</b> isn't something these filings settle — the company hasn't given a specific ROI timeline.</li>
   <li><b>Whether the "zero superintelligence mentions" quarter was a deliberate tone shift or coincidence</b> needs more quarters to judge with confidence.</li>
@@ -1760,11 +1770,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: "This analysis used $568.97, Meta's closing price on Aug 17, 2026." },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "10.8% needed vs. 4.3% free-cash-flow growth, but 14.3% revenue growth" },
+      { id: 'sensitivity', label: "From 8.4% to 17.0%: the discount-rate range (META)" },
+      { id: 'what-would-move-it', label: "What would change Meta's 10.8%" },
+      { id: 'show-your-work', label: "The math behind 10.8% (META)" },
+      { id: 'fine-print', label: "Limits of the META number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $568.97 (Aug 17, 2026 close)',
     tags: ['META', 'ReverseDCF', 'Valuation'],
@@ -1781,7 +1791,7 @@ export const POSTS: Post[] = [
   The market's ask (10.8%) is about 2.5 times Meta's actual four-year FCF growth rate. But revenue over the same period grew 14.3% a year, and operating income even faster — FCF alone looks weak specifically because AI data-center capex has surged. Whether the market's 10.8% ask is reasonable depends on how you read that gap.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">10.8% needed vs. 4.3% free-cash-flow growth, but 14.3% revenue growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (FCF, WACC 9%)</span><div class="track"><div class="fill" style="width:40%;background:var(--accent)"></div></div><span class="val">10.8%</span></div>
@@ -1792,7 +1802,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2023 and FY2025; the 10-year figure uses Facebook's Q4 2015 earnings release as the 2015 baseline.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 8.4% to 17.0%: the discount-rate range (META)</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -1806,14 +1816,14 @@ export const POSTS: Post[] = [
   </table>
 </div>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Meta's 10.8%</h2>
 <ul class="kicker-list">
   <li><b>Using FY2025's FCF alone ($46.1B)</b> instead of trailing-12-month ($48.25B) raises the required growth rate slightly, to about 11.4%.</li>
   <li><b>Meta's net cash position</b> (about $22.4B) makes enterprise value slightly lower than market cap, which nudges the required growth rate down a touch.</li>
   <li><b>The FCF base is the single biggest swing factor.</b> 2026 capex guidance already sits at $130–145B — meaning actual 2026 FCF could land well below the trailing-12-month figure used here, which would push the required growth rate higher than today's estimate.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 10.8% (META)</h2>
 <details class="methodology">
   <summary>Five inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -1827,7 +1837,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the META number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -1866,21 +1876,23 @@ export const POSTS: Post[] = [
       { q: "What is Amazon's market cap?", a: "As of this article's data, Amazon's market cap was over $3 trillion, on FY2025 revenue of $716.9B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Amazon makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Amazon sells and ships for others, and rents out computing" },
+      { id: 'revenue-mix', label: "AWS earns a 35.4% margin; North America earns 6.9%" },
+      { id: 'customers-competitors', label: "Shoppers, sellers, cloud customers and advertisers" },
+      { id: 'core-metric', label: "AWS is 18% of revenue and over half of operating income" },
+      { id: 'leadership', label: "Jassy built AWS, and Bezos stays on as Executive Chair" },
+      { id: 'capital-returns', label: "No dividend and no buybacks for three years" },
+      { id: 'failure-scenario', label: "What breaks Amazon: retail and AWS weaken together" },
+      { id: 'financials', label: "Revenue from $470B to $717B in four years" },
+      { id: 'unknowns', label: "Open questions: does the ~$200B AI investment pay off" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['AMZN', 'E-commerce', 'Cloud', '10-K'],
     publishedAt: '2026-08-19',
     contentHtml: `
-<h2 id="how-it-makes-money">How Amazon makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>AWS is 18% of Amazon's revenue but more than half of its operating income, so the company's profits depend on cloud demand that a very large AI investment is meant to extend.</div>
+
+<h2 id="how-it-makes-money">Amazon sells and ships for others, and rents out computing</h2>
 <p>Third-party sellers and brands supply products; Amazon's retail and fulfillment operation (North America + International) sells and ships them to consumers, who also pay for Prime membership. Advertisers pay separately to be seen in Amazon's marketplace. And enterprises and developers rent computing power and AI infrastructure from AWS, which runs at a 35% operating margin — high-margin cash that funds both retail investment and AI infrastructure (2026 capex is guided around $200B).</p>
 <div class="flow">
   <div class="flow-box"><div class="t">3rd-party sellers & brands</div><div class="d">Supply products</div></div>
@@ -1891,7 +1903,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Simplified — advertisers and AWS enterprise/developer customers are separate revenue streams alongside retail. Source: 10-K FY2025, p.3–4, p.27; Q2 FY2026 earnings call (Jul 30, 2026).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">AWS earns a 35.4% margin; North America earns 6.9%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -1921,7 +1933,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Reading the geography</b>About 32% of revenue comes from outside the U.S., so currency swings move results — 2025's favorable exchange rate added $4.4B to net sales, but that direction can flip year to year.</div>
 <p class="src-note">Source: 10-K FY2025, p.69 (Note 10 — Segment Information), p.24 (currency impact).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Shoppers, sellers, cloud customers and advertisers</h2>
 <p>Customers span consumers (B2C, Prime members), third-party sellers (who pay fees), enterprises and developers (who pay for AWS), and advertisers. No single customer dominates revenue — filings don't disclose any customer topping 10% (exact concentration figures aren't broken out).</p>
 <ul class="kicker-list">
   <li><b>Microsoft Azure, Google Cloud</b> — direct competitors to AWS in cloud and AI infrastructure.</li>
@@ -1930,7 +1942,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.3–4 (Item 1, Competition).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">AWS is 18% of revenue and over half of operating income</h2>
 <p>AWS generates only 18% of Amazon's revenue but more than half of its total operating income. Whether that gap narrows (retail profitability improving) or widens (deepening AWS dependence) is the clearest read on where Amazon's profit is really headed.</p>
 <div class="table-wrap">
   <table>
@@ -1944,15 +1956,15 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">*2022's figure exceeds 100% because North America and International combined posted an operating loss that year — AWS alone earned more than the company's total operating income. Source: 10-K FY2025 (2024–25), 10-K FY2024 (2023), 10-K FY2022 (2021–22), segment tables.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Jassy built AWS, and Bezos stays on as Executive Chair</h2>
 <p>Andy Jassy has been CEO since July 2021 — an internal executive who built AWS from the ground up. Founder Jeff Bezos stepped down as CEO in 2021 but remains involved as Executive Chair. Bezos, at 8.8%, is the largest individual shareholder (Jassy himself holds under 0.1%); Vanguard (7.2%) and BlackRock (5.9%) are the largest institutional holders.</p>
 <p class="src-note">Source: DEF 14A 2026, p.44–45; 10-K FY2025, p.5.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">No dividend and no buybacks for three years</h2>
 <p>Amazon has never paid a dividend. It approved a $10 billion buyback program in March 2022, but repurchased zero shares in 2023, 2024, and 2025 — three straight years — leaving $6.1B of that authorization untouched. Meanwhile, total shares plus RSUs outstanding actually rose from 10.8 billion (2023) to 11.0 billion (2025): dilution from employee compensation is running ahead of any offsetting buyback activity.</p>
 <p class="src-note">Source: 10-K FY2025, p.62 (Note 8, Stock Repurchase Activity).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Amazon: retail and AWS weaken together</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If people start buying faster or cheaper elsewhere, and enterprises start moving off AWS to other clouds at the same time, both of the profit engines holding Amazon up would dry up together.
@@ -1964,7 +1976,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.24–28 (FTC settlement, FCF), p.6–7 (Item 1A risk factors); Q2 FY2026 earnings call (Jul 30, 2026) for capex guidance.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue from $470B to $717B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -1983,7 +1995,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>Operating income rose from $68.6B to $80.0B between 2024 and 2025, while FCF fell sharply from $38.2B to $11.2B over the same period — AI infrastructure capex is growing far faster than operating cash flow, a stretch where profit is rising but the cash actually in hand is shrinking. Balance-sheet leverage stays modest: estimated net long-term debt/EBITDA is around 0.45x at year-end 2025.</div>
 <p class="src-note">Source: 10-K FY2025, p.28 (FCF reconciliation), p.36 (cash flow), p.39 (balance sheet); 10-K FY2022, p.28, p.39 (2021–2022 figures).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: does the ~$200B AI investment pay off</h2>
 <ul class="kicker-list">
   <li><b>Whether the ~$200B AI infrastructure investment pays off, and on what timeline</b>, isn't something these filings settle — AWS operating margin trends on upcoming earnings calls are the place to check.</li>
   <li><b>Today's exact share price and market cap</b> aren't in this card — the most recent confirmed figure is an Aug 3, 2026 close of $287.20, when Amazon's market cap crossed $3 trillion; anything since needs separate verification.</li>
@@ -2012,17 +2024,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Amazon's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual, 7 quarters' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Supply limits, tariffs, and a record rewritten with spending" },
+      { id: 'guidance-record', label: "Amazon's guidance vs. the next quarter's results" },
+      { id: 'timeline', label: "Timeline for Amazon: February 2024 to July 2026" },
+      { id: 'our-read', label: "Two wobbles, and guidance beaten anyway" },
+      { id: 'unknowns', label: "What Amazon's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['AMZN', 'AWS', 'AI Infrastructure', 'Earnings Calls'],
     publishedAt: '2026-08-19',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Supply limits, tariffs, and a record rewritten with spending</h2>
 <h3>Late 2023: riding the cost-cutting payoff</h3>
 <p>Q3 2023 operating income jumped 343% year over year. On the February 2024 earnings call, CEO Andy Jassy said: "2023 was a really good year for us, and we all believe it's just the beginning." AWS growth reaccelerated from 12% to 13%. Tone climbed steadily — 7, then 8, then 9 by Q1 2024 — and rising AI capex was openly framed as "a positive signal about future growth," not a burden.</p>
 <div class="quote">"2023 was a really good year for us, and we all believe it's just the beginning."<span class="attr">— Andy Jassy, CEO, Q4 2023 earnings call, Feb 2024</span></div>
@@ -2039,7 +2051,7 @@ export const POSTS: Post[] = [
 <h3>Where it stands now</h3>
 <p>From Q4 FY2025 through Q2 FY2026, AWS growth accelerated three straight quarters: 24% → 28% → 36.7%. Its backlog exploded in step: $244B → $364B → $496B. On the July 2026 call, Jassy called it "a boom" for AWS and floated the idea that it could someday be "a trillion-dollar-a-year business." Tone scores hit 8, 8, and 9 — three-year highs. But on that same call, 2026 cash capex guidance was raised again, from about $200B to about $220B — this time citing memory-price inflation as the reason, not demand.</p>
 
-<h2 id="guidance-record">Guidance vs. actual, 7 quarters</h2>
+<h2 id="guidance-record">Amazon's guidance vs. the next quarter's results</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue and operating income: guided vs. actual</caption>
@@ -2058,7 +2070,7 @@ export const POSTS: Post[] = [
 <p><strong>0 misses across all 7 confirmed quarter transitions.</strong> Revenue landed at or above the top of guidance every time, and operating income beat the high end every time, often by a wide margin. No guidance was ever cut or withdrawn across the full three-year record. That reads as either genuinely conservative planning executed well, or a deliberate practice of setting the bar low — either way, Amazon's numeric promises over the past three years have held up.</p>
 <p class="src-note">Source: forward guidance from each quarter's earnings call transcript, checked against the following quarter's reported results. Some quarter transitions were excluded where the exact guidance figures were missing from the transcripts reviewed.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Amazon: February 2024 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Feb 2024</span>Q4 2023 earnings: "just the beginning" declared; record profits.</li>
   <li class="crisis"><span class="date">Feb 2025</span>Q4 2024 earnings: AWS capacity constraints admitted for the first time; DeepSeek addressed defensively.</li>
@@ -2069,10 +2081,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026</span>Q2 2026 earnings: AWS "a boom," growth at 36.7% (an 18-quarter high); "trillion-dollar business" floated; capex raised to ~$220B, this time citing component costs rather than demand.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Two wobbles, and guidance beaten anyway</h2>
 <p>These three years took Amazon from a company that had just finished squeezing costs to protect margin, to one making its largest-ever bet on AI infrastructure. Confidence wavered at exactly two points — late-2024 supply constraints and DeepSeek, early-2025 tariff uncertainty — and recovered within a couple of quarters each time, all while guidance kept getting beaten. But the Q2 2026 comment attributing a capex increase to memory-price inflation, rather than demand, is a different kind of signal than anything said before. Whether that becomes a recurring theme is worth watching in future calls.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Amazon's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the memory-price-driven capex increase repeats in future quarters</b> isn't knowable yet.</li>
   <li><b>Whether new antitrust actions have emerged since the FTC settlement</b> can't be fully judged from this three-year 10-K comparison alone.</li>
@@ -2102,11 +2114,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: "This analysis used $262.65, Amazon's closing price on Aug 14, 2026, as of Aug 17, 2026." },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "27.1% needed vs. 11.1% revenue growth as free cash flow shrank" },
+      { id: 'sensitivity', label: "From 24.2% to 34.5%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Amazon's 27.1%" },
+      { id: 'show-your-work', label: "The math behind 27.1%" },
+      { id: 'fine-print', label: "Limits of the AMZN number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $262.65 (Aug 14, 2026 close)',
     tags: ['AMZN', 'ReverseDCF', 'Valuation'],
@@ -2123,7 +2135,7 @@ export const POSTS: Post[] = [
   Against 5-year revenue growth (11.1%), the market's ask (27%) looks like a stretch — more than double. But against 5-year operating income growth (33.9%), the ask actually reads closer to "just keep doing what you've been doing." Which comparison is fairer is the real question here.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">27.1% needed vs. 11.1% revenue growth as free cash flow shrank</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:80%;background:var(--accent)"></div></div><span class="val">27.1%</span></div>
@@ -2134,7 +2146,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs calculated directly from 10-K FY2021–FY2025. The 2-year FCF figure reflects an AI-capex-driven decline, not a business downturn.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 24.2% to 34.5%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -2148,14 +2160,14 @@ export const POSTS: Post[] = [
   </table>
 </div>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Amazon's 27.1%</h2>
 <ul class="kicker-list">
   <li><b>Which FCF base you use swings this dramatically.</b> The base case uses a 3-year average ($28.74B). Using 2025 alone ($11.2B) instead spikes the required growth rate to <strong>40.6%</strong>. Using the most recent trailing-12-month figure (as of Q1 2026, just $1.2B) pushes it to an implausible <strong>76.7%</strong> — suggesting the market is treating the recent capex surge as temporary rather than permanent.</li>
   <li><b>Lowering the discount rate to 8%</b> brings the required rate to 24.2%; raising it to 12% pushes it to 34.5%.</li>
   <li><b>Amazon's net cash position</b> (about $21.2B) modestly reduces the required growth rate versus a company carrying net debt.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 27.1%</h2>
 <details class="methodology">
   <summary>Five inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -2169,7 +2181,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the AMZN number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -2208,21 +2220,23 @@ export const POSTS: Post[] = [
       { q: 'How much of TSMC revenue comes from leading-edge chips?', a: 'About 74% of revenue comes from leading-edge process nodes (7nm and smaller) — the most advanced, highest-value manufacturing TSMC does.' },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How TSMC makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "TSMC builds the chips that other companies design" },
+      { id: 'revenue-mix', label: "AI and servers are now 58% of revenue" },
+      { id: 'customers-competitors', label: "Ten customers account for 78% of sales" },
+      { id: 'core-metric', label: "Leading-edge share shows whether the technology lead holds" },
+      { id: 'leadership', label: "C.C. Wei runs TSMC after founder Morris Chang's exit" },
+      { id: 'capital-returns', label: "A 20% dividend raise, but only a 0.78% yield" },
+      { id: 'failure-scenario', label: "What breaks TSMC: rivals close the gap or Taiwan tensions rise" },
+      { id: 'financials', label: "Revenue up 2.4x in four years" },
+      { id: 'unknowns', label: "Open questions: 2nm yields and the cost of overseas fabs" },
     ],
     sources: '20-F FY2025 · 6-K quarterly filings · Q2 FY2026 earnings call',
     tags: ['TSM', 'Semiconductors', 'Foundry', '20-F'],
     publishedAt: '2026-08-24',
     contentHtml: `
-<h2 id="how-it-makes-money">How TSMC makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>TSMC's edge is being the one company that reliably makes the most advanced chips, which is why AI demand flows through it. That lead, and Taiwan's geopolitical position, are the two things the business can't control.</div>
+
+<h2 id="how-it-makes-money">TSMC builds the chips that other companies design</h2>
 <p>TSMC sells no branded products of its own. Fabless companies like Apple, Nvidia, and AMD send it chip designs and pay a manufacturing fee; TSMC's fabs in Taiwan, the U.S., and Japan turn those designs into physical chips using 3nm and 5nm ultra-fine processes, producing more than 17 million wafers a year. Customers then sell the finished products — AI servers, smartphones, cars — and place more orders, often with upfront prepayment.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Fabless customers</div><div class="d">Apple, Nvidia, AMD<br>(design only)</div></div>
@@ -2235,7 +2249,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">TSMC sells no branded chips of its own — manufacturing only, on contract. This is the "foundry" model. Source: 20-F FY2025, p.1.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">AI and servers are now 58% of revenue</h2>
 <div class="datacard">
   <h3>Revenue by platform — 2025</h3>
   <div class="barlist">
@@ -2263,7 +2277,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Reading the geography</b>This reflects customer headquarters, not where chips actually end up being used. North America's rising 75% share reflects growing dependence on large U.S. AI chip designers — meaning direct exposure to U.S. tariff and export-control policy.</div>
 <p class="src-note">Source: 20-F FY2025, p.17.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Ten customers account for 78% of sales</h2>
 <p>TSMC's customer base is B2B and concentrated: the top 10 customers accounted for 78% of revenue in 2025, up from 70% in 2023. The #1 customer's share fell from 25% (2023) to 19% (2025) while the #2 customer's share rose from 11% to 17% — a shift consistent with market reports that Nvidia overtook Apple as TSMC's largest customer around 2025 (customer names aren't disclosed in filings).</p>
 <ul class="kicker-list">
   <li><b>Samsung Foundry</b> — the only other company attempting sub-3nm mass production, but reportedly trailing TSMC on yield.</li>
@@ -2272,7 +2286,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 20-F FY2025, p.8 (customer concentration); competitor detail reflects broadly known industry context, not company disclosure.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Leading-edge share shows whether the technology lead holds</h2>
 <p>Foundries can keep selling older process nodes for years, so revenue and profit alone can mask a slowdown in technology leadership. The share of revenue coming from leading-edge (7nm or smaller) chips is the clearest read on whether TSMC is actually staying ahead.</p>
 <div class="table-wrap">
   <table>
@@ -2284,15 +2298,15 @@ export const POSTS: Post[] = [
 <p>The 2025 figure breaks down as 3nm (24%) + 5nm (36%) + 7nm (14%).</p>
 <p class="src-note">Source: 20-F FY2025, p.27.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">C.C. Wei runs TSMC after founder Morris Chang's exit</h2>
 <p>C.C. Wei has been CEO since 2018 and added the Chairman role in June 2024, having joined the company in 1998. He holds a PhD in electrical engineering from Yale. Founder Morris Chang fully retired in 2018 and is no longer involved in management. The largest shareholder is Taiwan's government-backed National Development Fund, at 6.38%; all directors and officers combined hold just 0.23%.</p>
 <p class="src-note">Source: 20-F FY2025, p.38, p.55 (as of Feb 28, 2026).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A 20% dividend raise, but only a 0.78% yield</h2>
 <p>The quarterly dividend rose from NT$5.00 to NT$6.00 in the second half of 2025, a 20% increase — but the dividend yield is still just 0.78% at current prices, since TSMC prioritizes reinvestment over shareholder payouts. The payout ratio has actually been falling — 34.3% (2023) → 31.4% (2024) → 27.5% (2025) — as profit grows faster than the dividend. Buybacks are negligible: NT$3.1 billion in 2025, under 0.2% of NT$1.7 trillion in net income.</p>
 <p class="src-note">Source: 20-F FY2025, p.9 (dividends); payout ratio calculated from cash flow statement, p.F-11–F-12.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks TSMC: rivals close the gap or Taiwan tensions rise</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   TSMC's only real weapon is reliably mass-producing the most advanced chips in the world. If Samsung or Intel actually close that technology gap, or if tensions in the Taiwan Strait escalate into real conflict, the entire global AI, smartphone, and automotive chip supply chain would break at once.
@@ -2304,7 +2318,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 20-F FY2025, p.4–5 (geopolitical risk), p.8 (customer concentration); Q2 FY2026 earnings call for capex guidance.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 2.4x in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>NT$ billions, calendar years</caption>
@@ -2323,7 +2337,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>The gap between operating income (NT$1.94T) and free cash flow (NT$1.00T) reflects aggressive ongoing capex — 33% of 2025 revenue — not an accounting-quality problem. It's the classic pattern of a growth company earning heavily now and reinvesting straight into the next process node. Net cash position stands at NT$1.73T (NT$2.77T cash against NT$1.03T long-term debt) — solvency isn't a concern.</div>
 <p class="src-note">Source: 20-F FY2025, p.F-6, p.F-10–F-11; 20-F FY2023, p.F-5 (2021–2022 comparatives). 2023 was the only down year, driven by a broad semiconductor down-cycle.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: 2nm yields and the cost of overseas fabs</h2>
 <ul class="kicker-list">
   <li><b>The actual yield and customer adoption pace of the 2nm (N2) process</b> isn't disclosed here — the next earnings call is the place to check.</li>
   <li><b>How much more expensive overseas fabs (like those in Arizona) are compared to Taiwan production</b> isn't broken out, since there's no segment-level disclosure by geography.</li>
@@ -2352,17 +2366,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from TSMC's 20-F filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual, 9 quarters' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "AI overtook smartphones in 2022, and TSMC's self-description got quieter" },
+      { id: 'guidance-record', label: "TSMC's CFO guidance vs. the next quarter's results" },
+      { id: 'timeline', label: "Timeline: the 2022 mix flip to mid-2026" },
+      { id: 'our-read', label: "Cautious words, aggressive spending" },
+      { id: 'unknowns', label: "What TSMC's calls still don't answer" },
     ],
     sources: '20-F FY2021–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['TSM', 'Semiconductors', 'AI Infrastructure', 'Earnings Calls'],
     publishedAt: '2026-08-24',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">AI overtook smartphones in 2022, and TSMC's self-description got quieter</h2>
 <h3>2022–2023: the year the mix flipped</h3>
 <p>In October 2023, management cited "continued macroeconomic weakness and a slow China demand recovery" leading customers to be cautious about inventory — and 2023 revenue did fall 4.5% year over year. At that point, the 20-F's opening description still confidently stated: "we have possessed the largest capacity among the world's dedicated foundries." The real shift, though, traces back a year earlier: in 2022, HPC (high-performance computing) revenue share first overtook smartphone revenue (41% vs. 39%) — reversing a company that in 2019 was 49% smartphone versus 30% HPC. That gap only widened: 51%/35% in 2024, 58%/29% in 2025.</p>
 
@@ -2377,7 +2391,7 @@ export const POSTS: Post[] = [
 <div class="quote">"I'm also very nervous about it... [but] the AI is real, not only real, it's starting to grow into our daily life... it looks like it's going to be like an endless... for many years to come."<span class="attr">— C.C. Wei, Chairman & CEO, Q4 FY2025 earnings call, Jan 15, 2026</span></div>
 <p>For five straight quarters (Q2 FY2025 through Q2 FY2026), the company has explicitly stated on its earnings calls that results came in "slightly ahead of guidance."</p>
 
-<h2 id="guidance-record">Guidance vs. actual, 9 quarters</h2>
+<h2 id="guidance-record">TSMC's CFO guidance vs. the next quarter's results</h2>
 <div class="table-wrap">
   <table>
     <caption>Quarter-over-quarter revenue: guided vs. actual</caption>
@@ -2398,7 +2412,7 @@ export const POSTS: Post[] = [
 <p><strong>9 of 9 confirmed quarters beaten (100%).</strong> Starting Q2 FY2025, the company began explicitly stating on each call that it had "slightly exceeded" its own guidance — reading like textbook conservative-guidance practice.</p>
 <p class="src-note">Source: CFO guidance commentary on each earnings call, checked against the following quarter's reported results.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: the 2022 mix flip to mid-2026</h2>
 <ul class="timeline">
   <li><span class="date">2022</span>HPC revenue share overtakes smartphone for the first time (41% vs. 39%) — never reverses.</li>
   <li class="crisis"><span class="date">H2 2023</span>Semiconductor down-cycle; prolonged inventory correction. Full-year revenue falls 4.5% — the first decline since 2019.</li>
@@ -2408,10 +2422,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Apr–Jul 2026</span>Capex guidance raised twice more ($56B "high end" → $60–64B); "agentic AI" cited as a new source of demand.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Cautious words, aggressive spending</h2>
 <p>TSMC appears to have set aside a hard-to-verify boast — "we're the biggest" — in favor of a narrower but more provable one: "we're the most advanced, and we'll keep proving it with numbers." The recurring pattern of slightly beating its own guidance every quarter reads like a deliberate strategy: manage expectations while steadily building credibility.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What TSMC's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether management's "AI is real" conviction holds up past 2027</b> isn't something these filings settle — whether the same question keeps being asked on future calls will be the signal to watch.</li>
   <li><b>Exactly why "world's largest" was dropped at this specific moment</b> — legal caution, or an increasingly ambiguous capacity comparison with Samsung — is our interpretation, not a confirmed fact; the company has never explained it directly.</li>
@@ -2440,11 +2454,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $407.38 per ADS, as of Aug 24, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "28.5% needed vs. 34.2% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 23.1% to 33.3%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change TSMC's 28.5%" },
+      { id: 'show-your-work', label: "The math behind 28.5%" },
+      { id: 'fine-print', label: "Limits of the TSM number" },
     ],
     sources: 'As of Aug 24, 2026 · Price used: $407.38 (per ADS)',
     tags: ['TSM', 'ReverseDCF', 'Valuation'],
@@ -2461,7 +2475,7 @@ export const POSTS: Post[] = [
   Unlike companies where the market's ask far outpaces history, TSMC's case is close to neutral — the required growth rate (28.5%) sits modestly below its actual five-year pace (34.2%). This isn't a signal to buy or sell; it just means the bar here is "keep executing," not "accelerate."
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">28.5% needed vs. 34.2% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:83%;background:var(--accent)"></div></div><span class="val">28.5%</span></div>
@@ -2472,7 +2486,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 20-F FY2021, FY2023, and FY2025 (USD-converted). Management's guidance: C.C. Wei, Q4 FY2025 earnings call, Jan 15, 2026.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate or FCF base moves?</h2>
+<h2 id="sensitivity">From 23.1% to 33.3%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -2486,13 +2500,13 @@ export const POSTS: Post[] = [
 </div>
 <p>At a lower discount rate (8%), the required rate falls to around 23% — close to the 5-year revenue CAGR (20.7%). At a higher one (12%), it climbs to around 33% — nearly matching the 5-year FCF CAGR (34.2%). The "cheap or expensive" conclusion here depends heavily on a single assumption.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change TSMC's 28.5%</h2>
 <ul class="kicker-list">
   <li><b>Switching from a 3-year average FCF ($22.68B) to 2025 alone ($31.96B)</b> lowers the required growth rate from 28.5% to 23.7% at a 10% discount rate. 2023 was a down-cycle year that drags the 3-year average down — so which base you choose flips the read between "the market is asking for less than TSMC's recent pace" and "the market is asking for the same pace."</li>
   <li><b>TSMC's net cash position</b> (about $55.3B) modestly reduces the required growth rate relative to a company with net debt.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 28.5%</h2>
 <details class="methodology">
   <summary>Five inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -2508,7 +2522,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the TSM number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -2547,21 +2561,23 @@ export const POSTS: Post[] = [
       { q: "What is JPMorgan's market cap?", a: "As of this article's data, JPMorgan's market cap was about $959.5B, with a P/E ratio of roughly 15.5x." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How JPMorgan makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "JPMorgan lends out deposits and earns fees on the side" },
+      { id: 'revenue-mix', label: "The Commercial & Investment Bank is 42.3% of revenue" },
+      { id: 'customers-competitors', label: "Individuals, corporations and governments" },
+      { id: 'core-metric', label: "Net interest margin and charge-offs: the two numbers that matter" },
+      { id: 'leadership', label: "Dimon: nearly 20 years as CEO, and not a founder" },
+      { id: 'capital-returns', label: "Buybacks tripled to $31.6B while the dividend rose to $5.80" },
+      { id: 'failure-scenario', label: "What breaks JPMorgan: a deep recession plus a major regulatory failure" },
+      { id: 'financials', label: "How to read a bank's five-year table" },
+      { id: 'unknowns', label: "Open questions: Q3 2026 results and international exposure" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A 2026',
     tags: ['JPM', 'Banking', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How JPMorgan makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>JPMorgan is the bank others are measured against, and its buybacks have tripled since 2023. Its results still ride on the credit cycle and on capital rules that regulators can change.</div>
+
+<h2 id="how-it-makes-money">JPMorgan lends out deposits and earns fees on the side</h2>
 <p>Depositors and small businesses hand JPMorgan their cash; the bank lends much of it back out as mortgages, credit cards, and business loans, pocketing the spread between what it pays depositors and what it charges borrowers. Separately, large corporations, institutions, and wealthy individuals pay the bank fees to underwrite stock and bond deals, trade securities, and manage their money — a business built on advice and execution rather than interest spread.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Depositors, individuals & small businesses</div><div class="d">Deposits, loans, cards</div></div>
@@ -2572,7 +2588,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Large corporations, institutions, and high-net-worth clients feed the CIB and AWM segments through a parallel path (advisory fees, trading, asset management) not shown above for simplicity. Source: 10-K FY2025, p.63–64 (Segment & Corporate Results, managed basis).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">The Commercial & Investment Bank is 42.3% of revenue</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025 (managed basis)</caption>
@@ -2601,7 +2617,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Not disclosed company-wide</b>JPMorgan doesn't publish a firm-wide regional revenue split — the table above covers CIB only. CCB and AWM don't disclose regional breakdowns at all.</div>
 <p class="src-note">Source: 10-K FY2025, p.74 (International metrics).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Individuals, corporations and governments</h2>
 <p>Customers span individuals and small businesses (CCB), large corporations, institutions, and governments (CIB), and wealthy individuals (AWM) — a base broad enough that the bank doesn't disclose customer-concentration figures the way most companies do; with millions of consumer accounts and tens of thousands of institutional relationships, that concentration risk is presumed low rather than measured.</p>
 <ul class="kicker-list">
   <li><b>Bank of America</b> — the most direct rival across consumer and commercial banking.</li>
@@ -2610,7 +2626,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Note: JPMorgan's 10-K doesn't name specific competitors by segment — this list reflects broadly known industry context.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Net interest margin and charge-offs: the two numbers that matter</h2>
 <p>For a bank, two numbers tell you whether the core lending business is healthy: the spread it earns on loans (net interest margin) and the share of loans it never gets back (charge-off rate). Both have been quietly moving the wrong way even as headline profit hit records.</p>
 <div class="table-wrap">
   <table>
@@ -2625,11 +2641,11 @@ export const POSTS: Post[] = [
 <p>Net interest margin peaked in 2023 as rates rose, then has edged down for two straight years; the charge-off rate has more than doubled since 2022 as credit costs normalize off unusually low pandemic-era lows.</p>
 <p class="src-note">Source: 10-K FY2021–FY2025, Executive Overview and Three-Year Summary tables (FY2025 10-K, p.44, p.47).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Dimon: nearly 20 years as CEO, and not a founder</h2>
 <p>James Dimon, 69, has been CEO since December 2005 and Chairman since December 2006 — nearly 20 years at the helm. He isn't a founder; JPMorgan Chase is the product of decades of bank mergers, and Dimon joined via the 2004 Bank One merger. All 21 executive officers and directors together own under 1% of shares outstanding (about 11.09 million shares). The largest shareholders are institutional: Vanguard Group (9.86%) and BlackRock (7.15%).</p>
 <p class="src-note">Source: 10-K FY2025, p.36 (Executive officers); DEF 14A 2026, p.75–76 (Security ownership).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Buybacks tripled to $31.6B while the dividend rose to $5.80</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th></th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
@@ -2644,7 +2660,7 @@ export const POSTS: Post[] = [
 <p>The dividend has risen every year since 2021 ($3.80 → $5.80), and buybacks have more than tripled in three years. Shares outstanding actually fell 8.4% from 2021 (2,944.1M) to 2025 (2,696.2M) — real reduction, not just an offset to employee stock issuance.</p>
 <p class="src-note">Source: 10-K FY2025, p.44, p.97 (Capital actions).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks JPMorgan: a deep recession plus a major regulatory failure</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   A severe recession or financial crisis that leaves large numbers of borrowers unable to repay, combined with a major regulatory violation carrying heavy fines or restrictions, would hit JPMorgan's entire profit base at once.
@@ -2656,7 +2672,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.9–12 (Item 1A Risk Factors Summary), p.44 footnotes (e)(f).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">How to read a bank's five-year table</h2>
 <div class="callout warn">
   <b>Why this table looks different from a typical company's</b>
   Banks don't have "free cash flow" or "debt" in the usual sense — deposits are simultaneously a liability and the raw material for lending. The table below substitutes <b>net income</b> (the closest equivalent to cash actually retained) and <b>long-term debt</b> (a funding tool, not a repayment burden in the ordinary sense).
@@ -2678,7 +2694,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>Pre-provision profit climbed steadily every year, but net income moved less smoothly because credit-loss provisions swing more sharply — 2025's provisions rose 33% year over year (partly the $2.2B Apple Card charge), trimming net income slightly (-2.4%) even as the underlying business kept growing.</div>
 <p class="src-note">Source: 10-K FY2025 p.44, 10-K FY2022 p.44 (five-year data combined).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: Q3 2026 results and international exposure</h2>
 <ul class="kicker-list">
   <li><b>Q3 2026 results and forward guidance</b> aren't covered here — check the next quarterly earnings call.</li>
   <li><b>Firm-wide international revenue exposure</b> isn't disclosed; only the CIB segment reports a regional breakdown, so exact currency and geopolitical exposure can't be fully measured from this data alone.</li>
@@ -2707,17 +2723,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from JPMorgan's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual results' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Basel III fear, a tariff-shock dip, then a record quarter" },
+      { id: 'guidance-record', label: "JPMorgan's CFO commentary vs. reported results" },
+      { id: 'timeline', label: "Timeline for JPMorgan Chase: October 2023 to July 2026" },
+      { id: 'our-read', label: "Reading JPMorgan: fear that faded fast" },
+      { id: 'unknowns', label: "What JPMorgan's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['JPM', 'Earnings Calls', 'Banking Regulation'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Basel III fear, a tariff-shock dip, then a record quarter</h2>
 <h3>Fall 2023: a good acquisition, a scary new rule</h3>
 <p>In October 2023, JPMorgan was digesting two very different events. Earlier that May, it had picked up the failed First Republic Bank from the FDIC, absorbing quality assets cheaply enough to book a $2.8 billion bargain-purchase gain. But the same quarter's earnings call was dominated by something else: the newly proposed "Basel III Endgame" capital rules. The CFO warned that if finalized as proposed, the rule would raise capital requirements 45% above 2017 levels, and said buyback pace would "remain modest for now" while the uncertainty lasted. It did — buybacks that year totaled just $9.9 billion, low by the bank's later standards.</p>
 
@@ -2740,7 +2756,7 @@ export const POSTS: Post[] = [
   A regulatory fear that never fully materialized freed up capital that then flowed almost entirely into shareholder returns rather than growth investment — while underneath the headline profit numbers, net interest margin and credit costs have been quietly worsening for two straight years.
 </div>
 
-<h2 id="guidance-record">Guidance vs. actual results</h2>
+<h2 id="guidance-record">JPMorgan's CFO commentary vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>Net interest income and expense guidance vs. actual</caption>
@@ -2756,7 +2772,7 @@ export const POSTS: Post[] = [
 <p><strong>4 of 4 confirmed guidance figures beaten.</strong> The pattern is a textbook "conservative guide, then beat" — though the FY2024 beat (+5%) was noticeably wider than FY2025's (+2.9%), consistent with the slow net-interest-margin compression visible in the five-year financials.</p>
 <p class="src-note">Source: CFO commentary on Q4 FY2023–Q2 FY2026 earnings calls, checked against 10-K FY2024 and FY2025 (p.44, Three-Year Summary).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for JPMorgan Chase: October 2023 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023</span>Q3 2023 earnings: Basel III Endgame fear peaks (13 mentions); First Republic integration underway; buybacks kept deliberately modest.</li>
   <li><span class="date">2024</span>Basel mentions fade to near zero; NII guidance raised repeatedly through the year, finishing about 5% above the initial figure.</li>
@@ -2765,10 +2781,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026</span>Q2 2026 earnings: "strong" mentioned 19 times (a three-year high); record-tone quarter; quarterly dividend raised to $1.65; buybacks more than tripled versus 2023.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Reading JPMorgan: fear that faded fast</h2>
 <p>The real arc of these three years is a fear that dissolved rather than one that was overcome. Basel III Endgame never got finalized anywhere near its harshest proposed form, and the political backdrop shifted enough that the risk simply faded from view. The April 2025 tariff wobble was real but brief — a one-quarter scare, not a multi-quarter retreat. What's easy to miss under the record profit headlines is that both core banking metrics — net interest margin and the charge-off rate — have moved modestly in the wrong direction since 2023, even as capital freed from a regulatory fear that never landed has flowed almost entirely into buybacks and a rising dividend rather than into loan growth.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What JPMorgan's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The confirmed FY2025 card net charge-off rate</b> isn't fully verified in this pass — it needs the detailed 10-K note tables, not just the summary figures used here.</li>
   <li><b>Whether 2026's full-year NII and expense guidance is ultimately beaten</b> can't be judged until the FY2026 10-K is filed.</li>
@@ -2799,17 +2815,17 @@ export const POSTS: Post[] = [
     ],
     toc: [
       { id: 'bank-adaptation', label: 'Why this model looks different for a bank' },
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "3.4% needed vs. 14.4% actual net-income growth" },
+      { id: 'sensitivity', label: "From 1.2% to 9.0%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change JPMorgan's 3.4%" },
+      { id: 'show-your-work', label: "The math behind 3.4%" },
+      { id: 'fine-print', label: "Limits of the JPM number" },
     ],
     sources: 'As of Aug 18, 2026 · Price used: $360.84',
     tags: ['JPM', 'ReverseDCF', 'Valuation'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<div class="callout warn">
+<div class="callout warn" id="bank-adaptation">
   <b>Bank-model adjustment</b>
   A standard reverse DCF leans on "free cash flow" and "net debt" — concepts that don't translate cleanly to a bank, where deposits are the raw material for lending, not a debt to be subtracted. This card substitutes <b>net income</b> as the cash-flow proxy and skips the net-debt subtraction entirely — closer to a dividend-discount-style model. Every input and the full calculation are in the collapsible section below.
 </div>
@@ -2825,7 +2841,7 @@ export const POSTS: Post[] = [
   The gap here runs the opposite direction from a typical high-flying growth stock: JPMorgan's price implies a growth rate less than a quarter of its actual five-year pace. That's worth investigating — either the market doubts 14.4% growth is repeatable, or the stock is being priced conservatively for other reasons (rate cycle risk, credit-cost normalization, regulatory overhang).
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">3.4% needed vs. 14.4% actual net-income growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:24%;background:var(--accent)"></div></div><span class="val">3.4%</span></div>
@@ -2835,7 +2851,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs: 10-K FY2022, p.44 (2020 net income $29,131M) and 10-K FY2025, p.44 (2025 net income $57,048M).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate or income base moves?</h2>
+<h2 id="sensitivity">From 1.2% to 9.0%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year net-income growth by discount rate (WACC)</caption>
@@ -2850,14 +2866,14 @@ export const POSTS: Post[] = [
 </div>
 <p>At the base 9% discount rate, using the more recent trailing-twelve-month net income ($60.8B) instead of FY2025's audited figure ($57.0B) lowers the required growth rate from 3.35% to 2.51% — the better the recent results, the less future growth the market needs to assume. At a 12% discount rate, the required rate rises to nearly 9%, closer to the five-year revenue CAGR (8.8%).</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change JPMorgan's 3.4%</h2>
 <ul class="kicker-list">
   <li><b>Switching from FY2025 net income ($57.0B) to trailing-twelve-month net income ($60.8B)</b> lowers the required growth rate from 3.35% to 2.51% at a 9% discount rate.</li>
   <li><b>The 14.4% historical net-income CAGR isn't a clean baseline</b> — it includes 2021 reserve releases (post-pandemic outlook improvement) and 2023's $2.8B First Republic bargain-purchase gain, both one-time boosts unlikely to repeat on a predictable schedule.</li>
   <li><b>A more conservative 12% discount rate</b> pushes the required growth rate to nearly 9% — close to the five-year revenue CAGR, which would put the valuation closer to "priced for steady-state growth" territory.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 3.4%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -2875,7 +2891,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Normalization check:</strong> the three-year (2023–2025) average net income is $55.02B. FY2025 ($57.05B) is +3.7% above that average, and TTM ($60.8B) is +10.5% above it — both within the ±40% normalization threshold, so no adjustment was applied to either base case.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the JPM number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -2915,21 +2931,23 @@ export const POSTS: Post[] = [
       { q: "What is UnitedHealth's market cap?", a: "As of this article's data, UnitedHealth's market cap was about $358.4B, on FY2025 revenue of $447.6B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How UnitedHealth makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "UnitedHealth insures people and also owns the care they use" },
+      { id: 'revenue-mix', label: "Insurance is $344.9B of revenue at a 2.7% margin" },
+      { id: 'customers-competitors', label: "Medicare is 44% of premium revenue" },
+      { id: 'core-metric', label: "The medical care ratio: how much of each premium is paid back out" },
+      { id: 'leadership', label: "Hemsley returned in 2025 for a second stint as CEO" },
+      { id: 'capital-returns', label: "A 2.35% yield after 16 straight years of dividend increases" },
+      { id: 'failure-scenario', label: "What breaks UnitedHealth: Medicare rates lag costs during a criminal probe" },
+      { id: 'financials', label: "Revenue from $288B to $448B in four years" },
+      { id: 'unknowns', label: "Open questions: the guidance restart and the DOJ investigation" },
     ],
     sources: '10-K FY2021, FY2023–FY2025 · Web search',
     tags: ['UNH', 'Healthcare', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How UnitedHealth makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>UnitedHealth's scale and its Optum businesses give it several ways to earn on the same patient, but Medicare pays 44% of premiums and reimbursement is set by the government. That is where the pressure is.</div>
+
+<h2 id="how-it-makes-money">UnitedHealth insures people and also owns the care they use</h2>
 <p>Governments, employers, and individuals pay UnitedHealthcare premiums to cover their medical costs. But a large share of what gets paid out doesn't leave the company: those same members' prescriptions get filled by Optum Rx, their care is often delivered by Optum Health's own clinics and physicians, and their claims are processed using Optum Insight's data and administrative services — so a meaningful portion of every premium dollar flows straight back into the same corporate family.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Government (CMS), employers, individuals</div><div class="d">Pay premiums</div></div>
@@ -2940,7 +2958,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Optum bills UnitedHealthcare for the care, drugs, and services it provides to the same members — completing the loop back into premium costs. Source: 10-K FY2025, p.1–3 (Business Overview).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Insurance is $344.9B of revenue at a 2.7% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -2957,7 +2975,7 @@ export const POSTS: Post[] = [
 <p class="src-note">Segment revenues include intercompany billing between Optum and UnitedHealthcare, so the four segments sum to more than the consolidated total — that's normal accounting, not an error. Source: 10-K FY2025, p.70–71 (Note 15, Segment Financial Information).</p>
 <div class="callout warn"><b>Regional breakdown not disclosed</b>UnitedHealth doesn't publish revenue by country. But 44% of 2025 premium revenue came from the U.S. government (CMS) alone, suggesting the business is overwhelmingly domestic.</div>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Medicare is 44% of premium revenue</h2>
 <p>The end user is an individual member, but the entity actually paying is often the U.S. government: CMS (Medicare) accounted for 44% of premium revenue in 2025, up from 40% in both 2024 and 2023 — an unusually concentrated payer relationship for a company this size.</p>
 <ul class="kicker-list">
   <li><b>CVS Health (Aetna)</b> — the closest structural match: an insurer (Aetna) paired with a pharmacy benefit manager (Caremark) and retail pharmacy stores.</li>
@@ -2966,7 +2984,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.70 (CMS concentration).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">The medical care ratio: how much of each premium is paid back out</h2>
 <p>The medical care ratio (MCR) shows what share of every premium dollar goes straight back out as medical costs. A rising MCR means less is left over for the insurer — and it's been rising steadily.</p>
 <div class="table-wrap">
   <table>
@@ -2978,11 +2996,11 @@ export const POSTS: Post[] = [
 <p>A secondary warning sign sits inside Optum Health, which takes on fixed-payment "value-based care" contracts: its operating margin swung from +7.4% in 2024 to -0.3% in 2025 — a sign that cost management on those contracts is currently losing ground, not gaining it.</p>
 <p class="src-note">Source: 10-K FY2025, p.27 (MCR, 2023–2025), p.71 (Optum Health margin); 10-K FY2021, p.27 (2021 MCR).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Hemsley returned in 2025 for a second stint as CEO</h2>
 <p>CEO Stephen J. Hemsley previously ran the company from 2006 to 2017 and returned in May 2025 after Andrew Witty stepped down for personal reasons — an unusual second stint rather than a fresh outside hire. The company's 1977 founders, including Richard Burke, are no longer involved. Insider ownership percentages aren't broken out in the 10-K (proxy-statement confirmation needed).</p>
 <p class="src-note">Source: web search — Healthcare Dive (CEO transition report).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A 2.35% yield after 16 straight years of dividend increases</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th></th><th>Value</th></tr></thead>
@@ -2997,7 +3015,7 @@ export const POSTS: Post[] = [
 <p>Buyback spending has actually fallen — $8,000M (2023) → $9,000M (2024) → $5,545M (2025) — but diluted shares outstanding still dropped 2.9% (938M → 911M) over the same period, meaning the smaller buybacks are still outpacing new share issuance from employee compensation.</p>
 <p class="src-note">Source: web search — stockanalysis.com (dividend data, Aug 2026); 10-K FY2025, p.44 (cash flow), p.30 (share counts).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks UnitedHealth: Medicare rates lag costs during a criminal probe</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the U.S. government keeps Medicare reimbursement rates growing slower than actual medical costs while simultaneously pursuing a criminal investigation into billing practices, the company loses money on the government business it depends on most — and its credibility with regulators at the same time.
@@ -3009,7 +3027,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.26–28; web search — CNBC (DOJ investigation report).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue from $288B to $448B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -3026,7 +3044,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2025 revenue rose 11.8%, but operating income fell 41% and margin was cut nearly in half (8.1% → 4.2%). Free cash flow has now declined for two straight years, from a 2023 peak of $25.7B to $16.1B — while total debt has grown 70% since 2021. Net debt/EBITDA jumped from roughly 1.4x (2024) to 2.3x (2025): profit is shrinking at the same time leverage is rising.</div>
 <p class="src-note">Source: 10-K FY2025, p.27 (revenue/operating income 2023–2025), p.40 (debt 2024–2025), p.44 (cash flow); 10-K FY2023, p.25, p.37 (2021–2022 figures); 10-K FY2021, p.40.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the guidance restart and the DOJ investigation</h2>
 <ul class="kicker-list">
   <li><b>When the guidance suspended in May 2025 will resume in full</b> isn't disclosed in these filings — check the most recent earnings call.</li>
   <li><b>The scope and likely outcome of the DOJ criminal investigation</b> aren't addressed anywhere in the company's public disclosures.</li>
@@ -3055,17 +3073,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from UnitedHealth's 10-K filings for FY2021 and FY2023 through FY2025, plus 8 quarters of earnings call transcripts from January 2024 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "From promising 13-16% growth to a CEO change in 2025" },
+      { id: 'guidance-record', label: "Guidance cut twice, withdrawn, then reset about 46% lower" },
+      { id: 'timeline', label: "Timeline: January 2024 to July 2026" },
+      { id: 'our-read', label: "Beating a much lower bar" },
+      { id: 'unknowns', label: "What UnitedHealth's calls still don't answer" },
     ],
     sources: '10-K FY2021, FY2023–FY2025 · 8 quarters of earnings call transcripts, Jan 2024–Jul 2026',
     tags: ['UNH', 'Earnings Calls', 'Healthcare Policy'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">From promising 13-16% growth to a CEO change in 2025</h2>
 <h3>January 2024: total confidence</h3>
 <p>On the Q4 FY2023 earnings call, CEO Andrew Witty called 2023 "the year of balanced, sustainable growth" and reaffirmed a long-term target of 13–16% annual adjusted EPS growth. Nine months later, on the October 2024 call, he stood by that framing even through a Medicare rate cut and the February 2024 Change Healthcare cyberattack, saying the company could "still finish within the guidance range we first gave in November 2023" and that management remained "highly optimistic for the future." The FY2023 10-K's own language matched the mood: "diluted earnings per share increased 13% to $23.86."</p>
 <div class="quote">"2023 marked the year of balanced, sustainable growth."<span class="attr">— Andrew Witty, CEO, Q4 FY2023 earnings call, Jan 12, 2024</span></div>
@@ -3088,7 +3106,7 @@ export const POSTS: Post[] = [
   On three straight calls in 2025 (Q2, Q3, Q4) and again in Q2 FY2026, analysts kept asking how the original "10% medical-cost trend" assumption compared with the new guidance — the same question, asked repeatedly, is usually a sign the market hasn't fully bought into the new numbers yet.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Guidance cut twice, withdrawn, then reset about 46% lower</h2>
 <div class="table-wrap">
   <table>
     <caption>FY2025–FY2026 adjusted EPS guidance, in order</caption>
@@ -3108,7 +3126,7 @@ export const POSTS: Post[] = [
 <p>Against the original December 2024 promise, actual FY2025 results ($16.35) missed by 45%. But against the far more conservative target reset after the crisis, the company slightly exceeded its own bar — and has repeated a similar "issue guidance, then raise it mid-year" pattern in FY2026. The pattern reads as: lower the bar sharply, then rebuild credibility within the new, lower range.</p>
 <p class="src-note">Source: SEC 8-K investor guidance filing (Dec 3, 2024); Q4 FY2024, Q1 FY2025, Q2 FY2025, Q4 FY2025, and Q2 FY2026 earnings calls.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: January 2024 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Jan 12, 2024</span>Q4 2023 earnings: "the year of balanced, sustainable growth"; 13–16% long-term growth target reaffirmed.</li>
   <li class="crisis"><span class="date">Feb 2024</span>Change Healthcare cyberattack — 10-K mentions jump from 1 to 13 the following year.</li>
@@ -3121,10 +3139,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 16, 2026</span>FY2026 guidance raised to $19.50–$20.00; buyback plan expanded past $5B.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Beating a much lower bar</h2>
 <p>The clearest way to read this is a company rebuilding trust by keeping deliberately lowered promises rather than by returning to its old ones. After missing badly against its original 2025 target, UnitedHealth set a far more conservative bar and has now cleared it twice — first for FY2025, then with an early FY2026 raise following the same "issue low, then raise" pattern. Whether that reflects genuine operational recovery or simply an easier bar to clear is something only the next two or three quarters can really answer.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What UnitedHealth's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The actual status and likely conclusion of the 2025 DOJ criminal investigation</b> isn't disclosed anywhere in the company's filings or earnings calls.</li>
   <li><b>Whether slightly beating the reset "at least $16" target reflects real business normalization or simply a conveniently lowered bar</b> needs more of 2026 and 2027's results to judge.</li>
@@ -3153,11 +3171,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $395.62, as of Aug 17, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "5.6% needed vs. 13.6% growth before the crisis, but -5.2% including it" },
+      { id: 'sensitivity', label: "From 1.4% to 9.2%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change UnitedHealth's 5.6%" },
+      { id: 'show-your-work', label: "The math behind 5.6%" },
+      { id: 'fine-print', label: "Limits of the UNH number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $395.62',
     tags: ['UNH', 'ReverseDCF', 'Valuation'],
@@ -3174,7 +3192,7 @@ export const POSTS: Post[] = [
   This price doesn't require UnitedHealth to return to its 2021–2023 growth pace (13.6%) — only a modest 5.6% annual climb. But it does assume the 2025 crisis doesn't repeat. Whether that assumption holds is exactly the question worth digging into next.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">5.6% needed vs. 13.6% growth before the crisis, but -5.2% including it</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:41%;background:var(--accent)"></div></div><span class="val">5.6%</span></div>
@@ -3185,7 +3203,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. FCF = operating cash flow − capital expenditures. Pre-crisis CAGR: 2021 FCF ($19,889M) to 2023 peak ($25,682M). Five-year CAGR: 2021 FCF ($19,889M) to 2025 ($16,075M). Revenue CAGR: 2021 ($287,597M) to 2025 ($447,567M). Source: 10-K FY2025, p.27, p.44; 10-K FY2021, p.27, p.43.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 1.4% to 9.2%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -3200,14 +3218,14 @@ export const POSTS: Post[] = [
 </div>
 <p>UnitedHealth is classified as a large, stable company (market cap over $350B), giving it a base-case WACC of 10%. At a lower discount rate (8%), required growth falls to just 1.4%; at a higher one (12%), it climbs to 9.2% — nearly double the base case.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change UnitedHealth's 5.6%</h2>
 <ul class="kicker-list">
   <li><b>Switching the FCF base from trailing-twelve-month ($23,617M) to the FY2025 audited figure alone ($16,075M)</b> raises the required growth rate sharply, from 5.6% to 10.8% — because 2025 was the crisis trough, using it as the starting point demands a much steeper future climb.</li>
   <li><b>Using a three-year (2023–2025) average FCF ($20,821M) instead</b> puts the required growth rate at 7.3%, in between.</li>
   <li><b>Lowering the terminal growth rate from 2.5% to 2.0%</b> raises the required growth rate slightly, since a smaller terminal value has to be made up for during the explicit growth period.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 5.6%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -3223,7 +3241,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the UNH number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -3262,21 +3280,23 @@ export const POSTS: Post[] = [
       { q: "What is Broadcom's market cap?", a: "As of this article's data, Broadcom's market cap was about $1.87 trillion." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Broadcom makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Broadcom designs custom AI chips and sells infrastructure software" },
+      { id: 'revenue-mix', label: "Semiconductors are 58% of sales; software earns a 77% margin" },
+      { id: 'customers-competitors', label: "One distributor alone is 32% of revenue" },
+      { id: 'core-metric', label: "AI semiconductor revenue is the number that moves the stock" },
+      { id: 'leadership', label: "Hock Tan: 20 years at the helm and a $205.3M pay package" },
+      { id: 'capital-returns', label: "$11.1B in dividends but only $2.5B in buybacks" },
+      { id: 'failure-scenario', label: "What breaks Broadcom: hyperscalers take chip design in-house" },
+      { id: 'financials', label: "Revenue from $27B to $64B in four years" },
+      { id: 'unknowns', label: "Open questions: who the six core AI customers are" },
     ],
     sources: '10-K FY2021, FY2023, FY2025 · 10-Q · DEF 14A 2026',
     tags: ['AVGO', 'Semiconductors', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Broadcom makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Broadcom's AI chip business depends on a handful of unnamed hyperscale customers, and one distributor is already 32% of revenue. The software half of the company provides a steadier base.</div>
+
+<h2 id="how-it-makes-money">Broadcom designs custom AI chips and sells infrastructure software</h2>
 <p>Big tech companies building AI data centers pay Broadcom to design the custom chips (XPUs) their AI systems run on — chips manufactured by contract foundries like TSMC, then sold under Broadcom's own brand. On a separate track, enterprises and governments pay recurring subscription fees for infrastructure software (including VMware, acquired in 2023) that runs and manages their servers and virtual machines.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">TSMC & other foundries</div><div class="d">Contract manufacturing</div></div>
@@ -3287,7 +3307,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Revenue from both segments funds R&D reinvestment, dividends, buybacks, and debt paydown. Source: 10-K FY2025, p.3–5 (Business Overview), p.33 (segment definitions).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Semiconductors are 58% of sales; software earns a 77% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -3316,7 +3336,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Concentrated in a sensitive region</b>A combined 44% of revenue ships to China, Singapore, and Taiwan — regions where U.S.–China semiconductor export restrictions can directly affect the business. Figures reflect ship-to location, which can differ from where products are ultimately used.</div>
 <p class="src-note">Source: 10-K FY2025, p.84 (Note 13, Geographic Information).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">One distributor alone is 32% of revenue</h2>
 <p>100% B2B, with customer concentration that is both high and rising: one distributor alone accounted for 32% of revenue in FY2025 (up from 28% in FY2024 and 21% in FY2023), the top five customers together account for roughly 40%, and one customer represented 44% of accounts receivable (up from 18% the prior year).</p>
 <ul class="kicker-list">
   <li><b>Nvidia</b> — the dominant seller of general-purpose AI accelerators (GPUs) that any customer can buy; Broadcom instead designs custom chips (XPUs) to each hyperscaler's own specification.</li>
@@ -3325,7 +3345,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.39, p.85 (customer concentration); web search — Hudson Labs, Fool.com (competitor context, Jul 2026).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">AI semiconductor revenue is the number that moves the stock</h2>
 <p>The number actually moving Broadcom's stock and results isn't a traditional semiconductor metric like utilization or inventory turns — it's AI semiconductor revenue, sold to a small handful of named-but-unnamed hyperscale customers.</p>
 <div class="table-wrap">
   <table>
@@ -3343,11 +3363,11 @@ export const POSTS: Post[] = [
 <p>That's nine straight quarters of accelerating year-over-year growth. Management has guided FY2026 Q3 AI semiconductor revenue to $16B (+200% YoY), full-year FY2026 AI revenue to roughly $56B (+180% YoY), and reaffirmed a long-term "$100B+" target.</p>
 <p class="src-note">Source: Q2–Q4 FY2025 and Q1–Q2 FY2026 earnings calls.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Hock Tan: 20 years at the helm and a $205.3M pay package</h2>
 <p>CEO Hock E. Tan has run the company for 20 years, dating back to its predecessor, Avago Technologies (2006). His FY2025 total compensation was $205.3 million, mostly long-term, performance-linked stock awards; he directly holds 908,000 shares, under 1% of the company. Henry Samueli, co-founder of the original Broadcom Corporation, remains on the board with a 1.8% stake — a reminder that while the name carried forward, today's company traces its roots to Avago's 2016 acquisition of the original Broadcom. Vanguard (9.9%) and BlackRock (7.3%) are the largest institutional holders; all 13 directors and officers together hold 1.9%.</p>
 <p class="src-note">Source: DEF 14A 2026, p.50 (compensation), p.65 (ownership); 10-K FY2025, p.10.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">$11.1B in dividends but only $2.5B in buybacks</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th></th><th>FY2025</th></tr></thead>
@@ -3362,7 +3382,7 @@ export const POSTS: Post[] = [
 <p>Broadcom leans toward dividends over buybacks as its primary capital-return tool — the FY2025 buyback figure is modest relative to the dividend. Note also that the 2023 VMware acquisition issued 544 million new shares, so despite retiring repurchased shares, total shares outstanding are still net higher than five years ago.</p>
 <p class="src-note">Source: 10-K FY2025, p.43 (Capital Returns), cover page (share count, Nov 28, 2025).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Broadcom: hyperscalers take chip design in-house</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the handful of big tech customers now paying Broadcom to design their custom AI chips instead moved that work fully in-house, the AI semiconductor business — now nearly half of revenue and still accelerating — would come under immediate pressure.
@@ -3374,7 +3394,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.11–12 (Risk Factors Summary), p.84, p.43, p.60 (Note 4, Acquisitions).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue from $27B to $64B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, fiscal years</caption>
@@ -3391,7 +3411,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>FY2024 revenue rose 44%, but operating income fell 16.9% — mostly VMware-related amortization and restructuring charges. Free cash flow, by contrast, kept climbing every year through that same period, a better read on the company's underlying health than GAAP operating income. Operating margin recovered to 39.9% in FY2025 as those one-time costs faded. Net debt/EBITDA runs at roughly 1.4x as of FY2025 — sizable gross debt, but comfortably serviceable given current cash generation.</div>
 <p class="src-note">Source: 10-K FY2025, p.47–50; 10-K FY2023, p.50–53; 10-K FY2021, p.51–54.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: who the six core AI customers are</h2>
 <ul class="kicker-list">
   <li><b>The specific identities of the "six core AI customers"</b> management references aren't named in filings — only earnings-call Q&A or industry reporting might narrow this down.</li>
   <li><b>The exact fiscal year targeted for the "$100B+" AI semiconductor revenue goal</b> isn't clearly specified in recent disclosures.</li>
@@ -3420,17 +3440,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Broadcom's 10-K filings for FY2021 and FY2023 through FY2025, plus 10 quarters of earnings call transcripts from March 2024 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance vs. actual, 8 quarters' },
-      { id: 'timeline', label: 'Timeline — AI customer count & backlog' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Apple's name disappeared from Broadcom's filings" },
+      { id: 'guidance-record', label: "Broadcom's guidance vs. the next quarter's actuals" },
+      { id: 'timeline', label: "Timeline: FY2024 Q1 to FY2026 Q2" },
+      { id: 'our-read', label: "From VMware integration to custom AI chips" },
+      { id: 'unknowns', label: "What Broadcom's calls still don't answer" },
     ],
     sources: '10-K FY2021, FY2023–FY2025 · 10 quarters of earnings call transcripts, Mar 2024–Jul 2026',
     tags: ['AVGO', 'Earnings Calls', 'AI Infrastructure'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Apple's name disappeared from Broadcom's filings</h2>
 <h3>Early 2024: still digesting VMware</h3>
 <p>In March 2024, on the Q1 FY2024 earnings call, Broadcom was a company just a few months removed from closing its roughly $84.2 billion VMware acquisition (Nov 2023). The tone was careful: management "reiterated" a $50 billion full-year revenue guide and spoke of VMware in future tense — "strong bookings will accelerate revenue growth." AI semiconductor revenue had already quadrupled year over year, but total company growth that quarter was only 34% — VMware wasn't yet fully integrated, and AI was still too small to lift the whole company on its own.</p>
 
@@ -3452,7 +3472,7 @@ export const POSTS: Post[] = [
   This isn't really a story about VMware integration succeeding — it's a story about who Broadcom's customers are, in the public record, changing completely: from a company legibly built around Apple to one built around a handful of unnamed hyperscalers who might each become the next Apple.
 </div>
 
-<h2 id="guidance-record">Guidance vs. actual, 8 quarters</h2>
+<h2 id="guidance-record">Broadcom's guidance vs. the next quarter's actuals</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue guidance vs. actual, FY2024 Q4–FY2026 Q2</caption>
@@ -3472,7 +3492,7 @@ export const POSTS: Post[] = [
 <p><strong>8 of 8 quarters beaten (100%).</strong> The pattern of guiding slightly low and beating it never broke across two full years. The largest beat (+3.4%, FY2025 Q4) lines up with the point where AI semiconductor revenue growth was clearly reaccelerating — no guidance was ever cut or withdrawn across this entire stretch.</p>
 <p class="src-note">Source: FY2024 Q1–FY2026 Q2 earnings calls, each quarter's guidance checked against the following quarter's actual reported results.</p>
 
-<h2 id="timeline">Timeline — AI customer count & backlog</h2>
+<h2 id="timeline">Timeline: FY2024 Q1 to FY2026 Q2</h2>
 <ul class="timeline">
   <li><span class="date">FY2024 Q1</span>"2 hyperscale customers" named (without naming them); AI revenue up 4x YoY but total company growth only 34%.</li>
   <li><span class="date">FY2025 Q1</span>3 customers confirmed, plus 2 more secured — 5 total.</li>
@@ -3482,10 +3502,10 @@ export const POSTS: Post[] = [
   <li><span class="date">FY2026 Q2</span>"6 core customers"; long-term $100B+ AI semiconductor revenue target reaffirmed.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">From VMware integration to custom AI chips</h2>
 <p>The real story of these two years isn't "VMware integration worked out" — it's that Broadcom's identity, as told through its own filings, was rewritten. Through 2023, the company was legibly "the chip supplier that sells about a fifth of its output to Apple." Now that name is gone entirely, replaced by an unnamed circle of hyperscale customers that grew from 2 to 6 in under two years. Growing that customer count reads less like diversification for its own sake and more like several candidates lining up to become the next Apple-scale relationship — probably the real engine behind the reacceleration. The flip side is that the same filings, for the first time, admit that some of those AI customers might not be able to pay for what they're ordering — a tell that management knows how much of this growth rides on a small number of counterparties' financial health.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Broadcom's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The specific identities of the "6 core customers"</b> have never been disclosed by the company.</li>
   <li><b>The exact reason and timing behind dropping Apple's name from the filings</b> — customer request or Broadcom's own choice — isn't explained anywhere in the public record.</li>
@@ -3514,11 +3534,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $392.43, as of Aug 17, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "25% needed vs. 18% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "How the discount rate changes Broadcom's 25%" },
+      { id: 'what-would-move-it', label: "What would change Broadcom's 25%" },
+      { id: 'show-your-work', label: "The math behind 25%" },
+      { id: 'fine-print', label: "Limits of the AVGO number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $392.43',
     tags: ['AVGO', 'ReverseDCF', 'Valuation'],
@@ -3535,7 +3555,7 @@ export const POSTS: Post[] = [
   The required growth rate (25.4%) sits clearly above the five-year FCF pace (18.3%) — roughly 1.4x — but isn't wildly detached from it, and lines up much more closely with the five-year revenue CAGR (21.7%). This isn't "priced for the impossible," but it is priced for meaningfully better performance than the trailing five-year average.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">25% needed vs. 18% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">25.4%</span></div>
@@ -3545,7 +3565,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from FY2020–FY2025 (10-K FY2021, FY2025). For context, the most recent quarter (FY2026 Q2) grew revenue 48% year over year, with FY2026 Q3 guided at +84% — well above this "10-year average" required rate, though sustaining that pace for a full decade is a separate question.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">How the discount rate changes Broadcom's 25%</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -3557,14 +3577,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Model: FCF grows at rate <em>g</em> for 10 years, then converges to a 2.5% terminal growth rate thereafter (two-stage DCF).</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Broadcom's 25%</h2>
 <ul class="kicker-list">
   <li><b>Switching to trailing-twelve-month FCF (~$32.8B) instead of FY2025's audited figure</b> lowers the required growth rate from 25.4% to 22.7% at a 10% discount rate — a larger starting base needs less future growth to justify the same price.</li>
   <li><b>Using a more conservative three-year (FY2023–2025) average FCF ($21.3B)</b> instead raises the required growth rate to 28.7%. FY2025's actual FCF sits +26% above that three-year average, within the ±40% normalization threshold, so the base case uses FY2025's figure directly rather than an average.</li>
   <li><b>A more conservative 12% discount rate</b> pushes the required growth rate up to 30.0%.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 25%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -3582,7 +3602,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR calculation:</strong> 5-year FCF CAGR = (FY2025 FCF / FY2020 FCF)^(1/5) − 1 = ($26,914M / $11,598M)^(1/5) − 1 = 18.3%. FY2020 FCF is calculated from the FY2021 10-K's prior-year comparative cash flow statement (operating cash flow $12,061M minus capex $463M). 5-year revenue CAGR = ($63,887M / $23,888M)^(1/5) − 1 = 21.7%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the AVGO number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -3621,21 +3641,23 @@ export const POSTS: Post[] = [
       { q: "What is Tesla's market cap?", a: "As of this article's data, Tesla's market cap was about $1.35 trillion." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Tesla makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Tesla builds its own cars and batteries and sells direct" },
+      { id: 'revenue-mix', label: "Automotive sales are 69.4% of revenue" },
+      { id: 'customers-competitors', label: "Almost all consumers, and no customer above 10%" },
+      { id: 'core-metric', label: "Automotive gross margin shows whether volume is bought with discounts" },
+      { id: 'leadership', label: "Musk has led Tesla for 18 years, and the 10-K flags that as a risk" },
+      { id: 'capital-returns', label: "No dividend and no buybacks" },
+      { id: 'failure-scenario', label: "What breaks Tesla: price wars, and self-driving that arrives late" },
+      { id: 'financials', label: "Revenue slipped 2.9% to $94.8B after peaking near $98B" },
+      { id: 'unknowns', label: "Open questions: what the 10-K doesn't break out" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q Q2 FY2026',
     tags: ['TSLA', 'EV', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Tesla makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Tesla's valuation leans on robotaxis, self-driving software and robots, while the car business that pays for them saw revenue slip in 2025. The story is ahead of the numbers.</div>
+
+<h2 id="how-it-makes-money">Tesla builds its own cars and batteries and sells direct</h2>
 <p>Tesla buys raw materials and builds cars — including its own battery cells — in vertically integrated factories, then sells directly to consumers with no dealer network. That's only the first sale: every car keeps generating money afterward through FSD (self-driving) software subscriptions, Supercharger charging, insurance, and service. Separately, Tesla sells regulatory credits to other automakers at close to zero cost, and reuses its automotive battery technology to sell energy storage (Powerwall, Megapack) to homes, businesses, and utilities.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Raw materials</div><div class="d">Aluminum, lithium, nickel, etc.</div></div>
@@ -3646,7 +3668,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Regulatory credit sales and energy storage/solar run alongside this core loop. Source: 10-K FY2025, Item 1, Business (p.1–7).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Automotive sales are 69.4% of revenue</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue breakdown — FY2025 ($ millions)</caption>
@@ -3677,7 +3699,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Nearly half the business is outside the U.S.</b>China plus "other international" makes up 49.8% of revenue — exposing results to currency swings, Chinese EV price competition, and trade policy shifts outside the U.S. Individual countries beyond the U.S. and China aren't broken out separately.</div>
 <p class="src-note">Source: 10-K FY2025, Note 16, Segment Reporting and Information about Geographic Areas (p.93).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Almost all consumers, and no customer above 10%</h2>
 <p>Almost entirely B2C. Tesla states that no customer accounted for 10% or more of accounts receivable at year-end 2025 or 2024, so customer concentration risk is low. One notable exception: in 2025 Tesla recognized $430 million (0.45% of total revenue) selling Megapack units to xAI, a company where CEO Elon Musk also serves as CEO/director — disclosed as a related-party transaction.</p>
 <ul class="kicker-list">
   <li><b>BYD (China)</b> — vertically integrates low- and mid-priced EVs and batteries; China's largest EV maker and a direct price-competition threat.</li>
@@ -3686,7 +3708,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Note: Tesla's 10-K doesn't name competitors individually, describing them only as "existing and new automotive manufacturers" (Item 1, "Competition," p.9–10). Source: 10-K FY2025, Note 2 (Concentration of Risk), Note 15 (Related Party Transactions, p.92).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Automotive gross margin shows whether volume is bought with discounts</h2>
 <p>Automotive gross margin shows whether rising deliveries reflect real pricing power or just deeper discounting to move volume.</p>
 <div class="table-wrap">
   <table>
@@ -3698,15 +3720,15 @@ export const POSTS: Post[] = [
 <p>Vehicle deliveries have now fallen two years straight — a 2023 peak of about 1.809 million, then roughly 1.789 million (2024) and 1.64 million (2025) — alongside the shrinking margin, together signaling that the core auto business has entered a plateau-or-decline phase rather than a growth one. Energy storage deployments (GWh), by contrast, have grown sharply: 4.0 (2021) → 6.5 → 14.7 → 31.4 → 46.7 (2025).</p>
 <p class="src-note">Source: 10-K FY2021–FY2025, Item 7 MD&A (margin and delivery figures, respective years).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Musk has led Tesla for 18 years, and the 10-K flags that as a risk</h2>
 <p>CEO Elon Musk — whose formal title is "Technoking of Tesla and Chief Executive Officer" — has led the company since 2008, about 18 years. The 10-K itself discloses, as a risk factor, that Musk splits his attention across SpaceX, xAI, Neuralink, and The Boring Company and doesn't devote himself full-time to Tesla. Insider ownership isn't broken out in the 10-K (2026 proxy statement needed for confirmation); a new 2025 performance award could grant Musk up to 423 million additional shares — roughly 11% of shares currently outstanding — which would meaningfully raise his stake if achieved.</p>
 <p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors (p.18), signature page (p.101–102), Note 13 (new performance award).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">No dividend and no buybacks</h2>
 <p><b>Dividends: none.</b> Tesla states it has never paid a cash dividend and has no plans to. <b>Buybacks: none</b> — FY2025 repurchase activity is disclosed as "None," and the Q2 FY2026 10-Q makes no mention of any repurchase. Shares outstanding are actually rising: 3.216 billion (end 2024) → 3.751 billion (end 2025, +16.6%) → 3.949 billion (June 2026), largely driven by the 2025 CEO performance award. With no dividend or buyback offsetting new share issuance, existing shareholders are being gradually diluted.</p>
 <p class="src-note">Source: 10-K FY2025, Item 5 (p.29), balance sheet; 10-Q Q2 FY2026, cover page/balance sheet.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Tesla: price wars, and self-driving that arrives late</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If EV price competition intensifies enough to crush margins toward zero, and self-driving (FSD/robotaxi) doesn't become real revenue on the promised timeline, Tesla gets re-rated as simply a lower-margin car company.
@@ -3718,7 +3740,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors (p.13–26).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue slipped 2.9% to $94.8B after peaking near $98B</h2>
 <div class="table-wrap">
   <table>
     <caption>$ billions, calendar years</caption>
@@ -3735,7 +3757,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2025 operating income fell 38%, yet free cash flow rose 74% — not because the business improved, but because capital expenditure was cut, from $11.3B (2024) to $8.5B (2025). With 2026 capex guidance raised back above $25B, FCF could fall sharply again. Separately, 2023's reported net income ($15.0B) included roughly a $5B one-time tax benefit from a deferred-tax valuation-allowance release — real operating performance that year was weaker than the headline number suggests. Total debt has stayed well below cash and short-term investments (over $44.1B at year-end 2025) throughout the period, keeping Tesla in a net-cash position.</div>
 <p class="src-note">Source: respective years' 10-K, Item 8 (income statement, cash flow statement, balance sheet); 10-Q Q2 FY2026 (2026 capex guidance).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: what the 10-K doesn't break out</h2>
 <ul class="kicker-list">
   <li><b>Model-level delivery breakdown</b> (Model 3/Y vs. S/X/Cybertruck) isn't disclosed in table form in the 10-K — quarterly shareholder letters or investor presentations would be needed.</li>
   <li><b>How much of the 2025 CEO performance award (up to 423 million shares, up to $120B in value) will actually be recognized as an expense</b> depends on probability-of-achievement assessments not fully knowable from this filing alone.</li>
@@ -3765,17 +3787,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Tesla's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Promises vs. actual results' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "From selling more EVs to promising robotaxis and robots" },
+      { id: 'guidance-record', label: "Six of ten big-picture promises missed; dated promises kept" },
+      { id: 'timeline', label: "Timeline: October 2023 to the first half of 2026" },
+      { id: 'our-read', label: "Nailing dates, missing the bigger targets" },
+      { id: 'unknowns', label: "What Tesla's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['TSLA', 'Earnings Calls', 'Robotaxi'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">From selling more EVs to promising robotaxis and robots</h2>
 <h3>Late 2023: still "sell cheaper, sell more"</h3>
 <p>On the Q4 FY2023 earnings call, Tesla hit its promised record of 1.8 million deliveries almost exactly, and Elon Musk said "I see a path... for Tesla to be the most valuable company in the world." But in the same breath, the CFO gave the first cautious signal in years: 2024's sales growth rate would be "notably lower." What actually happened was more than lower growth — 2024 deliveries (about 1.789 million) came in slightly below 2023's (1.809 million), a decline rather than a slowdown.</p>
 
@@ -3797,7 +3819,7 @@ export const POSTS: Post[] = [
   Tesla is remarkably good at hitting single, date-stamped moments — an event, a launch date, a production start — and remarkably inconsistent at hitting the bigger growth numbers (delivery growth rates, city-count expansion) it attaches to those moments.
 </div>
 
-<h2 id="guidance-record">Promises vs. actual results</h2>
+<h2 id="guidance-record">Six of ten big-picture promises missed; dated promises kept</h2>
 <div class="table-wrap">
   <table>
     <caption>10 tracked promises, in order made</caption>
@@ -3819,7 +3841,7 @@ export const POSTS: Post[] = [
 <p><strong>4 of 10 tracked promises kept (40%); 6 missed or delayed (60%).</strong> Big-picture promises — sales growth rates, robotaxi city expansion — were frequently missed, while single events tied to a specific calendar date — an event, a service launch, a production start — were hit almost every time. Interestingly, the one time management candidly admitted bad news in advance (Q2 FY2025's "rough quarters ahead"), the prediction turned out accurate.</p>
 <p class="src-note">Source: each quarter's earnings call transcript, checked against 10-K FY2024 and FY2025 reported figures.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: October 2023 to the first half of 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023–Jan 2024</span>Confidence in the 5–6 range; Cybertruck expectations deliberately lowered; CFO first signals slower 2024 sales growth.</li>
   <li><span class="date">Aug 8, 2024</span>"We, Robot" robotaxi/Cybercab reveal event held as promised.</li>
@@ -3830,10 +3852,10 @@ export const POSTS: Post[] = [
   <li><span class="date">H1 2026</span>Cybercab production starts early (Q1); capex guidance raised again, above $25B. Robotaxi remains at 7 markets with a modest vehicle count.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Nailing dates, missing the bigger targets</h2>
 <p>These three years are, at heart, an identity change from "sell more EVs" to "change the world with robotaxis and robots" — and the record shows Tesla is far more reliable at hitting a specific promised moment than at hitting the growth numbers layered on top of it. That distinction matters for judging what comes next: a promised event (a launch date, a production start) is a low bar Tesla clears consistently, while a promised growth rate or expansion pace is a much less reliable signal.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Tesla's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>When robotaxi actually reaches the originally promised "8–10 major metro" scale</b> isn't knowable from this data — vehicle counts and city counts in the Q3–Q4 FY2026 calls are the thing to track.</li>
   <li><b>Whether the "2026, 25–50% U.S. full self-driving" target (from the Q4 FY2025 call) is met</b> hasn't reached its judgment date yet.</li>
@@ -3863,11 +3885,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $342.27, as of Aug 14, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "42.0% needed vs. 5.5% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 35.9% to 52.2%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Tesla's 42.0%" },
+      { id: 'show-your-work', label: "The math behind 42.0%" },
+      { id: 'fine-print', label: "Limits of the TSLA number" },
     ],
     sources: 'As of Aug 14, 2026 · Price used: $342.27',
     tags: ['TSLA', 'ReverseDCF', 'Valuation'],
@@ -3884,7 +3906,7 @@ export const POSTS: Post[] = [
   A required growth rate roughly 7.6 times the actual five-year FCF pace is an extreme gap. This price only makes sense if robotaxi, full self-driving, and Optimus scale into real, substantial cash flow well beyond anything the automotive and energy businesses have delivered so far — whether that's plausible is a question this math can't answer on its own.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">42.0% needed vs. 5.5% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">42.0%</span></div>
@@ -3894,7 +3916,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021–FY2025 cash flow and income statements.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 35.9% to 52.2%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -3910,14 +3932,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Tesla is a large-cap company with unusually high volatility, so the "right" discount rate is debatable between a standard 10% and a higher, risk-adjusted 12–14%. Across that whole range, the required growth rate moves from about 36% to 52% — nowhere close to Tesla's actual 5-year FCF pace (5.5%) under any of these assumptions.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Tesla's 42.0%</h2>
 <ul class="kicker-list">
   <li><b>Switching from trailing-twelve-month FCF ($5.76B) to FY2025's full-year figure ($6.22B)</b> only modestly lowers the required growth rate, from 42.0% to 40.9%.</li>
   <li><b>Using a three-year (2023–2025) average FCF ($4.72B) instead</b> raises the required growth rate to 45.1%.</li>
   <li><b>Across every reasonable combination of discount rate and FCF base tested here, the required growth rate stays between roughly 36% and 53%</b> — consistently far above the historical 5.5% pace, regardless of which specific assumptions are used.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 42.0%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -3936,7 +3958,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR:</strong> 5-year FCF CAGR = (2025 FCF / 2021 FCF)^(1/4) − 1 = ($6,220M / $5,015M)^(1/4) − 1 = 5.53%. 5-year revenue CAGR = ($94,827M / $53,823M)^(1/4) − 1 = 15.21%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the TSLA number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -3975,21 +3997,23 @@ export const POSTS: Post[] = [
       { q: 'Does Vistra sell power to AI data centers?', a: 'Yes — Vistra has signed 20-year nuclear power agreements with Amazon and Meta to supply electricity for their data centers, a deal that took analysts more than 20 months of asking about before it materialized.' },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Vistra makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Vistra generates the power and sells it to homes and businesses" },
+      { id: 'revenue-mix', label: "Retail is 54.6% of revenue" },
+      { id: 'customers-competitors', label: "About 5 million customers, none above 10%" },
+      { id: 'core-metric', label: "Retail customers and generating capacity" },
+      { id: 'leadership', label: "A 20-year insider running Vistra since 2022" },
+      { id: 'capital-returns', label: "A 0.63% yield and a payout ratio that swings from 12% to 41%" },
+      { id: 'failure-scenario', label: "What breaks Vistra: weak power prices or fewer data-center buyers" },
+      { id: 'financials', label: "From two loss years to $4.1B of operating income, then back to $1.9B" },
+      { id: 'unknowns', label: "Open questions: the 2026 EBITDA guidance and the Amazon and Meta terms" },
     ],
     sources: '10-K FY2021–FY2023, FY2025 · DEF 14A 2026',
     tags: ['VST', 'Utilities', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Vistra makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Vistra is a bet that data centers will pay up for reliable power, and its nuclear deals with Amazon and Meta are the proof point. With more than $17B of debt, the price of power has to hold.</div>
+
+<h2 id="how-it-makes-money">Vistra generates the power and sells it to homes and businesses</h2>
 <p>Vistra buys fuel (natural gas, coal, uranium) to run a 43,641 MW fleet of power plants across Texas (ERCOT), the East (PJM and others), and the West (CAISO). That electricity is sold three ways: on the wholesale power market, transferred internally to Vistra's own retail brands (like TXU Energy) for resale to about 5 million homes and businesses, and — newly — supplied directly to AI data centers under long-term nuclear power agreements with Amazon and Meta, plus the Helix joint venture with KKR, Nvidia, and others.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Fuel: gas 62%, coal 20%, uranium 15%, renewables 3%</div><div class="d">Procurement</div></div>
@@ -4000,7 +4024,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Cash generated across all three channels funds debt repayment, dividends, and buybacks. Source: 10-K FY2025, p.1 (generation capacity, fuel mix), p.61 (segment structure); web search — Q2 FY2026 earnings call (Aug 7, 2026) for Helix/PPA detail.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Retail is 54.6% of revenue</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025 (before intersegment elimination)</caption>
@@ -4032,7 +4056,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Retail is the biggest revenue line, but not the biggest profit line</b>Retail generates the most revenue but on thin margins; generation (Texas + East combined) produces more than 70% of actual profit. Vistra operates 100% within the U.S., so there's no foreign-currency exposure — but that also means heavy dependence on Texas's ERCOT market specifically.</div>
 <p class="src-note">Source: 10-K FY2025, p.61 (segment revenue and Adjusted EBITDA table).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">About 5 million customers, none above 10%</h2>
 <p>Roughly 5 million residential, commercial, and industrial customers (2.6 million in Texas alone) buy electricity and gas directly — no single retail customer accounts for 10% or more of revenue, so the retail base is well diversified. The new 20-year nuclear power agreements with Amazon and Meta, however, introduce a fresh kind of mega-customer concentration worth watching.</p>
 <ul class="kicker-list">
   <li><b>NRG Energy</b> — the closest structural match, combining generation and retail, though with a smaller generation fleet and a larger footprint outside Texas.</li>
@@ -4041,7 +4065,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.1 (customer count); customer concentration and PPA detail from web search (2026 news coverage).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Retail customers and generating capacity</h2>
 <p>Retail customer count shows whether Vistra is growing as a consumer-facing seller, not just a wholesale generator; generation capacity shows raw scale.</p>
 <div class="table-wrap">
   <table>
@@ -4056,15 +4080,15 @@ export const POSTS: Post[] = [
 <p>The jump between 2023 and 2025 in both metrics is driven mostly by acquisitions — the Energy Harbor nuclear deal and the Lotus gas-plant purchase — rather than organic growth. 2024 figures aren't available because the FY2024 10-K wasn't included in the source material for this card.</p>
 <p class="src-note">Source: 10-K FY2021, FY2022, FY2023, and FY2025, Item 1 Business (p.1 in each).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">A 20-year insider running Vistra since 2022</h2>
 <p>CEO James A. Burke has led the company since August 2022 (previously CFO from Dec 2020 and COO from Oct 2016) — a 20-year TXU/Vistra veteran promoted from within, not a founder. Vistra itself was spun out of Energy Future Holdings' 2016 bankruptcy restructuring. Directors and executive officers together hold about 3.1 million shares, under 1% of the 339 million shares outstanding; the largest holders are institutional — Vanguard (12.6%), BlackRock (8.4%), Qatar Investment Authority (5.5%), and Fidelity (5.1%).</p>
 <p class="src-note">Source: DEF 14A 2026, p.15 (CEO background), p.77–78 (ownership table, as of Mar 3, 2026).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A 0.63% yield and a payout ratio that swings from 12% to 41%</h2>
 <p>Dividend yield sits at a modest 0.63%. Dividend per share rose each year: $0.8205 (2023) → $0.8735 (2024) → $0.9015 (2025); payout ratio swings widely (23% → 12% → 41%) because reported net income is heavily affected by derivative mark-to-market accounting. Under a cumulative $7.75B buyback authorization approved since October 2021, Vistra has already executed roughly $5.75B ($1.245B in 2023, $1.266B in 2024, $1.028B in 2025). Diluted shares fell from 375 million (2023) to 346 million (2025) — a real reduction, not offset by employee compensation issuance.</p>
 <p class="src-note">Source: 10-K FY2025, p.51 (repurchase authorization), p.83 (annual buyback/dividend detail), p.147 (dividend per share).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Vistra: weak power prices or fewer data-center buyers</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If wholesale power prices stay depressed for an extended period, or AI data centers don't end up buying as much power as expected, the more than $17 billion in debt taken on for nuclear expansion and acquisitions would weigh heavily on the company all at once.
@@ -4076,7 +4100,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.17–18 (risk summary), p.61 (derivative mark-to-market losses); web search — 2026 Fitch credit-rating upgrade and Moss Landing fire coverage.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">From two loss years to $4.1B of operating income, then back to $1.9B</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -4094,7 +4118,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2025 operating income fell 53% while Adjusted EBITDA rose 5% — a divergence driven by derivative mark-to-market swings (a $1.16B gain in 2024 flipping to a $0.81B loss in 2025), not a change in the real business. Meanwhile free cash flow fell for a second straight year, from a 2023 peak of $3.78B to $1.32B, as capex surged for nuclear expansion and the Lotus acquisition — even as underlying EBITDA kept improving.</div>
 <p class="src-note">Source: 10-K FY2025, p.79 (revenue/operating income), p.61–62 (Adjusted EBITDA), p.82 (cash flow), p.80 (debt); 10-K FY2023, FY2022 (prior-year figures).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the 2026 EBITDA guidance and the Amazon and Meta terms</h2>
 <ul class="kicker-list">
   <li><b>Whether 2026 results land within the company's Adjusted EBITDA guidance ($6.8B–$7.6B)</b> isn't knowable from data through Q2 FY2026 alone.</li>
   <li><b>The exact dollar terms of the Amazon and Meta power agreements and the Helix joint venture's revenue contribution</b> aren't disclosed in specific figures.</li>
@@ -4124,17 +4148,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Vistra's 10-K filings for FY2021 through FY2023 and FY2025, plus 12 quarters of earnings call transcripts from November 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Twenty months of the same analyst question, then the nuclear deals" },
+      { id: 'guidance-record', label: "Guidance met or beaten three years straight" },
+      { id: 'timeline', label: "Timeline: November 2023 to August 2026" },
+      { id: 'our-read', label: "A tone that turned defensive after the win" },
+      { id: 'unknowns', label: "What Vistra's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2023, FY2025 · 12 quarters of earnings call transcripts, Nov 2023–Aug 2026',
     tags: ['VST', 'Earnings Calls', 'AI Infrastructure'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Twenty months of the same analyst question, then the nuclear deals</h2>
 <h3>Late 2023: a hedging story, not an AI story</h3>
 <p>At the end of 2023, Vistra's pitch to investors was simple: "our hedging strategy earns steadily no matter the weather." CEO Jim Burke called Q3 2023 "a very successful quarter" and confidently raised Adjusted EBITDA guidance to $3.95–4.1 billion, leaning on the hedging discipline built after 2021's Winter Storm Uri. AI and data centers were barely part of the company's vocabulary — the word "AI" appears exactly once in the FY2023 10-K, and only in the context of legal liability from adopting AI tools internally, not demand.</p>
 
@@ -4156,7 +4180,7 @@ export const POSTS: Post[] = [
   Confidence hit its lowest point of the entire 12-quarter span right after the long-awaited Amazon and Meta deals were finally confirmed — not before — because management spent that call on defense rather than celebration.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Guidance met or beaten three years straight</h2>
 <div class="table-wrap">
   <table>
     <caption>Adjusted EBITDA guidance vs. actual, by fiscal year</caption>
@@ -4172,7 +4196,7 @@ export const POSTS: Post[] = [
 <p><strong>3 of 3 confirmed years met or beaten (100%).</strong> The pattern is a clear "under-promise, over-deliver" — a phrase analyst Steve Fleishman used explicitly and approvingly on the Q1 FY2025 call to describe exactly this behavior.</p>
 <p class="src-note">Source: each quarter's earnings call transcript; actual results from 10-K FY2023, FY2025, and quarterly earnings releases.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: November 2023 to August 2026</h2>
 <ul class="timeline">
   <li><span class="date">Nov 2023</span>Q3 2023 earnings: hedging-strategy narrative; Adjusted EBITDA guidance raised.</li>
   <li><span class="date">Mar 2024</span>Energy Harbor nuclear acquisition closes; Vistra joins the S&P 500; "long-term outlook meaningfully raised."</li>
@@ -4185,10 +4209,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 2026</span>Q2 2026 earnings: Helix joint venture detailed, but tone turns defensive — rebutting media narratives and addressing the Texas interconnection-queue audit.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">A tone that turned defensive after the win</h2>
 <p>The real story of these three years is less about whether Vistra could deliver financially — it did, every year — and more about how long it took, and how the tone shifted, around the single deal the market actually cared about. Analysts asking essentially the same colocation-deal question for more than 20 consecutive months is a clear signal of how much patience the market extended before getting an answer. That the tone turned more guarded right after the deal was finally confirmed, rather than more triumphant, suggests the company sees the regulatory and political noise around AI power demand (the Texas audit, media skepticism) as the next real risk to manage — not the deal itself.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Vistra's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>How the FY2024 10-K's language changed specifically</b> can't be tracked directly — it wasn't in the source material for this analysis, so the "Sunset" segment's disappearance and other mid-period shifts are inferred only from a 2023-to-2025 comparison.</li>
   <li><b>How much the CFO's August 2026 comment that "2027 guidance is actually leaning toward the lower end" will move the official numbers</b> won't be clear until the next quarterly update.</li>
@@ -4218,11 +4242,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $148.13, as of Aug 14, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "11.3% needed vs. 10.1% revenue growth" },
+      { id: 'sensitivity', label: "From 6.8% to 15.3%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Vistra's 11.3%" },
+      { id: 'show-your-work', label: "The math behind 11.3%" },
+      { id: 'fine-print', label: "Limits of the VST number" },
     ],
     sources: 'As of Aug 14, 2026 · Price used: $148.13',
     tags: ['VST', 'ReverseDCF', 'Valuation'],
@@ -4239,7 +4263,7 @@ export const POSTS: Post[] = [
   A required growth rate of 11.3% sits close to the actual 5-year revenue CAGR of 10.1% — within about 12% of each other. This isn't a stretch valuation demanding dramatic acceleration; it's closer to "keep doing what you've been doing," with the Amazon/Meta nuclear deals and 2026 guidance providing the case for why that's achievable.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">11.3% needed vs. 10.1% revenue growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:35%;background:var(--accent)"></div></div><span class="val">11.3%</span></div>
@@ -4251,7 +4275,7 @@ export const POSTS: Post[] = [
 </div>
 <p>The 32.3% Adjusted EBITDA CAGR looks dramatic, but it's inflated by the low base effect right after 2021's Winter Storm Uri and by the Energy Harbor (2024) and Lotus (2025) acquisitions — not something organic growth alone is likely to repeat, which is why revenue CAGR (10.1%) is used as the more conservative comparison point.</p>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 6.8% to 15.3%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -4265,14 +4289,14 @@ export const POSTS: Post[] = [
 </div>
 <p>A 10% base-case discount rate reflects Vistra's status as a large, now investment-grade generation-and-retail company, though its earnings still swing significantly with commodity prices and weather — closer to 10% than the 9% used for the most stable large caps.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Vistra's 11.3%</h2>
 <ul class="kicker-list">
   <li><b>Using 2025-only FCF ($1.318B) instead of the three-year (2023–2025) average ($2.527B)</b> pushes the required growth rate sharply higher, to 20.2% — 2025's FCF was unusually depressed by a capex surge for nuclear expansion and the Lotus acquisition, sitting 47.8% below the three-year average and beyond the ±40% normalization threshold, which is why the three-year average is used as the base case instead.</li>
   <li><b>A 12% discount rate</b> raises the required growth rate to 15.3%; an 8% rate lowers it to 6.8%.</li>
   <li><b>Analyst near-term revenue growth consensus (~7%) sits below the required 11.3%</b> — the gap is being filled by the company's own 2026 Adjusted EBITDA guidance ($6.8B–$7.6B) and expectations around the Amazon/Meta nuclear power agreements.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 11.3%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -4288,7 +4312,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the VST number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -4327,21 +4351,23 @@ export const POSTS: Post[] = [
       { q: "What is Palantir's market cap?", a: "As of this article's data, Palantir's market cap was about $414.7B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Palantir makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Palantir wires scattered data into one system and charges to keep using it" },
+      { id: 'revenue-mix', label: "Government is 54% of revenue, Commercial 46%, both at a 66% margin" },
+      { id: 'customers-competitors', label: "Government and large enterprise, with no customer above 10%" },
+      { id: 'core-metric', label: "Total Remaining Deal Value: contracts already signed" },
+      { id: 'leadership', label: "Karp has been CEO since 2005 and all three co-founders remain on the board" },
+      { id: 'capital-returns', label: "No dividend, and a $1B buyback program barely used" },
+      { id: 'failure-scenario', label: "What breaks Palantir: budget cuts plus big tech bundling similar tools" },
+      { id: 'financials', label: "Revenue nearly tripled from $1.5B to $4.5B in four years" },
+      { id: 'unknowns', label: "Open questions: 2026 guidance and AIP's share of revenue" },
     ],
     sources: '10-K FY2023, FY2025 · DEF 14A 2026 · 10-Q Q2 FY2026',
     tags: ['PLTR', 'Software', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Palantir makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Palantir's contracts are growing much faster than its revenue, which is a strong sign, but a large part of its business depends on government budgets and political goodwill. Its price already assumes that momentum continues.</div>
+
+<h2 id="how-it-makes-money">Palantir wires scattered data into one system and charges to keep using it</h2>
 <p>Founded in 2003 to help U.S. intelligence agencies analyze counterterrorism data, Palantir now sells four core products — Gotham (defense/intelligence), Foundry (enterprise data operations), Apollo (deployment infrastructure), and AIP (generative AI) — to governments and large companies drowning in disconnected data. Customers pay ongoing usage fees under multi-year contracts, and existing customers tend to expand their usage sharply over time (a "land and expand" pattern), rather than most growth coming from brand-new logos.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Cloud infrastructure costs</div><div class="d">AWS, Azure, GCP</div></div>
@@ -4352,7 +4378,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">R&D reinvestment (about $420M/year) continues to strengthen the software, feeding back into the same customer base. Source: 10-K FY2025, p.4 (business overview), p.6 (customer/segment revenue mix), p.68 (top-20-customer revenue).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Government is 54% of revenue, Commercial 46%, both at a 66% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -4378,7 +4404,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">The U.S. share is dominant — currency exposure is limited, but reliance on U.S. government budget and policy decisions is correspondingly high. Source: 10-K FY2025, p.113 (Note 13).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Government and large enterprise, with no customer above 10%</h2>
 <p>A B2G (government) and B2B (large enterprise) mix with a broad customer base — no single customer accounted for 10% or more of total revenue in 2023, 2024, or 2025. The top 20 customers' average trailing-twelve-month revenue reached $93.9M, up 45% from $64.6M the prior year — a sign of fast usage expansion within existing large accounts, more than a widening customer base alone.</p>
 <ul class="kicker-list">
   <li><b>C3.ai</b> — Palantir's most frequently compared rival, but at roughly one-tenth the revenue, with much weaker government/defense trust and no equivalent to Palantir's Ontology data-integration layer.</li>
@@ -4387,7 +4413,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Note: Palantir's 10-K doesn't name competitors directly, describing them only as "internally developed solutions, large enterprise software vendors, and government systems integrators" (10-K FY2025, p.9). Source: 10-K FY2025, p.91 (customer concentration), p.68 (top-20 customers); web search — datagrom.com 2026 competitor analysis.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Total Remaining Deal Value: contracts already signed</h2>
 <p>Total Remaining Deal Value (TRDV) — the sum of everything already contracted to be paid in the future — is a leading indicator. When it grows faster than current revenue, future revenue acceleration tends to follow.</p>
 <div class="table-wrap">
   <table>
@@ -4402,16 +4428,16 @@ export const POSTS: Post[] = [
 <p>TRDV's 105% jump in 2025 far outpaced revenue growth (+56%) that same year — a strong signal that revenue growth has more room to keep accelerating from contracts already signed.</p>
 <p class="src-note">Source: 10-K FY2025, p.69; 10-K FY2023, p.65–67.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Karp has been CEO since 2005 and all three co-founders remain on the board</h2>
 <p>CEO Alexander Karp co-founded the company, joined the board in 2003, and has been CEO since 2005. All three co-founders — Karp, Stephen Cohen, and Peter Thiel — remain board members. A triple-class share structure (Class A: 1 vote, Class B: 10 votes, Class F: special voting rights) means economic ownership is low (Karp under 1%, Thiel 3.0%, Cohen under 1%) but voting power is concentrated (Karp 11.4%, Thiel 7.9%, Cohen 3.0%) — the founder group controls the company through a small economic stake.</p>
 <p class="src-note">Source: DEF 14A 2026, p.51–54 (ownership and voting tables), p.1 (titles).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">No dividend, and a $1B buyback program barely used</h2>
 <p><b>Dividend:</b> none, ever, with no stated plans to start. <b>Buybacks:</b> a $1 billion repurchase program was approved in August 2023, but only $75 million (600,000 shares) was actually repurchased in 2025 — and the entire program was terminated in January 2026.</p>
 <div class="callout warn"><b>Buybacks are a rounding error next to dilution</b>2025 stock-based compensation was $684 million — more than 9 times the buyback spend. As a result, Class A common shares outstanding actually rose from 2.24 billion to 2.29 billion (+2.2%) rather than falling.</div>
 <p class="src-note">Source: 10-K FY2025, p.65 (dividend/repurchase program), p.85 (shares outstanding), p.89 (stock-based compensation), p.103 (repurchase program detail).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Palantir: budget cuts plus big tech bundling similar tools</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If governments sharply cut budgets or sever ties for political reasons, and at the same time Microsoft- or Google-scale big tech companies start bundling similar data-integration and AI tools nearly free into their cloud platforms, Palantir's "nobody else can build this" scarcity disappears — hitting both its government and commercial halves at once.
@@ -4423,7 +4449,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.12 (risk summary), p.69; web search — stockanalysis.com (market cap, Aug 2026); 10-K FY2025, p.89 (SBC).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue nearly tripled from $1.5B to $4.5B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -4441,7 +4467,7 @@ export const POSTS: Post[] = [
 <div class="callout good"><b>Effectively no debt</b>Palantir carries essentially zero interest-bearing debt across all five years. At year-end 2025, cash plus marketable securities totaled $7.18B against total liabilities of just $1.41B (mostly deferred revenue and lease obligations) — a balance sheet conservative enough that "net debt" is close to a meaningless concept here.</div>
 <p class="src-note">Source: 10-K FY2025, p.86 (revenue/operating income), p.89 (cash flow); 10-K FY2023, p.86, p.89; 10-K FY2025, p.85 (balance sheet).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: 2026 guidance and AIP's share of revenue</h2>
 <ul class="kicker-list">
   <li><b>Management's specific full-year 2026 revenue guidance</b> isn't captured in this card — the latest earnings call is the place to check.</li>
   <li><b>AIP's exact share of total revenue</b> isn't disclosed separately.</li>
@@ -4470,17 +4496,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Palantir's 10-K filings for FY2023 through FY2025 and 6 quarters of earnings call transcripts from November 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "The \"history of losses\" warning vanished as contracts nearly tripled" },
+      { id: 'guidance-record', label: "Palantir's CFO guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline for Palantir: Q3 2023 to Q2 2026" },
+      { id: 'our-read', label: "Reading Palantir: from \"we are on fire\" to a combative tone" },
+      { id: 'unknowns', label: "What Palantir's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 6 quarters of earnings call transcripts, Nov 2023–Aug 2026',
     tags: ['PLTR', 'Earnings Calls', 'AI Infrastructure'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">The "history of losses" warning vanished as contracts nearly tripled</h2>
 <h3>Late 2023: still explaining itself</h3>
 <p>In Q3 2023, Palantir was a freshly profitable company — revenue growth of 17%, and a Rule of 40 score (revenue growth plus adjusted operating margin) of just 46. The FY2023 10-K's risk summary still opened with the same line it always had: "we have a history of losses, and we may not be able to achieve or maintain profitability." CEO Alexander Karp's tone on the call was still somewhat defensive — "we believe in a mission-driven culture" — the language of a company that still needed to explain and persuade skeptics.</p>
 
@@ -4505,7 +4531,7 @@ export const POSTS: Post[] = [
   The clearest signal in these three years isn't the revenue acceleration — it's which risk the company itself is most afraid of, shifting from "we might not make money" to "we might not collect money we've already been promised" to "we might get too famous and too scrutinized."
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Palantir's CFO guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue guidance vs. actual, 5 confirmed periods</caption>
@@ -4523,7 +4549,7 @@ export const POSTS: Post[] = [
 <p><strong>5 of 5 confirmed periods beaten (100%)</strong> — and the beat margin has widened over time: +450 basis points (Q3 FY2024) → +350 bps (Q1 FY2025) → +1,300 bps (Q3 FY2025). This is a textbook "guide conservatively, then beat" pattern, but one where the size of the cushion itself keeps growing.</p>
 <p class="src-note">Source: each earnings call's CFO guidance commentary, checked against 10-K FY2023–FY2025 and Q2 FY2026 10-Q reported figures.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Palantir: Q3 2023 to Q2 2026</h2>
 <ul class="timeline">
   <li><span class="date">Q3 2023</span>Fourth straight quarter of GAAP profitability; Rule of 40 at 46; risk summary still led with "history of losses."</li>
   <li><span class="date">Q1 2024</span>"We are on fire" — the first clear tonal shift; revenue growth 21%, Rule of 40 57.</li>
@@ -4533,10 +4559,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Q2 2026 (most recent)</span>Rule of 40 reaches an all-time high of 155, 12 straight quarters of improvement; "largest guidance raise ever."</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Reading Palantir: from "we are on fire" to a combative tone</h2>
 <p>The real story here is less about the acceleration in the numbers — though it's real — and more about the company's own evolving sense of what it has to fear. A firm that once had to convince the market it would ever turn a profit now worries instead about collecting on the huge promises already signed, and about the reputational fallout from having become this visible and this politically outspoken. The risk worth watching is whether Q3 FY2025's political tangents and combative short-seller mockery end up being exactly the kind of behavior that makes the newly added "external scrutiny" risk factor come true.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Palantir's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Only 6 of the last 12 quarters' calls were reviewed for this analysis</b> (Q2 and Q4 FY2024, Q2 and Q4 FY2025, and Q1 FY2026 weren't included) — reading all 12 could reveal finer tonal swings this pass may have missed.</li>
   <li><b>Whether the lack of visibly skeptical questions in the Q&A sessions reflects genuinely low skepticism, or simply which analysts get called on</b> can't be determined from the transcripts alone.</li>
@@ -4565,11 +4591,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $172.55, as of Aug 17, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate and FCF base' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "34-48% needed vs. 59.9% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "How the starting cash-flow base changes the answer, from 27.9% to 41.2%" },
+      { id: 'what-would-move-it', label: "What would change Palantir's 34-48%" },
+      { id: 'show-your-work', label: "The math behind 34-48%" },
+      { id: 'fine-print', label: "Limits of the PLTR number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $172.55',
     tags: ['PLTR', 'ReverseDCF', 'Valuation'],
@@ -4586,7 +4612,7 @@ export const POSTS: Post[] = [
   Using a conservative three-year average FCF, the required growth rate (47.7%) is about 80% of the actual five-year pace (59.9%) — "keep doing roughly what you've been doing." Using the most recent trailing-twelve-month FCF instead, the required rate drops to 33.6% — clearly <em>below</em> the historical pace. Palantir's FCF has nearly doubled every year, so which base counts as "normal" makes an unusually large difference here.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">34-48% needed vs. 59.9% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (3-yr avg FCF base, WACC 10%)</span><div class="track"><div class="fill" style="width:80%;background:var(--accent)"></div></div><span class="val">47.7%</span></div>
@@ -4597,7 +4623,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs (2021→2025) from 10-K FY2025 (p.86, p.89) and 10-K FY2023 (p.86, p.89).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: FCF base × discount rate</h2>
+<h2 id="sensitivity">How the starting cash-flow base changes the answer, from 27.9% to 41.2%</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by FCF base and WACC</caption>
@@ -4610,14 +4636,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Given Palantir's high-growth, high-volatility profile, some would argue a 12% discount rate is more appropriate than 10% — in that case, use the right-hand column above.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Palantir's 34-48%</h2>
 <ul class="kicker-list">
   <li><b>The choice of FCF base matters more here than almost anywhere else.</b> Palantir's FCF roughly doubled each year — $697M (2023) → $1,141M (2024) → $2,101M (2025) — and H1 2026 FCF alone ($2.09B) is already close to matching all of FY2025. A three-year average understates this recent momentum; trailing-twelve-month fully credits it. Which is the "right" base depends on whether this growth is structural or temporary.</li>
   <li><b>A 12% discount rate</b> raises the required growth rate to 53.3% (3-year average base) or 38.6% (TTM base).</li>
   <li><b>Palantir's large net-cash position (~$9.4B)</b> is subtracted from market cap in this model, which lowers the required growth rate relative to a company carrying net debt.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 34-48%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -4635,7 +4661,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> a two-stage reverse DCF — free cash flow grows at rate <em>g</em> (solved for) for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the PLTR number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -4674,21 +4700,23 @@ export const POSTS: Post[] = [
       { q: "What is Synopsys's market cap?", a: "As of this article's data, Synopsys's market cap was about $79.1B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Synopsys makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Three-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Synopsys sells the software chips are designed in, and now simulation too" },
+      { id: 'revenue-mix', label: "Design Automation is $5.30B; Design IP is $1.75B" },
+      { id: 'customers-competitors', label: "Chip designers and foundries, and now carmakers and aerospace firms" },
+      { id: 'core-metric', label: "Backlog and R&D intensity: the leading signals" },
+      { id: 'leadership', label: "An internal promotion: Ghazi joined as an applications engineer in 1998" },
+      { id: 'capital-returns', label: "Buybacks went from $1.16B to zero to pay down Ansys debt" },
+      { id: 'failure-scenario', label: "What breaks Synopsys: the AI chip boom fades or design moves in-house" },
+      { id: 'financials', label: "Revenue up 33% in two years, but GAAP operating margin fell to 12.9%" },
+      { id: 'unknowns', label: "Open questions: ownership figures and whether Design IP has turned" },
     ],
     sources: '10-K FY2023–FY2025',
     tags: ['SNPS', 'Semiconductors', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Synopsys makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Synopsys sits in a chokepoint chip designers can't skip, but the roughly $35B Ansys deal has cut its GAAP margin and stopped its buybacks. The recovery is real but still incomplete.</div>
+
+<h2 id="how-it-makes-money">Synopsys sells the software chips are designed in, and now simulation too</h2>
 <p>Synopsys pours about 35% of its revenue back into R&D to build software that semiconductor companies can't design chips without (EDA), pre-built chip building blocks (Design IP), and — since acquiring Ansys in 2025 — simulation software that lets manufacturers virtually test complex products before building them. Chip designers and foundries pay for EDA and IP; automotive, aerospace, and industrial companies pay for simulation software. Either way, customers pay annual license and maintenance fees, and IP customers additionally pay a royalty every time a chip using that IP actually sells.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">R&D investment</div><div class="d">~35% of revenue</div></div>
@@ -4699,7 +4727,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Revenue flows back into R&D, sustaining the cycle. Source: 10-K FY2025, business overview and segment revenue disclosures.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Design Automation is $5.30B; Design IP is $1.75B</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -4727,7 +4755,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>A quarter of revenue rides on China and Korea</b>The combined 25% China+Korea share is exposed to geopolitics — recent U.S. export restrictions on China alone cut China revenue 18% in FY2025.</div>
 <p class="src-note">Source: 10-K FY2025, Note 19 (geographic revenue).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Chip designers and foundries, and now carmakers and aerospace firms</h2>
 <p>A B2B business — chip designers and foundries buy EDA and IP; since the Ansys acquisition, automotive, aerospace, and industrial manufacturers buy simulation software too. One customer accounted for 13.5% of revenue in FY2023 and 12.6% in FY2024 — a concentration risk above the usual 10% threshold. That customer's share appears to have dropped below 10% in FY2025 (not separately disclosed), possibly the same customer behind the "major foundry customer demand slowdown" management referenced on earnings calls.</p>
 <ul class="kicker-list">
   <li><b>Cadence Design Systems</b> — Synopsys's biggest and most direct EDA competitor.</li>
@@ -4736,7 +4764,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Note 19, p.109 (customer concentration).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Backlog and R&D intensity: the leading signals</h2>
 <p>Backlog shows how much future revenue is already under contract but not yet recognized — a leading signal in a licensing business like this.</p>
 <div class="table-wrap">
   <table>
@@ -4751,15 +4779,15 @@ export const POSTS: Post[] = [
 <p>The FY2025 backlog jump reflects the Ansys acquisition's inclusion. R&D intensity has stayed remarkably stable around 34-35% for three straight years — a sign of consistent reinvestment discipline in a sector where technical edge is the main competitive weapon.</p>
 <p class="src-note">Source: 10-K FY2023–FY2025 MD&A, "Total Revenue" sections.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">An internal promotion: Ghazi joined as an applications engineer in 1998</h2>
 <p>CEO Sassine Ghazi has led the company since January 2024 (about 2.5 years) — an internal promotion who joined as an applications engineer in 1998 and rose through the COO role (2020-2024); he's a former Intel design engineer, not a founder. Co-founder Aart J. de Geus stepped down as CEO in January 2024 but remains Executive Chair, still involved in company direction. Insider and institutional ownership percentages aren't in the 10-K and require the DEF 14A for confirmation.</p>
 <p class="src-note">Source: 10-K FY2025, Item 1 (executive officer information, p.13).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Buybacks went from $1.16B to zero to pay down Ansys debt</h2>
 <p><b>Dividend:</b> the company has never paid one since its founding. <b>Buybacks</b> collapsed and then stopped entirely — $1.16B (FY2023) → $45M (FY2024) → $0 (FY2025), suspended to help pay down Ansys acquisition debt. Shares outstanding actually rose 20.7% (154.11M → 185.99M) as new shares were issued to fund the acquisition — real dilution for shareholders through this period. In 2026, after the acquisition-related term loan was paid off in full, the board reauthorized a $2 billion buyback program, and actual repurchases resumed in Q2 FY2026.</p>
 <p class="src-note">Source: 10-K FY2025, Item 5 (dividends, p.32), Note 14 (Stock Repurchase Program, p.93-94); web search — Q1/Q2 FY2026 earnings calls.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Synopsys: the AI chip boom fades or design moves in-house</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the AI semiconductor boom fades, or chip designers switch to in-house tools or open-source alternatives that let them design chips without Synopsys software, this company's entire revenue base gets shaken at once.
@@ -4771,7 +4799,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A (Risk Factors, p.14-30), Item 7 (MD&A, p.40), Item 3 (Legal Proceedings, p.31).</p>
 
-<h2 id="financials">Three-year financials</h2>
+<h2 id="financials">Revenue up 33% in two years, but GAAP operating margin fell to 12.9%</h2>
 <div class="table-wrap">
   <table>
     <caption>$ billions, fiscal years (ended Oct 31)</caption>
@@ -4788,7 +4816,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>GAAP operating income fell 32.5%, but free cash flow actually rose 6.4% — the gap is mostly Ansys-related amortization (~$500M), stock-based compensation (~$890M), and acquisition costs (~$250M), all of which hit GAAP profit but not cash. Combined segment adjusted operating income actually rose 11.5%. The real signal worth watching isn't GAAP operating income — it's total debt jumping from essentially zero to $13.48 billion in a single year.</div>
 <p class="src-note">Source: 10-K FY2025, income statement (p.57), balance sheet (p.56), cash flow statement (p.61).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: ownership figures and whether Design IP has turned</h2>
 <ul class="kicker-list">
   <li><b>Exact insider and institutional ownership percentages</b> aren't in this 10-K — the DEF 14A is needed for confirmation.</li>
   <li><b>Whether the Design IP business has genuinely turned a corner</b> needs Q3-Q4 FY2026 results to confirm.</li>
@@ -4817,17 +4845,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Synopsys's 10-K filings for FY2023 through FY2025 and 8 quarters of earnings call transcripts from August 2024 to May 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "The $35B Ansys deal closed just as everything else went wrong" },
+      { id: 'guidance-record', label: "Synopsys's guidance vs. the next quarter's actuals" },
+      { id: 'timeline', label: "Timeline: January 2024 to May 2026" },
+      { id: 'our-read', label: "A slow, still-incomplete recovery" },
+      { id: 'unknowns', label: "What Synopsys's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 8 quarters of earnings call transcripts, Aug 2024–May 2026',
     tags: ['SNPS', 'Earnings Calls', 'Semiconductors'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">The $35B Ansys deal closed just as everything else went wrong</h2>
 <h3>2023: a stable three-segment leader</h3>
 <p>Through 2023, Synopsys was a steady EDA leader with three segments — Design Automation, Design IP, and Software Integrity (security/quality software) — each posting double-digit growth, with "another record revenue" repeated on nearly every earnings call. In January 2024, Sassine Ghazi became CEO, and that same year the company announced it would acquire engineering-simulation software maker Ansys for roughly $35 billion — the largest deal in company history, and in the engineering-software industry's history.</p>
 
@@ -4849,7 +4877,7 @@ export const POSTS: Post[] = [
   These two years are really two overlapping stories — a successfully closed mega-merger building a new "silicon to systems" vision, and a much worse-than-expected China- and customer-driven crisis in the core business — that happened to peak in the exact same quarter.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Synopsys's guidance vs. the next quarter's actuals</h2>
 <div class="table-wrap">
   <table>
     <caption>5 tracked promises, in order made</caption>
@@ -4866,7 +4894,7 @@ export const POSTS: Post[] = [
 <p><strong>4 of 5 tracked promises met or beaten; 1 (the China revenue outlook) clearly missed.</strong> Quarterly revenue and EPS guidance itself follows a fairly typical conservative-then-slight-beat pattern — but the China and export-control outlook specifically showed a repeated optimism-then-walk-back pattern.</p>
 <p class="src-note">Source: each earnings call's CFO guidance commentary, checked against 10-K FY2025 reported figures.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: January 2024 to May 2026</h2>
 <ul class="timeline">
   <li><span class="date">Jan 2024</span>Sassine Ghazi becomes CEO; Synopsys announces the ~$35B Ansys acquisition, the largest deal in company history.</li>
   <li><span class="date">FY2024</span>Software Integrity segment sold off entirely — three segments become two.</li>
@@ -4877,10 +4905,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Feb–May 2026</span>Q1 and Q2 FY2026 both beat guidance's top end; Q2 raises revenue, margin, EPS, and FCF guidance together; Design IP described as bottoming and recovering.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">A slow, still-incomplete recovery</h2>
 <p>The real story of these two years isn't simply "the merger closed" — it's that a historic acquisition and a genuine crisis in the core China/foundry business happened to collide in the same quarter, testing management's crisis-handling under maximum pressure. The last two quarters' guidance raises are clearly positive, but whether "recovery" reflects real demand improvement or just an easier year-over-year comparison base is something only the next two or three quarters can really confirm.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Synopsys's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The specific reasons behind the company's own admitted "roadmap and resource allocation" mistakes</b> aren't detailed anywhere in the filings reviewed here.</li>
   <li><b>Concrete progress on Ansys integration synergies (cost savings, cross-selling)</b> would require the company's planned September 2026 Investor Day materials, outside this analysis's scope.</li>
@@ -4909,11 +4937,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $413.22, as of Aug 17, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "21.6% needed vs. -0.9% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 18.9% to 28.7%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Synopsys's 21.6%" },
+      { id: 'show-your-work', label: "The math behind 21.6%" },
+      { id: 'fine-print', label: "Limits of the SNPS number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $413.22',
     tags: ['SNPS', 'ReverseDCF', 'Valuation'],
@@ -4930,7 +4958,7 @@ export const POSTS: Post[] = [
   A required growth rate more than 22 percentage points above a flat-to-declining actual track record is an extreme gap. This price only makes sense if the Ansys integration synergies and a Design IP recovery both materialize substantially — neither of which is yet visible in reported results.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">21.6% needed vs. -0.9% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">21.6%</span></div>
@@ -4941,7 +4969,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021 and FY2025 cash flow and income statements. Note: FY2021 revenue reflects the since-divested Software Integrity segment while FY2025 excludes it and includes Ansys — not a perfectly like-for-like comparison, since the portfolio itself changed through M&A and divestiture.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 18.9% to 28.7%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -4956,14 +4984,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the lowest discount rate tested (8%), the required growth rate is 18.9% — still far above the -0.9% four-year actual pace under any reasonable assumption.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Synopsys's 21.6%</h2>
 <ul class="kicker-list">
   <li><b>Switching from FY2025's FCF ($1.35B) to a three-year average ($1.38B)</b> barely moves the required rate (21.6% → 21.4%), since the two figures are close.</li>
   <li><b>FY2025's FCF includes only about 3.5 months of Ansys contribution</b> (the deal closed in July 2025). Once Ansys is reflected for a full year and the promised cost synergies materialize, the underlying "base FCF" could grow — which would lower the required growth rate. That normalized, fully-synergized FCF isn't yet visible in any filing, so it isn't reflected in this calculation.</li>
   <li><b>Changing the terminal growth rate or the projection window</b> (10 years vs. 5 or 15) would also shift the answer — see the calculation details below.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 21.6%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -4981,7 +5009,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the SNPS number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -5020,21 +5048,23 @@ export const POSTS: Post[] = [
       { q: "What is Republic Services's market cap?", a: "As of this article's data, Republic Services's market cap was about $66.2B, on FY2025 revenue of $16.59B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Republic Services makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Republic collects the trash and owns the landfills it goes to" },
+      { id: 'revenue-mix', label: "Two regional groups each earn about a 33% EBITDA margin" },
+      { id: 'customers-competitors', label: "From households to municipal contracts of one to five years" },
+      { id: 'core-metric', label: "Core price vs. volume: real demand or just higher prices?" },
+      { id: 'leadership', label: "A 2013 marketing hire who worked his way up to CEO" },
+      { id: 'capital-returns', label: "Buybacks more than tripled to $870M" },
+      { id: 'failure-scenario', label: "What breaks Republic: regulators restrict landfill access or fees" },
+      { id: 'financials', label: "Revenue up 47% in four years, with growth slowing every year" },
+      { id: 'unknowns', label: "Open questions: why Environmental Solutions margins fell" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 10-Q Q2 FY2026',
     tags: ['RSG', 'Waste Management', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Republic Services makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Landfill ownership gives Republic pricing power that held even through a strike and a slowdown, but revenue growth has slowed every year since 2022.</div>
+
+<h2 id="how-it-makes-money">Republic collects the trash and owns the landfills it goes to</h2>
 <p>Households and businesses pay a subscription or contract fee; Republic's trucks (running out of 377 collection sites) haul that waste to landfills and recycling centers the company itself owns (67% "internalized"), where it earns tipping fees and recycled-material sale revenue. A separate industrial-waste business (Environmental Solutions, 11% of revenue) adds another stream, and cash from both flows to dividends and buybacks.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Households & businesses</div><div class="d">Subscription/contract fees</div></div>
@@ -5046,7 +5076,7 @@ export const POSTS: Post[] = [
 <div class="callout good"><b>The core weapon is the landfill itself</b>New landfill permits are almost never approved, so companies that already own landfills hold durable, hard-to-challenge regional monopoly power — which is exactly what makes steady price increases (Core Price) possible.</div>
 <p class="src-note">Source: 10-K FY2025, p.2, p.9-13 (business overview and revenue sources).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Two regional groups each earn about a 33% EBITDA margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -5062,7 +5092,7 @@ export const POSTS: Post[] = [
 <p>By service line: small-container collection is the largest at 30% of revenue, followed by large-container (19%), residential (18%), Environmental Solutions (11%), landfill tipping fees (12%), transfer (5%), and recycling processing/commodity sales (3%). Geographically, the business is almost entirely domestic — U.S. revenue is about 98.9% ($16,403M), Canada about 1.1% ($188M) — so currency and geopolitical exposure is minimal.</p>
 <p class="src-note">Source: 10-K FY2025, p.9-11 (service line detail), p.98 (Canada revenue).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">From households to municipal contracts of one to five years</h2>
 <p>Customers span residential subscribers, municipalities (1-5 year bid contracts), small businesses (small-container, 1-3 years), large facilities and hotels (large-container, 1-3 years), and industrial clients (Environmental Solutions) — broadly diversified, with no single customer disclosed above 10% of revenue.</p>
 <ul class="kicker-list">
   <li><b>Waste Management</b> — the industry's #1 player, with the largest landfill and collection network and correspondingly the biggest scale advantage.</li>
@@ -5071,7 +5101,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: web search — general industry context.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Core price vs. volume: real demand or just higher prices?</h2>
 <p>Core Price (the actual price increase charged to existing customers) shows pricing power; Volume (actual tonnage processed) shows whether growth reflects real demand or just higher prices on the same or shrinking volume.</p>
 <div class="table-wrap">
   <table>
@@ -5086,11 +5116,11 @@ export const POSTS: Post[] = [
 <p>Volume has now been negative for two straight years — meaning current growth is being carried entirely by pricing power, not by more actual waste being processed. Whether volume recovers is the clearest signal of whether this growth is sustainable.</p>
 <p class="src-note">Source: 10-K FY2025 p.36-37, 10-K FY2023 p.37-38, 10-K FY2022 p.36-37.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">A 2013 marketing hire who worked his way up to CEO</h2>
 <p>CEO Jon Vander Ark joined in 2013 as a marketing executive, became COO, and was named President and CEO around 2021; a former consultant, not a founder — professional management throughout. The largest shareholder is Bill Gates's Cascade Investment, L.L.C., with an overwhelming 35.5% stake; Vanguard (5.9%) and BlackRock (5.1%) are the next largest, both index funds. 12 of the 13 board members are independent directors.</p>
 <p class="src-note">Source: DEF 14A 2026 (filed Mar 24, 2026), CEO background and 5%+ ownership table (as of Mar 9, 2026).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Buybacks more than tripled to $870M</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th></th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
@@ -5104,7 +5134,7 @@ export const POSTS: Post[] = [
 <p>Dividend yield is about 1.25% (based on the Aug 17, 2026 close of $215.26). Republic has raised its dividend for 22 consecutive years, with a 5-year dividend CAGR of 6.3%. A $3 billion buyback program running through 2024-2026 is producing real share-count reduction, not just offsetting employee compensation.</p>
 <p class="src-note">Source: 10-K FY2025, p.2 (dividend/buyback policy), p.67 (financing cash flows).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Republic: regulators restrict landfill access or fees</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If government regulators sharply restrict landfill fees or landfill access (nationalization, forced competitive bidding), the landfill-monopoly weapon this company depends on to raise prices at will disappears — and the entire profit structure comes under pressure at once.
@@ -5116,7 +5146,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.19-22 (Risk Factors), p.63 (balance sheet), p.64 (income statement).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 47% in four years, with growth slowing every year</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -5133,7 +5163,7 @@ export const POSTS: Post[] = [
 <div class="callout good"><b>High earnings quality</b>Free cash flow has stayed at or above net income every year for five years running (101-117% of net income) — real cash is backing reported profit, not just accounting entries. Net debt/adjusted EBITDA actually improved from 2.88x (2023) to 2.56x (2025), consistent with maintaining the A- credit rating.</div>
 <p class="src-note">Source: 10-K FY2025 p.63-64, p.67; 10-K FY2023 p.66-70; 10-K FY2022 p.64.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: why Environmental Solutions margins fell</h2>
 <ul class="kicker-list">
   <li><b>The specific cause of Group 3's (Environmental Solutions) margin decline</b> from 23.5% (2024) to 21.1% (2025) isn't fully explained in the 10-K text alone — recent earnings-call commentary would help.</li>
   <li><b>How much new ventures like Polymer Center and Blue Polymers (plastics circular economy) actually contribute to revenue and profit</b> isn't separately disclosed.</li>
@@ -5162,17 +5192,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Republic Services's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Never missed EPS guidance, even through a 2025 labor strike" },
+      { id: 'guidance-record', label: "Republic's EPS guidance record vs. actual results" },
+      { id: 'timeline', label: "Timeline for Republic Services: October 2023 to August 2026" },
+      { id: 'our-read', label: "Pricing power absorbed the hit" },
+      { id: 'unknowns', label: "What Republic's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026',
     tags: ['RSG', 'Earnings Calls', 'Guidance Discipline'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Never missed EPS guidance, even through a 2025 labor strike</h2>
 <h3>2023: confident</h3>
 <p>On the Q3 2023 call, CEO Jon Vander Ark opened with "our strong third quarter results." M&A lifted revenue 6%, and a tax benefit let the company actually raise its annual EPS guidance to $5.46-$5.49. The Q4 call closed the year with "we outpaced expectations throughout the year" — and 2023's actual EPS ($5.61) beat even that raised guidance.</p>
 
@@ -5197,7 +5227,7 @@ export const POSTS: Post[] = [
   This wasn't a coincidence — pricing power passing cost inflation through to customers, combined with a habit of conservative revenue guidance, let Republic Services protect its EPS promise through an actual labor strike without ever missing it.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Republic's EPS guidance record vs. actual results</h2>
 <div class="table-wrap">
   <table>
     <caption>Annual guidance vs. actual, by fiscal year</caption>
@@ -5213,7 +5243,7 @@ export const POSTS: Post[] = [
 <p><strong>Revenue guidance missed slightly in 2 of the 3 completed years; EPS guidance was never missed, across all 3 years.</strong> That's not a coincidence — it reflects the combination of Core Price passing cost increases through to customers, and a habit of conservative revenue guidance that leaves room to protect the profit number specifically.</p>
 <p class="src-note">Source: each quarter's earnings call transcript (2024-02-13, 2024-07-24, 2025-02-17, 2025-07-29, 2026-02-17, 2026-08-06), checked against 10-K FY2025, p.33.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Republic Services: October 2023 to August 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023</span>Q3 2023 earnings: "our strong third quarter results"; EPS guidance raised on a tax benefit.</li>
   <li><span class="date">Jul 2024</span>Q2 2024 guidance revision: revenue target lowered while EPS target raised sharply — profit protected even as the top line softened.</li>
@@ -5223,10 +5253,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 2026</span>Q2 2026 earnings: full confidence restored; annual guidance raised to $172.0B-$173.0B revenue.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Pricing power absorbed the hit</h2>
 <p>The clearest lesson from these three years is how deliberately Republic Services protects its profit promise over its revenue promise. Even through an actual labor strike and a real cyclical slowdown in 2025, EPS guidance was never touched — only revenue guidance moved, and even then only modestly. That's a structural advantage rooted in landfill-based pricing power, not luck.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Republic's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The exact scope of the 2025 strike</b> (which regions, how many workers affected) isn't specified in any earnings call reviewed here — separate labor-negotiation press releases would be needed.</li>
   <li><b>The specific single cause of the July 2024 revenue guidance cut</b> is less clearly explained than 2025's strike — no single named event is cited.</li>
@@ -5255,11 +5285,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $215.26, as of Aug 17, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "12.4% needed vs. 13.1% actual free-cash-flow growth, boosted by acquisitions" },
+      { id: 'sensitivity', label: "From 7.2% to 16.7%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Republic's 12.4%" },
+      { id: 'show-your-work', label: "The math behind 12.4%" },
+      { id: 'fine-print', label: "Limits of the RSG number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $215.26',
     tags: ['RSG', 'ReverseDCF', 'Valuation'],
@@ -5276,7 +5306,7 @@ export const POSTS: Post[] = [
   A required growth rate of 12.4% sits just below the actual five-year FCF CAGR of 13.1%. But that historical pace leaned heavily on large acquisitions (notably the 2022 US Ecology deal) — so this price implicitly assumes similar M&A activity continues, not just organic growth.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">12.4% needed vs. 13.1% actual free-cash-flow growth, boosted by acquisitions</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:95%;background:var(--accent)"></div></div><span class="val">12.4%</span></div>
@@ -5286,7 +5316,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021–FY2025 cash flow statements (FCF = operating cash flow − capex) and income statements.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 7.2% to 16.7%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -5300,14 +5330,14 @@ export const POSTS: Post[] = [
 </div>
 <p>At a lower discount rate (7%), the required growth rate falls clearly below the historical pace; at a higher one (11%), it climbs above it. RSG's A- credit rating and large, stable-cash-flow profile support the 9% base case.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Republic's 12.4%</h2>
 <ul class="kicker-list">
   <li><b>Using a three-year (2023–2025) average FCF ($2.159B) instead of 2025 alone ($2.409B)</b> raises the required growth rate from 12.4% to 13.8% — because 2025's FCF was 11.6% above that average, a lower starting base requires faster future growth to reach the same target.</li>
   <li><b>An 8% discount rate</b> requires 9.9% growth; a 10% rate requires 14.6%.</li>
   <li><b>The 13.1% historical FCF CAGR itself leaned on large M&A</b> (notably the 2022 US Ecology acquisition) rather than organic growth alone — whether similar deal activity continues is a key question for whether this pace repeats.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 12.4%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -5324,7 +5354,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR:</strong> 5-year FCF CAGR = ($2,409M / $1,470M)^(1/4) − 1 = 13.14%. 5-year revenue CAGR = ($16,591M / $11,295M)^(1/4) − 1 = 10.09%. A full 10-year CAGR wasn't calculable due to lack of pre-2016 data.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the RSG number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -5363,21 +5393,23 @@ export const POSTS: Post[] = [
       { q: "What is Coca-Cola's market cap?", a: "As of this article's data, Coca-Cola's market cap was about $374.2B, on FY2025 revenue of $47.9B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Coca-Cola makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Coca-Cola sells concentrate; bottlers make and deliver the drinks" },
+      { id: 'revenue-mix', label: "North America is 40.8% of sales, and Latin America earns a 59.1% margin" },
+      { id: 'customers-competitors', label: "Bottlers are the customers, and one is 10% of revenue" },
+      { id: 'core-metric', label: "Unit case volume shows whether people are really drinking more" },
+      { id: 'leadership', label: "Braun took over from Quincey on March 31, 2026" },
+      { id: 'capital-returns', label: "Sixty-four years of dividend increases, with buybacks cut to $746M" },
+      { id: 'failure-scenario', label: "What breaks Coca-Cola: consumers lose their attachment to the brand" },
+      { id: 'financials', label: "Revenue growth slowed from 11.3% to 1.9%" },
+      { id: 'unknowns', label: "Open questions: the 2024 cash-flow drop and Braun's strategy" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 10-Q Q1 FY2026',
     tags: ['KO', 'Consumer Staples', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Coca-Cola makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Coca-Cola owns the brand and leaves the heavy assets to bottlers, which is why margins are high. The catch is that revenue growth has slowed to under 2% a year.</div>
+
+<h2 id="how-it-makes-money">Coca-Cola sells concentrate; bottlers make and deliver the drinks</h2>
 <p>Coca-Cola owns almost no bottling plants or delivery trucks. It produces concentrate and syrup and drives brand marketing from headquarters, then sells that concentrate to independent bottlers — some partially owned, most fully independent — who add water and sugar, bottle the finished product, and distribute it through stores, restaurants, vending machines, and e-commerce to consumers. Because the capital-intensive manufacturing risk sits with the bottlers, Coca-Cola's own gross margin runs at an unusually high 61.6% (2025).</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Coca-Cola HQ</div><div class="d">Concentrate production, brand & marketing</div></div>
@@ -5388,7 +5420,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Money flows back to Coca-Cola two ways: concentrate sale revenue (about 60% of revenue) and equity income from its ownership stakes in bottlers ($2,031M in 2025). Source: 10-K FY2025, Item 7 MD&A; Note 3 (equity income).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">North America is 40.8% of sales, and Latin America earns a 59.1% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -5417,7 +5449,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Currency-sensitive</b>International revenue remains a majority at about 60%, exposing results to currency swings — in 2025 alone, unfavorable exchange rates cut revenue growth by 2 percentage points.</div>
 <p class="src-note">Source: 10-K FY2025, Item 8, Note 20 (Geographic Data).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Bottlers are the customers, and one is 10% of revenue</h2>
 <p>Coca-Cola doesn't sell directly to consumers — its real customers are independent bottlers (B2B). One bottler accounted for 10% of 2025 revenue (reflected in the EMEA and Asia Pacific segments), a customer-concentration level not previously disclosed.</p>
 <ul class="kicker-list">
   <li><b>PepsiCo</b> — the biggest direct rival, with a more diversified portfolio thanks to its Frito-Lay snacks business.</li>
@@ -5426,7 +5458,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1, Business — Competition (p.4); Note 20 (bottler concentration, p.116).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Unit case volume shows whether people are really drinking more</h2>
 <p>Unit case volume shows how much people are actually drinking. Revenue can grow through price increases alone — without rising volume, it's impossible to tell whether growth is "real" demand or just higher prices absorbed by the same or fewer drinkers.</p>
 <div class="table-wrap">
   <table>
@@ -5438,11 +5470,11 @@ export const POSTS: Post[] = [
 <p>Volume growth has decelerated every year, from 4.5% to 0.3%, even as revenue kept climbing — most of that growth is coming from price and mix, not more drinks sold. A recent reversal is worth noting: Q2 FY2026 volume grew 5% and organic revenue grew 6% — the strongest volume growth in five years — and the company raised its FY2026 organic growth guidance to about 5% as a result.</p>
 <p class="src-note">Source: 10-K FY2025, p.44; 10-K FY2023, p.43; 10-K FY2022, p.44; web search — Q2 FY2026 earnings call (Jul 28, 2026).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Braun took over from Quincey on March 31, 2026</h2>
 <p>Henrique Braun, formerly Chief Operating Officer, became CEO on March 31, 2026, succeeding James Quincey, who led the company for nearly nine years (May 2017–March 2026) and moved to Executive Chairman. Professional management throughout — no founding family involvement. The largest shareholder is Warren Buffett's Berkshire Hathaway, holding 400 million shares (9.29%); Vanguard (8.61%) and BlackRock (7.28%) follow, with the top three combined owning about 25%. The chair and CEO roles were formally split starting March 31, 2026 — a modest governance-strengthening step.</p>
 <p class="src-note">Source: DEF 14A 2026, cover summary (CEO succession), Security Ownership section; 10-K FY2025, Item 1, Human Capital.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Sixty-four years of dividend increases, with buybacks cut to $746M</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th></th><th>Value</th></tr></thead>
@@ -5457,7 +5489,7 @@ export const POSTS: Post[] = [
 <p>Coca-Cola is a "Dividend King," having raised its dividend for 64 consecutive years as of the February 2026 increase. Buyback spending, however, fell sharply from 2024 to 2025 — a sign that the dividend takes clear priority over share repurchases in the company's capital-return hierarchy.</p>
 <p class="src-note">Source: 10-K FY2025, Item 7 MD&A, "Dividends" and "Issuances of Stock and Treasury Stock Purchases" (p.55).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Coca-Cola: consumers lose their attachment to the brand</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If consumers worldwide stop feeling emotional attachment and trust toward the Coca-Cola brand, bottlers gain a real reason to switch to other beverages, and the basis for charging premium concentrate prices disappears along with it.
@@ -5469,7 +5501,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors (p.12-25), Item 3 Legal Proceedings (IRS litigation detail).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue growth slowed from 11.3% to 1.9%</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -5486,7 +5518,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2024's operating margin fell sharply to 21.2% due to a one-time contingent-consideration remeasurement tied to the fairlife acquisition; margin rebounded to 28.7% in 2025. But 2025 operating income rose 37.7% while free cash flow grew only 11.7% — a widening gap between accounting profit and actual cash generation, worth checking against working-capital changes.</div>
 <p class="src-note">Source: 10-K FY2025 Item 8 (2023-2025); 10-K FY2023 Item 8 (2023 balance sheet); 10-K FY2022 Item 8 (2021-2022 figures).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the 2024 cash-flow drop and Braun's strategy</h2>
 <ul class="kicker-list">
   <li><b>The detailed breakdown of 2024's FCF collapse</b>, specifically the "-$6,234M working capital" line, isn't specified further in the available data.</li>
   <li><b>New CEO Henrique Braun's mid- and long-term strategy</b> (portfolio changes, M&A direction) hasn't been disclosed yet — future earnings calls are the place to check.</li>
@@ -5515,17 +5547,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Coca-Cola's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A guidance-raising 2024, a deliberate 2025 reset, and a CEO's farewell" },
+      { id: 'guidance-record', label: "Coca-Cola's stated guidance vs. results" },
+      { id: 'timeline', label: "Timeline for The Coca-Cola Company: February 2024 to July 2026" },
+      { id: 'our-read', label: "Raising four times, then resetting to half the pace" },
+      { id: 'unknowns', label: "What Coca-Cola's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['KO', 'Earnings Calls', 'CEO Transition'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A guidance-raising 2024, a deliberate 2025 reset, and a CEO's farewell</h2>
 <h3>Early 2024: a comfortable start, then four straight raises</h3>
 <p>2024 organic revenue growth guidance was set at a modest 6-7%. Actual results kept beating that bar, and the company raised guidance four consecutive quarters — 6-7% → 8-9% → 9-10% → about 10% — finishing the year with an actual Q4 growth rate of 14%. Confidence-tracking across the twelve quarters we reviewed hit its highest point right here, in Q1 2024.</p>
 
@@ -5550,7 +5582,7 @@ export const POSTS: Post[] = [
   The 2025-2026 guidance reset reads less like a weakening business and more like a return to normal growth after 2024's unusually strong, largely price-driven year — and the leadership transition appears to be moving past its cautious phase.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Coca-Cola's stated guidance vs. results</h2>
 <div class="table-wrap">
   <table>
     <caption>Organic revenue growth guidance vs. actual, by fiscal year</caption>
@@ -5565,7 +5597,7 @@ export const POSTS: Post[] = [
 <p><strong>No guidance withdrawal found across the entire period.</strong> 2024 was a textbook "guide conservatively, then beat and raise" pattern. 2025 was different in character — rather than beating a low bar repeatedly, the company hit its own guidance band almost exactly every quarter, which reads less like declining confidence and more like a deliberate reset followed by disciplined execution.</p>
 <p class="src-note">Source: earnings call transcripts, Q4 2023 through Q2 2026, each quarter's stated guidance.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for The Coca-Cola Company: February 2024 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Feb 2024</span>Q4 2023 earnings: 2024 organic growth guidance set at a modest 6-7%.</li>
   <li><span class="date">Apr–Oct 2024</span>Guidance raised four consecutive quarters (8-9% → 9-10% → ~10%); confidence peaks in Q1 2024.</li>
@@ -5577,10 +5609,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026</span>Q2 2026 earnings: organic revenue growth +6%, volume +5% — the strongest rebound of the three years; guidance raised to the top of its range.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Raising four times, then resetting to half the pace</h2>
 <p>The clearest way to read these three years is a company deliberately resetting expectations after an unusually strong, price-driven 2024, using a leadership transition as the moment to reset the bar lower and then rebuild credibility by hitting it exactly. Whether the language changes around diversity commitments reflect a genuine policy shift or simply cautious disclosure management is a separate question this data alone can't answer.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Coca-Cola's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The specific internal reasoning behind the exact 5-6% FY2025 guidance band</b> isn't stated in the call transcripts beyond general commentary.</li>
   <li><b>The precise trigger behind the "Hispanic consumer" softness</b> was never specified beyond a brief "last year's temporary issue" reference on a later call.</li>
@@ -5610,11 +5642,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $86.98, as of Aug 17, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "13.3% needed vs. 5.5% revenue growth and 7.5% operating income growth" },
+      { id: 'sensitivity', label: "From 10.8% to 19.7%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Coca-Cola's 13.3%" },
+      { id: 'show-your-work', label: "The math behind 13.3%" },
+      { id: 'fine-print', label: "Limits of the KO number" },
     ],
     sources: 'As of Aug 17, 2026 · Price used: $86.98',
     tags: ['KO', 'ReverseDCF', 'Valuation'],
@@ -5631,7 +5663,7 @@ export const POSTS: Post[] = [
   A required growth rate more than double the five-year revenue pace, and well above the company's own 5-6% 2026 profit guidance, is a real gap. This price only makes sense with sustained acceleration well beyond anything Coca-Cola has recently delivered or projected.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">13.3% needed vs. 5.5% revenue growth and 7.5% operating income growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (adjusted FCF base, WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">13.3%</span></div>
@@ -5642,7 +5674,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021 and FY2025 income statements. 2026 EPS guidance from the Q4 FY2025 earnings call (CFO John Murphy, Feb 2026).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate or FCF base moves?</h2>
+<h2 id="sensitivity">From 10.8% to 19.7%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -5657,14 +5689,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the lowest discount rate tested (8%), the required growth rate using adjusted FCF is 10.82% — still nearly double the 5.5% five-year revenue pace.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Coca-Cola's 13.3%</h2>
 <ul class="kicker-list">
   <li><b>The choice of FCF base changes the answer dramatically.</b> Coca-Cola experienced two large one-time cash outflows in recent years — an IRS tax escrow deposit and a fairlife acquisition milestone payment. Using the company's own "adjusted FCF" ($11.4B in 2025, excluding those items) gives a required growth rate of 13.3%; using the raw GAAP cash flow statement figure ($5.3B) instead pushes the required rate to 23.6%. Either way, the market's expectation sits well above historical performance.</li>
   <li><b>Lowering the terminal growth rate</b> from 2.5% to a more conservative 2.0% raises the required growth rate slightly.</li>
   <li><b>Share count and net debt figures used here are year-end 2025</b> — any 2026 buybacks or new borrowing could shift the current numbers modestly.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 13.3%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -5685,7 +5717,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR:</strong> 5-year revenue CAGR = ($47,941M / $38,655M)^(1/4) − 1 = 5.53%. 5-year operating income CAGR = ($13,762M / $10,308M)^(1/4) − 1 = 7.49% (both 10-K FY2025 and FY2021 income statements, FY2021-FY2025).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the KO number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -5724,21 +5756,23 @@ export const POSTS: Post[] = [
       { q: 'Does Chevron make more money from drilling or refining?', a: 'Drilling and extraction (upstream) — it accounts for about 83% of after-tax profit, with refining and marketing (downstream) contributing far less.' },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Chevron makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Chevron extracts oil and gas, then refines part of it" },
+      { id: 'revenue-mix', label: "Upstream is 29% of revenue but 83% of profit" },
+      { id: 'customers-competitors', label: "From drivers at the pump to airlines and traders" },
+      { id: 'core-metric', label: "Production and reserve replacement show whether the base is growing" },
+      { id: 'leadership', label: "Wirth: eight years as CEO and a 30-year Chevron veteran" },
+      { id: 'capital-returns', label: "A $6.84 dividend that was 104% of 2025 net income" },
+      { id: 'failure-scenario', label: "What breaks Chevron: oil prices stay low for a long time" },
+      { id: 'financials', label: "Revenue peaked at $236B in 2022 and has fallen since" },
+      { id: 'unknowns', label: "Open questions: what Guyana adds and 2026 production" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q Q2 FY2026 · 2026 Proxy Statement',
     tags: ['CVX', 'Energy', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Chevron makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Chevron's profit comes overwhelmingly from pulling oil out of the ground, so oil prices decide the year. The Hess deal adds Guyana growth, while the 2025 dividend already exceeded net income.</div>
+
+<h2 id="how-it-makes-money">Chevron extracts oil and gas, then refines part of it</h2>
 <p>Chevron's upstream business extracts crude oil and natural gas from the ground — only 29% of revenue, but 83% of after-tax profit. That crude flows internally to the downstream business, which refines it into gasoline, diesel, and chemical products — 71% of revenue, but only 17% of profit, since crude feedstock costs eat up most of refining revenue. Upstream also sells crude, natural gas, and LNG directly to traders and power generators.</p>
 <div class="flow">
   <div class="flow-box center"><div class="t">Upstream</div><div class="d">Extraction — 29% of revenue, 83% of profit</div></div>
@@ -5749,7 +5783,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Upstream also sells crude, gas, and LNG directly to traders and power generators. Source: 10-K FY2025, p.81-82 (Note 14, Operating Segments).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Upstream is 29% of revenue but 83% of profit</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue and after-tax profit by segment — FY2025</caption>
@@ -5775,7 +5809,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Over half the business is international</b>Operations in Kazakhstan, Australia (LNG), Nigeria, and elsewhere expose Chevron to currency swings and country-specific political risk, including sanctions and resource nationalization.</div>
 <p class="src-note">Source: 10-K FY2025, p.81-83 (Note 14).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">From drivers at the pump to airlines and traders</h2>
 <p>Customers range from individual drivers (B2C) at gas stations to airlines, shippers, chemical companies, and power generators (B2B). Crude and natural gas mostly go to traders and refiners; LNG goes to Asian utilities under long-term contracts. No single customer accounts for 10% or more of revenue.</p>
 <ul class="kicker-list">
   <li><b>ExxonMobil</b> — Chevron's largest U.S. competitor, bigger than Chevron in both upstream and downstream.</li>
@@ -5784,7 +5818,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.6-7 (customer/competitive context).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Production and reserve replacement show whether the base is growing</h2>
 <p>Global net oil-equivalent production shows whether Chevron's future revenue base is actually growing. Reserve replacement ratio shows whether it's finding new oil and gas as fast as it's extracting it.</p>
 <div class="table-wrap">
   <table>
@@ -5798,11 +5832,11 @@ export const POSTS: Post[] = [
 <p>The 2025 jump was driven mostly by the Hess acquisition. Reserve replacement ratio hit 158% in 2025 — meaning more new reserves were confirmed that year than were extracted — but the 5-year average (91%) and 10-year average (95%) both sit below 100%, meaning Chevron hasn't fully replaced what it extracts over the longer term.</p>
 <p class="src-note">Source: 10-K FY2025, p.39, p.46.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Wirth: eight years as CEO and a 30-year Chevron veteran</h2>
 <p>CEO Michael K. Wirth has been Chairman and CEO since 2018 (his 8th year), a 30-plus-year Chevron veteran — not a founder (the company was founded in 1926). The board and executive team (20 people) together own just 0.56% of shares. The largest holders — Vanguard (8.56%), State Street (7.50%), and BlackRock (6.60%) — are all index funds; no individual or family controls the company.</p>
 <p class="src-note">Source: 2026 Proxy Statement (DEF 14A), p.89 (ownership table).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A $6.84 dividend that was 104% of 2025 net income</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th></th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
@@ -5817,7 +5851,7 @@ export const POSTS: Post[] = [
 <p>2025's dividend total exceeded net income (103.7% payout) — driven by Hess acquisition costs and lower oil prices reducing net income, not by an unsustainable dividend. On an FCF basis, the payout (76.9%) remains manageable. Buyback spending fell 21% year over year as the company moderated its pace amid rising debt. Chevron has raised its per-share dividend for 38 consecutive years through 2025; the January 2026 quarterly dividend was raised to $1.78/share ($7.12 annualized).</p>
 <p class="src-note">Source: 10-K FY2025, p.42, p.47-48, p.68.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Chevron: oil prices stay low for a long time</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the world sustains dramatically depressed oil prices for an extended period, most of the money Chevron makes disappears along with it.
@@ -5829,7 +5863,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.21, p.23-24, p.36-38.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue peaked at $236B in 2022 and has fallen since</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -5847,7 +5881,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>Total debt jumped 66% year over year in 2025 — from $24.5B to $40.8B — reflecting debt assumed and new borrowing tied to the roughly $48B (total transaction value) Hess acquisition, which closed via stock exchange. The net debt ratio rose from 10.4% to 15.6%; how quickly this gets paid down is worth tracking.</p>
 <p class="src-note">Source: 10-K FY2025, p.65, p.68; 10-K FY2023, p.61, p.64 (2021-2022 figures).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: what Guyana adds and 2026 production</h2>
 <ul class="kicker-list">
   <li><b>Exactly how much profit the newly integrated Guyana (Hess) assets contribute</b> isn't broken out in this annual 10-K alone — a full FY2026 will be needed.</li>
   <li><b>Whether 2026's full-year production guidance (+7-10% year over year) is met</b> can't be confirmed with three quarters still to go.</li>
@@ -5876,17 +5910,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Chevron's 10-K filings for FY2021 through FY2025, its 2026 Proxy Statement, and 12 quarters of earnings call transcripts from October 2023 to June 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Thirteen months stuck in a fight over the Hess deal" },
+      { id: 'guidance-record', label: "Chevron's stated targets vs. what it delivered" },
+      { id: 'timeline', label: "Timeline: October 2023 to August 2025 and after" },
+      { id: 'our-read', label: "From total confidence to a reversal" },
+      { id: 'unknowns', label: "What Chevron's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 2026 Proxy Statement · 12 quarters of earnings call transcripts, Oct 2023–Jun 2026',
     tags: ['CVX', 'Earnings Calls', 'M&A'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Thirteen months stuck in a fight over the Hess deal</h2>
 <h3>October 2023: total confidence</h3>
 <p>Chevron announced it would acquire Hess Corporation in an all-stock deal worth about $53 billion — including Hess's stake in the giant Stabroek block offshore Guyana. On the Q3 2023 call, management said it expected to close "in the first half of 2024." The Q4 2023 call went further: the company was "excited about the pending Hess acquisition."</p>
 
@@ -5909,7 +5943,7 @@ export const POSTS: Post[] = [
   Chevron took real time on the one risk genuinely outside its control (third-party arbitration) but kept nearly every promise it could directly execute — cost savings, shareholder vote timing, 38 consecutive years of dividend increases.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Chevron's stated targets vs. what it delivered</h2>
 <div class="table-wrap">
   <table>
     <caption>7 tracked promises, in order made</caption>
@@ -5928,7 +5962,7 @@ export const POSTS: Post[] = [
 <p><strong>5 of 7 fully met, 1 largely met, 1 clearly missed.</strong> The one clear miss — acquisition closing timing — was the single promise genuinely outside Chevron's control. Everything the company could directly execute (cost savings, dividends, shareholder votes) was kept almost without exception.</p>
 <p class="src-note">Source: each cell's respective earnings call and 10-K citation, listed above.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: October 2023 to August 2025 and after</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023</span>Hess acquisition announced, ~$53B all-stock deal.</li>
   <li><span class="date">Dec 2023</span>FTC second request — deeper antitrust review begins.</li>
@@ -5940,10 +5974,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 2025 onward</span>Integration proceeds smoothly; cost synergy targets raised.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">From total confidence to a reversal</h2>
 <p>The clearest lesson from these 21 months is the importance of separating what a company controls from what it doesn't. Chevron's execution on everything within its own authority — cost savings, shareholder votes, dividend continuity — was essentially flawless. The one genuine miss, the acquisition's closing timeline, was hostage to a third-party arbitration process Chevron had no ability to accelerate. Separately, walking back the 2050 net-zero target in the same filing suggests the company's priorities are shifting toward near-term execution over long-term climate commitments.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Chevron's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Exactly how much incremental free cash flow the Guyana and Bakken (Hess) assets will generate over the coming years</b> isn't confirmable without a full FY2026 fiscal year behind it.</li>
   <li><b>Whether Chevron will introduce a new long-term climate target to replace the walked-back 2050 net-zero goal</b> isn't knowable from this data — the next Investor Day or FY2026 10-K would clarify.</li>
@@ -5972,11 +6006,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $207.02, as of Aug 19, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "9.2% needed vs. management's own 10%+ growth target" },
+      { id: 'sensitivity', label: "From 6.9% to 15.3%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Chevron's 9.2%" },
+      { id: 'show-your-work', label: "The math behind 9.2%" },
+      { id: 'fine-print', label: "Limits of the CVX number" },
     ],
     sources: 'As of Aug 19, 2026 · Price used: $207.02',
     tags: ['CVX', 'ReverseDCF', 'Valuation'],
@@ -5993,7 +6027,7 @@ export const POSTS: Post[] = [
   The required growth rate (9.2%) sits almost exactly in line with what management itself stated on the Q2 FY2026 earnings call: "2030 objectives... FCF growth averaging greater than 10% per year... at flat commodity prices." The question isn't whether the market's ask is unreasonable — it's whether Chevron delivers on its own stated target.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">9.2% needed vs. management's own 10%+ growth target</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:92%;background:var(--accent)"></div></div><span class="val">9.2%</span></div>
@@ -6004,7 +6038,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. The negative 5-year FCF CAGR reflects 2022's abnormal spike ($37.6B) from Russia-Ukraine-war-driven oil prices (2021 $21.1B → 2022 $37.6B → 2025 $16.6B) — commodity companies' multi-year CAGRs get skewed by the price cycle, so revenue CAGR and management's own explicit guidance are more useful comparison points. Source: 10-K FY2021-FY2025 cash flow statements; Q2 FY2026 earnings call.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 6.9% to 15.3%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -6019,14 +6053,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Chevron is treated as a large, stable S&P 500 company with a 9% base-case discount rate. The required growth rate swings meaningfully across the range tested, from 6.9% to 15.3%.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Chevron's 9.2%</h2>
 <ul class="kicker-list">
   <li><b>Using trailing-twelve-month FCF ($27.0B, H2 2025 + H1 2026) instead of FY2025 alone</b> sharply lowers the required growth rate, from 9.2% to 2.8%. That TTM figure sits 57.6% above the three-year average, though, likely reflecting one-time working-capital effects from early Hess integration — a candidate for normalization rather than a clean base case.</li>
   <li><b>A 12% discount rate</b> raises the required growth rate to 15.3%, a meaningfully more demanding bar.</li>
   <li><b>Lowering the terminal growth rate</b> from 2.5% to a more conservative 2.0% raises the required growth rate slightly.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 9.2%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -6041,7 +6075,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the CVX number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -6080,21 +6114,23 @@ export const POSTS: Post[] = [
       { q: "What is PepsiCo's market cap?", a: "As of this article's data, PepsiCo's market cap was about $191.3B, on FY2025 revenue of $93.9B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How PepsiCo makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "PepsiCo makes snacks and drinks and delivers many of them itself" },
+      { id: 'revenue-mix', label: "North America beverages earn a 3.9% margin; snacks earn 22.4%" },
+      { id: 'customers-competitors', label: "Walmart alone is about 14% of revenue" },
+      { id: 'core-metric', label: "Volume vs. price: are people really buying more?" },
+      { id: 'leadership', label: "Laguarta: a 1996 snack marketer who became CEO in 2018" },
+      { id: 'capital-returns', label: "Fifty-four years of dividend increases and a 4.2% yield" },
+      { id: 'failure-scenario', label: "What breaks PepsiCo: GLP-1 drugs and private labels" },
+      { id: 'financials', label: "Revenue grew just 0.4% in 2024 and 2.3% in 2025" },
+      { id: 'unknowns', label: "Open questions: PBNA's margin, poppi and Siete" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['PEP', 'Consumer Staples', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How PepsiCo makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>PepsiCo's snack business earns healthy margins while its North America beverage business earns 3.9%. Growth has stalled, and one customer, Walmart, is about 14% of revenue.</div>
+
+<h2 id="how-it-makes-money">PepsiCo makes snacks and drinks and delivers many of them itself</h2>
 <p>PepsiCo buys agricultural inputs — potatoes, corn, sugar, oils — and turns them into snacks and beverage concentrate at its own factories. Products reach stores through PepsiCo's own delivery network and independent bottlers, who pay a royalty on concentrate rather than owning the whole supply chain — letting PepsiCo expand internationally without the capital burden of owning every bottling plant. Brand marketing investment drives repeat purchases and shelf power, which helps new products get placed, reinforcing the brand — a self-feeding loop.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Agricultural suppliers</div><div class="d">Potatoes, corn, sugar, oil</div></div>
@@ -6105,7 +6141,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, Item 1, Business Overview.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">North America beverages earn a 3.9% margin; snacks earn 22.4%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -6126,7 +6162,7 @@ export const POSTS: Post[] = [
 <p>Regionally, the U.S. is 56% of revenue, international 44% — including Mexico, Russia, Canada, China, the UK, Brazil, and South Africa combined at 25%. Individual country breakdowns beyond that aren't disclosed. Notably, Russia is only 5% of consolidated revenue, but 20% of the company's total cash is trapped there — a concentrated currency and geopolitical risk.</p>
 <p class="src-note">Source: 10-K FY2025, p.34, p.38.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Walmart alone is about 14% of revenue</h2>
 <p>A mix of B2B (retail distribution) and B2C. Walmart (plus Sam's Club) accounts for about 14% of 2025 consolidated revenue — a real single-customer concentration, and losing this customer would hit both PFNA and PBNA hard.</p>
 <ul class="kicker-list">
   <li><b>Coca-Cola</b> — the perennial #2 vs. #1 in U.S. beverages (Pepsi 16% share vs. Coca-Cola's 20%), with Coca-Cola stronger internationally in carbonated drinks.</li>
@@ -6135,7 +6171,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.5-6 (competitive context, U.S. beverage share).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Volume vs. price: are people really buying more?</h2>
 <p>Organic revenue growth can come from price increases alone. Volume shows whether people are actually buying more — without it, rising revenue could just mean fewer purchases at higher prices.</p>
 <div class="table-wrap">
   <table>
@@ -6150,15 +6186,15 @@ export const POSTS: Post[] = [
 <p>Volume has been negative for three straight years. Nearly all of the past two years' revenue growth has come from price increases — if pricing power runs out, growth could stall entirely.</p>
 <p class="src-note">Source: 10-K FY2021–FY2025, "Net Revenue and Organic Revenue Growth" total rows, respective years.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Laguarta: a 1996 snack marketer who became CEO in 2018</h2>
 <p>CEO Ramon Laguarta has led PepsiCo since 2018 (8th year), also Chairman since 2019 — joined in 1996 in Spanish snack marketing, rose through European leadership, an internal promotion, not a founder (PepsiCo itself was formed in 1965 through the merger of Pepsi-Cola and Frito-Lay). The largest shareholders are Vanguard (10.1%) and BlackRock (8.2%), both index funds. All 21 directors and executives together own about 1.96 million shares — just 0.14% of the roughly 1.36 billion shares outstanding, an unusually low insider stake.</p>
 <p class="src-note">Source: 10-K FY2025, p.28; DEF 14A 2026, p.95, p.97.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Fifty-four years of dividend increases and a 4.2% yield</h2>
 <p>The 2026 dividend is $5.92/share, up 4% year over year — 54 consecutive years of increases (a Dividend King), yielding about 4.2% at the current price. The 2025 payout ratio (dividends relative to net income) was around 93%, unusually high. A $10 billion buyback program from 2022 expired in February 2026, replaced by a new $10 billion program running 2026-2030 — though planned 2026 buybacks are only about $1.0 billion, small next to the dividend. Diluted weighted-average shares fell only modestly, 1.383 billion (2023) to 1.373 billion (2025) — buybacks are roughly offsetting compensation-related dilution, not aggressively shrinking the share count.</p>
 <p class="src-note">Source: 10-K FY2025, Item 5, p.30-31, p.57.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks PepsiCo: GLP-1 drugs and private labels</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If people get used to GLP-1 weight-loss drugs and eat fewer snacks and less soda, while retailers simultaneously push private-label products that crowd Pepsi off shelves, the price-driven growth engine that's carried the company for two years stalls all at once.
@@ -6170,7 +6206,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.10 (Risk Factors), p.34-35, p.42.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue grew just 0.4% in 2024 and 2.3% in 2025</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -6187,7 +6223,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2025 operating income fell 11% year over year, but free cash flow actually rose 9%. The gap is the non-cash $1.5B Rockstar brand impairment — underlying cash generation actually improved. Debt has grown for five straight years, though, reaching $49.2B in 2025 (up 22% from 2021), worth continuing to track.</div>
 <p class="src-note">Source: 10-K FY2025 income statement (p.56), balance sheet (p.60), FCF reconciliation (p.49); 10-K FY2022 (2021-2022 figures).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: PBNA's margin, poppi and Siete</h2>
 <ul class="kicker-list">
   <li><b>Whether PBNA's margin collapse is one-time (Rockstar-related) or structurally persists post-poppi</b> isn't clear until Q3 2026 results.</li>
   <li><b>Exactly when and how much the poppi ($1.95B) and Siete ($1.2B) acquisitions will contribute to revenue and profit</b> requires future earnings calls to confirm.</li>
@@ -6216,17 +6252,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from PepsiCo's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "From 55 straight beats to two guidance cuts, two CFOs and an activist" },
+      { id: 'guidance-record', label: "The same \"stronger in the second half\" promise, three years running" },
+      { id: 'timeline', label: "Timeline: October 2023 to February 2026" },
+      { id: 'our-read', label: "Reading PepsiCo: a bar lowered and still missed" },
+      { id: 'unknowns', label: "What PepsiCo's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['PEP', 'Earnings Calls', 'Guidance Cuts'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">From 55 straight beats to two guidance cuts, two CFOs and an activist</h2>
 <h3>October 2023: peak confidence</h3>
 <p>Then-CFO Hugh Johnston opened the Q3 2023 call: "we've now met or beat consensus for 55 straight quarters" — and on the strength of that record, PepsiCo gave 2024 guidance unusually early. Even analysts acknowledged how rare it was for the company's organic growth to miss its own initial forecast.</p>
 
@@ -6246,7 +6282,7 @@ export const POSTS: Post[] = [
   Current management's story is "acceleration in the second half of 2026" — the identical phrase used in both the 2024 and 2025 calls. Repeating "it gets better in the second half" three years running, while guidance kept getting cut, is the main reason to treat the current optimism with some skepticism.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">The same "stronger in the second half" promise, three years running</h2>
 <div class="table-wrap">
   <table>
     <caption>4 tracked promises, in order made</caption>
@@ -6262,7 +6298,7 @@ export const POSTS: Post[] = [
 <p><strong>Of 4 gradeable promises, 1 was roughly met (near the floor) and 3 were clearly missed or contradicted.</strong> This isn't a "guide conservatively, then beat" pattern — it's closer to a pattern where even the lowered targets keep wobbling.</p>
 <p class="src-note">Source: each cited earnings call transcript and the FY2024/FY2025 10-K reported figures.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: October 2023 to February 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023</span>Q3 2023 earnings: "55 straight quarters" boast; early 2024 guidance issued.</li>
   <li class="crisis"><span class="date">Nov 2023</span>Quaker product food-safety recall.</li>
@@ -6274,10 +6310,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Feb 2026</span>Q4 2025 earnings/FY2025 10-K: new CFO Steve Schmitt's first call; standalone "Risks Associated with Tariffs" risk factor introduced; 2026 guidance repeats the "weak H1, accelerating H2" pattern.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Reading PepsiCo: a bar lowered and still missed</h2>
 <p>Rather than the classic "sandbag guidance, then beat it" playbook, PepsiCo's last three years show a pattern where guidance itself keeps sliding — cut once a year, and once mid-year for good measure — while management's confident language hasn't always tracked the underlying numbers. That gap between the stated confidence and the actual results is the central thing to watch heading into whatever "second-half acceleration" 2026 actually delivers.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What PepsiCo's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>How the Elliott Management engagement has progressed since October 2025</b> isn't mentioned again in the Q4 2025, Q1 2026, or Q2 2026 calls — it may be under private discussion or resolved, but confirmation would need recent news or 8-K filings.</li>
   <li><b>Whether the company actually responded to analyst requests for specific Frito-Lay margin targets</b> isn't confirmable from this data.</li>
@@ -6307,11 +6343,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $140.13, as of Aug 18, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "10.2% needed vs. 3.5% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 5.2% to 14.4%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change PepsiCo's 10.2%" },
+      { id: 'show-your-work', label: "The math behind 10.2%" },
+      { id: 'fine-print', label: "Limits of the PEP number" },
     ],
     sources: 'As of Aug 18, 2026 · Price used: $140.13',
     tags: ['PEP', 'ReverseDCF', 'Valuation'],
@@ -6328,7 +6364,7 @@ export const POSTS: Post[] = [
   A required growth rate about three times the actual five-year FCF CAGR is a substantial gap. This price only makes sense if new products (poppi, Siete), tariff relief, and margin recovery combine to deliver meaningfully more growth than PepsiCo has recently shown.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">10.2% needed vs. 3.5% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">10.2%</span></div>
@@ -6339,7 +6375,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021–FY2025 cash flow and income statements. Analyst forecast from stockanalysis.com (Aug 19, 2026).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 5.2% to 14.4%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -6353,14 +6389,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the lowest discount rate tested (7%), the required growth rate is 5.15% — still above the 5-year actual FCF pace of 3.5%.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change PepsiCo's 10.2%</h2>
 <ul class="kicker-list">
   <li><b>Using a three-year average FCF ($7.95B) instead of FY2025 alone ($8.20B)</b> actually raises the required growth rate slightly, to 10.61% — a lower starting base requires faster growth to reach the same target.</li>
   <li><b>Net debt is calculated here as total debt minus cash and short-term investments ($39.65B)</b>; a broader definition (including pension liabilities, for example) would raise the required growth rate further — debt has grown from $40.3B (2021) to $49.2B (2025), partly from the poppi and Siete acquisitions.</li>
   <li><b>Changing the terminal growth rate</b> (2.0% vs. 3.0%) shifts the required growth rate modestly in either direction, but doesn't flip the overall conclusion.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 10.2%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -6379,7 +6415,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the PEP number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -6418,21 +6454,23 @@ export const POSTS: Post[] = [
       { q: "What is McDonald's market cap?", a: "As of this article's data, McDonald's market cap was about $195.0B, on FY2025 revenue of $26.9B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: "How McDonald's makes money" },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "McDonald's leases stores to franchisees and collects rent and royalties" },
+      { id: 'revenue-mix', label: "The U.S. earns a 53.7% margin on 40.3% of revenue" },
+      { id: 'customers-competitors', label: "61% of revenue effectively comes from franchisees" },
+      { id: 'core-metric', label: "Comparable sales show whether existing stores sell more" },
+      { id: 'leadership', label: "Kempczinski: from Kraft Heinz to CEO in four years" },
+      { id: 'capital-returns', label: "Fifty years of dividend increases, with $7.17 paid in 2025" },
+      { id: 'failure-scenario', label: "What breaks McDonald's: GLP-1 drugs and healthier eating" },
+      { id: 'financials', label: "Revenue from $23.2B to $26.9B in four years" },
+      { id: 'unknowns', label: "Open questions: AI investment payoffs and country-level results" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['MCD', 'Restaurants', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How McDonald's makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Franchising lets McDonald's earn rent and royalties without running most of its stores, so margins stay high. What moves the results is whether customers keep coming, which slipped in 2024 and again in the U.S. in 2026.</div>
+
+<h2 id="how-it-makes-money">McDonald's leases stores to franchisees and collects rent and royalties</h2>
 <p>95% of McDonald's roughly 45,356 stores worldwide are franchisee-owned. Franchisees lease the land and building and run the store, paying a percentage of revenue (rent plus royalty) to headquarters. The remaining 5% are company-operated, where all revenue goes to McDonald's directly. That cash gets reinvested into real estate, brand, and menu development, making stores more attractive and pulling customers back — a self-reinforcing loop.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Franchised stores (95%)</div><div class="d">Pay rent + royalty on revenue</div></div>
@@ -6443,7 +6481,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Company-operated stores (5%) contribute their full revenue directly to McDonald's. Source: 10-K FY2025, p.3-4 (business overview), p.51 (segment structure).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">The U.S. earns a 53.7% margin on 40.3% of revenue</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -6459,7 +6497,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Licensed markets contribute less profit than their revenue share suggests</b>This segment's revenue share (9.0%) far outweighs its profit contribution (1.6%), because China/Japan equity-investment costs and corporate overhead both sit here.</div>
 <p class="src-note">Source: 10-K FY2025, p.14, p.18, p.52 (segment notes).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">61% of revenue effectively comes from franchisees</h2>
 <p>Nearly all sales are B2C, but about 61% of McDonald's revenue (franchise revenue) effectively comes from franchisees rather than end consumers directly. There's no large-customer concentration risk — instead, risk depends on the average financial health of tens of thousands of franchisees worldwide.</p>
 <ul class="kicker-list">
   <li><b>Yum! Brands</b> (KFC, Taco Bell, Pizza Hut) — a similarly super-franchised model, but spreads risk across a more diversified brand portfolio.</li>
@@ -6468,7 +6506,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.6 (competitive environment); competitor list from web search.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Comparable sales show whether existing stores sell more</h2>
 <p>Comparable sales growth shows whether existing stores are actually selling more — not whether the company just opened more locations. Adding stores and improving existing-store performance are completely different stories, which is why this number is the real measure of underlying health.</p>
 <div class="table-wrap">
   <table>
@@ -6480,15 +6518,15 @@ export const POSTS: Post[] = [
 <p>2021-2023 saw near-double-digit growth from post-pandemic revenge spending combined with inflation-driven price increases. 2024 growth essentially stalled worldwide, before rebounding to +3.1% in 2025.</p>
 <p class="src-note">Source: 10-K FY2025, FY2022, FY2021, p.14 in each.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Kempczinski: from Kraft Heinz to CEO in four years</h2>
 <p>Christopher Kempczinski has been Chairman and CEO since November 2019 (Chairman role added 2024), age 57 — joined from Kraft-Heinz in 2015, ran the U.S. business before becoming CEO. Founder Ray Kroc died long ago, and no founding-family members remain involved — professional management throughout. Insiders own under 1% of shares; the largest holders are Vanguard (10.03%), BlackRock (7.3%), and State Street (5.1%), a typical institutional-investor-dominated ownership structure.</p>
 <p class="src-note">Source: DEF 14A 2026, p.28 (CEO background), p.87-88 (ownership).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Fifty years of dividend increases, with $7.17 paid in 2025</h2>
 <p>McDonald's has raised its dividend for 50 consecutive years (a Dividend Aristocrat). 2025's actual dividend paid was $7.17/share; the Q4 2025 annualized rate reached $7.44/share ($1.86 quarterly × 4), yielding about 2.7% at the current price. 2025 buybacks were 6.7 million shares ($2.0B); 2024's were 10.1 million shares ($2.8B). Diluted shares outstanding fell from 751.8 million (2021) to 716.4 million (2025) — a real 4.7% reduction, with buybacks more than offsetting compensation-related dilution.</p>
 <p class="src-note">Source: 10-K FY2025, p.8 (2025 summary), p.13 (buybacks), p.21 (dividend streak).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks McDonald's: GLP-1 drugs and healthier eating</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If people get used to GLP-1 weight-loss drugs or healthier-eating trends and stop craving burgers and fries as much, sales at roughly 45,000 franchised stores worldwide wobble simultaneously — and McDonald's rent and royalty income, tied directly to that revenue, falls right along with it.
@@ -6500,7 +6538,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Risk Factors, p.28-30.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue from $23.2B to $26.9B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -6517,7 +6555,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2022 was hit by a Russia exit-related pretax loss (~$1.28B) and a France tax-audit settlement (~$0.54B), temporarily depressing both operating income and FCF that year. Net debt/EBITDA runs at roughly 2.7x (2025) — manageable given stable franchise cash flow, but not low. Notably, shareholders' equity is actually negative (-$1,791M at year-end 2025) — not from weak profits, but because cumulative shareholder returns (dividends plus buybacks) have exceeded accumulated retained earnings over a long period.</div>
 <p class="src-note">Source: 10-K FY2025 p.12, p.41-42, p.52; 10-K FY2023, FY2022, FY2021 (prior-year figures).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: AI investment payoffs and country-level results</h2>
 <ul class="kicker-list">
   <li><b>How much AI-driven store-operations and order-automation investment is actually reducing costs</b> isn't clear from this data — recent earnings calls would help.</li>
   <li><b>Individual-country performance in equity-investment markets (China, Japan)</b> isn't broken out beyond the combined licensed-markets segment.</li>
@@ -6546,17 +6584,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from McDonald's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "The first slump across every segment, an E. coli outbreak, and a second stumble" },
+      { id: 'guidance-record', label: "McDonald's 10-K targets vs. what it delivered" },
+      { id: 'timeline', label: "Timeline for McDonald's: Q4 2023 to Q2 2026" },
+      { id: 'our-read', label: "A value-execution failure, a recovery, then another U.S. stumble" },
+      { id: 'unknowns', label: "What McDonald's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026',
     tags: ['MCD', 'Earnings Calls', 'Execution Risk'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">The first slump across every segment, an E. coli outbreak, and a second stumble</h2>
 <h3>Through late 2023: "stronger than ever"</h3>
 <p>Comparable sales grew +13.8% (2021), +9.6% (2022), and +8.7% (2023) — near-double-digit growth three years running, driven by post-pandemic revenge spending plus inflation-driven pricing. On the Q4 2023 call, the CEO said "our system's resilience and strength shone through even amid macroeconomic pressure." Tone scored 7-8 throughout this period.</p>
 
@@ -6581,7 +6619,7 @@ export const POSTS: Post[] = [
   Across two cycles — 2024 crisis → 2025 recovery, 2026 renewed stumble — McDonald's problem looks less like "strategy" and more like a recurring U.S. store-level execution issue.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">McDonald's 10-K targets vs. what it delivered</h2>
 <div class="table-wrap">
   <table>
     <caption>Guidance metrics vs. actual, by year</caption>
@@ -6597,7 +6635,7 @@ export const POSTS: Post[] = [
 <p><strong>The standout pattern is the FCF conversion rate's quiet downward recalibration.</strong> After missing a ">90%" target three years running, McDonald's lowered the target itself in 2025 rather than chasing the old number again — and then hit the new, more realistic target. Operating margin and tax rate guidance, by contrast, were hit reliably throughout.</p>
 <p class="src-note">Source: 10-K FY2021 p.10 (2022 guidance), FY2022 p.10-11, FY2023 p.11/13, FY2024 p.11/13, FY2025 p.12; FCF conversion calculated from cash flow statement figures.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for McDonald's: Q4 2023 to Q2 2026</h2>
 <ul class="timeline">
   <li><span class="date">Q4 2023</span>Third straight year of near-double-digit comparable sales growth (+8.7%).</li>
   <li class="crisis"><span class="date">Q2 2024</span>CEO admits "value execution" failure; first-ever simultaneous decline across every segment.</li>
@@ -6608,10 +6646,10 @@ export const POSTS: Post[] = [
   <li class="crisis"><span class="date">Q2 2026</span>CEO admits U.S. execution shortfall again; U.S. business leader replaced; "Accelerating the Arches" strategy winds down, "McDonald's > NEXT" strategy announced for September Investor Day.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">A value-execution failure, a recovery, then another U.S. stumble</h2>
 <p>Across two full cycles, McDonald's problem looks structural rather than accidental: a recurring U.S. store-level execution issue, not a strategic misstep. Management's habit of admitting its own execution problems rather than blaming external factors is a credible signal, but the same type of problem recurring on a roughly two-year cycle suggests it hasn't been fully solved. Whether the September Investor Day's new strategy breaks that pattern is the next thing to watch.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What McDonald's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The specific contents of the "McDonald's > NEXT" strategy</b> to be unveiled at the September Investor Day aren't knowable from this data.</li>
   <li><b>Whether new U.S. business leader Skye Anderson can actually fix the store-execution problem</b> has no track record yet.</li>
@@ -6640,11 +6678,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: "This analysis used $266.99, McDonald's closing price, as of Aug 18, 2026." },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "10.8% needed vs. 9.4% actual free-cash-flow growth over three years" },
+      { id: 'sensitivity', label: "From 8.4% to 17.0%: the discount-rate range (MCD)" },
+      { id: 'what-would-move-it', label: "What would change McDonald's 10.8%" },
+      { id: 'show-your-work', label: "The math behind 10.8% (MCD)" },
+      { id: 'fine-print', label: "Limits of the MCD number" },
     ],
     sources: 'As of Aug 18, 2026 · Price used: $266.99',
     tags: ['MCD', 'ReverseDCF', 'Valuation'],
@@ -6661,7 +6699,7 @@ export const POSTS: Post[] = [
   A required growth rate of 10.8% sits within about 15% of the recent three-year actual pace (9.4%) — not an extreme stretch. The real question isn't whether this price is obviously cheap or expensive; it's whether this pace can be sustained for a full decade, especially given management's two recent admissions of execution shortfalls.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">10.8% needed vs. 9.4% actual free-cash-flow growth over three years</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (TTM FCF base, WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">10.8%</span></div>
@@ -6672,7 +6710,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. The 5-year FCF figure is distorted by a high FY2021 base (post-pandemic recovery peak) followed by one-time Russia-exit costs (~$1.2-1.4B pretax) in FY2022 — the 3-year window (FY2022-2025) more accurately reflects the recent trend. Source: 10-K FY2021-FY2025 cash flow and income statements.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 8.4% to 17.0%: the discount-rate range (MCD)</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -6687,14 +6725,14 @@ export const POSTS: Post[] = [
 </div>
 <p>At a 12% discount rate, the required growth rate jumps to 17.0% — which would flip the read from "close to history" to "the market wants meaningfully more."</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change McDonald's 10.8%</h2>
 <ul class="kicker-list">
   <li><b>Switching from trailing-twelve-month FCF ($7,761M) to a three-year average ($7,038M)</b> raises the required growth rate from 10.8% to 12.1%.</li>
   <li><b>A more conservative 12% discount rate</b> pushes the required growth rate to 17.0%.</li>
   <li><b>Changing the terminal growth rate or the length of the high-growth window (10 years vs. 5)</b> would also shift the answer — see the calculation details below.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 10.8% (MCD)</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -6709,7 +6747,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the MCD number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -6748,21 +6786,23 @@ export const POSTS: Post[] = [
       { q: 'Is Deere in an agricultural downturn?', a: "Yes — Deere's precision-ag equipment backlog has fallen 59% over three years, reflecting a broader agricultural downcycle that has weighed on new-equipment demand." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Deere makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Deere builds the machines, finances them, and earns on parts for life" },
+      { id: 'revenue-mix', label: "Large ag equipment is 38.9% of sales at a 15.0% margin" },
+      { id: 'customers-competitors', label: "Sold through about 2,050 independent dealers" },
+      { id: 'core-metric', label: "A cyclical business: margins swing more than revenue" },
+      { id: 'leadership', label: "John May: an internal promotion, and no Deere family in management" },
+      { id: 'capital-returns', label: "Dividend up to $6.48 while buybacks fell from $7.2B to $1.1B" },
+      { id: 'failure-scenario', label: "What breaks Deere: poor harvests and low grain prices" },
+      { id: 'financials', label: "Revenue fell 25% from its FY2023 peak" },
+      { id: 'unknowns', label: "Open questions: tariff costs and the Right to Repair lawsuit" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['DE', 'Industrials', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Deere makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Deere's machines plus its parts and financing tail make a strong business, but demand follows farm income, and profit roughly halved in FY2025. Management itself only called a bottom in the cycle in early FY2026.</div>
+
+<h2 id="how-it-makes-money">Deere builds the machines, finances them, and earns on parts for life</h2>
 <p>Deere buys parts from suppliers and builds tractors, combines, and excavators at its own factories (about $2.3B/year in R&D), selling through an independent dealer network — roughly 2,050 dealers in the US and Canada, plus 100-plus countries worldwide. John Deere Financial then finances the purchase for the farmer or contractor, earning interest income. Even after the sale, the company keeps earning money from the same customer through parts, repairs, and — increasingly — precision-agriculture software subscriptions.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Parts suppliers</div><div class="d">Steel, electronics</div></div>
@@ -6773,7 +6813,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Four segments: PPA (large ag equipment), SAT (small/mid ag & turf), CF (construction/forestry), FS (financial services). Source: 10-K FY2025, p.2, p.7-9.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Large ag equipment is 38.9% of sales at a 15.0% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -6791,7 +6831,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Nearly half the business is international</b>With international revenue approaching half the total, currency swings and country-by-country tariff policy have a real effect on results.</div>
 <p class="src-note">Source: 10-K FY2025, p.58 (Note 5, geographic revenue).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Sold through about 2,050 independent dealers</h2>
 <p>Deere doesn't sell directly to end customers — sales run through independent dealers to large grain farms (PPA), dairy/livestock/landscaping operations (SAT), and construction/road-building companies (CF). No customer-concentration risk is disclosed, since the dealer network is broad.</p>
 <ul class="kicker-list">
   <li><b>AGCO / CNH Industrial</b> (Case IH, New Holland) — direct large-ag equipment rivals; Deere holds an edge in precision-ag software (Operations Center) and dealer network scale.</li>
@@ -6800,7 +6840,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.6-9.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">A cyclical business: margins swing more than revenue</h2>
 <p>Deere is a highly cyclical business, so segment operating margins swing far more than revenue does. Order backlog shows what's already committed — a leading indicator for the next quarter or two.</p>
 <div class="table-wrap">
   <table>
@@ -6815,11 +6855,11 @@ export const POSTS: Post[] = [
 <p>Large-ag backlog (PPA) has fallen 59% in three years — a clear signal that the post-pandemic farm-equipment boom is over and demand has normalized. Construction backlog (CF) bottomed in FY2024 and rebounded in FY2025.</p>
 <p class="src-note">Source: 10-K FY2025, p.8; 10-K FY2023, p.9.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">John May: an internal promotion, and no Deere family in management</h2>
 <p>CEO John C. May, 56, has led the company since 2019 and added the Chairman role in 2020 — an internal promotion (President and COO before becoming CEO). No descendants of founder John Deere (who started the company in 1837) remain involved in management. Directors and executives together own under 1% of shares (about 806,000 of 270 million shares); the largest holders are institutional — Bill Gates's Cascade Investment (8.74%), Vanguard (8.01%), and BlackRock (roughly 6-7%).</p>
 <p class="src-note">Source: 10-K FY2025, p.12; DEF 14A 2026, ownership sections.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Dividend up to $6.48 while buybacks fell from $7.2B to $1.1B</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th></th><th>FY2021</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th></tr></thead>
@@ -6832,7 +6872,7 @@ export const POSTS: Post[] = [
 <p>Even as profit roughly halved in FY2025, Deere still raised its dividend — five consecutive years of increases. Buybacks, by contrast, were sharply reduced (from $7.2B in FY2023 to $1.1B in FY2025) to conserve cash; $7.9B remains available under an $18B buyback authorization from December 2022. Diluted average shares fell from 293.6M (FY2023) to 271.7M (FY2025) — a real reduction net of employee compensation issuance.</p>
 <p class="src-note">Source: 10-K FY2025, p.47, p.49, p.72-73.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Deere: poor harvests and low grain prices</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If farmers worldwide suffer prolonged poor harvests and low grain prices and keep riding their old tractors instead of replacing them, Deere's revenue and profit crack fast — revenue has already fallen 25% in just two years, from FY2023's $61.3B to FY2025's $45.7B.
@@ -6844,7 +6884,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.14 (agricultural cyclicality), p.3 (tariffs), p.14-15 (Right to Repair litigation), Item 3 Legal Proceedings.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue fell 25% from its FY2023 peak</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, fiscal years (ended late Oct/early Nov)</caption>
@@ -6861,7 +6901,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>FY2024 operating income fell 30%, but free cash flow actually rose 7% — driven by inventory reduction and faster receivables collection, a good cash-preservation signal during a downturn, though not repeatable indefinitely as inventory normalizes. Separately, most of the $64B total debt funds Deere's own finance arm's loans to farmers and dealers ($51.4B in financing receivables) — not typical corporate debt. Treating this figure like ordinary manufacturer debt overstates the company's financial risk.</div>
 <p class="src-note">Source: 10-K FY2025, p.46, p.48-49, p.80-81; 10-K FY2023 (prior-year figures); 10-K FY2021.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: tariff costs and the Right to Repair lawsuit</h2>
 <ul class="kicker-list">
   <li><b>Exactly how much 2025-2026 tariffs added to costs beyond the 10-K's disclosure</b> requires recent earnings materials to fully confirm.</li>
   <li><b>The timing and outcome of the Right to Repair lawsuit</b> (settlement vs. trial) isn't knowable from this data.</li>
@@ -6891,17 +6931,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Deere's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from August 2023 to May 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A record year with a warning inside it" },
+      { id: 'guidance-record', label: "Net income guidance cut three times in one year" },
+      { id: 'timeline', label: "Timeline: November 2023 to May 2026" },
+      { id: 'our-read', label: "The first explicit \"bottom\" call" },
+      { id: 'unknowns', label: "What Deere's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Aug 2023–May 2026',
     tags: ['DE', 'Earnings Calls', 'Agricultural Cycle'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A record year with a warning inside it</h2>
 <h3>November 2023: a record year, with a warning inside it</h3>
 <p>Deere closed FY2023 with what management called "an excellent fourth quarter" — revenue up 16% to $61.3B, operating margin near 22%. But the very same call contained the first crack: "looking to 2024, we expect agricultural market conditions to shift and demand to decline." The company called its own peak, in real time, at the moment of its best results.</p>
 
@@ -6923,7 +6963,7 @@ export const POSTS: Post[] = [
   Deere didn't hide the downturn — it called its own peak in the same breath as its best results, then spent two years cutting guidance in a straightforward, disclosed pattern before finally calling the bottom.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Net income guidance cut three times in one year</h2>
 <div class="table-wrap">
   <table>
     <caption>Net income guidance vs. actual, by fiscal year</caption>
@@ -6939,7 +6979,7 @@ export const POSTS: Post[] = [
 <p><strong>Final guidance was met or beaten in 3 of 4 years.</strong> But comparing initial to actual tells a different story in the two down years — FY2024 and FY2025 both landed well below what was first promised, a classic downcycle pattern of starting optimistic then repeatedly cutting, until FY2026 finally reversed direction.</p>
 <p class="src-note">Source: earnings call guidance commentary from Q3 FY2023 through Q1/Q2 FY2026, checked against 10-K FY2023-FY2025 reported figures.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: November 2023 to May 2026</h2>
 <ul class="timeline">
   <li><span class="date">Nov 2023</span>Q4 FY2023 earnings: record results, but 2024 demand decline forecast in the same call.</li>
   <li><span class="date">Feb-May 2024</span>2024 net income guidance cut twice, from $7.75-8.25B to ~$7.0B.</li>
@@ -6949,10 +6989,10 @@ export const POSTS: Post[] = [
   <li><span class="date">May 2026</span>Q2 FY2026 earnings: guidance held, but "customer sentiment remains constrained."</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">The first explicit "bottom" call</h2>
 <p>The clearest thread across these three years is how directly Deere named its own downturn — calling the top in the same call as its record results, then cutting guidance three times over the following year without ever obscuring the pattern. That transparency doesn't guarantee the FY2026 bottom call is correct, but it does mean the company's track record of disclosure has been unusually direct through a difficult cycle.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Deere's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether FY2026 truly marks the cycle bottom</b> isn't confirmed — the fiscal year ends in November 2026, and Q3 results (due August 2026) weren't available at the time of this analysis.</li>
   <li><b>The outcome of the FTC's Right to Repair lawsuit</b> (settlement vs. trial) and its impact on parts/repair revenue is unknown.</li>
@@ -6982,11 +7022,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $580.63, as of Aug 19, 2026 (pre-earnings close).' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "11.8% needed vs. -3.0% actual free-cash-flow growth through a downcycle" },
+      { id: 'sensitivity', label: "From 9.4% to 18.1%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Deere's 11.8%" },
+      { id: 'show-your-work', label: "The math behind 11.8% (DE)" },
+      { id: 'fine-print', label: "Limits of the DE number" },
     ],
     sources: 'As of Aug 19, 2026 (pre-earnings close) · Price used: $580.63',
     tags: ['DE', 'ReverseDCF', 'Valuation'],
@@ -7008,7 +7048,7 @@ export const POSTS: Post[] = [
   This isn't a "sell" signal — the past five years span a sharp post-pandemic agricultural downcycle, which likely understates the "normal" trend. Trailing-twelve-month FCF is already up 9.5% year over year, a real recovery signal. But whether that recovery translates into 11-12% growth sustained for a full decade is a separate question this math alone can't answer.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">11.8% needed vs. -3.0% actual free-cash-flow growth through a downcycle</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">11.8%</span></div>
@@ -7020,7 +7060,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical figures from 10-K cash flow statements FY2021-FY2025 and 10-Q Q2 FY2026.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 9.4% to 18.1%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -7035,14 +7075,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the most favorable discount rate tested (8%), the required growth rate (9.4%) still sits well above the 5-year actual FCF pace.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Deere's 11.8%</h2>
 <ul class="kicker-list">
   <li><b>Using FY2025-alone FCF ($6,099M) instead of trailing-twelve-month ($6,677M)</b> raises the required growth rate from 11.8% to 13.0%.</li>
   <li><b>Lowering the terminal growth rate</b> from 2.5% to 2.0% raises the required growth rate modestly (about 0.3-0.5 percentage points).</li>
   <li><b>Extending the high-growth projection window from 10 to 15 years</b> lowers the required annual growth rate somewhat, since the same total value can be reached with a slower but longer climb.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 11.8% (DE)</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -7057,7 +7097,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the DE number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -7097,21 +7137,23 @@ export const POSTS: Post[] = [
       { q: "What is Realty Income's dividend yield?", a: 'About 5.17% at the price used in this article, with an annual dividend of $3.25 per share.' },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Realty Income makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Realty Income buys buildings and leases them out under net leases" },
+      { id: 'revenue-mix', label: "Retail is 79.1% of annualized rent" },
+      { id: 'customers-competitors', label: "The top 20 tenants pay 35.8% of rent; the largest is 3.3%" },
+      { id: 'core-metric', label: "Occupancy and same-store rent growth" },
+      { id: 'leadership', label: "Roy: an internal promotion from acquisitions" },
+      { id: 'capital-returns', label: "A 5.17% yield paid monthly for 57 years" },
+      { id: 'failure-scenario', label: "What breaks Realty Income: capital stays expensive" },
+      { id: 'financials', label: "Revenue up 2.8x in four years, but growth slowed to 9.1%" },
+      { id: 'unknowns', label: "Open questions: the 2026 pipeline and new asset classes" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['O', 'REIT', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Realty Income makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Realty Income's monthly dividend is well covered, but its growth formula depends on cheap capital, and per-share cash flow has grown only 4.5% a year even as the company got much larger.</div>
+
+<h2 id="how-it-makes-money">Realty Income buys buildings and leases them out under net leases</h2>
 <p>Realty Income raises capital from stock and bond investors, buys buildings, and leases them to more than 15,500 tenants under "net leases" — where the tenant, not Realty Income, pays property taxes, insurance, and maintenance. That structure lets Realty Income collect stable rent while continuously raising fresh capital to buy more buildings and grow the rent pie.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Stock & bond investors</div><div class="d">Capital markets</div></div>
@@ -7122,7 +7164,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Rent flows back to shareholders as a monthly dividend — 75.2% of AFFO is paid out. Source: 10-K FY2025, p.7.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Retail is 79.1% of annualized rent</h2>
 <div class="table-wrap">
   <table>
     <caption>Portfolio by property type (annualized rent) — 2025</caption>
@@ -7149,7 +7191,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>International exposure is rising fast</b>The UK and Europe combined grew from 14% to 19% of annualized rent between 2024 and 2025 — increasing pound and euro currency exposure.</div>
 <p class="src-note">Source: 10-K FY2025, p.7, p.1, p.92.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">The top 20 tenants pay 35.8% of rent; the largest is 3.3%</h2>
 <div class="table-wrap">
   <table>
     <caption>Top 5 tenants (annualized rent share)</caption>
@@ -7171,7 +7213,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.7.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Occupancy and same-store rent growth</h2>
 <p>Occupancy shows how full the portfolio stays; same-store rent growth shows how much more existing tenants pay each year, as distinct from growth from buying new buildings.</p>
 <div class="table-wrap">
   <table>
@@ -7186,11 +7228,11 @@ export const POSTS: Post[] = [
 <p>Occupancy has held remarkably steady at 98.5-99% for four years. Same-store rent growth, by contrast, runs low (0.5-1.9% a year) because lease-contract rent escalators are typically fixed at modest rates. In short: this is a company that grows primarily by buying new buildings, not by aggressively raising rent on existing ones.</p>
 <p class="src-note">Source: respective years' 10-K.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Roy: an internal promotion from acquisitions</h2>
 <p>CEO Sumit Roy has held the role since October 2018, was President from 2015, and joined the company in 2011 in Acquisitions — an internal promotion. The company's 1969 founder is no longer involved in management. The largest holders are Vanguard (12.2%), BlackRock (9.8%), and State Street (6.5%) — mostly index funds; management's direct stake is under 1%.</p>
 <p class="src-note">Source: DEF 14A 2026.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A 5.17% yield paid monthly for 57 years</h2>
 <div class="table-wrap">
   <table>
     <thead><tr><th></th><th>Value</th></tr></thead>
@@ -7205,7 +7247,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Buybacks are essentially absent</b>2025 saw zero share repurchases; the 1.8 million shares bought in January 2026 were funded by convertible-note proceeds, not organic buyback capital. Instead of buybacks, Realty Income raises growth capital through new share issuance — shares outstanding more than doubled from 415 million (2021) to 907 million (2025) in five years. Per-share AFFO keeps growing steadily, but dilution from continuous equity issuance is worth watching.</div>
 <p class="src-note">Source: 10-K FY2025, p.28, p.47; DEF 14A 2026, Appendix A.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Realty Income: capital stays expensive</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If interest rates stay elevated for a long time, Realty Income can no longer raise cheap capital, and the entire growth formula — borrow cheap, buy buildings, grow the rent pie — stalls.
@@ -7217,7 +7259,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.43, p.7; DEF 14A 2026, Appendix A.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 2.8x in four years, but growth slowed to 9.1%</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -7234,7 +7276,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>Net income was nearly flat between 2023 and 2024 ($872M to $848M) while AFFO grew from +15.6% to +30.5% growth over the same span. That's not a red flag — it reflects a REIT-specific accounting quirk (depreciation and impairment timing) — but it's worth checking each time the two diverge. The 2021 revenue spike reflects the November 2021 VEREIT merger; 2024's spike reflects the January 2024 Spirit Realty merger. Net debt/adjusted EBITDA runs at 5.5x (2025).</div>
 <p class="src-note">Source: 10-K FY2021-FY2025 MD&A and financial statements, respective years.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the 2026 pipeline and new asset classes</h2>
 <ul class="kicker-list">
   <li><b>How much new-acquisition pipeline continues through the remaining 2026 quarters</b> isn't clear without the latest earnings call.</li>
   <li><b>Whether newly acquired asset classes (data centers, gaming) actually generate higher returns than legacy retail/industrial</b> isn't separately disclosed.</li>
@@ -7263,17 +7305,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Realty Income's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "How a stock-only growth model gave way to private funds and joint ventures" },
+      { id: 'guidance-record', label: "Realty Income's stated targets vs. reported results" },
+      { id: 'timeline', label: "Timeline for Realty Income: October 2023 to August 2026" },
+      { id: 'our-read', label: "A funding mix rebuilt in two years" },
+      { id: 'unknowns', label: "What Realty Income's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026',
     tags: ['O', 'Earnings Calls', 'Capital Strategy'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">How a stock-only growth model gave way to private funds and joint ventures</h2>
 <h3>Late 2023: confident, and betting on stock alone</h3>
 <p>On the Q3 2023 call, CEO Sumit Roy touted a "resilient and durable one team" while announcing the $9.3 billion Spirit Realty merger. The Q4 call set 2024 AFFO-per-share guidance at $4.13-$4.21, repeating multiple times that this could be achieved "without having to tap the markets."</p>
 
@@ -7295,7 +7337,7 @@ export const POSTS: Post[] = [
   The 2024-2025 "growth slowdown plus tenant-bankruptcy wave" wasn't a crisis the company wanted to hide — it looks more like the moment management genuinely internalized that a growth model dependent purely on issuing new shares wasn't sustainable, and spent two years quietly building a different one.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Realty Income's stated targets vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>Annual AFFO-per-share guidance vs. actual</caption>
@@ -7310,7 +7352,7 @@ export const POSTS: Post[] = [
 <p><strong>Pattern: guide conservatively, raise through the year, land near the top — repeated three years running.</strong> FY2025's unusually low starting bar (1.4% growth) was still cleared at its own top end. No guidance withdrawal or major cut occurred across the 12 quarters reviewed.</p>
 <p class="src-note">Source: each quarter's earnings call transcript, checked against reported results.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Realty Income: October 2023 to August 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023</span>$9.3B Spirit Realty merger announced.</li>
   <li class="crisis"><span class="date">Aug 2024</span>CEO defends against bankruptcy/closure risk at 8 tenants in a single call.</li>
@@ -7319,10 +7361,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 2026</span>Public equity issuance falls to 18% of funding (vs. 3-year average of 47%); Fitch A rating secured; 2026 guidance raised again.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">A funding mix rebuilt in two years</h2>
 <p>The clear thread across three years is a company that identified its own structural weakness — over-reliance on issuing new shares — and quietly rebuilt its funding model rather than just talking about it. The deletion of the "common-stock-centric" sentence from the 2023 10-K, followed by two years of building an entirely different capital mix, is the strongest evidence this wasn't just messaging. Whether this new mix (private funds, joint ventures) holds up if interest rates rise again is something that needs at least another cycle or two to confirm.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Realty Income's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether private-fund and joint-venture partners (GIC, Apollo, Cloud Capital) will keep providing capital through a future rate-hike or real-estate downturn</b> isn't knowable from this data.</li>
   <li><b>Whether the 2024-2025 tenant-bankruptcy wave (Rite Aid, Red Lobster, At Home, and others) was one-time or the start of a broader structural retail problem</b> needs another 1-2 years of credit-watchlist trends to judge.</li>
@@ -7350,11 +7392,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $62.95, as of Aug 19, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "7.7% needed vs. 4.5% actual per-share AFFO growth" },
+      { id: 'sensitivity', label: "From 5.4% to 13.6%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Realty Income's 7.7%" },
+      { id: 'show-your-work', label: "The math behind 7.7%" },
+      { id: 'fine-print', label: "Limits of the O number" },
     ],
     sources: 'As of Aug 19, 2026 · Price used: $62.95',
     tags: ['O', 'ReverseDCF', 'Valuation'],
@@ -7376,7 +7418,7 @@ export const POSTS: Post[] = [
   The required growth rate is more than double the most recent two-year actual pace. Whether the company's new private-fund and joint-venture funding strategy can lift per-share growth back toward — or above — 7.7% is the central open question.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">7.7% needed vs. 4.5% actual per-share AFFO growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">7.7%</span></div>
@@ -7387,7 +7429,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical per-share AFFO CAGRs: 10-K FY2021-FY2025, DEF 14A 2026 Appendix A.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 5.4% to 13.6%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year growth by discount rate (WACC)</caption>
@@ -7402,13 +7444,13 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the lowest discount rate tested (8%), the required growth rate (5.36%) still exceeds the two-year actual pace (3.44%).</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Realty Income's 7.7%</h2>
 <ul class="kicker-list">
   <li><b>Using the "total AFFO" 5-year CAGR (~31%) instead of per-share</b> flips the read to a "market expectations look low" conclusion — but that figure is inflated by the one-time VEREIT (2021) and Spirit Realty (2024) mega-mergers, not a repeatable annual pace.</li>
   <li><b>Lowering the terminal growth rate</b> from 2.5% to 2.0% raises the required growth rate slightly.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 7.7%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -7426,7 +7468,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR:</strong> diluted per-share AFFO $3.59 (2021) → $4.28 (2025), 5-year CAGR 4.49%; $4.00 (2023) → $4.28 (2025), 2-year CAGR 3.44%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the O number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -7465,21 +7507,23 @@ export const POSTS: Post[] = [
       { q: 'What is net revenue retention and why does it matter for CrowdStrike?', a: "Net revenue retention (115% here) measures how much more existing customers spend year over year, even after accounting for churn — it's the clearest signal of whether CrowdStrike's business grows on its own, without needing new customers." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How CrowdStrike makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "CrowdStrike sells a cloud-based security subscription" },
+      { id: 'revenue-mix', label: "Subscriptions are 94.9% of revenue at a 77.7% margin" },
+      { id: 'customers-competitors', label: "No customer or channel partner above 10%" },
+      { id: 'core-metric', label: "ARR and net revenue retention" },
+      { id: 'leadership', label: "Kurtz: co-founder, still CEO after 15 years" },
+      { id: 'capital-returns', label: "No dividend, and only $50.6M of a $1B buyback used" },
+      { id: 'failure-scenario', label: "What breaks CrowdStrike: another update takes customers' computers down" },
+      { id: 'financials', label: "Revenue up 3.3x in four years, with growth slowing to 22%" },
+      { id: 'unknowns', label: "Open questions: outage lawsuits and investigations" },
     ],
     sources: '10-K FY2022–FY2026 · DEF 14A 2026',
     tags: ['CRWD', 'Cybersecurity', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How CrowdStrike makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>CrowdStrike's subscription growth is strong, but the July 2024 outage showed how much trust customers place in one vendor. Its price assumes that trust, and the growth, keep holding.</div>
+
+<h2 id="how-it-makes-money">CrowdStrike sells a cloud-based security subscription</h2>
 <p>Customer companies install CrowdStrike's Falcon sensor — a lightweight monitoring program — on their computers and servers. That sensor feeds data to CrowdStrike's cloud AI, which detects and blocks intrusions in real time. A successful block builds trust, which drives customers to add more Falcon modules over time — a "land and expand" loop reflected in a 115% net revenue retention rate.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Customer companies (IT/security teams)</div><div class="d">Install the Falcon sensor</div></div>
@@ -7490,7 +7534,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Professional services are also sold separately to breached customers, and often double as a sales channel for new subscriptions. Source: 10-K FY2026, p.61, p.64.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Subscriptions are 94.9% of revenue at a 77.7% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by type — FY2026</caption>
@@ -7506,7 +7550,7 @@ export const POSTS: Post[] = [
 <p>Regionally: US 67%, EMEA 16%, Asia-Pacific 10%, other 7%. International revenue (33%) exposes results to currency swings.</p>
 <p class="src-note">Source: 10-K FY2026, p.112.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">No customer or channel partner above 10%</h2>
 <p>A B2B subscription business sold to companies and governments worldwide. No single customer or channel partner has exceeded 10% of revenue or receivables in any of the past three fiscal years — customer concentration risk is low.</p>
 <ul class="kicker-list">
   <li><b>Microsoft</b> — can bundle its Defender security feature into existing Office 365 contracts at low incremental cost, a structural pricing advantage.</li>
@@ -7515,7 +7559,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Note: CrowdStrike's 10-K doesn't name competitors directly, describing them only by category. Source: 10-K FY2026, p.26, p.87.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">ARR and net revenue retention</h2>
 <p>Annual Recurring Revenue (ARR) shows how much subscription revenue is already locked in on an annualized basis, ahead of when it's recognized as GAAP revenue. Net Revenue Retention (NRR) shows how much more existing customers are spending year over year, even after accounting for churn — the clearest signal of whether the business grows on its own, without new customers.</p>
 <div class="table-wrap">
   <table>
@@ -7530,16 +7574,16 @@ export const POSTS: Post[] = [
 <p>NRR declined steadily from a 125% peak to 112%, then ticked back up to 115% — a trend worth watching for continued recovery.</p>
 <p class="src-note">Source: 10-K FY2022 p.57, FY2024 p.60-61, FY2026 p.61-62.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Kurtz: co-founder, still CEO after 15 years</h2>
 <p>CEO George Kurtz is the co-founder and has led the company since its 2011 founding (about 15 years) — a security-industry veteran who previously founded Foundstone (sold to McAfee in 2004) and served as McAfee's CTO. The founder still actively runs the company. Officers and directors together hold 1.67% of shares (as of April 3, 2026); the largest 5%-plus holders are institutional — Vanguard (7.27%) and BlackRock (6.70%).</p>
 <p class="src-note">Source: DEF 14A 2026.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">No dividend, and only $50.6M of a $1B buyback used</h2>
 <p>No dividend — a growth-investment-first company. The board approved a $1 billion buyback program in June 2025, but only about $50.6 million (144,000 shares) had actually been repurchased as of March 4, 2026 — $949 million remains unused.</p>
 <div class="callout warn"><b>Buybacks aren't offsetting dilution</b>Diluted weighted-average shares rose every year over the same period — 238.64M (FY2024) → 244.75M (FY2025) → 250.58M (FY2026) — because stock-based compensation (about $1.1 billion in FY2026) far outweighs the buyback, so shares outstanding are actually growing despite the repurchase program.</div>
 <p class="src-note">Source: 10-K FY2026, p.100, p.83.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks CrowdStrike: another update takes customers' computers down</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If one more update from this security company takes down computers worldwide again, customers could conclude they can't trust their entire company to this vendor and switch en masse — collapsing a business model built entirely on trust.
@@ -7551,7 +7595,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2026, risk factors and legal proceedings sections.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 3.3x in four years, with growth slowing to 22%</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, fiscal years (ended Jan 31)</caption>
@@ -7568,7 +7612,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>GAAP operating income has been negative for five straight years, while free cash flow has grown steadily throughout. Revenue arrives largely as upfront cash from subscription contracts, and most of the operating loss reflects non-cash stock-based compensation. Judging this as a "loss-making company" from the operating-income line alone would miss the real cash generation underneath.</div>
 <p class="src-note">Source: 10-K FY2024 p.79, p.82; 10-K FY2026 p.64, p.83, p.81; 10-K FY2022 p.74.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: outage lawsuits and investigations</h2>
 <ul class="kicker-list">
   <li><b>The final cost (settlements, fines) of July 19 incident-related lawsuits and DOJ/SEC investigations</b> isn't knowable from this data — future 10-Qs are the place to check.</li>
   <li><b>The most recent FY2027 (Feb 2026 onward) results and company guidance</b> aren't in this 10-K — check the latest earnings call.</li>
@@ -7597,17 +7641,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from CrowdStrike's 10-K filings for FY2024 through FY2026 and 9 quarters of earnings call transcripts from June 2024 to June 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "An outage, an apology, and a recovery that was not a clean line" },
+      { id: 'guidance-record', label: "CrowdStrike's guidance vs. the next quarter's actuals" },
+      { id: 'timeline', label: "Timeline: June 2024 to March 2026" },
+      { id: 'our-read', label: "Buying back trust with action" },
+      { id: 'unknowns', label: "What CrowdStrike's calls still don't answer" },
     ],
     sources: '10-K FY2024–FY2026 · 9 quarters of earnings call transcripts, Jun 2024–Jun 2026',
     tags: ['CRWD', 'Earnings Calls', 'Crisis Recovery'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">An outage, an apology, and a recovery that was not a clean line</h2>
 <h3>June 2024: peak momentum</h3>
 <p>On the Q1 FY2025 call, CEO George Kurtz opened: "we started the year from a position of momentum and overwhelming strength." Net new ARR grew 22% to $212M, and free cash flow hit $322M — 35% of revenue — both records. The company was already talking about the next milestone beyond "the $1B club": $10B in ARR.</p>
 
@@ -7632,7 +7676,7 @@ export const POSTS: Post[] = [
   The gap between the earnings-call story and the 10-K risk-factor story isn't a contradiction — earnings calls sell the future, while 10-K risk factors legally defend against still-open litigation. "Growth is back" and "our biggest risk is still that incident" are simultaneously true.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">CrowdStrike's guidance vs. the next quarter's actuals</h2>
 <div class="table-wrap">
   <table>
     <caption>6 tracked promises, in order made</caption>
@@ -7650,7 +7694,7 @@ export const POSTS: Post[] = [
 <p><strong>5 of 6 beaten, 1 met within range — no misses.</strong> But the guided revenue growth rate itself kept sliding (31% → 25% → 22% → 20%) even as each successively lower bar was cleared: "beating guidance" and "growth rate structurally slowing" were both simultaneously true.</p>
 <p class="src-note">Source: each quarter's earnings call transcript, checked against the following quarter's actual results.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: June 2024 to March 2026</h2>
 <ul class="timeline">
   <li><span class="date">Jun 4, 2024</span>Q1 FY2025 earnings: records across the board; "$10B ARR" mentioned as the next milestone.</li>
   <li class="crisis"><span class="date">Jul 19, 2024</span>Channel File 291 Incident — a content-update error causes widespread Windows outages worldwide.</li>
@@ -7664,10 +7708,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Mar 5, 2026</span>FY2026 10-K filed: the July 19 Incident remains the #1 risk factor, for the third year running.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Buying back trust with action</h2>
 <p>The clearest lesson from these two years is that a company's earnings-call narrative and its legal risk disclosure can diverge completely without either one being dishonest — they're written for different audiences with different purposes. CrowdStrike's business has genuinely recovered, and the legal aftermath genuinely hasn't concluded. Both are true at once.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What CrowdStrike's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The final cost of July 19-related securities/class-action lawsuits and DOJ/SEC investigations</b> isn't knowable from the materials reviewed here — both are described as "ongoing" as of the FY2026 10-K and Q1 FY2027 call.</li>
   <li><b>Whether the net-new-ARR reacceleration reflects the Falcon Flex bundled-subscription model or simply the natural fading of incident-related drag over time</b> can't be cleanly separated from this data, since both factors overlap in timing.</li>
@@ -7696,11 +7740,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $190.34 (post 4-for-1 split), as of Aug 20, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "36.0% needed vs. 29.5% four-year growth, but only 16.3% last year" },
+      { id: 'sensitivity', label: "From 30.2% to 41.1%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change CrowdStrike's 36.0%" },
+      { id: 'show-your-work', label: "The math behind 36.0%" },
+      { id: 'fine-print', label: "Limits of the CRWD number" },
     ],
     sources: 'As of Aug 20, 2026 · Price used: $190.34 (post 4-for-1 split)',
     tags: ['CRWD', 'ReverseDCF', 'Valuation'],
@@ -7717,7 +7761,7 @@ export const POSTS: Post[] = [
   The required growth rate (36%) sits roughly in line with the longer 4-year average (29.5%) — not wildly detached from history. But it's meaningfully above the most recent year's actual pace (16.3%). Whether that recent slowdown was a temporary aftereffect of the July 2024 incident or a sign of structural deceleration is the key question this price is betting against.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">36.0% needed vs. 29.5% four-year growth, but only 16.3% last year</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">36.0%</span></div>
@@ -7729,7 +7773,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2022-FY2026 cash flow and income statements.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 30.2% to 41.1%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -7743,13 +7787,13 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the most optimistic discount rate tested (8%), the required growth rate (30.15%) still nearly doubles the most recent year's actual FCF pace (16.3%).</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change CrowdStrike's 36.0%</h2>
 <ul class="kicker-list">
   <li><b>Using a three-year average FCF ($1.08B) instead of the most recent year ($1.24B)</b> raises the required growth rate from 36.0% to 38.0%.</li>
   <li><b>The company holds net cash</b> ($4.485B more cash than debt) — a large acquisition that erased this net-cash position would raise the required growth rate further.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 36.0%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -7765,7 +7809,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value (market cap + net debt).</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the CRWD number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -7804,21 +7848,23 @@ export const POSTS: Post[] = [
       { q: "What is American Express's market cap?", a: "As of this article's data, American Express's market cap was about $223.6B, on FY2025 revenue of $72.23B and net income of $10.83B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How American Express makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "American Express issues the cards and signs the merchants itself" },
+      { id: 'revenue-mix', label: "U.S. consumers are 48.2% of revenue" },
+      { id: 'customers-competitors', label: "Millions of cardmembers, but concentrated co-brand partners" },
+      { id: 'core-metric', label: "Billed business comes before revenue" },
+      { id: 'leadership', label: "Squeri: joined in 1985 and has led since 2018" },
+      { id: 'capital-returns', label: "$5.3B of buybacks and a 16% dividend raise" },
+      { id: 'failure-scenario', label: "What breaks Amex: a recession and merchants rejecting the card together" },
+      { id: 'financials', label: "Revenue up 70% in four years" },
+      { id: 'unknowns', label: "Open questions: FY2023 total debt isn't confirmed" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['AXP', 'Payments', 'Credit Cards', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How American Express makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Amex earns from both sides of every swipe, which gives it richer data and higher fees than Visa or Mastercard, but it also carries the credit risk. Its results move with cardmember spending and delinquencies.</div>
+
+<h2 id="how-it-makes-money">American Express issues the cards and signs the merchants itself</h2>
 <p>American Express issues cards directly to affluent consumers and businesses, and signs merchant contracts directly too — a three-party model that differs from the four-party network Visa and Mastercard run through partner banks. Every time a cardmember swipes, Amex collects a merchant discount fee from the merchant and, from the cardmember, loan interest and annual fees — both sides of the same transaction, at once.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Cardmembers</div><div class="d">86.6M cards outstanding<br>Affluent consumers &amp; businesses</div></div>
@@ -7829,7 +7875,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Cardmembers repay charges plus loan interest and annual fees; merchants pay a discount fee averaging 2.24%; overseas partner banks pay licensing and royalty fees back to Amex. Source: 10-K FY2025, p.1, p.11, p.42, p.48.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">U.S. consumers are 48.2% of revenue</h2>
 <div class="datacard">
   <h3>Revenue by segment — FY2025</h3>
   <div class="barlist">
@@ -7870,7 +7916,7 @@ export const POSTS: Post[] = [
 <p>About 22% of revenue comes from outside the U.S. — exposure to currency swings, overseas economic conditions, and local regulation.</p>
 <p class="src-note">Source: 10-K FY2025, Note 23 (p.152), Risk Factors (p.36).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Millions of cardmembers, but concentrated co-brand partners</h2>
 <p>No single cardmember or merchant dominates — cardmembers number in the millions. Co-brand partner concentration is real, though.</p>
 <div class="table-wrap">
   <table>
@@ -7890,7 +7936,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1 Competition (p.9), Risk Factors (p.23).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Billed business comes before revenue</h2>
 <p>Card issuers live and die by billed business — how much and how often cards actually get used — before revenue or profit shows up in the numbers; once billed business slows, revenue growth follows.</p>
 <div class="datacard">
   <div class="barlist">
@@ -7913,7 +7959,7 @@ export const POSTS: Post[] = [
 <p>The 2021→2023 jump in write-offs mostly reflects delinquency normalizing back up from unusually low pandemic-era levels — a base effect — and it's been stable in the 2.0%-plus range for the two years since.</p>
 <p class="src-note">Source: 10-K FY2025 Table 5/7 (p.48-49), 10-K FY2023 Table 5/7 (p.47-48).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Squeri: joined in 1985 and has led since 2018</h2>
 <p>Chairman and CEO Stephen J. Squeri has led the company since 2018 (his 8th year) — a 40-year internal promotion, having joined in 1985 and risen through vice chairman and group-president roles. Founded in 1850, so there's no founder-control issue to track.</p>
 <div class="table-wrap">
   <table>
@@ -7929,12 +7975,12 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: DEF 14A 2026, ~p.47 (CEO background), ~p.93/95 (ownership).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">$5.3B of buybacks and a 16% dividend raise</h2>
 <p>FY2025 share buybacks totaled $5.3B and dividends $2.3B — a payout ratio (net dividends over net income) of about 21%. Starting Q1 2026, the quarterly dividend rose from $0.82 to $0.95, a 16% increase.</p>
 <div class="callout good"><b>Real anti-dilution, not just offsetting stock comp</b>Diluted share count fell for five straight years — 790M (2021) → 696M (2025) — meaning buybacks have consistently outpaced new share issuance, so shareholders' stakes have actually grown rather than been diluted.</div>
 <p class="src-note">Source: 10-K FY2025 "Dividends and Share Repurchases" (p.63), 10-K FY2024 same section (p.66).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Amex: a recession and merchants rejecting the card together</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   A recession that spikes cardmember delinquencies at the same moment merchants start rejecting Amex cards over high fees would hit both of the company's revenue engines — interest income and merchant fees — at once.
@@ -7946,7 +7992,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025 Risk Factors, p.22 (macro sensitivity), p.24 (partner concentration), p.25 (fee competition), p.34 (credit risk).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 70% in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions except per-share, FY2021-FY2025</caption>
@@ -7966,7 +8012,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth checking further</b>2024 net income rose +21.0%, yet free cash flow fell -28.6% (about $3.5B) the same year — income and cash flow moved in opposite directions. A rising card-loan balance is the likely driver, but we'd recommend confirming the exact cause directly in the 10-Q or cash flow statement footnotes. (*2023 total debt wasn't directly confirmable in this source set — see below.)</div>
 <p class="src-note">Source: 10-K FY2025 p.92 (income) / p.94 (balance sheet) / p.95 (cash flow), 10-K FY2022 p.93/95/96, 10-K FY2021 p.92/94/95. FCF = operating cash flow minus purchases of equipment and capitalized software.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: FY2023 total debt isn't confirmed</h2>
 <ul class="kicker-list">
   <li><b>The exact FY2023 total debt figure</b> (short-term plus long-term borrowings) — not directly confirmed in this source set; re-check the FY2024 10-K's prior-year comparative balance sheet.</li>
   <li><b>The precise driver of 2024's net income increase alongside its FCF decline</b> (card-loan growth vs. other working-capital items) — needs further confirmation in cash flow statement footnotes.</li>
@@ -7996,17 +8042,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from American Express's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 to Q2 FY2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'filing-language', label: 'Evidence: what disappeared, and what showed up' },
-      { id: 'earnings-tone', label: 'Earnings-call tone, 12 quarters' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "From an ESG-minded payments company to an AI-powered premium brand" },
+      { id: 'filing-language', label: "The words changed before the results did" },
+      { id: 'earnings-tone', label: "Confidence lost in late 2024 and won back in 2025" },
+      { id: 'guidance-record', label: "A self-set target the company kept narrowly missing" },
+      { id: 'unknowns', label: "What Amex's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
     tags: ['AXP', 'Earnings Calls', 'Rebranding'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">From an ESG-minded payments company to an AI-powered premium brand</h2>
 <h3>Late 2023: confidence at a peak</h3>
 <p>At the end of 2023, American Express was riding high. Management kept repeating "seven consecutive quarters of record results," and the business description's opening line was an emotional one: the company existed to "enrich lives." The ESG section of the same 10-K laid out a detailed three-pillar strategy — financial confidence, climate solutions, and diversity. In January 2024, the company issued its first formal guidance for the year: 9-11% revenue growth and EPS of $12.65-13.15.</p>
 <h3>A self-set target the company kept narrowly missing</h3>
@@ -8020,7 +8066,7 @@ export const POSTS: Post[] = [
   It looks to us like American Express quietly dropped its "ESG-minded good corporate citizen" positioning over these three years and fully embraced a "premium, tech-powered brand" instead. That the rebrand's timing lines up with the revenue reacceleration (second half of 2025) may not be a coincidence. That said, the recent "raise revenue guidance, hold EPS guidance" pattern could mean margin is being traded for growth — worth watching operating margin over the next few quarters.
 </div>
 
-<h2 id="filing-language">Evidence: what disappeared, and what showed up</h2>
+<h2 id="filing-language">The words changed before the results did</h2>
 <h3>"Enriching lives" gets rewritten twice over three years</h3>
 <div class="quote">"...providing customers with access to products, insights and experiences that enrich lives and build business success."<span class="attr">10-K FY2023, p.1</span></div>
 <div class="quote">"...a globally integrated payments company with card-issuing, merchant-acquiring and card network businesses..."<span class="attr">10-K FY2024, p.1</span></div>
@@ -8038,7 +8084,7 @@ export const POSTS: Post[] = [
 <p>In FY2023/24, fraud risk was folded into the cybersecurity risk item, and model risk ranked 24th of 33 items — behind tax, IP and climate items. In FY2025, fraud gets its own standalone item ("Fraudulent activity associated with our products and services could have a material adverse effect...") and model risk moves up to 20th of 34, its description expanded to cover "the data underlying it" as well.</p>
 <p class="src-note">Source: 10-K FY2025, p.30 (fraud), p.32 (model risk); FY2023/24, p.34.</p>
 
-<h2 id="earnings-tone">Earnings-call tone, 12 quarters</h2>
+<h2 id="earnings-tone">Confidence lost in late 2024 and won back in 2025</h2>
 <p>This is a qualitative score (1-10) based on language in prepared remarks and Q&amp;A — not a quantitative indicator — tracking relative confidence over time.</p>
 <div class="table-wrap">
   <table>
@@ -8062,7 +8108,7 @@ export const POSTS: Post[] = [
 </div>
 <p>The most persistent theme: some version of "when does revenue growth finally hit the double-digit long-term target" came up almost every quarter for three years — a sign the market doubted that target's credibility for a long time. Only after Q3 2025's actual 11% growth did the question's framing flip to "why aren't you funneling the upside into EPS instead."</p>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">A self-set target the company kept narrowly missing</h2>
 <div class="table-wrap">
   <table>
     <caption>11 guidance updates, Q4 FY2023 through Q2 FY2026</caption>
@@ -8085,7 +8131,7 @@ export const POSTS: Post[] = [
 <p>Guidance was never cut or withdrawn once across these twelve quarters, and was raised at least four times. The raises were always conservative (beat-and-raise style), and revenue growth itself only matched the company's stated "10%+ long-term target" starting in Q3 2025.</p>
 <p class="src-note">Source: Each quarter's earnings call transcript (roic.ai), Q3 FY2023-Q2 FY2026.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Amex's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>What specific regulatory issue the FY2024 10-K's one-off "risk-management uplift" language referred to</b> isn't identifiable from the 10-K text alone — check separate regulatory disclosures or news coverage.</li>
   <li><b>Whether 2026 guidance (revenue 9-10%, EPS $17.30-17.90) is actually met</b> can't be confirmed yet, since fiscal 2026 is still in progress.</li>
@@ -8115,11 +8161,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $331.15, as of Aug 20, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "3.6% needed vs. 5.1% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From -0.4% to 7.2%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Amex's 3.6%" },
+      { id: 'show-your-work', label: "The math behind 3.6%" },
+      { id: 'fine-print', label: "Limits of the AXP number" },
     ],
     sources: 'As of Aug 20, 2026 · Price used: $331.15',
     tags: ['AXP', 'ReverseDCF', 'Valuation'],
@@ -8136,7 +8182,7 @@ export const POSTS: Post[] = [
   The market's ask (3.6%) is about 71% of the 5-year actual rate (5.1%) — essentially a price that only requires Amex to hold steady or slightly underperform its own history. The market isn't pricing this in as a high-growth stock, but it isn't leaving it for dead either.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">3.6% needed vs. 5.1% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:25%;background:var(--accent)"></div></div><span class="val">3.6%</span></div>
@@ -8147,7 +8193,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Revenue and FCF figures are from the 10-K set (FY2021-2025); EPS consensus from stockanalysis.com analyst estimates (accessed Aug 2026, average of 2026-2027 estimates). Revenue and EPS growth are shown for reference only — the direct comparison is the first two bars (market's ask vs. actual FCF growth).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From -0.4% to 7.2%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -8161,14 +8207,14 @@ export const POSTS: Post[] = [
 </div>
 <p>At a more conservative discount rate (12%), the conclusion flips — the required growth rate (7.2%) then exceeds the actual 5-year rate (5.1%), tilting the read toward "priced somewhat optimistically" instead.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Amex's 3.6%</h2>
 <ul class="kicker-list">
   <li><b>Using a three-year average FCF ($15.0B) instead of the latest year ($16.0B)</b> raises the required growth rate from 3.6% to about 4.5% — a lower starting point requires faster growth to reach the same value.</li>
   <li><b>Raising the discount rate to a more conservative 12%</b> pushes required growth up to 7.2%, flipping the read to "priced for more than its historical growth."</li>
   <li><b>Changing the terminal growth rate (2.5%) or the projection window (10 years)</b> would also move the result — this card holds both fixed.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 3.6%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -8188,7 +8234,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> free cash flow is assumed to grow at a constant annual rate <em>g</em> for 10 years, then at a 2.5% terminal rate thereafter, solved by bisection for the value of <em>g</em> that equates present value to today's enterprise value.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the AXP number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -8227,21 +8273,23 @@ export const POSTS: Post[] = [
       { q: 'What is NGS ARR?', a: 'Next-Generation Security Annual Recurring Revenue (NGS ARR) strips out one-time hardware sales to isolate purely recurring subscription revenue — it reached $8.1B by Q3 FY2026.' },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Palo Alto Networks makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Palo Alto sells security software, mostly as a subscription" },
+      { id: 'revenue-mix', label: "Subscription is 54.0% of revenue; hardware is 19.5%" },
+      { id: 'customers-competitors', label: "Sold through distributors to most of the Fortune 100" },
+      { id: 'core-metric', label: "NGS ARR: the recurring number that has to keep growing" },
+      { id: 'leadership', label: "Arora: ex-Google and SoftBank, with the founder now emeritus" },
+      { id: 'capital-returns', label: "No dividend, and buybacks paused for the CyberArk deal" },
+      { id: 'failure-scenario', label: "What breaks Palo Alto: a breach, or customers leave consolidated platforms" },
+      { id: 'financials', label: "Revenue up 2.2x in four years, with growth slowing to 14.9%" },
+      { id: 'unknowns', label: "Open questions: results after CyberArk and Chronosphere" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A · earnings calls',
     tags: ['PANW', 'Cybersecurity', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Palo Alto Networks makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Palo Alto is betting that customers want one consolidated security vendor, and it is paying for that with the largest deal in its history, CyberArk. Growth slowed to 14.9%, so the price relies on the bet working.</div>
+
+<h2 id="how-it-makes-money">Palo Alto sells security software, mostly as a subscription</h2>
 <p>Palo Alto Networks builds firewalls and security software that protects company and government networks from hackers, sells most of it through a two-tier network of distributors and resellers rather than directly, and plows the resulting subscription cash back into new product development and acquisitions — like its 2025 purchase of CyberArk — to keep expanding what it can sell into the same customer base.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Distributors &amp; resellers</div><div class="d">Two-tier indirect sales network</div></div>
@@ -8252,7 +8300,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Subscription and support revenue (80.5% of FY2025 sales) flows back to PANW and gets reinvested in R&amp;D and acquisitions like CyberArk to widen the product line. Three distributors alone accounted for 44.2% of FY2025 revenue. Source: 10-K FY2025, p.4, p.34.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Subscription is 54.0% of revenue; hardware is 19.5%</h2>
 <div class="datacard">
   <h3>Revenue by type — FY2025</h3>
   <div class="barlist">
@@ -8276,7 +8324,7 @@ export const POSTS: Post[] = [
 <p>With a third of revenue from outside the Americas, results are exposed to currency swings and export/trade regulation in individual countries — notably U.S.-China trade tension and Israel-related geopolitics.</p>
 <p class="src-note">Source: 10-K FY2025, p.72.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Sold through distributors to most of the Fortune 100</h2>
 <p>An entirely B2B/B2G customer base spanning 180+ countries, including most of the Fortune 100 and a large share of the Global 2000. Actual sales contracts, though, run through distributors rather than end customers directly — three distributors made up 44.2% of FY2025 revenue and 44.8% of receivables, a real concentration risk. No single end customer accounts for more than 10% of revenue.</p>
 <p class="src-note">Source: 10-K FY2025, p.4, p.34, p.70.</p>
 <ul class="kicker-list">
@@ -8286,7 +8334,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.26, p.87.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">NGS ARR: the recurring number that has to keep growing</h2>
 <p>Next-Generation Security ARR (NGS ARR) strips out one-time hardware sales to isolate purely recurring subscription revenue — the number that has to keep growing for the "real subscription business" to be growing. Remaining Performance Obligations (RPO) shows how much revenue is already contracted but not yet recognized — a forward look at revenue already banked.</p>
 <div class="table-wrap">
   <table>
@@ -8301,16 +8349,16 @@ export const POSTS: Post[] = [
 <p>The Q3 FY2026 NGS ARR figure includes the CyberArk and Chronosphere acquisitions; organic growth alone was +28%.</p>
 <p class="src-note">Source: 10-K FY2023 p.68, 10-K FY2025 p.44, Q3 FY2026 earnings call.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Arora: ex-Google and SoftBank, with the founder now emeritus</h2>
 <p>Nikesh Arora has been Chairman and CEO since June 2018 (about 7 years) — previously Google's Chief Business Officer and President/COO of SoftBank. Founder Nir Zuk is now "Founder Emeritus" — the former CTO, no longer on the board, so this is a company the founder has stepped back from running. Officers and directors together hold a low 1.4% of shares; the largest holders are institutional index funds — Vanguard (8.2%) and BlackRock (7.3%).</p>
 <p class="src-note">Source: DEF 14A 2025, p.56, p.147.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">No dividend, and buybacks paused for the CyberArk deal</h2>
 <p>No dividend, ever — the company has stated it has no current plans to pay one. FY2025 share buybacks were $0, paused to preserve cash for the CyberArk acquisition (FY2024 buybacks were $566.7M).</p>
 <div class="callout warn"><b>Buybacks aren't reducing share count</b>Of the $4.1B total buyback authorization, $1.0B remained unused at FY2025 year-end. Shares outstanding actually rose from 650.2M (FY2024) to 667.9M (FY2025) — new shares issued for employee compensation outpaced the (paused) buyback, so the real shareholder-return effect has been limited.</div>
 <p class="src-note">Source: 10-K FY2025, p.86, p.54.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Palo Alto: a breach, or customers leave consolidated platforms</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If Palo Alto's own security product were breached, or if enterprises abandoned the belief that consolidating security spend with one vendor is safer and cheaper and went back to a mixed-vendor stack, the cross-sell engine this company's growth depends on — selling new products into an existing customer base — would stall immediately.
@@ -8322,7 +8370,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.15-29 (Risk Factors summary); Q3 FY2026 earnings call.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 2.2x in four years, with growth slowing to 14.9%</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, fiscal years ended July 31</caption>
@@ -8340,7 +8388,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>FY2024's unusually large net income ($2,577.6M) mostly reflects a one-time $1,589.3M tax benefit, not the underlying business. FY2025 net income ($1,133.9M) sits much closer to operating income ($1,242.9M) — a more normal read. Judging profit-growth speed from net income alone would be misleading here.</div>
 <p class="src-note">Source: 10-K FY2025, p.44-45, p.54, p.86; 10-K FY2023, p.40, p.68.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: results after CyberArk and Chronosphere</h2>
 <ul class="kicker-list">
   <li><b>Combined financials reflecting the completed CyberArk and Chronosphere acquisitions</b> (both closed in early/mid 2026) aren't in the FY2025 10-K yet — the FY2026 10-K (expected around August 2026) is needed to see the actual post-acquisition margin picture.</li>
   <li><b>FY2026 Q4 results</b> (fiscal year ended July 2026) weren't public as of this card's writing (August 2026) — check the latest guidance separately.</li>
@@ -8369,18 +8417,18 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Palo Alto Networks's 10-K filings for FY2021 through FY2025, 10-Q filings, DEF 14A, and 11 quarters of earnings call transcripts from FY2024 Q1 to FY2026 Q3." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'filing-language', label: 'Evidence: what the filings say' },
-      { id: 'earnings-tone', label: 'Earnings-call tone' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "It gave products away, lost 28% in a day, then proved the point" },
+      { id: 'timeline', label: "Timeline: November 2023 to June 2026" },
+      { id: 'filing-language', label: "A new term, \"platformization,\" and a shifting headline metric" },
+      { id: 'earnings-tone', label: "Confidence flipped in three months, then the company doubled down" },
+      { id: 'guidance-record', label: "Palo Alto's guidance vs. the next quarter's results" },
+      { id: 'unknowns', label: "What Palo Alto's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A · 11 quarters of earnings call transcripts, FY2024 Q1–FY2026 Q3',
     tags: ['PANW', 'Earnings Calls', 'Strategy Shift'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">It gave products away, lost 28% in a day, then proved the point</h2>
 <h3>November 2023: confidence at its peak</h3>
 <p>On the Q1 FY2024 call, Palo Alto Networks was confident. Billings grew 16%, and management doubled down on a "high-teens" annual billings growth target. Even with the Israel-Hamas war having just broken out, CEO Nikesh Arora stressed pipeline conviction — "customers have not walked away from deals."</p>
 <h3>Three months later, the story flips completely</h3>
@@ -8398,7 +8446,7 @@ export const POSTS: Post[] = [
   This company appears to have run the same bet twice in two and a half years — that deliberately sacrificing near-term results to lock customers deeper into one platform builds bigger recurring revenue over the long run. In 2024 it did this with free product bundling; in 2025-2026 it scaled the same bet up through a major acquisition. The first bet (platformization) has now been validated in the numbers. The second (large-scale M&amp;A) is still being tested — "ahead of schedule" is management's own characterization, and it's worth treating cautiously until FY2026's full results are confirmed in a 10-K.
 </div>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: November 2023 to June 2026</h2>
 <ul class="timeline">
   <li><span class="date">Nov 2023</span>Q1 FY2024 earnings: confidence peaks — billings +16%, "high-teens" annual target reaffirmed.</li>
   <li class="crisis"><span class="date">Feb 2024</span>Q2 FY2024 earnings — the turning point: platformization strategy announced, guidance cut, stock drops sharply.</li>
@@ -8409,7 +8457,7 @@ export const POSTS: Post[] = [
   <li><span class="date">Jun 2026</span>Q3 FY2026 earnings — present: "our largest quarterly beat ever"; RPO $18.4B (+36%); integration 3-6 months ahead of schedule.</li>
 </ul>
 
-<h2 id="filing-language">Evidence: what the filings say</h2>
+<h2 id="filing-language">A new term, "platformization," and a shifting headline metric</h2>
 <h3>A brand-new strategy term: "platformization"</h3>
 <p>The word doesn't appear at all in the FY2023 10-K. It debuts in the FY2024 10-K as an official strategy, named explicitly in both the Item 1A risk factors and the MD&amp;A overview.</p>
 <p class="src-note">Source: 10-K FY2023 (entire document, zero hits) vs. 10-K FY2024, p.18-19, MD&amp;A Overview.</p>
@@ -8420,7 +8468,7 @@ export const POSTS: Post[] = [
 <p>The FY2023 10-K's "Key Financial Metrics" section led with billings, with no NGS ARR line at all. By the FY2025 10-K, NGS ARR and RPO have been promoted to the top of that list, with billings demoted to supporting detail.</p>
 <p class="src-note">Source: 10-K FY2023, p.39-40 vs. 10-K FY2025, p.44; Q4 FY2024 earnings call ("we will evolve our external metrics").</p>
 
-<h2 id="earnings-tone">Earnings-call tone, 11 quarters</h2>
+<h2 id="earnings-tone">Confidence flipped in three months, then the company doubled down</h2>
 <p>This is a qualitative score (1-10) based on confidence language, hedging, and guidance specificity in each quarter's call — a relative trend indicator, not a quantitative metric.</p>
 <div class="table-wrap">
   <table>
@@ -8443,7 +8491,7 @@ export const POSTS: Post[] = [
 </div>
 <p>Q2 FY2024's uniquely low score reflects that while management's own tone stayed assertive even as they cut guidance, the real trust hit showed up more in the stock's market reaction than in the call language itself. The most persistent theme in the surrounding calls: some version of "when does billings growth finally accelerate?" — repeated in nearly every quarter.</p>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Palo Alto's guidance vs. the next quarter's results</h2>
 <div class="table-wrap">
   <table>
     <caption>5 tracked targets, in order made</caption>
@@ -8460,7 +8508,7 @@ export const POSTS: Post[] = [
 <p>4 of 5 targets beaten, one (the original billings growth rate) missed by design. The pattern: the one growth metric (billings) was deliberately lowered exactly once, while every margin, cash-flow and ARR metric since has consistently come in above the company's own guidance — management here has a habit of setting conservative targets and clearing them.</p>
 <p class="src-note">Source: Q1-Q4 FY2024 and Q3 FY2026 earnings calls; 10-K FY2024, p.39.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Palo Alto's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>How CyberArk and Chronosphere actually affected full FY2026 financials</b> (revenue, margin) can't be confirmed until the FY2026 10-K (expected around August 2026) — everything so far is management's own characterization ("three to six months ahead").</li>
   <li><b>Whether the 2025-2026 large-scale M&amp;A strategy converts into recurring revenue without eroding margin</b>, the way the 2024 platformization strategy did, needs at least 2-3 more quarters to verify.</li>
@@ -8489,11 +8537,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $359.90, as of Aug 19, 2026.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "26.0% needed vs. 25.8% four-year growth, but only 9.3% in the last 12 months" },
+      { id: 'sensitivity', label: "From 20.7% to 30.6%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Palo Alto's 26.0%" },
+      { id: 'show-your-work', label: "The math behind 26.0%" },
+      { id: 'fine-print', label: "Limits of the PANW number" },
     ],
     sources: 'As of Aug 19, 2026 · Price used: $359.90',
     tags: ['PANW', 'ReverseDCF', 'Valuation'],
@@ -8510,7 +8558,7 @@ export const POSTS: Post[] = [
   The market is betting that the past four years' explosive growth continues for another ten. The required rate (26.0%) and the 4-year actual rate (25.8%) line up almost perfectly. But the trailing-12-month rate (9.3%) is only about a third of what's required — whether that gap is a temporary side effect of CyberArk integration costs or the start of a real slowdown is a question that needs to be answered from the business side, not this math. This verdict isn't "sell" or "buy" — it's a pointer to where to dig further.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">26.0% needed vs. 25.8% four-year growth, but only 9.3% in the last 12 months</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">26.0%</span></div>
@@ -8521,7 +8569,7 @@ export const POSTS: Post[] = [
   <p class="src-note">The market's ask and 4-year CAGRs are FCF-based. The trailing-12-month figure annualizes the 9-month results from 10-Q Q3 FY2026 (period ended Apr 30, 2026). Source: 10-K FY2021/FY2025, 10-Q Q3 FY2026.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 20.7% to 30.6%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -8537,14 +8585,14 @@ export const POSTS: Post[] = [
 </div>
 <p>The required growth rate swings from 20.7% to 30.6% just by moving the discount-rate assumption from 8% to 12% — a single input can swing the conclusion substantially here.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Palo Alto's 26.0%</h2>
 <ul class="kicker-list">
   <li><b>Using FY2025's full-year FCF ($3.47B) instead of the trailing-12-month figure ($3.79B)</b> — a more conservative base — raises the required growth rate slightly, to about 26.6%.</li>
   <li><b>Raising the terminal growth rate from 2.5% to 3.0%</b> lowers the required growth rate by about 1 percentage point at WACC 10%.</li>
   <li><b>Using the pre-CyberArk share count</b> (668M, FY2025 year-end) instead of the current post-acquisition count (815M, +22%) would understate the actual market cap and understate the required growth rate — this card uses the current, larger share count.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 26.0%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -8562,7 +8610,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Model:</strong> a 2-stage reverse DCF — FCF grows at rate <em>g</em> (solved for) for 10 years, then at a 2.5% terminal rate. Enterprise value (market cap + net debt = $293.3B + (-$5.6B) = $287.7B) is set equal to the discounted sum of both stages, and <em>g</em> is solved by bisection.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the PANW number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -8601,21 +8649,23 @@ export const POSTS: Post[] = [
       { q: 'Is Goldman Sachs a traditional bank?', a: "Not really — it's a securities firm and investment bank rather than a deposit-and-loan bank; it earns fees, trading margins, and management fees rather than an interest-rate spread." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Goldman Sachs makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Goldman earns fees and trading margins, not a deposit spread" },
+      { id: 'revenue-mix', label: "Global Banking & Markets is 71.1% of revenue" },
+      { id: 'customers-competitors', label: "Corporations, governments, institutions and the ultra-wealthy" },
+      { id: 'core-metric', label: "Return on equity and efficiency, not revenue, are the measures" },
+      { id: 'leadership', label: "Solomon: a 25-year veteran, with no founding family in control" },
+      { id: 'capital-returns', label: "A $5.00 quarterly dividend, up 25% in a year" },
+      { id: 'failure-scenario', label: "What breaks Goldman: clients stop trusting its risk management" },
+      { id: 'financials', label: "Why a securities firm's table looks different" },
+      { id: 'unknowns', label: "Open questions: private credit through a downturn" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q · DEF 14A 2026 · 12 quarters of earnings calls',
     tags: ['GS', 'Investment Banking', '10-K'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="how-it-makes-money">How Goldman Sachs makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Goldman's earnings swing with markets and deal activity, and it has just posted record profits. The question for anyone buying now is whether returns near 23% are the new normal or a peak.</div>
+
+<h2 id="how-it-makes-money">Goldman earns fees and trading margins, not a deposit spread</h2>
 <p>Goldman Sachs helps large companies, governments, and wealthy individuals raise capital, trade securities, and manage their money — and gets paid through advisory and underwriting fees, trading margins, and management fees, rather than the deposit-taking, loan-making spread a traditional bank runs on.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Clients</div><div class="d">Corporations, governments, institutions &amp; wealthy individuals</div></div>
@@ -8626,7 +8676,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Client fees, trading margins and management fees are Goldman's revenue directly — this isn't a bank earning money on the spread between what it pays depositors and what it charges borrowers; it earns money for intermediating and managing on clients' behalf. Source: 10-K FY2025, Item 1.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Global Banking & Markets is 71.1% of revenue</h2>
 <div class="datacard">
   <h3>Revenue by segment — FY2025</h3>
   <div class="barlist">
@@ -8651,7 +8701,7 @@ export const POSTS: Post[] = [
 <p>Global Banking &amp; Markets grew from 64.9% of revenue in 2023 to 71.1% in 2025, while the once consumer-facing Platform Solutions business shrank from 4.4% to 0.3% — the result of exiting consumer lending (see the story piece for that history).</p>
 <p class="src-note">Source: 10-K FY2025, p.74, Note 25.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Corporations, governments, institutions and the ultra-wealthy</h2>
 <p>A classic B2B business. Individual clients are limited to ultra-high-net-worth private wealth accounts; everyone else is a corporation, government, or institutional investor. No single client dominates revenue, but advisory and underwriting fees are highly cyclical — they freeze up whenever the M&amp;A and IPO markets do.</p>
 <div class="table-wrap">
   <table>
@@ -8665,7 +8715,7 @@ export const POSTS: Post[] = [
   </table>
 </div>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Return on equity and efficiency, not revenue, are the measures</h2>
 <p>For a securities firm, revenue and profit matter less than how efficiently the capital base was actually put to work — return on equity (ROE, net income over shareholders' equity) and the efficiency ratio (the share of revenue eaten by expenses, where lower is better).</p>
 <div class="table-wrap">
   <table>
@@ -8680,11 +8730,11 @@ export const POSTS: Post[] = [
 <p>ROE hit 23% in the low-rate, high-trading-volume conditions of 2021, sank to as low as 7.5% during the 2022-2023 rate-hike and deal-drought period, then recovered to 15.0% by 2025. The efficiency ratio moved in the opposite direction throughout — together, the two show just how cyclical this business is.</p>
 <p class="src-note">Source: 10-K FY2025 p.64; 10-K FY2023, FY2022 Executive Overview sections.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Solomon: a 25-year veteran, with no founding family in control</h2>
 <p>David Solomon (64) has been Chairman and CEO since October 2018, a 25-plus-year Goldman veteran; John Waldron is President and COO. There's no founding-family control — Goldman has been professionally managed since its 1999 IPO, and insider (officer + director) ownership is minimal (the CEO holds about 143,000 shares against roughly 295 million shares outstanding). The largest shareholders are index funds: Vanguard (9.68%), BlackRock (7.80%), State Street (6.65%).</p>
 <p class="src-note">Source: DEF 14A 2026, p.10 (directors), p.91 (beneficial ownership).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A $5.00 quarterly dividend, up 25% in a year</h2>
 <div class="table-wrap">
   <table>
     <caption>Dividend per share</caption>
@@ -8711,7 +8761,7 @@ export const POSTS: Post[] = [
 <p>Total shareholder returns (dividends plus buybacks) hit $16.78B in 2025. Basic share count has actually fallen, from 322M (2023) to 307M (2025) — buybacks have outpaced dilution from employee compensation, not just offset it.</p>
 <p class="src-note">Source: 10-K FY2025 p.64, p.209; 10-K FY2023 Executive Overview; Q2 FY2026 earnings call (Jul 14, 2026).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Goldman: clients stop trusting its risk management</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   The moment clients and trading counterparties stop trusting Goldman Sachs's creditworthiness and risk management — the way they stopped trusting Lehman Brothers in 2008 — short-term funding can dry up overnight, freezing trading, advisory and asset-management activity all at once.
@@ -8723,7 +8773,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.32 (Risk Factors summary).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Why a securities firm's table looks different</h2>
 <div class="callout warn">For a bank or broker-dealer, the balance sheet itself is the operating asset, so the standard "operating cash flow minus capex" free-cash-flow concept doesn't translate well. This section instead uses the metrics the industry actually tracks: ROE, book value per share (BVPS), and the CET1 capital ratio.</div>
 <div class="table-wrap">
   <table>
@@ -8743,7 +8793,7 @@ export const POSTS: Post[] = [
 <p>Total assets grew from roughly $1.46T (2021) to $1.81T (2025), and the CET1 capital ratio (Standardized approach) has stayed comfortably above regulatory minimums (roughly 10.0-10.9%) throughout — 15.1% (2022) → 14.4% (2023) → 14.3% (2025) — while common and preferred equity have both grown steadily. Capital strength doesn't look like a concern here.</p>
 <p class="src-note">Source: 10-K FY2025 p.64, p.89; 10-K FY2023, FY2022 Executive Overview sections.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: private credit through a downturn</h2>
 <ul class="kicker-list">
   <li><b>How much a downturn could cost the fast-growing private-credit book</b> — Goldman raised $31B in new private-credit capital in Q2 2026 alone, but this asset class hasn't yet been tested through a real recession, so loss potential isn't something this data can size.</li>
   <li><b>How much of the current earnings strength rests on the AI infrastructure investment boom</b> — management referenced it repeatedly on the Q2 2026 call as a driver of results — versus what happens to advisory and trading revenue once that cycle cools, which will only become clear in coming quarters.</li>
@@ -8772,18 +8822,18 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Goldman Sachs's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 to Q2 FY2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'filing-language', label: 'Evidence: what the filings say' },
-      { id: 'earnings-tone', label: 'Earnings-call tone, 12 quarters' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "How Goldman built a consumer bank, then unwound it footnote by footnote" },
+      { id: 'filing-language', label: "\"We will expand\" became \"we are stopping\"" },
+      { id: 'earnings-tone', label: "Goldman's tone on the calls as the retreat became public" },
+      { id: 'guidance-record', label: "What Goldman said it would do vs. what it did" },
+      { id: 'timeline', label: "Timeline: the 2021 10-K to the Q2 2026 call" },
+      { id: 'unknowns', label: "What Goldman's filings still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
     tags: ['GS', 'Earnings Calls', 'Strategy Reversal'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">How Goldman built a consumer bank, then unwound it footnote by footnote</h2>
 <h3>2021: a different company</h3>
 <p>Open the 2021 10-K and you see a different Goldman Sachs. The company had just created an independent "Consumer &amp; Wealth Management" segment, pushing personal loans, credit cards and deposits under the Marcus brand, and the filing confidently stated it had "expanded and intend[ed] to continue to expand the product and geographic scope of our offerings of credit products to consumers." Goldman's investment-banking DNA was, at the time, mid-experiment with grafting on an entirely different business: consumer finance.</p>
 <h3>2022: a quiet reversal, buried in a footnote</h3>
@@ -8799,7 +8849,7 @@ export const POSTS: Post[] = [
   This looks like a case study in how long it takes a company to admit a mistake and actually unwind it. The crisis was declared once (February 2023), but the actual liquidation played out over three years, one footnote at a time, with analysts pressing for numbers the whole way. The record results now on the books (Q2 2026 ROE of 23.5%) look less like a direct payoff from exiting consumer finance and more like a return of focus to the original core business — advisory, trading, asset management — landing at the same moment as an AI infrastructure investment boom. If that tailwind fades, we'll find out whether "back to core" was a real transformation or a lucky coincidence of timing.
 </div>
 
-<h2 id="filing-language">Evidence: what the filings say</h2>
+<h2 id="filing-language">"We will expand" became "we are stopping"</h2>
 <h3>"We will expand" becomes "we are stopping"</h3>
 <div class="quote">"We have expanded and intend to continue to expand the product and geographic scope of our offerings of credit products to consumers."<span class="attr">10-K FY2021</span></div>
 <div class="quote">"We have started a process to cease offering new loans through Marcus."<span class="attr">10-K FY2022</span></div>
@@ -8811,7 +8861,7 @@ export const POSTS: Post[] = [
 <p>The FY2022 10-K has no AI-specific risk factor at all. The FY2023 10-K adds one: "The development and use of artificial intelligence (AI) present risks and challenges that may adversely impact our business." By FY2025, the language goes further, tying the risk explicitly to the company's own "OneGS 3.0" initiative and its growing internal use of AI — no longer a theoretical risk, but one tied to how the company actually operates now.</p>
 <p class="src-note">Source: 10-K FY2023, 10-K FY2025.</p>
 
-<h2 id="earnings-tone">Earnings-call tone, 12 quarters</h2>
+<h2 id="earnings-tone">Goldman's tone on the calls as the retreat became public</h2>
 <p>A qualitative score (1-10), based on confidence language and hedging in prepared remarks — a relative trend, not a quantitative measure.</p>
 <div class="table-wrap">
   <table>
@@ -8834,7 +8884,7 @@ export const POSTS: Post[] = [
   </table>
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">What Goldman said it would do vs. what it did</h2>
 <div class="table-wrap">
   <table>
     <caption>Targets vs. actual results</caption>
@@ -8852,7 +8902,7 @@ export const POSTS: Post[] = [
 <p>A clear pattern: growth targets fully within the company's own control (fundraising, management fees) were hit ahead of schedule, while profitability targets exposed to market cycles (ROE, efficiency ratio) missed for almost three years — and the efficiency ratio is still above target today.</p>
 <p class="src-note">Source: Q4 FY2023, Q4 FY2024 earnings calls; 10-K FY2023, 10-K FY2025 Executive Overview sections.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: the 2021 10-K to the Q2 2026 call</h2>
 <ul class="timeline">
   <li><span class="date">2021 10-K</span>Independent "Consumer &amp; Wealth Management" segment, Marcus expansion promised — peak consumer-finance ambition.</li>
   <li class="crisis"><span class="date">2022 10-K</span>"Marcus new-loan halt" language quietly appears; segment renamed "Platform Solutions."</li>
@@ -8864,7 +8914,7 @@ export const POSTS: Post[] = [
   <li><span class="date">Q2 2026 call</span>Best quarter since the year began, ROE 23.5%, dividend raised 25% — AI infrastructure investment cited as the growth driver.</li>
 </ul>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Goldman's filings still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the efficiency ratio is actually on a path to the 60% target</b> — it's missed for three straight years and even edged worse from 2024 (63.1%) to 2025 (64.4%). Whether that's a temporary cost (higher compensation) or a structural difficulty can't be determined from this data.</li>
   <li><b>How much of the current confidence rests on the AI infrastructure investment boom</b> — management referenced this cycle repeatedly through the first half of 2026 — versus what happens once that boom cools, will only be clear over future cycles.</li>
@@ -8893,18 +8943,18 @@ export const POSTS: Post[] = [
       { q: "Is Goldman Sachs's current ROE close to what the price requires?", a: "Yes, unusually so — the most recent quarter's ROE was 23.5%, essentially matching the ~22.9% the price requires, so the real question is whether that's a new normal or a temporary peak." },
     ],
     toc: [
-      { id: 'why-not-fcf', label: "Why this isn't a standard free-cash-flow model" },
-      { id: 'required-vs-historical', label: 'Required ROE vs. historical ROE' },
-      { id: 'sensitivity', label: 'Sensitivity to the cost of equity' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'why-not-fcf', label: "Why a bank isn't valued on free cash flow" },
+      { id: 'required-vs-historical', label: "22.9% return on equity needed vs. a 13.7% five-year average" },
+      { id: 'sensitivity', label: "How the discount rate changes the required return, from 17.5% to 22.9%" },
+      { id: 'what-would-move-it', label: "What would change Goldman's 22.9%" },
+      { id: 'show-your-work', label: "The math behind 22.9%" },
+      { id: 'fine-print', label: "Limits of the GS number" },
     ],
     sources: 'As of Aug 20, 2026 · Price used: $1,001.95',
     tags: ['GS', 'ReverseDCF', 'Valuation'],
     publishedAt: '2026-09-06',
     contentHtml: `
-<h2 id="why-not-fcf">Why this isn't a standard free-cash-flow model</h2>
+<h2 id="why-not-fcf">Why a bank isn't valued on free cash flow</h2>
 <div class="callout warn">
   <b>A bank model, not a standard reverse DCF</b>
   Goldman Sachs is a securities firm whose balance sheet itself is the operating asset. In 2025, net income was +$17.18B, but operating cash flow was <b>-$45.15B</b> (driven by swings in trading assets/liabilities and collateralized-transaction balances) — using "operating cash flow minus capex" to compute FCF here would produce a badly distorted number. So this card uses the standard bank-valuation approach instead: a reverse-engineered ROE, using the justified price-to-book formula P/B = (ROE − g) / (cost of equity − g). The logic is the same as any reverse DCF: work backwards from the price to what has to be true for it to make sense.
@@ -8921,7 +8971,7 @@ export const POSTS: Post[] = [
   The required ROE (22.9%) is 1.7 times the 5-year average (13.7%). What complicates this is that "much better than average" isn't a future hope here — it's a number the company already posted last quarter. The real question is whether that record quarter is the new normal or a temporary peak — best checked against the AI-infrastructure-investment-boom dependency covered in the story piece above.
 </div>
 
-<h2 id="required-vs-historical">Required ROE vs. historical ROE</h2>
+<h2 id="required-vs-historical">22.9% return on equity needed vs. a 13.7% five-year average</h2>
 <div class="table-wrap">
   <table>
     <caption>Required ROE (price-implied) vs. actual ROE</caption>
@@ -8935,7 +8985,7 @@ export const POSTS: Post[] = [
   </table>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the cost of equity moves?</h2>
+<h2 id="sensitivity">How the discount rate changes the required return, from 17.5% to 22.9%</h2>
 <div class="table-wrap">
   <table>
     <caption>Required ROE by cost of equity (COE)</caption>
@@ -8951,14 +9001,14 @@ export const POSTS: Post[] = [
 </div>
 <p>A volatile securities firm like Goldman is often assigned a somewhat higher cost of equity (10-11%) than a stable large-cap bank (8-9%) — and that single choice swings the required ROE from 17.5% to 25.7%.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Goldman's 22.9%</h2>
 <ul class="kicker-list">
   <li><b>Lowering the long-term growth rate (g) from 2.5% to 1.5%</b> actually raises the required ROE, from 22.9% to 24.7% (a smaller-denominator effect).</li>
   <li><b>Using year-end-2025 book value per share ($357.60)</b> instead of the latest quarter's ($367.67) raises the P/B multiple to 2.80x, nudging the required ROE up to 23.4%.</li>
   <li><b>Switching to total shareholder returns (dividends + buybacks) as an FCF proxy</b> and solving with the standard growth-rate reverse-DCF model gives a completely different picture: at COE 10%, the required growth rate is just 5.8% — well below the actual 3-year growth rate in shareholder returns (35.8% a year). In other words, "how much better does it need to get" (the ROE lens) looks demanding, while "how much more does it need to return to shareholders" (the cash-flow lens) looks modest — the fact that the two lenses disagree is itself a useful signal.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 22.9%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -8974,7 +9024,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical benchmarks:</strong> ROE 23.0% (2021), 10.2% (2022), 7.5% (2023), 12.7% (2024), 15.0% (2025); Q2 FY2026 annualized ROE 23.5%; 3-year net income CAGR (2022→2025, off the cyclical low) +15.1%; 4-year BVPS CAGR (2021→2025) +5.9%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the GS number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -9014,21 +9064,23 @@ export const POSTS: Post[] = [
       { q: "What is Prologis's market cap?", a: "As of this article's data, Prologis's market cap was about $134.8B, on FY2025 revenue of $8.79B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Prologis makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Prologis builds warehouses and data centers and leases them out" },
+      { id: 'revenue-mix', label: "Rental income is 93.3% of revenue; fund fees are 6.7%" },
+      { id: 'customers-competitors', label: "More than 4,000 customers; Amazon is 6.3% of rent" },
+      { id: 'core-metric', label: "Occupancy and same-store NOI strip out new construction" },
+      { id: 'leadership', label: "Co-founder Moghadam stepped down as CEO on January 1, 2026" },
+      { id: 'capital-returns', label: "A 6% dividend raise to $4.28 a year" },
+      { id: 'failure-scenario', label: "What breaks Prologis: warehouse demand stalls while debt-funded buildings sit" },
+      { id: 'financials', label: "Revenue up 85% in four years, but growth slowed to 7.2%" },
+      { id: 'unknowns', label: "Open questions: when data centers move the profit needle" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['PLD', 'REIT', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Prologis makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Prologis owns the warehouses that e-commerce and logistics depend on, and it is now adding data centers. Leasing growth has cooled, so the story depends on whether the data-center push fills the gap.</div>
+
+<h2 id="how-it-makes-money">Prologis builds warehouses and data centers and leases them out</h2>
 <p>Prologis buys land in prime locations near major cities and ports, then builds large warehouses — and, more recently, data centers — that it leases to companies for a monthly rent check. Rather than holding onto every building it completes, Prologis often sells ("contributes") finished properties into co-investment funds, recycling that cash into the next development. It keeps managing those funds afterward, collecting an annual management fee even after the sale — a build-sell-manage cycle that lets it keep growing without holding every dollar of real estate on its own balance sheet.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Land purchases & development</div><div class="d">~$3.1B a year</div></div>
@@ -9039,7 +9091,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, p.4–7 (business overview), p.93 (Note 16, Reportable Segments).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Rental income is 93.3% of revenue; fund fees are 6.7%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -9055,7 +9107,7 @@ export const POSTS: Post[] = [
 <p>Geographically, 91.0% of revenue comes from the U.S., with Europe (4.0%), other Americas (3.2%), and Asia (1.7%) making up the rest. That skew limits currency risk on the income statement, but 13.8% of total assets (about $13.7B) are still denominated in British pounds, Canadian dollars, euros, and yen.</p>
 <p class="src-note">Source: 10-K FY2025, p.93, p.14–15.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">More than 4,000 customers; Amazon is 6.3% of rent</h2>
 <p>Prologis leases to more than 4,000 customers directly (6,500+ counting properties it manages for funds but doesn't fully own). Its single largest customer, Amazon, accounts for 6.3% of net effective rent — the top 25 customers combined add up to just 23.7%, so single-customer concentration risk is low.</p>
 <ul class="kicker-list">
   <li><b>Blackstone</b> — the largest private owner of logistics real estate globally, operating outside public markets and able to compete aggressively for acquisitions without quarterly earnings scrutiny.</li>
@@ -9064,7 +9116,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.9–10 (Top 25 Customers table); web search, fool.com industrial-REIT comparison.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Occupancy and same-store NOI strip out new construction</h2>
 <p>Revenue and profit can look like they're growing just because Prologis keeps building more warehouses. Occupancy and same-store (same-building) cash NOI growth strip out that new-construction effect, showing whether actual leasing demand and pricing power are holding up.</p>
 <div class="table-wrap">
   <table>
@@ -9079,15 +9131,15 @@ export const POSTS: Post[] = [
 <p>Both metrics peaked in 2022 and have declined every year since — occupancy from 98.2% to 95.8%, same-store NOI growth from 9.1% to 5.7%. That's consistent with the post-pandemic e-commerce warehousing boom normalizing back toward pre-boom demand levels.</p>
 <p class="src-note">Source: each year's 10-K, "Percentage Occupied" and Same Store Analysis tables (FY2025 10-K, p.34–35).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Co-founder Moghadam stepped down as CEO on January 1, 2026</h2>
 <p>Co-founder Hamid Moghadam, CEO since 1997 (when Prologis's predecessor AMB Property went public), stepped down as CEO effective January 1, 2026, moving to Executive Chairman. Dan Letter — who joined the company in 2004 and had served as President since 2023 — became the new CEO, an internal succession rather than an outside hire. Combined insider ownership is just 0.53% of shares outstanding; the largest holders are index funds Vanguard (12.93%), BlackRock (9.3%), and State Street (6.71%).</p>
 <p class="src-note">Source: DEF 14A 2026 (filed Mar 19, 2026), p.39, p.93–94 (Security Ownership).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A 6% dividend raise to $4.28 a year</h2>
 <p>Prologis raised its quarterly dividend 6% in February 2026, from $1.01/share ($4.04 annualized) to $1.07/share ($4.28 annualized) — a payout ratio of roughly 68% against the 2026 Core FFO guidance midpoint of $6.26/share. The company bought back no shares at all in 2025, explicitly prioritizing reinvestment into warehouse and data-center development over buybacks — the profile of a growth-stage REIT rather than a mature income vehicle.</p>
 <p class="src-note">Source: 10-K FY2025, p.27–28 (Purchases of Equity Securities), p.42 (Dividend and Distribution Requirements); web search, Investing.com (Feb 2026 dividend increase announcement).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Prologis: warehouse demand stalls while debt-funded buildings sit</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If global e-commerce and logistics demand growth stalls and companies stop expanding their warehouse footprints, the debt-funded buildings Prologis has added in recent years start sitting empty, its pricing power in lease negotiations erodes, and profitability and dividend capacity decline together.
@@ -9099,7 +9151,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.15 (California concentration), p.54–55 (debt and interest expense), p.14 (co-investment venture risk).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 85% in four years, but growth slowed to 7.2%</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -9116,7 +9168,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>In 2024, operating income grew only slightly (+0.4%) but free cash flow fell 14% — tenant-improvement and leasing costs plus building-maintenance capital expenditures jumped from $690M (2023) to $890M (2024). That's a reminder that reported operating income doesn't always translate directly into cash.</div>
 <p class="src-note">FCF = operating cash flow minus tenant improvements/leasing commissions and building improvements; new development and acquisitions are treated as growth reinvestment and excluded. Source: each year's 10-K, Consolidated Balance Sheets, Statements of Income, and Statements of Cash Flows (FY2025 10-K p.54, 55, 58).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: when data centers move the profit needle</h2>
 <ul class="kicker-list">
   <li><b>When the data-center business will actually move the profit needle</b> — with $2.1B started in just the first half of 2026 and a 10-year, 10GW target — isn't clear from this data alone; it requires a few more quarters of results.</li>
   <li><b>Whether the occupancy decline (97.7% in 2021 to 95.8% in 2025) is a temporary demand adjustment or the start of structural oversupply</b> would need market-by-market new-supply data to judge.</li>
@@ -9145,17 +9197,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Prologis's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Leasing cooled, guidance was never cut, and a data-center business appeared" },
+      { id: 'guidance-record', label: "Prologis never cut its annual guidance while growth cooled" },
+      { id: 'timeline', label: "Timeline for Prologis: Q3 2023 to Q2 2026" },
+      { id: 'our-read', label: "A data-center business timed with a CEO handoff" },
+      { id: 'unknowns', label: "What Prologis's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['PLD', 'Earnings Calls', 'REIT'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Leasing cooled, guidance was never cut, and a data-center business appeared</h2>
 <h3>Late 2023: riding the e-commerce warehouse boom</h3>
 <p>In the Q3 2023 call, Prologis management called it a "great quarter" and raised full-year guidance by 10.5% in one move. Companies were still racing to secure warehouse space as post-pandemic e-commerce demand ran hot, rents kept climbing, and the company had just digested its $23.2 billion acquisition of Duke Realty from 2022. That year's 10-K stated flatly that rents had risen meaningfully and that "these forces will keep demand strong over the long-term."</p>
 
@@ -9172,7 +9224,7 @@ export const POSTS: Post[] = [
   Prologis never touched its own guidance during three years of decelerating warehouse fundamentals — the company appears to have absorbed the slowdown through other levers (development gains, fund fees, and promotes) rather than by resetting expectations, buying time for the data-center business to mature.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Prologis never cut its annual guidance while growth cooled</h2>
 <div class="table-wrap">
   <table>
     <caption>Core FFO (excluding promotes) guidance, 11 tracked updates</caption>
@@ -9195,7 +9247,7 @@ export const POSTS: Post[] = [
 <p><strong>Across three full fiscal years, Prologis closed at the top end of guidance every single time — and out of 11 quarterly updates, narrowed guidance exactly once (Q1 2024), raised it 7 times, and held flat the rest.</strong> That's a classic "guide conservatively, then beat it" pattern, sustained through a multi-year fundamentals slowdown.</p>
 <p class="src-note">Source: each cited earnings call transcript and the FY2024/FY2025 10-K reported figures.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Prologis: Q3 2023 to Q2 2026</h2>
 <ul class="timeline">
   <li><span class="date">Q3 2023</span>Guidance raised 10.5% on a "great quarter"; peak confidence in the series, riding the e-commerce warehouse boom.</li>
   <li class="crisis"><span class="date">Q1 2024</span>First defensive language ("generally in line with expectations"); guidance range narrows slightly.</li>
@@ -9206,10 +9258,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Q2 2026</span>Management declares the rebound is "in the rearview mirror"; data-center construction starts already exceed the full-year target; highest-confidence quarter in the series.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">A data-center business timed with a CEO handoff</h2>
 <p>Rather than resetting expectations downward as warehouse demand cooled, Prologis appears to have leaned on its other income streams — development gains, fund management fees, and promotes — to keep its guidance streak intact, while quietly building out data centers as a second growth engine behind the scenes. The core leasing business genuinely slowed for several years running; the company's consolidated numbers simply never showed it. Whether the data-center business becomes a true second engine, or stays a smaller supplement to warehouse leasing, is the open question heading into the next few quarters.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Prologis's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the data-center business will contribute enough profit to genuinely offset warehouse-leasing deceleration</b> requires several more quarters of segment-level results to judge.</li>
   <li><b>Whether new CEO Dan Letter's priorities (warehouses vs. data centers vs. energy) will meaningfully differ from Hamid Moghadam's</b> isn't yet clear from a single quarter (Q2 2026) under the new structure.</li>
@@ -9238,11 +9290,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $140.68, as of the Aug 20, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "14.4% needed vs. 13.3% five-year growth, inflated by a 2022 deal, and 4.8% over three years" },
+      { id: 'sensitivity', label: "From 9.1% to 20.9%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Prologis's 14.4%" },
+      { id: 'show-your-work', label: "The math behind 14.4%" },
+      { id: 'fine-print', label: "Limits of the PLD number" },
     ],
     sources: 'As of Aug 20, 2026 · Price used: $140.68',
     tags: ['PLD', 'ReverseDCF', 'Valuation'],
@@ -9259,7 +9311,7 @@ export const POSTS: Post[] = [
   The required growth rate (14.4%) sits close to the 5-year actual FCF CAGR (13.3%) — but that 5-year figure is inflated by the one-time $23.2B Duke Realty acquisition in 2022. Strip that out and look at the more recent 3-year trend (4.8%), and the market is asking for roughly three times the current pace. This price only makes sense if the newer data-center business delivers meaningfully more growth than warehouse leasing has recently shown.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">14.4% needed vs. 13.3% five-year growth, inflated by a 2022 deal, and 4.8% over three years</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">14.4%</span></div>
@@ -9270,7 +9322,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021–FY2025 cash flow statements. For reference, same-store cash NOI growth — a cleaner read on core warehouse-leasing demand — has decelerated for four straight years, from 9.1% (2022) to 5.7% (2025), widening the gap with the market's 14.4% ask even further.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 9.1% to 20.9%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -9287,14 +9339,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Only at the lowest discount rate tested (7%) does the required growth rate fall below the 5-year actual FCF pace (13.3%). At 10% or above, the required growth rate exceeds even the acquisition-inflated 5-year figure.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Prologis's 14.4%</h2>
 <ul class="kicker-list">
   <li><b>Using 2025's standalone FCF ($4.12B) instead of trailing-twelve-month FCF ($4.37B)</b> raises the required growth rate to 15.2% — a lower starting base requires faster growth to hit the same target.</li>
   <li><b>Lowering the terminal growth rate from 2.5% to 2.0%</b> raises the required growth rate slightly, to 15.1%.</li>
   <li><b>Swapping the comparison benchmark from the 5-year FCF CAGR (13.3%) to the 3-year CAGR (4.8%)</b> flips the read from "roughly in line" to "the market wants nearly triple the recent pace" — the single biggest judgment call in this whole analysis.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 14.4%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -9314,7 +9366,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR = (2025 FCF ÷ 2021 FCF)^(1/4) − 1 = ($4.119B ÷ $2.497B)^(1/4) − 1 = 13.3%. 3-yr FCF CAGR = (2025 FCF ÷ 2022 FCF)^(1/3) − 1 = ($4.119B ÷ $3.576B)^(1/3) − 1 = 4.8%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the PLD number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -9353,21 +9405,23 @@ export const POSTS: Post[] = [
       { q: "What is Cisco's market cap?", a: "As of this article's data, Cisco's market cap was about $431.8B, on FY2025 revenue of $56.7B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Cisco makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Cisco sells the switches and routers behind company networks" },
+      { id: 'revenue-mix', label: "Networking is 50% of revenue; security is 14.3%" },
+      { id: 'customers-competitors', label: "Nearly half of sales run through channel partners" },
+      { id: 'core-metric', label: "Software share and remaining performance obligations" },
+      { id: 'leadership', label: "Robbins: a 1997 hire who has been CEO since 2015" },
+      { id: 'capital-returns', label: "About $6.4B in dividends and $6B in buybacks a year" },
+      { id: 'failure-scenario', label: "What breaks Cisco: white-box hardware and self-managed cloud networks" },
+      { id: 'financials', label: "Revenue from $49.8B to $56.7B in four years" },
+      { id: 'unknowns', label: "Open questions: how much of security's 59% jump came from Splunk" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2025',
     tags: ['CSCO', 'Networking', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Cisco makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Cisco is shifting from one-time equipment sales to subscriptions, and Splunk plus AI orders have lifted growth. Its cash flow has shrunk over five years, so the price asks for a turnaround.</div>
+
+<h2 id="how-it-makes-money">Cisco sells the switches and routers behind company networks</h2>
 <p>Cisco buys components and uses contract manufacturers to build networking, security, collaboration, and observability hardware and software, which it sells mostly through a two-tier channel of distributors and resellers, with direct sales reserved for its largest customers. On top of the hardware sale, Cisco collects recurring subscription and maintenance revenue — 39% of FY2025 revenue was software, up from 30% just two years earlier — turning a historically one-time equipment sale into a steadier, more predictable income stream.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Component & contract suppliers</div><div class="d">Parts + outsourced manufacturing</div></div>
@@ -9378,7 +9432,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, Item 1 Business, p.5–6 (products, services, distribution); Note 19 Segment Information, p.99 (total revenue $56.6B).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Networking is 50% of revenue; security is 14.3%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by product group — FY2025</caption>
@@ -9396,7 +9450,7 @@ export const POSTS: Post[] = [
 <p>Geographically, the Americas lead at 59.4% ($33.7B) of revenue, followed by EMEA at 26.2% ($14.8B) and Asia Pacific/Japan/China at 14.4% ($8.2B) — with the U.S. alone accounting for $30.4B, 54% of total revenue. With over 40% of revenue coming from outside the U.S., results are exposed to currency swings and trade or tariff policy, particularly geopolitical risk tied to China and the wider Asia region.</p>
 <p class="src-note">Source: 10-K FY2025, Note 19(a), p.99.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Nearly half of sales run through channel partners</h2>
 <p>Cisco's core customer markets are enterprises, public-sector agencies, and telecom/cloud service providers, sold mostly B2B, with nearly half of sales flowing through channel partners in a two-tier distribution model. No single customer has ever accounted for 10% or more of revenue, so customer concentration risk is historically low — but revenue tied to AI-datacenter orders from a handful of large webscale cloud customers is growing quickly, making results increasingly sensitive to the capital-spending decisions of just a few hyperscalers.</p>
 <ul class="kicker-list">
   <li><b>Arista Networks</b> — focused on high-performance data-center switches, undercutting Cisco's core networking revenue with cheaper, faster products; Cisco's networking revenue itself fell 3% in FY2025.</li>
@@ -9405,7 +9459,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Note 19(c), p.99 (customer concentration); Item 1 Business "Competition", p.6.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Software share and remaining performance obligations</h2>
 <p>Two numbers show whether Cisco's transformation from one-time equipment sales to recurring revenue is actually working: the software share of revenue, and Remaining Performance Obligations (RPO) — contracted revenue not yet recognized, a forward-looking measure of backlog strength.</p>
 <div class="table-wrap">
   <table>
@@ -9420,11 +9474,11 @@ export const POSTS: Post[] = [
 <p>Both metrics have climbed every year on record — software revenue mix from 29.8% to 39.4% in just two years, and RPO up 38% since FY2022 — consistent with Cisco's stated strategy of shifting toward subscription-like, more predictable revenue.</p>
 <p class="src-note">Source: 10-K FY2025 MD&A, p.30, p.47 ("Remaining Performance Obligations"); 10-K FY2023, same section, for FY2022 figures.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Robbins: a 1997 hire who has been CEO since 2015</h2>
 <p>CEO Chuck Robbins joined Cisco in 1997, rose through the sales organization, and has served as CEO since July 2015 (about 10 years) and as Chairman since 2017. Cisco's founders left the company long ago and have no role in current management. Combined insider ownership (all executives and directors) is under 1% — about 488,000 shares out of 3.95 billion outstanding. The largest shareholders are index-fund managers Vanguard (9.7%) and BlackRock (8.9%).</p>
 <p class="src-note">Source: 10-K FY2025, Item 10, p.10; DEF 14A 2025, p.84 (Security Ownership).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">About $6.4B in dividends and $6B in buybacks a year</h2>
 <div class="table-wrap">
   <table>
     <caption>Shareholder returns, FY2023–FY2025 ($ millions unless noted)</caption>
@@ -9440,7 +9494,7 @@ export const POSTS: Post[] = [
 <p>Cisco repurchased 105 million shares at an average price of $56.53 in FY2025 and has raised its dividend for 15 consecutive years, returning a large share of free cash flow to shareholders through the combination of dividends and buybacks. New share issuance for employee compensation (RSUs and similar awards) may partly offset the share-count reduction from buybacks — worth tracking via the actual outstanding share count over time.</p>
 <p class="src-note">Source: 10-K FY2025 MD&A, "Dividends and stock repurchase program", p.44.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Cisco: white-box hardware and self-managed cloud networks</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If enterprises broadly switch their data-center and office networks to cheap, generic "white-box" hardware and self-managed cloud infrastructure, the networking equipment business that has fed Cisco for 40 years — half of total revenue — collapses, and security plus software, still under a quarter of revenue, can't fill the gap.
@@ -9452,7 +9506,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025 MD&A, p.30 (networking revenue -3%); Item 1A Risk Factors, p.13–14; Consolidated Balance Sheets, p.55.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue from $49.8B to $56.7B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ billions, fiscal years (ending late July)</caption>
@@ -9469,7 +9523,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>In FY2024, operating income fell 19% year over year, but free cash flow fell nearly twice as much — 46%, from $19.0B to $10.2B. Most of that gap appears tied to one-time Splunk-integration costs and working-capital swings; whether it narrows is worth checking in the next 10-K.</div>
 <p class="src-note">Source: 10-K FY2025 Consolidated Statements of Operations, p.56; Consolidated Statements of Cash Flows, p.58; Consolidated Balance Sheets, p.55; 10-K FY2023, same statements, for FY2021–FY2022 figures.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: how much of security's 59% jump came from Splunk</h2>
 <ul class="kicker-list">
   <li><b>How much Splunk-related synergies actually drove FY2025's 59% security-revenue growth, and whether that pace holds into FY2026</b> requires checking recent earnings calls.</li>
   <li><b>What exact share of revenue comes from webscale/AI-infrastructure customers</b> isn't separately disclosed in the 10-K — only order dollar figures are given on earnings calls.</li>
@@ -9498,17 +9552,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Cisco's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from August 2023 to May 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A milestone year, two guidance cuts, then an AI order book" },
+      { id: 'guidance-record', label: "Cisco's guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline: August 2023 to May 2026" },
+      { id: 'our-read', label: "The AI order book took over the story" },
+      { id: 'unknowns', label: "What Cisco's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Aug 2023–May 2026',
     tags: ['CSCO', 'Earnings Calls', 'AI Infrastructure'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A milestone year, two guidance cuts, then an AI order book</h2>
 <h3>August 2023: "milestone year"</h3>
 <p>Closing out FY2023, CEO Chuck Robbins repeated the words "milestone year" and "phenomenal year" on the earnings call. Revenue hit $57.0 billion, up 11% — Cisco's best growth rate in a decade, largely from clearing a backlog of orders built up during the pandemic-era parts shortage. Confident in the momentum, Cisco guided FY2024 revenue to $57.0-58.2 billion.</p>
 
@@ -9528,7 +9582,7 @@ export const POSTS: Post[] = [
   Cisco's last two and a half years compress into a single arc: a company that over-shipped into its own sales channel, got knocked down by the resulting inventory digestion, and then found an AI-datacenter order boom exactly where it landed — an impressive recovery, but one leaning heavily on a handful of hyperscale cloud customers' capital-spending decisions, the same kind of concentrated demand that made the FY2024 crash so sudden in the first place.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Cisco's guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>9 tracked guidance updates, Aug 2023–May 2026</caption>
@@ -9549,7 +9603,7 @@ export const POSTS: Post[] = [
 <p><strong>FY2024's original guidance missed by about 6.7% after two consecutive cuts (though the final revised figure was hit almost exactly); FY2025 beat its original top end; and FY2026 has now been raised four consecutive times</strong> — a near-mirror image, in the opposite direction, of the FY2024 cutting streak.</p>
 <p class="src-note">Source: earnings call transcripts, Q4 FY2023 through Q3 FY2026, each quarter's guidance remarks; 10-K FY2024 and FY2025 Consolidated Statements of Operations for actual results.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: August 2023 to May 2026</h2>
 <ul class="timeline">
   <li><span class="date">Aug 2023</span>FY2023 closes at $57.0B (+11%); peak confidence ("milestone year"); FY2024 guided to $57.0-58.2B.</li>
   <li><span class="date">Sep 2023</span>Splunk acquisition announced (~$26B) — the same quarter order softness was already emerging internally.</li>
@@ -9561,10 +9615,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Nov 2025–May 2026</span>FY2026 guidance raised four straight quarters; quarterly AI orders hit $1.9B (3x+ YoY); "strongest year in our history" language returns.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">The AI order book took over the story</h2>
 <p>Cisco's last two and a half years read as one continuous arc rather than two separate stories: a networking giant over-shipped into its own channel, took the hit when that inventory needed to clear, and happened to land in the middle of an AI-datacenter capital-spending wave right as it was looking for a new growth story. The Splunk acquisition and AI-order momentum are real and measurable — but the concentration of that momentum in a small number of hyperscale cloud customers' capex decisions is the same kind of demand concentration that made the FY2024 reversal so abrupt in the first place.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Cisco's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>How many more quarters rising memory-chip prices (first flagged on the Q2 FY2026 call) will pressure margins</b> won't be clear until the FY2026 10-K discloses the full-year impact.</li>
   <li><b>Whether FY2026's guidance-raising streak ends in a reversal like FY2023's did, or reflects a structurally different AI-demand cycle</b> can't be determined from this data alone.</li>
@@ -9593,11 +9647,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $109.59, as of the Aug 20, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "16.4% needed vs. -2.6% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 11.6% to 20.6%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Cisco's 16.4%" },
+      { id: 'show-your-work', label: "The math behind 16.4% (CSCO)" },
+      { id: 'fine-print', label: "Limits of the CSCO number" },
     ],
     sources: 'As of Aug 20, 2026 · Price used: $109.59',
     tags: ['CSCO', 'ReverseDCF', 'Valuation'],
@@ -9614,7 +9668,7 @@ export const POSTS: Post[] = [
   A required growth rate of 16.4% is roughly five times Cisco's actual 5-year revenue growth (3.3%) and stands against FCF that actually declined over the same stretch. This price only makes sense if the recent AI-infrastructure order boom — real and accelerating, as the story piece above shows — becomes a durable double-digit growth driver for a full decade, not just a multi-quarter surge.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">16.4% needed vs. -2.6% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">16.4%</span></div>
@@ -9624,7 +9678,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021–FY2025 income and cash flow statements. FCF actually declined over the period, so its bar is shown as a stub rather than a proportional fill.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 11.6% to 20.6%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -9638,14 +9692,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the lowest discount rate tested (8%), the required growth rate (11.6%) is still more than three times Cisco's 5-year revenue CAGR (3.3%).</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Cisco's 16.4%</h2>
 <ul class="kicker-list">
   <li><b>Using the 3-year average FCF ($14.18B) instead of trailing-twelve-month FCF ($11.79B)</b> lowers the required growth rate from 16.4% to 13.9%. TTM FCF came in below the 3-year average due to recent memory-chip price spikes compressing margins and higher inventory/capex — judged not one-time, so used as the base without normalization.</li>
   <li><b>Swapping the comparison benchmark to revenue CAGR (+3.3%) instead of FCF CAGR (-2.6%)</b> paints a less dire picture, but the market's ask is still roughly five times that pace.</li>
   <li><b>Using Cisco's own latest guidance (FY2026 $62.8-63.0B vs. FY2025's actual $56.65B)</b> implies near-term growth of about +11% — much closer to the market's ask, reflecting the recent AI-order surge. Whether that pace can be sustained for a full decade is a separate question this model can't answer.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 16.4% (CSCO)</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -9665,7 +9719,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR = (2025 FCF ÷ 2021 FCF)^(1/4) − 1 = ($13.3B ÷ $14.8B)^(1/4) − 1 = -2.6%. 5-yr revenue CAGR = ($56.7B ÷ $49.8B)^(1/4) − 1 = +3.3%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the CSCO number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -9704,21 +9758,23 @@ export const POSTS: Post[] = [
       { q: "What is Berkshire Hathaway's market cap?", a: "As of this article's data, Berkshire's market cap was about $1.07 trillion, on FY2025 revenue of $371.4B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Berkshire makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Berkshire invests insurance float and buys whole companies" },
+      { id: 'revenue-mix', label: "Insurance is 28.1% of revenue, manufacturing 21.1%" },
+      { id: 'customers-competitors', label: "From GEICO policyholders to BNSF freight customers" },
+      { id: 'core-metric', label: "Float and the combined ratio" },
+      { id: 'leadership', label: "Greg Abel became CEO on January 1, 2026" },
+      { id: 'capital-returns', label: "No dividend since 1967" },
+      { id: 'failure-scenario', label: "What breaks Berkshire: key decision-makers falter as top holdings fall" },
+      { id: 'financials', label: "Revenue jumped in 2023 and has been roughly flat since" },
+      { id: 'unknowns', label: "Open questions: how different Abel's investing will be" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['BRK-B', 'Insurance', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Berkshire makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Berkshire has entered its first post-Buffett era with no dividend and sharply lower buybacks. The business is diversified and cash-rich, but the person allocating that cash has changed.</div>
+
+<h2 id="how-it-makes-money">Berkshire invests insurance float and buys whole companies</h2>
 <p>Berkshire's insurance subsidiaries — GEICO, General Re, and others — collect premiums from policyholders upfront, long before most claims come due. That pool of collected-but-not-yet-paid-out money is called "float," and rather than letting it sit idle, Berkshire's headquarters deploys it: into public stocks (Apple among them) and into buying entire companies outright, from a railroad (BNSF) to utilities to manufacturers. Buffett has long described this as "investing with other people's money" — as long as the insurance operations themselves don't lose money underwriting, the float is effectively a free source of investment capital.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Policyholders</div><div class="d">Auto insurance and other customers</div></div>
@@ -9731,7 +9787,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Float: premiums collected but not yet paid out as claims, available to invest — about $176B at year-end 2025. Source: 10-K FY2025, Item 7 MD&A, insurance investment income section.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Insurance is 28.1% of revenue, manufacturing 21.1%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025 (total $371,444M)</caption>
@@ -9749,7 +9805,7 @@ export const POSTS: Post[] = [
 <p>Geographic revenue isn't disclosed company-wide — only the insurance segment's premiums are broken out: 86.2% from the U.S., 13.8% international. With most revenue tied to the U.S., overall currency risk is relatively limited, though reinsurance (Berkshire Hathaway Reinsurance Group) is exposed to catastrophes worldwide.</p>
 <p class="src-note">Source: 10-K FY2025, Item 8, Note 26.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">From GEICO policyholders to BNSF freight customers</h2>
 <p>Customers span individual consumers (GEICO auto-insurance policyholders, retail customers of subsidiaries) and businesses (BNSF freight customers, other insurers ceding risk through reinsurance). No single customer accounts for 10% or more of consolidated revenue — even McLane's largest retail customers are small relative to total company revenue.</p>
 <ul class="kicker-list">
   <li><b>State Farm</b> — the largest U.S. auto insurer, competing through an agent-based model that contrasts with GEICO's direct-to-consumer channel.</li>
@@ -9758,7 +9814,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1 Business (GEICO competitors named directly; reinsurance-segment competitors aren't individually named in the filing).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Float and the combined ratio</h2>
 <p>Two numbers show whether the insurance-float engine is actually working: how much float there is to invest, and whether the underlying insurance business is profitable on its own (a "combined ratio" below 100% means an underwriting profit — the float effectively costs less than nothing to hold).</p>
 <div class="table-wrap">
   <table>
@@ -9773,15 +9829,15 @@ export const POSTS: Post[] = [
 <p>Float has grown every year, up 20% over five years to $176B, and the combined ratio has stayed below 100% for three straight years shown — meaning Berkshire's insurance operations have been consistently profitable to underwrite, on top of generating investable float.</p>
 <p class="src-note">Source: 10-K FY2025/FY2022, Item 7 MD&A (float); 10-K FY2025, Item 7 MD&A and Item 8 Note 26 (combined ratio, GEICO and BH Primary loss data).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Greg Abel became CEO on January 1, 2026</h2>
 <p>Greg Abel (63) became CEO effective January 1, 2026 — he ran Berkshire Hathaway Energy from 2008 to 2018, then served as Vice Chairman of Non-Insurance Operations. Warren Buffett (95) stepped down as CEO and remains Chairman of the board. Combined voting power held by directors and executives is 30.4% (Buffett individually holds 30.2%) — Berkshire remains an overwhelmingly controlling-shareholder structure even through the CEO transition.</p>
 <p class="src-note">Source: DEF 14A (filed Mar 13, 2026), director nominee bios and ownership table.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">No dividend since 1967</h2>
 <p>Berkshire pays no dividend — none since 1967 — reflecting Buffett's long-held view that he can compound shareholders' capital better by reinvesting it than they could on their own. Share buybacks tell a different story: $9.17B (FY2023), $2.92B (FY2024), and exactly $0 in FY2025 — Berkshire didn't repurchase a single share last year, and the outstanding share count actually ticked up slightly as a result.</p>
 <p class="src-note">Source: 10-K FY2025, Item 5 and Item 8 (statement of changes in equity, cash flow statement).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Berkshire: key decision-makers falter as top holdings fall</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the small handful of key decision-makers who now run capital allocation without Buffett (Abel, and insurance chief Ajit Jain) falter at the same time the top five stock holdings — Apple, American Express, and others, 65% of the equity portfolio — fall together, Berkshire's entire capital-allocation engine could seize up at once.
@@ -9793,7 +9849,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue jumped in 2023 and has been roughly flat since</h2>
 <div class="table-wrap">
   <table>
     <caption>FY2025 core figures, with year-over-year and 5-year change</caption>
@@ -9809,7 +9865,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>GAAP net income isn't in this table on purpose</b>Accounting rules make it swing wildly: attributable net income went from a $22.8B loss in 2022 to $96.2B in income in 2023, even though the underlying business barely changed. That's because unrealized gains and losses on Berkshire's stock holdings — paper moves, not cash — flow straight through net income under ASU 2016-01. "Core operating earnings," above, is a far better read on the actual strength of the business.</div>
 <p class="src-note">Source: 10-K FY2025 and FY2022, Item 8 financial statements.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: how different Abel's investing will be</h2>
 <ul class="kicker-list">
   <li><b>How much Abel's investment style will actually differ from Buffett's over the long run</b> can't be judged from this data — the August 2026 13F showed a large increase in Berkshire's Alphabet stake, an early signal, but one data point isn't a pattern yet.</li>
   <li><b>Why buybacks stopped completely in 2025</b> isn't explained in the 10-K — whether valuation felt too rich or capital was held back for other uses would need annual-meeting Q&A, since Berkshire holds no earnings calls.</li>
@@ -9838,18 +9894,18 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Berkshire's 10-K filings for FY2021 through FY2025 and its 2026 DEF 14A. Berkshire holds no earnings calls, so no transcripts exist to include." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'filing-language', label: 'Evidence 1 — the filing language itself' },
-      { id: 'buyback-signal', label: 'Evidence 2 — buybacks as the only quantitative signal' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Succession showed up in the filings before any announcement" },
+      { id: 'filing-language', label: "A conditional clause about a Buffett replacement became a completed sentence naming Abel" },
+      { id: 'buyback-signal', label: "Buybacks dropped from $27.1B as authority moved from a person to a title" },
+      { id: 'timeline', label: "Timeline: 2018 to August 2026" },
+      { id: 'our-read', label: "Capital allocation moved from a person to a title" },
+      { id: 'unknowns', label: "What Berkshire's filings still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 (no earnings call transcripts — Berkshire holds none)',
     tags: ['BRK-B', 'Succession', 'Governance'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Succession showed up in the filings before any announcement</h2>
 <p>In 2021, Berkshire was still, in its own words, a company run by two men. That year's 10-K stated flatly that "all major investment and capital-allocation decisions are made by Warren E. Buffett," then 91, "in consultation with Charles T. Munger," then 98. Berkshire repurchased $27.1 billion of its own stock that year — the most of any year in this five-year window. Greg Abel had been Vice Chairman of Non-Insurance Operations since 2018, but in the filing's own language he lived permanently inside a conditional clause: "should a replacement for Mr. Buffett be needed currently, the Board has agreed that Mr. Abel should replace him." He was the designated backup — not yet the subject of an active sentence.</p>
 
 <p>Then, in November 2023, Charlie Munger died at 99. In the very next annual filing, the FY2023 10-K, his name was removed entirely — no explanation given, just gone. The numbers had already been signaling change before that: buybacks had already fallen from $27.1 billion (2021) to $7.9 billion (2022) to $9.2 billion (2023), more than a 60% drop in two years. Then the FY2024 10-K quietly rewrote its own governance language for the first time in this window — no longer "Warren Buffett alone," but now explicitly naming three participants in capital allocation: the Chairman and CEO, the Vice Chairman of Insurance Operations (Ajit Jain), and the Vice Chairman of Non-Insurance Operations (Abel). That same year, buybacks shrank further, to $2.9 billion.</p>
@@ -9866,7 +9922,7 @@ export const POSTS: Post[] = [
   This isn't a minor edit to boilerplate legal language. For 65 years, Berkshire's capital-allocation system was, functionally, one specific person. The transfer of that authority from a person to a title showed up — a full year ahead of any board vote or press release — in the quiet, year-by-year rewording of the 10-K's key-person risk paragraph and its buyback rule; the FY2024 10-K's "three-person structure" language was effectively the trailer for what came next.
 </div>
 
-<h2 id="filing-language">Evidence 1 — the filing language itself</h2>
+<h2 id="filing-language">A conditional clause about a Buffett replacement became a completed sentence naming Abel</h2>
 <p>Berkshire's Item 1A "key-person risk" paragraph was rewritten in small, deliberate steps across all five years reviewed, well before any public succession announcement:</p>
 <ul class="kicker-list">
   <li><b>FY2021–FY2022:</b> unchanged, subjunctive mood — "should a replacement...be needed," naming both Buffett and Munger as joint decision-makers.</li>
@@ -9878,7 +9934,7 @@ export const POSTS: Post[] = [
 <p>Notably, some things didn't change at all across the same five years — the risk-factor ranking (key-person risk has always ranked immediately after cybersecurity risk) stayed constant, and so did most of the surrounding language. The edits that did happen were concentrated and deliberate, not part of a general rewrite.</p>
 <p class="src-note">Source: 10-K FY2021 through FY2025, Item 1A key-person risk paragraph and Item 5/Item 8 buyback-authorization language.</p>
 
-<h2 id="buyback-signal">Evidence 2 — buybacks as the only quantitative signal</h2>
+<h2 id="buyback-signal">Buybacks dropped from $27.1B as authority moved from a person to a title</h2>
 <p>Berkshire issues no earnings guidance and holds no earnings calls. The closest thing to a quarterly management judgment call — "is our stock price currently cheap relative to intrinsic value?" — shows up only in how much stock the company actually repurchases. That number fell for four consecutive years, landing at exactly zero in 2025, tracking the succession timeline almost exactly.</p>
 <div class="table-wrap">
   <table>
@@ -9891,7 +9947,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, Item 5 and Item 8; FY2021–FY2024 10-K, Item 5 buyback disclosures.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: 2018 to August 2026</h2>
 <ul class="timeline">
   <li><span class="date">2018</span>Board names Abel Vice Chairman of Non-Insurance Operations and Ajit Jain Vice Chairman of Insurance Operations; both report to Buffett.</li>
   <li><span class="date">2021</span>Buffett (91) and Munger (98) jointly named as decision-makers in the 10-K; buybacks peak at $27.1B for this window.</li>
@@ -9904,10 +9960,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 14, 2026</span>Abel's first 13F as CEO shows a large increase in Berkshire's Alphabet stake — a $23.5B net-buying quarter, ending 14 straight quarters of net selling.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Capital allocation moved from a person to a title</h2>
 <p>Without earnings calls or guidance to track, Berkshire's succession still left a clear paper trail — it just required reading the 10-K's key-person risk paragraph and buyback-authorization language year over year instead of listening for a change in management's tone. The pattern is a two-step staircase, not a gradual slope: three years of near-identical language (FY2021-FY2023), then a "three-person structure" preview in FY2024, then a full declarative rewrite in FY2025. Whether Abel's capital-allocation instincts diverge meaningfully from Buffett's — the one open question this filing-language approach can't answer — will only become visible with time and more 13F filings.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Berkshire's filings still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether Buffett will keep participating in future annual-meeting Q&A sessions</b> isn't specified in the DEF 14A — it states only that "Abel, Jain, and subsidiary CEOs are expected to participate," which suggests a reduced role without confirming a full exit.</li>
   <li><b>How differently Abel's capital-allocation style will diverge from Buffett's over the long run</b> can't be judged from just 2025-2026 data — one 13F showing a larger Alphabet stake isn't yet enough to call a "new era."</li>
@@ -9936,11 +9992,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $495.82 (BRK.B), as of the Aug 21, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "16.6% needed vs. 7.7% actual revenue growth" },
+      { id: 'sensitivity', label: "From 11.2% to 21.2%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Berkshire's 16.6%" },
+      { id: 'show-your-work', label: "The math behind 16.6%" },
+      { id: 'fine-print', label: "Limits of the BRK-B number" },
     ],
     sources: 'As of Aug 21, 2026 · Price used: $495.82 (BRK.B)',
     tags: ['BRK-B', 'ReverseDCF', 'Valuation'],
@@ -9957,7 +10013,7 @@ export const POSTS: Post[] = [
   A required growth rate more than twice the 5-year revenue CAGR (7.7%) is a substantial gap — even against the faster-growing core operating earnings line (11.8% a year), the market's ask is still higher. This price only makes sense if new CEO Greg Abel's capital allocation, insurance underwriting capacity, and large new equity bets (like the expanded Alphabet stake) combine to deliver meaningfully faster growth than the company's recent record.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">16.6% needed vs. 7.7% actual revenue growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">16.6%</span></div>
@@ -9968,7 +10024,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2025/FY2022 financial statements. FCF CAGR is volatile and understates true business strength — see "What would move this number" below.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 11.2% to 21.2%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -9982,14 +10038,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the lowest discount rate tested (7%), the required growth rate (11.2%) still exceeds the 5-year revenue CAGR (7.7%).</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Berkshire's 16.6%</h2>
 <ul class="kicker-list">
   <li><b>The single biggest swing factor: how you treat Berkshire's $321.4B in short-term U.S. Treasury bills.</b> Netting them fully against debt as "spendable cash" would shrink enterprise value to $825.4B and drop the required growth rate to 12.3% at a 9% discount rate — much closer to the 7.7% revenue CAGR. But most of that Treasury pile backs future insurance-claim obligations, so whether it's genuinely "spare cash" for shareholders is debatable.</li>
   <li><b>Using the 3-year average FCF ($22.1B) instead of FY2025's FCF ($25.0B)</b> raises the required growth rate from 16.6% to 18.3%. FCF fell sharply to $11.6B in FY2024 on a capex surge, and that volatility means the FCF CAGR (-1.1%) badly distorts the read on the underlying business — revenue (7.7%) and core operating earnings (11.8%) growth are more reliable comparison points.</li>
   <li><b>The model's own structural limit:</b> a large share of Berkshire's real value comes not from operating free cash flow but from the market-value swings of its stock and company holdings. A reverse DCF built around FCF simply can't capture that, making it a cruder approximation for a holding company like Berkshire than for an ordinary operating business.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 16.6%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -10010,7 +10066,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr revenue CAGR and 5-yr core operating earnings CAGR computed from 10-K FY2025 and FY2022 income statements; FCF CAGR computed from FY2025 and FY2021 cash flow statements.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the BRK-B number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -10050,21 +10106,23 @@ export const POSTS: Post[] = [
       { q: "What is Starbucks's market cap?", a: "As of this article's data, Starbucks's market cap was about $122.1B, on FY2025 revenue of $37.2B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Starbucks makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Starbucks roasts the beans and sells the drinks itself" },
+      { id: 'revenue-mix', label: "North America is 73.6% of revenue at an 11.5% margin" },
+      { id: 'customers-competitors', label: "95% of revenue is direct to consumers" },
+      { id: 'core-metric', label: "Comparable sales: are existing stores selling more?" },
+      { id: 'leadership', label: "Niccol arrived from Chipotle in September 2024" },
+      { id: 'capital-returns', label: "A dividend raised to $0.62 a quarter in July 2026" },
+      { id: 'failure-scenario', label: "What breaks Starbucks: the wait stops feeling worth it" },
+      { id: 'financials', label: "Revenue grew just 0.6% in FY2024 and 2.8% in FY2025" },
+      { id: 'unknowns', label: "Open questions: is the turnaround real or a base effect?" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['SBUX', 'Restaurants', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Starbucks makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Starbucks is mid-turnaround under a new CEO, and recent same-store sales are up. After cash flow shrank for years, the price already assumes the turnaround works.</div>
+
+<h2 id="how-it-makes-money">Starbucks roasts the beans and sells the drinks itself</h2>
 <p>Starbucks buys green coffee beans, roasts them itself, and sells finished drinks and food directly to consumers through more than 40,990 stores worldwide, split between company-operated and licensed locations. On top of that store revenue, Starbucks earns a second income stream from the same brand: royalties from licensed store partners (airports, grocery chains) and from Nestlé and other retailers selling bottled Starbucks coffee and bagged beans on grocery shelves. A loyalty rewards program feeds both channels by keeping customers coming back.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Coffee farms & traders</div><div class="d">Bean purchases + roasting inputs</div></div>
@@ -10075,7 +10133,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, p.7 (store revenue composition), p.79 (Channel Development definition).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">North America is 73.6% of revenue at an 11.5% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -10093,7 +10151,7 @@ export const POSTS: Post[] = [
 <p>Geographically, the U.S. accounts for 72.9% of revenue ($27.1B), leaving the company heavily exposed to U.S. consumer spending. China is 8.5% ($3.16B) — a stake set to change materially in early 2026 (see risks below).</p>
 <p class="src-note">Source: 10-K FY2025, p.79 (revenue by geography).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">95% of revenue is direct to consumers</h2>
 <p>95% of revenue comes from direct-to-consumer (B2C) store sales, and no single customer accounts for 10% or more of total revenue, so customer concentration risk is low.</p>
 <ul class="kicker-list">
   <li><b>McDonald's McCafé</b> — undercuts on price for the same commuter-coffee occasion.</li>
@@ -10102,7 +10160,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.79.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Comparable sales: are existing stores selling more?</h2>
 <p>Comparable (same-store) sales growth shows whether existing stores are actually selling more — not just whether the company opened new ones. When this number turns negative, it means brand strength is fading even as the store count keeps growing.</p>
 <div class="table-wrap">
   <table>
@@ -10116,15 +10174,15 @@ export const POSTS: Post[] = [
 <div class="callout good"><b>A recent reversal signal</b>After two straight negative years through FY2025, comparable sales turned sharply positive in the fiscal Q3 2026 update (reported July 2026): +7.9% globally and +7.9% in the U.S., the fourth consecutive positive quarter. It's an early sign the "Back to Starbucks" turnaround is gaining traction, but it isn't reflected in the FY2025 10-K this card is otherwise based on.</div>
 <p class="src-note">Source: 10-K FY2021 p.26, FY2022 p.26, FY2023 p.28, FY2024 p.39, FY2025 p.32 (North America segment); SBUX Q3 FY2026 earnings call transcript (Jul 29, 2026).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Niccol arrived from Chipotle in September 2024</h2>
 <p>Brian Niccol has been Chairman and CEO since September 2024. He previously ran Chipotle (2018-2024, during which revenue roughly doubled) and, before that, Taco Bell (2015-2018). Founder Howard Schultz is no longer involved in management — this isn't a founder-led company. Combined insider ownership is under 1%; the largest shareholders are institutional index and asset managers Vanguard (10.0%), Capital Research Global Investors (6.7%), and Capital World Investors (6.6%).</p>
 <p class="src-note">Source: DEF 14A 2026, Beneficial Ownership of Common Stock (as of Jan 16, 2026).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A dividend raised to $0.62 a quarter in July 2026</h2>
 <p>Starbucks has raised its dividend every year covered here — $2.16/share (FY2023) to $2.32 (FY2024) to $2.45 (FY2025) — and raised it again in July 2026 to a $0.62 quarterly rate, yielding about 2.32% at the current price. But the company repurchased zero shares in FY2025, a sharp contrast to $980M (FY2023) and $1.27B (FY2024) in prior-year buybacks. With free cash flow down 26% year over year, some market commentary has questioned whether continuing to raise the dividend while buybacks stop is sustainable.</p>
 <p class="src-note">Source: 10-K FY2025, p.47 (statement of changes in equity, dividends and buybacks); web search, Investing.com/Businesswire (Jul 2026 dividend announcement); stockanalysis.com (Aug 21, 2026).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Starbucks: the wait stops feeling worth it</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   The moment people stop feeling that waiting in line at a Starbucks is worth it, and instead default to convenience-store coffee or McCafé, foot traffic collapses simultaneously across all 40,000-plus stores worldwide.
@@ -10136,7 +10194,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.11–21 (Item 1A Risk Factors); p.30 (drivers of operating expense change); p.82 (Note 19, China JV subsequent event).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue grew just 0.6% in FY2024 and 2.8% in FY2025</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, fiscal years (ending late September)</caption>
@@ -10153,7 +10211,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>Operating income (-46%) and free cash flow (-26%) both dropped sharply in FY2025. The main driver was an $892M one-time restructuring charge tied to store closures and headcount reductions — but over the same stretch, net debt-to-EBITDA jumped from roughly 1.75x (FY2024) to 2.73x (FY2025). Even if the charge itself was one-time, the increase in actual leverage is worth confirming in future filings.</div>
 <p class="src-note">FCF = operating cash flow minus capital expenditures. Source: 10-K FY2025 p.29 (highlights), p.30 (operating expenses), p.43 (income statement), p.45 (balance sheet), p.46 (cash flow statement), p.81 (restructuring costs); 10-K FY2022 p.41–45 (FY2021-FY2022 figures).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: is the turnaround real or a base effect?</h2>
 <ul class="kicker-list">
   <li><b>Whether the turnaround is real or a base-effect bounce</b> — Q3 FY2026's +7.9% comparable sales could reflect genuine structural improvement from "Back to Starbucks," or simply an easy comparison against a weak prior year. It requires one to two more quarters to judge.</li>
   <li><b>The exact final terms of the China joint venture</b> — the Boyu Capital deal (up to 60% stake sale) was expected to close in early 2026; the final ownership percentage and how results get consolidated need confirmation from subsequent filings.</li>
@@ -10182,17 +10240,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Starbucks's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from November 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Two guidance cuts, a new CEO, and a no-spin reset" },
+      { id: 'guidance-record', label: "Starbucks's guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline: November 2023 to July 2026" },
+      { id: 'our-read', label: "Niccol opened with the worst numbers first" },
+      { id: 'unknowns', label: "What Starbucks's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Nov 2023–Jul 2026',
     tags: ['SBUX', 'Earnings Calls', 'Leadership Change'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Two guidance cuts, a new CEO, and a no-spin reset</h2>
 <h3>November 2023: "We have great momentum"</h3>
 <p>On the Q4 FY2023 earnings call, CEO Laxman Narasimhan — who had succeeded Howard Schultz's interim stint earlier in 2023 — opened with total confidence: "we have great momentum." FY2023 revenue had grown 12%, beating the top end of guidance, and comparable sales were up 8%. He branded his strategy "Triple Shot Reinvention," and the word "Reinvention" appeared 19 times in that year's 10-K. On the strength of that record, he guided FY2024 to 10-12% revenue growth and "progressive margin expansion."</p>
 
@@ -10212,7 +10270,7 @@ export const POSTS: Post[] = [
   These last three years are really two separate stories. Narasimhan's "Reinvention" began with confident language and ended, within eight months, in two guidance cuts and a CEO change. Niccol's "Back to Starbucks" began by admitting the worst numbers upfront and is now beating and raising guidance — but whether this recovery reflects genuine structural improvement, or simply an easy comparison against a very weak prior year, still needs another quarter or two to confirm.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Starbucks's guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>4 tracked guidance milestones, in order set</caption>
@@ -10228,7 +10286,7 @@ export const POSTS: Post[] = [
 <p><strong>Under Narasimhan (FY2024), guidance was cut twice in one year and the company still missed the lowered target's margin. Under Niccol (FY2026), a modestly set target was beaten by a wide margin and then raised.</strong> The two CEOs' credibility diverges sharply in the numbers.</p>
 <p class="src-note">Source: earnings call transcripts, Q4 FY2023, Q1/Q2 FY2024, Q1/Q3 FY2026; 10-K FY2024, p.29 (actual revenue and margin).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: November 2023 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Nov 2, 2023</span>Narasimhan guides FY2024 to +10-12% revenue and "progressive" margin expansion.</li>
   <li class="crisis"><span class="date">Apr 30, 2024</span>Guidance cut a second time; comparable-sales guidance flips to flat/negative.</li>
@@ -10238,10 +10296,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 29, 2026</span>Fourth consecutive quarter of positive comparable sales; FY2026 guidance raised.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Niccol opened with the worst numbers first</h2>
 <p>Two CEOs, two opposite outcomes, inside the same three-year window: Narasimhan's confident, well-branded turnaround unraveled within months of its own launch, while Niccol's plan — which started by admitting the worst numbers rather than spinning them — is now producing results that beat and exceed its own modest targets. Whether this reflects durable structural improvement in the actual customer experience, or a comparison against an unusually weak prior year, is the open question the next couple of quarters need to answer.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Starbucks's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the FY2026 rebound is structural or a base-effect bounce</b> can't be fully separated from this data alone — it requires watching the next one to two quarters, particularly once the easy year-over-year comparisons fade.</li>
   <li><b>How China results will be reflected in consolidated financials after the joint venture closes</b> — if Starbucks ends up holding only a 40% stake, China revenue could shift to equity-method accounting rather than full consolidation, changing how it appears in reported results.</li>
@@ -10270,11 +10328,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $107.08, as of the Aug 21, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "18.1% needed vs. -14.3% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 13.2% to 22.4%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Starbucks's 18.1%" },
+      { id: 'show-your-work', label: "The math behind 18.1%" },
+      { id: 'fine-print', label: "Limits of the SBUX number" },
     ],
     sources: 'As of Aug 21, 2026 · Price used: $107.08',
     tags: ['SBUX', 'ReverseDCF', 'Valuation'],
@@ -10291,7 +10349,7 @@ export const POSTS: Post[] = [
   Even measured against revenue growth alone (6.4% a year), the market's required growth rate (18.1%) is about 2.8 times higher. This price only makes sense if the "Back to Starbucks" turnaround — currently showing four straight quarters of positive comparable sales — becomes a durable, decade-long acceleration rather than a short-term rebound off a weak prior year.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">18.1% needed vs. -14.3% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">18.1%</span></div>
@@ -10301,7 +10359,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs computed directly from 10-K FY2021–FY2025 income and cash flow statements. FCF actually declined over the period, so its bar is shown as a stub rather than a proportional fill.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 13.2% to 22.4%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC), 3-year-average FCF base</caption>
@@ -10315,14 +10373,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the lowest discount rate tested (8%), the required growth rate (13.2%) is still roughly twice Starbucks's 5-year revenue CAGR (6.4%).</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Starbucks's 18.1%</h2>
 <ul class="kicker-list">
   <li><b>Using FY2025's standalone FCF ($2.44B) instead of the 3-year average ($3.15B)</b> pushes the required growth rate even higher, to 21.6% at a 10% discount rate — FY2025's FCF was already depressed by the Q4 restructuring charge, so the market is effectively betting on a strong rebound from an already-low base.</li>
   <li><b>Raising the discount rate to a more conservative 12%</b> pushes the required growth rate to 22.4% — an unusually high bar for a large, well-known consumer brand.</li>
   <li><b>Changing the terminal growth rate (2.5%) or the 10-year projection window</b> would shift every number in this analysis; all figures here rest on that single set of model assumptions.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 18.1%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -10341,7 +10399,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>FCF definition:</strong> operating cash flow minus capital expenditures, computed directly from each year's 10-K cash flow statement.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the SBUX number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -10381,21 +10439,23 @@ export const POSTS: Post[] = [
       { q: "What is Waste Management's market cap?", a: "As of this article's data, WM's market cap was about $89.6B, on FY2025 revenue of $25.2B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How WM makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "WM collects the trash, buries it in landfills it owns, and sells the gas" },
+      { id: 'revenue-mix', label: "Collection and Landfill is 82.1% of revenue; Healthcare Solutions loses money" },
+      { id: 'customers-competitors', label: "Municipalities, businesses, industry and households" },
+      { id: 'core-metric', label: "Yield: price increases without volume growth" },
+      { id: 'leadership', label: "Fish: a former CFO who has been CEO since 2016" },
+      { id: 'capital-returns', label: "A 14.5% dividend raise, but buybacks stopped in 2025" },
+      { id: 'failure-scenario', label: "What breaks WM: landfill permits stop being scarce" },
+      { id: 'financials', label: "Revenue up 41% in four years, with a 14.2% jump in 2025" },
+      { id: 'unknowns', label: "Open questions: when Healthcare Solutions turns profitable" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['WM', 'Waste Management', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How WM makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>WM's landfill ownership is a hard-to-copy advantage, but its $7.2B Stericycle deal reversed its own stated rule against expensive M&A. Integration is still absorbing cash and attention.</div>
+
+<h2 id="how-it-makes-money">WM collects the trash, buries it in landfills it owns, and sells the gas</h2>
 <p>WM collects trash from homes and businesses using its own truck fleet, moves it through transfer stations, and disposes of most of it in landfills — and increasingly incinerators and recycling facilities — that it owns and operates outright. Because it earns money at multiple points in that chain (collection fee, disposal fee, and a byproduct sale of the methane landfills naturally produce, converted to electricity or renewable natural gas), WM effectively gets paid three times on the same load of trash.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Households & businesses</div><div class="d">Waste generation</div></div>
@@ -10408,7 +10468,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Collection and disposal fees made up $23.7B of FY2025's $25.2B net revenue; byproduct sales added another $2.0B. Source: 10-K FY2025, p.4 (business structure, five reportable segments).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Collection and Landfill is 82.1% of revenue; Healthcare Solutions loses money</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025 (net revenue $25,204M)</caption>
@@ -10426,7 +10486,7 @@ export const POSTS: Post[] = [
 <p class="src-note">Source: 10-K FY2025, p.47 (revenue composition), p.129 (Note 19, segment financial information).</p>
 <div class="callout warn"><b>Geographic revenue isn't disclosed</b>WM doesn't break out revenue by country or region. Operations are concentrated in the U.S. and Canada, though the Stericycle acquisition added Ireland, the U.K., and parts of Western Europe (medical waste and information destruction) for the first time — a new, if still small, currency exposure.</div>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Municipalities, businesses, industry and households</h2>
 <p>Customers span municipal governments (collection contracts), commercial facilities, industrial operations, and households — a mixed B2G/B2B/B2C base. In FY2025, the largest single customer accounted for less than 5% of total revenue, so customer concentration risk is low.</p>
 <ul class="kicker-list">
   <li><b>Republic Services (RSG)</b> — the #2 player and closest direct competitor, with the most similar business model and regional strategy.</li>
@@ -10435,7 +10495,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.4 (customer concentration); web search, competitor positioning (accessed Aug 23, 2026).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Yield: price increases without volume growth</h2>
 <p>"Yield" — the price increase WM pushes through on its Collection & Landfill business — shows whether the company has pricing power even without volume growth. Because new landfill permits are extremely difficult to obtain, landfills are a scarce asset, and that scarcity typically gives operators like WM pricing power that lasts longer than in most industries.</p>
 <div class="table-wrap">
   <table>
@@ -10449,15 +10509,15 @@ export const POSTS: Post[] = [
 <p>Yield has decelerated every year since 2022, from 6.7% to 3.8% — consistent with broader inflation cooling, which has reduced how much pricing power WM needs to exercise, though the underlying scarcity-driven pricing power hasn't disappeared.</p>
 <p class="src-note">Source: 10-K FY2025, p.48; 10-K FY2024, p.49; 10-K FY2023, p.44 (annual Collection & Landfill yield tables).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Fish: a former CFO who has been CEO since 2016</h2>
 <p>CEO James C. (Jim) Fish, Jr. has led WM since 2016 (about 10 years), an internal promotion who previously served as CFO — not a founder (the company traces to a 1987 founding and a 1998 merger that produced its current name), and no founder remains active in management. In May 2025, John Morris was promoted to President and COO, strengthening the succession bench. The largest shareholders are Vanguard (9.0%), the Gates Foundation Trust (7.2%) — a notable holder for a #3 shareholder position — and BlackRock (7.1%).</p>
 <p class="src-note">Source: DEF 14A 2026, p.21 (CEO bio), p.29 (5%+ shareholders).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A 14.5% dividend raise, but buybacks stopped in 2025</h2>
 <p>WM raised its 2026 quarterly dividend from $0.825 to $0.945 (+14.5%) — its 23rd consecutive annual increase — yielding about 1.7% at the current price. Share buybacks, however, stopped entirely in 2025 while the company paid down debt from the Stericycle acquisition. A new $3 billion buyback authorization was approved in December 2025, with repurchases resuming in February 2026 and roughly $2 billion expected for the year.</p>
 <p class="src-note">Source: 10-K FY2025, p.4 (dividend and buyback announcements), p.41 (Item 5, share repurchase activity).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks WM: landfill permits stop being scarce</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   The moment "a permit to bury trash in a landfill" stops being scarce — because new landfill permitting becomes easier, or municipalities start building their own disposal capacity — the pricing power WM has enjoyed for decades collapses all at once.
@@ -10469,7 +10529,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.23–37 (Item 1A Risk Factors), p.127 (auditor's report, Critical Audit Matters).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 41% in four years, with a 14.2% jump in 2025</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -10487,7 +10547,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>In 2025, operating income grew just 6.0% while revenue grew 14.2% — margin compressed from 18.4% to 17.1%, mostly from Stericycle integration costs and a recycling-segment impairment. Net income actually declined 1.4% on the higher interest burden. Free cash flow, by contrast, rose 26.8% as capital spending was scaled back — earnings quality and cash quality moved in opposite directions this year.</div>
 <p class="src-note">Source: 10-K FY2025 p.48 (highlights), p.64 (FCF reconciliation), p.78 (income statement), p.79 (cash flow statement); 10-K FY2023 p.63, 76; 10-K FY2022 p.56 (2021-2022 figures). EBITDA figures are estimated as operating income plus depreciation and amortization (a non-GAAP proxy, not company-reported).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: when Healthcare Solutions turns profitable</h2>
 <ul class="kicker-list">
   <li><b>Exactly when Healthcare Solutions turns profitable</b> isn't determinable from this data alone — it requires checking results after the Q2 2026 earnings release (Jul 29, 2026).</li>
   <li><b>Whether the full $2B buyback target for 2026 will actually be completed, and what specific leverage target (net debt/EBITDA) management is aiming for</b> aren't specified in the 10-K.</li>
@@ -10516,17 +10576,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from WM's 10-K filings for FY2021 through FY2025, DEF 14A 2026, and 12 quarters of earnings call transcripts from Q2 2023 through Q1 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Six weeks after ruling out big deals, WM bought Stericycle for $7.2B" },
+      { id: 'guidance-record', label: "WM's guidance and synergy targets vs. results" },
+      { id: 'timeline', label: "Timeline: April 2024 to January 2026" },
+      { id: 'our-read', label: "The cleanup took longer than the confidence suggested" },
+      { id: 'unknowns', label: "What WM's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Q2 2023–Q1 2026',
     tags: ['WM', 'Earnings Calls', 'M&A'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Six weeks after ruling out big deals, WM bought Stericycle for $7.2B</h2>
 <h3>2023 into early 2024: "We're pretty good at this"</h3>
 <p>Through 2023 and early 2024, WM's story was simple: doing the core business better. On the Q4 FY2023 call (Feb 13, 2024), CEO Jim Fish rattled off record numbers — a 29.9% operating margin, SG&A down to 9.4% — confident enough to say "we can pat ourselves on the back a little." On M&A, the position was explicit: on the Q3 2023 call, Fish explained why WM wasn't chasing competitive bidding wars, saying he'd rather spend at a 3x multiple building his own recycling and renewable-energy facilities than pay 12-14x for "rosy" acquisition projections. On the Q1 2024 call (Apr 25), he reaffirmed that the M&A pipeline was limited to small $100-200M "tuck-in" deals. Exactly six weeks after that statement, the company did the opposite.</p>
 
@@ -10544,7 +10604,7 @@ export const POSTS: Post[] = [
   This reads as a story that hasn't reached its final verdict yet. WM broke its own careful M&A discipline for its largest-ever deal, and has spent the eighteen months since proving the bet's validity to the market with rising synergy numbers — a pattern that could genuinely reflect strong integration, or could reflect a habit (visible even before Stericycle, per the guidance scorecard below) of setting targets low enough to always look like an overachiever. When Healthcare Solutions actually turns profitable, and whether volume recovers in the second half of 2026, will settle which story this really is.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">WM's guidance and synergy targets vs. results</h2>
 <div class="table-wrap">
   <table>
     <caption>4 tracked annual guidance cycles</caption>
@@ -10560,7 +10620,7 @@ export const POSTS: Post[] = [
 <p><strong>All three completed years (FY2023-FY2025) beat guidance — a 100% beat rate.</strong> Worth noting: this pattern of "guide conservatively, then beat" predates Stericycle entirely — 2023 already showed the same behavior, driven by the core Collection & Landfill business outperforming even as uncontrollable recycling-commodity prices weighed on the top-line target. Whether recent beats reflect genuinely improved execution or simply a persistent habit of setting the bar low is hard to fully separate from this data alone.</p>
 <p class="src-note">Source: earnings call transcripts (guidance statements each quarter, FY2023-FY2026); 10-K FY2025, p.48.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: April 2024 to January 2026</h2>
 <ul class="timeline">
   <li><span class="date">Apr 2024</span>Q1 2024 call reaffirms M&A strategy is limited to small tuck-in acquisitions.</li>
   <li class="crisis"><span class="date">Jun 2024</span>$7.2B Stericycle acquisition announced — WM's largest deal ever, six weeks after the tuck-in-only reaffirmation.</li>
@@ -10569,10 +10629,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jan 2026</span>23rd consecutive annual dividend increase; share buybacks resume.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">The cleanup took longer than the confidence suggested</h2>
 <p>WM's last eighteen months are the story of a company defending an exception to its own stated discipline. The filings tracked the decision in real time — a new segment, a rewritten risk factor, more Critical Audit Matters — while management kept raising the synergy numbers used to justify the deal. Whether Stericycle ultimately proves to be "an undervalued bet" or "an expensive cleanup" isn't yet settled by the data reviewed here; that verdict depends on when Healthcare Solutions turns profitable and whether the caution flagged in the April 2026 call about volume turns into an actual guidance cut.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What WM's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Exactly which quarter Healthcare Solutions turns profitable</b> can't be determined from this data — it requires the Q2 2026 results (expected late July 2026).</li>
   <li><b>Whether the "re-evaluate after Q2" caution flagged in the April 2026 call turns into an actual guidance cut, or just reflects WM's usual conservative goal-setting</b> won't be clear until the next earnings release.</li>
@@ -10601,11 +10661,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $224.06, as of the Aug 21, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "14.3% needed vs. 3.5% five-year growth, but 24.3% over three years" },
+      { id: 'sensitivity', label: "From 9.0% to 20.8%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change WM's 14.3%" },
+      { id: 'show-your-work', label: "The math behind 14.3%" },
+      { id: 'fine-print', label: "Limits of the WM number" },
     ],
     sources: 'As of Aug 21, 2026 · Price used: $224.06',
     tags: ['WM', 'ReverseDCF', 'Valuation'],
@@ -10619,7 +10679,7 @@ export const POSTS: Post[] = [
 
 <div class="callout warn"><b>One number alone can mislead here</b>WM's FCF has been on a rollercoaster: $2,530M (2021) fell to $1,902M (2023) during a heavy investment phase in recycling and renewable energy, then rebounded to $2,937M (2025) after the Stericycle acquisition's integration synergies and more efficient capital spending. Measured from the 2023 low point, 3-year FCF growth (24.3%) actually exceeds the market's ask (14.3%) — a very different read from the 5-year figure (3.8%). Which window is "the truth" depends on whether 2023 is treated as a real baseline or a temporary trough.</div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">14.3% needed vs. 3.5% five-year growth, but 24.3% over three years</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:59%;background:var(--accent)"></div></div><span class="val">14.3%</span></div>
@@ -10630,7 +10690,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs computed directly from 10-K FY2021–FY2025 income and cash flow statements. The unusually high 3-year FCF figure reflects how depressed 2023's base year was — treat it as a base-effect result, not a clean trend line.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 9.0% to 20.8%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -10647,14 +10707,14 @@ export const POSTS: Post[] = [
 </div>
 <p>WM is treated as a large, stable S&P 500 company for the 9% base-case discount rate.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change WM's 14.3%</h2>
 <ul class="kicker-list">
   <li><b>Using trailing-twelve-month FCF ($3,411M, Q2 2025-Q1 2026) instead of FY2025's standalone figure</b> would lower the required growth rate to 12.4% at a 9% discount rate — but that TTM figure runs 43% above the 3-year average, past this analysis's ±40% normalization threshold, so it's shown here only as a reference point, not used as the base case.</li>
   <li><b>Moving the discount rate from 7% to 12%</b> swings the required growth rate from 9.0% all the way to 20.8% — the single biggest lever in this whole analysis.</li>
   <li><b>Expanding net debt to include landfill closure/post-closure reserves and operating lease liabilities</b> (beyond just total debt minus cash) would raise enterprise value and push the required growth rate higher than shown here.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 14.3%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -10672,7 +10732,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR = (2,937÷2,530)^(1/4)−1 = 3.8%. 3-yr FCF CAGR = (2,937÷1,902)^(1/2)−1 = 24.3%. 5-yr revenue CAGR = (25,204÷17,931)^(1/4)−1 = 8.9%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the WM number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -10712,21 +10772,23 @@ export const POSTS: Post[] = [
       { q: "What is Cadence's market cap?", a: "As of this article's data, Cadence's market cap was about $87.9B, on FY2025 revenue of $5.30B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Cadence makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Cadence rents the software used to design and verify chips" },
+      { id: 'revenue-mix', label: "Core EDA is 70% of revenue; IP is 14%" },
+      { id: 'customers-competitors', label: "Fabless chip designers and systems companies, none above 10%" },
+      { id: 'core-metric', label: "Remaining performance obligations show future revenue already contracted" },
+      { id: 'leadership', label: "Devgan joined through the Magma acquisition and became CEO in 2021" },
+      { id: 'capital-returns', label: "No dividend, but $925M of buybacks in 2025" },
+      { id: 'failure-scenario', label: "What breaks Cadence: AI automates chip design away" },
+      { id: 'financials', label: "Revenue up 77% in four years" },
+      { id: 'unknowns', label: "Open questions: is Q2 FY2026's 24% surge temporary?" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q Q2 FY2026 · DEF 14A 2026',
     tags: ['CDNS', 'Semiconductors', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Cadence makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Cadence's multi-year licenses make its revenue unusually predictable, and AI chip demand is pushing growth up. The price already asks for roughly twice its historical cash-flow pace.</div>
+
+<h2 id="how-it-makes-money">Cadence rents the software used to design and verify chips</h2>
 <p>Cadence builds electronic design automation (EDA) software that semiconductor and systems companies use to design and verify chips before manufacturing. As chips get more complex, customers need more of Cadence's tools — and the licensing fees that generates get reinvested straight back into R&D (33% of revenue) to build the next generation of tools capable of handling even more complex chips, a self-reinforcing cycle.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Foundry process data + R&D</div><div class="d">$1.77B R&D, 33% of revenue</div></div>
@@ -10737,7 +10799,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, p.2 (product line definitions), p.5 (RPO, customer concentration), p.8 (competition), p.39 (product mix), p.58 (R&D expense).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Core EDA is 70% of revenue; IP is 14%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by product category — FY2025 (FY2024 in parentheses)</caption>
@@ -10754,7 +10816,7 @@ export const POSTS: Post[] = [
 <p>Geographically, 44% of revenue comes from the U.S., with China at 13%, other Asia at 19%, EMEA at 15%, Japan at 6%, and other Americas at 3%. The 56% international share includes direct exposure to U.S. export-control risk through the China business (see risks below).</p>
 <p class="src-note">Source: 10-K FY2025, p.39, "Revenue by Geography."</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Fabless chip designers and systems companies, none above 10%</h2>
 <p>100% B2B — customers are fabless chip designers and systems companies in automotive, aerospace, and other industries. No single customer accounted for 10% or more of revenue in either FY2025 or FY2024, and much of the revenue comes from 2-3 year term licenses, which keeps revenue relatively stable.</p>
 <ul class="kicker-list">
   <li><b>Synopsys</b> — the #1 EDA competitor, which expanded further into SD&A by acquiring simulation company Ansys in 2024, creating direct overlap with Cadence there too.</li>
@@ -10763,7 +10825,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.5 (customer concentration), p.8, "Competition."</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Remaining performance obligations show future revenue already contracted</h2>
 <p>Because most Cadence revenue comes from multi-year license contracts, Remaining Performance Obligations (RPO) — contracted revenue not yet recognized — shows how much future revenue is already locked in. A steadily rising RPO means next quarter's results are unlikely to collapse suddenly.</p>
 <div class="table-wrap">
   <table>
@@ -10777,15 +10839,15 @@ export const POSTS: Post[] = [
 <p>RPO grew 34% over three years, while revenue grew 49% over the same period — so the ratio of RPO to revenue actually slipped slightly, from 1.63x (2022) to 1.47x (2025). The backlog is still substantial, but revenue is growing faster than the contracted-backlog cushion behind it.</p>
 <p class="src-note">Source: 10-K FY2022 through FY2025, each year's p.5, "Remaining Performance Obligations."</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Devgan joined through the Magma acquisition and became CEO in 2021</h2>
 <p>CEO Anirudh Devgan (Ph.D.) has led Cadence since 2021, having served as President since 2017 — he joined Cadence in 2012 through the acquisition of competitor Magma Design Automation, having previously worked at IBM. He is not a founder. Combined ownership by all 16 executives and directors is under 1% (about 1.35 million shares). The largest shareholders are Vanguard (9.9%) and BlackRock (7.9%) — a typical institutional-investor ownership structure.</p>
 <p class="src-note">Source: DEF 14A 2026, p.23 (CEO bio), p.47 (ownership table).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">No dividend, but $925M of buybacks in 2025</h2>
 <p>Cadence has never paid a dividend and has no plans to — cash gets reinvested into growth instead. It does buy back stock, though: $700.1M (2023), $550.0M (2024), and $925.0M (2025), with an additional $1.5B authorization approved in May 2025. Shares outstanding actually fell about 0.7% net, from 273.85M (end of 2024) to 271.80M (end of 2025) — buybacks outpaced new share issuance for employee compensation.</p>
 <p class="src-note">Source: 10-K FY2025, p.34 (dividends), p.35 (buyback authorization), p.57 (share count), p.61 (buyback spending).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Cadence: AI automates chip design away</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If AI comes to fully automate the chip-design process itself, to the point engineers no longer need to open Cadence's tools at all, the company's reason for existing disappears.
@@ -10797,7 +10859,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.58 (export-control settlement), p.8 (design-starts risk), p.57, 58, 61 (debt and interest expense).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 77% in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -10814,7 +10876,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>In 2024, operating income grew but free cash flow fell 10.3% — working-capital swings (like higher receivables) and acquisition-related spending appear to be the cause. FCF surged 41.9% in 2025, but that figure already reflects the $140.6M export-control penalty payment — meaning underlying cash generation is genuinely solid.</div>
 <p class="src-note">Source: 10-K FY2025, p.58 (income statement), p.61 (cash flow statement), p.57 (balance sheet); 10-K FY2023, p.50 (2023 debt); 10-K FY2022, p.48-49, 52 (2021-2022 figures).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: is Q2 FY2026's 24% surge temporary?</h2>
 <ul class="kicker-list">
   <li><b>Whether Q2 FY2026's +24% YoY revenue surge (per the 10-Q, $1,584M) reflects a temporary AI-chip demand spike or a structural shift</b> requires checking more recent earnings calls.</li>
   <li><b>Actual operating margins by product category (Core EDA / Semiconductor IP / SD&A)</b> aren't disclosed, so which business line is genuinely most profitable can't be determined from this data.</li>
@@ -10843,17 +10905,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Cadence's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A $140.6M export settlement, and a rebrand from EDA pioneer to AI software leader" },
+      { id: 'guidance-record', label: "Cadence's guidance vs. the next quarter's reported revenue" },
+      { id: 'timeline', label: "Timeline: February 2021 to July 2026" },
+      { id: 'our-read', label: "An identity rewrite that was already underway" },
+      { id: 'unknowns', label: "What Cadence's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['CDNS', 'Earnings Calls', 'AI Infrastructure'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A $140.6M export settlement, and a rebrand from EDA pioneer to AI software leader</h2>
 <h3>Fall 2023: still "an EDA pioneer"</h3>
 <p>In fall 2023, Cadence described itself as "a leading pioneer in electronic design automation (EDA), building upon more than 35 years of computational software expertise." On the Q4 FY2023 call (Feb 12, 2024), CFO John Wall said the company closed the year with "a record $6 billion backlog" and guided FY2024 revenue to $4.55-4.61 billion. The confidence was real, but the identity was still rooted in "EDA."</p>
 
@@ -10871,7 +10933,7 @@ export const POSTS: Post[] = [
   This is really two storylines running in parallel: cleaning up a past mistake, and rewriting the company's identity around future AI demand. When the two collided in Q2 FY2025 — management quietly converting an "immaterial" risk into a real, disclosed cost — the earnings-call tone never wavered. Given six consecutive quarters of guidance beats, that's a sign of strong execution discipline; it's also exactly why analysts keep asking, quarter after quarter, whether this growth rate is sustainable.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Cadence's guidance vs. the next quarter's reported revenue</h2>
 <div class="table-wrap">
   <table>
     <caption>6 tracked quarterly guidance updates, FY2025-FY2026</caption>
@@ -10889,7 +10951,7 @@ export const POSTS: Post[] = [
 <p><strong>Six consecutive quarters with no misses — either in-range or a top-end beat</strong> — the classic "guide conservatively, then beat" pattern. Annual revenue guidance tells the same story: FY2024's top end ($4.61B) was beaten by actual results ($4.641B), as was FY2025's final top end ($5.292B vs. actual $5.297B), and FY2026 guidance has already been raised twice within the year ($5.9-6.0B → $6.125-6.225B → $6.26-6.34B). <strong>The one exception is GAAP operating margin</strong> — FY2025's original guidance of 30.3-31.3% was cut to 27.9-28.9% after the DOJ/BIS settlement, and actual results landed at 28.17%, below the original plan. Revenue and cash flow beat every time; profitability alone missed the original target.</p>
 <p class="src-note">Source: CDNS earnings call CFO remarks, guidance given each quarter compared against the following quarter's reported "Total revenue was..." figure (Apr 2025-Jul 2026 calls).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: February 2021 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Feb 2021</span>First administrative subpoena received from BIS regarding China sales (disclosed later, in the FY2022 10-K).</li>
   <li><span class="date">Nov 2023</span>A related subpoena also received from the DOJ — a second investigating agency now involved.</li>
@@ -10900,10 +10962,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Apr 27 & Jul 27, 2026</span>FY2026 guidance raised two consecutive quarters; "very pleased" appears for the first time; revenue up 24% YoY (Q1 and Q2 FY2026 calls).</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">An identity rewrite that was already underway</h2>
 <p>Cadence's last three years read as two tracks that briefly intersected: quietly resolving a legacy compliance issue while simultaneously rewriting its own identity around AI-driven demand. The company managed the collision smoothly — converting an "immaterial" estimate into a real, disclosed $140.6 million cost without breaking its confident earnings-call cadence — and the guidance-beating streak that followed suggests real execution strength. Whether the AI-driven growth story proves durable, or whether the current pace is itself a temporary spike, is the open question analysts keep returning to.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Cadence's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the guidance-raising streak continues into Q3 FY2026 and beyond, or reflects a temporary AI-demand spike</b> requires watching the next one to two quarters.</li>
   <li><b>Whether the BIS/DOJ settlement led to specific compliance changes that reduce the risk of a similar issue recurring</b> isn't confirmable from the earnings calls or 10-K alone.</li>
@@ -10932,11 +10994,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $319.02, as of the Aug 21, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "21.0% needed vs. 11.3% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 16.0% to 25.4%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Cadence's 21.0%" },
+      { id: 'show-your-work', label: "The math behind 21.0%" },
+      { id: 'fine-print', label: "Limits of the CDNS number" },
     ],
     sources: 'As of Aug 21, 2026 · Price used: $319.02',
     tags: ['CDNS', 'ReverseDCF', 'Valuation'],
@@ -10953,7 +11015,7 @@ export const POSTS: Post[] = [
   A required growth rate that's 1.5 times the 5-year actual FCF CAGR is a meaningful gap — one worth digging into further, not a "buy or sell" signal on its own. Notably, the most recent quarter's revenue growth (24.2% year over year) already exceeds the market's ask, so recent momentum is at least pointed in the right direction — whether that pace holds for a full decade is a separate question.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">21.0% needed vs. 11.3% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:83%;background:var(--accent)"></div></div><span class="val">21.0%</span></div>
@@ -10964,7 +11026,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021-FY2025. Most recent quarter is Q2 FY2026 revenue of $1,584M vs. $1,275M a year earlier, per the Jul 28, 2026 earnings call and 10-Q.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 16.0% to 25.4%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -10980,14 +11042,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at a conservative 8% discount rate, the market still requires 16% growth — well above the 5-year FCF CAGR of 11.3%. The conclusion doesn't change much regardless of the discount-rate assumption.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Cadence's 21.0%</h2>
 <ul class="kicker-list">
   <li><b>Using FY2025's standalone annual FCF ($1,586.9M) instead of trailing-twelve-month FCF ($1,678.7M)</b> raises the required growth rate slightly, to 21.8%.</li>
   <li><b>A February 2026 acquisition (Hexagon's D&E division) flipped Cadence's balance sheet from net cash (-$521M at year-end 2025) to net debt (+$1,042M by mid-2026)</b> — but relative to the $88B market cap, this moves the required growth rate by only about +0.2 percentage points.</li>
   <li><b>Raising the terminal growth rate from 2.5% to 3.0%</b> lowers the required growth rate slightly, but not enough to change the overall conclusion.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 21.0%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -11004,7 +11066,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr revenue CAGR = ($5,296.8M ÷ $2,988.2M)^(1/4) − 1 = 15.4%. 5-yr FCF CAGR = ($1,586.9M ÷ $1,035.7M)^(1/4) − 1 = 11.3%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the CDNS number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -11044,21 +11106,23 @@ export const POSTS: Post[] = [
       { q: "What is AMD's market cap?", a: "As of this article's data, AMD's market cap was about $771.3B, on FY2025 revenue of $34.6B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How AMD makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "AMD designs the chips and outsources the manufacturing" },
+      { id: 'revenue-mix', label: "Data Center is 48.0% of revenue" },
+      { id: 'customers-competitors', label: "Cloud giants, PC makers and console makers" },
+      { id: 'core-metric', label: "Data Center growth carries the stock's story" },
+      { id: 'leadership', label: "Lisa Su: CEO since 2014 and chairman since 2022" },
+      { id: 'capital-returns', label: "No dividend; $1.3B of buybacks in 2025" },
+      { id: 'failure-scenario', label: "What breaks AMD: AI orders go to Nvidia or in-house chips" },
+      { id: 'financials', label: "Revenue up 2.1x in four years, with a 3.9% dip in 2023" },
+      { id: 'unknowns', label: "Open questions: what the 6-gigawatt OpenAI deal will produce" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q Q2 FY2026 · DEF 14A 2026',
     tags: ['AMD', 'Semiconductors', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How AMD makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>AMD's AI ambitions are now visible in Data Center revenue and in a large OpenAI supply deal. The price asks for about twice the free-cash-flow growth AMD has delivered.</div>
+
+<h2 id="how-it-makes-money">AMD designs the chips and outsources the manufacturing</h2>
 <p>AMD designs semiconductor chips — the "brains" of computers, servers, and AI data centers — but doesn't manufacture them itself. Actual chip production is outsourced to foundries like Taiwan's TSMC (a "fabless" model), letting AMD focus its resources on design and R&D (23% of FY2025 revenue) instead of expensive factories. Finished chips are sold across four end markets: cloud/AI companies, PC makers, console makers, and industrial/automotive customers.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">TSMC & other foundries</div><div class="d">Contract wafer manufacturing</div></div>
@@ -11069,7 +11133,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, Item 1 "Manufacturing Arrangements," p.10; Note 4, Segment Reporting, p.71.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Data Center is 48.0% of revenue</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -11088,7 +11152,7 @@ export const POSTS: Post[] = [
 <p>By billing location, the U.S. accounts for 32.8% of FY2025 revenue, China (including Hong Kong) 22.4%, Taiwan 15.0%, Singapore 12.4%, and other regions 17.5%. These figures reflect where invoices are sent, not where end products are ultimately used — the high Taiwan/Singapore/China shares largely reflect manufacturing and assembly hubs, and also mean direct exposure to Taiwan Strait geopolitical risk and U.S.-China export controls.</p>
 <p class="src-note">Source: 10-K FY2025, Note 4, Segment Reporting (revenue by geography), p.72.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Cloud giants, PC makers and console makers</h2>
 <p>Nearly all B2B: core customers are cloud/big-tech companies building AI data centers, PC makers (Dell, HP, Lenovo), and console makers (Sony PlayStation, Microsoft Xbox). No single customer accounted for 10% or more of revenue in FY2024 or FY2025 — though in FY2023, one Client-and-Gaming customer (likely a console maker) accounted for 18% of total revenue. Growing AI revenue has diversified the base recently, but dependence on a handful of hyperscale customers could grow again.</p>
 <ul class="kicker-list">
   <li><b>Nvidia</b> — the dominant #1 in AI data-center GPUs; AMD is effectively the #2 challenger.</li>
@@ -11097,7 +11161,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Note 4, Segment Reporting, p.72; Item 1, "Competition," p.9.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Data Center growth carries the stock's story</h2>
 <p>Data Center segment revenue now accounts for nearly half of AMD's total revenue, and AI-accelerator demand is close to the sole driver of the stock's story. This one segment's growth rate matters more to AMD's investment case than total revenue or profit combined.</p>
 <div class="table-wrap">
   <table>
@@ -11112,16 +11176,16 @@ export const POSTS: Post[] = [
 <div class="callout good"><b>Even faster in early 2026</b>Q2 FY2026 Data Center revenue hit $6,718M, up 107.3% year over year; the first half of FY2026 totaled $12,493M, up 80.7% year over year — an acceleration from FY2025's already-strong pace.</div>
 <p class="src-note">Source: 10-K FY2025, Note 4, p.71; 10-K FY2023, Note 4, p.67; 10-Q Q2 FY2026, Note 4, p.34.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Lisa Su: CEO since 2014 and chairman since 2022</h2>
 <p>Dr. Lisa Su has served as CEO since October 2014 (about 12 years) and as Chairman since February 2022. Before AMD, she was a semiconductor engineer and executive at IBM, Freescale, and Texas Instruments — she is not a founder (AMD was founded by Jerry Sanders in 1969; Su joined in 2012). Combined ownership by all 16 executives and directors is under 0.5% of shares outstanding. The largest shareholders are Vanguard (8.8%) and BlackRock (7.7%) — a professional-management structure with very low insider ownership and large institutional holders as the top shareholders.</p>
 <p class="src-note">Source: DEF 14A (filed Mar 27, 2026), ownership table p.36; board letter, p.17-19.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">No dividend; $1.3B of buybacks in 2025</h2>
 <p>AMD pays no dividend and has no plans to, per its 10-K, prioritizing reinvestment in growth. Share buybacks totaled $985M (2023), $862M (2024), and $1,316M (2025).</p>
 <div class="callout warn"><b>Buybacks haven't reduced the share count</b>Despite over $3 billion in buybacks across three years, diluted shares outstanding barely moved: 1.625 billion (FY2023) → 1.637 billion (FY2024) → 1.636 billion (FY2025). New shares issued for employee stock options and RSUs have largely offset the buybacks. Separately, $9.4 billion of a $14 billion buyback authorization remained unused as of year-end 2025 — plenty of capacity remains.</div>
 <p class="src-note">Source: 10-K FY2025, Consolidated Statements of Cash Flows, p.62; Consolidated Statements of Operations (diluted shares), p.58; Item 5, "Issuer Purchases of Equity Securities," p.45.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks AMD: AI orders go to Nvidia or in-house chips</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   The moment the handful of big-tech companies building AI data centers concentrate their GPU orders entirely with Nvidia, or replace them with their own in-house chips, AMD's entire growth story is shaken.
@@ -11133,7 +11197,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A "Risk Factors," p.14; MD&A, p.47 (export-control loss figures).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 2.1x in four years, with a 3.9% dip in 2023</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -11150,7 +11214,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Why FY2023's margin looks so weak</b>FY2023's razor-thin 1.8% operating margin was largely an accounting effect — amortization of intangible assets from the 2022 Xilinx acquisition weighed heavily on reported profit without any actual cash leaving the business, which is why FCF (4.9% of revenue) held up better that year. FY2025's FCF also includes a one-time $1.2 billion cash inflow from the sale of the ZT Systems manufacturing business (continuing-operations FCF was closer to $5.5 billion) — so treat the reported figure as somewhat higher than pure underlying cash generation.</div>
 <p class="src-note">Source: 10-K FY2025, Consolidated Statements of Operations (p.58), Cash Flows (p.62), Balance Sheets (p.60); 10-K FY2023, same statements (p.58, 62, 60).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: what the 6-gigawatt OpenAI deal will produce</h2>
 <ul class="kicker-list">
   <li><b>When and how much revenue the October 2025 "6-gigawatt GPU supply" agreement with OpenAI will actually generate</b> can't be determined from this data alone — future quarterly results and earnings calls need to confirm it.</li>
   <li><b>Whether a proposed U.S. government arrangement to take 15% of licensed MI308 revenue to China will actually become formal policy</b> hadn't been finalized as of August 2026.</li>
@@ -11179,17 +11243,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from AMD's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "The challenger became an AI infrastructure partner, and retired its quarterly targets" },
+      { id: 'guidance-record', label: "AMD's guidance vs. the next quarter's results" },
+      { id: 'timeline', label: "Timeline: 2024 to 2026" },
+      { id: 'our-read', label: "A story rewritten while results got stronger" },
+      { id: 'unknowns', label: "What AMD's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026',
     tags: ['AMD', 'Earnings Calls', 'AI Infrastructure'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">The challenger became an AI infrastructure partner, and retired its quarterly targets</h2>
 <h3>Late 2023 into 2024: a company that spoke in specific numbers</h3>
 <p>At the end of 2023, AMD spoke the language of specific numbers. In its January 2024 earnings call, it stated flatly that "2024 AI accelerator (data center GPU) revenue will exceed $3.5 billion" — then raised that figure to $4 billion in April, $4.5 billion in July, and $5 billion in October, <strong>raising the target every single quarter</strong>. That year's 10-K still opened its "Our Strategy" section with the somewhat bureaucratic phrase "five strategic pillars," and risk factor #1 was "Intel's dominance of the microprocessor market" — AMD was still describing itself as the challenger fighting in Intel's shadow.</p>
 
@@ -11207,7 +11271,7 @@ export const POSTS: Post[] = [
   This reads less like a retreat and more like a promotion in status. Naming a specific number and hitting it every quarter is the rhetoric of a company still trying to catch up; leading with named, multi-year contracts from marquee customers is the rhetoric of a company that believes the balance of power has already shifted. The tradeoff is that the story now depends heavily on a small number of enormous contracts (OpenAI, Meta, Anthropic) — instead of tracking "how much ground has AMD closed on Intel and Nvidia," the key question is now "will these specific mega-deals actually be executed as described."
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">AMD's guidance vs. the next quarter's results</h2>
 <div class="table-wrap">
   <table>
     <caption>11 tracked quarterly guidance cycles, Q3 FY2023–Q2 FY2026</caption>
@@ -11230,7 +11294,7 @@ export const POSTS: Post[] = [
 <p><strong>11 for 11 — no misses at all, and since the OpenAI deal was announced, the margin of the beats has widened noticeably.</strong> This is the classic conservative-guide-then-beat pattern, but the growing size of the beats suggests demand may be outpacing even AMD's own internal forecasts.</p>
 <p class="src-note">Source: earnings call guidance statements and the following quarter's reported results, Q3 FY2023 through Q2 FY2026.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: 2024 to 2026</h2>
 <ul class="timeline">
   <li><span class="date">Jan–Oct 2024</span>2024 AI-accelerator revenue target raised four consecutive quarters, from $3.5B to $5B — backed by results each time.</li>
   <li class="crisis"><span class="date">Feb 2025</span>Specific annual AI-GPU target discontinued after an analyst asks why directly.</li>
@@ -11239,10 +11303,10 @@ export const POSTS: Post[] = [
   <li><span class="date">2026</span>Meta partnership (Q1) and Anthropic partnership (Q2) added; guidance beats widen; management confidence score reaches 9.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">A story rewritten while results got stronger</h2>
 <p>AMD's last three years trace a shift from proving itself through specific, repeatedly-raised numbers to proving itself through named, marquee partnerships — a move that coincided with both companies it once named as threats (Intel and Nvidia) disappearing from its own risk-factor language. The guidance record backs the shift up: not a single miss in 11 quarters, with the margin of overshoot growing since the OpenAI deal. The flip side is concentration — the story now rests heavily on whether a handful of enormous, multi-year contracts actually convert into revenue at the pace described.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What AMD's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>How much revenue, and on what timeline, the OpenAI, Meta, and Anthropic partnerships will actually generate</b> requires watching results from Q3 FY2026 onward — everything so far is described as "planned" or "early shipments."</li>
   <li><b>Why AMD stopped giving specific targets exactly when it did</b> was never explained in detail publicly — whether demand became harder to forecast or the company wanted to avoid tipping off competitors is speculation either way.</li>
@@ -11271,11 +11335,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $472.49, as of Aug 25, 2026, 9:38am ET.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "41.6% needed vs. 20.3% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 35.5% to 47.0%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change AMD's 41.6%" },
+      { id: 'show-your-work', label: "The math behind 41.6%" },
+      { id: 'fine-print', label: "Limits of the AMD number" },
     ],
     sources: 'As of Aug 25, 2026 · Price used: $472.49',
     tags: ['AMD', 'ReverseDCF', 'Valuation'],
@@ -11292,7 +11356,7 @@ export const POSTS: Post[] = [
   A required growth rate more than 1.5 times the 5-year actual FCF CAGR (20.3%) is a substantial gap. This price only makes sense if the newly named mega-partnerships — OpenAI, Meta, Anthropic — actually deliver cash flow at the scale their announcements imply.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">41.6% needed vs. 20.3% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (3-yr avg FCF, WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">41.6%</span></div>
@@ -11303,7 +11367,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical FCF CAGR from 10-K FY2021–FY2025 cash flow statements. Analyst consensus from simplywall.st (accessed Aug 25, 2026).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves? (3-year-average FCF base)</h2>
+<h2 id="sensitivity">From 35.5% to 47.0%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -11317,14 +11381,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at a lower discount rate (8%), the required growth rate (35.5%) is still 1.7 times the 5-year actual FCF CAGR (20.3%).</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change AMD's 41.6%</h2>
 <ul class="kicker-list">
   <li><b>The single biggest lever: which FCF base you use.</b> Switching from the 3-year average ($3,420M) to trailing-twelve-month FCF ($7,736M) drops the required growth rate from 41.6% to 29.7%. AMD's 2023 results were depressed by Xilinx-acquisition amortization, so the 3-year average (2023-2025) still carries that low point, while the most recent four quarters (Q3 2025-Q2 2026) ran at 2.3 times the 3-year average.</li>
   <li><b>Raising the discount rate to 12%</b> pushes the required growth rate to 47.0% — plausible given AMD's real day-to-day stock volatility.</li>
   <li><b>Stripping out the one-time $1.2B ZT Systems divestiture proceeds from 2025's FCF</b> (leaving continuing-operations FCF around $5.52B) would slightly lower the 3-year average and push the required growth rate marginally higher.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 41.6%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -11340,7 +11404,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> FCF CAGR = (FY2025 FCF ÷ FY2021 FCF)^(1/4) − 1 = ($6,735M ÷ $3,220M)^(1/4) − 1 = 20.3%. Revenue CAGR over the same period was nearly identical at 20.5%, meaning margins didn't shift much.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the AMD number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -11380,21 +11444,23 @@ export const POSTS: Post[] = [
       { q: "What is CVS Health's market cap?", a: "As of this article's data, CVS's market cap was about $119.7B, on FY2025 revenue of $402.1B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How CVS makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "CVS insures people and fills their prescriptions" },
+      { id: 'revenue-mix', label: "Health Services is 40.3% of revenue at a 3.8% margin" },
+      { id: 'customers-competitors', label: "About 20% of insurance revenue comes from the federal government" },
+      { id: 'core-metric', label: "The medical benefit ratio shows whether insurance is well run" },
+      { id: 'leadership', label: "Joyner: an Aetna veteran who became CEO in October 2024" },
+      { id: 'capital-returns', label: "A dividend frozen at $0.665 a quarter since 2024" },
+      { id: 'failure-scenario', label: "What breaks CVS: Medicare pays less or members need more care" },
+      { id: 'financials', label: "Revenue up 38% in four years" },
+      { id: 'unknowns', label: "Open questions: will the 86.0% MBR hold?" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['CVS', 'Healthcare', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How CVS makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>CVS's insurance business broke down in three quarters of 2024 and has since improved. The stock is priced for a modest recovery, but that still means reversing a five-year fall in free cash flow.</div>
+
+<h2 id="how-it-makes-money">CVS insures people and fills their prescriptions</h2>
 <p>CVS Health collects insurance premiums from employers and the government through Aetna, pays out members' medical and pharmacy claims, and then earns money a second time when those same members fill their prescriptions at a CVS-owned pharmacy. This "closed loop" is possible only because CVS owns all three pieces — an insurer (Aetna), a pharmacy-benefit manager (Caremark), and a retail pharmacy chain (CVS Pharmacy) — under one corporate roof.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Employers & government (CMS)</div><div class="d">Pay premiums</div></div>
@@ -11405,7 +11471,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">FY2025 segment revenue before eliminations: Health Care Benefits $143.4B, Health Services (Caremark) $190.4B, Pharmacy & Consumer Wellness $139.4B. Because the three segments transact with each other over the same customers and prescriptions, consolidated revenue ($402.1B) is calculated by removing $71.6B in intersegment eliminations from the segment total. Source: 10-K FY2025, p.67.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Health Services is 40.3% of revenue at a 3.8% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025 (before intersegment eliminations)</caption>
@@ -11422,7 +11488,7 @@ export const POSTS: Post[] = [
 <p>Geographic revenue isn't separately disclosed — CVS is almost entirely a U.S. domestic business, which limits currency-related risk, though the 10-K does note some limited international operations in certain risk disclosures.</p>
 <p class="src-note">Source: 10-K FY2025, p.48 (international operations risk language).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">About 20% of insurance revenue comes from the federal government</h2>
 <div class="callout warn"><b>Customer concentration to watch</b>About 20% of Health Care Benefits segment revenue comes from the U.S. federal government (CMS/Medicare), with roughly 79% of that tied to Medicare Advantage contracts. In effect, CVS's largest single "customer" is the federal government — and any cut to Medicare reimbursement rates hits results directly.</div>
 <ul class="kicker-list">
   <li><b>UnitedHealth Group</b> — the most direct rival, combining insurance (UnitedHealthcare) with a PBM and care-delivery business (Optum); larger in scale than CVS.</li>
@@ -11431,7 +11497,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.4 (customer concentration); web search, Hudson Labs "CVS Top Peers 2026."</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">The medical benefit ratio shows whether insurance is well run</h2>
 <p>Revenue and profit alone don't reveal whether CVS's insurance business is actually being run well. The Medical Benefit Ratio (MBR — the share of premiums paid out as medical costs) shows insurance discipline, while pharmacy same-store sales growth shows whether existing stores are genuinely seeing more prescription activity.</p>
 <div class="table-wrap">
   <table>
@@ -11446,7 +11512,7 @@ export const POSTS: Post[] = [
 <p>MBR jumped from 84.0% (2022) to 92.5% (2024) before easing slightly to 91.2% (2025) — that two-year spike is the direct cause of the insurance segment's adjusted operating income collapsing from $5,577M (2023) to $307M (2024). 1H FY2026 MBR improved further to 86.0%, per the 10-Q. Meanwhile, most of the pharmacy same-store sales growth comes from drug-price inflation and a growing mix of expensive drugs (like GLP-1s), not necessarily more prescriptions being filled — so the headline growth rate can overstate genuine foot traffic.</p>
 <p class="src-note">Source: 10-K FY2021 p.76, FY2022 p.78, FY2023 p.83, FY2024 p.78, FY2025 p.70 (MBR); 10-K FY2021-2025 MD&A pharmacy segment discussion (same-store sales); 10-Q Q2 FY2026 (1H2026 MBR).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Joyner: an Aetna veteran who became CEO in October 2024</h2>
 <p>CEO J. David Joyner has served as CEO and President since October 17, 2024, and became Chairman as of January 1, 2026. He is not a founder — an internal promotion who began his career at Aetna in 1986 and has spent roughly 40 years across Caremark and CVS Health. Activist hedge fund Glenview Capital's founder, Larry Robbins, joined the board following a board shakeup after 2024's poor results. Combined insider ownership is under 1% of shares outstanding.</p>
 <div class="table-wrap">
   <table>
@@ -11462,11 +11528,11 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: DEF 14A 2026, p.14 (CEO), p.111 (insider ownership), p.112 (5%+ shareholders).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A dividend frozen at $0.665 a quarter since 2024</h2>
 <p>CVS hasn't missed a quarterly dividend since its 1996 IPO — but the quarterly payment, raised from $0.605 (2023) to $0.665 (2024), has stayed frozen at $0.665 through 2025 and into 1H FY2026. Buybacks tell a starker story: $2,012M (2023) and $3,023M (2024) fell to exactly $0 in 2025, and 2026 guidance explicitly states "no share buybacks planned this year" — the company is clearly prioritizing debt paydown and balance-sheet repair over shareholder returns for now.</p>
 <p class="src-note">Source: 10-K FY2025, p.59 (dividends), p.95 (dividend/buyback cash flows); 10-Q Q2 FY2026, guidance commentary.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks CVS: Medicare pays less or members need more care</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the government cuts what it pays for Medicare, or members turn out to need more care than expected, the insurance business (Aetna) takes the first hit — and if that loss triggers writedowns on the expensive clinics and provider practices bought to offset it, the "insurance plus pharmacy" closed loop CVS built could start breaking down on multiple fronts at once.
@@ -11478,7 +11544,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.65, p.86; 10-K FY2022, p.73, p.85 (opioid litigation reserve).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 38% in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -11495,7 +11561,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>Revenue rose every year over five years (+38% cumulative), but operating margin fell steadily from 4.5% to 1.2%. Two of those years carried large one-time hits — a $5.8B opioid litigation reserve in 2022, and $5.7B in goodwill impairment plus $1.2B in litigation costs in 2025 — but even accounting for those, the PBM business's structural thinness (revenue reflects the full drug price, margin is razor-thin) means "revenue growth" and "actually making money" are two different stories at CVS.</div>
 <p class="src-note">Source: 10-K FY2021 p.105, 107, 108; FY2022 p.105, 107, 108; FY2025 p.92, 94, 95 (income statement, balance sheet, cash flow statement).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: will the 86.0% MBR hold?</h2>
 <ul class="kicker-list">
   <li><b>Whether the MBR improvement to 86.0% in Q2 FY2026 continues through the back half of the year</b> can't be confirmed from this data alone — it requires checking the next earnings calls.</li>
   <li><b>Exactly when the Health Care Delivery business (Oak Street Health and related clinics) turns profitable</b> isn't specified in the filings.</li>
@@ -11524,17 +11590,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from CVS's 10-K filings for FY2022 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Insurance unraveled in three quarters and cost the CEO her job" },
+      { id: 'guidance-record', label: "CVS's guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline: 2023 to August 2026" },
+      { id: 'our-read', label: "A response that was about language as much as numbers" },
+      { id: 'unknowns', label: "What CVS's calls still don't answer" },
     ],
     sources: '10-K FY2022–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Q3 2023–Q2 2026',
     tags: ['CVS', 'Earnings Calls', 'Leadership Change'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Insurance unraveled in three quarters and cost the CEO her job</h2>
 <h3>2023: a confident, diversified company</h3>
 <p>Through 2023, CVS Health was a confident company. It reaffirmed its annual guidance for three consecutive quarters, and management spoke on earnings calls about "the power of our diversified model." That year, CVS acquired Oak Street Health (primary-care clinics) and Signify Health for a combined roughly $18 billion, and its 10-K named both companies explicitly as "new risks" — there was no reason to hide anything yet. The year closed with adjusted EPS of $8.74, near the top of guidance.</p>
 
@@ -11552,7 +11618,7 @@ export const POSTS: Post[] = [
   The core of this story isn't just that the numbers improved — it's that the causes of the crisis remain formally on the books as acknowledged risks. And one quiet, never-flagged-as-a-risk number stands out: Caremark's PBM membership has fallen every year, from about 110 million (2022) to 87 million (2025). Whether the recent run of guidance raises reflects a genuine structural fix, or simply a rebound off an artificially lowered base, likely won't be clear until the actual 2027 Medicare rate negotiations play out.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">CVS's guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>Adjusted EPS guidance path by fiscal year</caption>
@@ -11568,7 +11634,7 @@ export const POSTS: Post[] = [
 <p><strong>2023 showed the classic "guide conservatively, then beat" pattern; 2024 broke that pattern completely, with three deep cuts culminating in a full withdrawal; 2025-2026 have returned to the old "guide low, raise every quarter" playbook</strong> — though it's worth remembering that recovery started from a starting line set much lower than before the crisis.</p>
 <p class="src-note">Source: earnings call transcripts, Q3 2023 through Q2 2026, guidance commentary each quarter (FY2024 actual EPS estimated by summing four quarterly reported figures).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: 2023 to August 2026</h2>
 <ul class="timeline">
   <li><span class="date">Mar–May 2023</span>Signify Health and Oak Street Health acquisitions close (~$18B combined); explicitly named as new risks in the 10-K.</li>
   <li class="crisis"><span class="date">May 2024</span>Q1 results: adjusted EPS of $1.31, called "a disappointing result"; annual guidance cut from $8.30 to $7.00.</li>
@@ -11580,10 +11646,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 2026</span>Q2 results: guidance raised sharply (EPS +$0.60, cash flow +$2B); 2027 outlook pulled forward.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">A response that was about language as much as numbers</h2>
 <p>CVS's last three years compress into a single arc: a diversified insurance-and-pharmacy giant underestimated its own members' medical costs, paid for it with a CEO change and a guidance withdrawal, and has since rebuilt confidence through a string of guidance raises. The notable detail is that the company's own filings didn't just move on — they formally added the exact mechanisms of the 2024 crisis (bad acquisitions, insufficient premium increases) to their permanent list of acknowledged risks. Whether the current recovery is structural or simply a rebound from an unusually low base is the open question the next Medicare rate cycle should help answer.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What CVS's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the 2025-2026 guidance-raising streak reflects genuine structural recovery or a base effect from 2024's deeply lowered starting point</b> is hard to separate from this data alone.</li>
   <li><b>Why Caremark's PBM membership has declined every year</b> — whether from voluntary contract reductions or competitive losses — isn't explained in the filings.</li>
@@ -11612,11 +11678,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $93.02, as of the Aug 21, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "6.15% needed vs. -16.1% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 3.9% to 12.0%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change CVS's 6.15%" },
+      { id: 'show-your-work', label: "The math behind 6.15%" },
+      { id: 'fine-print', label: "Limits of the CVS number" },
     ],
     sources: 'As of Aug 21, 2026 · Price used: $93.02',
     tags: ['CVS', 'ReverseDCF', 'Valuation'],
@@ -11630,7 +11696,7 @@ export const POSTS: Post[] = [
 
 <div class="callout warn"><b>A modest-looking number that still requires a real reversal</b>A 6.15% required growth rate looks unremarkable by market standards — far lower than what's typically demanded of a growth stock. But measured against CVS's actual trajectory (FCF down 16.1% a year for five years), even this modest bar requires the recent recovery in cash flow to be durable, not a temporary bounce.</div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">6.15% needed vs. -16.1% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (3-yr avg FCF, WACC 9%)</span><div class="track"><div class="fill" style="width:38%;background:var(--accent)"></div></div><span class="val">6.15%</span></div>
@@ -11640,7 +11706,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021-FY2025. FCF actually declined over the period, so its bar is shown as a stub rather than a proportional fill.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 3.9% to 12.0%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -11655,14 +11721,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the lowest discount rate tested (8%), the required growth rate (3.89%) still exceeds the actual 5-year FCF trend (-16.1%) by a wide margin — the conclusion doesn't change much across reasonable discount-rate assumptions.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change CVS's 6.15%</h2>
 <ul class="kicker-list">
   <li><b>Using trailing-twelve-month FCF ($11,758M) instead of the 3-year average ($8,176M)</b> drops the required growth rate sharply, from 6.15% to just 1.33% — reflecting how quickly CVS's cash flow has actually been recovering lately.</li>
   <li><b>Raising the discount rate to a conservative 12%</b> pushes the required growth rate up to 11.99% — higher than typical for a large, stable company like CVS, so the 9% base case is probably more realistic.</li>
   <li><b>Lowering the terminal growth rate (fixed at 2.5% here) below that level</b> would actually raise the required near-term growth rate further — this scenario wasn't modeled in this analysis.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 6.15%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -11680,7 +11746,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR = ($7,807M ÷ $15,745M)^(1/4) − 1 = -16.1%. 5-yr revenue CAGR = ($402,067M ÷ $292,111M)^(1/4) − 1 = +8.3%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the CVS number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -11720,21 +11786,23 @@ export const POSTS: Post[] = [
       { q: "What is Johnson & Johnson's market cap?", a: "As of this article's data, JNJ's market cap was about $648.6B, on FY2025 revenue of $94.2B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How JNJ makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "J&J sells prescription drugs and hospital devices" },
+      { id: 'revenue-mix', label: "Innovative Medicine earns a 36.9% margin; MedTech earns 12.2%" },
+      { id: 'customers-competitors', label: "Sold through wholesalers, with insurers and governments paying" },
+      { id: 'core-metric', label: "Loss of exclusivity: when a patent ends and biosimilars arrive" },
+      { id: 'leadership', label: "Duato: 30 years inside J&J before becoming CEO in 2022" },
+      { id: 'capital-returns', label: "Sixty-three years of dividend increases" },
+      { id: 'failure-scenario', label: "What breaks J&J: Darzalex and Tremfya lose patents the way Stelara did" },
+      { id: 'financials', label: "Revenue from $78.7B to $94.2B in four years" },
+      { id: 'unknowns', label: "Open questions: the structure of the Orthopaedics spinoff" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['JNJ', 'Healthcare', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How JNJ makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>J&J's drug and device businesses are steady, and it has raised its dividend for 63 years. Its top drugs will eventually lose patents the way Stelara already has, which is the risk the price has to absorb.</div>
+
+<h2 id="how-it-makes-money">J&J sells prescription drugs and hospital devices</h2>
 <p>Johnson & Johnson operates two engines: Innovative Medicine, which develops prescription drugs for cancer, immunology, and neurological conditions, and MedTech, which makes hospital devices for cardiology, orthopedics, surgery, and vision. Both engines feed off heavy R&D reinvestment (15.6% of revenue), and products reach patients through wholesalers and hospitals, with health insurers and government programs (like Medicare) ultimately paying the bill — not the patient directly.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">R&D</div><div class="d">15.6% of revenue reinvested</div></div>
@@ -11745,7 +11813,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, p.1 (segment structure), p.23-24, 27 (2025 segment revenue), p.89 (wholesaler concentration), p.44 (R&D expense).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Innovative Medicine earns a 36.9% margin; MedTech earns 12.2%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment, 2023-2025</caption>
@@ -11761,7 +11829,7 @@ export const POSTS: Post[] = [
 <p>Geographically (2025, total $94.2B): the U.S. is 57.1%, Europe 22.9%, Western Hemisphere ex-U.S. 5.2%, and Asia-Pacific/Africa 14.9%. With 43% of revenue coming from outside the U.S., JNJ is exposed to currency risk when the dollar strengthens, as well as geopolitical risk from drug-pricing cuts and tariff policy abroad.</p>
 <p class="src-note">Source: 10-K FY2025, p.89 (Note 17, revenue by geography).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Sold through wholesalers, with insurers and governments paying</h2>
 <p>A strictly B2B structure — JNJ doesn't sell directly to patients. Products flow through wholesalers to hospitals, pharmacies, and doctors, with health insurers and governments (like U.S. Medicare) ultimately reimbursing the cost.</p>
 <div class="callout warn"><b>Customer concentration warning</b>In 2025, three wholesalers accounted for 21.8%, 15.5%, and 11.1% of total revenue (48.4% combined). A disruption to any one of these relationships would hit revenue immediately.</div>
 <ul class="kicker-list">
@@ -11771,7 +11839,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.89 (wholesaler concentration).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Loss of exclusivity: when a patent ends and biosimilars arrive</h2>
 <p>A patented drug is highly profitable only while its patent lasts. Once it expires ("loss of exclusivity"), biosimilar competitors flood in and revenue can collapse quickly. JNJ's #2 product, Stelara, is living through exactly this process right now — a preview of what awaits Darzalex (15% of revenue, U.S. patent expires 2029) and Tremfya (2031).</p>
 <div class="table-wrap">
   <table>
@@ -11785,16 +11853,16 @@ export const POSTS: Post[] = [
 <div class="callout bad"><b>Accelerating erosion</b>Stelara's revenue decline has widened for five consecutive quarters, reaching -61.7% in Q1 FY2026. U.S. Stelara revenue alone was about $3.8 billion in 2025 — a live demonstration of just how destructive a patent cliff actually is.</div>
 <p class="src-note">Source: earnings call transcripts, Q1-Q4 FY2025, Q1-Q2 FY2026 (roic.ai); U.S. revenue figures, 10-K FY2025, p.24.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Duato: 30 years inside J&J before becoming CEO in 2022</h2>
 <p>CEO Joaquin Duato has served as Chairman and CEO since 2022 — an internal promotion from Worldwide Chairman of the pharmaceutical business, with more than 30 years at the company. There's no founder involvement — JNJ was founded in 1886, and the founding family plays no role in current management. Combined insider ownership is under 1%. The largest shareholders are institutional managers BlackRock (about 7.7%, 186.3M shares) and State Street (about 5.5%, 133.0M shares).</p>
 <p class="src-note">Source: DEF 14A 2026, p.2 (executive/director ownership table, 5%+ shareholder disclosure — BlackRock/State Street figures reflect a January 2024 Schedule 13G filing, somewhat dated).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Sixty-three years of dividend increases</h2>
 <p>JNJ raised its dividend for the 63rd consecutive year through 2025 — a Dividend King. It paid $5.14/share in 2025, with a quarterly dividend of $1.30/share ($5.20 annualized) payable in March 2026, yielding about 1.96% at the current price.</p>
 <div class="callout warn"><b>Buybacks that haven't actually shrunk the share count</b>JNJ spent $5.95B (2025) and $2.43B (2024) on buybacks, but diluted weighted-average shares outstanding stayed essentially flat — 2.4294 billion in both 2024 and 2025. New shares issued for employee stock options and RSUs are offsetting the buybacks, so the headline repurchase amount hasn't translated into a proportional gain for existing shareholders. (The larger 2023-to-2024 share reduction mostly reflects the Kenvue spinoff's stock-for-debt exchange, a different mechanism than routine buybacks.)</div>
 <p class="src-note">Source: 10-K FY2025, p.35 (dividend), p.44, 46-47 (buybacks and share count).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks J&J: Darzalex and Tremfya lose patents the way Stelara did</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If JNJ's most valuable current drugs (Darzalex, Tremfya) lose patent protection and get hit by biosimilar competition all at once, just as Stelara is experiencing now, while talc litigation payouts keep growing — the company's growth engine and its cash position could both come under pressure simultaneously.
@@ -11806,7 +11874,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.65, 86; 10-K FY2022, p.73, 85 (opioid litigation reserve context).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue from $78.7B to $94.2B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -11823,7 +11891,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Net income and free cash flow tell different stories</b>2025 net income jumped 90% year over year to $26.8B, but a large share of that came from reversing about $7.0 billion in talc-litigation reserves (an accounting gain, not new cash) — the mirror image of 2024, when adding $5.1B to reserves suppressed profit. Actual cash generation (FCF) barely moved: $19.8B (2024) to $19.7B (2025). Judging purely by the net-income growth rate would be misleading.</div>
 <p class="src-note">*Operating income = gross profit minus SG&A, R&D, IPR&D impairment, and restructuring costs (a self-calculated figure excluding interest, other income/expense, and litigation — see footnotes). **FCF = operating cash flow minus capex. Source: 10-K FY2025 p.44, 46-47, 89 (2023-2025); 10-K FY2023 p.45, 47-48 (2021-2022); 2021 total debt not confirmable from available filings.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the structure of the Orthopaedics spinoff</h2>
 <ul class="kicker-list">
   <li><b>The specific structure and timeline of the planned Orthopaedics spinoff</b> — announced in October 2025 as a review targeting completion within 18-24 months, but whether it will be a Kenvue-style spinoff or a sale, and at what valuation, isn't disclosed.</li>
   <li><b>The final talc litigation settlement amount and when it will conclude</b> — $3.4 billion in reserves remain and several court rulings are expected in 1H 2026, but the ultimate additional cost depends on litigation outcomes that can't be predicted here.</li>
@@ -11852,17 +11920,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from JNJ's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "It shed the consumer business, spent on acquisitions, then watched new drugs pay off" },
+      { id: 'guidance-record', label: "J&J's initial guidance each year vs. actual results" },
+      { id: 'timeline', label: "Timeline: August 2023 to July 2026" },
+      { id: 'our-read', label: "Emphasize the underlying business, and spend anyway" },
+      { id: 'unknowns', label: "What J&J's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Q3 2023–Q2 2026',
     tags: ['JNJ', 'Earnings Calls', 'M&A'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">It shed the consumer business, spent on acquisitions, then watched new drugs pay off</h2>
 <h3>Late 2023: freshly independent</h3>
 <p>In Q3 2023, JNJ had just spun off its consumer-health business (Johnson's Baby, Tylenol, and others) into Kenvue. In the spinoff, JNJ swapped Kenvue stock for its own shares, reducing outstanding shares by 191 million (about 7%) without spending a dollar of cash — management spoke of it proudly. Tone on earnings calls was steady, and the company described itself as reborn: "pure-play pharmaceutical and medical device."</p>
 
@@ -11880,7 +11948,7 @@ export const POSTS: Post[] = [
   This doesn't read as a story of "temporary crisis" — it reads as "deliberate restructuring." JNJ trimmed itself down in 2023 (the Kenvue spinoff), used that newfound capacity to make aggressive bets at the cost of short-term earnings in 2024, and by 2025-2026 watched those bets convert into new-drug revenue and restored confidence. The October 2025 Orthopaedics spinoff announcement looks like a repeat of the same pattern — shedding a slower-growth business to concentrate the remaining company on higher-growth assets. If this pattern continues, the real test is whether the next major drugs (Darzalex, Tremfya) can survive the same patent-cliff gauntlet Stelara is currently failing.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">J&J's initial guidance each year vs. actual results</h2>
 <div class="table-wrap">
   <table>
     <caption>Adjusted EPS guidance vs. actual results</caption>
@@ -11895,7 +11963,7 @@ export const POSTS: Post[] = [
 <p><strong>The pattern is clear: JNJ's core business almost always beats its own targets.</strong> The 2024 EPS "miss" wasn't business weakness — it was management's deliberate choice to reinvest the outperformance into acquisitions.</p>
 <p class="src-note">Source: earnings calls Q4 FY2023 (FY24 initial guidance), Q1-Q4 FY2024, Q4 FY2024 (FY25 initial guidance), Q1-Q4 FY2025, Q4 FY2025 (FY26 initial guidance), Q1-Q2 FY2026.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: August 2023 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Aug 2023</span>Kenvue spinoff completes; ~191M shares (7%) retired via stock-for-debt exchange.</li>
   <li><span class="date">2023-2024</span>Two talc-litigation bankruptcy filings (LTL) both rejected by courts.</li>
@@ -11909,10 +11977,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026</span>Q2 results raise guidance again; reaffirms target of first-ever $100B revenue year; Firefly Bio acquisition announced.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Emphasize the underlying business, and spend anyway</h2>
 <p>JNJ's last three years trace a deliberate cycle rather than a single crisis: shed a slower-growth business, redeploy that capacity into aggressive bets at the cost of near-term earnings, then watch those bets convert into new growth and restored market confidence. The company appears to be repeating the exact same cycle again with the planned Orthopaedics spinoff. The next real test is whether Darzalex and Tremfya — JNJ's next big revenue drivers — can survive the same patent-cliff dynamic currently devastating Stelara.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What J&J's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>How the VARIPULSE investigation was actually resolved</b> — mentions dropped sharply from 13 (Q4 2024) to 1-2 per quarter in 2025, but whether that reflects genuine resolution or simply reduced public disclosure can't be determined from this data alone.</li>
   <li><b>Whether the Orthopaedics spinoff will be a spinoff or a sale, and at what valuation</b> — no specific structure has been disclosed since the October 2025 announcement.</li>
@@ -11941,11 +12009,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $265.77, as of the Aug 27, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "11.2% needed vs. -0.1% free-cash-flow growth in five years" },
+      { id: 'sensitivity', label: "From 8.8% to 17.4%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change J&J's 11.2%" },
+      { id: 'show-your-work', label: "The math behind 11.2%" },
+      { id: 'fine-print', label: "Limits of the JNJ number" },
     ],
     sources: 'As of Aug 27, 2026 · Price used: $265.77',
     tags: ['JNJ', 'ReverseDCF', 'Valuation'],
@@ -11962,7 +12030,7 @@ export const POSTS: Post[] = [
   A required growth rate of 11.2% against five years of essentially zero FCF growth is a substantial gap — even against the faster-growing revenue line (4.6% a year), the market's ask is still more than double. This price only makes sense if new drugs (Darzalex, Tremfya, Carvykti) and MedTech growth more than offset the accelerating Stelara patent-cliff losses covered in the story piece above.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">11.2% needed vs. -0.1% free-cash-flow growth in five years</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">11.2%</span></div>
@@ -11972,7 +12040,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021–FY2025. FCF was essentially flat over the period, so its bar is shown as a stub rather than a proportional fill.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 8.8% to 17.4%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -11987,14 +12055,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the most optimistic discount rate tested (8%), the required growth rate (8.78%) is still far above JNJ's 5-year FCF trend (essentially flat).</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change J&J's 11.2%</h2>
 <ul class="kicker-list">
   <li><b>Using FY2025's standalone annual FCF ($19,698M) instead of trailing-twelve-month FCF ($22,244M)</b> would actually raise the required growth rate further, since TTM FCF is higher — meaning the base-case figure (11.19%) is already the more generous of the two.</li>
   <li><b>Raising the discount rate to an aggressive 12%</b> pushes the required growth rate to 17.4% — a single assumption change that dramatically shifts the picture.</li>
   <li><b>Switching diluted share count from a 3-month average (2,440.1M) to a 6-month average (2,443.9M)</b> barely moves the result (±0.2 percentage points) — the share-count assumption isn't a weak link in this calculation.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 11.2%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -12010,7 +12078,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> Revenue CAGR 2021→2025 = ($94,193M ÷ $78,740M)^(1/4) − 1 = 4.58%. FCF CAGR 2021→2025 = ($19,698M ÷ $19,758M)^(1/4) − 1 = -0.08%, essentially flat.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the JNJ number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -12050,21 +12118,23 @@ export const POSTS: Post[] = [
       { q: "What is ExxonMobil's market cap?", a: "As of this article's data, ExxonMobil's market cap was about $644.4B, on FY2025 revenue of $323.9B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How ExxonMobil makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "ExxonMobil drills, refines and sells, but drilling earns the profit" },
+      { id: 'revenue-mix', label: "Upstream is 12.2% of revenue and 74% of profit" },
+      { id: 'customers-competitors', label: "Drivers, airlines, shippers and chemical makers" },
+      { id: 'core-metric', label: "Barrel production and ROCE" },
+      { id: 'leadership', label: "Woods: an insider since 1992 and CEO since 2017" },
+      { id: 'capital-returns', label: "Forty-three years of dividend increases and $20.3B of buybacks" },
+      { id: 'failure-scenario', label: "What breaks Exxon: oil demand falls or producers start a price war" },
+      { id: 'financials', label: "Revenue peaked at $399B in 2022 and is down 19% since" },
+      { id: 'unknowns', label: "Open questions: the CFO change and more" },
     ],
     sources: '10-K FY2021–FY2025 · 10-Q Q2 FY2026 · DEF 14A 2026',
     tags: ['XOM', 'Energy', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How ExxonMobil makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Exxon's drilling business earns nearly three-quarters of its profit, so oil prices set the year. It has held its tone and returned $37.2B to shareholders in 2025 even as revenue fell.</div>
+
+<h2 id="how-it-makes-money">ExxonMobil drills, refines and sells, but drilling earns the profit</h2>
 <p>ExxonMobil pulls crude oil and natural gas out of the ground, converts it at refineries into gasoline, diesel, and plastic feedstock, and sells it to drivers, airlines, and factories worldwide. But the profit isn't evenly spread across that chain: Upstream (drilling) is only 12% of revenue but generated 74% of 2025's profit, while Energy Products (refining and marketing) makes up 76% of revenue but passes most of the crude-oil cost straight through to customers, leaving thin margins.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">External crude purchases</div><div class="d">~$184B/year</div></div>
@@ -12077,7 +12147,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, p.27-29, 80-81.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Upstream is 12.2% of revenue and 74% of profit</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue and after-tax profit by segment — FY2025 ($M)</caption>
@@ -12096,7 +12166,7 @@ export const POSTS: Post[] = [
 <p>Geographically (2025): the U.S. is 42.5% ($137.6B) of revenue, and outside the U.S. is 57.5% ($186.3B). The filing splits geography only into U.S./non-U.S. — no country-level breakdown is disclosed. With more than half of revenue coming from abroad, ExxonMobil is exposed to currency risk and country-specific policy or nationalization risk.</p>
 <p class="src-note">Source: 10-K FY2025, p.80-81 (Note 3, aggregated U.S./non-U.S. segment revenue).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Drivers, airlines, shippers and chemical makers</h2>
 <p>Customers are broadly diversified: consumers at gas stations, airlines and shipping companies (jet fuel and marine fuel), chemical and plastics manufacturers (polymer feedstock), and industrial buyers (lubricants). Given the commodity nature of the business, no single customer accounts for 10% or more of revenue — none is disclosed in the filings.</p>
 <ul class="kicker-list">
   <li><b>Chevron (CVX)</b> — the closest direct U.S. competitor, with a heavier weighting toward the Permian Basin and Kazakhstan's Tengiz field, making it relatively more Upstream-dependent than ExxonMobil.</li>
@@ -12105,7 +12175,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, financial statements and notes throughout.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Barrel production and ROCE</h2>
 <p>Barrel-of-oil-equivalent production shows the true scale of a drilling company, while Return on Average Capital Employed (ROCE) shows how efficiently invested capital converts into profit.</p>
 <div class="table-wrap">
   <table>
@@ -12120,12 +12190,12 @@ export const POSTS: Post[] = [
 <p>The 2024 Pioneer acquisition pushed Permian production sharply higher, and growth continued into 2025 (the company's highest annual production in 40 years). ROCE, meanwhile, spiked to 24.9% during 2022's high oil prices before easing back to 9.3% as prices normalized.</p>
 <p class="src-note">Source: 10-K FY2025, p.29; 10-K FY2023, p.34; 10-K FY2021, p.35.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Woods: an insider since 1992 and CEO since 2017</h2>
 <p>CEO Darren W. Woods has served as Chairman and CEO since 2017 (elected to the board in 2016) — an internal promotion after joining in 1992 and leading multiple business units over 33 years. There's no founder involvement (the company traces to an 1882 founding, having split off from Standard Oil long ago). The largest shareholders are index-fund managers Vanguard, BlackRock, and State Street — a typical large-cap ownership structure with no controlling founding family.</p>
 <div class="callout warn"><b>Worth confirming</b>The 2026 proxy statement (filed April 2026) lists Kathryn A. Mikells as CFO for 2025, but the Q2 FY2026 earnings call (Jul 31, 2026) introduces Neil Hansen as CFO. The timing and reason for the change aren't confirmable from these materials alone.</div>
 <p class="src-note">Source: DEF 14A 2026, p.20, 36.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">Forty-three years of dividend increases and $20.3B of buybacks</h2>
 <div class="table-wrap">
   <table>
     <caption>2025 shareholder returns</caption>
@@ -12142,7 +12212,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Did buybacks actually reduce the share count?</b>Despite spending tens of billions on buybacks every year from 2021 to 2025, weighted-average shares outstanding actually rose from 4.275 billion (2021) to 4.305 billion (2025) — 545 million new shares issued to fund the 2024 Pioneer acquisition offset the repurchases. Since the acquisition closed, though, share count has resumed falling: 4.331 billion (Q2 FY2025) to 4.174 billion (Q2 FY2026).</div>
 <p class="src-note">Source: DEF 14A 2026, p.56, 118; 10-K FY2025, p.74; 10-K FY2025, p.80; 10-K FY2021, p.90; 10-Q Q2 FY2026, p.9.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Exxon: oil demand falls or producers start a price war</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the world uses oil much faster than expected less, or producer nations trigger another price war through overproduction, the drilling business responsible for 74% of profit collapses first — and the whole company's results go down with it.
@@ -12154,7 +12224,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, various risk factors.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue peaked at $399B in 2022 and is down 19% since</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -12172,7 +12242,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2025 pretax income fell 15.6% year over year, but FCF fell an even sharper 23.1%. Operating cash flow declined 6%, while capital expenditures actually rose 16.7% (from $24.3B in 2024 to $28.4B in 2025) to fund Permian and Guyana production growth. That's cash declining faster than earnings — worth watching the next quarter's capex guidance.</div>
 <p class="src-note">ExxonMobil doesn't report a separate "operating income" line, so pretax income (before interest) is used here as the profitability measure. FCF = operating cash flow minus capex. Source: 10-K FY2025, p.71, 73, 74; 10-K FY2023, p.77, 79, 80.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the CFO change and more</h2>
 <ul class="kicker-list">
   <li><b>When and why the CFO changed from Kathryn Mikells to Neil Hansen</b> isn't determinable from these materials — checking a separate 8-K filing or press release would be needed.</li>
   <li><b>How much of the 10% production halted by Middle East conflict in Q2 2026 was restored in Q3</b> requires checking the next quarter's 10-Q.</li>
@@ -12201,17 +12271,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from ExxonMobil's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Confidence that peaked with Pioneer and barely moved through a price slump" },
+      { id: 'guidance-record', label: "Exxon's targets vs. results" },
+      { id: 'timeline', label: "Timeline for ExxonMobil: October 2023 to July 2026" },
+      { id: 'our-read', label: "\"Doing better than peers\" as the standing answer" },
+      { id: 'unknowns', label: "What Exxon's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026 · 12 quarters of earnings call transcripts, Q3 2023–Q2 2026',
     tags: ['XOM', 'Earnings Calls', 'M&A'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Confidence that peaked with Pioneer and barely moved through a price slump</h2>
 <h3>Late 2023: declaring victory</h3>
 <p>In the second half of 2023, ExxonMobil was a company declaring victory. It touted $9.7 billion in structural cost savings achieved since 2019, announced its 41st consecutive year of dividend increases, and announced two major acquisitions — Denbury and Pioneer Natural Resources — within a single October. CEO Darren Woods summed up the year on the Q4 2023 call: "When we say we'll do something, we deliver."</p>
 
@@ -12229,7 +12299,7 @@ export const POSTS: Post[] = [
   The most striking feature of ExxonMobil's management is how little its tone changes between good times and bad. That's a double-edged sword: on one hand, there's a genuine track record of beating its own targets twice over (the Pioneer synergies). On the other hand, maintaining an almost unchanged "we're outperforming peers" tone through three straight years of declining net income can make it harder for outside observers to gauge the real severity of an absolute earnings slowdown. It's also worth considering that the original guidance (the $2 billion Pioneer synergy target) may have been deliberately conservative from the start.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Exxon's targets vs. results</h2>
 <div class="table-wrap">
   <table>
     <caption>6 tracked commitments</caption>
@@ -12246,7 +12316,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: earnings calls Q3-Q4 FY2023, Q3-Q4 FY2024, Q1 FY2025, Q4 FY2025, Q1 FY2026; 10-K FY2025, p.74 (capex); DEF 14A 2026.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for ExxonMobil: October 2023 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023</span>Pioneer and Denbury acquisitions announced in quick succession; 41st consecutive dividend increase declared.</li>
   <li><span class="date">May 2024</span>Pioneer acquisition closes — "better than we anticipated," per management.</li>
@@ -12256,10 +12326,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026</span>New Jersey-to-Texas reincorporation completes; Q2 results hold up despite roughly 10% of drilling volume being temporarily halted.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">"Doing better than peers" as the standing answer</h2>
 <p>ExxonMobil's last three years show a management team whose confident tone barely wavers regardless of conditions — a real strength when it comes with a genuine track record (the twice-raised Pioneer synergy target), but also a pattern that can obscure how severe an absolute decline actually is when the company keeps reaching for relative, peer-comparison language instead. The next test is whether Middle East-related disruption and delayed projects like Golden Pass LNG show up more clearly in the numbers ahead.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Exxon's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The specific scale of asset damage and repair costs from the Middle East conflict</b> isn't determinable from these materials — the Q3 2026 10-Q needs to be checked.</li>
   <li><b>When and why the CFO changed from Kathryn Mikells to Neil Hansen</b> remains unconfirmed.</li>
@@ -12288,11 +12358,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $156.71, as of the Aug 28, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "7.0% needed vs. -10.0% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 4.7% to 12.9%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Exxon's 7.0%" },
+      { id: 'show-your-work', label: "The math behind 7.0%" },
+      { id: 'fine-print', label: "Limits of the XOM number" },
     ],
     sources: 'As of Aug 28, 2026 · Price used: $156.71',
     tags: ['XOM', 'ReverseDCF', 'Valuation'],
@@ -12309,7 +12379,7 @@ export const POSTS: Post[] = [
   A positive 7.0% growth requirement, set against an actual 5-year FCF decline of 10.0% a year, is a direct contradiction — not just a gap in magnitude. This price only makes sense if oil prices stabilize or rise, Permian and Guyana production growth continues, and the Pioneer synergies (already raised twice, per the story piece above) keep delivering as promised.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">7.0% needed vs. -10.0% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">+7.0%</span></div>
@@ -12320,7 +12390,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021-FY2025. FCF actually declined over the period, so its bar is shown as a stub rather than a proportional fill. Analyst consensus from Simply Wall St (updated Aug 16, 2026).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 4.7% to 12.9%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -12335,14 +12405,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Across the full 8-12% range tested, the required growth rate stays between +4.7% and +12.9% — meaning under any reasonable assumption, the market is pricing in positive growth well above the actual 5-year trend.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Exxon's 7.0%</h2>
 <ul class="kicker-list">
   <li><b>Using FY2025's standalone annual FCF ($23.6B) instead of trailing-twelve-month FCF ($30.6B)</b> raises the required growth rate from 7.0% to 10.4% — a lower starting base requires faster growth to reach the same target.</li>
   <li><b>2022 was likely a one-time outlier</b> — that year's FCF ($58.4B) was inflated by the Russia-Ukraine war oil-price spike. Shifting the 5-year window's start point to 2022 instead of 2021 makes the FCF CAGR even worse, at -26.1% — however the outlier is treated, the conclusion that "actual FCF declined" doesn't change.</li>
   <li><b>Lowering the terminal growth rate below 2.5%</b> would slightly raise the required near-term growth rate, since a smaller terminal value shifts more of the burden onto the explicit 10-year period.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 7.0%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -12358,7 +12428,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR = ($23,612M ÷ $36,053M)^(1/4) − 1 = -10.0%. 5-yr revenue CAGR = ($323,905M ÷ $276,692M)^(1/4) − 1 = +4.0%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the XOM number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -12398,21 +12468,23 @@ export const POSTS: Post[] = [
       { q: "What is Occidental Petroleum's market cap?", a: "As of this article's data, Occidental's market cap was about $59.1B, on FY2025 revenue of $21.6B (continuing operations, excluding the divested chemicals business)." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Occidental makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Occidental pumps oil and gas from the Permian and the Middle East" },
+      { id: 'revenue-mix', label: "Oil and gas is 96.8% of revenue now that OxyChem is gone" },
+      { id: 'customers-competitors', label: "Refiners and traders at public market prices" },
+      { id: 'core-metric', label: "Production volume and realized price, tracked separately" },
+      { id: 'leadership', label: "Hollub stepped down as CEO on June 1, 2026 after ten years" },
+      { id: 'capital-returns', label: "A dividend raised 8% to $0.26 a quarter" },
+      { id: 'failure-scenario', label: "What breaks Occidental: oil stuck at $40-50 a barrel" },
+      { id: 'financials', label: "Restated results exclude the chemicals business sold in 2026" },
+      { id: 'unknowns', label: "Open questions: how the market re-rates a pure oil company" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['OXY', 'Energy', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Occidental makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>With OxyChem sold, Occidental's cash flow now depends almost entirely on the oil price, and its CEO of ten years has stepped down. The price still bets on a reversal of a five-year decline in free cash flow.</div>
+
+<h2 id="how-it-makes-money">Occidental pumps oil and gas from the Permian and the Middle East</h2>
 <p>Occidental pulls crude oil and natural gas out of the ground in the Permian Basin (Texas/New Mexico) and Middle Eastern fields (Oman, UAE, Algeria, Qatar), moves it through midstream pipelines and processing, and sells it to refiners and traders at whatever the market price is that day — with no hedges in place as of year-end 2025. In January 2026, Occidental sold its chemicals division (OxyChem) to Berkshire Hathaway for $9.7 billion, making it, for practical purposes, a pure oil-and-gas company for the first time.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Permian Basin & Middle East fields</div><div class="d">1.434M boe/day production</div></div>
@@ -12423,7 +12495,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: 10-K FY2025, p.3, 6-7, 36.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Oil and gas is 96.8% of revenue now that OxyChem is gone</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -12439,7 +12511,7 @@ export const POSTS: Post[] = [
 <p>Geographically (oil-and-gas revenue, 2025): the U.S. is 85.6%, with international (mostly Middle East) at 14.4%. That international share is small but exposed to political instability, nationalization, and production-sharing-contract renegotiation risk.</p>
 <p class="src-note">Source: 10-K FY2025, p.38 (revenue by geography, oil/NGL/gas).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Refiners and traders at public market prices</h2>
 <p>Oil and gas aren't sold to specific large customers — they go to refiners and traders at public market prices (WTI, Brent, NYMEX-linked). Customer concentration isn't separately disclosed in the 10-K, which is typical for a commodity business.</p>
 <ul class="kicker-list">
   <li><b>ConocoPhillips</b> — the largest independent E&P company, with broader geographic diversification across the U.S. and internationally than Occidental.</li>
@@ -12448,7 +12520,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: web search, Yahoo Finance, 24/7 Wall St. (competitor comparisons).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Production volume and realized price, tracked separately</h2>
 <p>Revenue and profit alone don't show whether an oil company is actually "pumping well." Production volume and realized oil price need to be tracked separately, to tell whether a results change came from the company's own performance or simply from oil prices moving.</p>
 <div class="table-wrap">
   <table>
@@ -12463,7 +12535,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Volume up, price down</b>2025 production hit a 5-year high (+8% year over year), but the realized oil price hit a 5-year low (-14%). Volume added by the August 2024 CrownRock acquisition offset much of the price decline that year.</div>
 <p class="src-note">Source: 10-K FY2025, p.38; 10-K FY2022, p.42.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Hollub stepped down as CEO on June 1, 2026 after ten years</h2>
 <p>Vicki Hollub served as President and CEO from April 2016 until stepping down effective June 1, 2026, an internal-promotion engineer who rose through leadership of the Permian division to CEO. She was succeeded by Richard Jackson, previously COO. There's no founder involvement.</p>
 <div class="table-wrap">
   <table>
@@ -12479,7 +12551,7 @@ export const POSTS: Post[] = [
 <p><strong>Warren Buffett's Berkshire Hathaway is Occidental's de facto largest shareholder at 32.4%</strong> — building its stake since 2011, and now also acquiring OxyChem outright, an unusual arrangement of holding equity in a company while simultaneously buying one of its divisions. CEO Hollub personally holds about 2.1 million shares (including exercisable options and warrants).</p>
 <p class="src-note">Source: DEF 14A 2026, "Security Ownership" tables.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A dividend raised 8% to $0.26 a quarter</h2>
 <p>Occidental declared $0.96/share in dividends for 2025, then raised the quarterly rate to $0.26 (+8%) in February 2026 — about $1.04 annualized, yielding roughly 1.8% at the current price. Its dividend-growth history is short: the payout was cut sharply during the 2020 pandemic, so this is only the fifth year of rebuilding a "steady increase" track record.</p>
 <div class="callout warn"><b>What the buyback numbers actually show</b>A $3 billion buyback program approved in February 2023 had spent a cumulative $1.8 billion by year-end 2025 ($1.2 billion remaining) — but 2025 alone saw zero repurchases, and new shares issued for stock compensation actually increased the share count.</div>
 <div class="table-wrap">
@@ -12497,7 +12569,7 @@ export const POSTS: Post[] = [
 <p>In 2023, buybacks genuinely reduced share count, but in 2024-2025 debt paydown took priority over repurchases, and shares outstanding actually grew from 899.9 million to 986.0 million over that stretch — the existence of a "$3 billion buyback program" shouldn't be mistaken for active shareholder returns during this period.</p>
 <p class="src-note">Source: 10-K FY2025, p.19, 23, 59 (share counts); 10-K FY2024, p.65; 10-K FY2023, p.69; 10-K FY2022, p.63.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Occidental: oil stuck at $40-50 a barrel</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   Now that the chemicals division is gone, Occidental's cash flow depends almost entirely on the price of oil. If prices stay stuck in the $40-50/barrel range for an extended period, with no hedges in place, debt paydown, dividends, and new drilling could all have to stop at once.
@@ -12509,7 +12581,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.8-9 (Risk Factors), p.22 (debt).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Restated results exclude the chemicals business sold in 2026</h2>
 <div class="callout warn"><b>Note</b>Following the January 2026 OxyChem sale, 2025 results are restated on a continuing-operations basis (excluding chemicals). 2021-2024 figures include chemicals as originally reported — revenue and pretax income aren't directly comparable across the 2025 boundary. Operating cash flow, FCF, and debt are comparable across all years since they reflect the whole company (including chemicals) throughout.</div>
 <div class="table-wrap">
   <table>
@@ -12529,7 +12601,7 @@ export const POSTS: Post[] = [
 <p class="src-note">*2025 revenue and pretax income exclude the chemicals segment (continuing operations basis). FCF = operating cash flow minus capex (calculated). Source: 10-K FY2025 p.36, 58-64; 10-K FY2024 p.64-70, 111; 10-K FY2023 p.69-74; 10-K FY2022 p.62-67.</p>
 <div class="callout warn"><b>Worth watching</b>2024's 32% debt jump came from funding the CrownRock acquisition ($9,117 million) with debt. 2025's FCF ($4.1 billion) is about a third of 2022's ($12.3 billion) — a combination of lower oil prices and higher capex. Notice that profit declined gradually while FCF fell much more sharply.</div>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: how the market re-rates a pure oil company</h2>
 <ul class="kicker-list">
   <li><b>How the market will re-rate Occidental's valuation multiple now that it's a "pure oil-and-gas company"</b> after selling OxyChem isn't determinable from this data alone — it requires checking recent analyst reports.</li>
   <li><b>The final outcome and timing of the Anadarko/Tronox tax litigation</b> depends on a U.S. Tax Court ruling that hasn't been issued yet.</li>
@@ -12558,17 +12630,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Occidental's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from November 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Two growth stories became a defensive plan built around debt repayment" },
+      { id: 'guidance-record', label: "Occidental's guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline: December 2023 to August 2026" },
+      { id: 'our-read', label: "A very different future under new leadership" },
+      { id: 'unknowns', label: "What Occidental's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 2023–Q2 2026',
     tags: ['OXY', 'Earnings Calls', 'Leadership Change'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Two growth stories became a defensive plan built around debt repayment</h2>
 <h3>November 2023: two growth stories at once</h3>
 <p>On the Q3 2023 earnings call, CEO Vicki Hollub's voice carried no hesitation. She said the asset portfolio had "once again delivered record results in the hands of an exceptional team," and called the newly announced STRATOS carbon-capture partnership with BlackRock "a powerful signal to the market." The company had already deployed 60% of a $3 billion buyback program, and the chemicals division, OxyChem, was praised as impossible to overstate — carrying its own weight in results. STRATOS came with a specific promise attached: commercial operations by mid-2025.</p>
 
@@ -12586,7 +12658,7 @@ export const POSTS: Post[] = [
   Occidental's last three years read as a transition from a "story of expansion" to a "story of discipline." The 2023 version of the company pushed three growth narratives simultaneously — a mega-acquisition, carbon-capture leadership, and record chemicals results — and two of the three (CrownRock-style M&A, and OxyChem) ended up being cleaned up (deleveraged, divested) after external shocks, while the third (direct air capture) steadily lost credibility through repeated delays. What's left is a more financial, more defensive story built on shale/conventional execution and debt. That's not necessarily bad — debt targets were mostly hit early, and production guidance was beaten in most of the 12 quarters tracked (see the guidance scorecard) — but the gap between the "growth and technology leadership" story sold to investors in 2023 and the "efficiency and debt repayment" story the company actually lives by in 2026 is substantial, and how the new CEO era reinterprets that gap remains to be seen.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Occidental's guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>8 tracked commitments</caption>
@@ -12606,7 +12678,7 @@ export const POSTS: Post[] = [
 <p><strong>Of 8 tracked commitments, 3 were beaten or achieved ahead of schedule, 2 were persistently missed (one resulting in a full business divestiture), and 3 were delayed, partially met, or left unresolved.</strong> Financial and debt-related promises were almost always beaten, while large technology projects (STRATOS) and chemicals-segment forecasts repeatedly missed — a clear credibility gap between financial discipline and technology/business narratives.</p>
 <p class="src-note">Source: earnings call transcripts Q3-Q4 FY2023, Q1-Q4 FY2024, Q1-Q4 FY2025, Q1-Q2 FY2026.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: December 2023 to August 2026</h2>
 <ul class="timeline">
   <li><span class="date">Dec 2023</span>CrownRock acquisition announced (~$12B); buybacks effectively paused pending debt below $15B.</li>
   <li><span class="date">Aug 2024</span>CrownRock acquisition closes; Ecopetrol stake-sale deal collapses amid Colombian presidential opposition.</li>
@@ -12617,10 +12689,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 2026</span>New CEO unveils a "$4 billion by 2030" cash-flow plan built on cost efficiency and debt repayment rather than growth; STRATOS full operations pushed to 2027.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">A very different future under new leadership</h2>
 <p>Occidental's last three years read as a deliberate narrowing: from a company betting simultaneously on mega-M&A, carbon-capture technology leadership, and record chemicals earnings, to one built almost entirely around shale execution and debt discipline. The financial side of that story has consistently delivered — debt targets hit early, production usually beating guidance — while the technology and chemicals side has repeatedly disappointed. Under the new CEO, the open question is whether this narrower, more financial story is the company's permanent shape, or a transitional phase before growth ambitions return.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Occidental's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>What exactly the STRATOS Phase 1 "non-process equipment defect" was and how much it cost to fix</b> was never disclosed in detail, even through the Q2 2026 call.</li>
   <li><b>When and on what basis buybacks will be "formalized" under the new CEO</b> — a question analysts have raised for four-plus consecutive quarters — remains unanswered.</li>
@@ -12649,11 +12721,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $59.10, as of the Aug 28, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "4.9% needed vs. -14.2% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 0.7% to 8.5%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Occidental's 4.9%" },
+      { id: 'show-your-work', label: "The math behind 4.9%" },
+      { id: 'fine-print', label: "Limits of the OXY number" },
     ],
     sources: 'As of Aug 28, 2026 · Price used: $59.10',
     tags: ['OXY', 'ReverseDCF', 'Valuation'],
@@ -12667,7 +12739,7 @@ export const POSTS: Post[] = [
 
 <div class="callout warn"><b>A modest number that still assumes a real reversal</b>Unlike some growth stocks demanding double-digit growth, Occidental's implied 4.9% looks unremarkable on its face. But set against a real 5-year decline of 14.2% a year, even this modest bar requires that stabilizing oil prices, sharply reduced interest costs from debt paydown, and the post-OxyChem-sale business structure actually deliver a genuine turnaround — not just a continuation of recent trends.</div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">4.9% needed vs. -14.2% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">+4.9%</span></div>
@@ -12678,7 +12750,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical figures are CAGRs. Only the market's ask is positive — every historical comparison points the other direction. The "2-yr continuing ops" figure compares only the business remaining after the OxyChem sale, and is actually worse — reflecting 2025's weak oil prices.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 0.7% to 8.5%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -12692,14 +12764,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Because Occidental's results swing heavily with oil prices, some argue a higher discount rate (11-12%) fits better than the standard 10%. At 12%, the required growth rate rises to 8.5%, widening the gap with the actual historical trend considerably.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Occidental's 4.9%</h2>
 <ul class="kicker-list">
   <li><b>Using the 3-year average FCF ($5.30B) instead of 2025's standalone figure ($4.11B)</b> lowers the required growth rate from 4.9% to 1.4% at a 10% discount rate — looking only at 2025, a year of weak oil prices, can make the market's expectations look larger than they really are.</li>
   <li><b>Using year-end 2025 net debt (~$20.4B, before OxyChem proceeds were applied) instead of the most current figure (~$7.6B, per the Q2 2026 call)</b> raises the required growth rate from 4.9% to 7.3%.</li>
   <li><b>Treating Berkshire Hathaway's preferred stock ($8.29B book value, redeemable August 2029) as debt-like and including it in net debt</b> raises the required growth rate from 4.9% to 6.5%.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 4.9%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -12715,7 +12787,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR = ($4.105B ÷ $7.564B)^(1/4) − 1 = -14.2%. Note the 5-year window spans a structural change (the FY2021-2024 figures include the now-divested chemicals business, while 2025 excludes it) — so this CAGR mixes "results got worse" with "the business got smaller." The 2-year continuing-operations-only comparison (2023→2025, -21.2%) isolates the pure operating trend, and is worse.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the OXY number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -12755,22 +12827,24 @@ export const POSTS: Post[] = [
       { q: "What is Corteva's market cap?", a: "As of this article's data, Corteva's market cap was about $56.2B, on FY2025 revenue of $17.4B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Corteva makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Corteva sells the seeds and the chemicals that protect them" },
+      { id: 'revenue-mix', label: "Seed is 56.9% of revenue at a 26.6% EBITDA margin" },
+      { id: 'customers-competitors', label: "Farms and distributors, with Bayer as the giant rival" },
+      { id: 'core-metric', label: "Segment EBITDA margin is the number management steers by" },
+      { id: 'leadership', label: "Magro: a fertilizer-industry veteran who has led since 2021" },
+      { id: 'capital-returns', label: "A $0.72 annual dividend, raised 6% to $0.18 a quarter" },
+      { id: 'failure-scenario', label: "What breaks Corteva: a bad season meets a rival's better seed" },
+      { id: 'financials', label: "Revenue barely moved: $15.7B in 2021, $17.4B in 2025" },
+      { id: 'unknowns', label: "Open questions: the two post-split companies' structure" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['CTVA', 'Agriculture', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
+<div class="callout warn"><b>Our take, in one line</b>Corteva's seeds and crop chemicals are steady businesses, but the company plans to split in two by October 2026. Any valuation of the single company has to reckon with that.</div>
+
 <div class="callout warn"><b>The most important thing to know first</b>On October 1, 2025, Corteva announced it will fully separate its Seed and Crop Protection businesses into two independent public companies by October 1, 2026. The single company this card analyzes is scheduled to disappear — buying CTVA stock now means receiving shares in both resulting companies later.</div>
-<h2 id="how-it-makes-money">How Corteva makes money</h2>
+<h2 id="how-it-makes-money">Corteva sells the seeds and the chemicals that protect them</h2>
 <p>Corteva sells farmers high-performing corn and soybean seeds and the agrochemicals that protect those crops from weeds, insects, and disease. In the U.S., independent sales agents sell direct to farmers under the Pioneer brand; elsewhere, the company relies on retail, distributor, and cooperative networks.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">R&D</div><div class="d">8.5% of revenue reinvested</div></div>
@@ -12781,7 +12855,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Revenue reinvested into R&D feeds next year's new seed varieties and chemistry pipeline; the rest is split between shareholder returns (dividends and buybacks) and the business. A bad growing season or a delayed new product launch disrupts this whole cycle.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Seed is 56.9% of revenue at a 26.6% EBITDA margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -12796,7 +12870,7 @@ export const POSTS: Post[] = [
 <p>Geographically (2025, by customer location): the U.S. is 47.5%, Latin America 22.6% (including Brazil at 16.7 points), EMEA 17.9%, Asia-Pacific 7.7%, and Canada 4.3%. With international revenue at 52.5% of the total, Corteva is exposed to currency swings (Brazilian real, euro) and country-specific regulatory risk.</p>
 <p class="src-note">Source: 10-K FY2025, p.F-64 (Note 21, Geographic Information).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Farms and distributors, with Bayer as the giant rival</h2>
 <p>Customers are individual farms and distributors worldwide — no single customer accounts for a meaningful concentration of revenue.</p>
 <ul class="kicker-list">
   <li><b>Bayer</b> — the world's largest seed and agrochemical company (Crop Science segment), with the scale from its Monsanto acquisition to combine seed and chemistry more tightly than Corteva can.</li>
@@ -12805,7 +12879,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.8 (Competition).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Segment EBITDA margin is the number management steers by</h2>
 <p>Segment operating EBITDA margin is the top metric Corteva's own chief operating decision-maker uses to judge business performance — it shows whether revenue growth is actually translating into profit after commodity and labor costs, rather than just getting eaten up by them.</p>
 <div class="table-wrap">
   <table>
@@ -12820,16 +12894,16 @@ export const POSTS: Post[] = [
 <p>Both segments improved margins in 2025, and the growth wasn't just price-driven: FY2025 revenue grew from +1% price, +3% volume, and -1% currency — a genuinely broader-based improvement, not one propped up by price hikes alone.</p>
 <p class="src-note">Source: 10-K FY2025, p.F-66; p.31 (price/volume/currency breakdown).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Magro: a fertilizer-industry veteran who has led since 2021</h2>
 <p>CEO Charles (Chuck) V. Magro has led the company since November 2021 (about 4 years), with a long agricultural-industry background as former CEO of fertilizer companies Nutrien and Agrium. He is not a founder — Corteva itself was spun off from DowDuPont in 2019. Combined insider ownership is about 0.15%, very low. The largest shareholders are Vanguard (12.0%), BlackRock (8.0%), and State Street (5.3%).</p>
 <p class="src-note">Source: DEF 14A 2026, executive bios and ownership tables.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A $0.72 annual dividend, raised 6% to $0.18 a quarter</h2>
 <p>Corteva pays $0.72/share annually ($0.18/quarter), yielding about 0.9% at the current price, with a payout ratio around 44-51%. It raised the quarterly dividend 6% (from $0.17 to $0.18) in July 2025, continuing a steady increase from $0.66/share (FY2024) to $0.70 (FY2025).</p>
 <p>Buybacks totaled $2,836M over the past three years (FY2023-2025), and unlike some peers, this actually reduced the share count: shares outstanding fell steadily from 713.41 million (end of 2022) to 672.16 million (end of 2025) — genuine shareholder returns, not offset by new share issuance.</p>
 <p class="src-note">Source: 10-K FY2025, p.28, 31 (dividend); stockanalysis.com (Aug 28, 2026 quote); 10-K FY2025, p.F-7, F-8 (share count).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Corteva: a bad season meets a rival's better seed</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If a bad growing season (drought or disease) hits right as a competitor launches a superior new seed variety, farmers worldwide start switching away from Corteva's seeds for the next planting season.
@@ -12841,7 +12915,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.22-23 (separation risk), p.11, 14 (regulatory risk), p.13 (weather risk).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue barely moved: $15.7B in 2021, $17.4B in 2025</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -12859,7 +12933,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>In 2022, operating income grew 52% year over year, but FCF collapsed from $2,154M to $267M — cash got tied up building inventory and receivables during a commodity price spike. By 2025, things normalized and FCF actually exceeded operating income ($2,438M), a 115% conversion rate — a clear sign of improved earnings quality.</div>
 <p class="src-note">Operating income = revenue minus cost of sales, R&D, SG&A, intangible amortization, and restructuring/separation costs (10-K FY2025 p.F-5, FY2023 10-K p.F-5). FCF = operating cash flow minus capex (10-K FY2025 p.F-8, FY2023 10-K p.F-8). Debt = short-term borrowings plus long-term debt (10-K FY2025 p.F-7, FY2023/FY2022 10-K p.F-7).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the two post-split companies' structure</h2>
 <ul class="kicker-list">
   <li><b>The exact capital structure, dividend policy, and listing tickers of the two post-separation companies</b> haven't been disclosed yet — a Form 10 registration statement will need to be filed first.</li>
   <li><b>How results since Q2 2026 are tracking against annual guidance</b> can't be determined from this data alone — recent earnings calls would need to be checked.</li>
@@ -12888,17 +12962,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Corteva's 10-K filings for FY2023 through FY2025 and 8 quarters of earnings call transcripts from February 2024 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A missed cut target, a swapped framework, and a confident split" },
+      { id: 'guidance-record', label: "Corteva's guidance vs. what it delivered" },
+      { id: 'timeline', label: "Timeline: February 2024 to August 2026" },
+      { id: 'our-read', label: "Changing the goalpost instead of admitting the miss" },
+      { id: 'unknowns', label: "What Corteva's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 8 quarters of earnings call transcripts, Feb 2024–Aug 2026',
     tags: ['CTVA', 'Earnings Calls', 'Spinoff'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A missed cut target, a swapped framework, and a confident split</h2>
 <h3>February 2024: confidence with a quiet crack underneath</h3>
 <p>On the Q4 FY2023 earnings call, CEO Chuck Magro said "2023 results proved our value-creation strategy is working." But buried in that same call was an easy-to-miss line: "we have adjusted the 2025 financial framework based on current market factors" — meaning the target of 21-23% EBITDA margin by 2025 had already been quietly lowered once before this call. Even so, FY2024 guidance was set at a reasonable +2% revenue and +6% EBITDA growth, with a confidence score around 6.5/10 — a crack sitting just beneath the optimism.</p>
 
@@ -12916,7 +12990,7 @@ export const POSTS: Post[] = [
   This traces a classic "promise → miss → reframe → recover" arc. The 2024 double-miss (missing even the already-lowered guidance) was a real setback, and swapping to the 2027 framework was a textbook way to push the goalpost back without directly admitting failure. But the recovery that followed wasn't just talk — two guidance raises, an exact EBITDA hit, a wide FCF beat, and an unexpected Bayer settlement all landed together. Announcing a company split at the peak of performance might look unusual timing, but the company's own logic — "we split from strength, not weakness" — is at least consistent with the execution trend since 2025. Whether this was genuinely the best strategic call, or a deliberately chosen moment to sell the separation story convincingly to the market, isn't something these documents alone can settle.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Corteva's guidance vs. what it delivered</h2>
 <div class="table-wrap">
   <table>
     <caption>Guidance cycles, FY2024–FY2026</caption>
@@ -12937,7 +13011,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>The biggest warning sign: swapping the target framework itself</b>The "2025 financial framework" (21-23% EBITDA margin by 2025) was fully replaced at a November 2024 Investor Day with a "2027 financial framework" (23-24% margin by 2027, plus $1 billion in incremental EBITDA) — immediately after the 2024 miss. The margin target rose, but the deadline moved two years out. This is distinct from an ordinary guidance cut: it's a case of changing the ruler used to measure success itself, and it's the single most important item in this scorecard.</div>
 <p class="src-note">Source: earnings calls Q4 FY2023, Q2 FY2024, Q4 FY2024, Q2-Q3 FY2025, Q4 FY2025, Q1-Q2 FY2026.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: February 2024 to August 2026</h2>
 <ul class="timeline">
   <li><span class="date">Feb 2024</span>Initial FY2024 guidance set; the 2025 financial framework is revealed to have already been quietly lowered once.</li>
   <li class="crisis"><span class="date">Aug 2024</span>FY2024 guidance cut, citing competition and weather.</li>
@@ -12948,10 +13022,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 2026</span>FY2026 guidance raised again; separation confirmed "on time, and under budget," with an October 1 split date.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Changing the goalpost instead of admitting the miss</h2>
 <p>Corteva's last two-plus years trace a full arc from broken promise to reframed target to genuine recovery. The 2024 miss was real, and quietly extending the deadline rather than admitting it was a textbook management move — but the results that followed (guidance beats, an exact EBITDA hit, a large FCF overshoot, an unplanned litigation settlement) back up the recovered confidence with actual numbers. The open question is whether splitting the company at this high point of performance is the company's best long-term strategic judgment, or simply the moment chosen to make that story land with investors.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Corteva's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the EIDP internal-control weakness and DuPont dispute disappearing from the FY2025 10-K reflects genuine resolution or simply reduced disclosure emphasis</b> can't be determined from the 10-K text alone — checking the proxy statement or separate litigation disclosures would be needed.</li>
   <li><b>The actual internal background behind the October 2025 separation announcement</b> (board deliberations, any activist investor pressure) isn't disclosed in earnings-call commentary alone — 8-K filings or press coverage would be needed.</li>
@@ -12980,11 +13054,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $83.90, as of the Aug 28, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "11.8% needed vs. 6.9% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 6.6% to 16.1%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Corteva's 11.8%, and why the split breaks the model" },
+      { id: 'show-your-work', label: "The math behind 11.8% (CTVA)" },
+      { id: 'fine-print', label: "Limits of the CTVA number" },
     ],
     sources: 'As of Aug 28, 2026 · Price used: $83.90',
     tags: ['CTVA', 'ReverseDCF', 'Valuation'],
@@ -13001,7 +13075,7 @@ export const POSTS: Post[] = [
   A required growth rate 1.7 times the 5-year actual FCF CAGR (6.9%) is a meaningful gap on its own. But there's a bigger complication here: Corteva is scheduled to split into two independent companies (Seed and Crop Protection) on October 1, 2026 — meaning the "one company, 10 years" assumption this entire model rests on breaks down within months. Some of the market's elevated growth expectation may already reflect anticipated re-rating from the split, which this calculation can't isolate.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">11.8% needed vs. 6.9% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">11.8%</span></div>
@@ -13011,7 +13085,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021–FY2025. FCF: $2,154M (2021) → $267M (2022) → $1,174M (2023) → $1,548M (2024) → $2,815M (2025).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 6.6% to 16.1%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -13025,14 +13099,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Only at the lowest discount rate tested (7%) does the required growth rate roughly match Corteva's actual 5-year FCF pace — meaning this price is justified only if Corteva is treated as a safer-than-typical asset, or if FCF is expected to grow faster than its recent trend. It's one or the other.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Corteva's 11.8%, and why the split breaks the model</h2>
 <ul class="kicker-list">
   <li><b>Using 2025's standalone FCF ($2,815M) instead of the 3-year average ($1,846M)</b> drops the required growth rate sharply, from 11.78% to 6.21%. This analysis used the 3-year average as the base case because 2025's figure ran +52.5% above it — past this analysis's normalization threshold. If 2025's elevated FCF is the "new normal" rather than a one-off, the market's expectations look far less aggressive.</li>
   <li><b>Using year-end 2025 net debt instead of the most current figure (Jun 30, 2026)</b> lowers the required growth rate from 11.78% to 10.74%. Corteva actually held net cash of $1,941M at year-end 2025, before Bayer settlement payments, an FMC prepayment, and an early pension contribution flipped it to net debt of $2,510M by mid-2026 — this analysis uses the most current figure.</li>
   <li><b>The pending Seed/Crop Protection split (Oct 1, 2026)</b> means the combined-company growth story this model assumes won't exist for the full 10-year window — a structural wrinkle no sensitivity adjustment can fully capture.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 11.8% (CTVA)</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -13049,7 +13123,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR = ($2,815M ÷ $2,154M)^(1/4) − 1 = 6.92%. 5-yr revenue CAGR = ($17,401M ÷ $15,655M)^(1/4) − 1 = 2.68%. A 10-year CAGR wasn't calculated since Corteva only has independent financials going back to its 2019 DowDuPont spinoff.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the CTVA number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -13089,22 +13163,24 @@ export const POSTS: Post[] = [
       { q: "What is Micron's market cap?", a: "As of this article's data, Micron's market cap was about $1.05 trillion, on FY2025 revenue of $37.4B (P/E of roughly 21x)." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Micron makes money' },
-      { id: 'latest-update', label: 'The AI boom, in real time' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Micron makes DRAM and NAND memory in its own fabs" },
+      { id: 'latest-update', label: "The financials below are already out of date, on purpose" },
+      { id: 'revenue-mix', label: "Cloud and HBM is 36.2% of revenue" },
+      { id: 'customers-competitors', label: "Customer concentration rose from none above 10% to one" },
+      { id: 'core-metric', label: "Days inventory outstanding is memory's earliest bust warning" },
+      { id: 'leadership', label: "Mehrotra: SanDisk co-founder, CEO since 2017" },
+      { id: 'capital-returns', label: "A $0.46 dividend that yields 0.05%" },
+      { id: 'failure-scenario', label: "What breaks Micron: AI orders cool and margins flip back toward losses" },
+      { id: 'financials', label: "Revenue fell 49.5% in FY2023, then more than doubled" },
+      { id: 'unknowns', label: "Open questions: did Micron hit its FY2026 Q4 guidance?" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2025 · Q3 FY2026 earnings release',
     tags: ['MU', 'Semiconductors', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Micron makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Memory is a boom-and-bust business, and Micron has gone from a $5.7B operating loss in FY2023 to an 84.6% quarterly gross margin on AI demand. It is still cyclical, so the question is how long the shortage lasts.</div>
+
+<h2 id="how-it-makes-money">Micron makes DRAM and NAND memory in its own fabs</h2>
 <p>Micron designs and manufactures memory chips — DRAM (which computers use as fast, temporary working memory) and NAND flash (which stores data permanently, as in an SSD) — in its own network of fabrication plants, then sells them to computer makers, phone makers, data-center operators, and automakers. Unlike processor makers such as Nvidia or AMD, Micron's products are close to a commodity: a gigabyte of DRAM from Micron does largely the same job as one from Samsung or SK hynix, so price and manufacturing scale, not brand, usually decide who wins an order.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Silicon wafers, EUV tools, chemicals</div><div class="d">From external suppliers</div></div>
@@ -13115,14 +13191,14 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">FY2025 capital spending was $15.9B, almost entirely reinvested into building more of this same fab capacity. Source: 10-K FY2025, p.7 (segment description), p.51 (capex guidance).</p>
 
-<h2 id="latest-update">The AI boom, in real time</h2>
+<h2 id="latest-update">The financials below are already out of date, on purpose</h2>
 <div class="callout warn">
   <b>The financials below (section 9) are already out of date — on purpose</b>
   Those five-year figures run only through FY2025 (ended August 2025). Since then, explosive AI server demand for HBM (high-bandwidth memory) has pushed results to levels the historical numbers don't capture: FY2026 Q3 (ended May 2026) revenue was $41.5B, up from $9.3B a year earlier, with an 84.6% GAAP gross margin and $28.2B in GAAP net income for the quarter alone. Guidance for FY2026 Q4 calls for roughly $50.0B in revenue and an ~86% gross margin. Given that Micron's gross margin has historically run in the 20-45% range, this may well be close to the peak of the current memory cycle rather than a new baseline.
 </div>
 <p class="src-note">Source: Micron Q3 FY2026 earnings press release (2026-06-24), sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Cloud and HBM is 36.2% of revenue</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by business unit — FY2025</caption>
@@ -13140,7 +13216,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Where the chips actually ship is different from where customers are billed</b>About a third of revenue is booked to customers headquartered outside the U.S., but roughly 80% of physical product actually ships to locations outside the U.S. — meaning Micron's real-world exposure to currency swings and Taiwan-specific geopolitical risk runs well above what the revenue-by-headquarters table alone suggests.</div>
 <p class="src-note">Source: 10-K FY2025, p.97 (Note 29, geographic information), p.44 (shipment destination).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Customer concentration rose from none above 10% to one</h2>
 <p>Customer concentration has risen sharply and fast: in FY2023, no single customer accounted for 10% or more of revenue. By FY2024, one customer reached 10%. By FY2025, one customer — concentrated mostly in CMBU, i.e. AI data-center and HBM demand — accounted for 17%. Filings don't name this customer.</p>
 <ul class="kicker-list">
   <li><b>Samsung Electronics</b> — the memory industry's #1 player, with dominant scale in both DRAM and NAND that gives it a persistent cost advantage.</li>
@@ -13149,7 +13225,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.97 (Note 28, customer concentration), p.8 (competition).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Days inventory outstanding is memory's earliest bust warning</h2>
 <p>Memory is a boom-and-bust commodity business, and inventory is the earliest warning sign of the bust. Days Inventory Outstanding (DIO = inventory ÷ cost of goods sold × 365) shows how many days of unsold product are sitting on the balance sheet — when it climbs, a price collapse has historically followed within a few quarters.</p>
 <div class="table-wrap">
   <table>
@@ -13163,17 +13239,17 @@ export const POSTS: Post[] = [
 <p>Inventory built for two straight years (94.8 to 180.5 days) into FY2023, right as prices collapsed and Micron posted its worst loss on record. It has since fallen for two straight years as the AI-driven shortage worked through the system — consistent with, though not proof of, the current upcycle.</p>
 <p class="src-note">Source: annual 10-K balance sheets and income statements — FY2021 p.62, FY2022 p.60, FY2023 p.62, FY2024 p.60, FY2025 p.64.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Mehrotra: SanDisk co-founder, CEO since 2017</h2>
 <p>CEO Sanjay Mehrotra has led Micron since May 2017 and added the Chairman title in January 2025. He is not a Micron founder — he co-founded SanDisk in 1988 and ran it until its 2016 acquisition by Western Digital, giving him decades of memory-industry experience before joining Micron. Combined insider ownership is low, about 0.24% (2,686,052 shares of 1.124 billion outstanding). The largest shareholders are all institutional: Vanguard (8.4%), BlackRock (7.6%), and Capital World Investors (6.3%).</p>
 <p class="src-note">Source: DEF 14A, filed 2025-11-25 (ownership table as of Oct 31, 2025).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A $0.46 dividend that yields 0.05%</h2>
 <p>Micron pays a quarterly dividend of $0.115/share ($0.46 annualized) — against the current price of $932.86, that's a yield of roughly 0.05%, essentially immaterial. The dividend program only began in 2021 and the payout ratio remains very low.</p>
 <p>Buybacks have shrunk to nothing just as they'd matter most: $425M in FY2023, $300M in FY2024, and $0 in FY2025 — leaving $7.19B spent against a $10B authorization approved back in 2019.</p>
 <div class="callout warn"><b>Buybacks haven't stopped dilution</b>Weighted-average diluted shares outstanding actually rose from 1.118 billion (FY2024) to 1.125 billion (FY2025), meaning stock-based compensation issuance outpaced the buyback program that was supposed to offset it.</div>
 <p class="src-note">Source: 10-K FY2025, p.44 (dividend declaration, Sept 23, 2025), p.44-45 (financing activities), p.83 (diluted share count).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Micron: AI orders cool and margins flip back toward losses</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If AI data-center investment cools even modestly and a handful of large customers simultaneously trim memory orders, today's ~84% gross margin could flip back toward losses within a few quarters — Micron did exactly this in FY2023, when revenue was cut in half and the company posted a $5.7B operating loss.
@@ -13185,7 +13261,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.8 (Item 1A risk factors), p.51 (industry conditions).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue fell 49.5% in FY2023, then more than doubled</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, fiscal years ending late August/early September</caption>
@@ -13203,7 +13279,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>FY2025 net income was $8.54B, but free cash flow was only $1.67B — a huge gap explained by a record $15.86B in capital spending to build out AI memory capacity. The accounting profit has recovered; the cash hasn't caught up yet.</div>
 <p class="src-note">Operating income and revenue: 10-K FY2025 p.42, FY2022 p.42. FCF = operating cash flow minus capex (10-K FY2025 p.44). Debt and cash: 10-K FY2025 p.43 (balance sheet), p.86 (Note 12, debt).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: did Micron hit its FY2026 Q4 guidance?</h2>
 <ul class="kicker-list">
   <li><b>Whether Micron actually hit its FY2026 Q4 guidance</b> (~$50.0B revenue, ~86% gross margin) can't be confirmed from this data alone — full FY2026 results (fiscal year ended late August 2026) hadn't been reported as of this card's writing.</li>
   <li><b>Whether the current ~84% gross margin is structural or cyclical</b> isn't something the filings alone can settle — Micron's five-year average gross margin was in the high-20s%, far below today's level.</li>
@@ -13232,17 +13308,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Micron's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from September 2023 to June 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "From \"pricing has bottomed\" to an 84.6% gross margin and no visibility on supply" },
+      { id: 'guidance-record', label: "Micron's guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline: September 2023 to June 2026" },
+      { id: 'our-read', label: "The hedging is gone entirely" },
+      { id: 'unknowns', label: "What Micron's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Sep 2023–Jun 2026',
     tags: ['MU', 'Earnings Calls', 'AI Memory'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">From "pricing has bottomed" to an 84.6% gross margin and no visibility on supply</h2>
 <h3>September 2023: speaking carefully, from the bottom</h3>
 <p>Micron closed out fiscal 2023 (ended August 2023) having just posted its worst year on record: revenue cut in half and a $5.8B net loss. On the Q4 FY2023 call, CEO Sanjay Mehrotra offered only a hedged "we believe pricing has now bottomed" — and the very next quarter's EPS guidance still called for a loss of $1.07 per share. This was a company speaking in the careful, qualified language of someone who has been burned before.</p>
 
@@ -13260,7 +13336,7 @@ export const POSTS: Post[] = [
   What stands out isn't just that Micron has beaten guidance almost every quarter for three years — it's that analysts are still, as of mid-2026, repeatedly asking management to justify why an 84%-plus gross margin isn't simply a cyclical peak about to reverse, the way it always has before. Management's answer — multi-year contracts with price floors above any past peak — is a genuinely new structural feature this upcycle didn't have last time. Whether that's enough to break Micron's historical boom-bust pattern, or just delays the next one, isn't something these filings can settle on their own.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Micron's guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>11 tracked quarterly guidance cycles, FY2024 Q1–FY2026 Q4</caption>
@@ -13290,7 +13366,7 @@ export const POSTS: Post[] = [
   The same underlying question — essentially, "won't this just revert to the low-60s% peak of past cycles?" — came up on back-to-back quarterly calls. Management's stock answer both times: the new multi-year Strategic Customer Agreements carry floor prices above any prior peak margin, a genuinely new contractual structure the prior cycle didn't have.
 </div>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: September 2023 to June 2026</h2>
 <ul class="timeline">
   <li class="crisis"><span class="date">Sep 2023</span>FY2023 Q4 call: cautious "pricing has now bottomed" language, fresh off a $5.8B annual net loss.</li>
   <li><span class="date">Dec 2023</span>FY2024 Q1 call: the "generative AI" growth framing appears for the first time.</li>
@@ -13300,10 +13376,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jun 2026</span>FY2026 Q3 call: "no line of sight" on when supply catches demand; revenue $41.5B (+346% YoY); gross margin 84.6%; 16 SCAs disclosed.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">The hedging is gone entirely</h2>
 <p>Micron's last three years trace one of the sharpest sentiment reversals in this dataset: from a company cautiously declaring a bottom after its worst-ever loss, to one that beat guidance by more than 20% in back-to-back quarters and says it can't even estimate when supply will catch up with demand. The guidance record backs up the shift — 10 beats and one in-line result in 11 quarters, with the beats growing larger, not smaller, over time. What keeps this from being a simple happy ending is that Micron's own history is the strongest argument for caution here: every prior upcycle in this business has eventually reverted, and analysts pressing the same margin-sustainability question two quarters running suggests the market hasn't fully bought management's "this time is structurally different" argument either.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Micron's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether FY2026 Q4 guidance (~$50.0B revenue, ~86% gross margin) was actually achieved</b> requires results that hadn't been reported as of this writing (fiscal year ended late August 2026).</li>
   <li><b>Which companies are party to the 16 disclosed Strategic Customer Agreements</b> isn't named in filings — management has only described them as "four large customers, three mid-sized customers."</li>
@@ -13332,11 +13408,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $932.86, as of the Aug 28, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "17.1% needed vs. 7.8% five-year revenue growth, though recent revenue is up 142%" },
+      { id: 'sensitivity', label: "From 12.3% to 21.3%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Micron's 17.1%" },
+      { id: 'show-your-work', label: "The math behind 17.1%" },
+      { id: 'fine-print', label: "Limits of the MU number" },
     ],
     sources: 'As of Aug 28, 2026 · Price used: $932.86',
     tags: ['MU', 'ReverseDCF', 'Valuation'],
@@ -13353,7 +13429,7 @@ export const POSTS: Post[] = [
   The required growth rate (17.1%) is roughly 2.2 times Micron's 5-year revenue CAGR (7.8%), and the 5-year FCF CAGR is negative (-9.1%), a scar left by the historic FY2023 downturn. On its own, that gap would read as an aggressive price. But trailing-twelve-month revenue is up +142% year over year on the AI/HBM boom — dramatically faster than the 17.1% the current price requires. The real tension in this stock isn't simply "growth versus price" — it's "which recent quarter of Micron's wildly volatile results do you trust as the baseline," since that single choice swings the required growth rate from 17.1% to 57.9% (see ⑤ below).
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">17.1% needed vs. 7.8% five-year revenue growth, though recent revenue is up 142%</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">17.1%</span></div>
@@ -13363,7 +13439,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021-FY2025: revenue $27,705M → $37,378M; FCF $2,438M → $1,668M (dragged negative by the FY2023 trough of -$6,117M). For context not shown on this chart: trailing-twelve-month revenue is up +142% year over year, far outrunning what the current price requires — see the story piece above.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 12.3% to 21.3%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -13377,7 +13453,7 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the most conservative discount rate tested (8%), the required growth rate (12.3%) still sits above Micron's 5-year revenue CAGR (7.8%) — though comfortably below the +142% pace the company has already delivered over the trailing twelve months.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Micron's 17.1%</h2>
 <p>Normally this analysis just needs one settled "base FCF" figure. Micron's results have swung so violently over the past year that the answer changes completely depending on which period is used — so all three are shown here.</p>
 <div class="table-wrap">
   <table>
@@ -13397,7 +13473,7 @@ export const POSTS: Post[] = [
   <li><b>Micron's own history argues against assuming 10 flat years of high growth</b> — gross margin has swung from over 30% (FY2022) to a FY2023 operating margin of -37%, to today's 84.6% quarterly gross margin. A model assuming a full decade of steady ~17% FCF growth implicitly assumes the memory pricing cycle itself has stopped existing, something with no precedent in this industry's history.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 17.1%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -13415,7 +13491,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr revenue CAGR = ($37,378M ÷ $27,705M)^(1/4) − 1 = 7.77%. 5-yr FCF CAGR = ($1,668M ÷ $2,438M)^(1/4) − 1 = -9.05%. Trailing-twelve-month revenue growth (TTM vs. FY2025 full year) was approximately +142%, reflecting the AI/HBM demand surge rather than a smooth multi-year trend.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the MU number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -13455,21 +13531,23 @@ export const POSTS: Post[] = [
       { q: "What is Equinix's market cap?", a: "As of this article's data, Equinix's market cap was about $103.1B, on FY2025 revenue of $9.22B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Equinix makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Equinix rents data-center space and power, plus private connections" },
+      { id: 'revenue-mix', label: "Colocation is 70.2% of revenue; interconnection is 18.0%" },
+      { id: 'customers-competitors', label: "10,500 customers, and the largest is about 3%" },
+      { id: 'core-metric', label: "Cabinet utilization shows whether new capacity fills" },
+      { id: 'leadership', label: "Fox-Martin took over from Meyers in 2024" },
+      { id: 'capital-returns', label: "$18.76 per share in dividends and $1.86B paid out" },
+      { id: 'failure-scenario', label: "What breaks Equinix: AI demand arrives slower than the buildings" },
+      { id: 'financials', label: "Revenue up 39% in four years, with growth slowing to 5.4%" },
+      { id: 'unknowns', label: "Open questions: how durable AI demand will prove" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['EQIX', 'REIT', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Equinix makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Equinix's revenue is a steady rental stream, but it is spending heavily on buildings ahead of AI demand. Growth slowed to 5.4% in 2025, so those buildings have to fill.</div>
+
+<h2 id="how-it-makes-money">Equinix rents data-center space and power, plus private connections</h2>
 <p>Equinix builds data centers around the world and leases out rack space ("cabinets") and the electrical power needed to run servers, billed as a monthly recurring fee — a real-estate-style rental business. On top of that rent, it charges customers separately every time they want a dedicated private line connecting their own equipment to another company's, inside the same building — a fee that scales with how connected its buildings become, without requiring new construction.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Debt & new share issuance</div><div class="d">REIT rules force 90%+ of income out as dividends</div></div>
@@ -13480,7 +13558,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">As tenants connect to each other inside Equinix buildings, that network effect draws in more tenants — but because REIT rules require paying out 90%+ of taxable income as dividends, new construction is funded almost entirely through debt and new shares rather than retained profit. Source: 10-K FY2025, Item 1, p.5-9; dividend requirement, p.14.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Colocation is 70.2% of revenue; interconnection is 18.0%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by product — FY2025 (total $9,217M)</caption>
@@ -13497,7 +13575,7 @@ export const POSTS: Post[] = [
 <p>Equinix's three reportable segments are geographic: Americas (44.6% of revenue, 46.0% operating margin), EMEA (34.0%, 49.9% margin), and Asia-Pacific (21.4%, 54.6% margin). With 61% of revenue coming from outside the U.S., currency swings flow straight through to reported results.</p>
 <p class="src-note">Source: 10-K FY2025, Note 18, p.F-56; international revenue share, p.9.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">10,500 customers, and the largest is about 3%</h2>
 <p>Equinix serves 10,500+ business customers — telecoms, cloud providers, financial firms, and AI companies. Concentration is low: the single largest customer accounts for about 3% of recurring revenue, and the top 50 customers combined make up just 36%. Recurring revenue has stayed above 90% of total revenue for three straight years, a sign of contract-based, sticky demand.</p>
 <ul class="kicker-list">
   <li><b>Digital Realty (DLR)</b> — the closest-sized data-center REIT peer; Equinix leans more toward smaller colocation and interconnection deals, while Digital Realty leans more toward large hyperscale leases.</li>
@@ -13506,7 +13584,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1, p.8-9 (customers); Item 1A Risk Factors, p.18 (competition); web search, marketsandmarkets.com.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Cabinet utilization shows whether new capacity fills</h2>
 <p>Building data centers quickly means nothing if the space doesn't fill up. Cabinet utilization rate shows how much of the built capacity is actually occupied and generating rent — a declining rate signals empty capacity is piling up faster than it's being leased.</p>
 <div class="table-wrap">
   <table>
@@ -13520,16 +13598,16 @@ export const POSTS: Post[] = [
 <p>Utilization has declined for four straight years even as Equinix keeps building at a rapid pace — meaning unfilled capacity has been quietly accumulating. Meanwhile, interconnection revenue growth has held near 9% for three straight years, consistently outpacing colocation growth (5-7%), Equinix's clearest edge over pure real-estate competitors.</p>
 <p class="src-note">Source: 10-K FY2025, p.24; 10-K FY2023, p.22 (utilization); 10-K FY2025 and FY2023, Note 18 (interconnection growth).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Fox-Martin took over from Meyers in 2024</h2>
 <p>CEO Adaire Fox-Martin took over in 2024, bringing executive experience from SAP and Oracle; she is not a founder. Predecessor Charles Meyers (CEO from 2018-2024) remains involved as Board Chair. Equinix itself was founded in 1998 by Al Avery and Jay Adelson, neither of whom remains involved in operations today. Combined executive and board ownership is under 1% of shares outstanding; the largest shareholders are index funds Vanguard (12.44%), BlackRock (9.87%), and State Street (6.30%) — a classic no-controlling-shareholder, index-fund-dominated ownership structure.</p>
 <p class="src-note">Source: DEF 14A 2026, executive profiles p.14, ownership tables p.31-32.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">$18.76 per share in dividends and $1.86B paid out</h2>
 <p>Equinix paid $18.76/share in dividends in FY2025 ($4.69 per quarter), for a yield of about 1.8% at the current price — total dividend payments of $1,856M, up from $1,375M in FY2023, three consecutive years of increases.</p>
 <div class="callout warn"><b>No buybacks — new shares instead</b>Equinix hasn't repurchased any stock in the past three years. As a REIT required to pay out 90%+ of taxable income annually, it can't stockpile cash for buybacks — instead, it raised capital by issuing new shares: $734M (FY2023), $1,673M (FY2024), and $99M (FY2025), a dilutive rather than accretive capital pattern.</div>
 <p class="src-note">Source: 10-K FY2025, Consolidated Statements of Cash Flows, p.F-6.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Equinix: AI demand arrives slower than the buildings</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If AI-driven data-center demand doesn't materialize at the pace currently expected, the debt-funded buildings Equinix is constructing right now sit underused while interest payments keep compounding on a balance sheet that has already grown 55% more indebted since 2021.
@@ -13541,7 +13619,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors, p.14; Summary of Risk Factors, p.3; Q2 FY2026 earnings call (leverage commentary).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 39% in four years, with growth slowing to 5.4%</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -13558,7 +13636,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>FY2025 operating income grew 39% year over year, but free cash flow got worse, not better, falling to -$1.4B. Capital spending on AI-ready data centers ($5.3B, +56% YoY) simply outgrew operating cash flow ($3.9B) even faster than profit improved — a pattern worth tracking each quarter going forward.</div>
 <p class="src-note">FCF = operating cash flow minus all capex. Source: 10-K FY2025, Consolidated Statements of Operations p.F-3, Cash Flows p.F-6; 10-K FY2023, p.F-4, F-6; 10-K FY2021, p.F-3, F-6.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: how durable AI demand will prove</h2>
 <ul class="kicker-list">
   <li><b>How large and how durable AI-driven data-center demand will actually prove to be</b> can't be determined from this data alone — it requires watching bookings trends over the next several quarters.</li>
   <li><b>How profitable the hyperscaler-focused xScale joint venture is relative to core colocation</b> isn't broken out clearly in the segment footnotes.</li>
@@ -13587,17 +13665,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Equinix's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 2023 through Q2 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Guidance raises that never lifted annual growth to the original target" },
+      { id: 'guidance-record', label: "Equinix's quarterly raises vs. its full-year targets" },
+      { id: 'timeline', label: "Timeline for Equinix: Q4 2023 to Q2 2026" },
+      { id: 'our-read', label: "Rewriting its own history instead of scaling back" },
+      { id: 'unknowns', label: "What Equinix's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 2023–Q2 2026',
     tags: ['EQIX', 'Earnings Calls', 'REIT'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Guidance raises that never lifted annual growth to the original target</h2>
 <h3>Late 2023: still the company it had been for 25 years</h3>
 <p>On the Q4 2023 earnings call, Equinix leaned on words like "record quarter" and "record bookings," guiding to 7-9% revenue growth for 2024. That year's 10-K used the phrase "artificial intelligence" for the first time — 11 times — but the company still described itself through its founders, Al Avery and Jay Adelson, and its 25-year-old "Platform Equinix®" brand, the same self-description it had used for a quarter century.</p>
 
@@ -13615,7 +13693,7 @@ export const POSTS: Post[] = [
   The throughline here is a company that announced it was "winning" almost every quarter while still missing its own annual target twice running — and rather than address that gap directly, it rewrote its own 27-year identity, trading founders and a legacy brand name for an AI-infrastructure narrative funded by rising debt. Whether the newly aggressive FY2026 targets hold up, or repeat the 2024-2025 pattern of quarterly wins layered over annual misses, is a question the final two quarters of the year will answer, not this filing history.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Equinix's quarterly raises vs. its full-year targets</h2>
 <div class="table-wrap">
   <table>
     <caption>Annual revenue-growth guidance vs. actual results, FY2024–FY2026</caption>
@@ -13630,7 +13708,7 @@ export const POSTS: Post[] = [
 <p><strong>Equinix announced a guidance raise on nearly every one of 12 tracked quarterly calls — yet actual annual growth still fell short of the original full-year target in both FY2024 and FY2025.</strong> "We beat the quarter" and "we missed the year" coexisted for two straight fiscal years. FY2026 has now been raised aggressively for two quarters running, making the next two quarters the real test of whether this pattern breaks or repeats.</p>
 <p class="src-note">Source: Q4 2023, Q4 2024, Q4 2025, Q1 2026, and Q2 2026 earnings calls; 10-K FY2024 and FY2025 reported results.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Equinix: Q4 2023 to Q2 2026</h2>
 <ul class="timeline">
   <li><span class="date">Q4 2023</span>"Record quarter" language; FY2024 guided at 7-9%; "artificial intelligence" appears 11 times in the FY2023 10-K.</li>
   <li><span class="date">Mar 2024</span>CEO succession agreement signed; Adaire Fox-Martin set to succeed Charles Meyers.</li>
@@ -13640,10 +13718,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Q2 2026</span>"Largest guidance raise in company history"; FY2026 outlook lifted to 11-12% revenue growth; management accepts one more turn of leverage.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Rewriting its own history instead of scaling back</h2>
 <p>Equinix's last three years show a company that announced progress almost every single quarter while its full-year results told a more modest story twice running. Rather than close that gap by resetting expectations, it rewrote its own foundational narrative — retiring a 27-year brand and its founders' names, hardening its debt language from hypothetical to decided, and betting further on AI-driven data-center construction funded by rising leverage. The aggressive back-to-back guidance raises in FY2026 could mark a genuine inflection, or could simply repeat the 2024-2025 pattern at a higher pitch — the next two quarters, not this filing history, will settle which.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Equinix's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the aggressive FY2026 guidance raises will hold through Q3 and Q4</b>, or fall short of the original annual target the way FY2024 and FY2025 both did, isn't something this filing history alone can answer.</li>
   <li><b>Whether "Platform Equinix" has been genuinely retired company-wide, or just dropped from 10-K prose while still used in marketing materials</b>, isn't confirmed by SEC filings alone.</li>
@@ -13672,12 +13750,12 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $1,044.41, as of the Aug 28, 2026 close.' },
     ],
     toc: [
-      { id: 'why-affo', label: 'Why this uses AFFO, not FCF' },
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'why-affo', label: "Why Equinix is valued on AFFO, not free cash flow" },
+      { id: 'required-vs-historical', label: "9.8% needed vs. 11.3% actual AFFO growth" },
+      { id: 'sensitivity', label: "From 7.4% to 15.9%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Equinix's 9.8%" },
+      { id: 'show-your-work', label: "The math behind 9.8%" },
+      { id: 'fine-print', label: "Limits of the EQIX number" },
     ],
     sources: 'As of Aug 28, 2026 · Price used: $1,044.41',
     tags: ['EQIX', 'ReverseDCF', 'Valuation'],
@@ -13689,7 +13767,7 @@ export const POSTS: Post[] = [
   <p>Equinix's actual 5-year AFFO growth has averaged <span class="num">11.3%</span> a year.</p>
 </div>
 
-<h2 id="why-affo">Why this uses AFFO, not free cash flow</h2>
+<h2 id="why-affo">Why Equinix is valued on AFFO, not free cash flow</h2>
 <div class="callout warn">
   <b>A deviation from this site's standard methodology</b>
   This site's reverse-DCF model normally runs on free cash flow (FCF = operating cash flow minus all capex). For Equinix, that figure is negative — -$1,394M in FY2025, and -$499M averaged over the past three years — because the company is spending heavily to build new AI-ready data centers. A negative base makes the standard model unsolvable. Instead, this analysis substitutes AFFO (Adjusted Funds From Operations), which subtracts only maintenance capex, not growth capex — the metric REITs and their investors actually use to judge dividend-paying capacity. Treat this as a REIT-specific adaptation, not this site's normal FCF-based approach.
@@ -13700,7 +13778,7 @@ export const POSTS: Post[] = [
   The required AFFO growth rate (9.8%) is actually lower than Equinix's 5-year actual AFFO CAGR (11.3%) and sits close to the company's own 2026 guidance midpoint (10.0%). Simply repeating what it has already been doing would be enough to justify today's price — a genuinely milder ask than most reverse DCFs on this site turn up. That said, this says nothing about the leverage Equinix is taking on to fund that growth: unlike FCF, AFFO doesn't subtract the growth capex being financed by the rising debt load covered in the snapshot and story pieces above.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">9.8% needed vs. 11.3% actual AFFO growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:85%;background:var(--accent)"></div></div><span class="val">9.8%</span></div>
@@ -13711,7 +13789,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse-AFFO model below. Historical CAGRs from 10-K AFFO reconciliation tables: AFFO grew from $2,451M (FY2021) to $2,714M (FY2022) to $3,019M (FY2023) to $3,356M (FY2024) to $3,761M (FY2025).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 7.4% to 15.9%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year AFFO growth by discount rate</caption>
@@ -13726,14 +13804,14 @@ export const POSTS: Post[] = [
 </div>
 <p>A single percentage point of discount-rate increase (9% to 10%) is enough to push the required growth rate above Equinix's actual historical AFFO pace — the "mild ask" conclusion above depends on treating 9% as the appropriate discount rate for a REIT that is now taking on meaningfully more leverage.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Equinix's 9.8%</h2>
 <ul class="kicker-list">
   <li><b>Swapping the AFFO base from FY2025 ($3,761M) to the 3-year average ($3,379M)</b> raises the required growth rate from 9.8% to 11.2% — essentially matching Equinix's own historical CAGR exactly. Using the most recent year as the base, as this analysis does, is what makes the market's ask look mild rather than merely in line.</li>
   <li><b>Using a 12% discount rate</b> instead of 9% (arguably reasonable given Equinix's rising leverage) pushes the required growth rate to 15.9% — above both historical AFFO growth rates, flipping the picture from "modest ask" to "aggressive ask."</li>
   <li><b>Using the standard FCF-based approach instead of AFFO</b> would make this model unsolvable outright: 3-year average FCF is -$499M, and there's no defined growth rate that compounds a negative starting cash flow toward a positive target value.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 9.8%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -13750,7 +13828,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr AFFO CAGR = ($3,761M ÷ $2,451M)^(1/4) − 1 = 11.3%. 3-yr AFFO CAGR = ($3,761M ÷ $2,714M)^(1/3) − 1 = 11.5%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the EQIX number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -13791,21 +13869,23 @@ export const POSTS: Post[] = [
       { q: "What is Intel's market cap?", a: "As of this article's data, Intel's market cap was about $470.3B, on FY2025 revenue of $52.85B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Intel makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Intel designs the chips and still builds most of them itself" },
+      { id: 'revenue-mix', label: "PC chips are 61% of revenue; server and AI chips are 32%" },
+      { id: 'customers-competitors', label: "The top three customers are 43% of revenue" },
+      { id: 'core-metric', label: "Foundry's operating margin is the number the turnaround depends on" },
+      { id: 'leadership', label: "Lip-Bu Tan took over in March 2025 after Gelsinger's exit" },
+      { id: 'capital-returns', label: "The dividend was suspended in 2025" },
+      { id: 'failure-scenario', label: "What breaks Intel: no outside customers for 18A and 14A" },
+      { id: 'financials', label: "Revenue fell from $79.0B to $52.9B in four years" },
+      { id: 'unknowns', label: "Open questions: 18A yields versus TSMC" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['INTC', 'Semiconductors', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Intel makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Intel's turnaround depends on its factory business winning outside customers, while revenue has fallen by a third since 2021 and the dividend is gone. The U.S. government, Nvidia and SoftBank are now shareholders.</div>
+
+<h2 id="how-it-makes-money">Intel designs the chips and still builds most of them itself</h2>
 <p>Intel designs its own processor chips — CPUs for PCs and servers — and, unlike most chip designers today, still manufactures most of them itself, in its own factories ("fabs"), rather than outsourcing to a contract manufacturer like TSMC. It's now also trying to become a contract manufacturer in its own right (Intel Foundry), building chips for other companies. But almost all of Foundry's revenue today still comes from Intel's own product divisions, not outside customers — external Foundry customers accounted for just 2% of Foundry's FY2025 revenue.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Chip design</div><div class="d">Intel Products divisions (CCG, DCAI)</div></div>
@@ -13816,7 +13896,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Intel Foundry's external customer revenue was just $307M (2%) of its $17.8B total in FY2025 — still much closer to a captive internal factory than a true contract manufacturer, and one that has posted a loss for three straight years. Source: 10-K FY2025, p.7, p.21-23, p.72.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">PC chips are 61% of revenue; server and AI chips are 32%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025 (external revenue basis)</caption>
@@ -13833,7 +13913,7 @@ export const POSTS: Post[] = [
 <p>Geographically (FY2025, by customer billing location): the U.S. is 29.8%, China 24.0%, Singapore 18.0%, Taiwan 14.5%, and other regions 13.6%. With 70% of revenue coming from outside the U.S. and heavy China/Taiwan concentration, Intel is directly exposed to U.S.-China semiconductor export controls and Taiwan-specific geopolitical risk.</p>
 <p class="src-note">Source: 10-K FY2025, Notes to Consolidated Financial Statements, p.74.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">The top three customers are 43% of revenue</h2>
 <p>Intel sells largely B2B, to PC OEMs/ODMs and data-center/cloud operators; end consumers only encounter Intel chips inside finished devices. The top 3 customers accounted for 43% of FY2025 revenue (45% in FY2024, 40% in FY2023) — a concentration that has stayed persistently high and leaves results vulnerable to any one customer shifting suppliers.</p>
 <ul class="kicker-list">
   <li><b>AMD</b> — a direct competitor across both CCG and DCAI, using the same x86 architecture and steadily taking share from Intel in recent years.</li>
@@ -13842,7 +13922,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Risk Factors, p.50 (customer concentration); competitive discussion throughout Item 1.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Foundry's operating margin is the number the turnaround depends on</h2>
 <p>Intel's entire turnaround thesis depends on whether Intel Foundry — the internal factory business — can climb out of a deep loss. Its operating margin is the single number that shows whether that transition is actually working.</p>
 <div class="table-wrap">
   <table>
@@ -13856,17 +13936,17 @@ export const POSTS: Post[] = [
 <p>Losses peaked in 2024 after roughly $3.3B in asset impairments, then narrowed in 2025 as restructuring and easing depreciation provided some relief. Still, Foundry consumed more than half its own revenue in losses in 2025 — a genuine break-even turnaround remains a long way off.</p>
 <p class="src-note">Source: 10-K FY2025, p.23 (Intel Foundry Financial Performance).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Lip-Bu Tan took over in March 2025 after Gelsinger's exit</h2>
 <p>CEO Lip-Bu Tan (66) took over in March 2025; predecessor Pat Gelsinger departed in December 2024 following conflict with the board. Tan previously led EDA software company Cadence from 2009 to 2021, served on Intel's own board from 2022 to 2024 before resigning, then returned about six months later as CEO — an unusual path back. Combined ownership across all 15 directors and officers is under 1% of shares outstanding.</p>
 <p>The biggest ownership shift in 2025: the U.S. government became Intel's largest shareholder (8.4%), after the Commerce Department converted part of Intel's CHIPS Act subsidy into 275 million newly issued shares. Nvidia ($5B) and SoftBank ($2B) also became new equity investors in 2025. Vanguard (8.1%) and BlackRock (6.8%) round out the largest holders.</p>
 <p class="src-note">Source: DEF 14A 2026, p.27 (5%+ shareholders); 10-K FY2025, p.9 (government/strategic investor agreements), p.51 (executive bios).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">The dividend was suspended in 2025</h2>
 <p>Intel fully suspended its dividend in 2025, following a deep cut in 2024 — ending decades of consecutive dividend payments. The company is directing cash toward the Foundry buildout and shoring up its balance sheet instead.</p>
 <div class="callout warn"><b>No buybacks since Q1 2021</b>Intel hasn't repurchased a single share in nearly five years, despite $7.2B remaining under a $110B authorization. Instead, it has issued new shares to the U.S. government, Nvidia, and SoftBank — diluting existing shareholders rather than returning capital to them.</div>
 <p class="src-note">Source: 10-K FY2025, p.53 (share repurchase activity), p.30 (financing cash flows).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Intel: no outside customers for 18A and 14A</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If Intel fails to land any meaningful external customers on its next-generation 18A/14A manufacturing processes, its own products (CCG and DCAI) risk losing cost and performance competitiveness too, while the enormous factories it has built sit underused, generating depreciation charges with no offsetting revenue.
@@ -13878,7 +13958,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Risk Factors p.37-41, 50; MD&A p.23.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue fell from $79.0B to $52.9B in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ billions, calendar/fiscal years</caption>
@@ -13895,7 +13975,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>FY2025's net loss was only -$0.27B despite a -$2.21B operating loss, thanks to one-time gains (the Altera stake sale, government support). The core business is still unprofitable, and free cash flow has now been negative in four of the last five years.</div>
 <p class="src-note">Source: 10-K FY2021 through FY2025, each year's MD&A (income statement p.24-25, adjusted FCF p.29-30, total debt p.30).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: 18A yields versus TSMC</h2>
 <ul class="kicker-list">
   <li><b>Whether Intel 18A manufacturing yields have actually caught up to TSMC's</b> isn't disclosed in these filings — the most recent (Q2 FY2026) earnings call would need to be checked.</li>
   <li><b>When the Intel 7 wafer supply shortage flagged in Q1 2026 will ease, and how much revenue it has cost</b> isn't quantified in the filings reviewed here.</li>
@@ -13924,17 +14004,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Intel's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A four-year promise that broke in mid-2024" },
+      { id: 'guidance-record', label: "Intel's guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline: January 2024 to Q3 FY2025" },
+      { id: 'our-read', label: "Beating guidance again, but on a lower bar" },
+      { id: 'unknowns', label: "What Intel's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['INTC', 'Earnings Calls', 'Turnaround'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A four-year promise that broke in mid-2024</h2>
 <h3>2023: a confident four-year promise</h3>
 <p>Two years ago, Intel was confident. CEO Pat Gelsinger's "IDM 2.0" turnaround strategy rested on one specific, dated promise: five new manufacturing process generations in four years, restoring "process leadership" by 2025. On the Q4 FY2023 call, he called it "the culmination of a year of tremendous progress," and set an even bigger long-term target — becoming the world's #2 external foundry business by 2030. Across this period, Intel hit its own quarterly revenue guidance, usually near the top of the range, in every one of 8 tracked quarters.</p>
 <div class="quote">"Q4 was the culmination of a year of tremendous progress towards our IDM 2.0 transformation... Intel 18A is expected to achieve manufacturing readiness in second half '24, completing our five nodes in four year journey and bringing us back to process leadership."<span class="attr">— Pat Gelsinger, Q4 FY2023 earnings call, Jan 25, 2024</span></div>
@@ -13953,7 +14033,7 @@ export const POSTS: Post[] = [
   Intel's language shifted from "we'll reclaim leadership" to something closer to "we intend to survive as one of a few players left standing," while trading dividends and buybacks for capital from the U.S. government, Nvidia, and SoftBank. The "five nodes in four years" promise was arguably completed on a technicality by 2025, but the "leadership" it was meant to prove remains unproven even by Intel's own admission. Whether the recent run of large guidance beats reflects genuine demand recovery or simply a bar lowered enough to clear easily is a question that hinges entirely on whether 14A lands outside customers — something these filings say hasn't happened yet.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Intel's guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>11 tracked quarterly guidance cycles, Q3 FY2023–Q2 FY2026</caption>
@@ -13976,7 +14056,7 @@ export const POSTS: Post[] = [
 <p><strong>All 11 tracked quarters landed inside or above their guided range — but the pattern shifted sharply starting with the new CEO's second quarter (25Q2 onward):</strong> from "inside the range, near the top" to "blowing through the range entirely." Whether that shift reflects real demand strength or a bar set deliberately low enough to clear easily is the open question.</p>
 <p class="src-note">Source: CFO guidance and reported-results sections of each cited earnings call transcript, Q3 FY2023 through Q2 FY2026.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: January 2024 to Q3 FY2025</h2>
 <ul class="timeline">
   <li><span class="date">Jan 2024</span>Q4 FY2023 call: "tremendous progress" declared; IDM 2.0 framed as on track; #2-foundry-by-2030 goal set.</li>
   <li class="crisis"><span class="date">Aug 2024</span>Q2 FY2024 call: "disappointing" profitability; 15%+ workforce cut and full dividend suspension announced the same day.</li>
@@ -13986,10 +14066,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Q3 FY2025 onward</span>Guidance beats turn into large, range-exceeding surprises; Foundry losses narrow from -77% to -58%.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Beating guidance again, but on a lower bar</h2>
 <p>Intel's last three years trace a collapse and a rebuild happening almost simultaneously: a confident, specific four-year technology promise broke in mid-2024, triggering a dividend suspension, mass layoffs, and a CEO exit, followed by the U.S. government, Nvidia, and SoftBank all becoming new shareholders within the same year. The recent run of large guidance beats is a genuinely positive signal, but it arrived alongside deliberately widened guidance ranges — meaning it's not yet possible to fully separate real demand recovery from a bar that simply got easier to clear. The company's own admission that it still has zero meaningful external customers for 14A is the detail that will ultimately decide which story this turns out to be.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Intel's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the recent guidance-beating streak reflects genuine demand recovery or a deliberately lowered bar</b> can't be fully separated using this filing history alone — it would require watching whether the pattern continues into Q3 FY2026 and beyond.</li>
   <li><b>Whether Intel has landed any meaningful external foundry customers for 14A since the FY2025 10-K (which says "none")</b> would require checking recent news or subsequent earnings calls.</li>
@@ -14018,12 +14098,12 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $89.51, as of the Aug 31, 2026 close.' },
     ],
     toc: [
-      { id: 'why-not-standard', label: "Why a standard reverse DCF isn't possible" },
-      { id: 'required-vs-historical', label: 'The reference scenario vs. actual history' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'why-not-standard', label: "Why a standard reverse DCF can't be run on Intel" },
+      { id: 'required-vs-historical', label: "18.8% needed, measured from Intel's best-ever cash-flow year" },
+      { id: 'sensitivity', label: "From 13.9% to 23.1%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Intel's 18.8%" },
+      { id: 'show-your-work', label: "The math behind 18.8%" },
+      { id: 'fine-print', label: "Limits of the INTC number" },
     ],
     sources: 'As of Aug 31, 2026 · Price used: $89.51',
     tags: ['INTC', 'ReverseDCF', 'Valuation'],
@@ -14035,7 +14115,7 @@ export const POSTS: Post[] = [
   <p>As a labeled reference scenario using Intel's all-time-high FCF year (2021, $10.89B) as the starting base, today's price would require <span class="num">~18.8%</span> annual cash-flow growth for the next 10 years, discounted at 10%.</p>
 </div>
 
-<h2 id="why-not-standard">Why a standard reverse DCF isn't possible</h2>
+<h2 id="why-not-standard">Why a standard reverse DCF can't be run on Intel</h2>
 <div class="callout warn">
   <b>The model's own rule stops the calculation here</b>
   This site's standard reverse-DCF model requires a positive free-cash-flow base, falling back to a 3-year average if the latest year deviates too far from it. Intel's FCF has been negative every year since 2022 — -$4.10B (2022), -$11.85B (2023), -$2.23B (2024), and -$1.61B (2025) — and the 3-year average is negative too. There is no growth rate that can be solved from a negative starting point, so the standard model simply cannot run for Intel right now. Instead of forcing a number, this piece asks a narrower, explicitly labeled question: even using the single best year Intel has ever reported (2021) as a stand-in base, what growth would today's price require? Treat everything below as a stress test, not a standard valuation.
@@ -14046,7 +14126,7 @@ export const POSTS: Post[] = [
   Even granting Intel the most generous possible starting point — its all-time-high cash-flow year — today's price still requires 18.8% annual growth for a full decade. Over the identical 2021-2025 span, Intel's actual revenue didn't grow at all; it shrank by 9.6% a year. That gap between "market wants growth from the best year ever" and "the company has since gone in reverse" is the central story behind this stock's valuation, and it rests entirely on an unproven bet: that the Intel Foundry turnaround and AI-related demand materialize at a scale the company's own numbers don't yet show.
 </div>
 
-<h2 id="required-vs-historical">The reference scenario vs. actual history</h2>
+<h2 id="required-vs-historical">18.8% needed, measured from Intel's best-ever cash-flow year</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (reference scenario, WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">18.8%</span></div>
@@ -14055,7 +14135,7 @@ export const POSTS: Post[] = [
   <p class="src-note">A historical FCF CAGR can't be calculated at all — FCF was negative in 3 of the last 4 years, and a compound growth rate has no defined solution when it starts or ends negative. Revenue is used instead as the only metric that stayed positive throughout: it fell from $79.02B (2021) to $52.85B (2025). Source: 10-K FY2021, p.24; 10-K FY2025, p.24.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 13.9% to 23.1%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year cash-flow growth by discount rate (reference scenario, 2021 FCF base)</caption>
@@ -14070,14 +14150,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the most conservative discount rate tested (8%), the required growth rate (13.9%) is still nowhere close to anything Intel has delivered in the years since its 2021 peak — every rate tested requires a level of sustained cash-flow growth Intel hasn't shown even once since then.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Intel's 18.8%</h2>
 <ul class="kicker-list">
   <li><b>Using the trailing 5-year average FCF (-$1.8B, still negative) instead of the 2021 peak</b> would make even this reference scenario impossible to compute — the "18.8%" figure already rests on the single most generous base year in Intel's history.</li>
   <li><b>2026 first-half operating cash flow improved sharply</b> ($8.10B, vs. $2.86B in the same period a year earlier), but heavy capital spending ($6.19B in the same half) still consumes most of it. A full fiscal year of positive FCF would be needed before a standard reverse DCF could even be attempted again.</li>
   <li><b>Q2 FY2026's $11.0B GAAP net loss was driven almost entirely by a $12.5B non-cash mark-to-market loss</b> on escrow shares issued to the U.S. government (a loss that grows larger as Intel's stock price rises) — which is why this analysis, like the underlying source data, sticks to cash-flow measures rather than P/E-based valuation.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 18.8%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -14095,7 +14175,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> revenue CAGR 2021→2025 = ($52.85B ÷ $79.02B)^(1/4) − 1 = -9.6%. An FCF CAGR could not be calculated — FCF was negative in 3 of the past 4 years, and a compound growth rate has no defined real solution when the starting or ending value is negative.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the INTC number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -14135,21 +14215,23 @@ export const POSTS: Post[] = [
       { q: "What is Arista's market cap?", a: "As of this article's data, Arista's market cap was about $246.8B, on FY2025 revenue of $9.01B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Arista makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Arista sells the switches inside AI and cloud data centers" },
+      { id: 'revenue-mix', label: "Cloud and AI giants are 48% of revenue" },
+      { id: 'customers-competitors', label: "Two customers each exceed 10% of revenue" },
+      { id: 'core-metric', label: "Deferred revenue is the leading indicator of demand" },
+      { id: 'leadership', label: "Ullal: 18 years as CEO after running Cisco's data-center switching" },
+      { id: 'capital-returns', label: "No dividend, and $1.6B of buybacks in 2025" },
+      { id: 'failure-scenario', label: "What breaks Arista: big customers design their own switches" },
+      { id: 'financials', label: "Revenue up 3.1x in four years" },
+      { id: 'unknowns', label: "Open questions: are Meta and Microsoft still the top two?" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['ANET', 'Networking', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Arista makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Arista has beaten the top of its own revenue guidance in every quarter for three years, but roughly half of sales come from a few cloud and AI giants. That concentration is the risk behind the growth.</div>
+
+<h2 id="how-it-makes-money">Arista sells the switches inside AI and cloud data centers</h2>
 <p>Arista Networks designs high-speed network switches — the hardware equivalent of traffic-control equipment that lets tens of thousands of servers inside a data center exchange data with each other — and sells them mainly to cloud, AI, and large enterprise customers. It buys switching chips from Broadcom and outsources manufacturing to contractors like Jabil, Sanmina, and Foxconn, but designs both the hardware and its own EOS operating-system software in-house.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Broadcom chips + contract manufacturing</div><div class="d">Jabil, Sanmina, Foxconn</div></div>
@@ -14160,7 +14242,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">As Arista's installed base of switches grows, its recurring subscription revenue grows alongside it. Source: 10-K FY2025, Item 1 Business, p.7-8; MD&A revenue composition, p.52.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Cloud and AI giants are 48% of revenue</h2>
 <p>Arista reports as a single accounting segment, so customer type is the clearest way to break down its FY2025 revenue: cloud/AI giants (48%), general enterprise customers (32%), and AI/specialty service providers (20%). By product line, "Core" networking for AI/cloud/data centers made up 65% of revenue, "Cognitive Adjacencies" (campus and routing) 18%, and software/services 17%.</p>
 <div class="table-wrap">
   <table>
@@ -14175,7 +14257,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">International revenue's share rose from 18.2% (FY2024) to 20.9% (FY2025) — most contracts are dollar-denominated, limiting currency risk, but tariff and export-control exposure is growing. Source: 10-K FY2025, p.52, 54.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Two customers each exceed 10% of revenue</h2>
 <p>Arista sells B2B and is heavily dependent on a small number of enormous customers — two customers individually exceeded 10% of revenue in each of the last three years. Combined, the top 2 customers made up 39% of revenue in 2023, dipped to 35% in 2024, then rose to 42% in 2025, the highest of the three years. The FY2024 10-K named these two customers as Meta Platforms and Microsoft; the FY2025 filing no longer discloses their names.</p>
 <ul class="kicker-list">
   <li><b>Cisco Systems</b> — the traditional powerhouse in data-center and campus networking, selling integrated, bundled hardware in contrast to Arista's more open, software-centric approach.</li>
@@ -14184,7 +14266,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.52 (customer concentration); Item 1 Business (Competition), p.8.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Deferred revenue is the leading indicator of demand</h2>
 <p>Deferred revenue (contract liabilities) — money customers have already committed or prepaid that Arista hasn't yet recognized as revenue — acts as a leading indicator of demand. If it grows faster than reported revenue, orders are already piling up for future recognition; if its growth stalls, that can be an early warning of a coming slowdown.</p>
 <div class="table-wrap">
   <table>
@@ -14199,16 +14281,16 @@ export const POSTS: Post[] = [
 <p>Deferred revenue has grown faster than reported revenue in each of the last two years — a sign that demand, not just past results, continues to build.</p>
 <p class="src-note">Source: 10-K FY2025 balance sheet, p.68; 10-K FY2024 balance sheet (comparative figures).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Ullal: 18 years as CEO after running Cisco's data-center switching</h2>
 <p>CEO Jayshree Ullal has led Arista since October 2008 (18 years), adding the Chairman title in December 2023; she previously ran Cisco's data-center and switching business as SVP, and owns 2.3% of shares. Co-founder Andy Bechtolsheim remains actively involved as Chief Development Officer and is the largest shareholder at 14.6% (about 183.8 million shares) through the Bechtolsheim Family Trust. BlackRock holds 5.9%. A founder who remains an active executive and the company's largest shareholder is a notable long-term-alignment signal.</p>
 <p class="src-note">Source: DEF 14A, filed Apr 16, 2026 — 5%+ shareholder table, executive and director bios.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">No dividend, and $1.6B of buybacks in 2025</h2>
 <p>Arista pays no dividend and has stated it has no plans to start one. It repurchased $1,603.1M of stock in FY2025 (15.9 million shares at an average $100.63) and $423.6M in FY2024 (5.5 million shares at an average $77.13), and approved a new $1.5B buyback program in May 2025.</p>
 <div class="callout good"><b>Buybacks that actually reduced share count</b>Shares outstanding fell from 1,261.3 million (end of FY2024) to 1,256.5 million (end of FY2025) — genuine net reduction, meaning repurchases outpaced new shares issued through stock compensation, rather than merely offsetting dilution.</div>
 <p class="src-note">Note: Arista completed a 4-for-1 stock split in December 2024; all dollar figures here are split-neutral totals. Source: 10-K FY2025, p.50, 87.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Arista: big customers design their own switches</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If a handful of Arista's largest cloud and AI customers decide to design their own chips and switches in-house and bypass Arista entirely, nearly half of its revenue could come under pressure at the same time.
@@ -14220,7 +14302,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.8 (competition), p.52 (customer concentration), Item 1A Risk Factors.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 3.1x in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions, calendar years</caption>
@@ -14237,7 +14319,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>In 2022, operating income grew 65% year over year, but free cash flow fell 53% — cash got tied up building large inventory buffers during the global chip-supply crisis. By 2025, FCF had rebounded well past operating income entirely, and Arista has carried zero interest-bearing debt in every year shown, backed by $10.7B in cash and short-term investments at year-end 2025.</div>
 <p class="src-note">FCF = operating cash flow minus capex. The most recent quarter (Q2 FY2026) grew revenue 37.7% year over year — faster than FY2025's full-year rate of 28.6%, suggesting AI data-center demand hasn't slowed. Source: 10-K FY2025 income statement p.69, cash flow statement p.72, balance sheet p.68; 10-K FY2023 (2021-2022 comparatives).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: are Meta and Microsoft still the top two?</h2>
 <ul class="kicker-list">
   <li><b>Whether the top 2 customers are still Meta and Microsoft</b> can't be confirmed from the FY2025 10-K, which no longer names them (unlike the FY2024 filing) — recent earnings calls or IR materials would need to be checked.</li>
   <li><b>How fast and how deeply revenue would fall if big tech's AI capital spending slows</b> isn't something historical results alone can show.</li>
@@ -14266,17 +14348,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Arista's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "12 straight quarters above the top of guidance, and a tariff scare that faded" },
+      { id: 'guidance-record', label: "Arista's guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline for Arista Networks: October 2023 to August 2026" },
+      { id: 'our-read', label: "The scare faded, the beats didn't" },
+      { id: 'unknowns', label: "What Arista's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026',
     tags: ['ANET', 'Earnings Calls', 'AI Infrastructure'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">12 straight quarters above the top of guidance, and a tariff scare that faded</h2>
 <h3>Late 2023 through 2024: a company that speaks like a champion</h3>
 <p>For six consecutive quarters (Q3 FY2023 through Q4 FY2024), Arista beat the top end of its own revenue guidance every time — in Q3 FY2024, for instance, it guided to $1.72-1.75 billion and delivered $1.81 billion. Its 10-K language kept pace with the results: FY2023's "second largest market share" in data-center Ethernet switching became FY2024's "we have achieved the leadership position." On the Q3 FY2024 call, the word "accelerating" appeared 11 times in a single call — the peak of this run's confidence.</p>
 
@@ -14294,7 +14376,7 @@ export const POSTS: Post[] = [
   The 2025 tariff scare barely left a mark on the actual numbers — Arista beat guidance straight through it. Two details are worth watching regardless: customer concentration climbed back to 42% in 2025, even during an AI boom that should in theory broaden the customer base, and the company voluntarily erased a decade-old "we've already proven ourselves" boast from its own filings. That could mean the company has simply outgrown needing to say it, or it could be a deliberate tone shift ahead of tougher scrutiny on competition and customer concentration — the filings alone don't say which.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Arista's guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>12 tracked quarterly guidance cycles, Q3 FY2023–Q2 FY2026</caption>
@@ -14318,7 +14400,7 @@ export const POSTS: Post[] = [
 <p><strong>12 quarters, 12 beats, no exceptions</strong> — and growth has accelerated, not decelerated, deep into the cycle: the fastest year-over-year growth rate in this whole series came in the very last quarter tracked.</p>
 <p class="src-note">Source: each cited earnings call transcript's guidance and reported-results language, Q3 FY2023 through Q2 FY2026.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Arista Networks: October 2023 to August 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023</span>Q3 FY2023: the beat streak begins, despite supply-chain inventory-glut worries.</li>
   <li><span class="date">Nov 2024</span>Q3 FY2024: peak pre-tariff confidence; "accelerating" used 11 times on one call.</li>
@@ -14328,10 +14410,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 2026</span>Q2 FY2026: third guidance raise of the year; +37.7% YoY, the fastest of the whole series.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">The scare faded, the beats didn't</h2>
 <p>Arista's last three years show remarkable consistency: a 12-for-12 guidance-beating streak that survived a genuine, if brief, tariff scare without denting actual results. What stands out beyond the numbers is the company's own choice to quietly retire language it had used to prove itself for over a decade, even as customer concentration ticked back up to its highest level in the same three-year window. Neither of those is necessarily a warning sign, but both are worth tracking as this AI-driven growth cycle continues.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Arista's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>The real reason Arista dropped its "profitable and cash flow positive since 2010" language</b> isn't explained in the filings — whether it reflects a maturing company or a deliberate tone shift would require asking IR directly or watching whether the pattern continues in future 10-Ks.</li>
   <li><b>Whether the 12-quarter beat streak continues past Q2 FY2026</b> can only be confirmed by watching subsequent earnings calls.</li>
@@ -14360,11 +14442,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $195.69, as of the Aug 31, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "21.5% needed vs. 27.1% three-year and 32.2% five-year revenue growth" },
+      { id: 'sensitivity', label: "From 16.4% to 25.9%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Arista's 21.5%" },
+      { id: 'show-your-work', label: "The math behind 21.5%" },
+      { id: 'fine-print', label: "Limits of the ANET number" },
     ],
     sources: 'As of Aug 31, 2026 · Price used: $195.69',
     tags: ['ANET', 'ReverseDCF', 'Valuation'],
@@ -14381,7 +14463,7 @@ export const POSTS: Post[] = [
   The required growth rate (21.5%) sits meaningfully below both Arista's 3-year revenue CAGR (27.1%) and 5-year revenue CAGR (32.2%). Simply continuing its recent pace — let alone accelerating the way it just did (Q2 FY2026 revenue grew 37.7% year over year) — would be more than enough to justify today's price. That's a genuinely rarer signal than most reverse DCFs on this site turn up. It says nothing, though, about how durable that growth is if AI data-center capital spending ever cools, given that just two customers made up 42% of FY2025 revenue.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">21.5% needed vs. 27.1% three-year and 32.2% five-year revenue growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:53%;background:var(--accent)"></div></div><span class="val">21.5%</span></div>
@@ -14392,7 +14474,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical revenue CAGRs from 10-K FY2021-FY2025 (revenue grew from $2,948.0M to $9,005.7M). Revenue, not FCF, is used as the historical yardstick here because 2022's FCF ($448.2M) was temporarily depressed by supply-chain-driven inventory buildup, distorting any FCF-based CAGR. The 40.7% figure is a single-year 2026 analyst revenue-growth estimate (stockanalysis.com), shown for reference only.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 16.4% to 25.9%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -14406,14 +14488,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the highest discount rate tested (12%), the required growth rate (25.9%) still sits below Arista's 5-year revenue CAGR (32.2%) — though it's now close to the 3-year pace (27.1%), narrowing the cushion considerably.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Arista's 21.5%</h2>
 <ul class="kicker-list">
   <li><b>Using trailing-twelve-month FCF ($5,155.3M) instead of FY2025's figure ($4,252.4M)</b> lowers the required growth rate further, from 21.5% to 18.8% — recent quarters have generated cash even faster than the full FY2025 figure implies.</li>
   <li><b>A 12% discount rate</b> — arguably reasonable given the customer-concentration risk covered in the snapshot and story pieces — raises the required growth rate to 25.9%, nearly erasing the cushion versus the 3-year actual pace (27.1%).</li>
   <li><b>If AI data-center capital spending slows and Arista's two largest customers (a combined 42% of FY2025 revenue) pull back at the same time</b>, future actual growth could fall well below 21.5% — a scenario this backward-looking math can't anticipate.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 21.5%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -14431,7 +14513,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 3-yr revenue CAGR (2022→2025) = ($9,005.7M ÷ $4,381.3M)^(1/3) − 1 = 27.1%. 5-yr revenue CAGR (2021→2025) = ($9,005.7M ÷ $2,948.0M)^(1/4) − 1 = 32.2%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the ANET number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -14471,23 +14553,25 @@ export const POSTS: Post[] = [
       { q: "What is ASML's market cap?", a: "As of this article's data, ASML's market cap was about $653.7B (€562.8B), on FY2025 revenue of €32.7B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How ASML makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "ASML is the only company that builds the most advanced EUV machines" },
+      { id: 'revenue-mix', label: "New machines are 74.9% of revenue; service is 25.1% and growing faster" },
+      { id: 'customers-competitors', label: "A handful of chipmakers, unnamed in the filing" },
+      { id: 'core-metric', label: "Average selling price matters more than unit counts" },
+      { id: 'leadership', label: "Fouquet: an EUV leader who became CEO in April 2024" },
+      { id: 'capital-returns', label: "A €7.50 dividend and €5.9bn of buybacks" },
+      { id: 'failure-scenario', label: "What breaks ASML: chipmakers stop shrinking, or export limits tighten" },
+      { id: 'financials', label: "Revenue up 76% in four years, with a 2.6% year in 2024" },
+      { id: 'unknowns', label: "Open questions: the EUV-DUV split and customer identities" },
     ],
     sources: 'Form 20-F FY2021–FY2025',
     tags: ['ASML', 'Semiconductors', '20-F'],
     publishedAt: '2026-09-12',
     contentHtml: `
+<div class="callout warn"><b>Our take, in one line</b>ASML has no competitor for its most advanced machines, but it sells to a handful of chipmakers whose spending swings. A 53% drop in bookings in 2024 showed how quickly that can change.</div>
+
 <div class="callout warn"><b>A quick filing note before you read further</b>ASML is a Dutch company, so it files an annual Form 20-F with the SEC instead of a 10-K, and reports its financial results in euros rather than dollars — even though its U.S.-listed shares trade in dollars on Nasdaq. All figures below are as originally reported in euros unless otherwise converted and noted.</div>
 
-<h2 id="how-it-makes-money">How ASML makes money</h2>
+<h2 id="how-it-makes-money">ASML is the only company that builds the most advanced EUV machines</h2>
 <p>ASML designs and assembles lithography machines — equipment that "prints" ultra-fine circuit patterns onto silicon wafers — and is the only company on Earth capable of building the most advanced version, EUV (extreme ultraviolet) lithography systems. It sources critical components like optics (from Zeiss) and lasers (from Trumpf) across a network of 5,100 suppliers, sells finished machines for tens to hundreds of millions of euros each, then earns ongoing revenue servicing and upgrading them after installation.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Component suppliers</div><div class="d">Zeiss optics, Trumpf lasers, 5,100 partners</div></div>
@@ -14498,7 +14582,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Post-installation service and upgrade revenue reached €8.2B in 2025 (25.1% of total), growing 26.2% year over year — faster than new-machine sales — meaning a growing share of revenue now comes from ASML's already-installed base. Source: 20-F FY2025, p.55.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">New machines are 74.9% of revenue; service is 25.1% and growing faster</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by type — FY2025</caption>
@@ -14514,7 +14598,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Heavy Asia concentration cuts both ways</b>With 86% of revenue from China, Taiwan, and South Korea, ASML is directly exposed to currency swings in those markets and, more importantly, to U.S., Dutch, and Japanese export restrictions on China and to Taiwan Strait geopolitical risk.</div>
 <p class="src-note">Source: 20-F FY2025, Note 2, p.289.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">A handful of chipmakers, unnamed in the filing</h2>
 <p>For competitive reasons, ASML doesn't disclose customer names in its 20-F — based on its geographic revenue mix, industry watchers widely believe TSMC, Samsung, SK Hynix, Intel, and Micron are its major customers, though this isn't confirmed in any filing page. What the filings do disclose is stark concentration: the single largest customer made up 23.9% of FY2025 revenue (€7,796.7M), the top 2 customers combined for 38.0%, and the 4 customers each individually above 10% together accounted for 61.2% (€20.0bn).</p>
 <ul class="kicker-list">
   <li><b>Nikon (Japan)</b> — competes directly with ASML, but only in older-generation DUV lithography; Nikon cannot build EUV machines.</li>
@@ -14524,7 +14608,7 @@ export const POSTS: Post[] = [
 <div class="callout good"><b>No competitor exists in the most advanced tier</b>ASML's own 20-F competitive discussion names Nikon and Canon only in the context of older DUV equipment — no competitor is named for EUV at all, because no other company in the world can currently build it.</div>
 <p class="src-note">Source: 20-F FY2025, p.70 (customer concentration), p.67 (competition).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Average selling price matters more than unit counts</h2>
 <p>Unit sales alone can be misleading for ASML — what matters more is the average selling price (ASP) per system, since a shift toward newer, pricier machines can grow revenue even while unit volume falls. In 2025, ASML sold fewer systems overall (327, down from 418 in 2024) yet revenue still rose, because a growing share were newer, far more expensive High-NA EUV machines. If ASP growth ever stalls, it would call into question ASML's underlying "technology edge" story.</p>
 <div class="table-wrap">
   <table>
@@ -14539,16 +14623,16 @@ export const POSTS: Post[] = [
 <p>ASP jumped 43.6% in 2025 alone, driven by the newer High-NA EUV machines entering the mix — a very different growth driver than simply shipping more units.</p>
 <p class="src-note">ASP is calculated as system revenue divided by units sold. Source: 20-F FY2025, p.55; FY2022, p.45 (2021-2022 unit counts).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Fouquet: an EUV leader who became CEO in April 2024</h2>
 <p>CEO Christophe Fouquet (b. 1973, French) has led ASML since April 24, 2024, as President, CEO, and Chairman of the Board. He joined ASML in 2008, led the EUV business unit (2018-2022), then served as Chief Business Officer (2022-2024) before becoming CEO — and before ASML, worked at competitors KLA-Tencor and Applied Materials. ASML was founded in 1984 as a joint venture between Philips and ASM International, neither of which remains involved in management today.</p>
 <p class="src-note">Combined insider/officer ownership percentage wasn't disclosed clearly enough in the filings reviewed to state a precise total. Source: 20-F FY2025, p.80, p.129 (executive bios).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A €7.50 dividend and €5.9bn of buybacks</h2>
 <p>ASML has proposed an annual dividend of €7.50/share for FY2025, up from €6.40 in FY2024, at roughly a 0.5% yield against the current dollar share price. It repurchased €5.9bn of stock in 2025 (versus just €0.5bn in 2024) — combined dividends and buybacks totaled €8.5bn, or about 91.7% of net income for the year.</p>
 <div class="callout good"><b>Buybacks that actually reduced share count</b>Weighted-average shares outstanding fell from 393.8 million (2023) to 388.5 million (2025) — genuine net reduction, meaning repurchases weren't simply offsetting new shares issued through employee compensation.</div>
 <p class="src-note">Source: 20-F FY2025, p.44, p.317.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks ASML: chipmakers stop shrinking, or export limits tighten</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If chipmakers stop racing to shrink transistors further, or if geopolitical tensions block ASML from selling into its largest customer regions (China, Taiwan, South Korea), ASML's seemingly unassailable market position could be shaken in a single cycle.
@@ -14560,7 +14644,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 20-F FY2025, p.70 (customer concentration); p.289 (geographic revenue, own calculation); p.55-56, 61 (revenue growth, own calculation).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 76% in four years, with a 2.6% year in 2024</h2>
 <div class="table-wrap">
   <table>
     <caption>€ millions</caption>
@@ -14577,7 +14661,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>In 2023, net income rose to €7,839M, but free cash flow fell sharply to just €3,247M — cash got tied up in inventory and receivables (working capital), not lost. It was a year where reported profit and actual cash flow moved in opposite directions.</div>
 <p class="src-note">FCF = operating cash flow minus capex minus capitalized intangibles. Source: 20-F FY2025 p.55, FY2024 p.57, FY2022 p.45.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the EUV-DUV split and customer identities</h2>
 <ul class="kicker-list">
   <li><b>The exact revenue split between EUV (advanced) and DUV (older) systems</b> isn't separately disclosed in the 20-F — recent earnings materials (Form 6-K) would need to be checked.</li>
   <li><b>The identities of ASML's actual customers</b> aren't named in filings, appearing only as "Customer A," "Customer B," and so on.</li>
@@ -14607,17 +14691,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from ASML's Form 20-F filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Bookings fell 53%, the 2025 scenario was cut, and the bar was then cleared 11 quarters running" },
+      { id: 'guidance-record', label: "ASML's next-quarter guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline: October 2023 to January 2026" },
+      { id: 'our-read', label: "From steady, to a bookings cliff, to a flipped script" },
+      { id: 'unknowns', label: "What ASML's calls still don't answer" },
     ],
     sources: 'Form 20-F FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['ASML', 'Earnings Calls', 'Semiconductors'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Bookings fell 53%, the 2025 scenario was cut, and the bar was then cleared 11 quarters running</h2>
 <h3>Late 2023 into early 2024: steady as she goes</h3>
 <p>Q4 FY2023 revenue beat guidance (€7.2B versus a €6.7-7.1B range), and Q1 FY2024 landed exactly at the guided midpoint. The 2022 Investor Day's "€30-40B revenue by 2025" scenario still looked achievable, and earnings-call tone held a steady 7-8 out of 10.</p>
 
@@ -14635,7 +14719,7 @@ export const POSTS: Post[] = [
   The 2024 "crisis" reads less like a business breakdown and more like an expectations-management problem: the company cut its target once, then met or beat that lowered bar for 11 straight quarters. One thing worth watching closely: management itself has already warned that 2026 China revenue will fall sharply from 2024-2025's elevated levels — a signal that the 2024 script (demand slowdown → guidance cut → market shock) could partly repeat, this time centered specifically on China.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">ASML's next-quarter guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>12 tracked quarterly guidance cycles, Q3 FY2023–Q2 FY2026</caption>
@@ -14659,7 +14743,7 @@ export const POSTS: Post[] = [
 <p><strong>All 11 tracked quarters with confirmed results met or beat guidance — the only real blemish was the single guidance-scenario cut in Q3 FY2024.</strong> The pattern since then looks less like the company suddenly getting better at execution and more like a conservative bar, set once after the bookings cliff, being consistently cleared.</p>
 <p class="src-note">Source: each cited earnings call transcript's next-quarter guidance and the following quarter's 6-K reported results.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: October 2023 to January 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023</span>Q3 FY2023: steady performance, beating guidance.</li>
   <li><span class="date">Apr 2024</span>Christophe Fouquet becomes CEO, succeeding Peter Wennink.</li>
@@ -14670,10 +14754,10 @@ export const POSTS: Post[] = [
   <li><span class="date">2026</span>Two straight quarters meeting or beating guidance; Q3 FY2026 guidance implies revenue more than double early-2024 levels.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">From steady, to a bookings cliff, to a flipped script</h2>
 <p>ASML's last three years trace a sharp dip and a full recovery: a genuine bookings collapse and guidance-scenario cut under a brand-new CEO, followed by 11 consecutive quarters of meeting or beating a bar that had been deliberately lowered. The recovery culminated in the best bookings quarter of the entire series. What keeps this from being a clean resolution is that management has already flagged a specific, concrete risk for the year ahead — a sharp expected decline in China revenue — that echoes the shape of the 2024 shock closely enough to be worth tracking quarter by quarter.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What ASML's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>How reliable the Q3 FY2025 and Q1 FY2026 tone scores are</b> is an open question — the earnings-call transcripts available for those two quarters were only about a quarter of the length of other quarters, meaning fuller prepared remarks weren't available to review.</li>
   <li><b>How the January 2026-announced restructuring (roughly 1,700 job cuts) was discussed on subsequent calls</b> isn't covered here, since the earnings calls collected run only through Q2 FY2026.</li>
@@ -14703,11 +14787,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $1,696.01 (€1,460.19 equivalent), as of the Aug 31, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "25.1% needed vs. 15.1% revenue growth and 2.7% free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 19.8% to 29.7%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change ASML's 25.1%" },
+      { id: 'show-your-work', label: "The math behind 25.1%" },
+      { id: 'fine-print', label: "Limits of the ASML number" },
     ],
     sources: 'As of Aug 31, 2026 · Price used: $1,696.01 (€1,460.19)',
     tags: ['ASML', 'ReverseDCF', 'Valuation'],
@@ -14724,7 +14808,7 @@ export const POSTS: Post[] = [
   The required growth rate (25.1%) is roughly 1.7 times ASML's actual 5-year revenue CAGR (15.1%) and about 9 times its 5-year FCF CAGR (2.7%) — though that FCF figure is dragged down by a single working-capital-heavy year (2023). Even measured against the friendlier 3-year FCF CAGR (15.4%), the market's ask still runs well ahead. This price only makes sense if the AI-driven demand surge that began in late 2025, and the rising prices of newer High-NA EUV machines, keep compounding at this pace for a full decade.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">25.1% needed vs. 15.1% revenue growth and 2.7% free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">25.1%</span></div>
@@ -14735,7 +14819,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below, using FCF normalized to the 3-year average (see methodology). Historical figures from Form 20-F FY2025 (revenue and FCF, 2021-2025). All figures originally reported in euros; converted to dollars only for the share-price comparison, using the Aug 31, 2026 EUR/USD rate of 1.1615.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 19.8% to 29.7%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -14749,14 +14833,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Across the entire 8-12% range tested, the required growth rate stays in the 20-30% band — no reasonable discount-rate assumption brings the market's ask down anywhere near ASML's actual 5-year performance.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change ASML's 25.1%</h2>
 <ul class="kicker-list">
   <li><b>Using 2025's actual FCF (€11.0bn) instead of the normalized 3-year average (€7.8bn)</b> lowers the required growth rate to 17.9% at a 9% discount rate. Since 2025's FCF ran 41.6% above the 3-year average — past this analysis's normalization threshold — the unadjusted figure is shown here only for reference, not used as the base case.</li>
   <li><b>The share count used (385.4M, as of Dec 31, 2025) is about 8 months old relative to the August 2026 share price</b> — if ASML has continued repurchasing shares since then, the true required growth rate today would be very slightly lower than shown.</li>
   <li><b>Raising the terminal growth rate from 2.5% to 3%</b> would modestly lower the required 10-year growth rate, since more of the total value would then come from the higher terminal-value assumption.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 25.1%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -14776,7 +14860,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr revenue CAGR = (€32,667.3M ÷ €18,611.0M)^(1/4) − 1 = 15.1%. 5-yr FCF CAGR = (€11,027.3M ÷ €9,905.5M)^(1/4) − 1 = 2.7%. 3-yr FCF CAGR (2022→2025) = (€11,027.3M ÷ €7,167.5M)^(1/3) − 1 = 15.4%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the ASML number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -14816,21 +14900,23 @@ export const POSTS: Post[] = [
       { q: "What is IBM's market cap?", a: "As of this article's data, IBM's market cap was about $220.3B, on FY2025 revenue of $67.5B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How IBM makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "IBM sells software, consulting and mainframes to large organizations" },
+      { id: 'revenue-mix', label: "Software is 44.4% of revenue; consulting is 31.2%" },
+      { id: 'customers-competitors', label: "About 60% of revenue comes from outside the U.S." },
+      { id: 'core-metric', label: "The generative AI book of business: hype turned into signed deals" },
+      { id: 'leadership', label: "Krishna: an IBM lifer since 1990 and CEO since 2020" },
+      { id: 'capital-returns', label: "A $6.76 dividend after 30 straight years of increases" },
+      { id: 'failure-scenario', label: "What breaks IBM: cloud and AI budgets go straight to Amazon and Microsoft" },
+      { id: 'financials', label: "Revenue up 18% in four years, with 7.6% growth in 2025" },
+      { id: 'unknowns', label: "Open questions: is Q2 FY2026's software softness temporary?" },
     ],
     sources: '10-K FY2021–FY2025 (Annual Report Exhibit 13) · DEF 14A 2026',
     tags: ['IBM', 'Enterprise Software', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How IBM makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>IBM grew barely at all for years before generative AI helped lift profit and cash flow, and the price asks for very little growth. The risk is that the Q2 FY2026 large-deal delays turn into a trend.</div>
+
+<h2 id="how-it-makes-money">IBM sells software, consulting and mainframes to large organizations</h2>
 <p>IBM sells software subscriptions and licenses for cloud computing and AI, the consulting services large organizations need to actually deploy that technology, and specialized computer hardware (like mainframes) to run it — mostly to large enterprises and governments across more than 175 countries.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Software</div><div class="d">Cloud & AI subscriptions/licenses — $30.0B (44%)</div></div>
@@ -14841,7 +14927,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Roughly 12% of revenue is reinvested into R&D to build the next generation of software and AI technology. Source: IBM 2025 Annual Report to Stockholders (10-K Exhibit 13), p.16.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Software is 44.4% of revenue; consulting is 31.2%</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -14859,7 +14945,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>About half of revenue comes from outside the U.S.</b>With roughly 51% of revenue from abroad, a strong dollar alone can make reported revenue growth look weaker in dollar terms, and IBM is directly exposed to tariffs and other geopolitical trade risk.</div>
 <p class="src-note">Source: IBM 2025 Annual Report (10-K Exhibit 13), p.20.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">About 60% of revenue comes from outside the U.S.</h2>
 <p>IBM sells primarily B2B and to government agencies, operating in more than 175 countries with about 60% of revenue from outside the U.S. Whether any single customer accounts for 10% or more of revenue isn't disclosed in the filings reviewed here.</p>
 <ul class="kicker-list">
   <li><b>Software rivals</b> — Microsoft, Oracle, SAP, Salesforce, Google, and Amazon all compete directly with IBM's cloud and AI software offerings.</li>
@@ -14868,7 +14954,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.2, p.4.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">The generative AI book of business: hype turned into signed deals</h2>
 <p>IBM's "generative AI book of business" (cumulative signed contract value, inception-to-date) shows whether the company is actually converting AI hype into signed deals rather than just talking about it — this backlog typically converts into revenue over 1-2 years.</p>
 <div class="table-wrap">
   <table>
@@ -14882,16 +14968,16 @@ export const POSTS: Post[] = [
 <p>Starting in Q2 FY2025, IBM switched from disclosing a cumulative total to reporting new bookings per quarter instead (for example, Consulting alone signing over $1B in a quarter), and by the first half of FY2026, earnings calls stopped emphasizing this metric with a specific number at all — whether that reflects slowing growth or the metric simply being absorbed into the core business isn't something these filings can resolve.</p>
 <p class="src-note">Source: IBM Q3 FY2023 through Q1 FY2025 earnings call transcripts (management commentary, as originally stated each quarter).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Krishna: an IBM lifer since 1990 and CEO since 2020</h2>
 <p>CEO Arvind Krishna (63) has led IBM since April 2020, adding the Chairman title in December 2020. He joined IBM in 1990, ran the IBM Cloud & Cognitive Software division (2017-2020), and was the architect of the Red Hat acquisition — a 30-plus-year IBM veteran, though not a founder or founding family member. Ownership is dominated by index funds: Vanguard (10.03%), BlackRock (8.3%), and State Street (6.03%); combined, all directors and officers (including Krishna) hold under 1%.</p>
 <p class="src-note">Source: DEF 14A 2026, p.13, p.28-29 (as of Dec 31, 2025).</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A $6.76 dividend after 30 straight years of increases</h2>
 <p>IBM pays a quarterly dividend of $1.69/share ($6.76 annualized), yielding roughly 2.9% at the current price, with a payout ratio around 60% and 30 consecutive years of dividend increases.</p>
 <div class="callout warn"><b>No buybacks since the 2019 Red Hat acquisition</b>IBM suspended its share-buyback program after its $34 billion Red Hat acquisition in 2019 and reported zero repurchases as recently as November-December 2025. For more than five years, shareholder returns have relied on dividends alone, with no offsetting reduction in share count from buybacks.</div>
 <p class="src-note">Source: 10-K FY2025, p.11; stockanalysis.com/stocks/ibm/dividend (Aug 2026).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks IBM: cloud and AI budgets go straight to Amazon and Microsoft</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If large companies stop routing their cloud and AI transformation spending through IBM and instead give that budget directly to cloud providers like Amazon and Microsoft, IBM's software, consulting, and infrastructure businesses could all lose momentum at the same time.
@@ -14903,7 +14989,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors, p.3-4.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 18% in four years, with 7.6% growth in 2025</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions</caption>
@@ -14921,7 +15007,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>IBM's own FCF figure isn't a simple calculation</b>IBM's self-reported FCF doesn't exactly match "operating cash flow minus capex" (2025: $13.2B operating cash flow, $1.6B capex, yet reported FCF is $14.7B). IBM applies its own further adjustments beyond that simple formula, and the exact composition of those adjustments isn't disclosed in the materials reviewed for this analysis. †2022's $1.95 diluted EPS is on a continuing-operations basis; including the discontinued-operations loss from the Kyndryl spinoff, total EPS was $1.80 that year.</div>
 <p class="src-note">Source: IBM 2023 and 2025 Annual Reports to Stockholders (10-K Exhibit 13) and IBM Q4 earnings press releases (Ex-99.1, Jan 25 2022 / Jan 25 2023 / Jan 24 2024 / Jan 28 2026).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: is Q2 FY2026's software softness temporary?</h2>
 <ul class="kicker-list">
   <li><b>Whether Q2 FY2026's software and infrastructure softness is temporary</b> — the Q2 FY2026 10-Q said software and infrastructure revenue missed expectations, though first-half 2026 revenue overall still grew 5%. Whether this is a trend reversal or a one-off requires Q3 FY2026 results.</li>
   <li><b>Why IBM stopped disclosing its cumulative GenAI book-of-business figure</b> after Q1 FY2025 (>$5B+) — the disclosure method changed, and by mid-2026 the metric wasn't mentioned on earnings calls at all. Whether that reflects slowing growth or absorption into core business isn't confirmed.</li>
@@ -14950,17 +15036,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from IBM's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to July 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "The CFO declared the turnaround complete, then large deals slipped" },
+      { id: 'guidance-record', label: "IBM's guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline for IBM: Q3 2023 to Q2 2026" },
+      { id: 'our-read', label: "Guidance kept climbing, with one real wobble" },
+      { id: 'unknowns', label: "What IBM's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Jul 2026',
     tags: ['IBM', 'Earnings Calls', 'AI'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">The CFO declared the turnaround complete, then large deals slipped</h2>
 <h3>Late 2023: still recovering, still cautious</h3>
 <p>On the Q3 FY2023 call, IBM management repeated careful, familiar lines — "constant-currency revenue growth of 3-5%, and about $10.5 billion in free cash flow" — and described software revenue as merely at "the high end of its mid-single-digit model," a hedged phrasing for a company still healing from two big surgeries: the 2021 Kyndryl spinoff and the 2019 Red Hat acquisition. That year's 10-K still carried a standalone risk factor warning the Kyndryl spinoff could trigger a substantial tax liability if it failed to qualify for tax-free treatment.</p>
 
@@ -14978,7 +15064,7 @@ export const POSTS: Post[] = [
   The "no-growth company to growth company" story IBM told over the last three years held up perfectly through 2025. Q2 FY2026 delivered the first real signal that the same AI boom fueling that story could work in reverse — companies spending on AI infrastructure instead of on IBM's other software and infrastructure lines. Company-wide guidance still holds and consulting's GenAI-related backlog penetration reportedly keeps growing (around 30%), but whether this quarter's software softness is a temporary large-deal delay or the start of a structural AI-driven budget shift needs another quarter or two to confirm.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">IBM's guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>Annual guidance vs. actual results, FY2023–FY2026</caption>
@@ -14994,7 +15080,7 @@ export const POSTS: Post[] = [
 <p><strong>FCF targets: 3 for 3 across confirmed fiscal years. Revenue growth targets: 2 for 3, with FY2024 the clear miss.</strong> The pattern is a conservative FCF guide that IBM consistently clears — until Q2 FY2026 became the first quarter with a segment-specific guidance cut rather than a full-year miss or beat.</p>
 <p class="src-note">Source: IBM Q3 FY2023 through Q2 FY2026 earnings call transcripts (guidance language) and IBM's quarterly/annual earnings press releases (Ex-99.1).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for IBM: Q3 2023 to Q2 2026</h2>
 <ul class="timeline">
   <li><span class="date">Q3 2023</span>Still recovering from the Kyndryl spinoff and Red Hat acquisition; guidance cautiously reaffirmed.</li>
   <li><span class="date">Q3 2024</span>CFO publicly declares the 3-year "no-growth to growth" turnaround complete; the tone-inflection point of the series.</li>
@@ -15004,10 +15090,10 @@ export const POSTS: Post[] = [
   <li class="crisis"><span class="date">Q2 2026</span>Large-deal delays cause a software revenue shortfall; segment guidance cut to 6-8%; an analyst directly asks about AI-driven budget reallocation.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Guidance kept climbing, with one real wobble</h2>
 <p>IBM's last three years trace a genuine turnaround, publicly declared complete by its own CFO and then validated by results that beat a guidance range raised twice in a single year. Q2 FY2026 is the first real wrinkle in that story — not a company-wide miss, but a segment-specific one, arriving with a plausible and unresolved explanation on the table: that the same AI spending boom driving IBM's growth narrative could also be quietly redirecting customer budgets away from IBM's other lines. The company's own guidance still holds company-wide, which argues for patience over alarm, but this is a thread worth pulling on in the next couple of quarters.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What IBM's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether Q2 FY2026's software softness was a temporary large-deal delay or a structural shift</b> — if it's truly deferred revenue, it should show up in Q3 FY2026 results; that quarter's earnings call would need to be checked.</li>
   <li><b>Whether the analyst's "AI infrastructure budget reallocation" hypothesis is actually correct</b> — management's answer stayed general, and no concrete rebuttal data was disclosed in the call reviewed.</li>
@@ -15037,11 +15123,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $233.87, as of the Aug 31, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "4.4% needed vs. 14.7% two-year free-cash-flow growth and 4.2% revenue growth" },
+      { id: 'sensitivity', label: "From 4.4% to 8.3%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change IBM's 4.4%" },
+      { id: 'show-your-work', label: "The math behind 4.4%" },
+      { id: 'fine-print', label: "Limits of the IBM number" },
     ],
     sources: 'As of Aug 31, 2026 · Price used: $233.87',
     tags: ['IBM', 'ReverseDCF', 'Valuation'],
@@ -15058,7 +15144,7 @@ export const POSTS: Post[] = [
   The required growth rate (4.4%) is less than a third of IBM's actual 2-year FCF CAGR (14.7%), and the 5-year FCF CAGR (22.7%, inflated by 2021's weak post-Kyndryl-spinoff base) dwarfs it further still. Measured against revenue growth alone — a cleaner read on the underlying business's actual size, unaffected by that base-year distortion — the market's ask (4.4%) sits almost exactly in line with IBM's 5-year revenue CAGR (4.2%). On an FCF basis, this looks like an unusually mild ask; on a revenue basis, it's simply realistic. That gap between the two readings is itself the story — see ⑤ below.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">4.4% needed vs. 14.7% two-year free-cash-flow growth and 4.2% revenue growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:19%;background:var(--accent)"></div></div><span class="val">4.4%</span></div>
@@ -15069,7 +15155,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. FCF CAGRs from IBM's own reported figures; the 5-year figure is unusually high because 2021 (the base year) was depressed by one-time costs from the 2021 Kyndryl spinoff. Revenue CAGR is shown as a cleaner comparison, since it isn't affected by that base-year distortion.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 4.4% to 8.3%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -15083,14 +15169,14 @@ export const POSTS: Post[] = [
 </div>
 <p>At a 7% discount rate, the required growth rate actually turns negative — meaning FCF wouldn't need to grow at all, and could even shrink slightly, to justify today's price. Even at the higher end tested (11%), the required rate (8.3%) still sits well below IBM's actual 2-year FCF pace.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change IBM's 4.4%</h2>
 <ul class="kicker-list">
   <li><b>Using the 3-year average FCF ($12,894M) instead of FY2025's figure ($14,734M) as the base</b> would raise the required growth rate somewhat, since a smaller starting point needs faster growth to reach the same target value.</li>
   <li><b>A 7% discount rate</b> — arguably reasonable given IBM's investment-grade credit profile and 30-year dividend-increase streak — pushes the required growth rate into negative territory, an unusually low bar for any reverse DCF on this site.</li>
   <li><b>The 5-year FCF comparison (22.7%) is distorted by a weak 2021 base right after the Kyndryl spinoff</b>; the 2-year comparison (14.7%) and revenue growth (4.2%) are both cleaner reads, and they tell two different stories — one still comfortably above the market's ask, one nearly matching it exactly.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 4.4%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -15109,7 +15195,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 2-yr FCF CAGR (2023→2025) = ($14,734M ÷ $11,200M)^(1/2) − 1 = 14.7%. 5-yr FCF CAGR (2021→2025) = ($14,734M ÷ $6,508M)^(1/4) − 1 = 22.7%. 5-yr revenue CAGR = ($67,535M ÷ $57,350M)^(1/4) − 1 = 4.2%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the IBM number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -15149,21 +15235,23 @@ export const POSTS: Post[] = [
       { q: "What is Merck's market cap?", a: "As of this article's data, Merck's market cap was about $366B, on FY2025 revenue of $65.0B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Merck makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Merck sells Keytruda, vaccines and animal health" },
+      { id: 'revenue-mix', label: "Pharmaceuticals are 89.4% of revenue at a 78.7% segment margin" },
+      { id: 'customers-competitors', label: "Three wholesalers account for 56% of sales" },
+      { id: 'core-metric', label: "Keytruda's share of revenue is both the engine and the risk" },
+      { id: 'leadership', label: "Davis: CFO from 2014, CEO since 2021" },
+      { id: 'capital-returns', label: "A $3.40 dividend and buybacks that jumped to $5.1B" },
+      { id: 'failure-scenario', label: "What breaks Merck: Keytruda's patent expires in 2028" },
+      { id: 'financials', label: "Revenue up 33% in four years, with growth slowing to 1.3%" },
+      { id: 'unknowns', label: "Open questions: Ohtuvayre's growth and subcutaneous Keytruda" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['MRK', 'Pharmaceuticals', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Merck makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Merck's Keytruda generates nearly half of its revenue and loses U.S. patent protection in 2028. Everything else in the company has to grow enough to fill that gap.</div>
+
+<h2 id="how-it-makes-money">Merck sells Keytruda, vaccines and animal health</h2>
 <p>Merck develops prescription drugs and vaccines — most notably Keytruda, an immunotherapy injection that helps the body's own immune cells recognize and attack cancer cells — and sells them mostly through a small number of wholesalers to hospitals, pharmacies, and veterinarians.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">R&D (Merck Research Labs)</div><div class="d">$15.8B FY2025 spend — drug & vaccine pipeline</div></div>
@@ -15174,7 +15262,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">FY2025 revenue of $65.0B cycled back into $15.8B of R&D reinvestment plus $13.3B in shareholder returns. Source: 10-K FY2025, p.104 (wholesaler concentration), p.65 (R&D spending).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Pharmaceuticals are 89.4% of revenue at a 78.7% segment margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -15190,7 +15278,7 @@ export const POSTS: Post[] = [
 <p>Geographically, the U.S. share of revenue has climbed from 47.4% (2023) to 56.2% (2025) — a 9-point shift in just three years, meaning growing exposure to U.S. drug-pricing policy (the Inflation Reduction Act and "most favored nation" pricing deals) rather than less.</p>
 <p class="src-note">Source: 10-K FY2025, p.131 (Note 18, 2025/2023 comparison).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Three wholesalers account for 56% of sales</h2>
 <p>Merck doesn't sell directly to hospitals or patients — it goes through wholesalers. Just three companies, McKesson (22%), Cencora (21%), and Cardinal Health (13%), account for 56% of Merck's accounts receivable, a concentrated distribution structure. The actual cost of drugs is often borne less by patients directly than by insurers and government programs like U.S. Medicare.</p>
 <ul class="kicker-list">
   <li><b>Bristol-Myers Squibb</b> — competes directly with Keytruda in the PD-1 immunotherapy class through its own drug, Opdivo.</li>
@@ -15199,7 +15287,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.104 (wholesaler concentration).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Keytruda's share of revenue is both the engine and the risk</h2>
 <p>Keytruda's share of total revenue is both Merck's growth engine and its single biggest risk, since Keytruda's U.S. patent is expected to expire in 2028 — the higher this share climbs, the bigger the shock when that exclusivity ends.</p>
 <div class="table-wrap">
   <table>
@@ -15213,16 +15301,16 @@ export const POSTS: Post[] = [
 <p>Meanwhile, revenue excluding Keytruda peaked in 2022 (boosted by the COVID treatment Lagevrio) and has declined for three straight years since — a sign that Merck's growth outside its flagship drug has been shrinking, not expanding.</p>
 <p class="src-note">Source: 10-K FY2025, p.131 (Note 18); 10-K FY2022, p.125 (Note 19, prior-year comparatives).</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Davis: CFO from 2014, CEO since 2021</h2>
 <p>CEO Robert M. Davis has led Merck since July 2021 (about 4 years), having previously served as CFO from 2014; he is not a founder — Merck was founded in 1891. Combined insider ownership across all directors and executives is under 1%. The only shareholder with a disclosed 5%+ stake is BlackRock, at 8.17%.</p>
 <p class="src-note">Source: DEF 14A 2026, p.30-31, p.34.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A $3.40 dividend and buybacks that jumped to $5.1B</h2>
 <p>Merck pays a quarterly dividend of $0.85/share (raised from $0.81 in November 2025), for a $3.40 annualized dividend and a yield of about 2.3%. Buybacks jumped to $5.1B in 2025 (from $1.3B in both 2024 and 2023), and the board approved a new $10B buyback authorization in January 2025.</p>
 <div class="callout warn"><b>Only in 2025 did buybacks actually shrink the share count</b>From 2021 through 2024, share count stayed essentially flat (2.53-2.54 billion shares) because new shares issued for employee compensation offset the buybacks. Only in 2025 did shares outstanding actually fall (to 2.502 billion) — before that, buybacks were merely preventing further dilution, not returning net capital.</div>
 <p class="src-note">Source: 10-K FY2025, p.51, p.80 (cash flow statement); p.130 (Note 16, average shares outstanding); 10-K FY2022, p.122 (Note 17).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Merck: Keytruda's patent expires in 2028</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   When Keytruda's U.S. patent expires in 2028 and low-cost biosimilars flood the market, the single drug generating nearly half of Merck's revenue could see sales erode quickly, dragging overall results down with it.
@@ -15234,7 +15322,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: industry analysis on the Keytruda patent cliff (web search, page not specified); 10-K FY2025, p.7 (MFN agreement), p.112 area (IRA litigation status), p.131 (Note 18, regional revenue).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 33% in four years, with growth slowing to 1.3%</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions</caption>
@@ -15251,7 +15339,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Worth watching</b>2023's operating income crash to 3.9% of revenue came from a one-time $11.4B R&D asset-acquisition charge — free cash flow that year ($9.1B) held up far better. The reverse happened in 2025: operating income hit a record $21.2B, yet FCF fell to $12.4B (from $18.1B in 2024) and total debt jumped $12.3B in a single year — both driven by the October 2025 Verona Pharma acquisition ($10.4B total, funded with $13.9B in new debt).</div>
 <p class="src-note">*Operating income isn't separately disclosed by the company; calculated here as revenue minus cost of sales, SG&A, R&D, and restructuring costs. Source: 10-K FY2025, p.77 (income statement), p.80 (cash flow statement), p.78 (balance sheet); 10-K FY2022, p.77-78 (2021-2022 comparatives).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: Ohtuvayre's growth and subcutaneous Keytruda</h2>
 <ul class="kicker-list">
   <li><b>How large Ohtuvayre (the COPD drug from the Verona Pharma acquisition, just $178M in FY2025 revenue) will actually grow</b> can't be determined from this data alone.</li>
   <li><b>How much the subcutaneous Keytruda version (Qlex) can actually delay the 2028 patent cliff</b> depends on ongoing patent litigation and how quickly physicians shift prescribing habits.</li>
@@ -15280,17 +15368,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Merck's 10-K filings for FY2023 through FY2025 and 12 quarters of earnings call transcripts from October 2023 to August 2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Nearly three years of \"nothing has changed\" on Gardasil before the target was withdrawn" },
+      { id: 'guidance-record', label: "Merck's Gardasil 2030 target vs. reality" },
+      { id: 'timeline', label: "Timeline for Merck & Co.: October 2023 to August 2026" },
+      { id: 'our-read', label: "The first green shoot" },
+      { id: 'unknowns', label: "What Merck's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 12 quarters of earnings call transcripts, Oct 2023–Aug 2026',
     tags: ['MRK', 'Earnings Calls', 'Vaccines'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Nearly three years of "nothing has changed" on Gardasil before the target was withdrawn</h2>
 <h3>Late 2023: "nothing has changed"</h3>
 <p>On the Q3 FY2023 call, Merck management said flatly, "our expectation to deliver over $11 billion by 2030 remains unchanged... nothing has changed," referring to its cervical-cancer vaccine, Gardasil. On the Q4 FY2023 call (February 2024), Gardasil sales had grown 27%, described as "exceptional growth." That era's 10-K stated that Merck's China business "has grown rapidly in the past few years."</p>
 
@@ -15308,7 +15396,7 @@ export const POSTS: Post[] = [
   This isn't a story about management lying — it's a specific, publicly repeated long-term bet on a single market (China) getting derailed by distribution dynamics and macro forces outside the company's control, forcing a formal withdrawal in a single quarter after years of "nothing has changed." The shift afterward toward vaguer "opportunity size" language, rather than a specific figure, is worth remembering the next time Merck floats a new long-term number.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Merck's Gardasil 2030 target vs. reality</h2>
 <div class="table-wrap">
   <table>
     <caption>Company-wide revenue guidance vs. one product's long-term target</caption>
@@ -15324,7 +15412,7 @@ export const POSTS: Post[] = [
 <p><strong>Two different tracks with two very different records:</strong> company-wide annual revenue guidance kept a conservative "raise and narrow" practice for three straight years and hit it every time — even in 2025, when Gardasil collapsed, because other products picked up the slack. A single product's long-term (2030) target, by contrast, was reaffirmed with "nothing has changed" for nearly three years, then withdrawn entirely in one quarter. Short-term, company-wide guidance here has a reliable track record; long-term, single-product promises deserve more skepticism.</p>
 <p class="src-note">Source: Q4 FY2023, Q4 FY2024, Q4 FY2025, and Q2 FY2026 earnings calls; Q3 FY2023 through Q3 FY2024 calls (2030 target reaffirmations).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Merck & Co.: October 2023 to August 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2023</span>Q3 2023 call: "nothing has changed" on the 2030 $11B+ Gardasil target.</li>
   <li class="crisis"><span class="date">Q3 2024</span>Gardasil sales fall 10% YoY, the first-ever decline, tied to Chinese distributor Zhifei's inventory buildup.</li>
@@ -15334,10 +15422,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Aug 2026</span>Q2 2026 call: Gardasil sales turn positive (+3%) for the first time in about two years; CEO marks his 5-year anniversary reflecting on the company's progress.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">The first green shoot</h2>
 <p>Merck's last three years show a company that held firm on a specific, dated long-term promise well past the point where the underlying data supported it, then withdrew that promise entirely in a single quarter once the gap became undeniable. What's reassuring is that company-wide, short-term guidance stayed reliable throughout, even during Gardasil's worst stretch — other products absorbed the shock. What's worth remembering is that the company has since moved toward broader, less specific language about future opportunity, which is harder for outsiders to hold it accountable to the next time results disappoint.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Merck's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether Q2 FY2026's Gardasil +3% is a genuine trend reversal or simply reflects a weak 2025 comparison base</b> requires another quarter or two to confirm.</li>
   <li><b>What specific products and timeline underlie the new "$70 billion-plus commercial opportunity" framing</b> isn't broken down in the filings reviewed here — investor-conference materials would need to be checked.</li>
@@ -15366,11 +15454,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $148.35, as of the Aug 28, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "12.0% needed vs. 9.3% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "From 9.6% to 18.3%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Merck's 12.0%" },
+      { id: 'show-your-work', label: "The math behind 12.0%" },
+      { id: 'fine-print', label: "Limits of the MRK number" },
     ],
     sources: 'As of Aug 28, 2026 · Price used: $148.35',
     tags: ['MRK', 'ReverseDCF', 'Valuation'],
@@ -15387,7 +15475,7 @@ export const POSTS: Post[] = [
   The required growth rate (12.0%) runs about 30% above Merck's actual 5-year FCF CAGR (9.3%) and well above its 5-year revenue CAGR (7.5%) — and revenue grew just 1.3% in the most recent year alone. This isn't an extreme gap on its own, but it means the market expects Merck to sustain a somewhat faster pace than its own recent history for a full decade — a decade that includes 2028, when Keytruda, responsible for nearly half of revenue, loses U.S. patent protection.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">12.0% needed vs. 9.3% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:100%;background:var(--accent)"></div></div><span class="val">12.0%</span></div>
@@ -15398,7 +15486,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021-FY2025 (FCF and revenue figures).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 9.6% to 18.3%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -15413,14 +15501,14 @@ export const POSTS: Post[] = [
 </div>
 <p>At 8%, the required rate (9.6%) is almost identical to Merck's actual 5-year FCF pace — a reasonable ask. Raise the discount rate to just 10%, though, and the gap widens clearly beyond what recent history supports.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Merck's 12.0%</h2>
 <ul class="kicker-list">
   <li><b>Using the 3-year average FCF ($13.20B) instead of FY2025's figure ($12.36B) as the base</b> lowers the required growth rate to about 10.7% at a 9% discount rate, since 2025's FCF ran 6% below that average.</li>
   <li><b>Treating the October 2025 Verona Pharma acquisition's debt-funded impact on net debt as a one-time event</b> and excluding it would modestly lower the required growth rate.</li>
   <li><b>Lowering the terminal growth rate from 2.5% to 2.0%</b> would modestly raise the required 10-year growth rate, since more of the total value would then need to come from the explicit growth period rather than the terminal value.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 12.0%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -15438,7 +15526,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR = ($12.36B ÷ $8.674B)^(1/4) − 1 = 9.3%. 5-yr revenue CAGR = ($65.011B ÷ $48.704B)^(1/4) − 1 = 7.5%. Most recent 1-year revenue growth (2024→2025) = 1.3%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the MRK number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -15478,21 +15566,23 @@ export const POSTS: Post[] = [
       { q: "What is Cigna's market cap?", a: "As of this article's data, Cigna's market cap was about $73.0B, on FY2025 revenue of $274.9B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Cigna makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Cigna sells insurance and runs Express Scripts in the middle of drug sales" },
+      { id: 'revenue-mix', label: "Evernorth is 85.5% of revenue at a 3.1% margin" },
+      { id: 'customers-competitors', label: "Large employers and government contracts like TRICARE" },
+      { id: 'core-metric', label: "The medical care ratio shows how profitable the insurance side is" },
+      { id: 'leadership', label: "Evanko succeeded Cordani as CEO on July 1, 2026" },
+      { id: 'capital-returns', label: "A $6.24 dividend, raised to $1.56 a quarter" },
+      { id: 'failure-scenario', label: "What breaks Cigna: PBM rebates are banned while big customers walk away" },
+      { id: 'financials', label: "Revenue up 58% in four years, with a 26.6% jump in 2024" },
+      { id: 'unknowns', label: "Open questions: what the new CEO changes" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['CI', 'Healthcare', '10-K'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="how-it-makes-money">How Cigna makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Cigna's Express Scripts business is 85% of revenue on razor-thin margins, so its earnings hinge on how regulators treat PBM rebates. The stock is priced as if cash flow stays flat or falls.</div>
+
+<h2 id="how-it-makes-money">Cigna sells insurance and runs Express Scripts in the middle of drug sales</h2>
 <p>Cigna runs two very different businesses side by side. Cigna Healthcare sells health insurance to employers, governments, and individuals, collecting premiums and paying out medical claims. Evernorth, through its Express Scripts subsidiary, manages prescription drug benefits for employers — negotiating rebates from drug manufacturers and processing claims — earning fees along the way.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Employers, governments, individuals</div><div class="d">Pay premiums for coverage</div></div>
@@ -15503,7 +15593,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">The two segments share customers and data — employers who buy Cigna health insurance often also outsource prescription-benefit management to Evernorth. Source: 10-K FY2025, Item 1 Business; Note 23 (Segment Information).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Evernorth is 85.5% of revenue at a 3.1% margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue by segment — FY2025</caption>
@@ -15521,7 +15611,7 @@ export const POSTS: Post[] = [
 <p>Geographic revenue isn't separately disclosed — Cigna operates International Health in 30+ countries but doesn't break out dollar figures by region. Given the small relative size of that international business, the company's dominant exposure is to U.S. healthcare policy (the Affordable Care Act, Medicare rules, PBM legislation) rather than currency risk.</p>
 <p class="src-note">Source: 10-K FY2025, Note 23 (Segment Information).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Large employers and government contracts like TRICARE</h2>
 <p>Cigna sells largely B2B — to large employers ("National Accounts"), mid-size employers, unions, and government agencies (like TRICARE) through both self-funded (ASO) and fully-insured contracts, with individual/family plans a smaller slice. A single PBM customer made up 19% of external revenue in 2025 (16% in 2024), and federal government contracts made up 11% (2024) / 15% (2023) — Express Scripts contracts typically renegotiate every 3 years.</p>
 <ul class="kicker-list">
   <li><b>UnitedHealth Group</b> — the largest player in the industry, vertically integrated across its own PBM (OptumRx), insurance (UHC), and care delivery (Optum Health).</li>
@@ -15530,7 +15620,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1 (Competition, Miscellaneous).</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">The medical care ratio shows how profitable the insurance side is</h2>
 <p>The Medical Care Ratio (MCR) — the share of insurance premiums actually paid out as medical claims — is the key signal for how profitable the Cigna Healthcare segment is. A lower MCR means the insurer keeps more of each premium dollar as margin.</p>
 <div class="table-wrap">
   <table>
@@ -15544,15 +15634,15 @@ export const POSTS: Post[] = [
 <p>MCR dipped in the post-pandemic years (2022-2023) but has climbed back into the mid-80s in 2024-2025 — a sign that medical cost inflation is once again outpacing premium increases, squeezing margin.</p>
 <p class="src-note">Source: 10-K FY2025, FY2023, and FY2021, MD&A "Cigna Healthcare" segment results.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Evanko succeeded Cordani as CEO on July 1, 2026</h2>
 <p>David Cordani served as CEO from 2009 until July 1, 2026, when Brian Evanko — a 30-year company veteran and former CFO and Cigna Healthcare president — became the new CEO. Cigna has no founder involvement (founded in 1981, long-run by professional management). Combined insider ownership across directors and executives is about 0.6%; the largest shareholders are index funds Vanguard (10.0%) and BlackRock (7.6%).</p>
 <p class="src-note">Source: DEF 14A 2026, "Election of Directors" / "Security Ownership."</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">A $6.24 dividend, raised to $1.56 a quarter</h2>
 <p>Cigna pays an annual dividend of $6.24/share ($1.56/quarter, raised from $1.51), yielding about 2.3% at the current price, with a 25.8% payout ratio and 5 consecutive years of increases. It repurchased 11.9 million shares (about $3.6B) in 2025 and 20.9 million shares (about $7.0B) in 2024 — a meaningful chunk of the proceeds from the March 2025 sale of its Medicare Advantage business to HCSC went toward buybacks.</p>
 <p class="src-note">Source: 10-K FY2025, MD&A "Liquidity and Capital Resources"; stockanalysis.com/stocks/ci/dividend (Aug 31, 2026).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Cigna: PBM rebates are banned while big customers walk away</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the government bans the PBM rebate structure outright while large employer and government customers simultaneously fail to renew their contracts, the prescription-drug business generating 85% of Cigna's revenue could be shaken all at once.
@@ -15564,7 +15654,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors, "Federal Legislative Developments."</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 58% in four years, with a 26.6% jump in 2024</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions</caption>
@@ -15581,7 +15671,7 @@ export const POSTS: Post[] = [
 <div class="callout good"><b>Solid earnings quality</b>Free cash flow has exceeded net income in every one of the past 5 years (for example, 2025 FCF of $8,389M versus net income of $5,957M) — even as operating margin has steadily declined, the cash actually generated has stayed ahead of reported profit.</div>
 <p class="src-note">Source: 10-K FY2025, "Executive Overview" and cash flow statement; 10-K FY2023 (2021-2023 comparatives). FCF = operating cash flow minus capex (property, equipment, and software).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: what the new CEO changes</h2>
 <ul class="kicker-list">
   <li><b>How the July 2026 CEO transition (Cordani to Evanko) will change strategic direction</b> can't be determined from this data alone — the first full earnings cycle under the new CEO would need to be checked.</li>
   <li><b>How Evernorth will actually redesign its revenue model once 2028 PBM rebate regulations take effect</b> hasn't been disclosed yet.</li>
@@ -15610,17 +15700,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Cigna's 10-K filings for FY2023 through FY2025 and 6 quarters of earnings call transcripts spanning Q4 FY2023 through Q2 FY2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "Two crises at once, a missed EPS target, and a rebuilt rebate model" },
+      { id: 'guidance-record', label: "Cigna's guidance vs. reported results" },
+      { id: 'timeline', label: "Timeline for The Cigna Group: February 2024 to July 2026" },
+      { id: 'our-read', label: "EPS recovered, but the core cost metric hasn't" },
+      { id: 'unknowns', label: "What Cigna's calls still don't answer" },
     ],
     sources: '10-K FY2023–FY2025 · 6 quarters of earnings call transcripts, Q4 FY2023–Q2 FY2026',
     tags: ['CI', 'Earnings Calls', 'PBM Regulation'],
     publishedAt: '2026-09-12',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">Two crises at once, a missed EPS target, and a rebuilt rebate model</h2>
 <h3>Late 2023: peak confidence</h3>
 <p>On the February 2024 call, CEO David Cordani declared "2023 was a very strong year," having raised guidance twice during the year and still beaten it. Express Scripts had just launched the industry's largest-ever PBM contract (Centene, over 400 million prescriptions annually), and the company set an aggressive 2024 EPS target of "at least $28.25." Around the same time, Cigna had just agreed to sell its Medicare Advantage business to HCSC, and management emphasized a decade-plus track record of "10-13% long-term EPS growth."</p>
 
@@ -15638,7 +15728,7 @@ export const POSTS: Post[] = [
   These three years read as the years Cigna's core business model got rewritten. The PBM rebate model was the engine behind 85% of revenue, and once regulators, public opinion, and Congress all took aim at it simultaneously, the company accepted a price far steeper than any fine — redesigning its own business model — and packaged it as voluntary innovation. EPS recovered through other levers (buybacks, investment income), but the underlying cost metric (MCR) kept climbing regardless; the next chapter of this story will be written once the Signature model actually goes live in 2027-2028.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Cigna's guidance vs. reported results</h2>
 <div class="table-wrap">
   <table>
     <caption>EPS and Medical Care Ratio guidance vs. actual results, FY2024–FY2026</caption>
@@ -15655,7 +15745,7 @@ export const POSTS: Post[] = [
 <p><strong>EPS returned to a "promise, then beat" pattern after the 2024 miss — but the core cost metric (MCR) missed its guided range in both 2024 and 2025.</strong> That split suggests the EPS recovery may partly reflect other levers (buybacks, investment income) rather than a full recovery in the credibility of the company's underlying medical-cost management.</p>
 <p class="src-note">Source: Q4 FY2023, Q4 FY2024, Q4 FY2025, Q1 FY2026, and Q2 FY2026 earnings call transcripts; 10-K FY2025 MD&A (confirmed MCR figures).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for The Cigna Group: February 2024 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Feb 2024</span>Q4 2023 call: "2023 was a very strong year"; aggressive 2024 EPS target set; Centene PBM contract launched.</li>
   <li class="crisis"><span class="date">Sep 2024</span>FTC files an administrative complaint against Express Scripts and other PBMs over insulin rebate practices.</li>
@@ -15668,10 +15758,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026</span>Q2 2026 call: Evanko's first solo call; guidance raised again; AI and personalization investment emphasized.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">EPS recovered, but the core cost metric hasn't</h2>
 <p>Cigna's last three years trace a genuine crisis followed by a structural response: a regulatory complaint and a cost-management failure arrived within months of each other, forcing an admitted guidance miss and, eventually, a redesign of the core PBM rebate model that generates the bulk of company revenue. The EPS recovery that followed is real, but it leans on levers other than the underlying cost discipline the market cares most about — MCR missed its own guided range for a second straight year even as EPS beat. The new CEO inherits a business that looks steadier on the surface than it did in early 2025, but the core question — whether Signature actually fixes the cost and regulatory pressure, or just repackages it — won't be answerable until it's fully live in 2027-2028.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Cigna's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>How the 2027 rollout of the Signature (rebate-free) model to Cigna Healthcare's fully-insured customers will affect margins</b> isn't disclosed yet — the 2027 earnings calls would need to be checked.</li>
   <li><b>What exactly the "rumors and reports" referenced on the October 2024 call were</b> isn't specified by the company anywhere in the materials reviewed.</li>
@@ -15700,11 +15790,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $276.08, as of the Aug 31, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "-2.8% to -1.0% needed vs. 8.6% actual free-cash-flow growth" },
+      { id: 'sensitivity', label: "How the discount rate changes the answer" },
+      { id: 'what-would-move-it', label: "What would change Cigna's negative-growth answer" },
+      { id: 'show-your-work', label: "The math behind -2.8% to -1.0%" },
+      { id: 'fine-print', label: "Limits of the CI number" },
     ],
     sources: 'As of Aug 31, 2026 · Price used: $276.08',
     tags: ['CI', 'ReverseDCF', 'Valuation'],
@@ -15721,7 +15811,7 @@ export const POSTS: Post[] = [
   The required growth rate is negative to roughly flat across every reasonable discount-rate assumption tested (8-12%), while Cigna has actually grown FCF 8.6% a year and revenue 12.1% a year over the past four years. This is one of the more pessimistic market expectations this site has found — the price essentially assumes Cigna's cash flow stops growing, or even shrinks slightly, for a full decade. That gap is worth investigating directly: recent PBM rebate regulation, the FTC settlement, and rising medical cost ratios, all covered in the snapshot and story pieces above, may already be priced in as reasons for skepticism.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">-2.8% to -1.0% needed vs. 8.6% actual free-cash-flow growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:0%;background:var(--accent)"></div></div><span class="val">-2.8%</span></div>
@@ -15731,7 +15821,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical CAGRs from 10-K FY2021 and FY2025 (FCF grew from $6.04B to $8.39B; revenue from $174.1B to $274.9B, both over 4 years).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">How the discount rate changes the answer</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -15746,14 +15836,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Across every discount rate tested, the required growth rate stays at or below the low single digits — nowhere close to Cigna's actual 8.6% FCF pace. This conclusion is unusually insensitive to the discount-rate assumption: no reasonable WACC choice pushes the required rate anywhere near what Cigna has actually delivered.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Cigna's negative-growth answer</h2>
 <ul class="kicker-list">
   <li><b>Using 2025's standalone FCF ($8.39B) instead of trailing-twelve-month FCF ($9.11B) as the base</b> nudges the required growth rate up slightly, from -2.8% to -1.7% at a 9% discount rate — health insurers' first-half cash flow tends to run seasonally weaker due to rising receivables, which the TTM figure smooths out.</li>
   <li><b>Narrowing net debt to only long-term debt (excluding short-term borrowings)</b> would lower net debt further, pushing the required growth rate even lower — implying an even more pessimistic market view.</li>
   <li><b>Lowering the terminal growth rate from 2.5% to 2.0%</b> would modestly raise the required growth rate, since the discounting effect would compound more heavily over the projection period.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind -2.8% to -1.0%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -15772,7 +15862,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 4-yr FCF CAGR (2021→2025) = ($8.39B ÷ $6.04B)^(1/4) − 1 = 8.6%. 4-yr revenue CAGR = ($274.9B ÷ $174.1B)^(1/4) − 1 = 12.1%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the CI number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -15812,21 +15902,23 @@ export const POSTS: Post[] = [
       { q: "What is Mastercard's market cap?", a: "As of this article's data, Mastercard's market cap was about $515.2B, on FY2025 net revenue of $32.79B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Mastercard makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Mastercard runs the network between banks and takes a toll" },
+      { id: 'revenue-mix', label: "Payment Network is 59% of revenue; services grew 23%" },
+      { id: 'customers-competitors', label: "Banks are the customers; the top five are 21% of revenue" },
+      { id: 'core-metric', label: "Gross dollar volume and switched transactions drive revenue" },
+      { id: 'leadership', label: "Miebach: a two-decade insider and CEO since 2021" },
+      { id: 'capital-returns', label: "$17.6B returned in 2025, with the share count down 4.2%" },
+      { id: 'failure-scenario', label: "What breaks Mastercard: interchange caps and payments that bypass cards" },
+      { id: 'financials', label: "Revenue up 74% in four years, with free cash flow up every year" },
+      { id: 'unknowns', label: "Open questions: FY2026 results and the pace of interchange regulation" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['MA', 'Payments', '10-K'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="how-it-makes-money">How Mastercard makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Mastercard earns a toll on every transaction without taking credit risk, which is why operating margins run around 55%. The threats are regulation of that toll and payments that skip the card networks.</div>
+
+<h2 id="how-it-makes-money">Mastercard runs the network between banks and takes a toll</h2>
 <p>Mastercard runs a "four-party" payment network: when a consumer pays with a card, the merchant's bank (the acquirer) asks Mastercard to clear and settle the transaction with the cardholder's bank (the issuer). Mastercard never touches the money as credit or holds consumer risk — it just processes the handoff and charges both banks a network fee for doing so.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Consumer pays with a card</div><div class="d">At a merchant</div></div>
@@ -15837,7 +15929,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Mastercard never issues cards, extends credit, or takes on consumer credit risk — its real customers are banks, not cardholders or merchants. Source: 10-K FY2025, Item 1 Business.</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Payment Network is 59% of revenue; services grew 23%</h2>
 <div class="table-wrap">
   <table>
     <caption>Net revenue by segment — FY2025</caption>
@@ -15854,7 +15946,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>More than half of revenue comes from outside the U.S.</b>With 57% of revenue from abroad, Mastercard is directly exposed to currency swings and to country-specific regulation — especially interchange-fee caps, which several major markets already impose or are actively considering.</div>
 <p class="src-note">Source: 10-K FY2025, Note 3; U.S.-specific figure, p.110.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">Banks are the customers; the top five are 21% of revenue</h2>
 <p>Mastercard sells B2B — banks, not consumers or merchants, are the actual paying customers. In FY2025, the top 5 customers combined made up 21% of net revenue ($6.9B), with no single customer above 10%.</p>
 <ul class="kicker-list">
   <li><b>Visa</b> — the largest direct competitor running the same four-party network model, and the #1 player globally by gross dollar volume.</li>
@@ -15863,7 +15955,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.56 (customer concentration); competitive discussion throughout Item 1.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Gross dollar volume and switched transactions drive revenue</h2>
 <p>Because Mastercard never handles cards or credit directly, its two real growth engines are Gross Dollar Volume (GDV, the total value of transactions flowing across its network) and the number of transactions it switches. When these slow, revenue growth slows right alongside them.</p>
 <div class="table-wrap">
   <table>
@@ -15878,16 +15970,16 @@ export const POSTS: Post[] = [
 <p>Cross-border transaction volume grew 18% (local currency) in 2025, roughly double overall GDV growth (9%) — and since cross-border transactions carry higher fee rates than domestic ones, this mix shift has been a genuine tailwind for margins, not just volume.</p>
 <p class="src-note">Source: 10-K FY2023, FY2024, and FY2025, "Our Performance" sections.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Miebach: a two-decade insider and CEO since 2021</h2>
 <p>CEO Michael Miebach (58) has led Mastercard since January 2021, following nearly two decades inside the company — Chief Product Officer from 2016 and head of the Middle East/Africa region from 2010. He is not a founder; Mastercard began as a bank consortium and went public in 2006. Combined insider ownership across directors and executives is under 1%; the largest shareholders are index funds Vanguard (8.6%) and BlackRock (7.7%).</p>
 <p class="src-note">Source: DEF 14A 2026, p.33, p.111.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">$17.6B returned in 2025, with the share count down 4.2%</h2>
 <p>Mastercard paid a dividend of $3.04/share in 2025 (up from $2.64, a 15% raise), for $2.8B in total dividend payments. It repurchased $14.5B of stock in 2025 alone — combined, dividends and buybacks returned $17.6B to shareholders that year.</p>
 <div class="callout good"><b>Buybacks that actually shrank the share count</b>Diluted weighted-average shares outstanding fell from 946 million (2023) to 906 million (2025) — a real 4.2% reduction over three years, meaning repurchases have outpaced new shares issued through employee compensation, not just offset them.</div>
 <p class="src-note">Source: 10-K FY2025, p.6, p.49, p.60.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Mastercard: interchange caps and payments that bypass cards</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If governments worldwide impose hard caps on interchange fees, or banks and merchants shift en masse to account-to-account real-time payments that bypass card networks entirely, the per-transaction toll that is Mastercard's core business could be cut off at the root.
@@ -15899,7 +15991,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors, p.29-31.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 74% in four years, with free cash flow up every year</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions</caption>
@@ -15916,7 +16008,7 @@ export const POSTS: Post[] = [
 <div class="callout good"><b>Clean earnings quality</b>Operating income and free cash flow have risen together every year — no "profit up, cash down" warning signs. Net debt against EBITDA runs at roughly 0.4x in 2025, a low leverage level for a company this size.</div>
 <p class="src-note">FCF = operating cash flow minus (capex plus capitalized software). Source: 10-K FY2023, p.49 (2021-2023); 10-K FY2025, p.49, p.69, p.71 (2024-2025).</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: FY2026 results and the pace of interchange regulation</h2>
 <ul class="kicker-list">
   <li><b>How FY2026 results have tracked since the most recent quarter reviewed here</b> isn't known from this data alone — later earnings calls would need to be checked.</li>
   <li><b>Exactly when, and by how much, U.S. and EU interchange regulation will cut fee rates</b> isn't quantifiable from the risk-factor language alone — this requires ongoing regulatory tracking.</li>
@@ -15945,17 +16037,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Mastercard's 10-K filings for FY2021 through FY2025 and 12 quarters of earnings call transcripts from Q3 FY2023 through Q2 FY2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A tariff scare that faded fast, then a slow cool-down and a CFO exit" },
+      { id: 'guidance-record', label: "Mastercard's revenue guidance vs. results" },
+      { id: 'timeline', label: "Timeline for Mastercard: Q3 2023 to Q2 2026" },
+      { id: 'our-read', label: "Shocks fade fast, but the easy beats have stopped" },
+      { id: 'unknowns', label: "What Mastercard's calls still don't answer" },
     ],
     sources: '10-K FY2021–FY2025 · 12 quarters of earnings call transcripts, Q3 FY2023–Q2 FY2026',
     tags: ['MA', 'Earnings Calls', 'Payments'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A tariff scare that faded fast, then a slow cool-down and a CFO exit</h2>
 <h3>Late 2023 into 2024: confident, then accelerating</h3>
 <p>On the Q3 FY2023 call, despite the Israel-Hamas war breaking out that quarter, management stressed "strong fundamentals, a diversified model, and resilient consumer spending," with net revenue up 11% on a constant-currency basis. That pace only accelerated through 2024 — from +11% in Q1 to +16% by Q4 — and by the Q3 call, management was confident enough to joke that there was "nothing spooky here" about Halloween-quarter conditions. That same period, the company announced acquisitions of Recorded Future (cyber threat intelligence) and Minna Technologies (subscription management), pushing further into value-added services beyond the core network business.</p>
 
@@ -15973,7 +16065,7 @@ export const POSTS: Post[] = [
   The throughline across these three years is that shocks hit Mastercard and fade fast — pandemic normalization, inflation, the early-2025 tariff scare, none knocked results off track for more than a quarter or two. What's different now is that the pattern of comfortably beating guidance has, for the first time, shifted to landing just under it, at exactly the moment the CFO is changing seats. That overlap could be coincidence, but it's worth confirming against the next two or three quarters before assuming it's nothing.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Mastercard's revenue guidance vs. results</h2>
 <div class="table-wrap">
   <table>
     <caption>Annual net-revenue guidance vs. actual results, FY2025–FY2026</caption>
@@ -15987,7 +16079,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Source: Q1, Q2, and Q4 FY2025 and Q1-Q2 FY2026 earnings calls (CFO Sachin Mehra's guidance language); 10-K FY2025, p.49.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline for Mastercard: Q3 2023 to Q2 2026</h2>
 <ul class="timeline">
   <li><span class="date">Q3 2023</span>Israel-Hamas war acknowledged; "strong fundamentals" emphasized; revenue +11% (CC).</li>
   <li><span class="date">Q3 2024</span>Recorded Future and Minna Technologies acquisitions announced; "nothing spooky here" on the Halloween-quarter call.</li>
@@ -15998,10 +16090,10 @@ export const POSTS: Post[] = [
   <li class="crisis"><span class="date">Q2 2026</span>CFO Sachin Mehra moves to Chief Business Officer; Ling Hai named new CFO.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Shocks fade fast, but the easy beats have stopped</h2>
 <p>Mastercard's last three years show a company that has absorbed every shock thrown at it — a war, inflation, a tariff scare — without losing more than a quarter of momentum each time. The genuinely new development is the shape of the last two quarters: growth landing just below, rather than comfortably above, its own guidance, coinciding with the first CFO change in nearly eight years. Neither fact alone is alarming, but together they're the clearest signal yet that this three-year run of easy beats may be entering a different phase — one that the next two or three quarters, not this filing history, will settle.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Mastercard's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether the FY2026 growth slowdown is temporary or the start of a trend</b> can't be determined from just two quarters — whether guidance actually gets cut in the H2 2026 calls will be the real test.</li>
   <li><b>Whether the CFO transition changes financial policy</b> (buyback pace, debt use) isn't clear from the transcripts reviewed — Ling Hai was introduced for her regional (APAC/EMEA) results, not a specific finance mandate.</li>
@@ -16030,11 +16122,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $588.14, as of the Sept 2, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "12.3% needed vs. 17.4% five-year free-cash-flow growth and about 12% recent revenue growth" },
+      { id: 'sensitivity', label: "From 7.1% to 18.6%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Mastercard's 12.3%" },
+      { id: 'show-your-work', label: "The math behind 12.3%" },
+      { id: 'fine-print', label: "Limits of the MA number" },
     ],
     sources: 'As of Sept 2, 2026 · Price used: $588.14',
     tags: ['MA', 'ReverseDCF', 'Valuation'],
@@ -16051,7 +16143,7 @@ export const POSTS: Post[] = [
   The required growth rate (12.3%) sits comfortably below Mastercard's 5-year FCF CAGR (17.4%) and 5-year revenue CAGR (14.8%) — on that basis alone, this would look like a mild ask. But the two most recent quarters' constant-currency revenue growth (~12%) landed almost exactly at the market's required rate, right as growth has visibly decelerated from the mid-teens. Whether today's price is a bargain or simply a fair reflection of a genuinely slower Mastercard depends entirely on which version of the company — the five-year Mastercard or the two-quarter Mastercard — turns out to be the real one.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">12.3% needed vs. 17.4% five-year free-cash-flow growth and about 12% recent revenue growth</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:70%;background:var(--accent)"></div></div><span class="val">12.3%</span></div>
@@ -16063,7 +16155,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical figures from 10-K FY2021-FY2025 and Q1-Q2 FY2026 earnings calls.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 7.1% to 18.6%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -16080,14 +16172,14 @@ export const POSTS: Post[] = [
 </div>
 <p>At the lower end tested (7-8%), the required growth rate sits well below even the recent slower pace, making today's price look reasonably conservative. Push the discount rate up to 11-12%, and the required rate meets or exceeds the full 5-year FCF CAGR (17.4%) — a single assumption swings the read from "cheap" to "expensive."</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Mastercard's 12.3%</h2>
 <ul class="kicker-list">
   <li><b>Using FY2025's full-year FCF ($16.4B) instead of the trailing-twelve-month figure used here ($15,975M)</b> lowers the required growth rate slightly, from 12.3% to 11.9%.</li>
   <li><b>Lowering the terminal growth rate from 2.5% to 2.0%</b> raises the required rate to 13.0%; raising it to 3.0% lowers it to 11.6%.</li>
   <li><b>The single biggest lever is the discount rate itself</b> — see the sensitivity table above, where a WACC anywhere from 7% to 12% moves the required growth rate by more than 11 percentage points.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 12.3%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -16104,7 +16196,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR (2021→2025) = 17.4%. 3-yr FCF CAGR (2022→2025) = 17.6%. 5-yr revenue CAGR (2021→2025) = 14.8%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the MA number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -16144,21 +16236,23 @@ export const POSTS: Post[] = [
       { q: "What is Bank of America's market cap?", a: "As of this article's data, Bank of America's market cap was about $437.8B, on FY2025 revenue of $113.1B." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Bank of America makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Bank of America lends out deposits and earns fees on the side" },
+      { id: 'revenue-mix', label: "Consumer Banking is 38.6% of revenue at a 28.0% net margin" },
+      { id: 'customers-competitors', label: "69 million customers and $4.8 trillion for the wealthy" },
+      { id: 'core-metric', label: "Net interest margin is the core lending gauge" },
+      { id: 'leadership', label: "Moynihan: 16 years as CEO, and not a founder" },
+      { id: 'capital-returns', label: "$21.4B of buybacks and a fifth straight dividend raise" },
+      { id: 'failure-scenario', label: "What breaks Bank of America: a freeze in repayments plus collapsing rates" },
+      { id: 'financials', label: "Revenue up 27% in four years" },
+      { id: 'unknowns', label: "Open questions: trading volatility and more" },
     ],
     sources: '10-K FY2021–FY2025 · DEF 14A 2026',
     tags: ['BAC', 'Banking', '10-K'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="how-it-makes-money">How Bank of America makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Bank of America's earnings have recovered strongly, with net income up 13.1% in 2025, and the price asks for little growth. The risk is a credit downturn combined with falling rates squeezing the lending spread.</div>
+
+<h2 id="how-it-makes-money">Bank of America lends out deposits and earns fees on the side</h2>
 <p>Bank of America takes in deposits from roughly 69 million consumer and small-business accounts, then lends much of that money back out — to households, businesses, and governments — while also managing money for wealthy clients and executing trades and deals for large institutions.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">Depositors & investors</div><div class="d">69M consumer/small-business accounts</div></div>
@@ -16169,7 +16263,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Net interest margin plus fee income together fund dividends and buybacks. Source: 10-K FY2025, p.2 (business segment overview), p.36 (segment overview).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Consumer Banking is 38.6% of revenue at a 28.0% net margin</h2>
 <div class="table-wrap">
   <table>
     <caption>Revenue and net income by segment — FY2025</caption>
@@ -16189,7 +16283,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Low international exposure cuts both ways</b>With 86% of revenue from the U.S., Bank of America has limited currency risk — but that also means its results are tightly tied to the health of the U.S. economy and Federal Reserve policy, with no geographic diversification to soften a domestic downturn.</div>
 <p class="src-note">Source: 10-K FY2025, p.101 (geographic revenue).</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">69 million customers and $4.8 trillion for the wealthy</h2>
 <p>Bank of America serves roughly 69 million consumer and small-business customers (through about 3,600 financial centers and 15,000 ATMs), manages $4.8 trillion in assets for wealthy individuals through GWIM, and serves large corporations, institutions, and governments through Global Banking and Global Markets. No single-customer concentration risk is disclosed.</p>
 <ul class="kicker-list">
   <li><b>JPMorgan Chase</b> — the largest U.S. bank by assets and the traditional top rival, with a larger and more diversified business than Bank of America's.</li>
@@ -16198,7 +16292,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.2.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Net interest margin is the core lending gauge</h2>
 <p>Net interest margin (NIM) — the spread between what the bank pays depositors and what it earns from borrowers — is the most fundamental gauge of whether the core lending business is working. It reflects both the interest-rate environment and how well the bank manages its assets and liabilities.</p>
 <div class="table-wrap">
   <table>
@@ -16212,16 +16306,16 @@ export const POSTS: Post[] = [
 <p>The efficiency ratio (costs as a share of revenue) also improved steadily, from 67.0% in 2021 to 61.7% in 2025 — a sign of consistent cost discipline running alongside the margin recovery.</p>
 <p class="src-note">Source: 10-K FY2021, FY2023, and FY2025, MD&A Net Interest Income sections; 10-K FY2025, Table 1, p.27.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">Moynihan: 16 years as CEO, and not a founder</h2>
 <p>CEO Brian T. Moynihan has led Bank of America since January 2010 (16 years), adding the Chairman role in October 2014. He is not a founder — Bank of America is a 100-plus-year-old institution formed through numerous mergers. Combined ownership across all 25 directors and executives is about 0.27%, very low. The largest shareholders are Vanguard (9.1%), Berkshire Hathaway (7.9%), and BlackRock (6.9%).</p>
 <p class="src-note">Source: DEF 14A 2026, p.1, p.35-37.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">$21.4B of buybacks and a fifth straight dividend raise</h2>
 <p>Bank of America yields about 2.05% at the current price. It paid $1.08/share in dividends in 2025, the fifth consecutive year of increases (up from $0.78/share in 2021), a payout ratio around 28% of net income; the board raised the quarterly dividend to $0.28 in February 2026.</p>
 <div class="callout good"><b>A large, actively used buyback program</b>Bank of America repurchased $21.4B of stock in 2025 alone, and its board approved a new $40B buyback authorization in July 2025. Shares outstanding have declined steadily over five years, offsetting dilution from employee stock compensation.</div>
 <p class="src-note">Source: 10-K FY2025, p.24, p.49.</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Bank of America: a freeze in repayments plus collapsing rates</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If the U.S. economy suddenly freezes and both consumers and businesses stop repaying debt en masse, while interest rates simultaneously plunge and compress the lending spread, both of Bank of America's main profit engines — net interest income and credit quality — could stall at the same time.
@@ -16233,7 +16327,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, Item 1A Risk Factors, p.8-9, p.11-12, p.14-15.</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Revenue up 27% in four years</h2>
 <div class="table-wrap">
   <table>
     <caption>$ millions</caption>
@@ -16251,7 +16345,7 @@ export const POSTS: Post[] = [
 <div class="callout warn"><b>Bank cash flow doesn't read like a normal company's</b>Operating cash flow swings wildly year to year — it actually went negative in 2022 — because trading-asset and trading-liability positions dominate the reported number, not underlying earnings power. The CET1 regulatory capital ratio (11.4% in 2025, above the regulatory minimum) is a more meaningful solvency check for a bank than cash flow trends.</p>
 <p class="src-note">Source: 10-K FY2025 Table 1, p.27; 10-K FY2023 Table 1, p.26; 10-K FY2021 Table 1, p.28; each year's cash flow statement.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: trading volatility and more</h2>
 <ul class="kicker-list">
   <li><b>How volatile the Global Markets (trading) segment has been in recent quarters</b> isn't visible from annual data alone — recent earnings calls would need to be checked.</li>
   <li><b>Exactly how much commercial real estate (especially office) loan stress remains</b> requires digging into the Note 4 credit-quality detail beyond what's summarized here.</li>
@@ -16280,17 +16374,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from Bank of America's 10-K filings for FY2021, FY2023, FY2024, and FY2025, and 8 quarters of earnings call transcripts from Q3 FY2024 through Q2 FY2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "A modest promise delivered early, then exceeded by nearly three times" },
+      { id: 'guidance-record', label: "Operating-leverage target vs. actual: about 200 bp promised, 560 bp delivered" },
+      { id: 'timeline', label: "Timeline: October 2024 to July 2026" },
+      { id: 'our-read', label: "Quiet and fast: the target itself was raised twice" },
+      { id: 'unknowns', label: "What Bank of America's calls still don't answer" },
     ],
     sources: '10-K FY2021, FY2023–FY2025 · 8 quarters of earnings call transcripts, Q3 FY2024–Q2 FY2026',
     tags: ['BAC', 'Earnings Calls', 'Banking'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">A modest promise delivered early, then exceeded by nearly three times</h2>
 <h3>Two years ago: a cautious promise</h3>
 <p>On the Q3 FY2024 call (October 2024), CEO Brian Moynihan noted that net interest income had bottomed in Q2 2024 exactly as predicted, and said the bank expected to "return to operating leverage as we move through the quarters of 2025" — a modest target built on roughly 4-5% revenue growth against 2-3% expense growth, working out to about 200 basis points of operating leverage. Confident, but not yet proven.</p>
 
@@ -16308,7 +16402,7 @@ export const POSTS: Post[] = [
   This is a textbook case of "underpromise, overdeliver," repeated at least four times running across two years. The 2025 tariff scare barely dented actual results — a sign the consumer and commercial loan books have so far proven genuinely resilient to macro shocks. Whether this same pattern holds if a real downturn eventually hits, or whether the second half of 2026 finally brings a miss, is the open question the next few quarters will answer.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Operating-leverage target vs. actual: about 200 bp promised, 560 bp delivered</h2>
 <div class="table-wrap">
   <table>
     <caption>Operating-leverage guidance vs. actual results, FY2025–FY2026</caption>
@@ -16324,7 +16418,7 @@ export const POSTS: Post[] = [
 <p><strong>4 for 4 — every cycle tracked here was met or exceeded</strong>, and the pattern of guiding conservatively then beating held across all 8 quarters reviewed.</p>
 <p class="src-note">Source: Q3 FY2024, Q1 FY2025, Q4 FY2025, and Q1-Q2 FY2026 earnings call transcripts (CEO/CFO guidance language).</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: October 2024 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">Oct 2024</span>Q3 FY2024 call: first promises "operating leverage returns during 2025," ~200bp target.</li>
   <li><span class="date">Jan 2025</span>Q4 FY2024 call: already delivers 330bp, ahead of schedule.</li>
@@ -16335,10 +16429,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 2026</span>Q2 FY2026 call: H1 hits 660bp; full-year guidance raised to 300-400bp.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Quiet and fast: the target itself was raised twice</h2>
 <p>Bank of America's last two years trace a consistent "guide low, beat big" pattern that survived a genuine, if brief, tariff-driven scare without denting actual results. The bank reset its own target conservatively at the start of 2026, then raised that same target mid-year once results came in well ahead — the fourth time in eight tracked quarters this exact shape has repeated. That consistency is reassuring, but it also means the initial guidance itself carries limited information value; the real signal is in how quickly and by how much the beats keep arriving.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Bank of America's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Whether this "guide low, beat big" pattern continues into the second half of 2026, or a genuine miss finally shows up</b>, isn't knowable from this data alone — the next two quarters would need to be checked.</li>
   <li><b>The exact remaining scale of commercial real estate (office) loan losses</b> isn't disclosed here — Note 4 credit-quality detail would need deeper review.</li>
@@ -16367,18 +16461,18 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $62.60, as of the Sept 2, 2026 close.' },
     ],
     toc: [
-      { id: 'bank-adaptation', label: 'Why this model looks different for a bank' },
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'bank-adaptation', label: "Why Bank of America's model uses net income" },
+      { id: 'required-vs-historical', label: "1.2% needed vs. 13.1% net-income growth in 2025, though the five-year rate is -1.2%" },
+      { id: 'sensitivity', label: "From -3.2% to 6.7%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Bank of America's 1.2%" },
+      { id: 'show-your-work', label: "The math behind 1.2%" },
+      { id: 'fine-print', label: "Limits of the BAC number" },
     ],
     sources: 'As of Sept 2, 2026 · Price used: $62.60',
     tags: ['BAC', 'ReverseDCF', 'Valuation'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="bank-adaptation">Why this model looks different for a bank</h2>
+<h2 id="bank-adaptation">Why Bank of America's model uses net income</h2>
 <div class="callout warn">
   <b>Bank-model adjustment</b>
   A standard reverse DCF leans on "free cash flow" and "net debt" — concepts that don't translate cleanly to a bank, where deposits are the raw material for lending, not a debt to be subtracted, and where reported operating cash flow swings wildly with trading-asset positions (Bank of America's actually went negative in 2022). This card substitutes <b>net income</b> as the cash-flow proxy and skips the net-debt subtraction entirely — closer to a dividend-discount-style model. Every input and the full calculation are in the collapsible section below.
@@ -16395,7 +16489,7 @@ export const POSTS: Post[] = [
   The required growth rate (1.2%) is barely positive, and even the bank's flat 5-year net-income CAGR (-1.2%, still weighed down by the 2022-2023 credit-cycle dip) technically falls short of it on paper. But that comparison undersells the more relevant recent trend: net income grew 13.1% in 2025 alone, and the operating-leverage story covered in the piece above shows profitability accelerating, not stalling. On the metric that actually matters here, Bank of America's current trajectory clears the market's modest ask many times over — the real question is how much of 2025's acceleration is durable versus cyclical.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">1.2% needed vs. 13.1% net-income growth in 2025, though the five-year rate is -1.2%</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 9%)</span><div class="track"><div class="fill" style="width:9%;background:var(--accent)"></div></div><span class="val">1.2%</span></div>
@@ -16406,7 +16500,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical figures from 10-K FY2021 (net income $31,978M) and 10-K FY2025 (net income $30,509M; revenue $89,113M → $113,097M).</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From -3.2% to 6.7%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year net-income growth by discount rate (WACC)</caption>
@@ -16423,14 +16517,14 @@ export const POSTS: Post[] = [
 </div>
 <p>Even at the high end tested (12%), the required rate (6.7%) is close to the 5-year revenue CAGR (6.1%) and nowhere near the growth Bank of America actually posted in its most recent year alone (13.1%). Across the whole range tested, this conclusion doesn't flip.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Bank of America's 1.2%</h2>
 <ul class="kicker-list">
   <li><b>Using the 3-year average net income ($28.0B) instead of FY2025's figure ($30.5B) as the base</b> raises the required growth rate to 2.4% at a 9% discount rate — still modest.</li>
   <li><b>The -1.2% five-year net-income CAGR is a misleading historical anchor on its own</b> — it's pulled down entirely by the 2022-2023 dip (Fed-driven margin compression and higher credit costs). Net income has grown every year since 2023, including +13.1% in 2025 alone.</li>
   <li><b>A higher discount rate (11-12%, arguably reasonable given commercial real-estate credit-cycle risk)</b> pushes the required rate to 5.0-6.7% — still below what Bank of America delivered last year alone.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 1.2%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -16446,7 +16540,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr net-income CAGR (2021→2025) = ($30,509M ÷ $31,978M)^(1/4) − 1 = -1.2%. 5-yr revenue CAGR = ($113,097M ÷ $89,113M)^(1/4) − 1 = 6.1%. Most recent year's net-income growth (2024→2025) = +13.1%.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the BAC number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -16717,7 +16811,7 @@ export const POSTS: Post[] = [
       { id: 'sensitivity', label: "From 7% to 16%: how the discount rate moves the answer" },
       { id: 'what-would-move-it', label: "Why the cash-flow baseline is the biggest judgment call" },
       { id: 'show-your-work', label: "The math behind 11.7%" },
-      { id: 'fine-print', label: "Limits of this number" },
+      { id: 'fine-print', label: "Limits of this number (EQT)" },
     ],
     sources: 'As of Sept 11, 2026 · Price used: $53.01',
     tags: ['EQT', 'ReverseDCF', 'Valuation'],
@@ -16786,7 +16880,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR (2021→2025, includes acquisitions) = 47.0%. 5-yr revenue CAGR (2021→2025, includes acquisitions) = 29.6%. 5-yr organic production-volume CAGR (2021→2025, excludes acquisition effects) = 6.4%.</p>
 </details>
 
-<h2 id="fine-print">Limits of this number</h2>
+<h2 id="fine-print">Limits of this number (EQT)</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -16826,21 +16920,23 @@ export const POSTS: Post[] = [
       { q: 'Why is Expand Energy currently without a permanent CEO?', a: "On February 6, 2026, the board fired CEO Domenic Dell'Osso 'without cause' with no public explanation and no successor named. Board chair Michael Wichterich has served as interim President & CEO since, with an external search underway (six months in, as of the Q2 2026 earnings call)." },
     ],
     toc: [
-      { id: 'how-it-makes-money', label: 'How Expand Energy makes money' },
-      { id: 'revenue-mix', label: 'Where the revenue comes from' },
-      { id: 'customers-competitors', label: 'Customers and competitors' },
-      { id: 'core-metric', label: 'The metric that matters most' },
-      { id: 'leadership', label: 'Leadership and ownership' },
-      { id: 'capital-returns', label: 'Capital returns' },
-      { id: 'failure-scenario', label: 'How this company could fail' },
-      { id: 'financials', label: 'Five-year financials' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'how-it-makes-money', label: "Expand Energy drills gas in the Haynesville and Appalachia" },
+      { id: 'revenue-mix', label: "Haynesville is 41% of revenue, Northeast Appalachia 34%" },
+      { id: 'customers-competitors', label: "One customer was 11% of revenue in 2025" },
+      { id: 'core-metric', label: "Daily production doubled through a merger, not drilling" },
+      { id: 'leadership', label: "No permanent CEO since February 2026" },
+      { id: 'capital-returns', label: "$865M returned in 2025, then $850M of buybacks in one stretch" },
+      { id: 'failure-scenario', label: "What breaks Expand Energy: low gas prices and a long CEO vacancy" },
+      { id: 'financials', label: "Two years of net income include one-time items" },
+      { id: 'unknowns', label: "Open questions: the next CEO and the Twin Eagle targets" },
     ],
     sources: '10-K FY2021, FY2023–FY2025 · DEF 14A 2026 · Q2 FY2026 earnings call',
     tags: ['EXE', 'Energy', '10-K'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="how-it-makes-money">How Expand Energy makes money</h2>
+<div class="callout warn"><b>Our take, in one line</b>Expand Energy nearly doubled in size through the Southwestern merger, but the board fired its CEO without explanation in February 2026 and has not named a successor. Big decisions are being made by interim leadership.</div>
+
+<h2 id="how-it-makes-money">Expand Energy drills gas in the Haynesville and Appalachia</h2>
 <p>Expand Energy drills natural gas wells across the Haynesville and Appalachian basins, moves the gas through contracted pipeline capacity, and sells it to whoever is downstream — utilities, power plants, industrial buyers, and gas marketers. A 2026 acquisition of marketing firm Twin Eagle added a layer that captures extra margin by timing storage and transport around price swings, rather than just selling gas at the wellhead.</p>
 <div class="flow">
   <div class="flow-box"><div class="t">~6,600 wells</div><div class="d">Haynesville & Appalachian basins — drilling & production</div></div>
@@ -16851,7 +16947,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Revenue of $12.1B (FY2025) funds roughly $2.7B in annual reinvestment capex plus $865M in dividends and buybacks. Source: 10-K FY2025, p.12, p.19, p.57; Q2 FY2026 earnings call (Twin Eagle acquisition).</p>
 
-<h2 id="revenue-mix">Where the revenue comes from</h2>
+<h2 id="revenue-mix">Haynesville is 41% of revenue, Northeast Appalachia 34%</h2>
 <p>Expand Energy reports as a single "exploration and production" segment, but its results break out across three operating areas:</p>
 <div class="table-wrap">
   <table>
@@ -16868,7 +16964,7 @@ export const POSTS: Post[] = [
 <p>Geographically, 100% of revenue is U.S.-based — there's no foreign-currency exposure, but the flip side is full exposure to a single benchmark: the U.S. Henry Hub natural gas price. Realized price (including derivatives) was $3.30/Mcfe in 2025, up from $2.84/Mcfe in 2024.</p>
 <p class="src-note">Source: 10-K FY2025, p.28, p.62.</p>
 
-<h2 id="customers-competitors">Customers and competitors</h2>
+<h2 id="customers-competitors">One customer was 11% of revenue in 2025</h2>
 <p>Expand Energy sells B2B to pipeline operators, utilities, power generators, and industrial buyers. In FY2025, one customer accounted for 11% of revenue — the only buyer over the 10% concentration threshold that year (none exceeded 10% in 2024; two did in 2023, at 17% and 10%).</p>
 <ul class="kicker-list">
   <li><b>EQT Corporation</b> — the largest Appalachian rival, also vertically integrating into marketing and pipelines.</li>
@@ -16877,7 +16973,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.19 (customer concentration); competitor identification is general industry knowledge, not company-disclosed.</p>
 
-<h2 id="core-metric">The metric that matters most in this sector</h2>
+<h2 id="core-metric">Daily production doubled through a merger, not drilling</h2>
 <p>As a commodity producer, Expand Energy's results hinge on two separate numbers: how much gas it produces per day (Bcfe/d) and what it's paid per unit ($/Mcfe). Production growth shows the business expanding; price shows how much of any given year came down to the gas market rather than company execution.</p>
 <div class="table-wrap">
   <table>
@@ -16892,17 +16988,17 @@ export const POSTS: Post[] = [
 <p>The jump in 2025 production wasn't organic growth — it reflects the Southwestern Energy merger, which closed October 1, 2024, roughly doubling the company's scale. On a same-store basis, production has been closer to flat than growing.</p>
 <p class="src-note">Source: 10-K FY2023, p.64; 10-K FY2025, p.62.</p>
 
-<h2 id="leadership">Leadership and ownership</h2>
+<h2 id="leadership">No permanent CEO since February 2026</h2>
 <p>Expand Energy currently has no permanent CEO. On February 6, 2026, the board fired Domenic Dell'Osso — who had led the company (as Chesapeake, then Expand Energy) since October 2021 — "without cause," with no explanation given in any public filing. Board chair Michael Wichterich has served as interim President & CEO since, with an external search underway (six months in, as of the July 2026 earnings call, targeting 6-9 months total). The CFO seat also turned over recently: Mohit Singh departed in August 2025, Brittany Raiford served as interim CFO, and Marcel Teunissen was named permanent CFO in April 2026. No individual insider holds more than 1% of shares; the largest holders are institutional — Capital Research Global Investors (8.86%), BlackRock (7.33%), and State Street (5.12%).</p>
 <div class="callout bad"><b>Two C-suite seats changed hands within eight months</b>A CEO fired without public explanation, plus a CFO transition through an interim, both inside the same year — this is an unusually unsettled leadership picture for a company simultaneously pursuing a large acquisition and an aggressive buyback program.</div>
 <p class="src-note">Source: DEF 14A 2026, p.36, p.46, p.66-67; Q2 FY2026 earnings call.</p>
 
-<h2 id="capital-returns">Capital returns</h2>
+<h2 id="capital-returns">$865M returned in 2025, then $850M of buybacks in one stretch</h2>
 <p>Expand Energy paid $765M in dividends in 2025 (quarterly base dividend raised to $0.575/share as of a February 2026 announcement) plus $100M (0.9M shares) in buybacks that year — $865M returned to shareholders in total. The pattern shifted sharply in 2026: after gas prices spiked in Q1 2026 and cash piled up, the company used $1.3B of it to pay down debt early, then in Q2 2026 bought back $850M of stock (about 4% of shares outstanding) in a single stretch, judging the shares undervalued, and had the board approve an additional $1B buyback authorization on top of that.</p>
 <div class="callout warn"><b>Capital returns are opportunistic, not steady</b>Rather than a fixed payout policy, management is swinging hard between debt paydown and large, concentrated buybacks depending on where gas prices leave the cash balance that quarter — a style that can look smart in hindsight or reckless, depending on how gas prices move next.</div>
 <p class="src-note">Source: 10-K FY2025, p.57; Q2 FY2026 earnings call (Wichterich's remarks).</p>
 
-<h2 id="failure-scenario">How this company could fail</h2>
+<h2 id="failure-scenario">What breaks Expand Energy: low gas prices and a long CEO vacancy</h2>
 <div class="callout bad">
   <b>Failure scenario</b>
   If U.S. natural gas prices stay depressed for an extended stretch at the same time the CEO vacancy drags on long enough to disrupt execution of the marketing and commercialization strategy, both revenue and market confidence could unravel together.
@@ -16914,7 +17010,7 @@ export const POSTS: Post[] = [
 </ul>
 <p class="src-note">Source: 10-K FY2025, p.28-30 (Risk Factors).</p>
 
-<h2 id="financials">Five-year financials</h2>
+<h2 id="financials">Two years of net income include one-time items</h2>
 <div class="callout warn"><b>Two years of net income include one-time items</b>2021 net income includes a $5.57B one-time gain from Chapter 11 bankruptcy emergence accounting; 2022 net income includes a $1.29B one-time tax benefit. Neither year's net income reflects ongoing earnings power.</div>
 <div class="table-wrap">
   <table>
@@ -16932,7 +17028,7 @@ export const POSTS: Post[] = [
 <p class="src-note">† 2021 combines pre- and post-bankruptcy-emergence (Feb 9, 2021) results. ‡ 2024 includes Southwestern Energy results only from the Oct 1, 2024 merger date forward. FCF = operating cash flow minus capex. Source: 10-K FY2025, p.74-75, p.88; 10-K FY2023, p.61, p.85-86; 10-K FY2021, p.80.</p>
 <div class="callout good"><b>2024 was the trough, and cash barely held on</b>Despite an operating loss and negative net income in 2024, FCF stayed just barely positive ($8M) — a company running through the worst of a gas-price crash plus merger integration costs at the same time. 2025's FCF rebound to $1.84B reflects both a gas-price recovery and merger synergies materializing.</div>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">Open questions: the next CEO and the Twin Eagle targets</h2>
 <ul class="kicker-list">
   <li><b>Who becomes the permanent CEO, and when</b> isn't known from these filings — the search was six months in as of the July 2026 call, and a new CEO could revisit the interim leadership's Twin Eagle strategy or dividend policy.</li>
   <li><b>Whether the Twin Eagle acquisition hits its stated EBITDA targets ($200M in year one, $350M within two years)</b> can only be confirmed by results from the second half of 2026 onward.</li>
@@ -16961,17 +17057,17 @@ export const POSTS: Post[] = [
       { q: 'What sources does this analysis draw from?', a: "This piece is built from 10-K filings for FY2021, FY2023 through FY2025, and 8 quarters of Expand Energy's own earnings call transcripts, Q3 FY2024 (the company's first call under that name) through Q2 FY2026." },
     ],
     toc: [
-      { id: 'the-story', label: 'The story' },
-      { id: 'guidance-record', label: 'Guidance scorecard' },
-      { id: 'timeline', label: 'Timeline' },
-      { id: 'our-read', label: 'Our read' },
-      { id: 'unknowns', label: "What we still don't know" },
+      { id: 'the-story', label: "From a quiet recovery to an unexplained CEO firing" },
+      { id: 'guidance-record', label: "Every numeric target beat, one people promise still open" },
+      { id: 'timeline', label: "Timeline: 2023 to July 2026" },
+      { id: 'our-read', label: "Strong execution, unresolved governance" },
+      { id: 'unknowns', label: "What Expand Energy's calls still don't answer" },
     ],
     sources: '10-K FY2021, FY2023–FY2025 · 8 quarters of earnings call transcripts, Q3 FY2024–Q2 FY2026',
     tags: ['EXE', 'Earnings Calls', 'Energy'],
     publishedAt: '2026-09-19',
     contentHtml: `
-<h2 id="the-story">The story</h2>
+<h2 id="the-story">From a quiet recovery to an unexplained CEO firing</h2>
 <h3>2021-2023: quiet recovery, no fanfare</h3>
 <p>Having just emerged from Chapter 11 bankruptcy in February 2021, Chesapeake Energy's priority for the next two-plus years wasn't growth — it was survival and balance-sheet repair. In 2023, the company sold its entire Eagle Ford asset base for $2.5B in cash, using the proceeds to cut debt from $3.1B (2022) to $2.0B (2023), a 34% reduction. The company didn't even hold dedicated earnings calls through much of this period, communicating mainly through its 10-K filings — a cautious, low-visibility stretch.</p>
 
@@ -16989,7 +17085,7 @@ export const POSTS: Post[] = [
   The real risk here isn't the gas market — it's accountability. Interim leadership is currently pushing through two large, consequential decisions (the Twin Eagle acquisition and an aggressive buyback) at once, and if the eventual permanent CEO disagrees with that direction, the strategy could reverse. The fact that Dell'Osso's firing reason was never disclosed — described in filings only as "for any reason" — adds to the uncertainty rather than resolving it.
 </div>
 
-<h2 id="guidance-record">Guidance scorecard</h2>
+<h2 id="guidance-record">Every numeric target beat, one people promise still open</h2>
 <div class="table-wrap">
   <table>
     <caption>Guidance vs. actual results, FY2024–FY2026</caption>
@@ -17006,7 +17102,7 @@ export const POSTS: Post[] = [
 </div>
 <p class="src-note">Pattern: every quantitative target (synergies, production, debt) was met or exceeded, and each time, management raised the bar again — a "guide conservative, beat decisively" pattern. The one promise involving a person, not a number — naming a permanent CEO — remains unresolved. Source: Q3-Q4 FY2024, Q1-Q4 FY2025, and Q1-Q2 FY2026 earnings calls; FY2025 10-K.</p>
 
-<h2 id="timeline">Timeline</h2>
+<h2 id="timeline">Timeline: 2023 to July 2026</h2>
 <ul class="timeline">
   <li><span class="date">2023</span>Eagle Ford asset sale ($2.5B) cuts debt 34%; quiet financial recovery period.</li>
   <li><span class="date">Oct 1, 2024</span>Southwestern Energy merger completes; company renamed Expand Energy, begins trading as EXE.</li>
@@ -17019,10 +17115,10 @@ export const POSTS: Post[] = [
   <li><span class="date">Jul 28, 2026</span>Twin Eagle marketing-company acquisition announced alongside a 4% share buyback — full shift to offense.</li>
 </ul>
 
-<h2 id="our-read">Our read</h2>
+<h2 id="our-read">Strong execution, unresolved governance</h2>
 <p>Expand Energy's last three years trace a clean arc: a cautious bankruptcy-recovery period, a confident merger-driven growth story that consistently beat its own targets, an abrupt and unexplained leadership shake-up, and then a fast return to aggressive capital deployment — all without a permanent CEO in place. The operational and financial execution has been strong by almost every measurable count. What hasn't been resolved is governance: nobody outside the boardroom knows why Dell'Osso was removed, and the interim leadership is making consequential, hard-to-reverse decisions (a large acquisition, a large buyback) that a future permanent CEO may or may not have chosen to make the same way.</p>
 
-<h2 id="unknowns">What we still don't know</h2>
+<h2 id="unknowns">What Expand Energy's calls still don't answer</h2>
 <ul class="kicker-list">
   <li><b>Why Dell'Osso was fired</b> — neither the filings nor the earnings calls give a reason beyond "without cause" / "for any reason."</li>
   <li><b>Whether the eventual permanent CEO will endorse the interim leadership's aggressive expansion (the Twin Eagle acquisition and large buybacks)</b> can't be known until that person is named.</li>
@@ -17051,11 +17147,11 @@ export const POSTS: Post[] = [
       { q: 'What share price was used for this analysis?', a: 'This analysis used $94.83, as of the Sept 11, 2026 close.' },
     ],
     toc: [
-      { id: 'required-vs-historical', label: 'Required growth vs. historical growth' },
-      { id: 'sensitivity', label: 'Sensitivity to the discount rate' },
-      { id: 'what-would-move-it', label: 'What would move this number' },
-      { id: 'show-your-work', label: 'Show your work' },
-      { id: 'fine-print', label: 'The fine print' },
+      { id: 'required-vs-historical', label: "13.9% needed vs. 20.2% revenue growth, almost all from one merger" },
+      { id: 'sensitivity', label: "From 9.3% to 18.0%: the discount-rate range" },
+      { id: 'what-would-move-it', label: "What would change Expand Energy's 13.9%" },
+      { id: 'show-your-work', label: "The math behind 13.9%" },
+      { id: 'fine-print', label: "Limits of the EXE number" },
     ],
     sources: 'As of Sept 11, 2026 · Price used: $94.83',
     tags: ['EXE', 'ReverseDCF', 'Valuation'],
@@ -17072,7 +17168,7 @@ export const POSTS: Post[] = [
   The required growth rate (13.9%) sits below EXE's 5-year revenue CAGR (20.2%), which on its face looks achievable. But that historical growth is almost entirely the product of one large, one-time acquisition (the October 2024 Southwestern Energy merger) — not annual organic expansion. Stripped of merger effects, EXE's own targets have historically aimed at holding production roughly flat, not growing it. Unless a comparably sized acquisition or a decade of unusually strong gas prices repeats, meeting the market's current ask could be a stretch.
 </div>
 
-<h2 id="required-vs-historical">Required growth vs. historical growth</h2>
+<h2 id="required-vs-historical">13.9% needed vs. 20.2% revenue growth, almost all from one merger</h2>
 <div class="datacard">
   <div class="barlist">
     <div class="barrow"><span class="lbl">Market's ask (WACC 10%)</span><div class="track"><div class="fill" style="width:69%;background:var(--accent)"></div></div><span class="val">13.9%</span></div>
@@ -17082,7 +17178,7 @@ export const POSTS: Post[] = [
   <p class="src-note">Required growth from the reverse DCF below. Historical figures from 10-K FY2021, FY2023-FY2025. The FCF CAGR is flagged as unusually noisy: FCF swung from $2.30B (2022) to $8M (2024) to $1.84B (2025) purely on gas-price swings, so this figure moves sharply depending on the start and end years chosen.</p>
 </div>
 
-<h2 id="sensitivity">Sensitivity: what if the discount rate moves?</h2>
+<h2 id="sensitivity">From 9.3% to 18.0%: the discount-rate range</h2>
 <div class="table-wrap">
   <table>
     <caption>Required 10-year FCF growth by discount rate (WACC)</caption>
@@ -17096,14 +17192,14 @@ export const POSTS: Post[] = [
 </div>
 <p>EXE earned S&P 500 inclusion and investment-grade ratings from all three major agencies in early 2025, but its revenue and cash flow remain tied to spot natural gas prices — a large-cap company with commodity-level volatility. A 9-10% discount rate was used as the base range for that reason.</p>
 
-<h2 id="what-would-move-it">What would move this number</h2>
+<h2 id="what-would-move-it">What would change Expand Energy's 13.9%</h2>
 <ul class="kicker-list">
   <li><b>Using 2025's actual FCF ($1.84B) instead of the normalized 3-year-average base ($799M) used here</b> drops the required growth rate sharply, to just 2.6% (at WACC 10%) — effectively "hold current levels" rather than grow.</li>
   <li><b>Using the most recent twelve months' FCF ($2.68B), inflated by a 2026 gas-price spike,</b> pushes the required growth rate negative — meaning even shrinking cash flow would technically justify today's price on that basis.</li>
   <li><b>This ticker is unusually sensitive to which year's cash flow is used as the base</b> — more so than most companies on this site. The 3-year average ($799M, from FCF of $551M in 2023, $8M in 2024, and $1,839M in 2025) was used here because 2025 alone came in 130% above that average, well past the ±40% threshold used to flag a single year as too unusual to use directly.</li>
 </ul>
 
-<h2 id="show-your-work">Show your work</h2>
+<h2 id="show-your-work">The math behind 13.9%</h2>
 <details class="methodology">
   <summary>Inputs, sources, model assumptions, and the calculation</summary>
   <ul class="input-list">
@@ -17123,7 +17219,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr revenue CAGR (2021→2025, includes the 2024 merger) = 20.2%. 5-yr FCF CAGR (2021→2025) = 15.0%, though this figure is highly sensitive to gas-price swings across the period.</p>
 </details>
 
-<h2 id="fine-print">The fine print</h2>
+<h2 id="fine-print">Limits of the EXE number</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -17391,7 +17487,7 @@ export const POSTS: Post[] = [
       { id: 'sensitivity', label: "A two-point change in discount rate nearly doubles the ask" },
       { id: 'what-would-move-it', label: "FY2025 cash flow vs. the three-year average" },
       { id: 'show-your-work', label: "The math behind 7.8%" },
-      { id: 'fine-print', label: "Limits of this number" },
+      { id: 'fine-print', label: "Limits of this number (PFE)" },
     ],
     sources: 'As of Sept 2, 2026 · Price used: $28.55',
     tags: ['PFE', 'ReverseDCF', 'Valuation'],
@@ -17459,7 +17555,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 5-yr FCF CAGR (2021→2025) = -25.8%, distorted by the COVID vaccine/treatment boom (2021-2022) and its collapse (2023). 2-yr recovery FCF CAGR (2023→2025, off the 2023 trough) = +37.6%, also distorted by the unusually low 2023 base.</p>
 </details>
 
-<h2 id="fine-print">Limits of this number</h2>
+<h2 id="fine-print">Limits of this number (PFE)</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
@@ -17723,7 +17819,7 @@ export const POSTS: Post[] = [
       { id: 'sensitivity', label: "From 14% to 23%: the discount-rate range" },
       { id: 'what-would-move-it', label: "Three ways the comparison could flip" },
       { id: 'show-your-work', label: "The math behind 19.0%" },
-      { id: 'fine-print', label: "Limits of this number" },
+      { id: 'fine-print', label: "Limits of this number (RACE)" },
     ],
     sources: 'As of Sept 2, 2026 · Price used: $413.23',
     tags: ['RACE', 'ReverseDCF', 'Valuation'],
@@ -17791,7 +17887,7 @@ export const POSTS: Post[] = [
   <p style="font-size:13px;"><strong>Historical CAGR check:</strong> 4-yr FCF CAGR (2021→2025) = 26.7%. 4-yr revenue CAGR (2021→2025) = 13.7%.</p>
 </details>
 
-<h2 id="fine-print">Limits of this number</h2>
+<h2 id="fine-print">Limits of this number (RACE)</h2>
 <div class="callout bad">
   <b>This number is a starting point, not an answer</b>
   <ul style="margin:10px 0 0;padding-left:18px;">
