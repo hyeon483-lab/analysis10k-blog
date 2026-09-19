@@ -4,7 +4,7 @@ import { AUTHOR_NAME } from '@/lib/author';
 export const metadata: Metadata = {
   title: 'Contact',
   description: 'How to reach Analysis10k Blog with corrections, feedback, or collaboration inquiries.',
-  alternates: { canonical: '/contact' },
+  alternates: { canonical: '/contact', languages: { en: '/contact', ko: '/ko/contact', 'x-default': '/contact' } },
 };
 
 export default function ContactPage() {

@@ -1,23 +1,12 @@
-import Link from 'next/link';
 import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from '@/components/SiteFooter';
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <SiteHeader />
       <main>{children}</main>
-      <footer className="site-footer">
-        <div className="footer-links">
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/industries">Industries</Link>
-          <Link href="/tags">Tags</Link>
-          <a href="/rss.xml">RSS</a>
-        </div>
-        Analysis10k Blog — research summaries built from public SEC filings. Not investment advice.
-        <div className="footer-copyright">© {new Date().getFullYear()} analysis10k-blog.com. All rights reserved.</div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'About',
   description:
     'What Analysis10k Blog is, how each article turns SEC filings, earnings calls, and press releases into data-grounded insight, and who to contact.',
-  alternates: { canonical: '/about' },
+  alternates: { canonical: '/about', languages: { en: '/about', ko: '/ko/about', 'x-default': '/about' } },
 };
 
 export const revalidate = 60;

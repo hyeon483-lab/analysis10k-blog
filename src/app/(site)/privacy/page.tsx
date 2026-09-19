@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'How Analysis10k Blog handles data, cookies, and third-party advertising.',
-  alternates: { canonical: '/privacy' },
+  alternates: { canonical: '/privacy', languages: { en: '/privacy', ko: '/ko/privacy', 'x-default': '/privacy' } },
 };
 
 export default function PrivacyPage() {
