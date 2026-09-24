@@ -1544,5 +1544,155 @@ export const POST_INDEX: Record<string, { ticker: string; category: 'snapshot' |
    "ReverseDCF",
    "Valuation"
   ]
+ },
+ "mrcy-snapshot": {
+  "ticker": "MRCY",
+  "category": "snapshot",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "MRCY",
+   "Aerospace & Defense",
+   "Defense Electronics",
+   "10-K"
+  ]
+ },
+ "mrcy-story": {
+  "ticker": "MRCY",
+  "category": "story",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "MRCY",
+   "Earnings Calls",
+   "Turnaround",
+   "Defense Electronics"
+  ]
+ },
+ "mrcy-dcf": {
+  "ticker": "MRCY",
+  "category": "dcf",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "MRCY",
+   "ReverseDCF",
+   "Valuation"
+  ]
+ },
+ "ktos-snapshot": {
+  "ticker": "KTOS",
+  "category": "snapshot",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "KTOS",
+   "Aerospace & Defense",
+   "Unmanned Systems",
+   "10-K"
+  ]
+ },
+ "ktos-story": {
+  "ticker": "KTOS",
+  "category": "story",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "KTOS",
+   "Earnings Calls",
+   "Unmanned Systems",
+   "Turnaround"
+  ]
+ },
+ "ldos-snapshot": {
+  "ticker": "LDOS",
+  "category": "snapshot",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "LDOS",
+   "Aerospace & Defense",
+   "Government IT Services",
+   "10-K"
+  ]
+ },
+ "ldos-story": {
+  "ticker": "LDOS",
+  "category": "story",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "LDOS",
+   "Earnings Calls",
+   "Government IT Services",
+   "Guidance"
+  ]
+ },
+ "ldos-dcf": {
+  "ticker": "LDOS",
+  "category": "dcf",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "LDOS",
+   "ReverseDCF",
+   "Valuation"
+  ]
+ },
+ "air-snapshot": {
+  "ticker": "AIR",
+  "category": "snapshot",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "AIR",
+   "Aerospace & Defense",
+   "Aviation Aftermarket",
+   "10-K"
+  ]
+ },
+ "air-story": {
+  "ticker": "AIR",
+  "category": "story",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "AIR",
+   "Earnings Calls",
+   "Aviation Aftermarket",
+   "Restructuring"
+  ]
+ },
+ "air-dcf": {
+  "ticker": "AIR",
+  "category": "dcf",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "AIR",
+   "ReverseDCF",
+   "Valuation"
+  ]
+ },
+ "noc-snapshot": {
+  "ticker": "NOC",
+  "category": "snapshot",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "NOC",
+   "Aerospace & Defense",
+   "Prime Contractor",
+   "10-K"
+  ]
+ },
+ "noc-story": {
+  "ticker": "NOC",
+  "category": "story",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "NOC",
+   "Earnings Calls",
+   "Prime Contractor",
+   "B-21"
+  ]
+ },
+ "noc-dcf": {
+  "ticker": "NOC",
+  "category": "dcf",
+  "publishedAt": "2026-09-24",
+  "tags": [
+   "NOC",
+   "ReverseDCF",
+   "Valuation"
+  ]
  }
 } as never;

@@ -76,6 +76,11 @@ const TICKER_INDUSTRY: Record<string, Industry> = {
   RSG: 'industrials',
   CTVA: 'industrials',
   WM: 'industrials',
+  MRCY: 'industrials',
+  KTOS: 'industrials',
+  LDOS: 'industrials',
+  AIR: 'industrials',
+  NOC: 'industrials',
   // Automotive
   TSLA: 'automotive',
   RACE: 'automotive',
