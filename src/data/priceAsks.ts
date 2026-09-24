@@ -54,6 +54,10 @@ export const ASKS: AskRow[] = [
   ['EXE', 'Expand Energy', '익스팬드 에너지', 13.9, '13.9%', 20.2, '20.2% (revenue, 5 yrs, from one merger)', '20.2% (매출, 5년, 합병 한 번의 효과)'],
   ['PFE', 'Pfizer', '화이자', 8.7, '7.8–9.6%', -25.8, '-25.8% (free cash flow, 5 yrs, COVID-distorted)', '-25.8% (FCF, 5년, 코로나로 왜곡)'],
   ['RACE', 'Ferrari', '페라리', 19.0, '19.0%', 26.7, '26.7% (free cash flow, 4 yrs; revenue 13.7%)', '26.7% (FCF, 4년, 매출은 13.7%)'],
+  ['MRCY', 'Mercury Systems', '머큐리 시스템즈', 25.7, '25.7%', -0.1, '-0.1% (revenue, 4 yrs)', '-0.1% (매출, 4년)'],
+  ['LDOS', 'Leidos', '레이도스 홀딩스', -0.95, '-0.95%', 15.1, '15.1% (free cash flow, 5 yrs; revenue 5.7%)', '15.1% (FCF, 5년, 매출은 5.7%)'],
+  ['AIR', 'AAR', 'AAR', 41.6, '41.6%', 27.0, '27.0% (operating income, 4 yrs; revenue 14.9%)', '27.0% (영업이익, 4년, 매출은 14.9%)'],
+  ['NOC', 'Northrop Grumman', '노스롭 그루먼', 9.0, '9.0%', 11.3, '11.3% (free cash flow, 5 yrs; revenue 4.1%)', '11.3% (FCF, 5년, 매출은 4.1%)'],
 ];
 
 export const dcfSlug = (ticker: string) => `${ticker.toLowerCase().replace('-', '')}-dcf`;

@@ -18,6 +18,7 @@ export const COMPANY_KO: Record<string, string> = {
   JNJ: '존슨앤드존슨', XOM: '엑슨모빌', OXY: '옥시덴탈', CTVA: '코르테바', MU: '마이크론', EQIX: '에퀴닉스',
   INTC: '인텔', ANET: '아리스타 네트웍스', ASML: 'ASML', IBM: 'IBM', MRK: '머크', CI: '시그나',
   MA: '마스터카드', BAC: '뱅크 오브 아메리카', EQT: 'EQT', EXE: '익스팬드 에너지', PFE: '화이자', RACE: '페라리',
+  MRCY: '머큐리 시스템즈', KTOS: '크라토스 디펜스', LDOS: '레이도스 홀딩스', AIR: 'AAR', NOC: '노스롭 그루먼',
 };
 
 export interface KoPost {
