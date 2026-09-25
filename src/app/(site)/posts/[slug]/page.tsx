@@ -14,7 +14,7 @@ import { metaDescription } from '@/lib/seo';
 import { withFinancialChart } from '@/lib/financialChart';
 import { withPostCharts } from '@/lib/postCharts';
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();

@@ -10,8 +10,6 @@ export const metadata: Metadata = {
   alternates: { canonical: '/ko', languages: { en: '/', ko: '/ko', 'x-default': '/' } },
 };
 
-export const revalidate = 60;
-
 export default async function KoHomePage() {
   const all = await getKoPosts();
   const posts = all.slice(0, 6);

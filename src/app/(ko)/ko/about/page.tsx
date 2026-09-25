@@ -8,8 +8,6 @@ export const metadata: Metadata = {
   alternates: { canonical: '/ko/about', languages: { en: '/about', ko: '/ko/about', 'x-default': '/about' } },
 };
 
-export const revalidate = 60;
-
 export default async function KoAboutPage() {
   const posts = await getKoPosts();
   const companyCount = new Set(posts.map((p) => p.ticker)).size;

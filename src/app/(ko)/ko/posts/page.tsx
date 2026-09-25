@@ -8,8 +8,6 @@ export const metadata: Metadata = {
   alternates: { canonical: '/ko/posts', languages: { en: '/posts', ko: '/ko/posts', 'x-default': '/posts' } },
 };
 
-export const revalidate = 60;
-
 export default async function KoPostsPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const posts = await getKoPosts();
   const { q } = await searchParams;

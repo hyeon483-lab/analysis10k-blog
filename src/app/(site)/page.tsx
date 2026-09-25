@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/', languages: { en: '/', ko: '/ko', 'x-default': '/' } },
 };
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 export default async function HomePage() {
   const allPosts = await getAllPosts();

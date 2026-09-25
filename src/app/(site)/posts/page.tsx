@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/posts', languages: { en: '/posts', ko: '/ko/posts', 'x-default': '/posts' } },
 };
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 export default async function PostsPage({
   searchParams,
