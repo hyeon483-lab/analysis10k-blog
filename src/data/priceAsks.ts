@@ -58,6 +58,7 @@ export const ASKS: AskRow[] = [
   ['LDOS', 'Leidos', '레이도스 홀딩스', -0.95, '-0.95%', 15.1, '15.1% (free cash flow, 5 yrs; revenue 5.7%)', '15.1% (FCF, 5년, 매출은 5.7%)'],
   ['AIR', 'AAR', 'AAR', 41.6, '41.6%', 27.0, '27.0% (operating income, 4 yrs; revenue 14.9%)', '27.0% (영업이익, 4년, 매출은 14.9%)'],
   ['NOC', 'Northrop Grumman', '노스롭 그루먼', 9.0, '9.0%', 11.3, '11.3% (free cash flow, 5 yrs; revenue 4.1%)', '11.3% (FCF, 5년, 매출은 4.1%)'],
+  ['ABBV', 'AbbVie', '애브비', 10.7, '10.7%', -5.1, '-5.1% (free cash flow, 5 yrs; revenue +2.1%)', '-5.1% (FCF, 5년, 매출은 +2.1%)'],
 ];
 
 export const dcfSlug = (ticker: string) => `${ticker.toLowerCase().replace('-', '')}-dcf`;

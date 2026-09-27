@@ -1694,5 +1694,37 @@ export const POST_INDEX: Record<string, { ticker: string; category: 'snapshot' |
    "ReverseDCF",
    "Valuation"
   ]
+ },
+ "abbv-snapshot": {
+  "ticker": "ABBV",
+  "category": "snapshot",
+  "publishedAt": "2026-09-27",
+  "tags": [
+   "ABBV",
+   "Healthcare",
+   "Pharmaceuticals",
+   "10-K"
+  ]
+ },
+ "abbv-story": {
+  "ticker": "ABBV",
+  "category": "story",
+  "publishedAt": "2026-09-27",
+  "tags": [
+   "ABBV",
+   "Earnings Calls",
+   "Pharmaceuticals",
+   "Guidance"
+  ]
+ },
+ "abbv-dcf": {
+  "ticker": "ABBV",
+  "category": "dcf",
+  "publishedAt": "2026-09-27",
+  "tags": [
+   "ABBV",
+   "ReverseDCF",
+   "Valuation"
+  ]
  }
 } as never;

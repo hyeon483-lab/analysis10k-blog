@@ -59,6 +59,7 @@ const TICKER_INDUSTRY: Record<string, Industry> = {
   MRK: 'healthcare',
   CI: 'healthcare',
   PFE: 'healthcare',
+  ABBV: 'healthcare',
   // Energy
   CVX: 'energy',
   XOM: 'energy',
