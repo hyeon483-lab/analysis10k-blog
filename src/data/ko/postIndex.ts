@@ -1726,5 +1726,37 @@ export const POST_INDEX: Record<string, { ticker: string; category: 'snapshot' |
    "ReverseDCF",
    "Valuation"
   ]
+ },
+ "lly-snapshot": {
+  "ticker": "LLY",
+  "category": "snapshot",
+  "publishedAt": "2026-09-28",
+  "tags": [
+   "LLY",
+   "Healthcare",
+   "Pharmaceuticals",
+   "10-K"
+  ]
+ },
+ "lly-story": {
+  "ticker": "LLY",
+  "category": "story",
+  "publishedAt": "2026-09-28",
+  "tags": [
+   "LLY",
+   "Earnings Calls",
+   "Pharmaceuticals",
+   "Guidance"
+  ]
+ },
+ "lly-dcf": {
+  "ticker": "LLY",
+  "category": "dcf",
+  "publishedAt": "2026-09-28",
+  "tags": [
+   "LLY",
+   "ReverseDCF",
+   "Valuation"
+  ]
  }
 } as never;
