@@ -12,6 +12,9 @@ export const ES_CATEGORY: Record<PostCategory, { label: string }> = {
 // transliterates them), so this only needs entries where we want to override the ticker.
 export const COMPANY_ES: Record<string, string> = {
   UNH: 'UnitedHealth Group',
+  NVDA: 'Nvidia',
+  MSFT: 'Microsoft',
+  AAPL: 'Apple',
 };
 
 /** Slugs with a published Spanish translation — used by the EN/KO templates to decide whether to link an ES version. */
