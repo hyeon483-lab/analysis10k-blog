@@ -30,6 +30,8 @@ export default function NotFound() {
           <Link href="/industries">Industries</Link>
           <Link href="/tags">Tags</Link>
           <a href="/rss.xml">RSS</a>
+          <Link href="/ko">한국어</Link>
+          <Link href="/es">Español</Link>
         </div>
         Analysis10k Blog — research summaries built from public SEC filings. Not investment advice.
       </footer>

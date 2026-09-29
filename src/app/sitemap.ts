@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllPosts, getAllTags, getAllIndustries } from '@/lib/posts';
 import { MIN_INDEXED_TAG_POSTS } from '@/lib/seo';
 import { GUIDES } from '@/data/guides';
+import { ES_SLUGS } from '@/lib/es';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
@@ -13,10 +14,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const postEntries: MetadataRoute.Sitemap = posts.flatMap((post) => {
     const en = `${SITE_URL}/posts/${post.slug}`;
     const ko = `${SITE_URL}/ko/posts/${post.slug}`;
-    const alternates = { languages: { en, ko } };
+    const es = ES_SLUGS.has(post.slug) ? `${SITE_URL}/es/posts/${post.slug}` : undefined;
+    const alternates = { languages: es ? { en, ko, es } : { en, ko } };
     return [
       { url: en, lastModified: post.publishedAt, changeFrequency: 'monthly' as const, alternates },
       { url: ko, lastModified: post.publishedAt, changeFrequency: 'monthly' as const, alternates },
+      ...(es ? [{ url: es, lastModified: post.publishedAt, changeFrequency: 'monthly' as const, alternates }] : []),
     ];
   });
 
@@ -43,20 +46,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   });
 
   return [
-    { url: SITE_URL, changeFrequency: 'daily', priority: 1, alternates: { languages: { en: SITE_URL, ko: `${SITE_URL}/ko` } } },
-    { url: `${SITE_URL}/ko`, changeFrequency: 'daily', priority: 0.9, alternates: { languages: { en: SITE_URL, ko: `${SITE_URL}/ko` } } },
-    { url: `${SITE_URL}/posts`, changeFrequency: 'daily', priority: 0.8, alternates: { languages: { en: `${SITE_URL}/posts`, ko: `${SITE_URL}/ko/posts` } } },
-    { url: `${SITE_URL}/ko/posts`, changeFrequency: 'daily', priority: 0.7, alternates: { languages: { en: `${SITE_URL}/posts`, ko: `${SITE_URL}/ko/posts` } } },
+    { url: SITE_URL, changeFrequency: 'daily', priority: 1, alternates: { languages: { en: SITE_URL, ko: `${SITE_URL}/ko`, es: `${SITE_URL}/es` } } },
+    { url: `${SITE_URL}/ko`, changeFrequency: 'daily', priority: 0.9, alternates: { languages: { en: SITE_URL, ko: `${SITE_URL}/ko`, es: `${SITE_URL}/es` } } },
+    { url: `${SITE_URL}/es`, changeFrequency: 'daily', priority: 0.9, alternates: { languages: { en: SITE_URL, ko: `${SITE_URL}/ko`, es: `${SITE_URL}/es` } } },
+    { url: `${SITE_URL}/posts`, changeFrequency: 'daily', priority: 0.8, alternates: { languages: { en: `${SITE_URL}/posts`, ko: `${SITE_URL}/ko/posts`, es: `${SITE_URL}/es/posts` } } },
+    { url: `${SITE_URL}/ko/posts`, changeFrequency: 'daily', priority: 0.7, alternates: { languages: { en: `${SITE_URL}/posts`, ko: `${SITE_URL}/ko/posts`, es: `${SITE_URL}/es/posts` } } },
+    { url: `${SITE_URL}/es/posts`, changeFrequency: 'daily', priority: 0.7, alternates: { languages: { en: `${SITE_URL}/posts`, ko: `${SITE_URL}/ko/posts`, es: `${SITE_URL}/es/posts` } } },
     { url: `${SITE_URL}/industries`, changeFrequency: 'weekly', priority: 0.4 },
     { url: `${SITE_URL}/tags`, changeFrequency: 'weekly', priority: 0.4 },
-    { url: `${SITE_URL}/about`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/about`, ko: `${SITE_URL}/ko/about` } } },
-    { url: `${SITE_URL}/ko/about`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/about`, ko: `${SITE_URL}/ko/about` } } },
-    { url: `${SITE_URL}/contact`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/contact`, ko: `${SITE_URL}/ko/contact` } } },
-    { url: `${SITE_URL}/ko/contact`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/contact`, ko: `${SITE_URL}/ko/contact` } } },
-    { url: `${SITE_URL}/methodology`, changeFrequency: 'monthly', priority: 0.5, alternates: { languages: { en: `${SITE_URL}/methodology`, ko: `${SITE_URL}/ko/methodology` } } },
-    { url: `${SITE_URL}/ko/methodology`, changeFrequency: 'monthly', priority: 0.5, alternates: { languages: { en: `${SITE_URL}/methodology`, ko: `${SITE_URL}/ko/methodology` } } },
-    { url: `${SITE_URL}/privacy`, changeFrequency: 'monthly', priority: 0.2, alternates: { languages: { en: `${SITE_URL}/privacy`, ko: `${SITE_URL}/ko/privacy` } } },
-    { url: `${SITE_URL}/ko/privacy`, changeFrequency: 'monthly', priority: 0.2, alternates: { languages: { en: `${SITE_URL}/privacy`, ko: `${SITE_URL}/ko/privacy` } } },
+    { url: `${SITE_URL}/about`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/about`, ko: `${SITE_URL}/ko/about`, es: `${SITE_URL}/es/about` } } },
+    { url: `${SITE_URL}/ko/about`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/about`, ko: `${SITE_URL}/ko/about`, es: `${SITE_URL}/es/about` } } },
+    { url: `${SITE_URL}/es/about`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/about`, ko: `${SITE_URL}/ko/about`, es: `${SITE_URL}/es/about` } } },
+    { url: `${SITE_URL}/contact`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/contact`, ko: `${SITE_URL}/ko/contact`, es: `${SITE_URL}/es/contact` } } },
+    { url: `${SITE_URL}/ko/contact`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/contact`, ko: `${SITE_URL}/ko/contact`, es: `${SITE_URL}/es/contact` } } },
+    { url: `${SITE_URL}/es/contact`, changeFrequency: 'monthly', priority: 0.3, alternates: { languages: { en: `${SITE_URL}/contact`, ko: `${SITE_URL}/ko/contact`, es: `${SITE_URL}/es/contact` } } },
+    { url: `${SITE_URL}/methodology`, changeFrequency: 'monthly', priority: 0.5, alternates: { languages: { en: `${SITE_URL}/methodology`, ko: `${SITE_URL}/ko/methodology`, es: `${SITE_URL}/es/methodology` } } },
+    { url: `${SITE_URL}/ko/methodology`, changeFrequency: 'monthly', priority: 0.5, alternates: { languages: { en: `${SITE_URL}/methodology`, ko: `${SITE_URL}/ko/methodology`, es: `${SITE_URL}/es/methodology` } } },
+    { url: `${SITE_URL}/es/methodology`, changeFrequency: 'monthly', priority: 0.5, alternates: { languages: { en: `${SITE_URL}/methodology`, ko: `${SITE_URL}/ko/methodology`, es: `${SITE_URL}/es/methodology` } } },
+    { url: `${SITE_URL}/privacy`, changeFrequency: 'monthly', priority: 0.2, alternates: { languages: { en: `${SITE_URL}/privacy`, ko: `${SITE_URL}/ko/privacy`, es: `${SITE_URL}/es/privacy` } } },
+    { url: `${SITE_URL}/ko/privacy`, changeFrequency: 'monthly', priority: 0.2, alternates: { languages: { en: `${SITE_URL}/privacy`, ko: `${SITE_URL}/ko/privacy`, es: `${SITE_URL}/es/privacy` } } },
+    { url: `${SITE_URL}/es/privacy`, changeFrequency: 'monthly', priority: 0.2, alternates: { languages: { en: `${SITE_URL}/privacy`, ko: `${SITE_URL}/ko/privacy`, es: `${SITE_URL}/es/privacy` } } },
     { url: `${SITE_URL}/guides`, changeFrequency: 'weekly', priority: 0.7, alternates: { languages: { en: `${SITE_URL}/guides`, ko: `${SITE_URL}/ko/guides` } } },
     { url: `${SITE_URL}/ko/guides`, changeFrequency: 'weekly', priority: 0.7, alternates: { languages: { en: `${SITE_URL}/guides`, ko: `${SITE_URL}/ko/guides` } } },
     ...guideEntries,

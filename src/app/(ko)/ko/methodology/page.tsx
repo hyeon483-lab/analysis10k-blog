@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: '계산 방법(방법론)',
   description:
     'Analysis10k가 글 유형별로 어떻게 만드는지, 역DCF가 무엇을 가정하는지, 은행·리츠·현금흐름이 마이너스인 회사는 어떻게 다루는지, 숫자의 출처와 결과의 한계를 설명합니다.',
-  alternates: { canonical: '/ko/methodology', languages: { en: '/methodology', ko: '/ko/methodology', 'x-default': '/methodology' } },
+  alternates: { canonical: '/ko/methodology', languages: { en: '/methodology', ko: '/ko/methodology', es: '/es/methodology', 'x-default': '/methodology' } },
 };
 
 export default function KoMethodologyPage() {

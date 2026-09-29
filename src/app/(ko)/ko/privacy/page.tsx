@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '개인정보처리방침',
   description: 'Analysis10k 블로그가 데이터, 쿠키, 제3자 광고를 어떻게 다루는지 안내합니다.',
-  alternates: { canonical: '/ko/privacy', languages: { en: '/privacy', ko: '/ko/privacy', 'x-default': '/privacy' } },
+  alternates: { canonical: '/ko/privacy', languages: { en: '/privacy', ko: '/ko/privacy', es: '/es/privacy', 'x-default': '/privacy' } },
 };
 
 export default function KoPrivacyPage() {

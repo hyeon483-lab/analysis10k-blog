@@ -4,7 +4,7 @@ import { AUTHOR_NAME } from '@/lib/author';
 export const metadata: Metadata = {
   title: '문의',
   description: '정정 요청, 글에 대한 의견, 협업 문의는 이곳으로 연락해 주세요.',
-  alternates: { canonical: '/ko/contact', languages: { en: '/contact', ko: '/ko/contact', 'x-default': '/contact' } },
+  alternates: { canonical: '/ko/contact', languages: { en: '/contact', ko: '/ko/contact', es: '/es/contact', 'x-default': '/contact' } },
 };
 
 export default function KoContactPage() {

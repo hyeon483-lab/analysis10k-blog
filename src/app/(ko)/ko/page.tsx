@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: { absolute: 'Analysis10k 블로그 — 미국 상장기업, 공시 원문으로 읽다' },
   description:
     'SEC 공시(10-K·10-Q)와 어닝콜 원문에서 출발해, 기업이 무슨 일을 하는지·최근 몇 년 사이 말과 숫자가 어떻게 달라졌는지·지금 주가가 어떤 성장을 가정하는지를 정리합니다.',
-  alternates: { canonical: '/ko', languages: { en: '/', ko: '/ko', 'x-default': '/' } },
+  alternates: { canonical: '/ko', languages: { en: '/', ko: '/ko', es: '/es', 'x-default': '/' } },
 };
 
 export const revalidate = 60;

@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'How we calculate: methodology',
   description:
     'How Analysis10k builds each article type: what the reverse DCF assumes, how we handle banks, REITs, and negative cash flow, where the numbers come from, and what the results cannot tell you.',
-  alternates: { canonical: '/methodology', languages: { en: '/methodology', ko: '/ko/methodology', 'x-default': '/methodology' } },
+  alternates: { canonical: '/methodology', languages: { en: '/methodology', ko: '/ko/methodology', es: '/es/methodology', 'x-default': '/methodology' } },
 };
 
 export default function MethodologyPage() {
