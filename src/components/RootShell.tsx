@@ -43,7 +43,7 @@ const siteJsonLd = [
 ];
 
 /** The <html>/<body> shell shared by every root layout; `lang` is the page language. */
-export default function RootShell({ lang, children }: { lang: 'en' | 'ko'; children: React.ReactNode }) {
+export default function RootShell({ lang, children }: { lang: 'en' | 'ko' | 'es'; children: React.ReactNode }) {
   return (
     <html lang={lang} className={`${sourceSerif.variable} ${sourceSans.variable} ${plexMono.variable}`}>
       <body>

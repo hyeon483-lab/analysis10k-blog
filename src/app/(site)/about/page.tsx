@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'About',
   description:
     'What Analysis10k Blog is, how each article turns SEC filings, earnings calls, and press releases into data-grounded insight, and who to contact.',
-  alternates: { canonical: '/about', languages: { en: '/about', ko: '/ko/about', 'x-default': '/about' } },
+  alternates: { canonical: '/about', languages: { en: '/about', ko: '/ko/about', es: '/es/about', 'x-default': '/about' } },
 };
 
 export const revalidate = 60;
@@ -61,11 +61,13 @@ export default async function AboutPage() {
         <a href="/methodology">Methodology</a> page.
       </p>
 
-      <h2>Two languages</h2>
+      <h2>Three languages</h2>
       <p>
-        Every article is available in English and Korean; use the EN / 한국어 switch in the header. The Korean
-        versions are built from the original Korean analysis cards the English articles were adapted from, so
-        they are not machine translations of the English text, and they can differ slightly in wording and layout.
+        Every article is available in English and Korean, and we are gradually translating the catalog into
+        Spanish as well; use the EN / 한국어 / ES switch in the header. The Korean and Spanish versions are built
+        from the same analysis card the English articles were adapted from, so they are not machine translations
+        of the English text, and they can differ slightly in wording and layout. Not every article has a
+        Spanish version yet — we are adding them over time.
       </p>
 
       <h2>What this isn&apos;t</h2>

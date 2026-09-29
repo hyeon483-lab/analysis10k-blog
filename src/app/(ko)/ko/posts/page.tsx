@@ -5,7 +5,7 @@ import { getKoPosts } from '@/lib/ko';
 export const metadata: Metadata = {
   title: '전체 글',
   description: 'Analysis10k의 모든 글: 기업 스냅샷, 스토리, 역DCF. SEC 공시를 바탕으로 정리했습니다.',
-  alternates: { canonical: '/ko/posts', languages: { en: '/posts', ko: '/ko/posts', 'x-default': '/posts' } },
+  alternates: { canonical: '/ko/posts', languages: { en: '/posts', ko: '/ko/posts', es: '/es/posts', 'x-default': '/posts' } },
 };
 
 export const revalidate = 60;

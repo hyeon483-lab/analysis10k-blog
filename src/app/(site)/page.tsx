@@ -4,7 +4,7 @@ import PostCard from '@/components/PostCard';
 import { getAllPosts } from '@/lib/posts';
 
 export const metadata: Metadata = {
-  alternates: { canonical: '/', languages: { en: '/', ko: '/ko', 'x-default': '/' } },
+  alternates: { canonical: '/', languages: { en: '/', ko: '/ko', es: '/es', 'x-default': '/' } },
 };
 
 export const revalidate = 60;

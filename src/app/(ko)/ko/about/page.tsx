@@ -5,7 +5,7 @@ import { AUTHOR_NAME } from '@/lib/author';
 export const metadata: Metadata = {
   title: '소개',
   description: 'Analysis10k 블로그가 무엇이고, 글마다 SEC 공시와 어닝콜을 어떻게 읽어 정리하는지, 누구에게 문의하면 되는지 안내합니다.',
-  alternates: { canonical: '/ko/about', languages: { en: '/about', ko: '/ko/about', 'x-default': '/about' } },
+  alternates: { canonical: '/ko/about', languages: { en: '/about', ko: '/ko/about', es: '/es/about', 'x-default': '/about' } },
 };
 
 export const revalidate = 60;
@@ -51,10 +51,12 @@ export default async function KoAboutPage() {
         <a href="/ko/methodology">계산 방법</a> 페이지에 있습니다.
       </p>
 
-      <h2>두 가지 언어</h2>
+      <h2>세 가지 언어</h2>
       <p>
-        모든 글은 영어와 한국어로 볼 수 있으며, 화면 위의 EN / 한국어 전환을 쓰면 됩니다. 한국어판은 영어 글의 바탕이 된
-        한국어 분석 카드를 그대로 바탕으로 하므로 영어 글을 기계 번역한 것이 아니고, 표현과 구성이 조금 다를 수 있습니다.
+        모든 글은 영어와 한국어로 볼 수 있으며, 스페인어도 글을 하나씩 번역해 나가고 있습니다. 화면 위의 EN / 한국어 / ES
+        전환을 쓰면 됩니다. 한국어판과 스페인어판은 영어 글의 바탕이 된 분석 카드를 그대로 바탕으로 하므로 영어 글을
+        기계 번역한 것이 아니고, 표현과 구성이 조금 다를 수 있습니다. 아직 모든 글에 스페인어판이 있지는 않으며,
+        차차 늘려갈 예정입니다.
       </p>
 
       <h2>이 블로그가 아닌 것</h2>

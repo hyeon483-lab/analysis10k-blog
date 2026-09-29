@@ -3,6 +3,7 @@ import { AUTHOR_NAME } from '@/lib/author';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllPosts, getPostBySlug, getRelatedPosts, getRelatedByTags, getAdjacentPosts } from '@/lib/posts';
+import { ES_SLUGS } from '@/lib/es';
 import { CATEGORY_META } from '@/types/post';
 import PostCard from '@/components/PostCard';
 import ShareRow from '@/components/ShareRow';
@@ -34,7 +35,12 @@ export async function generateMetadata({
     description: metaDescription(post.excerpt),
     alternates: {
       canonical: `/posts/${post.slug}`,
-      languages: { en: `/posts/${post.slug}`, ko: `/ko/posts/${post.slug}`, 'x-default': `/posts/${post.slug}` },
+      languages: {
+        en: `/posts/${post.slug}`,
+        ko: `/ko/posts/${post.slug}`,
+        ...(ES_SLUGS.has(post.slug) ? { es: `/es/posts/${post.slug}` } : {}),
+        'x-default': `/posts/${post.slug}`,
+      },
     },
     openGraph: {
       title: post.title,
@@ -146,6 +152,12 @@ export default async function PostPage({
           <span>{post.publishedAt}</span>
           <span>·</span>
           <span>Sources: {post.sources}</span>
+          {ES_SLUGS.has(post.slug) && (
+            <>
+              <span>·</span>
+              <Link href={`/es/posts/${post.slug}`} hrefLang="es">Español</Link>
+            </>
+          )}
         </div>
 
         <div className="lede-box">
