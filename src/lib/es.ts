@@ -15,6 +15,7 @@ export const COMPANY_ES: Record<string, string> = {
   NVDA: 'Nvidia',
   MSFT: 'Microsoft',
   AAPL: 'Apple',
+  META: 'Meta',
 };
 
 /** Slugs with a published Spanish translation — used by the EN/KO templates to decide whether to link an ES version. */
