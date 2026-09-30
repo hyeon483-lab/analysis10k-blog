@@ -37,4 +37,34 @@ export const POST_INDEX: Record<string, { ticker: string; category: 'snapshot' |
     publishedAt: '2026-08-17',
     tags: ['AAPL', 'ReverseDCF', 'Valuation'],
   },
+  'nvda-story': {
+    ticker: 'NVDA',
+    category: 'story',
+    publishedAt: '2026-08-17',
+    tags: ['NVDA', 'Earnings Calls', 'Export Controls', 'AI Infrastructure'],
+  },
+  'nvda-dcf': {
+    ticker: 'NVDA',
+    category: 'dcf',
+    publishedAt: '2026-08-17',
+    tags: ['NVDA', 'ReverseDCF', 'Valuation'],
+  },
+  'aapl-snapshot': {
+    ticker: 'AAPL',
+    category: 'snapshot',
+    publishedAt: '2026-08-17',
+    tags: ['AAPL', 'Consumer Tech', 'Services', '10-K'],
+  },
+  'aapl-story': {
+    ticker: 'AAPL',
+    category: 'story',
+    publishedAt: '2026-08-17',
+    tags: ['AAPL', 'Siri', 'Antitrust', 'Earnings Calls'],
+  },
+  'meta-dcf': {
+    ticker: 'META',
+    category: 'dcf',
+    publishedAt: '2026-08-18',
+    tags: ['META', 'ReverseDCF', 'Valuation'],
+  },
 };
