@@ -16,6 +16,7 @@ export const COMPANY_ES: Record<string, string> = {
   MSFT: 'Microsoft',
   AAPL: 'Apple',
   META: 'Meta',
+  GOOGL: 'Alphabet',
 };
 
 /** Slugs with a published Spanish translation — used by the EN/KO templates to decide whether to link an ES version. */
