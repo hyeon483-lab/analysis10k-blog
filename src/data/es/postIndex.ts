@@ -67,4 +67,34 @@ export const POST_INDEX: Record<string, { ticker: string; category: 'snapshot' |
     publishedAt: '2026-08-18',
     tags: ['META', 'ReverseDCF', 'Valuation'],
   },
+  'googl-snapshot': {
+    ticker: 'GOOGL',
+    category: 'snapshot',
+    publishedAt: '2026-08-18',
+    tags: ['GOOGL', 'Digital Advertising', 'Cloud', '10-K'],
+  },
+  'googl-story': {
+    ticker: 'GOOGL',
+    category: 'story',
+    publishedAt: '2026-08-18',
+    tags: ['GOOGL', 'AI Infrastructure', 'Capital Spending', 'Earnings Calls'],
+  },
+  'googl-dcf': {
+    ticker: 'GOOGL',
+    category: 'dcf',
+    publishedAt: '2026-08-18',
+    tags: ['GOOGL', 'ReverseDCF', 'Valuation'],
+  },
+  'meta-snapshot': {
+    ticker: 'META',
+    category: 'snapshot',
+    publishedAt: '2026-08-18',
+    tags: ['META', 'Digital Advertising', 'AI Infrastructure', '10-K'],
+  },
+  'meta-story': {
+    ticker: 'META',
+    category: 'story',
+    publishedAt: '2026-08-18',
+    tags: ['META', 'AI Infrastructure', 'Reality Labs', 'Earnings Calls'],
+  },
 };

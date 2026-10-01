@@ -54,4 +54,29 @@ export const ES_META: Record<string, { title: string; summary: string }> = {
     summary:
       'El precio actual asume que el flujo de caja libre crecerá 10.8% anual durante los próximos 10 años. En los últimos 4 años creció 4.3% anual, mientras que los ingresos crecieron 14.3%: la inversión en IA presionó especialmente al flujo de caja libre.',
   },
+  'googl-snapshot': {
+    title: 'Alphabet (GOOGL): cobra a los anunciantes por mostrar publicidad junto a sus búsquedas y videos',
+    summary:
+      'Google logra que la gente escriba sus dudas en el buscador y vea videos en YouTube, y gana dinero cobrándole a los anunciantes por mostrar publicidad junto a ese contenido.',
+  },
+  'googl-story': {
+    title: 'Los últimos 3 años de Alphabet: de empresa de publicidad a apuesta por la infraestructura de IA',
+    summary:
+      'En tres años, Alphabet multiplicó por 10 su gasto de capital trimestral y registró su primer flujo de caja libre negativo de la historia, pero el tono de la gerencia nunca mostró una señal de alarma.',
+  },
+  'googl-dcf': {
+    title: 'La apuesta que esconde hoy el precio de la acción de GOOGL',
+    summary:
+      'El precio actual asume que el flujo de caja libre crecerá cerca de 26% anual durante los próximos 10 años. En los últimos 5 años creció apenas 2.3% anual, y los ingresos solo 11.8%.',
+  },
+  'meta-snapshot': {
+    title: 'Meta Platforms: regala sus apps y cobra por mostrarle anuncios a la persona correcta',
+    summary:
+      'Meta regala el uso de Facebook, Instagram y WhatsApp, usa IA para entender los intereses de cada persona, y gana dinero vendiéndole a los anunciantes la posibilidad de mostrarle publicidad exactamente a ese usuario.',
+  },
+  'meta-story': {
+    title: 'Los últimos 3 años de Meta: de ahorrar municiones a apostarlas todas en IA',
+    summary:
+      'Tras un "año de la eficiencia" en 2023, Meta empezó a apostar ese ahorro en infraestructura de IA, y en su tercer año sigue subiendo la apuesta pese a que el mercado se muestra cada vez más escéptico.',
+  },
 };
