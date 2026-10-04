@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/es', languages: { en: '/', ko: '/ko', es: '/es', 'x-default': '/' } },
 };
 
-export const revalidate = 60;
+export const revalidate = 86400;
 
 export default async function EsHomePage() {
   const all = await getEsPosts();

@@ -123,8 +123,7 @@ export async function createPost(formData: FormData) {
 
   if (error) throw new Error(error.message);
 
-  revalidatePath('/');
-  revalidatePath('/posts');
+  revalidatePath('/', 'layout');
   redirect('/admin/posts');
 }
 
@@ -156,9 +155,7 @@ export async function updatePost(id: string, formData: FormData) {
 
   if (error) throw new Error(error.message);
 
-  revalidatePath('/');
-  revalidatePath('/posts');
-  revalidatePath(`/posts/${values.slug}`);
+  revalidatePath('/', 'layout');
   redirect('/admin/posts');
 }
 
@@ -170,9 +167,7 @@ export async function deletePost(formData: FormData) {
   const { error } = await supabase.from('posts').delete().eq('id', id);
   if (error) throw new Error(error.message);
 
-  revalidatePath('/');
-  revalidatePath('/posts');
-  revalidatePath(`/posts/${slug}`);
+  revalidatePath('/', 'layout');
   redirect('/admin/posts');
 }
 

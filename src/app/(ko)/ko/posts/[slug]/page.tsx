@@ -13,7 +13,7 @@ import WatchNext from '@/components/WatchNext';
 import OperatorNote from '@/components/OperatorNote';
 import { metaDescription } from '@/lib/seo';
 
-export const revalidate = 60;
+export const revalidate = 86400;
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 

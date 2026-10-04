@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/ko/about', languages: { en: '/about', ko: '/ko/about', es: '/es/about', 'x-default': '/about' } },
 };
 
-export const revalidate = 60;
+export const revalidate = 86400;
 
 export default async function KoAboutPage() {
   const posts = await getKoPosts();
